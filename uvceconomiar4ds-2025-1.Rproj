@@ -1,0 +1,16 @@
+Version: 1.0
+ProjectId: f50d820a-cecb-42f4-b0ad-50ec2fbc2004
+
+RestoreWorkspace: Default
+SaveWorkspace: Default
+AlwaysSaveHistory: Default
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: Sweave
+LaTeX: pdfLaTeX
+
+ProjectName: ucveconomiar4ds-2025-1
