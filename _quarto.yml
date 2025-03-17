@@ -5,10 +5,10 @@ project:
 
 website:
   page-navigation: false
-  title: "UCV EconomíaR4DS"
-  description: "Ciencia de Datos Basada en Programación en R para Economistas"
-  site-url: https://ucveconomia-r4ds-2024-2.netlify.app/
-  repo-url: https://github.com/orgs/UCVeconomia2024-2/
+  title: "UCV Economía R4DS"
+  description: "Ciencia de Datos Basada en Programación en R para Economistas. Edición 2025-1"
+  site-url: https://ucveconomia-r4ds-2025-1.netlify.app/
+  repo-url: https://github.com/javendaXgh/ucveconomiar4ds-2025-1
   favicon: images/favicon.png
   google-analytics: "G-5BVQ49LXJG"
   
@@ -46,25 +46,36 @@ website:
           - href: curso-infogeneral.qmd
             text: Información General
           - href: curso-programa.qmd
-            text: Contenido
-          # - href: curso-equipo.qmd
-          #   text: Equipo de Profesores
-
+            text: Contenido del Curso
+          - href: planeval.qmd
+            text: Plan de Evaluación
+          - href: curso-equipo.qmd
+            text: Equipo de Profesores
           # - href: faq.qmd
           #   text: Preguntas Frecuentes
-          - href: codigo.qmd
-            text: "Código de Conducta"
-      - section: "Prácticas"
+          - href: codigoconducta.qmd
+            text: Código de Conducta
+          - href: recursos.qmd
+            text: Recursos Disponibles
+      - section: Tareas
+        contents: 
+          - href: tarea_01.qmd
+            text: tarea 1
+      - section: "Talleres"
+        contents:
+      - section: "Tutoriales"
+        contents:
+      - section: "Videos de Apoyo"
         contents:
 
-      - section: "Proyectos"
+      - section: "Proyecto"
         contents:
-          - href: project/Ensayo.qmd
-            text: "Ensayo: Propuesta de Proyecto de CD"
-          - href: project/proyecto-1.qmd
-            text: "Proyectos mitad de curso"
-          - href: project/proyecto-2.qmd
-            text: "Proyecto Final de Curso"
+          # - href: ensayo.qmd
+          #   text: "Ensayo: Propuesta de Proyecto de CD"
+          - href: proyecto.qmd
+            text: "Proyecto Final de Curso (P.F.C.)"
+          - href: pauta.qmd
+            text: "Pautas del P.F.C."
 
 
   page-footer:

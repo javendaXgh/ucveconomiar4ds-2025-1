@@ -10,7 +10,23 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
 ### Clase 1:
 
-1.  **Objetivo:** sesión inicial del curso donde se presentan los temas a abordar y la instalación de R y RStudio.
+1.  **Objetivo:** Introducción a la Ciencia de Datos
+
+2.  **Contenido:**
+
+    1.  Por qué R
+
+    2.  Ciclo de un proyecto de ciencia de datos
+
+### Clase 2:
+
+1.  **Objetivo:** Uso de R como calculadora
+
+### 
+
+### Clase 3:
+
+1.  **Objetivo:** sla instalación de R y RStudio.
 
 2.  **Contenido:**
 
@@ -32,7 +48,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
 3.  **Ejercicio práctico:** Crear un proyecto y dentro del proyecto un script "hello word.R"
 
-### Clase 2:
+### Clase 4:
 
 1.  **Objetivo:** Comprender el entorno de programación. Aprender a instalar paquetes, cargarlos.
 
@@ -56,7 +72,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
     2.  Crear variables de distintos tipos
     3.  Corregir variables
 
-### Clase 3:
+### Clase 5:
 
 1.  **Objetivo:** Conocer la estructura de datos denominada "vector"
 
@@ -74,7 +90,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Crear vectores de distintos tipo "mode"
 
-### Clase 4:
+### Clase 6:
 
 1.  **Objetivo:** Seguir conociendo las principales estructuras de datos que se manejan dentro de R
 
@@ -94,7 +110,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Practicar elementos de coerce, accesos a elementos de listas.
 
-### Clase 5:
+### Clase 7:
 
 1.  **Presentación:** Conocer la estructura de datos Data Frame y sus atributos
 
@@ -114,7 +130,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Crear una Data Frame
 
-### Clase 6:
+### Clase 8:
 
 1.  **Objetivo:** Comprender cómo obtener subconjuntos condicionados sobre vectores o Data Frames y tibbles
 
@@ -134,7 +150,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Subsets y Filter de Data Frames precargadas
 
-### Clase 7:
+### Clase 9:
 
 1.  **Objetivo:** Procesamientos de datos encadenados e introducción a la generación de reportes
 
@@ -154,7 +170,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Crear un reporte con un subset de datos
 
-### Clase 8:
+### Clase 10:
 
 1.  **Objetivo:** Creando datos derivados- mutate aplicado a datos de tipo fechas
 
@@ -168,7 +184,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  crear columnas con día, mes y año en una Data Frame
 
-### Clase 9:
+### Clase 11:
 
 1.  **Objetivo:** Creando datos derivados- mutate aplicado a datos de tipo "string"
 
@@ -186,7 +202,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Usar separate dentro de una data frame vs mutate
 
-### Clase 10:
+### Clase 12:
 
 1.  **Objetivo:** Comprender funciones condicionales vectorizadas
 
@@ -204,7 +220,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Lectura de datos, juntar Data Frames y aplicar condicional.
 
-### Clase 11:
+### Clase 13:
 
 1.  **Objetivo:** Comprender un flujo completo de importar y transformar los datos con el pipe operator
 
@@ -218,7 +234,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Aplicar lo aprendido en bloques del 7 al 11.
 
-### Clase 12:
+### Clase 14:
 
 1.  **Objetivo:** agrupación de datos dentro de una Data Frame y obtención de valores sumarios
 
@@ -236,7 +252,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Agrupar una Data Frame por variable categórica y obtener valores sumarios
 
-### Clase 13:
+### Clase 15:
 
 1.  **Objetivo:** comprender los datos representados en formatos wide o longer
 
@@ -252,7 +268,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Tranformar de formato wide a long una Data Frame
 
-### Clase 14:
+### Clase 16:
 
 1.  **Objetivo:** comprender las familia de las funciones vectorizadas apply
 
@@ -272,7 +288,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Aplicar lapply sobre subset de columnas de una Data Frame
 
-### Clase 15:
+### Clase 17:
 
 1.  **Objetivo:** Introducción al análisis exploratorio de datos e imputación de datos faltantes.
 
@@ -290,7 +306,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Realizar un reporte y análisis exploratorio sobre un conjunto de datos no mayor 5 variables
 
-### Clase 16:
+### Clase 18:
 
 1.  **Objetivo:** Abordar las estructuras de control y los ciclos
 
@@ -300,13 +316,11 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     2.  Loops, whiles
 
-    3.  Gráficos en Plotly
-
 3.  **Ejercicio práctico:**
 
     1.  Mediante un loop generar distintos gráficos y guardarlos.
 
-### Clase 17:
+### Clase 19:
 
 1.  **Objetivo:** comprender la lógica de las funciones
 
@@ -320,7 +334,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Crear dos funciones que contengan una estructura de control
 
-### Clase 18:
+### Clase 20:
 
 1.  **Objetivo:** Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.
 
@@ -336,7 +350,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Crear 2 gráficos: 1 de barra, 1 de líneas
 
-### Clase 19:
+### Clase 21:
 
 1.  **Objetivo:** Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.
 
@@ -352,7 +366,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Crear facets con paleta de colores personalizada.
 
-### Clase 20:
+### Clase 22:
 
 1.  **Objetivo:** familia de funciones vectorizadas 2
 
@@ -368,7 +382,7 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Lectura de datos en bucle y conformación de una estructura de datos unificada.
 
-### Clase 21:
+### Clase 23:
 
 1.  **Objetivo:** Comprender la lógica de joins (unión) de Data Frames.
 
@@ -382,41 +396,35 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  Aplicar un join de datos y obtener una regresión lineal por grupo de datos
 
-### Clase 22:
-
-1.  **Objetivo:** Aspectos generales de recursos en línea. Uso de R en paralelo con python.
-
-2.  **Contenido:**
-
-    1.  Trabajando con repositorios de códigos
-
-    2.  Control de Versiones
-
-    3.  Cómo pedir ayuda
-
-    4.  Dónde pedir ayuda
-
-3.  **Ejercicio práctico:**
-
-    1.  según dinámica de las sesiones previas
-
-### Clase 23:
-
-1.  **Objetivo:** Introducción al machine learning supervisado y no supervisado
-
-2.  **Contenido:**
-
-    1.  Introducción al machine learning con paquete caret.
-
-        1.  Aprendizaje supervisado: Arboles de decisión
-
-        2.  Aprendizaje no supervisado: clustering
-
-3.  **Ejercicio práctico:**
-
-    1.  Crear clusters sobre un conjunto de datos
-
 ### Clase 24:
+
+1.  **Objetivo:** modelado de datos
+
+2.  **Contenido: por definir**
+
+### Clase 25:
+
+1.  **Objetivo:** modelado de datos
+
+2.  **Contenido: por definir**
+
+### Clase 26:
+
+1.  **Objetivo:** crear reportes interactivos
+
+2.  **Contenido:**
+
+    1.  Uso de quarto dashboard
+
+### Clase 27:
+
+1.  **Objetivo:** crear dashboards interactivos
+
+2.  **Contenido:**
+
+    1.  Uso de Quarto dashboard
+
+### Clase 28:
 
 1.  **Objetivo:** crear aplicaciones web interactivas con Shiny 1
 
@@ -432,20 +440,6 @@ El contenido detallado a continuación puede variar en función de las necesidad
 
     1.  crear una aplicación web interactiva mínima.
 
-### Clase 25:
-
-1.  **Objetivo:** crear aplicaciones web interactivas con Shiny 2
-
-2.  **Contenido:**
-
-    1.  Introducción a Shiny 2: Aplicaciones web interactivas
-
-        1.  Sliders, inputs de texto, inputs numéricos, render de tablas y gráficos
-
-3.  **Ejercicio práctico:**
-
-    1.  continúa de sesión anterior: crear una aplicación web interactiva mínima 2
-
-### Clase 26 a la 32:
+### Clase 29 a la 31:
 
 -   Objetivo: trabajar en proyecto final de la materia donde se aplican todos los contenidos revisados con la finalidad de crear un producto basado en el uso de datos.

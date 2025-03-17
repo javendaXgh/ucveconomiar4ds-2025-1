@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 17 mar.\nPresentación Curso\n🖥️ láminas clase 01",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 17 mar.\nPresentación Curso\n🖥️ láminas clase 01🛠️ tarea 1\n\n\n\n\nmié, 19 mar.\n\n\n\n\n\n\n2\nlun, 24 mar.\n\n\n\n\n\n\n\n\nmié, 26 mar.\n\n\n\n\n\n\n3\nlun, 31 mar.\n\n\n\n\n\n\n\n\nmié, 2 abr.\n\n\n\n\n\n\n4\nlun, 7 abr.\n\n\n\n\n\n\n\n\nmié, 9 abr.\n\n\n\n\n\n\n5\nlun, 21 abr.\n\n\n\n\n\n\n\n\nmié, 23 abr.\n\n\n\n\n\n\n6\nmar, 29 abr.\n\n\n⏰ Suministro de requerimientos para el Trabajo Ciclo C.D.\n\n\n\n\nmié, 30 abr.\n\n\n\n\n\n\n7\nlun, 5 may.\n\n\n\n\n\n\n\n\nmié, 7 may.\n\n\n\n\n\n\n8\nlun, 12 may.\n\n\n\n\n\n\n\n\nmié, 14 may.\n\n\n⏰ Exámen Parcial mitad semestre\n\n\n9\nlun, 19 may.\n\n\n\n\n\n\n\n\nmié, 21 may.\n\n\n⏰ Suministro de requerimientos del proyecto final\n\n\n10\nlun, 26 may.\n\n\n\n\n\n\n\n\nmié, 28 may.\n\n\n⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos\n\n\n11\nlun, 2 jun.\n\n\n\n\n\n\n\n\nmié, 4 jun.\n\n\n\n\n\n\n12\nlun, 9 jun.\n\n\n\n\n\n\n\n\nmié, 11 jun.\n\n\n\n\n\n\n13\nlun, 16 jun.\n\n\n\n\n\n\n\n\nmié, 18 jun.\n\n\n\n\n\n\n14\nlun, 23 jun.\n\n\n\n\n\n\n\n\nmié, 25 jun.\n\n\n\n\n\n\n15\nlun, 30 jun.\n\n\n\n\n\n\n\n\nmié, 2 jul.\n\n\nEntrega Proyecto Final\n\n\n16\nlun, 7 jul.\n\n\n\n\n\n\n\n\nmié, 9 jul.\n\n\nPresentación Proyecto Final",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -99,10 +99,10 @@
     "href": "curso-programa.html",
     "title": "Contenido (sujeto a modificaciones)",
     "section": "",
-    "text": "Se detallan la mayoría de los contenidos de programación que serán abordados. Es necesario destacar que en cada actividad serán abordados transversalmente contenidos asociados a problemas que son estudiados por la ciencia de datos. Se espera en cada clase incorporar ejercicios prácticos que desarrollen las habilidades de programación en computadoras.\n\nClase 1:\n\nObjetivo: sesión inicial del curso donde se presentan los temas a abordar y la instalación de R y RStudio.\nContenido:\n\nPor qué R\nCiclo de un proyecto de ciencia de datos\nEntornos de Programación\nInstalar R según sistema operativo\nRStudio: proyecto, estructura, ventanas, directorios de trabajo, RStudio en línea.\nR Vs. RStudio\nProyectos de Trabajo: crear proyecto, ambiente, directorio de trabajo, estructura de proyectos, ventanas. Consumo de memoria\nArchivos: Scripts R y Rmd.\n\nEjercicio práctico: Crear un proyecto y dentro del proyecto un script “hello word.R”\n\n\n\nClase 2:\n\nObjetivo: Comprender el entorno de programación. Aprender a instalar paquetes, cargarlos.\nContenido:\n\nCrear objetos, variables, nombres variables\nFundamentos básicos de programación en R. Funciones precargadas\nConsola / Script\nCrear scripts.\nArchivos: R, Quarto, RData y RMD.\nRbase\n\nEjercicio práctico:\n\nCrear scripts\nCrear variables de distintos tipos\nCorregir variables\n\n\n\n\nClase 3:\n\nObjetivo: Conocer la estructura de datos denominada “vector”\nContenido:\n\nPaquetes: instalación y carga de paquetes\nRepositorios de paquetes\nVectores: logical, character, integer, numeric, date. Función mode\nCómo pedir ayuda\n\nEjercicio práctico:\n\nCrear vectores de distintos tipo “mode”\n\n\n\n\nClase 4:\n\nObjetivo: Seguir conociendo las principales estructuras de datos que se manejan dentro de R\nContenido:\n\n“Coerce” dentro de los vectores. Función class\nTrabajando Factores\nMatrices\nListas\nAcceder a elementos de vectores, listas: índices y atributos. Función print\n\nEjercicio práctico:\n\nPracticar elementos de coerce, accesos a elementos de listas.\n\n\n\n\nClase 5:\n\nPresentación: Conocer la estructura de datos Data Frame y sus atributos\nObjetivo:\n\nData Frames\nImportar datos 1- Función read_csv\nAcceso elementos Data Frame\nVisualizar parcial o totalmente, función view\nFunciones str, summary y tabulaciones cruzadas\n\nEjercicio práctico:\n\nCrear una Data Frame\n\n\n\n\nClase 6:\n\nObjetivo: Comprender cómo obtener subconjuntos condicionados sobre vectores o Data Frames y tibbles\nContenido:\n\nOperadores lógicos, tabla de la verdad\nProgramación funcional\nSubsets\nPresentación dplyr\nAplicación de filtros via dplyr filter\n\nEjercicio práctico:\n\nSubsets y Filter de Data Frames precargadas\n\n\n\n\nClase 7:\n\nObjetivo: Procesamientos de datos encadenados e introducción a la generación de reportes\nContenido:\n\nEncadenamiento en los procesamientos: operador pipe %&gt;%\nCarga de datos desde excel\nGráfico de frecuencia de una variable, Análisis Exploratorio de datos\nAplicación filtros en data frames por funciones máx, min, mean\nPreparar un reporte estático e interactivo\n\nEjercicio práctico:\n\nCrear un reporte con un subset de datos\n\n\n\n\nClase 8:\n\nObjetivo: Creando datos derivados- mutate aplicado a datos de tipo fechas\nContenido:\n\nData Frames aplicar mutate -1\nTrabajando con fechas: month, day, year, convertir formatos POSIX\n\nEjercicio práctico:\n\ncrear columnas con día, mes y año en una Data Frame\n\n\n\n\nClase 9:\n\nObjetivo: Creando datos derivados- mutate aplicado a datos de tipo “string”\nContenido:\n\nData Frames aplicar mutate -2\nTrabajando con strings: str_detect, str_split, str_squish, entre otras.\nExpresiones regulares\nSeparate\n\nEjercicio práctico:\n\nUsar separate dentro de una data frame vs mutate\n\n\n\n\nClase 10:\n\nObjetivo: Comprender funciones condicionales vectorizadas\nContenido:\n\nBinds por columa o por fila.\nFunción ifelse\nFunción case_when\nArrange\n\nEjercicio práctico:\n\nLectura de datos, juntar Data Frames y aplicar condicional.\n\n\n\n\nClase 11:\n\nObjetivo: Comprender un flujo completo de importar y transformar los datos con el pipe operator\nContenido:\n\nFunción select\nAplicación de un pipeline compuesto\n\nEjercicio práctico:\n\nAplicar lo aprendido en bloques del 7 al 11.\n\n\n\n\nClase 12:\n\nObjetivo: agrupación de datos dentro de una Data Frame y obtención de valores sumarios\nContenido:\n\nAgrupación de datos: group-by\nPresentación estructura tibble\nSumarizar datos: summarise\nDesagrupar\n\nEjercicio práctico:\n\nAgrupar una Data Frame por variable categórica y obtener valores sumarios\n\n\n\n\nClase 13:\n\nObjetivo: comprender los datos representados en formatos wide o longer\nContenido:\n\nPivoteo de datos\nFormatos de datos long\nFormatos de datos wide\n\nEjercicio práctico:\n\nTranformar de formato wide a long una Data Frame\n\n\n\n\nClase 14:\n\nObjetivo: comprender las familia de las funciones vectorizadas apply\nContenido:\n\nProgramación funcional:\n\nsapply\nlapply\napply\ntapply\n\n\nEjercicio práctico:\n\nAplicar lapply sobre subset de columnas de una Data Frame\n\n\n\n\nClase 15:\n\nObjetivo: Introducción al análisis exploratorio de datos e imputación de datos faltantes.\nContenido:\n\nLectura de datos JSON\nInspección de datos\nIntroducción Análisis Exploratorio de Datos\nImputación de datos faltantes\n\nEjercicio práctico:\n\nRealizar un reporte y análisis exploratorio sobre un conjunto de datos no mayor 5 variables\n\n\n\n\nClase 16:\n\nObjetivo: Abordar las estructuras de control y los ciclos\nContenido:\n\nEstructuras de control if, else\nLoops, whiles\nGráficos en Plotly\n\nEjercicio práctico:\n\nMediante un loop generar distintos gráficos y guardarlos.\n\n\n\n\nClase 17:\n\nObjetivo: comprender la lógica de las funciones\nContenido:\n\nCrear funciones: argumentos, default, return\nVectorizados Vs. Ciclos\n\nEjercicio práctico:\n\nCrear dos funciones que contengan una estructura de control\n\n\n\n\nClase 18:\n\nObjetivo: Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.\nContenido:\n\nSistema gráfico ggplot2: grammar of graphics 1\n\nTipos de gráficos\nLeyendas\n\n\nEjercicio práctico:\n\nCrear 2 gráficos: 1 de barra, 1 de líneas\n\n\n\n\nClase 19:\n\nObjetivo: Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.\nContenido:\n\nSistema gráfico ggplot2: grammar of graphics 2\n\nFacets\nAdaptación colores\n\n\nEjercicio práctico:\n\nCrear facets con paleta de colores personalizada.\n\n\n\n\nClase 20:\n\nObjetivo: familia de funciones vectorizadas 2\nContenido:\n\nFunciones vectorizadas purrr\nBind_rows, bind_cols\nLecturas en bucle\n\nEjercicio práctico:\n\nLectura de datos en bucle y conformación de una estructura de datos unificada.\n\n\n\n\nClase 21:\n\nObjetivo: Comprender la lógica de joins (unión) de Data Frames.\nContenido:\n\njoins de datos\nRegresión lineal\n\nEjercicio práctico:\n\nAplicar un join de datos y obtener una regresión lineal por grupo de datos\n\n\n\n\nClase 22:\n\nObjetivo: Aspectos generales de recursos en línea. Uso de R en paralelo con python.\nContenido:\n\nTrabajando con repositorios de códigos\nControl de Versiones\nCómo pedir ayuda\nDónde pedir ayuda\n\nEjercicio práctico:\n\nsegún dinámica de las sesiones previas\n\n\n\n\nClase 23:\n\nObjetivo: Introducción al machine learning supervisado y no supervisado\nContenido:\n\nIntroducción al machine learning con paquete caret.\n\nAprendizaje supervisado: Arboles de decisión\nAprendizaje no supervisado: clustering\n\n\nEjercicio práctico:\n\nCrear clusters sobre un conjunto de datos\n\n\n\n\nClase 24:\n\nObjetivo: crear aplicaciones web interactivas con Shiny 1\nContenido:\n\nIntroducción a Shiny 1: Aplicaciones web interactivas\n\nestructura UI - Server\nPrincipios de programación reactiva\n\n\nEjercicio práctico:\n\ncrear una aplicación web interactiva mínima.\n\n\n\n\nClase 25:\n\nObjetivo: crear aplicaciones web interactivas con Shiny 2\nContenido:\n\nIntroducción a Shiny 2: Aplicaciones web interactivas\n\nSliders, inputs de texto, inputs numéricos, render de tablas y gráficos\n\n\nEjercicio práctico:\n\ncontinúa de sesión anterior: crear una aplicación web interactiva mínima 2\n\n\n\n\nClase 26 a la 32:\n\nObjetivo: trabajar en proyecto final de la materia donde se aplican todos los contenidos revisados con la finalidad de crear un producto basado en el uso de datos.",
+    "text": "Se detallan la mayoría de los contenidos de programación que serán tratados. Es necesario destacar que en cada actividad serán abordados transversalmente contenidos asociados a problemas que son estudiados por la ciencia de datos.\nSe espera en cada clase incorporar ejercicios prácticos que desarrollen las habilidades de programación.\nEl contenido detallado a continuación puede variar en función de las necesidades particulares del curso o el tiempo disponible, por lo cual, sólo tiene carácter referencial.\n\nClase 1:\n\nObjetivo: Introducción a la Ciencia de Datos\nContenido:\n\nPor qué R\nCiclo de un proyecto de ciencia de datos\n\n\n\n\nClase 2:\n\nObjetivo: Uso de R como calculadora\n\n\n\n\n\n\nClase 3:\n\nObjetivo: sla instalación de R y RStudio.\nContenido:\n\nPor qué R\nCiclo de un proyecto de ciencia de datos\nEntornos de Programación\nInstalar R según sistema operativo\nRStudio: proyecto, estructura, ventanas, directorios de trabajo, RStudio en línea.\nR Vs. RStudio\nProyectos de Trabajo: crear proyecto, ambiente, directorio de trabajo, estructura de proyectos, ventanas. Consumo de memoria\nArchivos: Scripts R y Rmd.\n\nEjercicio práctico: Crear un proyecto y dentro del proyecto un script “hello word.R”\n\n\n\nClase 4:\n\nObjetivo: Comprender el entorno de programación. Aprender a instalar paquetes, cargarlos.\nContenido:\n\nCrear objetos, variables, nombres variables\nFundamentos básicos de programación en R. Funciones precargadas\nConsola / Script\nCrear scripts.\nArchivos: R, Quarto, RData y RMD.\nRbase\n\nEjercicio práctico:\n\nCrear scripts\nCrear variables de distintos tipos\nCorregir variables\n\n\n\n\nClase 5:\n\nObjetivo: Conocer la estructura de datos denominada “vector”\nContenido:\n\nPaquetes: instalación y carga de paquetes\nRepositorios de paquetes\nVectores: logical, character, integer, numeric, date. Función mode\nCómo pedir ayuda\n\nEjercicio práctico:\n\nCrear vectores de distintos tipo “mode”\n\n\n\n\nClase 6:\n\nObjetivo: Seguir conociendo las principales estructuras de datos que se manejan dentro de R\nContenido:\n\n“Coerce” dentro de los vectores. Función class\nTrabajando Factores\nMatrices\nListas\nAcceder a elementos de vectores, listas: índices y atributos. Función print\n\nEjercicio práctico:\n\nPracticar elementos de coerce, accesos a elementos de listas.\n\n\n\n\nClase 7:\n\nPresentación: Conocer la estructura de datos Data Frame y sus atributos\nObjetivo:\n\nData Frames\nImportar datos 1- Función read_csv\nAcceso elementos Data Frame\nVisualizar parcial o totalmente, función view\nFunciones str, summary y tabulaciones cruzadas\n\nEjercicio práctico:\n\nCrear una Data Frame\n\n\n\n\nClase 8:\n\nObjetivo: Comprender cómo obtener subconjuntos condicionados sobre vectores o Data Frames y tibbles\nContenido:\n\nOperadores lógicos, tabla de la verdad\nProgramación funcional\nSubsets\nPresentación dplyr\nAplicación de filtros via dplyr filter\n\nEjercicio práctico:\n\nSubsets y Filter de Data Frames precargadas\n\n\n\n\nClase 9:\n\nObjetivo: Procesamientos de datos encadenados e introducción a la generación de reportes\nContenido:\n\nEncadenamiento en los procesamientos: operador pipe %&gt;%\nCarga de datos desde excel\nGráfico de frecuencia de una variable, Análisis Exploratorio de datos\nAplicación filtros en data frames por funciones máx, min, mean\nPreparar un reporte estático e interactivo\n\nEjercicio práctico:\n\nCrear un reporte con un subset de datos\n\n\n\n\nClase 10:\n\nObjetivo: Creando datos derivados- mutate aplicado a datos de tipo fechas\nContenido:\n\nData Frames aplicar mutate -1\nTrabajando con fechas: month, day, year, convertir formatos POSIX\n\nEjercicio práctico:\n\ncrear columnas con día, mes y año en una Data Frame\n\n\n\n\nClase 11:\n\nObjetivo: Creando datos derivados- mutate aplicado a datos de tipo “string”\nContenido:\n\nData Frames aplicar mutate -2\nTrabajando con strings: str_detect, str_split, str_squish, entre otras.\nExpresiones regulares\nSeparate\n\nEjercicio práctico:\n\nUsar separate dentro de una data frame vs mutate\n\n\n\n\nClase 12:\n\nObjetivo: Comprender funciones condicionales vectorizadas\nContenido:\n\nBinds por columa o por fila.\nFunción ifelse\nFunción case_when\nArrange\n\nEjercicio práctico:\n\nLectura de datos, juntar Data Frames y aplicar condicional.\n\n\n\n\nClase 13:\n\nObjetivo: Comprender un flujo completo de importar y transformar los datos con el pipe operator\nContenido:\n\nFunción select\nAplicación de un pipeline compuesto\n\nEjercicio práctico:\n\nAplicar lo aprendido en bloques del 7 al 11.\n\n\n\n\nClase 14:\n\nObjetivo: agrupación de datos dentro de una Data Frame y obtención de valores sumarios\nContenido:\n\nAgrupación de datos: group-by\nPresentación estructura tibble\nSumarizar datos: summarise\nDesagrupar\n\nEjercicio práctico:\n\nAgrupar una Data Frame por variable categórica y obtener valores sumarios\n\n\n\n\nClase 15:\n\nObjetivo: comprender los datos representados en formatos wide o longer\nContenido:\n\nPivoteo de datos\nFormatos de datos long\nFormatos de datos wide\n\nEjercicio práctico:\n\nTranformar de formato wide a long una Data Frame\n\n\n\n\nClase 16:\n\nObjetivo: comprender las familia de las funciones vectorizadas apply\nContenido:\n\nProgramación funcional:\n\nsapply\nlapply\napply\ntapply\n\n\nEjercicio práctico:\n\nAplicar lapply sobre subset de columnas de una Data Frame\n\n\n\n\nClase 17:\n\nObjetivo: Introducción al análisis exploratorio de datos e imputación de datos faltantes.\nContenido:\n\nLectura de datos JSON\nInspección de datos\nIntroducción Análisis Exploratorio de Datos\nImputación de datos faltantes\n\nEjercicio práctico:\n\nRealizar un reporte y análisis exploratorio sobre un conjunto de datos no mayor 5 variables\n\n\n\n\nClase 18:\n\nObjetivo: Abordar las estructuras de control y los ciclos\nContenido:\n\nEstructuras de control if, else\nLoops, whiles\n\nEjercicio práctico:\n\nMediante un loop generar distintos gráficos y guardarlos.\n\n\n\n\nClase 19:\n\nObjetivo: comprender la lógica de las funciones\nContenido:\n\nCrear funciones: argumentos, default, return\nVectorizados Vs. Ciclos\n\nEjercicio práctico:\n\nCrear dos funciones que contengan una estructura de control\n\n\n\n\nClase 20:\n\nObjetivo: Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.\nContenido:\n\nSistema gráfico ggplot2: grammar of graphics 1\n\nTipos de gráficos\nLeyendas\n\n\nEjercicio práctico:\n\nCrear 2 gráficos: 1 de barra, 1 de líneas\n\n\n\n\nClase 21:\n\nObjetivo: Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.\nContenido:\n\nSistema gráfico ggplot2: grammar of graphics 2\n\nFacets\nAdaptación colores\n\n\nEjercicio práctico:\n\nCrear facets con paleta de colores personalizada.\n\n\n\n\nClase 22:\n\nObjetivo: familia de funciones vectorizadas 2\nContenido:\n\nFunciones vectorizadas purrr\nBind_rows, bind_cols\nLecturas en bucle\n\nEjercicio práctico:\n\nLectura de datos en bucle y conformación de una estructura de datos unificada.\n\n\n\n\nClase 23:\n\nObjetivo: Comprender la lógica de joins (unión) de Data Frames.\nContenido:\n\njoins de datos\nRegresión lineal\n\nEjercicio práctico:\n\nAplicar un join de datos y obtener una regresión lineal por grupo de datos\n\n\n\n\nClase 24:\n\nObjetivo: modelado de datos\nContenido: por definir\n\n\n\nClase 25:\n\nObjetivo: modelado de datos\nContenido: por definir\n\n\n\nClase 26:\n\nObjetivo: crear reportes interactivos\nContenido:\n\nUso de quarto dashboard\n\n\n\n\nClase 27:\n\nObjetivo: crear dashboards interactivos\nContenido:\n\nUso de Quarto dashboard\n\n\n\n\nClase 28:\n\nObjetivo: crear aplicaciones web interactivas con Shiny 1\nContenido:\n\nIntroducción a Shiny 1: Aplicaciones web interactivas\n\nestructura UI - Server\nPrincipios de programación reactiva\n\n\nEjercicio práctico:\n\ncrear una aplicación web interactiva mínima.\n\n\n\n\nClase 29 a la 31:\n\nObjetivo: trabajar en proyecto final de la materia donde se aplican todos los contenidos revisados con la finalidad de crear un producto basado en el uso de datos.",
     "crumbs": [
       "Sobre el Curso",
-      "Contenido"
+      "Contenido del Curso"
     ]
   },
   {
@@ -128,7 +128,11 @@
     "href": "curso-equipo.html",
     "title": "Equipo de Profesores",
     "section": "",
-    "text": "Prof. Juan Pablo Goncalves:\nProfesor Escuela de Economía…….\n\n\nProf. Jesús Sánchez:\nProfesor Escuela de Economía…….\n\n\nProf. José Miguel Avendaño:\nMagister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciónes se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning. Su interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones web donde los datos, su manipulación y representación, son los pilares en que sustentan.\nActualmente participa en las investigaciones que desarrolla el Laboratorio de Gestión de la Innovación y el Centro de Microscopía Electrónica «Dr. Mitsuo Ogura», ambos de la UCV, en la incorporación de largos modelos de lenguaje en procesos de enseñanza inteligenciada.\n\n\n\n\n\n\n\nHoras de Consulta\nSitio\n\n\n\n\nLunes 2:30 - 3:00 pm\nLaboratorio piso 2 Escuela de Economía, FaCES\n\n\nMiércoles 3:00 pm - 4:30 pm\nCentro de Microscopía Electrónica, planta baja, Facultad de Ciencias"
+    "text": "Prof. José Miguel Avendaño I.:\nProfesor Escuela de Economía (U.C.V.), Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciones se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning.\nSu interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones web donde los datos, su manipulación y representación, son los pilares en que sustentan.\n\n\n\nHoras de Consulta\nSitio\n\n\n\n\nPor definir\n\n\n\n\n\n\nProf. Juan Pablo Goncalves Lanz:\nEconomista, Magíster en Instituciones Financieras, Consultor Independiente y Profesor de la Universidad Central de Venezuela.",
+    "crumbs": [
+      "Sobre el Curso",
+      "Equipo de Profesores"
+    ]
   },
   {
     "objectID": "codigo.html",
@@ -136,6 +140,563 @@
     "title": "Código de Conducta",
     "section": "",
     "text": "1. Asistencia a Clases:\n\nLa asistencia es obligatoria y se tendrá en cuenta para la calificación final.\nCada inasistencia injustificada restará puntos de la nota final.\nLas inasistencias deberán ser justificadas con un comprobante válido (certificado médico, etc.) y notificadas al profesor con anticipación siempre que sea posible.\n\n2. Plagio:\n\nEl plagio, en cualquiera de sus formas, no está permitido.\nCualquier trabajo o código que se detecte como plagiado será calificado con cero.\nSe espera que los estudiantes realicen sus trabajos de forma individual, a menos que se indique lo contrario.\n\n3. Uso de IA Generativas:\n\nSe permite el uso de herramientas de IA generativas como ChatGPT, Gemini, Llama.\nEs obligatorio citar la fuente y la herramienta utilizada en el código o trabajo entregado.\nEl objetivo es usar la IA para complementar el aprendizaje, no para sustituirlo.\n\n4. Participación:\n\nLa participación activa en clase es fundamental para el aprendizaje.\nSe valorará la participación, la formulación de preguntas y la colaboración con otros estudiantes.\n\n5. Entrega de Trabajos:\n\nLos trabajos deberán ser entregados en la fecha y hora indicadas.\nLas entregas tardías serán penalizadas, a menos que se justifique un motivo válido. Igualmente, las entregas tardías tendrán una fecha límite no superior a los 15 días a la fecha indicada. La penalización será de un 2% menos a la nota obtenida por día de retardo, con un límite de 30% de penalidad.\nLos trabajos deben cumplir con los requisitos de formato y contenido especificados por el profesor.\n\n6. Respeto:\n\nSe espera un ambiente de respeto y colaboración entre todos los participantes del curso.\nSe prohíbe cualquier forma de discriminación, acoso o comportamiento inapropiado.\n\n7. Comunicación:\n\nLa comunicación con el profesor se realizará a través de los canales establecidos (correo electrónico, plataforma virtual, etc.).\nSe espera que los estudiantes revisen regularmente los anuncios y mensajes del profesor en el servidor discord u otro medio electrónico que sea acordado.\n\n\nUso de dispositivos electrónicos: \n\n\nLos teléfonos celulares deben permanecer en modo silencioso o apagado durante toda la duración de la clase.\nSe prohíbe el uso de teléfonos celulares para llamadas, mensajes de texto, navegación en redes sociales, juegos o cualquier otra actividad no relacionada con la clase.\nEl uso de la cámara del teléfono para grabar audio o video de la clase solo se permite con el consentimiento explícito del profesor.\n\n\nHorario de atención: Indica los horarios de atención del profesor para consultas y dudas.\nRecursos adicionales: Proporciona una lista de recursos adicionales (libros, sitios web, tutoriales) que puedan ser útiles para los estudiantes.\n\nEspero que estas reglas te sean de utilidad para organizar tu curso de programación. ¡Mucho éxito!",
+    "crumbs": [
+      "Sobre el Curso",
+      "Código de Conducta"
+    ]
+  },
+  {
+    "objectID": "codigoconducta.html",
+    "href": "codigoconducta.html",
+    "title": "Código de Conducta del Estudiante",
+    "section": "",
+    "text": "1. Asistencia a Clases:\n2. Plagio:\n3. Uso de IA Generativas:\n4. Participación:\n5. Entrega de Trabajos:\n6. Respeto:\n7. Comunicación:\n1",
+    "crumbs": [
+      "Sobre el Curso",
+      "Código de Conducta"
+    ]
+  },
+  {
+    "objectID": "planeval.html",
+    "href": "planeval.html",
+    "title": "Plan de Evaluación",
+    "section": "",
+    "text": "Detalle\nPorcentaje\n\n\n\n\n10 Laboratorios\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %",
+    "crumbs": [
+      "Sobre el Curso",
+      "Plan de Evaluación"
+    ]
+  },
+  {
+    "objectID": "recursos.html",
+    "href": "recursos.html",
+    "title": "Recursos Disponibles",
+    "section": "",
+    "text": "A continuación se listan una serie de recursos altamente valiosos que sirven de apoyo para el desarrollo del curso.\n\nLibros Recomendados\n\nR Para Ciencia de datos https://es.r4ds.hadley.nz/ : es una traducción hecha por la comunidad de usuarios de R en latinoamérica del libro” R for Data Science”. El autor principal del libro es Hadley Wickham, quien es autor de una variedad de librerías de amplio uso de este lenguaje de programación. Igualmente HW es Chief Data Scientist de Posit Inc que es la empresa (corporación de beneficio público) que desarrolló el principal entorno de desarrollo para R de nombre RStudio.\nR for Data Science (2e) https://r4ds.hadley.nz/: es la segunda edición en inglés del libro recomendado en el punto anterior.\nHands-On Programming with R https://rstudio-education.github.io/hopr/preface.html : libro de introducción a la programación en R bajo la filosofía “hands on”, programación práctica. El autor del libro es Garrett Grolemund quien también trabaja como Data Scientist en Posit inc.\nAn Introduction to Statistical Learning Download ISL with R Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani.\nIntroducción a R : https://cran.r-project.org/doc/contrib/R-intro-1.1.0-espanol.1.pdf por R Development Core Team Modelado (machine learning y estadístico) https://github.com/tidymodels/learntidymodels\nR para profesionales de los datos: una introducción https://www.datanalytics.com/libro_r/ por Carlos J. Gil Bellosta\n\n\n\nRepositorios de librerías-paquetes\n\nhttps://cran.r-project.org/\nhttps://ropensci.org/packages/\nhttps://www.bioconductor.org/packages/release/BiocViews.html#___Software\n\n\n\nTutoriales, info general sobre R y sus aplicaciones:\n\nhttps://www.r-bloggers.com/\nhttps://github.com/josersosa/Programando_en_R\nhttps://swcarpentry.github.io/r-novice-gapminder-es/\nhttps://gonzalezgouveia.com/curso-de-r-studio-gratis/\nhttps://www.infoworld.com/profile/sharon-machlis/\nhttps://rafael-zambrano-blog-ds.netlify.app/blog\nhttps://intro-r-eph.netlify.app/bio , https://intro-r-eph.netlify.app/0a_diapositivas/01b_r_intro_presentacion#1\n\n\n\nRepositorios de códigos y materiales de interés:\n\nhttps://github.com/orgs/UCVeconomia2024-2/dashboard (repositorio del curso)\nhttps://github.com/DiegoKoz/intro_ds\nhttps://github.com/gefero/fund-prog-r?tab=readme-ov-file\n\n\n\nSoftware y descargas:\n\nLenguaje R: https://cran.r-project.org/ versión actual R-4.4.3. Video instalación: pendiente por agregar\nRStudio Desktop https://posit.co/download/rstudio-desktop/ : entorno de desarrollo de fácil integración con el lenguaje R Video instalación: pendiente por agregar\n\n\n\nCheat Sheets en español:\n\nhttps://posit.co/resources/cheatsheets/?type=translations/\nhttps://rstudio.github.io/cheatsheets/translations.html#spanish\n\n\n\nCheats Sheets en inglés:\n\nhttps://posit.co/resources/cheatsheets/\n\n\n\nLibros de distintas profesiones y especialidades que usan R\n\nhttps://epirhandbook.com/\n\n\n\nLibros, páginas de internet de interés general sobre R y sus usos:\n\nhttps://github.com/qinwf/awesome-R\nhttps://github.com/iamericfletcher/awesome-r-learning-resources\nhttps://rfortherestofus.com/resources/\nhttps://rubenfcasal.github.io/bookdown_intro/rmarkdown.html\nInteractive web-based data visualization with R, plotly, and shiny https://plotly-r.com/\nPaquetes de utilidades para datos geoespaciales https://r-spatial.github.io/sf/\nR for Data Analysis https://trevorfrench.github.io/R-for-Data-Analysis/\nR Cookbook https://rc2e.com/\nR for journalist https://www.machlis.com/R4Journalists/\nWeb Scraping https://github.com/yusuzech/r-web-scraping-cheat-sheet\nArtículos varios https://yabellini.netlify.app/tags/r/\n\n\n\nGalerías de productos hechos con R:\n\nShiny https://shiny.posit.co/r/gallery\nGráficos: https://r-graph-gallery.com/\nDashboards https://pkgs.rstudio.com/flexdashboard/articles/examples.html\nWidgets https://rstudio.github.io/crosstalk/index.html\nPlotly https://plotly.com/r/\n\n\n\nGrupos de usuarios de R en el mundo\n\nhttps://x.com/GrupoRVenezuela\n\nhttps://x.com/_SevillaR\nhttps://x.com/ErreEspanol\nhttps://x.com/estacion_erre\nhttps://x.com/RLadiesBA\nhttps://www.meetup.com/renbaires/\nhttps://www.meetup.com/rladies-goiania/\nhttps://x.com/ShinyConf\n\n\nEmlace repositorio del Site https://github.com/javendaXgh/r4dsucv2024",
+    "crumbs": [
+      "Sobre el Curso",
+      "Recursos Disponibles"
+    ]
+  },
+  {
+    "objectID": "tarea_01.html",
+    "href": "tarea_01.html",
+    "title": "Tarea 1",
+    "section": "",
+    "text": "Suscribirse al canal discord https://discord.gg/XcEEMXnU. Una vez suscrito en cada uno de los canales dejar una “reacción” como “me gusta”, “de acuerdo”, etc. El listado de canales a revisar se indica a continuación:\n\ngeneral\nreglas-del-servidor\nanuncios-clases\nerrores-de-códigos-preguntas\nenlaces-interés\nconjuntos-datos\n\nHacer lectura en la página del curso las siguientes publicaciones:\n\nCódigo de Conducta\nInformación General\nPrograma\nPlan de Evaluación\nRecursos Disponibles\n\nCrear cuentas de usuario en:\n\nhttps://github.com\nhttps://login.posit.cloud/register\n\nRemitir nombres de usuario de ambas cuentas al correo a ucveconomiar4ds@gmail.com\n\nLas actividades señaladas se deben cumplir antes del 24 de marzo.",
+    "crumbs": [
+      "Tareas",
+      "tarea 1"
+    ]
+  },
+  {
+    "objectID": "clases/clase_01.html#equipo-de-enseñanza",
+    "href": "clases/clase_01.html#equipo-de-enseñanza",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Equipo de Enseñanza",
+    "text": "Equipo de Enseñanza\n\n\n\n\n\nProfesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????"
+  },
+  {
+    "objectID": "clases/clase_01.html#participantes-curso",
+    "href": "clases/clase_01.html#participantes-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Participantes Curso",
+    "text": "Participantes Curso\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "clases/clase_01.html#ciencia-de-datos-por-ejemplo",
+    "href": "clases/clase_01.html#ciencia-de-datos-por-ejemplo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ciencia de Datos, por ejemplo",
+    "text": "Ciencia de Datos, por ejemplo\nExtraer conocimiento desde un conjunto de datos"
+  },
+  {
+    "objectID": "clases/clase_01.html#excel---no",
+    "href": "clases/clase_01.html#excel---no",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Excel - no …",
+    "text": "Excel - no …"
+  },
+  {
+    "objectID": "clases/clase_01.html#por-qué-r",
+    "href": "clases/clase_01.html#por-qué-r",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¡por qué R?",
+    "text": "¡por qué R?"
+  },
+  {
+    "objectID": "clases/clase_01.html#rstudio",
+    "href": "clases/clase_01.html#rstudio",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "RStudio",
+    "text": "RStudio"
+  },
+  {
+    "objectID": "clases/clase_01.html#vista-integral",
+    "href": "clases/clase_01.html#vista-integral",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vista Integral",
+    "text": "Vista Integral"
+  },
+  {
+    "objectID": "clases/clase_01.html#importar",
+    "href": "clases/clase_01.html#importar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Importar",
+    "text": "Importar"
+  },
+  {
+    "objectID": "clases/clase_01.html#ordenar-transformar",
+    "href": "clases/clase_01.html#ordenar-transformar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ordenar + transformar",
+    "text": "Ordenar + transformar"
+  },
+  {
+    "objectID": "clases/clase_01.html#visualizar",
+    "href": "clases/clase_01.html#visualizar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Visualizar",
+    "text": "Visualizar"
+  },
+  {
+    "objectID": "clases/clase_01.html#modelar",
+    "href": "clases/clase_01.html#modelar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Modelar",
+    "text": "Modelar\n\nLas clases de modelado estarán a cargo del Prof. Juan Pablo Goncalves."
+  },
+  {
+    "objectID": "clases/clase_01.html#comprender",
+    "href": "clases/clase_01.html#comprender",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Comprender",
+    "text": "Comprender"
+  },
+  {
+    "objectID": "clases/clase_01.html#comunicar",
+    "href": "clases/clase_01.html#comunicar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Comunicar",
+    "text": "Comunicar"
+  },
+  {
+    "objectID": "clases/clase_01.html#generar-conjunto-de-datos",
+    "href": "clases/clase_01.html#generar-conjunto-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Generar Conjunto de Datos",
+    "text": "Generar Conjunto de Datos"
+  },
+  {
+    "objectID": "clases/clase_01.html#programar",
+    "href": "clases/clase_01.html#programar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Programar",
+    "text": "Programar"
+  },
+  {
+    "objectID": "clases/clase_01.html#intención",
+    "href": "clases/clase_01.html#intención",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Intención",
+    "text": "Intención\n\nPensar como un Científico de Datos:\n\nInvestigador\nCrítico\nInnovador\n\nDónde ubicar recursos técnicos y ayuda"
+  },
+  {
+    "objectID": "clases/clase_01.html#promesa",
+    "href": "clases/clase_01.html#promesa",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Promesa",
+    "text": "Promesa\n\nNociones de programación\nObtener y crear conjunto de datos\nPresentar investigaciones"
+  },
+  {
+    "objectID": "clases/clase_01.html#página-web",
+    "href": "clases/clase_01.html#página-web",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Página Web",
+    "text": "Página Web\nhttps://ucveconomia-r4ds-2025-1.netlify.app\n\n\n\n\n\n\nTodos los materiales\nEnlaces a recursos"
+  },
+  {
+    "objectID": "clases/clase_01.html#salón",
+    "href": "clases/clase_01.html#salón",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Salón",
+    "text": "Salón\n\nLaboratorio piso 2"
+  },
+  {
+    "objectID": "clases/clase_01.html#herramientas-del-curso",
+    "href": "clases/clase_01.html#herramientas-del-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Herramientas del Curso",
+    "text": "Herramientas del Curso\n\nUso Discord: comunicación, recomendaciones, soporte\nRepositorio GitHub: optimizar flujos de trabajo\nAsistente chat para codificación\nPágina web con recursos\nRStudio Cloud-Server: computación en la nube"
+  },
+  {
+    "objectID": "clases/clase_01.html#bibliografía",
+    "href": "clases/clase_01.html#bibliografía",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nr4ds en español\nHands-On Programming with R\nCiencia de Datos para Gente Sociable\nMuchos otros"
+  },
+  {
+    "objectID": "clases/clase_01.html#tareas",
+    "href": "clases/clase_01.html#tareas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tareas",
+    "text": "Tareas\n\nSemanales (cantidad exacta por definir)"
+  },
+  {
+    "objectID": "clases/clase_01.html#proyecto",
+    "href": "clases/clase_01.html#proyecto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Proyecto",
+    "text": "Proyecto\n\nElección del conjunto de datos de su preferencia\nTrabajo en equipo\nPresentación final del Proyecto en laboratorio (20 minutos)\nCreación de un póster (afiche) para comunicar (⛔️ bachillerato)\nSe publicará en la página el proyecto"
+  },
+  {
+    "objectID": "clases/clase_01.html#evaluación",
+    "href": "clases/clase_01.html#evaluación",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Evaluación",
+    "text": "Evaluación\n\n\n\nDetalle\nPorcentaje\n\n\n\n\n10 Laboratorios\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %\n\n\n\nEn la página del curso están las especificaciones sobre los proyectos a realizar"
+  },
+  {
+    "objectID": "clases/clase_01.html#equipos-proyecto",
+    "href": "clases/clase_01.html#equipos-proyecto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Equipos Proyecto",
+    "text": "Equipos Proyecto\n\n4 a 5 personas\nEvaluación Equipo de Profesores:\n\ncalidad código, originalidad, aporte"
+  },
+  {
+    "objectID": "clases/clase_01.html#soporte-curso",
+    "href": "clases/clase_01.html#soporte-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Soporte Curso",
+    "text": "Soporte Curso\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo para soporte\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
+  },
+  {
+    "objectID": "clases/clase_01.html#anuncios-del-curso",
+    "href": "clases/clase_01.html#anuncios-del-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Anuncios del Curso",
+    "text": "Anuncios del Curso\n\nSe publicarán en el canal anuncios-clases del Discord u otro medio digital\nRevisar los canales de comunicación al menos el día anterior a cada una de las clases"
+  },
+  {
+    "objectID": "clases/clase_01.html#retos-que-representa-el-curso",
+    "href": "clases/clase_01.html#retos-que-representa-el-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Retos que Representa el Curso",
+    "text": "Retos que Representa el Curso\n?"
+  },
+  {
+    "objectID": "clases/clase_01.html#tareas-asignadas",
+    "href": "clases/clase_01.html#tareas-asignadas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tareas Asignadas",
+    "text": "Tareas Asignadas\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_01.html#objetivos-del-curso",
+    "href": "clases/clase_01.html#objetivos-del-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivos del Curso",
+    "text": "Objetivos del Curso\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía."
+  },
+  {
+    "objectID": "clases/clase_01.html#objetivos-del-curso--cont.",
+    "href": "clases/clase_01.html#objetivos-del-curso--cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivos del Curso- cont.",
+    "text": "Objetivos del Curso- cont.\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso."
+  },
+  {
+    "objectID": "clases/clase_01.html#clases",
+    "href": "clases/clase_01.html#clases",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Clases",
+    "text": "Clases\n\nPresenciales\nRemotas de complemento\nRemotas opcionales\nAsistencia obligatoria\nUn poco de:\n\nClase tradicional\nCodificación + demos\nEjercicios, talleres, soluciones"
+  },
+  {
+    "objectID": "clases/clase_01.html#laboratorios",
+    "href": "clases/clase_01.html#laboratorios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Laboratorios",
+    "text": "Laboratorios\n\n10 planificados (30 minutos duración)\nCada 3 clases\nOportunidad para trabajar en tareas del curso con soporte\n\n\n\nOportunidad de trabajar con miembros del equipo del proyecto\nSe pueden extender por 45 minutos una vez finalizada la clase"
+  },
+  {
+    "objectID": "clases/clase_01.html#discord",
+    "href": "clases/clase_01.html#discord",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Discord",
+    "text": "Discord\n\nForo en línea para plantear y responder preguntas\nDeberá unirse al servidor del curso para tener acceso.\nHaga y responda aquí a preguntas relacionadas con la logística del curso, las tareas, etc.\nPreguntas personales (por ejemplo, extensiones, enfermedades, etc.) deben ser a través de correo electrónico.\nUna vez que te unas, navega por los canales para asegurarte de que estás publicando preguntas en el canal correcto, actualiza tu perfil con tu nombre, foto/avatar tuyo que coincida con tu perfil de GitHub."
+  },
+  {
+    "objectID": "clases/clase_01.html#repositorio-github",
+    "href": "clases/clase_01.html#repositorio-github",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Repositorio GitHub",
+    "text": "Repositorio GitHub\n\nláminas y códigos disponibles en https://github.com/javendaXgh/ucveconomiar4ds-2025-1\nSe espera que a lo largo del curso se enseñen distintas bondades sobre esta herramienta."
+  },
+  {
+    "objectID": "clases/clase_01.html#página-web-del-curso",
+    "href": "clases/clase_01.html#página-web-del-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Página Web del Curso",
+    "text": "Página Web del Curso\n\nEn https://ucveconomiar4ds.netlify.app se encuentra el acceso al sitio de la versión actual del curso y de la edición anterior.\nEn la página estarán publicadas los talleres, las láminas de las clases, pautas generales, el código de conducta del estudiante, etc."
+  },
+  {
+    "objectID": "clases/clase_01.html#rstudio-cloud-server",
+    "href": "clases/clase_01.html#rstudio-cloud-server",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "RStudio Cloud-Server",
+    "text": "RStudio Cloud-Server\nEl IDE (entorno de desarrollo) que se usará es RStudio y existe una versión en la nube que es una alternativa en caso de contar con una computadora no apta para correr los códigos o instalar los paquetes necesarios."
+  },
+  {
+    "objectID": "clases/clase_01.html#material-bibliográfico",
+    "href": "clases/clase_01.html#material-bibliográfico",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Material Bibliográfico",
+    "text": "Material Bibliográfico\n\nr4ds en español\nHands-On Programming with R\nCiencia de Datos para Gente Sociable\nMuchos otros\n\nRevisar /recursos.html"
+  },
+  {
+    "objectID": "clases/clase_01.html#inclusión",
+    "href": "clases/clase_01.html#inclusión",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Inclusión",
+    "text": "Inclusión\nMi objetivo es que este curso sea inclusivo y beneficioso para estudiantes de todos los orígenes y perspectivas. Me comprometo a atender las necesidades de aprendizaje tanto dentro como fuera del aula, y a valorar la diversidad que cada estudiante aporta como un recurso, una fortaleza y una ventaja.\nSi sientes que tu rendimiento en la clase se ve afectado por experiencias externas, no dudes en hablar conmigo. Quiero ser un apoyo para ti. Si prefieres hablar con alguien fuera del curso, la Escuela de Economía cuenta con un departamento a cargo del Prof. Jesús Sanchez que puede resultar de gran ayuda.\nYo, al igual que muchas personas, sigo aprendiendo sobre diversas perspectivas. Si algo dicho en clase (por cualquiera) te hizo sentir incómodo, por favor, háblame al respecto."
+  },
+  {
+    "objectID": "clases/clase_01.html#plan-de-evaluación",
+    "href": "clases/clase_01.html#plan-de-evaluación",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Plan de Evaluación",
+    "text": "Plan de Evaluación\n\n\n\nDetalle\nPorcentaje\n\n\n\n\n10 tareas\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %"
+  },
+  {
+    "objectID": "clases/clase_01.html#tareas-20",
+    "href": "clases/clase_01.html#tareas-20",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tareas (20%)",
+    "text": "Tareas (20%)\n\nSe tiene pautado un total de 10 tareas que según el desarrollo del curso puede verse disminuida la cantidad.\nSe asignarán aproximadamente cada 3 clases.\nSe tiene pautado que tenga un peso de 20% de la nota.\nLa recomendación es hacer las tareas con tiempo para que el profesor pueda responder oportunamente cualquier consulta.\nSe elimina la tarea que tenga la más baja nota al momento de promediar las notas obtenidas.\nDeben ser entregadas para la fecha asignada, penalidad por retardo\nMáximo 7 días de retardo, sin entregas posteriores."
+  },
+  {
+    "objectID": "clases/clase_01.html#trabajo---ciclo-c.d.-sobre-un-conjunto-de-datos-20",
+    "href": "clases/clase_01.html#trabajo---ciclo-c.d.-sobre-un-conjunto-de-datos-20",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Trabajo - Ciclo C.D. sobre un conjunto de datos (20%)",
+    "text": "Trabajo - Ciclo C.D. sobre un conjunto de datos (20%)\n\nSe entregará un conjunto de datos al estudiante para que sobre él realice distintas fases de lo que constituye un ciclo de Ciencia de Datos.\nLa entrega será mediante un script o un reporte elaborado en quarto.\nTendrá un peso de 20%.\nFecha estimada para entrega de los requerimientos, el 29-04-2025\nFecha de entrega del producto final, el 28-05-25"
+  },
+  {
+    "objectID": "clases/clase_01.html#examen-parcial-mitad-del-curso-20",
+    "href": "clases/clase_01.html#examen-parcial-mitad-del-curso-20",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Examen parcial mitad del curso (20%)",
+    "text": "Examen parcial mitad del curso (20%)\n\nUn poco después de la mitad del curso se realizará un examen parcial para que sean evaluados los distintos conocimientos impartidos en el curso.\nEste examen será escrito, no en la computadora.\nTendrá una duración máxima de 60 minutos.\nEl peso que tendrá el examen es del 20%.\nFecha pautada para el examen, el 14-05-2025.\n\n\n\n\n\n\n\nPrecaución\n\n\nLas fechas del examen no se puede cambiar y no se harán exámenes de recuperación. Si usted no puede asistir al examen en la fecha indicada, debería evaluar abandonar este curso."
+  },
+  {
+    "objectID": "clases/clase_01.html#asistencia-5",
+    "href": "clases/clase_01.html#asistencia-5",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Asistencia (5%)",
+    "text": "Asistencia (5%)\n\nLa asistencia al curso es obligatoria y se recomienda hacer lo posible por atender a todas las clases, ya que todos los temas impartidos están relacionados y son incrementales.\nSi ocurre alguna falta, se pide al estudiante no pedir asistencia en la siguiente clase al compañero de estudio una vez que inicie la clase ya que obstaculizará el aprendizaje.\nEl peso otorgado a la asistencia es 5%.\n\n\n\n\n\n\n\nTip\n\n\nSi asistes a un 85% de las clases, obtendrás todos los puntos de este componente.\n\n\n\n\n\n\n\n\n\nPrecaución\n\n\nRecuerde tener presente la fecha límite (25/04/2025) para retiro de materia si presenta un alto índice de inasistencias"
+  },
+  {
+    "objectID": "clases/clase_01.html#intervenciones-5",
+    "href": "clases/clase_01.html#intervenciones-5",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Intervenciones (5%)",
+    "text": "Intervenciones (5%)\n\nLas intervenciones y una actitud proactiva, son muy bien valoradas ya que ayudan a facilitar asimilar los contenidos que son impartidos.\nSe asigna un peso de 5% para este componente."
+  },
+  {
+    "objectID": "clases/clase_01.html#proyecto-final-30",
+    "href": "clases/clase_01.html#proyecto-final-30",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Proyecto Final (30%)",
+    "text": "Proyecto Final (30%)\n\nSe trabajará durante una parte del curso en realizar un proyecto de ciencia de datos donde se unifiquen distintas fuentes de datos asociadas a la economía venezolana.\nEs uno de los componentes más importantes del curso, ya que se pondrán en práctica los distintos temas abordados.\nTendrá un peso de 30%.\nFecha de suministro de los requerimientos del Proyecto Final, el 21-05-25\nFecha de entrega del Proyecto Final, el 03-07-2025\nFecha de presentación del Proyecto Final, el 09-07-2025\n\n\n\n\n\n\n\nPrecaución\n\n\nLas fechas de presentación del proyecto no se puede cambiar. Si usted no puede asistir ese día, debería evaluar abandonar este curso."
+  },
+  {
+    "objectID": "clases/clase_01.html#proyecto-cont.",
+    "href": "clases/clase_01.html#proyecto-cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Proyecto cont.",
+    "text": "Proyecto cont.\n\nEvaluación Equipo de Profesores:\n\ncalidad código,\noriginalidad,\naporte,\ncumplir con C.C.D\n\n\n\n\nElección del conjunto de datos de su preferencia\nTrabajo en equipo 4 a 5 personas\nPresentación final del Proyecto en laboratorio (20 minutos)\nCreación de un póster (afiche) para comunicar (⛔️ bachillerato)\nSe publicará en la página el proyecto\n\ninfo en Leer /proyecto.html"
+  },
+  {
+    "objectID": "clases/clase_01.html#trabajo-en-equipo",
+    "href": "clases/clase_01.html#trabajo-en-equipo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Trabajo En Equipo",
+    "text": "Trabajo En Equipo\n\nTrabajo en equipo Proyecto Final (obligatorio)\nEjercicios en clase (recomendado)\nExpectativas y funciones:\n\nSe espera que todos contribuyan con el mismo esfuerzo\nSe espera que todos entiendan el código entregado"
+  },
+  {
+    "objectID": "clases/clase_01.html#política-de-retardos",
+    "href": "clases/clase_01.html#política-de-retardos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Política de retardos",
+    "text": "Política de retardos\nTareas:\nFuera de plazo, pero hasta una semana después de la fecha indicada:\n\n20% tope de penalidad (3% por día de retardo).\nMás tarde: No se concederá nota y no se proporcionarán comentarios por escrito.\nTenga en cuenta que la puntuación más baja será eliminada, incluso si es un 0.\n\nProyecto Ciclo C.D. sobre un conjunto de datos:\nFuera de plazo, pero dentro de dos semanas posterior a la fecha límite:\n\n30% tope de penalidad (2% por día de retardo).\nMás tarde: No se concederán créditos y no se proporcionarán comentarios por escrito."
+  },
+  {
+    "objectID": "clases/clase_01.html#política-de-colaboración",
+    "href": "clases/clase_01.html#política-de-colaboración",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Política de colaboración",
+    "text": "Política de colaboración\n\nSólo el trabajo que está claramente asignado como trabajo en equipo debe ser completado en colaboración (proyecto)\nEl examen deben ser completado individualmente, no se puede discutir las respuestas con los compañeros de clase, las preguntas de aclaración sólo se debe pedir al profesor\nLas tareas deben completarse individualmente.\nLos laboratorios pueden realizarse en equipos de máximo dos personas.\nNo se pueden compartir directamente las respuestas / código con los demás, sin embargo, son bienvenidos a discutir los problemas en general y pedir consejo."
+  },
+  {
+    "objectID": "clases/clase_01.html#compartir-y-reusar-código",
+    "href": "clases/clase_01.html#compartir-y-reusar-código",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Compartir y Reusar Código",
+    "text": "Compartir y Reusar Código\n\nSomos conscientes de que existe un enorme volumen de código disponible en la web, al igual de que muchas tareas pueden tener soluciones publicadas.\nA menos que se indique explícitamente lo contrario, la política de este curso es que usted puede hacer uso de cualquier recurso en línea (por ejemplo, StackOverflow o un modelo de lenguaje), pero debe citar explícitamente dónde obtuvo cualquier código que utilice directamente o como inspiración en su(s) solución(es).\nCualquier código reciclado que se descubra y no se cite explícitamente será tratado como plagio, independientemente de la fuente."
+  },
+  {
+    "objectID": "clases/clase_01.html#herramientas-de-ia-generativas",
+    "href": "clases/clase_01.html#herramientas-de-ia-generativas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Herramientas de IA Generativas",
+    "text": "Herramientas de IA Generativas\nDebe tratar la IA generativa, como ChatGPT, igual que a otros recursos que estén disponibles en línea. 1\nHay dos principios rectores que rigen el uso de la IA en este curso:\n(1) Dimensión cognitiva: Trabajar con IA no debe reducir tu capacidad de pensar con claridad. Practicaremos el uso de la IA para facilitar -en lugar de dificultar- el aprendizaje.\n(2) Dimensión ética: Los estudiantes que utilicen IA deben ser transparentes sobre su uso y asegurarse de que se alinea con la integridad académica.\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D"
+  },
+  {
+    "objectID": "clases/clase_01.html#tarea-asignada",
+    "href": "clases/clase_01.html#tarea-asignada",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tarea Asignada",
+    "text": "Tarea Asignada\n/tarea_01.html\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_01.html#discord--vínculo",
+    "href": "clases/clase_01.html#discord--vínculo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Discord- vínculo",
+    "text": "Discord- vínculo"
+  },
+  {
+    "objectID": "clases/clase_01.html#objetivos-del-curso---cont.",
+    "href": "clases/clase_01.html#objetivos-del-curso---cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivos del Curso - cont.",
+    "text": "Objetivos del Curso - cont.\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral."
+  },
+  {
+    "objectID": "clases/clase_01.html#para-qué",
+    "href": "clases/clase_01.html#para-qué",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¿Para Qué?",
+    "text": "¿Para Qué?\n\nEstudiante debe pensar como un Científico de Datos:\n\nInvestigador\nCrítico\nInnovador"
+  },
+  {
+    "objectID": "clases/clase_01.html#política-de-retardos--cont.",
+    "href": "clases/clase_01.html#política-de-retardos--cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Política de retardos- cont.",
+    "text": "Política de retardos- cont.\nProyecto Final\n\nDebe ser entregado en la fecha indicada y no existe ningún plazo\nDebe ser presentado en la fecha indicada y no existe ningún plazo"
+  },
+  {
+    "objectID": "clases/clase_01.html#política-de-retardos---cont.",
+    "href": "clases/clase_01.html#política-de-retardos---cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Política de retardos - cont.",
+    "text": "Política de retardos - cont.\nProyecto Final\n\nDebe ser entregado en la fecha indicada y no existe ningún plazo\nDebe ser presentado en la fecha indicada y no existe ningún plazo"
+  },
+  {
+    "objectID": "clases/clase_01.html#herramientas-de-ia-generativas-1",
+    "href": "clases/clase_01.html#herramientas-de-ia-generativas-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Herramientas de IA Generativas",
+    "text": "Herramientas de IA Generativas\n\n✅ Herramientas de IA para el código: Puede hacer uso de la tecnología para ejemplos de codificación en las tareas; si lo hace, debe citar explícitamente dónde obtuvo el código. Cualquier código reciclado que se descubra y no se cite explícitamente se tratará como plagio. El uso de la IA debe estar relacionado con los métodos y funciones impartidos en clase.\n❌ Herramientas de IA para narrativa: A menos que se le indique lo contrario, no puede utilizar IA generativa para escribir narrativa en las tareas. En general, puede utilizar la IA generativa como recurso mientras completa las tareas, pero no para responder a los ejercicios por usted. Usted es el responsable último del trabajo que entregue; debe reflejar su comprensión del contenido del curso."
+  },
+  {
+    "objectID": "clases/clase_01.html",
+    "href": "clases/clase_01.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Profesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????\n\n\n\n\n\n\n\n\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00\n\n\n\n\n\n\nExtraer conocimiento desde un conjunto de datos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía.\n\n\n\n\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso.\n\n\n\n\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral."
+  },
+  {
+    "objectID": "clases/clase_01.html#footnotes",
+    "href": "clases/clase_01.html#footnotes",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Notas",
+    "text": "Notas\n\n\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D↩︎"
+  },
+  {
+    "objectID": "project/proyecto.html",
+    "href": "project/proyecto.html",
+    "title": "Proyecto Final del Curso",
+    "section": "",
+    "text": "Introducción\nEn este proyecto, tendrás la oportunidad de aplicar todos los conocimientos adquiridos a lo largo del curso para resolver un problema real y relevante. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. Además, diseñarás un póster atractivo que resuma tu investigación y crearás una presentación para compartir tus resultados con tus compañeros y la comunidad en general. Los resultados de las investigaciones se mostrarán en la página del Curso para promocionar el talento de los estudiantes de la Escuela de Economía de la UCV.\nEste proyecto tiene un peso asignado de 30% sobre el total de la calificación del curso.\nLa calificación será con un tope de 30 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos: presentación en público del proyecto\n5 puntos póster (afiche)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nInvestigación: Realiza un análisis de datos exhaustivo, utilizando las técnicas aprendidas en clase.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nComunicación efectiva: Diseña un póster visualmente atractivo que comunique de manera clara y concisa los objetivos, metodología, resultados y conclusiones de tu investigación.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nPresentación en público: Prepara una presentación breve para exponer tu proyecto ante tus compañeros y recibir retroalimentación.\nColaboración: Comparte tu trabajo con la comunidad del curso, contribuyendo a un repositorio de proyectos.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones ( GitHub) para compartir el código y los resultados con otros.\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nTema: Elige un tema de tu interés relacionado con Venezuela que pueda ser abordado con los datos disponibles (obligatorio).\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nPóster: Diseña un póster que incluya los siguientes elementos: título, introducción, objetivos, metodología, resultados (visualizaciones), conclusiones y referencias.\nPresentación: Prepara una presentación de 5-7 minutos para exponer tu proyecto.\nInforme: Entrega un informe escrito que detalle el proceso de investigación, los resultados y las conclusiones (opcional).\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\nRepositorio: Comparte tu código y los datos en un repositorio en línea (por ejemplo, GitHub).\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio: Un enlace al repositorio en GitHub o una plataforma similar.\nPóster- Afiche: lámina (dimensiones por definir) con lo indicado anteriormente\n\n\n\nFecha Entrega:\nSemana final del Curso (fecha precisa por definir)."
+  },
+  {
+    "objectID": "proyecto.html",
+    "href": "proyecto.html",
+    "title": "Proyecto Final del Curso",
+    "section": "",
+    "text": "Introducción\nEn este proyecto, tendrás la oportunidad de aplicar todos los conocimientos adquiridos a lo largo del curso para resolver un problema real y relevante. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. Además, diseñarás un póster atractivo que resuma tu investigación y crearás una presentación para compartir tus resultados con tus compañeros y la comunidad en general. Los resultados de las investigaciones se mostrarán en la página del Curso para promocionar el talento de los estudiantes de la Escuela de Economía de la UCV.\nEste proyecto tiene un peso asignado de 30% sobre el total de la calificación del curso.\nLa calificación será con un tope de 30 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos: presentación en público del proyecto\n5 puntos póster (afiche)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nInvestigación: Realiza un análisis de datos exhaustivo, utilizando las técnicas aprendidas en clase.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nComunicación efectiva: Diseña un póster visualmente atractivo que comunique de manera clara y concisa los objetivos, metodología, resultados y conclusiones de tu investigación.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nPresentación en público: Prepara una presentación breve para exponer tu proyecto ante tus compañeros y recibir retroalimentación.\nColaboración: Comparte tu trabajo con la comunidad del curso, contribuyendo a un repositorio de proyectos.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones ( GitHub) para compartir el código y los resultados con otros.\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nTema: Elige un tema de tu interés relacionado con Venezuela que pueda ser abordado con los datos disponibles (obligatorio).\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nPóster: Diseña un póster que incluya los siguientes elementos: título, introducción, objetivos, metodología, resultados (visualizaciones), conclusiones y referencias.\nPresentación: Prepara una presentación de 5-7 minutos para exponer tu proyecto.\nInforme: Entrega un informe escrito que detalle el proceso de investigación, los resultados y las conclusiones (opcional).\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\nRepositorio: Comparte tu código y los datos en un repositorio en línea (por ejemplo, GitHub).\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio: Un enlace al repositorio en GitHub o una plataforma similar.\nPóster- Afiche: lámina (dimensiones por definir) con lo indicado anteriormente\n\n\n\nFecha Entrega:\nSemana final del Curso (fecha precisa por definir).",
+    "crumbs": [
+      "Proyecto",
+      "Proyecto Final de Curso (P.F.C.)"
+    ]
+  },
+  {
+    "objectID": "pauta.html",
+    "href": "pauta.html",
+    "title": "Pautas Proyecto Final",
+    "section": "",
+    "text": "El objetivo principal de este proyecto es que los estudiantes apliquen sus conocimientos y habilidades en el lenguaje de programación R para analizar un problema relevante para Venezuela o un sector de la sociedad. Los estudiantes deberán seguir las fases estándar del ciclo de vida de proyectos de ciencia de datos: importar, ordenar, transformar-limpiar, visualizar, modelar y comunicar.\nEn general, sobre el Ensayo que están trabajando, dentro de las siguientes fases y puntos, es de la Fase 1 en sus puntos 1, 2 y 3, los que estamos abordando en este momento.\n\n\n\n\n\n   - Los estudiantes deben identificar un tema relevante para Venezuela que les interese personalmente. Algunos ejemplos pueden incluir:\n\nAnálisis de la inflación y su impacto en el consumo\nEvaluación del desempleo y las tendencias laborales\nEstudio de la distribución de ingresos y pobreza\nAnálisis de la calidad de vida en diferentes regiones del país\nInvestigación sobre el acceso a servicios básicos (agua, electricidad, salud)\nLos estudiantes deben justificar por qué este tema les interesa y cómo creen que puede contribuir al campo de la ciencia de datos.\n\n\n\n\n   - Basándose en el tema seleccionado, los estudiantes deben formular una pregunta de investigación clara y específica.\n   - La pregunta debe ser susceptible de análisis mediante técnicas estadísticas y visualización de datos.\n\n\n\n- Junto con el profesor se evaluará la viabilidad de obtener y recolectar periódicamente datos que sirvan para el proyecto. Se puede evaluar que es factible o no realizar la investigación.\nNota: En la siguiente Fase 4, debería empezar el AnteProyecto, juntando todas las ideas de cada participante de su correspondiente equipo\n\n\n\n    - Los estudiantes deben identificar y seleccionar fuentes de datos relevantes para su proyecto.\n     - Las fuentes pueden incluir:\n     - Estadísticas oficiales del INE (Instituto Nacional de Estadística)\n     - Informes económicos del Banco Mundial\n     - Datos de encuestas sociales\n     - Series temporales económicas\n     - Datos abiertos disponibles en plataformas como Kaggle o Data.gov\n     - Los estudiantes deben presentar una propuesta detallada de las fuentes de datos que planean utilizar, incluyendo un análisis de la calidad y relevancia de los mismos.\nNota: La selección final de las fuentes de datos será revisada por los profesores de la materia para asegurar su adecuación al proyecto y la factibilidad de recolectar tales datos, dado la realidad nacional.\nLo que sigue, es lo que se trabajará en el Proyecto.\n\n\n\n\n\n\n   - Los estudiantes deben aprender a importar datos desde diferentes formatos (CSV, Excel, JSON, bases de datos SQL) utilizando R.\n\n\n\n   - Los estudiantes deben explorar los datos importados para entender su estructura y contenido.\n   - Deben identificar variables relevantes, tipos de datos y posibles problemas de calidad (valores faltantes, outliers, etc.).\n\n\n\n\n\n\n   - Los estudiantes deben aprender a transformar los datos para prepararlos para el análisis.\n   - Esto puede incluir la creación de nuevas variables, la recodificación de variables existentes o la aplicación de funciones matemáticas.\n\n\n\n   - Los estudiantes deben identificar y manejar valores faltantes, outliers y otros problemas de calidad en los datos.\n   - Se les recomienda utilizar paquetes como `dplyr` para realizar operaciones de transformación y limpieza eficientes.\n\n\n\n\n\n\n   - Los estudiantes deben aprender a crear gráficos y tablas que ayuden a visualizar los datos y responder la pregunta de investigación.\n   - Se les recomienda utilizar paquetes como `ggplot2`, plotly y otros paquetes que sean vistos en clase, para crear gráficos estéticamente atractivos y informativos.\n\n\n\n   - Los estudiantes deben interpretar las visualizaciones creadas y relacionarlas con la pregunta de investigación.\n   - Deben ser capaces de comunicar claramente los hallazgos visuales en un contexto narrativo.\n\n\n\n\n\n\n- Los estudiantes deben seleccionar y aplicar modelos estadísticos apropiados para responder la pregunta de investigación.\n- Esto puede incluir regresiones lineales, análisis de variancia (ANOVA), series temporales o otros métodos según sea necesario.\n\n\n\n   - Los estudiantes deben interpretar los resultados obtenidos de los modelos y relacionarlos con la pregunta de investigación.\n   - Deben ser capaces de comunicar claramente las implicaciones de los hallazgos estadísticos en un contexto narrativo.\n\n\n\n\n\n\n   - Los estudiantes deben aprender a crear informes que presenten sus análisis y resultados.\n   - Se les recomienda utilizar herramientas como qmd para combinar código, texto y visualizaciones en un solo documento. De esto hablaremos con detalle a lo largo del curso.\n\n\n\n   - Los estudiantes deben preparar una presentación oral breve (10-15 minutos) que resuma su proyecto, incluyendo la pregunta de investigación, los métodos utilizados, los resultados obtenidos y las conclusiones.\n   - La presentación debe ser clara, concisa y visualmente atractiva.\n\n\n\n- Luego conversaremos sobre este punto",
+    "crumbs": [
+      "Proyecto",
+      "Pautas del P.F.C."
+    ]
+  },
+  {
+    "objectID": "pauta.html#pautas-para-la-propuesta-del-proyecto-final-de-ciencia-de-datos",
+    "href": "pauta.html#pautas-para-la-propuesta-del-proyecto-final-de-ciencia-de-datos",
+    "title": "Pautas Proyecto Final",
+    "section": "",
+    "text": "El objetivo principal de este proyecto es que los estudiantes apliquen sus conocimientos y habilidades en el lenguaje de programación R para analizar un problema relevante para Venezuela o un sector de la sociedad. Los estudiantes deberán seguir las fases estándar del ciclo de vida de proyectos de ciencia de datos: importar, ordenar, transformar-limpiar, visualizar, modelar y comunicar.\nEn general, sobre el Ensayo que están trabajando, dentro de las siguientes fases y puntos, es de la Fase 1 en sus puntos 1, 2 y 3, los que estamos abordando en este momento.\n\n\n\n\n\n   - Los estudiantes deben identificar un tema relevante para Venezuela que les interese personalmente. Algunos ejemplos pueden incluir:\n\nAnálisis de la inflación y su impacto en el consumo\nEvaluación del desempleo y las tendencias laborales\nEstudio de la distribución de ingresos y pobreza\nAnálisis de la calidad de vida en diferentes regiones del país\nInvestigación sobre el acceso a servicios básicos (agua, electricidad, salud)\nLos estudiantes deben justificar por qué este tema les interesa y cómo creen que puede contribuir al campo de la ciencia de datos.\n\n\n\n\n   - Basándose en el tema seleccionado, los estudiantes deben formular una pregunta de investigación clara y específica.\n   - La pregunta debe ser susceptible de análisis mediante técnicas estadísticas y visualización de datos.\n\n\n\n- Junto con el profesor se evaluará la viabilidad de obtener y recolectar periódicamente datos que sirvan para el proyecto. Se puede evaluar que es factible o no realizar la investigación.\nNota: En la siguiente Fase 4, debería empezar el AnteProyecto, juntando todas las ideas de cada participante de su correspondiente equipo\n\n\n\n    - Los estudiantes deben identificar y seleccionar fuentes de datos relevantes para su proyecto.\n     - Las fuentes pueden incluir:\n     - Estadísticas oficiales del INE (Instituto Nacional de Estadística)\n     - Informes económicos del Banco Mundial\n     - Datos de encuestas sociales\n     - Series temporales económicas\n     - Datos abiertos disponibles en plataformas como Kaggle o Data.gov\n     - Los estudiantes deben presentar una propuesta detallada de las fuentes de datos que planean utilizar, incluyendo un análisis de la calidad y relevancia de los mismos.\nNota: La selección final de las fuentes de datos será revisada por los profesores de la materia para asegurar su adecuación al proyecto y la factibilidad de recolectar tales datos, dado la realidad nacional.\nLo que sigue, es lo que se trabajará en el Proyecto.\n\n\n\n\n\n\n   - Los estudiantes deben aprender a importar datos desde diferentes formatos (CSV, Excel, JSON, bases de datos SQL) utilizando R.\n\n\n\n   - Los estudiantes deben explorar los datos importados para entender su estructura y contenido.\n   - Deben identificar variables relevantes, tipos de datos y posibles problemas de calidad (valores faltantes, outliers, etc.).\n\n\n\n\n\n\n   - Los estudiantes deben aprender a transformar los datos para prepararlos para el análisis.\n   - Esto puede incluir la creación de nuevas variables, la recodificación de variables existentes o la aplicación de funciones matemáticas.\n\n\n\n   - Los estudiantes deben identificar y manejar valores faltantes, outliers y otros problemas de calidad en los datos.\n   - Se les recomienda utilizar paquetes como `dplyr` para realizar operaciones de transformación y limpieza eficientes.\n\n\n\n\n\n\n   - Los estudiantes deben aprender a crear gráficos y tablas que ayuden a visualizar los datos y responder la pregunta de investigación.\n   - Se les recomienda utilizar paquetes como `ggplot2`, plotly y otros paquetes que sean vistos en clase, para crear gráficos estéticamente atractivos y informativos.\n\n\n\n   - Los estudiantes deben interpretar las visualizaciones creadas y relacionarlas con la pregunta de investigación.\n   - Deben ser capaces de comunicar claramente los hallazgos visuales en un contexto narrativo.\n\n\n\n\n\n\n- Los estudiantes deben seleccionar y aplicar modelos estadísticos apropiados para responder la pregunta de investigación.\n- Esto puede incluir regresiones lineales, análisis de variancia (ANOVA), series temporales o otros métodos según sea necesario.\n\n\n\n   - Los estudiantes deben interpretar los resultados obtenidos de los modelos y relacionarlos con la pregunta de investigación.\n   - Deben ser capaces de comunicar claramente las implicaciones de los hallazgos estadísticos en un contexto narrativo.\n\n\n\n\n\n\n   - Los estudiantes deben aprender a crear informes que presenten sus análisis y resultados.\n   - Se les recomienda utilizar herramientas como qmd para combinar código, texto y visualizaciones en un solo documento. De esto hablaremos con detalle a lo largo del curso.\n\n\n\n   - Los estudiantes deben preparar una presentación oral breve (10-15 minutos) que resuma su proyecto, incluyendo la pregunta de investigación, los métodos utilizados, los resultados obtenidos y las conclusiones.\n   - La presentación debe ser clara, concisa y visualmente atractiva.\n\n\n\n- Luego conversaremos sobre este punto",
+    "crumbs": [
+      "Proyecto",
+      "Pautas del P.F.C."
+    ]
+  },
+  {
+    "objectID": "ensayo.html",
+    "href": "ensayo.html",
+    "title": "Lineamientos y Consideraciones para la Escritura del Ensayo",
+    "section": "",
+    "text": "El ensayo debe estar asociado a una propuesta de realizar a futuro un proyecto de Ciencia de Datos y para esto se tendrán presente las siguientes consideraciones.\n\nSeleccionar un tema de mucho interés para el alumno, dentro del área económica y/o social enmarcada en Venezuela, que pueda ser sometido a un “ciclo de ciencia de datos”. Cuando se habla de económico y/o social, puede ser un sector muy pequeño, ya que la propuesta de tema de estudio no debe aspirar a resolver un gran tema.\nSobre este tema, el alumno debe hacer un desarrollo escrito, cercano a dos cuartillas, donde evalúe si considera que el tema seleccionado resulta de interés, puede hacer algún aporte, por diminuto que sea, a la investigación económica, a la comunidad o a los científicos sociales.\n\nTeniendo como base lo anterior, podemos entender que el Ensayo se define como: un texto argumentativo y reflexivo que sirva como una introducción y justificación para el futuro proyecto de ciencia de datos que haremos. En lugar de presentar resultados, el ensayo busca explorar y comunicar ideas, planteando un tema relevante y viable que pueda someterse al análisis dentro de un ciclo de ciencia de datos."
+  },
+  {
+    "objectID": "ensayo.html#lineamientos-para-escritura-de-ensayo",
+    "href": "ensayo.html#lineamientos-para-escritura-de-ensayo",
+    "title": "Lineamientos y Consideraciones para la Escritura del Ensayo",
+    "section": "",
+    "text": "El ensayo debe estar asociado a una propuesta de realizar a futuro un proyecto de Ciencia de Datos y para esto se tendrán presente las siguientes consideraciones.\n\nSeleccionar un tema de mucho interés para el alumno, dentro del área económica y/o social enmarcada en Venezuela, que pueda ser sometido a un “ciclo de ciencia de datos”. Cuando se habla de económico y/o social, puede ser un sector muy pequeño, ya que la propuesta de tema de estudio no debe aspirar a resolver un gran tema.\nSobre este tema, el alumno debe hacer un desarrollo escrito, cercano a dos cuartillas, donde evalúe si considera que el tema seleccionado resulta de interés, puede hacer algún aporte, por diminuto que sea, a la investigación económica, a la comunidad o a los científicos sociales.\n\nTeniendo como base lo anterior, podemos entender que el Ensayo se define como: un texto argumentativo y reflexivo que sirva como una introducción y justificación para el futuro proyecto de ciencia de datos que haremos. En lugar de presentar resultados, el ensayo busca explorar y comunicar ideas, planteando un tema relevante y viable que pueda someterse al análisis dentro de un ciclo de ciencia de datos."
+  },
+  {
+    "objectID": "ensayo.html#ejemplos",
+    "href": "ensayo.html#ejemplos",
+    "title": "Lineamientos y Consideraciones para la Escritura del Ensayo",
+    "section": "Ejemplos:",
+    "text": "Ejemplos:\n\nAnálisis de patrones de consumo en pequeños negocios locales\n\nDescripción: Evaluar los factores que afectan las ventas diarias en comercios minoristas en una zona de determinada.\nFuentes de datos:\n\nDatos de transacciones de punto de venta.\nEncuestas locales sobre hábitos de compra.\nDatos de tráfico peatonal.\n\n\nOptimización del transporte público en zonas urbanas pequeñas\n\nDescripción: Identificar rutas y horarios óptimos basados en la demanda real de los usuarios.\nFuentes de datos:\n\nDatos de tarjetas de transporte o aplicaciones de movilidad.\nInformación de GPS en autobuses.\nEncuestas a usuarios.\n\n\nImpacto de la digitalización en la competitividad de microempresas rurales\n\nDescripción: Analizar si el acceso a herramientas digitales mejora la rentabilidad.\nFuentes de datos:\n\nEncuestas realizadas en comunidades rurales.\nDatos de transacciones antes y después de la implementación de herramientas digitales.\nIndicadores de conectividad de la región.\n\n\nEfectos de las remesas en el emprendimiento local\n\nDescripción: Analizar si las remesas fomentan la creación de microempresas.\nFuentes de datos:\n\nBases de datos gubernamentales sobre remesas.\nEncuestas sobre empleo informal.\nRegistros empresariales locales.\n\n\nImpacto del cambio climático en la producción agrícola de cultivos específicos\n\nDescripción: Analizar cómo las variables climáticas están afectando los rendimientos agrícolas.\nFuentes de datos:\n\nDatos meteorológicos históricos y de estaciones locales.\nRegistros de producción agrícola.\nSensores de humedad y temperatura en cultivos.\n\n\nEfectos del comercio electrónico en mercados tradicionales\n\nDescripción: Evaluar el impacto del crecimiento del comercio electrónico sobre el comercio minorista.\nFuentes de datos:\n\nDatos de ventas en plataformas de comercio electrónico.\nEncuestas a pequeños comerciantes.\nRegistros de cierres de negocios locales.\nTexto en reseñas de consumidores.\n\n\nAnálisis del impacto económico de un evento local:\n\nDescripción: analizar el impacto económico de un evento específico, como un festival, una nueva empresa o un desastre natural, en una comunidad local.\nFuentes de datos:\n\nDatos de ventas de negocios locales.\nEncuestas a residentes.\nDatos de movilidad.\nDatos de redes sociales.\n\n\nEstudio de la desigualdad económica en una ciudad:\n\nDescripción: analizar la distribución del ingreso y la riqueza en una ciudad, identificando áreas con mayor desigualdad y explorando las posibles causas.\nFuentes de datos:\n\nCensos, datos fiscales.\ndatos de propiedad inmobiliaria.\n\n\nAnálisis del comportamiento del consumidor en un sector específico:\n\nDescripción: analizar el comportamiento de los consumidores en un sector específico, como el comercio electrónico, la restauración o el turismo.\nFuentes de datos:\n\nDatos de transacciones.\nencuestas a consumidores.\ndatos de redes sociales.\n\n\nEvaluación del impacto de un programa social:\n\nDescripción: evaluar el impacto de un programa social específico, como un programa de capacitación laboral o un programa de asistencia alimentaria, en los beneficiarios.\nFuentes de datos:\n\nDatos administrativos del programa.\nencuestas a los beneficiarios."
+  },
+  {
+    "objectID": "clases/images/clase23/quarto_demo.html",
+    "href": "clases/images/clase23/quarto_demo.html",
+    "title": "Quarto Documento demo",
+    "section": "",
+    "text": "Figura 1 explora más a fondo el impacto de la temperatura en el nivel de ozono.\n\n\nCódigo\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\n\n\n\n\nFigura 1: Temperatura y nivel de ozono"
+  },
+  {
+    "objectID": "clases/images/clase23/quarto_demo.html#calidad-del-aire",
+    "href": "clases/images/clase23/quarto_demo.html#calidad-del-aire",
+    "title": "Quarto Documento demo",
+    "section": "",
+    "text": "Figura 1 explora más a fondo el impacto de la temperatura en el nivel de ozono.\n\n\nCódigo\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\n\n\n\n\nFigura 1: Temperatura y nivel de ozono"
+  },
+  {
+    "objectID": "codigoconducta.html#footnotes",
+    "href": "codigoconducta.html#footnotes",
+    "title": "Código de Conducta del Estudiante",
+    "section": "Notas",
+    "text": "Notas\n\n\nEste Código de Conducta fue generado con la asistencia parcial de Google Gemini.↩︎",
     "crumbs": [
       "Sobre el Curso",
       "Código de Conducta"

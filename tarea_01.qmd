@@ -1,0 +1,39 @@
+---
+title: "Tarea 1"
+---
+
+-   Suscribirse al canal discord <https://discord.gg/XcEEMXnU>. Una vez suscrito en cada uno de los canales dejar una "reacción" como "me gusta", "de acuerdo", etc. El listado de canales a revisar se indica a continuación:
+
+    -   general
+
+    -   reglas-del-servidor
+
+    -   anuncios-clases
+
+    -   errores-de-códigos-preguntas
+
+    -   enlaces-interés
+
+    -   conjuntos-datos
+
+-   Hacer lectura en la página del curso las siguientes publicaciones:
+
+    -   Código de Conducta
+
+    -   Información General
+
+    -   Programa
+
+    -   Plan de Evaluación
+
+    -   Recursos Disponibles
+
+-   Crear cuentas de usuario en:
+
+    -   <https://github.com>
+
+    -   <https://login.posit.cloud/register>
+
+-   Remitir nombres de usuario de ambas cuentas al correo a ucveconomiar4ds\@gmail.com
+
+Las actividades señaladas se deben cumplir antes del 24 de marzo.

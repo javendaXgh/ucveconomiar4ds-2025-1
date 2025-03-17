@@ -1,0 +1,127 @@
+---
+title: "Recursos Disponibles"
+---
+
+A continuación se listan una serie de recursos altamente valiosos que sirven de apoyo para el desarrollo del curso.
+
+### Libros Recomendados
+
+-   R Para Ciencia de datos <https://es.r4ds.hadley.nz/> : es una traducción hecha por la comunidad de usuarios de R en latinoamérica del libro” R for Data Science”. El autor principal del libro es Hadley Wickham, quien es autor de una variedad de librerías de amplio uso de este lenguaje de programación. Igualmente HW es Chief Data Scientist de Posit Inc que es la empresa (corporación de beneficio público) que desarrolló el principal entorno de desarrollo para R de nombre RStudio.
+
+-   R for Data Science (2e) <https://r4ds.hadley.nz/:> es la segunda edición en inglés del libro recomendado en el punto anterior.
+
+-   Hands-On Programming with R <https://rstudio-education.github.io/hopr/preface.html> : libro de introducción a la programación en R bajo la filosofía “hands on”, programación práctica. El autor del libro es Garrett Grolemund quien también trabaja como Data Scientist en Posit inc.
+
+-   An Introduction to Statistical Learning Download ISL with R Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani.
+
+-   Introducción a R : <https://cran.r-project.org/doc/contrib/R-intro-1.1.0-espanol.1.pdf> por R Development Core Team Modelado (machine learning y estadístico) <https://github.com/tidymodels/learntidymodels>
+
+-   R para profesionales de los datos: una introducción <https://www.datanalytics.com/libro_r/> por Carlos J. Gil Bellosta
+
+### **Repositorios de librerías-paquetes**
+
+-   <https://cran.r-project.org/>
+
+-   <https://ropensci.org/packages/>
+
+-   <https://www.bioconductor.org/packages/release/BiocViews.html#___Software>
+
+### **Tutoriales, info general sobre R y sus aplicaciones:**
+
+-   <https://www.r-bloggers.com/>
+
+-   <https://github.com/josersosa/Programando_en_R>
+
+-   <https://swcarpentry.github.io/r-novice-gapminder-es/>
+
+-   <https://gonzalezgouveia.com/curso-de-r-studio-gratis/>
+
+-   <https://www.infoworld.com/profile/sharon-machlis/>
+
+-   <https://rafael-zambrano-blog-ds.netlify.app/blog>
+
+-   <https://intro-r-eph.netlify.app/bio> , <https://intro-r-eph.netlify.app/0a_diapositivas/01b_r_intro_presentacion#1>
+
+### **Repositorios de códigos y materiales de interés:**
+
+-   <https://github.com/orgs/UCVeconomia2024-2/dashboard> (repositorio del curso)
+
+-   <https://github.com/DiegoKoz/intro_ds>
+
+-   <https://github.com/gefero/fund-prog-r?tab=readme-ov-file>
+
+### **Software y descargas:**
+
+-   Lenguaje R: <https://cran.r-project.org/> versión actual R-4.4.3. Video instalación: pendiente por agregar
+
+-   RStudio Desktop <https://posit.co/download/rstudio-desktop/> : entorno de desarrollo de fácil integración con el lenguaje R Video instalación: pendiente por agregar
+
+### **Cheat Sheets en español:**
+
+-   <https://posit.co/resources/cheatsheets/?type=translations/>
+
+-   <https://rstudio.github.io/cheatsheets/translations.html#spanish>
+
+### **Cheats Sheets en inglés:**
+
+-   <https://posit.co/resources/cheatsheets/>
+
+### Libros de distintas profesiones y especialidades que usan R
+
+-   <https://epirhandbook.com/>
+
+### **Libros,  páginas de internet de interés general sobre R y sus usos:**
+
+-   <https://github.com/qinwf/awesome-R>
+
+-   <https://github.com/iamericfletcher/awesome-r-learning-resources>
+
+-   <https://rfortherestofus.com/resources/>
+
+-   <https://rubenfcasal.github.io/bookdown_intro/rmarkdown.html>
+
+-   Interactive web-based data visualization with R, plotly, and shiny <https://plotly-r.com/>
+
+-   Paquetes de utilidades para datos geoespaciales <https://r-spatial.github.io/sf/>
+
+-   R for Data Analysis <https://trevorfrench.github.io/R-for-Data-Analysis/>
+
+-   R Cookbook <https://rc2e.com/>
+
+-   R for journalist <https://www.machlis.com/R4Journalists/>
+
+-   Web Scraping <https://github.com/yusuzech/r-web-scraping-cheat-sheet>
+
+-   Artículos varios <https://yabellini.netlify.app/tags/r/>
+
+### **Galerías de productos hechos con R:**
+
+-   Shiny <https://shiny.posit.co/r/gallery>
+
+-   Gráficos: <https://r-graph-gallery.com/>
+
+-   Dashboards <https://pkgs.rstudio.com/flexdashboard/articles/examples.html>
+
+-   Widgets <https://rstudio.github.io/crosstalk/index.html>
+
+-   Plotly <https://plotly.com/r/>
+
+### Grupos de usuarios de R en el mundo
+
+-   <https://x.com/GrupoRVenezuela>
+
+    -   <https://x.com/_SevillaR>
+
+    -   <https://x.com/ErreEspanol>
+
+    -   <https://x.com/estacion_erre>
+
+    -   <https://x.com/RLadiesBA>
+
+    -   <https://www.meetup.com/renbaires/>
+
+    -   <https://www.meetup.com/rladies-goiania/>
+
+    -   <https://x.com/ShinyConf>
+
+Emlace repositorio del Site <https://github.com/javendaXgh/r4dsucv2024>

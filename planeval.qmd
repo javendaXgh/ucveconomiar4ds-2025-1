@@ -1,0 +1,12 @@
+---
+title: "Plan de Evaluación"
+---
+
+|                Detalle                | Porcentaje |
+|:-------------------------------------:|:----------:|
+|            10 Laboratorios            |    20 %    |
+| Ciclo C.D. sobre un conjunto de datos |    20 %    |
+|    Examen parcial mitad del curso     |    20 %    |
+|              Asistencia               |    5 %     |
+|            Intervenciones             |     5%     |
+|            Proyecto Final             |    30 %    |
