@@ -76,6 +76,10 @@ website:
             text: "Proyecto Final de Curso (P.F.C.)"
           - href: pauta.qmd
             text: "Pautas del P.F.C."
+      - section: "Clases"
+        contents:
+        - href: clases/clase_01.qmd
+          text: "Clase 1"
 
 
   page-footer:
