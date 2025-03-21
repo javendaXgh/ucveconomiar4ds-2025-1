@@ -2,6 +2,12 @@
 title: "Equipo de Profesores"
 ---
 
+### Prof. Juan Pablo Goncalves Lanz:
+
+Economista, Magíster en Instituciones Financieras, Consultor Independiente y Profesor de la Universidad Central de Venezuela.
+
+### Prof. Jesús Sánchez
+
 ### Prof. José Miguel Avendaño I.:
 
 Profesor Escuela de Economía (U.C.V.), Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciones se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del ***machine learning***.
@@ -12,6 +18,4 @@ Su interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones
 |-------------------|-------|
 | Por definir       |       |
 
-### Prof. Juan Pablo Goncalves Lanz:
-
-Economista, Magíster en Instituciones Financieras, Consultor Independiente y Profesor de la Universidad Central de Venezuela.
+### 
