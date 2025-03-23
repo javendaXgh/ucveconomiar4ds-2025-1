@@ -9,7 +9,7 @@ website:
   description: "Ciencia de Datos Basada en Programación en R para Economistas. Edición 2025-1"
   site-url: https://ucveconomia-r4ds-2025-1.netlify.app/
   repo-url: https://github.com/javendaXgh/ucveconomiar4ds-2025-1
-  favicon: images/favicon.png
+  favicon: 'images/favicon.png'
   google-analytics: "G-5BVQ49LXJG"
   
   open-graph: true

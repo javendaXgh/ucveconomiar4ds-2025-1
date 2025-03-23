@@ -161,7 +161,7 @@
     "href": "planeval.html",
     "title": "Plan de Evaluación",
     "section": "",
-    "text": "Detalle\nPorcentaje\n\n\n\n\n10 Laboratorios\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %",
+    "text": "Detalle\nPorcentaje\n\n\n\n\n6 a 8 Tareas\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %",
     "crumbs": [
       "Sobre el Curso",
       "Plan de Evaluación"
@@ -591,7 +591,7 @@
     "href": "clases/clase_01.html#plan-de-evaluación",
     "title": "Ciencia de Datos para Economistas",
     "section": "Plan de Evaluación",
-    "text": "Plan de Evaluación\n\n\n\nDetalle\nPorcentaje\n\n\n\n\n10 tareas\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %",
+    "text": "Plan de Evaluación\n\n\n\nDetalle\nPorcentaje\n\n\n\n\n6 a 8 Tareas\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %",
     "crumbs": [
       "Clases",
       "Clase 1"
@@ -602,7 +602,7 @@
     "href": "clases/clase_01.html#tareas-20",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tareas (20%)",
-    "text": "Tareas (20%)\n\nSe tiene pautado un total de 10 tareas que según el desarrollo del curso puede verse disminuida la cantidad.\nSe asignarán aproximadamente cada 3 clases.\nSe tiene pautado que tenga un peso de 20% de la nota.\nLa recomendación es hacer las tareas con tiempo para que el profesor pueda responder oportunamente cualquier consulta.\nSe elimina la tarea que tenga la más baja nota al momento de promediar las notas obtenidas.\nDeben ser entregadas para la fecha asignada, penalidad por retardo\nMáximo 7 días de retardo, sin entregas posteriores.",
+    "text": "Tareas (20%)\n\nSe tiene pautado un total de (6 a 8) tareas que según el desarrollo del curso puede verse disminuida la cantidad.\nSe asignarán aproximadamente cada 3 clases.\nSe tiene pautado que tenga un peso de 20% de la nota.\nLa recomendación es hacer las tareas con tiempo para que el profesor pueda responder oportunamente cualquier consulta.\nSe elimina la tarea que tenga la más baja nota al momento de promediar las notas obtenidas.\nDeben ser entregadas para la fecha asignada, penalidad por retardo\nMáximo 7 días de retardo, sin entregas posteriores.",
     "crumbs": [
       "Clases",
       "Clase 1"
@@ -807,14 +807,22 @@
     "href": "clases/clase_01.html",
     "title": "Ciencia de Datos para Economistas",
     "section": "",
-    "text": "Profesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????\n\n\n\n\n\n\n\n\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00\n\n\n\n\n\n\nExtraer conocimiento desde un conjunto de datos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía.\n\n\n\n\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso.\n\n\n\n\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral."
+    "text": "Profesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\nJesús Sánchez\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????\n\n\n\n\n\n\n\n\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00\n\n\n\n\n\n\nExtraer conocimiento desde un conjunto de datos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía.\n\n\n\n\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso.\n\n\n\n\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral.",
+    "crumbs": [
+      "Clases",
+      "Clase 1"
+    ]
   },
   {
     "objectID": "clases/clase_01.html#footnotes",
     "href": "clases/clase_01.html#footnotes",
     "title": "Ciencia de Datos para Economistas",
     "section": "Notas",
-    "text": "Notas\n\n\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D↩︎"
+    "text": "Notas\n\n\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D↩︎",
+    "crumbs": [
+      "Clases",
+      "Clase 1"
+    ]
   },
   {
     "objectID": "project/proyecto.html",
