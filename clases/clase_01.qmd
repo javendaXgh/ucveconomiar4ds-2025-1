@@ -277,7 +277,7 @@ Yo, al igual que muchas personas, sigo aprendiendo sobre diversas perspectivas. 
 
 |                Detalle                | Porcentaje |
 |:-------------------------------------:|:----------:|
-|             6 a 8 Tareas              |    20 %    |
+|             8 a 10 Tareas             |    20 %    |
 | Ciclo C.D. sobre un conjunto de datos |    20 %    |
 |    Examen parcial mitad del curso     |    20 %    |
 |              Asistencia               |    5 %     |
@@ -286,7 +286,7 @@ Yo, al igual que muchas personas, sigo aprendiendo sobre diversas perspectivas. 
 
 ## Tareas (20%) {.smaller}
 
--   Se tiene pautado un total de (6 a 8) tareas que según el desarrollo del curso puede verse disminuida la cantidad.
+-   Se tiene pautado un total de (8 a 10) tareas que según el desarrollo del curso puede verse disminuida la cantidad.
 
 -   Se asignarán aproximadamente cada 3 clases.
 

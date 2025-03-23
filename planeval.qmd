@@ -4,7 +4,7 @@ title: "Plan de Evaluación"
 
 |                Detalle                | Porcentaje |
 |:-------------------------------------:|:----------:|
-|             6 a 8 Tareas              |    20 %    |
+|             8 a 10 Tareas             |    20 %    |
 | Ciclo C.D. sobre un conjunto de datos |    20 %    |
 |    Examen parcial mitad del curso     |    20 %    |
 |              Asistencia               |    5 %     |
