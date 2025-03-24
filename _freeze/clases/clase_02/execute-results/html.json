@@ -1,8 +1,8 @@
 {
-  "hash": "7c553ff6ab5772a2757f67a9b94dabd7",
+  "hash": "a661e9992b094195b88917fd420a4ed5",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Ciencia de Datos para Economistas\"\nsubtitle: \"Clase 2\"\ndate: \"26/marzo/2025\"\nformat: revealjs\nincremental: true\nauto-stretch: false\nengine: knitr\nfilters:\n  - webr\n---\n\n::: {.cell}\n\n```{.webr .cell-code}\n#\n\n\n\n\n\n\n\n#\n```\n:::\n\n\n\n\n\n\n# \n\nAbordar\n\nfunciones precargadas\n\nlenght\n\nsum\n\nmean\n\nsecuencias\n\naleatorios\n\ndataset\n\nCrear variables\n\nLlamar variables\n\nRBase-\n\npaquetes\n",
+    "markdown": "---\ntitle: \"Ciencia de Datos para Economistas\"\nsubtitle: \"Clase 2\"\ndate: \"26/marzo/2025\"\nformat: revealjs\nincremental: true\nauto-stretch: false\nengine: knitr\nfilters:\n  - webr\n---\n\n::: {.cell}\n\n```{.webr .cell-code}\n#\n\n\n\n\n\n\n\n#\n```\n:::\n\n\n\n\n\n\n# \n\nAbordar\n\nfunciones precargadas\n\nlenght\n\nsum\n\nmean\n\nsecuencias\n\naleatorios\n\ndataset\n\nCrear variables\n\nLlamar variables\n\nRBase-\n\npaquetes\n\nhelp\n\nvectores\n\nc\n\nsecuencias\n\nrep\n\nsort\n\ntable\n\nrev\n\nunique\n\nseleccionar elementos\n\npaste\n\nlm\n\n\\$\n\nrnorm\n\nEjercicios con base en cheat sheet\n\nrbinom\n\nruninf\n\nplot\n\nllamar a objeto creado\n",
     "supporting": [
       "clase_02_files"
     ],
