@@ -1,0 +1,56 @@
+---
+title: "Listado Participantes"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(gt)
+nombres <- c("Samuel Linares",
+             "Halena Ruiz",
+             "José Manuel Suárez",
+             "Gustavo Moreno",
+             "IGNACIO GONCALVES",
+             "Eidiusca Figueira",
+             "Victor Delgado",
+             "Angel Hernández",
+             "Alfredo Tiapa",
+             "Leonardo Crespo",
+             "Roselyn Lara",
+             "Jonathan Pérez",
+             "Dolly Laynes Castrillo",
+             "Raúl Cardozo",
+             "Alexandra Gómez",
+             "Jesús Borges",
+             "Yorman Zabala" ,
+             "Carlos Morillo")
+
+ci <- c(29658512,
+        29756414,
+        28210812,
+        28306246,
+        27600050,
+        27669710,
+        27531901,
+        27995146,
+        30037872,
+        26260451,
+        30138648,
+        27487707,
+        29686193,
+        27660553,
+        29768256,
+        29815277,
+        18440447,
+        29521323)
+participantes <- tibble(Nombre= str_to_title(nombres),
+                        ci= ci)%>%
+  arrange(nombres)%>%
+   mutate(ci=format(ci, nsmall=0, big.mark=".", decimal.mark=',')  )%>%
+  rename(`cédula de identidad`=ci)
+
+gt(participantes)
+
+```
