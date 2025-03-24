@@ -25,7 +25,8 @@ nombres <- c("Samuel Linares",
              "Alexandra Gómez",
              "Jesús Borges",
              "Yorman Zabala" ,
-             "Carlos Morillo")
+             "Carlos Morillo",
+             "Diego Pérez")
 
 ci <- c(29658512,
         29756414,
@@ -44,7 +45,9 @@ ci <- c(29658512,
         29768256,
         29815277,
         18440447,
-        29521323)
+        29521323,
+        27222651)
+
 participantes <- tibble(Nombre= str_to_title(nombres),
                         ci= ci)%>%
   arrange(nombres)%>%
