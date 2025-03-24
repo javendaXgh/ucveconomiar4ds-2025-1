@@ -1,0 +1,49 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 2"
+date: "26/marzo/2025"
+format: revealjs
+incremental: true
+auto-stretch: false
+engine: knitr
+filters:
+  - webr
+---
+
+```{webr}
+#
+
+
+
+
+
+
+
+#
+```
+
+# 
+
+Abordar
+
+funciones precargadas
+
+lenght
+
+sum
+
+mean
+
+secuencias
+
+aleatorios
+
+dataset
+
+Crear variables
+
+Llamar variables
+
+RBase-
+
+paquetes
