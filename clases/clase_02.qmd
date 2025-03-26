@@ -1,7 +1,8 @@
 ---
 title: "Ciencia de Datos para Economistas"
-subtitle: "Clase 2"
+subtitle: "Clase 2/ R Base"
 date: "26/marzo/2025"
+lang: es
 format: revealjs
 incremental: true
 auto-stretch: false
@@ -9,6 +10,14 @@ engine: knitr
 filters:
   - webr
 ---
+
+## Objetivo:
+
+Conocer funciones y conjuntos de datos precargados en el lenguaje R.
+
+Enlace cheat sheet R Base <https://raw.githubusercontent.com/rstudio/cheatsheets/main/translations/spanish/base-r_es.pdf>
+
+## Ejercicios
 
 ```{webr}
 #
@@ -19,31 +28,180 @@ filters:
 
 
 
+
+
+
+# 
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
 #
 ```
 
-# 
+## Ejercicios
 
-Abordar
+```{webr}
+#
 
-funciones precargadas
 
-lenght
 
-sum
 
-mean
 
-secuencias
 
-aleatorios
 
-dataset
 
-Crear variables
 
-Llamar variables
 
-RBase-
+#
+```
 
-paquetes
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+#
+```
+
+## 
