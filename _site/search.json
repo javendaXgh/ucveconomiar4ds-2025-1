@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 17 mar.\n\n\n\n\n\n\n\n\nmié, 19 mar.\nPresentación Curso\n🖥️ láminas clase 01🛠️ tarea 1\n\n\n2\nlun, 24 mar.\nIntroducción Ciclo de Ciencia de Datos\n🖥️ láminas clase 01\n\n\n\n\nmié, 26 mar.\n\n\n\n\n\n\n3\nlun, 31 mar.\n\n\n\n\n\n\n\n\nmié, 2 abr.\n\n\n\n\n\n\n4\nlun, 7 abr.\n\n\n\n\n\n\n\n\nmié, 9 abr.\n\n\n\n\n\n\n5\nlun, 21 abr.\n\n\n\n\n\n\n\n\nmié, 23 abr.\n\n\n\n\n\n\n6\nmar, 29 abr.\n\n\n⏰ Suministro de requerimientos para el Trabajo Ciclo C.D.\n\n\n\n\nmié, 30 abr.\n\n\n\n\n\n\n7\nlun, 5 may.\n\n\n\n\n\n\n\n\nmié, 7 may.\n\n\n\n\n\n\n8\nlun, 12 may.\n\n\n\n\n\n\n\n\nmié, 14 may.\n\n\n⏰ Exámen Parcial mitad semestre\n\n\n9\nlun, 19 may.\n\n\n\n\n\n\n\n\nmié, 21 may.\n\n\n⏰ Suministro de requerimientos del proyecto final\n\n\n10\nlun, 26 may.\n\n\n\n\n\n\n\n\nmié, 28 may.\n\n\n⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos\n\n\n11\nlun, 2 jun.\n\n\n\n\n\n\n\n\nmié, 4 jun.\n\n\n\n\n\n\n12\nlun, 9 jun.\n\n\n\n\n\n\n\n\nmié, 11 jun.\n\n\n\n\n\n\n13\nlun, 16 jun.\n\n\n\n\n\n\n\n\nmié, 18 jun.\n\n\n\n\n\n\n14\nlun, 23 jun.\n\n\n\n\n\n\n\n\nmié, 25 jun.\n\n\n\n\n\n\n15\nlun, 30 jun.\n\n\n\n\n\n\n\n\nmié, 2 jul.\n\n\nEntrega Proyecto Final\n\n\n16\nlun, 7 jul.\n\n\n\n\n\n\n\n\nmié, 9 jul.\n\n\nPresentación Proyecto Final",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 17 mar.\n\n\n\n\n\n\n\n\nmié, 19 mar.\nPresentación Curso\n🖥️ láminas clase 01🛠️ tarea 1\n\n\n2\nlun, 24 mar.\nIntroducción Ciclo de Ciencia de Datos\n🖥️ láminas clase 01\n\n\n\n\nmié, 26 mar.\nTrabajando con R Base\n🖥️ láminas clase 02\n\n\n3\nlun, 31 mar.\n\n\n\n\n\n\n\n\nmié, 2 abr.\n\n\n\n\n\n\n4\nlun, 7 abr.\n\n\n\n\n\n\n\n\nmié, 9 abr.\n\n\n\n\n\n\n5\nlun, 21 abr.\n\n\n\n\n\n\n\n\nmié, 23 abr.\n\n\n\n\n\n\n6\nmar, 29 abr.\n\n\n⏰ Suministro de requerimientos para el Trabajo Ciclo C.D.\n\n\n\n\nmié, 30 abr.\n\n\n\n\n\n\n7\nlun, 5 may.\n\n\n\n\n\n\n\n\nmié, 7 may.\n\n\n\n\n\n\n8\nlun, 12 may.\n\n\n\n\n\n\n\n\nmié, 14 may.\n\n\n⏰ Exámen Parcial mitad semestre\n\n\n9\nlun, 19 may.\n\n\n\n\n\n\n\n\nmié, 21 may.\n\n\n⏰ Suministro de requerimientos del proyecto final\n\n\n10\nlun, 26 may.\n\n\n\n\n\n\n\n\nmié, 28 may.\n\n\n⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos\n\n\n11\nlun, 2 jun.\n\n\n\n\n\n\n\n\nmié, 4 jun.\n\n\n\n\n\n\n12\nlun, 9 jun.\n\n\n\n\n\n\n\n\nmié, 11 jun.\n\n\n\n\n\n\n13\nlun, 16 jun.\n\n\n\n\n\n\n\n\nmié, 18 jun.\n\n\n\n\n\n\n14\nlun, 23 jun.\n\n\n\n\n\n\n\n\nmié, 25 jun.\n\n\n\n\n\n\n15\nlun, 30 jun.\n\n\n\n\n\n\n\n\nmié, 2 jul.\n\n\nEntrega Proyecto Final\n\n\n16\nlun, 7 jul.\n\n\n\n\n\n\n\n\nmié, 9 jul.\n\n\nPresentación Proyecto Final",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -194,165 +194,105 @@
     "href": "clases/clase_01.html#equipo-de-enseñanza",
     "title": "Ciencia de Datos para Economistas",
     "section": "Equipo de Enseñanza",
-    "text": "Equipo de Enseñanza\n\n\n\n\n\nProfesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\nJesús Sánchez\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Equipo de Enseñanza\n\n\n\n\n\nProfesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\nJesús Sánchez\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????"
   },
   {
     "objectID": "clases/clase_01.html#participantes-curso",
     "href": "clases/clase_01.html#participantes-curso",
     "title": "Ciencia de Datos para Economistas",
     "section": "Participantes Curso",
-    "text": "Participantes Curso\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Participantes Curso\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00"
   },
   {
     "objectID": "clases/clase_01.html#ciencia-de-datos-por-ejemplo",
     "href": "clases/clase_01.html#ciencia-de-datos-por-ejemplo",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ciencia de Datos, por ejemplo",
-    "text": "Ciencia de Datos, por ejemplo\nExtraer conocimiento desde un conjunto de datos",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Ciencia de Datos, por ejemplo\nExtraer conocimiento desde un conjunto de datos"
   },
   {
     "objectID": "clases/clase_01.html#excel---no",
     "href": "clases/clase_01.html#excel---no",
     "title": "Ciencia de Datos para Economistas",
     "section": "Excel - no …",
-    "text": "Excel - no …",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Excel - no …"
   },
   {
     "objectID": "clases/clase_01.html#por-qué-r",
     "href": "clases/clase_01.html#por-qué-r",
     "title": "Ciencia de Datos para Economistas",
     "section": "¡por qué R?",
-    "text": "¡por qué R?",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "¡por qué R?"
   },
   {
     "objectID": "clases/clase_01.html#rstudio",
     "href": "clases/clase_01.html#rstudio",
     "title": "Ciencia de Datos para Economistas",
     "section": "RStudio",
-    "text": "RStudio",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "RStudio"
   },
   {
     "objectID": "clases/clase_01.html#vista-integral",
     "href": "clases/clase_01.html#vista-integral",
     "title": "Ciencia de Datos para Economistas",
     "section": "Vista Integral",
-    "text": "Vista Integral",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Vista Integral"
   },
   {
     "objectID": "clases/clase_01.html#importar",
     "href": "clases/clase_01.html#importar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Importar",
-    "text": "Importar",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Importar"
   },
   {
     "objectID": "clases/clase_01.html#ordenar-transformar",
     "href": "clases/clase_01.html#ordenar-transformar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ordenar + transformar",
-    "text": "Ordenar + transformar",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Ordenar + transformar"
   },
   {
     "objectID": "clases/clase_01.html#visualizar",
     "href": "clases/clase_01.html#visualizar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Visualizar",
-    "text": "Visualizar",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Visualizar"
   },
   {
     "objectID": "clases/clase_01.html#modelar",
     "href": "clases/clase_01.html#modelar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Modelar",
-    "text": "Modelar\n\nLas clases de modelado estarán a cargo del Prof. Juan Pablo Goncalves.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Modelar\n\nLas clases de modelado estarán a cargo del Prof. Juan Pablo Goncalves."
   },
   {
     "objectID": "clases/clase_01.html#comprender",
     "href": "clases/clase_01.html#comprender",
     "title": "Ciencia de Datos para Economistas",
     "section": "Comprender",
-    "text": "Comprender",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Comprender"
   },
   {
     "objectID": "clases/clase_01.html#comunicar",
     "href": "clases/clase_01.html#comunicar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Comunicar",
-    "text": "Comunicar",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Comunicar"
   },
   {
     "objectID": "clases/clase_01.html#generar-conjunto-de-datos",
     "href": "clases/clase_01.html#generar-conjunto-de-datos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Generar Conjunto de Datos",
-    "text": "Generar Conjunto de Datos",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Generar Conjunto de Datos"
   },
   {
     "objectID": "clases/clase_01.html#programar",
     "href": "clases/clase_01.html#programar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Programar",
-    "text": "Programar",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Programar"
   },
   {
     "objectID": "clases/clase_01.html#intención",
@@ -366,33 +306,21 @@
     "href": "clases/clase_01.html#promesa",
     "title": "Ciencia de Datos para Economistas",
     "section": "Promesa",
-    "text": "Promesa\n\nNociones de programación\nObtener y crear conjunto de datos\nPresentar investigaciones",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Promesa\n\nNociones de programación\nObtener y crear conjunto de datos\nPresentar investigaciones"
   },
   {
     "objectID": "clases/clase_01.html#página-web",
     "href": "clases/clase_01.html#página-web",
     "title": "Ciencia de Datos para Economistas",
     "section": "Página Web",
-    "text": "Página Web\nhttps://ucveconomia-r4ds-2025-1.netlify.app\n\n\n\n\n\n\nTodos los materiales\nEnlaces a recursos",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Página Web\nhttps://ucveconomia-r4ds-2025-1.netlify.app\n\n\n\n\n\n\nTodos los materiales\nEnlaces a recursos"
   },
   {
     "objectID": "clases/clase_01.html#salón",
     "href": "clases/clase_01.html#salón",
     "title": "Ciencia de Datos para Economistas",
     "section": "Salón",
-    "text": "Salón\n\nLaboratorio piso 2",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Salón\n\nLaboratorio piso 2"
   },
   {
     "objectID": "clases/clase_01.html#herramientas-del-curso",
@@ -441,33 +369,21 @@
     "href": "clases/clase_01.html#soporte-curso",
     "title": "Ciencia de Datos para Economistas",
     "section": "Soporte Curso",
-    "text": "Soporte Curso\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo para soporte\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Soporte Curso\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo para soporte\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
   },
   {
     "objectID": "clases/clase_01.html#anuncios-del-curso",
     "href": "clases/clase_01.html#anuncios-del-curso",
     "title": "Ciencia de Datos para Economistas",
     "section": "Anuncios del Curso",
-    "text": "Anuncios del Curso\n\nSe publicarán en el canal anuncios-clases del Discord u otro medio digital\nRevisar los canales de comunicación al menos el día anterior a cada una de las clases",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Anuncios del Curso\n\nSe publicarán en el canal anuncios-clases del Discord u otro medio digital\nRevisar los canales de comunicación al menos el día anterior a cada una de las clases"
   },
   {
     "objectID": "clases/clase_01.html#retos-que-representa-el-curso",
     "href": "clases/clase_01.html#retos-que-representa-el-curso",
     "title": "Ciencia de Datos para Economistas",
     "section": "Retos que Representa el Curso",
-    "text": "Retos que Representa el Curso\n?",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Retos que Representa el Curso\n?"
   },
   {
     "objectID": "clases/clase_01.html#tareas-asignadas",
@@ -481,297 +397,189 @@
     "href": "clases/clase_01.html#objetivos-del-curso",
     "title": "Ciencia de Datos para Economistas",
     "section": "Objetivos del Curso",
-    "text": "Objetivos del Curso\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Objetivos del Curso\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía."
   },
   {
     "objectID": "clases/clase_01.html#objetivos-del-curso--cont.",
     "href": "clases/clase_01.html#objetivos-del-curso--cont.",
     "title": "Ciencia de Datos para Economistas",
     "section": "Objetivos del Curso- cont.",
-    "text": "Objetivos del Curso- cont.\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Objetivos del Curso- cont.\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso."
   },
   {
     "objectID": "clases/clase_01.html#clases",
     "href": "clases/clase_01.html#clases",
     "title": "Ciencia de Datos para Economistas",
     "section": "Clases",
-    "text": "Clases\n\nPresenciales\nRemotas de complemento\nRemotas opcionales\nAsistencia obligatoria\nUn poco de:\n\nClase tradicional\nCodificación + demos\nEjercicios, talleres, soluciones",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Clases\n\nPresenciales\nRemotas de complemento\nRemotas opcionales\nAsistencia obligatoria\nUn poco de:\n\nClase tradicional\nCodificación + demos\nEjercicios, talleres, soluciones"
   },
   {
     "objectID": "clases/clase_01.html#laboratorios",
     "href": "clases/clase_01.html#laboratorios",
     "title": "Ciencia de Datos para Economistas",
     "section": "Laboratorios",
-    "text": "Laboratorios\n\n10 planificados (30 minutos duración)\nCada 3 clases\nOportunidad para trabajar en tareas del curso con soporte\n\n\n\nOportunidad de trabajar con miembros del equipo del proyecto\nSe pueden extender por 45 minutos una vez finalizada la clase",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Laboratorios\n\n10 planificados (30 minutos duración)\nCada 3 clases\nOportunidad para trabajar en tareas del curso con soporte\n\n\n\nOportunidad de trabajar con miembros del equipo del proyecto\nSe pueden extender por 45 minutos una vez finalizada la clase"
   },
   {
     "objectID": "clases/clase_01.html#discord",
     "href": "clases/clase_01.html#discord",
     "title": "Ciencia de Datos para Economistas",
     "section": "Discord",
-    "text": "Discord\n\nForo en línea para plantear y responder preguntas\nDeberá unirse al servidor del curso para tener acceso.\nHaga y responda aquí a preguntas relacionadas con la logística del curso, las tareas, etc.\nPreguntas personales (por ejemplo, extensiones, enfermedades, etc.) deben ser a través de correo electrónico.\nUna vez que te unas, navega por los canales para asegurarte de que estás publicando preguntas en el canal correcto, actualiza tu perfil con tu nombre, foto/avatar tuyo que coincida con tu perfil de GitHub.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Discord\n\nForo en línea para plantear y responder preguntas\nDeberá unirse al servidor del curso para tener acceso.\nHaga y responda aquí a preguntas relacionadas con la logística del curso, las tareas, etc.\nPreguntas personales (por ejemplo, extensiones, enfermedades, etc.) deben ser a través de correo electrónico.\nUna vez que te unas, navega por los canales para asegurarte de que estás publicando preguntas en el canal correcto, actualiza tu perfil con tu nombre, foto/avatar tuyo que coincida con tu perfil de GitHub."
   },
   {
     "objectID": "clases/clase_01.html#repositorio-github",
     "href": "clases/clase_01.html#repositorio-github",
     "title": "Ciencia de Datos para Economistas",
     "section": "Repositorio GitHub",
-    "text": "Repositorio GitHub\n\nláminas y códigos disponibles en https://github.com/javendaXgh/ucveconomiar4ds-2025-1\nSe espera que a lo largo del curso se enseñen distintas bondades sobre esta herramienta.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Repositorio GitHub\n\nláminas y códigos disponibles en https://github.com/javendaXgh/ucveconomiar4ds-2025-1\nSe espera que a lo largo del curso se enseñen distintas bondades sobre esta herramienta."
   },
   {
     "objectID": "clases/clase_01.html#página-web-del-curso",
     "href": "clases/clase_01.html#página-web-del-curso",
     "title": "Ciencia de Datos para Economistas",
     "section": "Página Web del Curso",
-    "text": "Página Web del Curso\n\nEn https://ucveconomiar4ds.netlify.app se encuentra el acceso al sitio de la versión actual del curso y de la edición anterior.\nEn la página estarán publicadas los talleres, las láminas de las clases, pautas generales, el código de conducta del estudiante, etc.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Página Web del Curso\n\nEn https://ucveconomiar4ds.netlify.app se encuentra el acceso al sitio de la versión actual del curso y de la edición anterior.\nEn la página estarán publicadas los talleres, las láminas de las clases, pautas generales, el código de conducta del estudiante, etc."
   },
   {
     "objectID": "clases/clase_01.html#rstudio-cloud-server",
     "href": "clases/clase_01.html#rstudio-cloud-server",
     "title": "Ciencia de Datos para Economistas",
     "section": "RStudio Cloud-Server",
-    "text": "RStudio Cloud-Server\nEl IDE (entorno de desarrollo) que se usará es RStudio y existe una versión en la nube que es una alternativa en caso de contar con una computadora no apta para correr los códigos o instalar los paquetes necesarios.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "RStudio Cloud-Server\nEl IDE (entorno de desarrollo) que se usará es RStudio y existe una versión en la nube que es una alternativa en caso de contar con una computadora no apta para correr los códigos o instalar los paquetes necesarios."
   },
   {
     "objectID": "clases/clase_01.html#material-bibliográfico",
     "href": "clases/clase_01.html#material-bibliográfico",
     "title": "Ciencia de Datos para Economistas",
     "section": "Material Bibliográfico",
-    "text": "Material Bibliográfico\n\nr4ds en español\nHands-On Programming with R\nCiencia de Datos para Gente Sociable\nMuchos otros\n\nRevisar /recursos.html",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Material Bibliográfico\n\nr4ds en español\nHands-On Programming with R\nCiencia de Datos para Gente Sociable\nMuchos otros\n\nRevisar /recursos.html"
   },
   {
     "objectID": "clases/clase_01.html#inclusión",
     "href": "clases/clase_01.html#inclusión",
     "title": "Ciencia de Datos para Economistas",
     "section": "Inclusión",
-    "text": "Inclusión\nMi objetivo es que este curso sea inclusivo y beneficioso para estudiantes de todos los orígenes y perspectivas. Me comprometo a atender las necesidades de aprendizaje tanto dentro como fuera del aula, y a valorar la diversidad que cada estudiante aporta como un recurso, una fortaleza y una ventaja.\nSi sientes que tu rendimiento en la clase se ve afectado por experiencias externas, no dudes en hablar conmigo. Quiero ser un apoyo para ti. Si prefieres hablar con alguien fuera del curso, la Escuela de Economía cuenta con un departamento a cargo del Prof. Jesús Sanchez que puede resultar de gran ayuda.\nYo, al igual que muchas personas, sigo aprendiendo sobre diversas perspectivas. Si algo dicho en clase (por cualquiera) te hizo sentir incómodo, por favor, háblame al respecto.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Inclusión\nMi objetivo es que este curso sea inclusivo y beneficioso para estudiantes de todos los orígenes y perspectivas. Me comprometo a atender las necesidades de aprendizaje tanto dentro como fuera del aula, y a valorar la diversidad que cada estudiante aporta como un recurso, una fortaleza y una ventaja.\nSi sientes que tu rendimiento en la clase se ve afectado por experiencias externas, no dudes en hablar conmigo. Quiero ser un apoyo para ti. Si prefieres hablar con alguien fuera del curso, la Escuela de Economía cuenta con un departamento a cargo del Prof. Jesús Sanchez que puede resultar de gran ayuda.\nYo, al igual que muchas personas, sigo aprendiendo sobre diversas perspectivas. Si algo dicho en clase (por cualquiera) te hizo sentir incómodo, por favor, háblame al respecto."
   },
   {
     "objectID": "clases/clase_01.html#plan-de-evaluación",
     "href": "clases/clase_01.html#plan-de-evaluación",
     "title": "Ciencia de Datos para Economistas",
     "section": "Plan de Evaluación",
-    "text": "Plan de Evaluación\n\n\n\nDetalle\nPorcentaje\n\n\n\n\n8 a 10 Tareas\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Plan de Evaluación\n\n\n\nDetalle\nPorcentaje\n\n\n\n\n8 a 10 Tareas\n20 %\n\n\nCiclo C.D. sobre un conjunto de datos\n20 %\n\n\nExamen parcial mitad del curso\n20 %\n\n\nAsistencia\n5 %\n\n\nIntervenciones\n5%\n\n\nProyecto Final\n30 %"
   },
   {
     "objectID": "clases/clase_01.html#tareas-20",
     "href": "clases/clase_01.html#tareas-20",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tareas (20%)",
-    "text": "Tareas (20%)\n\nSe tiene pautado un total de (8 a 10) tareas que según el desarrollo del curso puede verse disminuida la cantidad.\nSe asignarán aproximadamente cada 3 clases.\nSe tiene pautado que tenga un peso de 20% de la nota.\nLa recomendación es hacer las tareas con tiempo para que el profesor pueda responder oportunamente cualquier consulta.\nSe elimina la tarea que tenga la más baja nota al momento de promediar las notas obtenidas.\nDeben ser entregadas para la fecha asignada, penalidad por retardo\nMáximo 7 días de retardo, sin entregas posteriores.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Tareas (20%)\n\nSe tiene pautado un total de (8 a 10) tareas que según el desarrollo del curso puede verse disminuida la cantidad.\nSe asignarán aproximadamente cada 3 clases.\nSe tiene pautado que tenga un peso de 20% de la nota.\nLa recomendación es hacer las tareas con tiempo para que el profesor pueda responder oportunamente cualquier consulta.\nSe elimina la tarea que tenga la más baja nota al momento de promediar las notas obtenidas.\nDeben ser entregadas para la fecha asignada, penalidad por retardo\nMáximo 7 días de retardo, sin entregas posteriores."
   },
   {
     "objectID": "clases/clase_01.html#trabajo---ciclo-c.d.-sobre-un-conjunto-de-datos-20",
     "href": "clases/clase_01.html#trabajo---ciclo-c.d.-sobre-un-conjunto-de-datos-20",
     "title": "Ciencia de Datos para Economistas",
     "section": "Trabajo - Ciclo C.D. sobre un conjunto de datos (20%)",
-    "text": "Trabajo - Ciclo C.D. sobre un conjunto de datos (20%)\n\nSe entregará un conjunto de datos al estudiante para que sobre él realice distintas fases de lo que constituye un ciclo de Ciencia de Datos.\nLa entrega será mediante un script o un reporte elaborado en quarto.\nTendrá un peso de 20%.\nFecha estimada para entrega de los requerimientos, el 29-04-2025\nFecha de entrega del producto final, el 28-05-25",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Trabajo - Ciclo C.D. sobre un conjunto de datos (20%)\n\nSe entregará un conjunto de datos al estudiante para que sobre él realice distintas fases de lo que constituye un ciclo de Ciencia de Datos.\nLa entrega será mediante un script o un reporte elaborado en quarto.\nTendrá un peso de 20%.\nFecha estimada para entrega de los requerimientos, el 29-04-2025\nFecha de entrega del producto final, el 28-05-25"
   },
   {
     "objectID": "clases/clase_01.html#examen-parcial-mitad-del-curso-20",
     "href": "clases/clase_01.html#examen-parcial-mitad-del-curso-20",
     "title": "Ciencia de Datos para Economistas",
     "section": "Examen parcial mitad del curso (20%)",
-    "text": "Examen parcial mitad del curso (20%)\n\nUn poco después de la mitad del curso se realizará un examen parcial para que sean evaluados los distintos conocimientos impartidos en el curso.\nEste examen será escrito, no en la computadora.\nTendrá una duración máxima de 60 minutos.\nEl peso que tendrá el examen es del 20%.\nFecha pautada para el examen, el 14-05-2025.\n\n\n\n\n\n\n\nPrecaución\n\n\nLas fechas del examen no se puede cambiar y no se harán exámenes de recuperación. Si usted no puede asistir al examen en la fecha indicada, debería evaluar abandonar este curso.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Examen parcial mitad del curso (20%)\n\nUn poco después de la mitad del curso se realizará un examen parcial para que sean evaluados los distintos conocimientos impartidos en el curso.\nEste examen será escrito, no en la computadora.\nTendrá una duración máxima de 60 minutos.\nEl peso que tendrá el examen es del 20%.\nFecha pautada para el examen, el 14-05-2025.\n\n\n\n\n\n\n\nPrecaución\n\n\nLas fechas del examen no se puede cambiar y no se harán exámenes de recuperación. Si usted no puede asistir al examen en la fecha indicada, debería evaluar abandonar este curso."
   },
   {
     "objectID": "clases/clase_01.html#asistencia-5",
     "href": "clases/clase_01.html#asistencia-5",
     "title": "Ciencia de Datos para Economistas",
     "section": "Asistencia (5%)",
-    "text": "Asistencia (5%)\n\nLa asistencia al curso es obligatoria y se recomienda hacer lo posible por atender a todas las clases, ya que todos los temas impartidos están relacionados y son incrementales.\nSi ocurre alguna falta, se pide al estudiante no pedir asistencia en la siguiente clase al compañero de estudio una vez que inicie la clase ya que obstaculizará el aprendizaje.\nEl peso otorgado a la asistencia es 5%.\n\n\n\n\n\n\n\nTip\n\n\nSi asistes a un 85% de las clases, obtendrás todos los puntos de este componente.\n\n\n\n\n\n\n\n\n\nPrecaución\n\n\nRecuerde tener presente la fecha límite (25/04/2025) para retiro de materia si presenta un alto índice de inasistencias",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Asistencia (5%)\n\nLa asistencia al curso es obligatoria y se recomienda hacer lo posible por atender a todas las clases, ya que todos los temas impartidos están relacionados y son incrementales.\nSi ocurre alguna falta, se pide al estudiante no pedir asistencia en la siguiente clase al compañero de estudio una vez que inicie la clase ya que obstaculizará el aprendizaje.\nEl peso otorgado a la asistencia es 5%.\n\n\n\n\n\n\n\nTip\n\n\nSi asistes a un 85% de las clases, obtendrás todos los puntos de este componente.\n\n\n\n\n\n\n\n\n\nPrecaución\n\n\nRecuerde tener presente la fecha límite (25/04/2025) para retiro de materia si presenta un alto índice de inasistencias"
   },
   {
     "objectID": "clases/clase_01.html#intervenciones-5",
     "href": "clases/clase_01.html#intervenciones-5",
     "title": "Ciencia de Datos para Economistas",
     "section": "Intervenciones (5%)",
-    "text": "Intervenciones (5%)\n\nLas intervenciones y una actitud proactiva, son muy bien valoradas ya que ayudan a facilitar asimilar los contenidos que son impartidos.\nSe asigna un peso de 5% para este componente.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Intervenciones (5%)\n\nLas intervenciones y una actitud proactiva, son muy bien valoradas ya que ayudan a facilitar asimilar los contenidos que son impartidos.\nSe asigna un peso de 5% para este componente."
   },
   {
     "objectID": "clases/clase_01.html#proyecto-final-30",
     "href": "clases/clase_01.html#proyecto-final-30",
     "title": "Ciencia de Datos para Economistas",
     "section": "Proyecto Final (30%)",
-    "text": "Proyecto Final (30%)\n\nSe trabajará durante una parte del curso en realizar un proyecto de ciencia de datos donde se unifiquen distintas fuentes de datos asociadas a la economía venezolana.\nEs uno de los componentes más importantes del curso, ya que se pondrán en práctica los distintos temas abordados.\nTendrá un peso de 30%.\nFecha de suministro de los requerimientos del Proyecto Final, el 21-05-25\nFecha de entrega del Proyecto Final, el 03-07-2025\nFecha de presentación del Proyecto Final, el 09-07-2025\n\n\n\n\n\n\n\nPrecaución\n\n\nLas fechas de presentación del proyecto no se puede cambiar. Si usted no puede asistir ese día, debería evaluar abandonar este curso.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Proyecto Final (30%)\n\nSe trabajará durante una parte del curso en realizar un proyecto de ciencia de datos donde se unifiquen distintas fuentes de datos asociadas a la economía venezolana.\nEs uno de los componentes más importantes del curso, ya que se pondrán en práctica los distintos temas abordados.\nTendrá un peso de 30%.\nFecha de suministro de los requerimientos del Proyecto Final, el 21-05-25\nFecha de entrega del Proyecto Final, el 03-07-2025\nFecha de presentación del Proyecto Final, el 09-07-2025\n\n\n\n\n\n\n\nPrecaución\n\n\nLas fechas de presentación del proyecto no se puede cambiar. Si usted no puede asistir ese día, debería evaluar abandonar este curso."
   },
   {
     "objectID": "clases/clase_01.html#proyecto-cont.",
     "href": "clases/clase_01.html#proyecto-cont.",
     "title": "Ciencia de Datos para Economistas",
     "section": "Proyecto cont.",
-    "text": "Proyecto cont.\n\nEvaluación Equipo de Profesores:\n\ncalidad código,\noriginalidad,\naporte,\ncumplir con C.C.D\n\n\n\n\nElección del conjunto de datos de su preferencia\nTrabajo en equipo 4 a 5 personas\nPresentación final del Proyecto en laboratorio (20 minutos)\nCreación de un póster (afiche) para comunicar (⛔️ bachillerato)\nSe publicará en la página el proyecto\n\ninfo en Leer /proyecto.html",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Proyecto cont.\n\nEvaluación Equipo de Profesores:\n\ncalidad código,\noriginalidad,\naporte,\ncumplir con C.C.D\n\n\n\n\nElección del conjunto de datos de su preferencia\nTrabajo en equipo 4 a 5 personas\nPresentación final del Proyecto en laboratorio (20 minutos)\nCreación de un póster (afiche) para comunicar (⛔️ bachillerato)\nSe publicará en la página el proyecto\n\ninfo en Leer /proyecto.html"
   },
   {
     "objectID": "clases/clase_01.html#trabajo-en-equipo",
     "href": "clases/clase_01.html#trabajo-en-equipo",
     "title": "Ciencia de Datos para Economistas",
     "section": "Trabajo En Equipo",
-    "text": "Trabajo En Equipo\n\nTrabajo en equipo Proyecto Final (obligatorio)\nEjercicios en clase (recomendado)\nExpectativas y funciones:\n\nSe espera que todos contribuyan con el mismo esfuerzo\nSe espera que todos entiendan el código entregado",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Trabajo En Equipo\n\nTrabajo en equipo Proyecto Final (obligatorio)\nEjercicios en clase (recomendado)\nExpectativas y funciones:\n\nSe espera que todos contribuyan con el mismo esfuerzo\nSe espera que todos entiendan el código entregado"
   },
   {
     "objectID": "clases/clase_01.html#política-de-retardos",
     "href": "clases/clase_01.html#política-de-retardos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Política de retardos",
-    "text": "Política de retardos\nTareas:\nFuera de plazo, pero hasta una semana después de la fecha indicada:\n\n20% tope de penalidad (3% por día de retardo).\nMás tarde: No se concederá nota y no se proporcionarán comentarios por escrito.\nTenga en cuenta que la puntuación más baja será eliminada, incluso si es un 0.\n\nProyecto Ciclo C.D. sobre un conjunto de datos:\nFuera de plazo, pero dentro de dos semanas posterior a la fecha límite:\n\n30% tope de penalidad (2% por día de retardo).\nMás tarde: No se concederán créditos y no se proporcionarán comentarios por escrito.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Política de retardos\nTareas:\nFuera de plazo, pero hasta una semana después de la fecha indicada:\n\n20% tope de penalidad (3% por día de retardo).\nMás tarde: No se concederá nota y no se proporcionarán comentarios por escrito.\nTenga en cuenta que la puntuación más baja será eliminada, incluso si es un 0.\n\nProyecto Ciclo C.D. sobre un conjunto de datos:\nFuera de plazo, pero dentro de dos semanas posterior a la fecha límite:\n\n30% tope de penalidad (2% por día de retardo).\nMás tarde: No se concederán créditos y no se proporcionarán comentarios por escrito."
   },
   {
     "objectID": "clases/clase_01.html#política-de-colaboración",
     "href": "clases/clase_01.html#política-de-colaboración",
     "title": "Ciencia de Datos para Economistas",
     "section": "Política de colaboración",
-    "text": "Política de colaboración\n\nSólo el trabajo que está claramente asignado como trabajo en equipo debe ser completado en colaboración (proyecto)\nEl examen deben ser completado individualmente, no se puede discutir las respuestas con los compañeros de clase, las preguntas de aclaración sólo se debe pedir al profesor\nLas tareas deben completarse individualmente.\nLos laboratorios pueden realizarse en equipos de máximo dos personas.\nNo se pueden compartir directamente las respuestas / código con los demás, sin embargo, son bienvenidos a discutir los problemas en general y pedir consejo.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Política de colaboración\n\nSólo el trabajo que está claramente asignado como trabajo en equipo debe ser completado en colaboración (proyecto)\nEl examen deben ser completado individualmente, no se puede discutir las respuestas con los compañeros de clase, las preguntas de aclaración sólo se debe pedir al profesor\nLas tareas deben completarse individualmente.\nLos laboratorios pueden realizarse en equipos de máximo dos personas.\nNo se pueden compartir directamente las respuestas / código con los demás, sin embargo, son bienvenidos a discutir los problemas en general y pedir consejo."
   },
   {
     "objectID": "clases/clase_01.html#compartir-y-reusar-código",
     "href": "clases/clase_01.html#compartir-y-reusar-código",
     "title": "Ciencia de Datos para Economistas",
     "section": "Compartir y Reusar Código",
-    "text": "Compartir y Reusar Código\n\nSomos conscientes de que existe un enorme volumen de código disponible en la web, al igual de que muchas tareas pueden tener soluciones publicadas.\nA menos que se indique explícitamente lo contrario, la política de este curso es que usted puede hacer uso de cualquier recurso en línea (por ejemplo, StackOverflow o un modelo de lenguaje), pero debe citar explícitamente dónde obtuvo cualquier código que utilice directamente o como inspiración en su(s) solución(es).\nCualquier código reciclado que se descubra y no se cite explícitamente será tratado como plagio, independientemente de la fuente.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Compartir y Reusar Código\n\nSomos conscientes de que existe un enorme volumen de código disponible en la web, al igual de que muchas tareas pueden tener soluciones publicadas.\nA menos que se indique explícitamente lo contrario, la política de este curso es que usted puede hacer uso de cualquier recurso en línea (por ejemplo, StackOverflow o un modelo de lenguaje), pero debe citar explícitamente dónde obtuvo cualquier código que utilice directamente o como inspiración en su(s) solución(es).\nCualquier código reciclado que se descubra y no se cite explícitamente será tratado como plagio, independientemente de la fuente."
   },
   {
     "objectID": "clases/clase_01.html#herramientas-de-ia-generativas",
     "href": "clases/clase_01.html#herramientas-de-ia-generativas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Herramientas de IA Generativas",
-    "text": "Herramientas de IA Generativas\nDebe tratar la IA generativa, como ChatGPT, igual que a otros recursos que estén disponibles en línea. 1\nHay dos principios rectores que rigen el uso de la IA en este curso:\n(1) Dimensión cognitiva: Trabajar con IA no debe reducir tu capacidad de pensar con claridad. Practicaremos el uso de la IA para facilitar -en lugar de dificultar- el aprendizaje.\n(2) Dimensión ética: Los estudiantes que utilicen IA deben ser transparentes sobre su uso y asegurarse de que se alinea con la integridad académica.\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Herramientas de IA Generativas\nDebe tratar la IA generativa, como ChatGPT, igual que a otros recursos que estén disponibles en línea. 1\nHay dos principios rectores que rigen el uso de la IA en este curso:\n(1) Dimensión cognitiva: Trabajar con IA no debe reducir tu capacidad de pensar con claridad. Practicaremos el uso de la IA para facilitar -en lugar de dificultar- el aprendizaje.\n(2) Dimensión ética: Los estudiantes que utilicen IA deben ser transparentes sobre su uso y asegurarse de que se alinea con la integridad académica.\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D"
   },
   {
     "objectID": "clases/clase_01.html#tarea-asignada",
     "href": "clases/clase_01.html#tarea-asignada",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tarea Asignada",
-    "text": "Tarea Asignada\n/tarea_01.html\n\n\n\n\n🔗 ucveconomiar4ds",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Tarea Asignada\n/tarea_01.html\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_01.html#discord--vínculo",
     "href": "clases/clase_01.html#discord--vínculo",
     "title": "Ciencia de Datos para Economistas",
     "section": "Discord- vínculo",
-    "text": "Discord- vínculo",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Discord- vínculo"
   },
   {
     "objectID": "clases/clase_01.html#objetivos-del-curso---cont.",
     "href": "clases/clase_01.html#objetivos-del-curso---cont.",
     "title": "Ciencia de Datos para Economistas",
     "section": "Objetivos del Curso - cont.",
-    "text": "Objetivos del Curso - cont.\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Objetivos del Curso - cont.\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral."
   },
   {
     "objectID": "clases/clase_01.html#para-qué",
     "href": "clases/clase_01.html#para-qué",
     "title": "Ciencia de Datos para Economistas",
     "section": "¿Para Qué?",
-    "text": "¿Para Qué?\n\nEstudiante debe pensar como un Científico de Datos:\n\nInvestigador\nCrítico\nInnovador",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "¿Para Qué?\n\nEstudiante debe pensar como un Científico de Datos:\n\nInvestigador\nCrítico\nInnovador"
   },
   {
     "objectID": "clases/clase_01.html#política-de-retardos--cont.",
@@ -785,22 +593,14 @@
     "href": "clases/clase_01.html#política-de-retardos---cont.",
     "title": "Ciencia de Datos para Economistas",
     "section": "Política de retardos - cont.",
-    "text": "Política de retardos - cont.\nProyecto Final\n\nDebe ser entregado en la fecha indicada y no existe ningún plazo\nDebe ser presentado en la fecha indicada y no existe ningún plazo",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Política de retardos - cont.\nProyecto Final\n\nDebe ser entregado en la fecha indicada y no existe ningún plazo\nDebe ser presentado en la fecha indicada y no existe ningún plazo"
   },
   {
     "objectID": "clases/clase_01.html#herramientas-de-ia-generativas-1",
     "href": "clases/clase_01.html#herramientas-de-ia-generativas-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "Herramientas de IA Generativas",
-    "text": "Herramientas de IA Generativas\n\n✅ Herramientas de IA para el código: Puede hacer uso de la tecnología para ejemplos de codificación en las tareas; si lo hace, debe citar explícitamente dónde obtuvo el código. Cualquier código reciclado que se descubra y no se cite explícitamente se tratará como plagio. El uso de la IA debe estar relacionado con los métodos y funciones impartidos en clase.\n❌ Herramientas de IA para narrativa: A menos que se le indique lo contrario, no puede utilizar IA generativa para escribir narrativa en las tareas. En general, puede utilizar la IA generativa como recurso mientras completa las tareas, pero no para responder a los ejercicios por usted. Usted es el responsable último del trabajo que entregue; debe reflejar su comprensión del contenido del curso.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Herramientas de IA Generativas\n\n✅ Herramientas de IA para el código: Puede hacer uso de la tecnología para ejemplos de codificación en las tareas; si lo hace, debe citar explícitamente dónde obtuvo el código. Cualquier código reciclado que se descubra y no se cite explícitamente se tratará como plagio. El uso de la IA debe estar relacionado con los métodos y funciones impartidos en clase.\n❌ Herramientas de IA para narrativa: A menos que se le indique lo contrario, no puede utilizar IA generativa para escribir narrativa en las tareas. En general, puede utilizar la IA generativa como recurso mientras completa las tareas, pero no para responder a los ejercicios por usted. Usted es el responsable último del trabajo que entregue; debe reflejar su comprensión del contenido del curso."
   },
   {
     "objectID": "clases/clase_01.html",
