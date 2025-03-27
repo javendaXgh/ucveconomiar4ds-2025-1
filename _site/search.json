@@ -193,22 +193,22 @@
     "objectID": "clases/clase_01.html#equipo-de-enseñanza",
     "href": "clases/clase_01.html#equipo-de-enseñanza",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Equipo de Enseñanza",
-    "text": "Equipo de Enseñanza\n\n\n\n\n\nProfesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\nJesús Sánchez\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????"
+    "section": "",
+    "text": "Profesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\nJesús Sánchez\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????"
   },
   {
     "objectID": "clases/clase_01.html#participantes-curso",
     "href": "clases/clase_01.html#participantes-curso",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Participantes Curso",
-    "text": "Participantes Curso\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00"
+    "section": "",
+    "text": "Expectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00"
   },
   {
     "objectID": "clases/clase_01.html#ciencia-de-datos-por-ejemplo",
     "href": "clases/clase_01.html#ciencia-de-datos-por-ejemplo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Ciencia de Datos, por ejemplo",
-    "text": "Ciencia de Datos, por ejemplo\nExtraer conocimiento desde un conjunto de datos"
+    "section": "",
+    "text": "Extraer conocimiento desde un conjunto de datos"
   },
   {
     "objectID": "clases/clase_01.html#excel---no",
@@ -396,15 +396,15 @@
     "objectID": "clases/clase_01.html#objetivos-del-curso",
     "href": "clases/clase_01.html#objetivos-del-curso",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivos del Curso",
-    "text": "Objetivos del Curso\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía."
+    "section": "",
+    "text": "Dominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía."
   },
   {
     "objectID": "clases/clase_01.html#objetivos-del-curso--cont.",
     "href": "clases/clase_01.html#objetivos-del-curso--cont.",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivos del Curso- cont.",
-    "text": "Objetivos del Curso- cont.\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso."
+    "section": "",
+    "text": "Crear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso."
   },
   {
     "objectID": "clases/clase_01.html#clases",
@@ -488,14 +488,14 @@
     "href": "clases/clase_01.html#examen-parcial-mitad-del-curso-20",
     "title": "Ciencia de Datos para Economistas",
     "section": "Examen parcial mitad del curso (20%)",
-    "text": "Examen parcial mitad del curso (20%)\n\nUn poco después de la mitad del curso se realizará un examen parcial para que sean evaluados los distintos conocimientos impartidos en el curso.\nEste examen será escrito, no en la computadora.\nTendrá una duración máxima de 60 minutos.\nEl peso que tendrá el examen es del 20%.\nFecha pautada para el examen, el 14-05-2025.\n\n\n\n\n\n\n\nPrecaución\n\n\nLas fechas del examen no se puede cambiar y no se harán exámenes de recuperación. Si usted no puede asistir al examen en la fecha indicada, debería evaluar abandonar este curso."
+    "text": "Examen parcial mitad del curso (20%)\n\nUn poco después de la mitad del curso se realizará un examen parcial para que sean evaluados los distintos conocimientos impartidos en el curso.\nEste examen será escrito, no en la computadora.\nTendrá una duración máxima de 60 minutos.\nEl peso que tendrá el examen es del 20%.\nFecha pautada para el examen, el 14-05-2025.\n\n\n\n\n\n\n\nPrecaución\n\n\n\nLas fechas del examen no se puede cambiar y no se harán exámenes de recuperación. Si usted no puede asistir al examen en la fecha indicada, debería evaluar abandonar este curso."
   },
   {
     "objectID": "clases/clase_01.html#asistencia-5",
     "href": "clases/clase_01.html#asistencia-5",
     "title": "Ciencia de Datos para Economistas",
     "section": "Asistencia (5%)",
-    "text": "Asistencia (5%)\n\nLa asistencia al curso es obligatoria y se recomienda hacer lo posible por atender a todas las clases, ya que todos los temas impartidos están relacionados y son incrementales.\nSi ocurre alguna falta, se pide al estudiante no pedir asistencia en la siguiente clase al compañero de estudio una vez que inicie la clase ya que obstaculizará el aprendizaje.\nEl peso otorgado a la asistencia es 5%.\n\n\n\n\n\n\n\nTip\n\n\nSi asistes a un 85% de las clases, obtendrás todos los puntos de este componente.\n\n\n\n\n\n\n\n\n\nPrecaución\n\n\nRecuerde tener presente la fecha límite (25/04/2025) para retiro de materia si presenta un alto índice de inasistencias"
+    "text": "Asistencia (5%)\n\nLa asistencia al curso es obligatoria y se recomienda hacer lo posible por atender a todas las clases, ya que todos los temas impartidos están relacionados y son incrementales.\nSi ocurre alguna falta, se pide al estudiante no pedir asistencia en la siguiente clase al compañero de estudio una vez que inicie la clase ya que obstaculizará el aprendizaje.\nEl peso otorgado a la asistencia es 5%.\n\n\n\n\n\n\n\nTip\n\n\n\nSi asistes a un 85% de las clases, obtendrás todos los puntos de este componente.\n\n\n\n\n\n\n\n\nPrecaución\n\n\n\nRecuerde tener presente la fecha límite (25/04/2025) para retiro de materia si presenta un alto índice de inasistencias"
   },
   {
     "objectID": "clases/clase_01.html#intervenciones-5",
@@ -509,7 +509,7 @@
     "href": "clases/clase_01.html#proyecto-final-30",
     "title": "Ciencia de Datos para Economistas",
     "section": "Proyecto Final (30%)",
-    "text": "Proyecto Final (30%)\n\nSe trabajará durante una parte del curso en realizar un proyecto de ciencia de datos donde se unifiquen distintas fuentes de datos asociadas a la economía venezolana.\nEs uno de los componentes más importantes del curso, ya que se pondrán en práctica los distintos temas abordados.\nTendrá un peso de 30%.\nFecha de suministro de los requerimientos del Proyecto Final, el 21-05-25\nFecha de entrega del Proyecto Final, el 03-07-2025\nFecha de presentación del Proyecto Final, el 09-07-2025\n\n\n\n\n\n\n\nPrecaución\n\n\nLas fechas de presentación del proyecto no se puede cambiar. Si usted no puede asistir ese día, debería evaluar abandonar este curso."
+    "text": "Proyecto Final (30%)\n\nSe trabajará durante una parte del curso en realizar un proyecto de ciencia de datos donde se unifiquen distintas fuentes de datos asociadas a la economía venezolana.\nEs uno de los componentes más importantes del curso, ya que se pondrán en práctica los distintos temas abordados.\nTendrá un peso de 30%.\nFecha de suministro de los requerimientos del Proyecto Final, el 21-05-25\nFecha de entrega del Proyecto Final, el 03-07-2025\nFecha de presentación del Proyecto Final, el 09-07-2025\n\n\n\n\n\n\n\nPrecaución\n\n\n\nLas fechas de presentación del proyecto no se puede cambiar. Si usted no puede asistir ese día, debería evaluar abandonar este curso."
   },
   {
     "objectID": "clases/clase_01.html#proyecto-cont.",
@@ -530,7 +530,7 @@
     "href": "clases/clase_01.html#política-de-retardos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Política de retardos",
-    "text": "Política de retardos\nTareas:\nFuera de plazo, pero hasta una semana después de la fecha indicada:\n\n20% tope de penalidad (3% por día de retardo).\nMás tarde: No se concederá nota y no se proporcionarán comentarios por escrito.\nTenga en cuenta que la puntuación más baja será eliminada, incluso si es un 0.\n\nProyecto Ciclo C.D. sobre un conjunto de datos:\nFuera de plazo, pero dentro de dos semanas posterior a la fecha límite:\n\n30% tope de penalidad (2% por día de retardo).\nMás tarde: No se concederán créditos y no se proporcionarán comentarios por escrito."
+    "text": "Política de retardos\n\nTareas:\nFuera de plazo, pero hasta una semana después de la fecha indicada:\n\n20% tope de penalidad (3% por día de retardo).\nMás tarde: No se concederá nota y no se proporcionarán comentarios por escrito.\nTenga en cuenta que la puntuación más baja será eliminada, incluso si es un 0.\n\n\n\nProyecto Ciclo C.D. sobre un conjunto de datos:\nFuera de plazo, pero dentro de dos semanas posterior a la fecha límite:\n\n30% tope de penalidad (2% por día de retardo).\nMás tarde: No se concederán créditos y no se proporcionarán comentarios por escrito."
   },
   {
     "objectID": "clases/clase_01.html#política-de-colaboración",
@@ -551,14 +551,14 @@
     "href": "clases/clase_01.html#herramientas-de-ia-generativas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Herramientas de IA Generativas",
-    "text": "Herramientas de IA Generativas\nDebe tratar la IA generativa, como ChatGPT, igual que a otros recursos que estén disponibles en línea. 1\nHay dos principios rectores que rigen el uso de la IA en este curso:\n(1) Dimensión cognitiva: Trabajar con IA no debe reducir tu capacidad de pensar con claridad. Practicaremos el uso de la IA para facilitar -en lugar de dificultar- el aprendizaje.\n(2) Dimensión ética: Los estudiantes que utilicen IA deben ser transparentes sobre su uso y asegurarse de que se alinea con la integridad académica.\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D"
+    "text": "Herramientas de IA Generativas\nDebe tratar la IA generativa, como ChatGPT, igual que a otros recursos que estén disponibles en línea. 1\nHay dos principios rectores que rigen el uso de la IA en este curso:\n(1) Dimensión cognitiva: Trabajar con IA no debe reducir tu capacidad de pensar con claridad. Practicaremos el uso de la IA para facilitar -en lugar de dificultar- el aprendizaje.\n(2) Dimensión ética: Los estudiantes que utilicen IA deben ser transparentes sobre su uso y asegurarse de que se alinea con la integridad académica."
   },
   {
     "objectID": "clases/clase_01.html#tarea-asignada",
     "href": "clases/clase_01.html#tarea-asignada",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tarea Asignada",
-    "text": "Tarea Asignada\n/tarea_01.html\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Tarea Asignada\n/tarea_01.html"
   },
   {
     "objectID": "clases/clase_01.html#discord--vínculo",
@@ -571,8 +571,8 @@
     "objectID": "clases/clase_01.html#objetivos-del-curso---cont.",
     "href": "clases/clase_01.html#objetivos-del-curso---cont.",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivos del Curso - cont.",
-    "text": "Objetivos del Curso - cont.\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral."
+    "section": "",
+    "text": "Comprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral."
   },
   {
     "objectID": "clases/clase_01.html#para-qué",
@@ -593,7 +593,7 @@
     "href": "clases/clase_01.html#política-de-retardos---cont.",
     "title": "Ciencia de Datos para Economistas",
     "section": "Política de retardos - cont.",
-    "text": "Política de retardos - cont.\nProyecto Final\n\nDebe ser entregado en la fecha indicada y no existe ningún plazo\nDebe ser presentado en la fecha indicada y no existe ningún plazo"
+    "text": "Política de retardos - cont.\n\nProyecto Final\n\nDebe ser entregado en la fecha indicada y no existe ningún plazo\nDebe ser presentado en la fecha indicada y no existe ningún plazo"
   },
   {
     "objectID": "clases/clase_01.html#herramientas-de-ia-generativas-1",
@@ -607,22 +607,14 @@
     "href": "clases/clase_01.html",
     "title": "Ciencia de Datos para Economistas",
     "section": "",
-    "text": "Profesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\nJesús Sánchez\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????\n\n\n\n\n\n\n\n\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00\n\n\n\n\n\n\nExtraer conocimiento desde un conjunto de datos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía.\n\n\n\n\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso.\n\n\n\n\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral.",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Profesor\n\n\n\n\nJosé Miguel Avendaño I.\n\n\nJuan Pablo Goncalves L.\n\n\nJesús Sánchez\n\n\n\n\n\n\n\nAsistentes\n\n\n\n\n??????\n\n\n\n\n\n\n\n\n\nExpectativas?\nPrevio:\n\n¿Programación?\n¿Investigaciones?\n¿Trabajan en el área?\n\n\n\n\n\n−+\n15:00\n\n\n\n\n\n\nExtraer conocimiento desde un conjunto de datos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDominar métodos de programación en R: Los estudiantes aprenderán a utilizar R como herramienta para analizar y procesar datos económicos, permitiéndoles validar hipótesis y sustentar investigaciones.\nDesarrollar capacidades analíticas: Se hará énfasis en la interpretación de resultados obtenidos al procesar datos, fomentando el pensamiento crítico y la toma de decisiones informadas.\nAplicar conceptos de ciencia de datos y ciencias sociales computacionales: Los estudiantes se familiarizarán con estos campos interdisciplinarios, aprendiendo a extraer conocimiento y modelar fenómenos sociales y económicos.\nManejar grandes conjuntos de datos: Los estudiantes aprenderán a utilizar R para manejar eficientemente grandes volúmenes de datos, una habilidad crucial en el campo de la economía.\n\n\n\n\n\nCrear visualizaciones de datos efectivas: Los estudiantes aprenderán a utilizar R para generar gráficos y visualizaciones claras e interactivas, facilitando la comunicación de resultados de investigación.\nGarantizar la reproducibilidad de investigaciones: Los estudiantes aprenderán a documentar y reproducir sus análisis en R, aumentando la transparencia y credibilidad de sus investigaciones.\nComunicar resultados de investigación de manera efectiva: Los estudiantes aprenderán a utilizar R para generar reportes, gráficos, tablas y otros productos que faciliten la comunicación de sus hallazgos.\nFamiliarizarse con el uso de herramientas de acceso a datos: Los estudiantes aprenderán a utilizar API’s y diferentes recursos de internet para la obtención de datos, y a crear conjuntos de datos de libre acceso.\n\n\n\n\n\nComprender y aplicar el ciclo de vida de la ciencia de datos: Los estudiantes adquirirán conocimiento sobre las diferentes etapas del ciclo de ciencia de datos, desde la obtención y limpieza de datos hasta el modelado, análisis y visualización, permitiéndoles abordar proyectos de investigación de manera integral."
   },
   {
     "objectID": "clases/clase_01.html#footnotes",
     "href": "clases/clase_01.html#footnotes",
     "title": "Ciencia de Datos para Economistas",
     "section": "Notas",
-    "text": "Notas\n\n\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D↩︎",
-    "crumbs": [
-      "Clases",
-      "Clase 1"
-    ]
+    "text": "Notas\n\n\nEstas recomendaciones fueron tomadas de Course Policies related to ChatGPT and other AI Tools desarrollado por Joel Gladd, Ph.D↩︎"
   },
   {
     "objectID": "project/proyecto.html",
@@ -715,14 +707,14 @@
     "href": "clases/clase_02.html",
     "title": "Ciencia de Datos para Economistas",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nAbordar\nfunciones precargadas\nlenght\nsum\nmean\nsecuencias\naleatorios\ndataset\nCrear variables\nLlamar variables\nRBase-\npaquetes\nhelp\nvectores\nc\nsecuencias\nrep\nsort\ntable\nrev\nunique\nseleccionar elementos\npaste\nlm\n$\nrnorm\nEjercicios con base en cheat sheet\nrbinom\nruninf\nplot\nllamar a objeto creado"
+    "text": "Conocer funciones y conjuntos de datos precargados en el lenguaje R.\nEnlace “cheat sheet” R Base https://raw.githubusercontent.com/rstudio/cheatsheets/main/translations/spanish/base-r_es.pdf"
   },
   {
     "objectID": "participantes.html",
     "href": "participantes.html",
     "title": "Listado Participantes",
     "section": "",
-    "text": "N.\nNombre\ncédula de identidad\n\n\n\n\n1\nAlexandra Gómez\n29.765.256\n\n\n2\nAlfredo Tiapa\n30.037.872\n\n\n3\nAngel Hernández\n27.995.146\n\n\n4\nArnaldo Di Remigio\n27.988.203\n\n\n5\nCarlos Morillo\n29.521.323\n\n\n6\nDiego Pérez\n27.222.651\n\n\n7\nDolly Laynes Castrillo\n29.686.193\n\n\n8\nEidiusca Figueira\n27.669.710\n\n\n9\nGustavo Moreno\n28.306.246\n\n\n10\nHalena Ruiz\n29.756.414\n\n\n11\nIgnacio Goncalves\n27.600.050\n\n\n12\nJesús Borges\n29.815.277\n\n\n13\nJonathan Pérez\n27.487.707\n\n\n14\nJosé Manuel Suárez\n28.210.812\n\n\n15\nLeonardo Crespo\n26.260.451\n\n\n16\nRaúl Cardozo\n27.660.553\n\n\n17\nRoselyn Lara\n30.138.648\n\n\n18\nSamuel Linares\n29.658.512\n\n\n19\nVictor Delgado\n27.531.901\n\n\n20\nYorman Zabala\n18.440.447",
+    "text": "N.\nNombre\ncédula de identidad\n\n\n\n\n1\nAlexandra Gómez\n29.765.256\n\n\n2\nAlfredo Tiapa\n30.037.872\n\n\n3\nAngel Hernández\n27.995.146\n\n\n4\nArnaldo Di Remigio\n27.988.203\n\n\n5\nCarlos Morillo\n29.521.323\n\n\n6\nCarlos Vivas\n30.032.408\n\n\n7\nDiego Pérez\n27.222.651\n\n\n8\nDolly Laynes Castrillo\n29.686.193\n\n\n9\nEidiusca Figueira\n27.669.710\n\n\n10\nGustavo Moreno\n28.306.246\n\n\n11\nHalena Ruiz\n29.756.414\n\n\n12\nIgnacio Goncalves\n27.600.050\n\n\n13\nJesús Borges\n29.815.277\n\n\n14\nJonathan Pérez\n27.487.707\n\n\n15\nJosé Manuel Suárez\n28.210.812\n\n\n16\nLeonardo Crespo\n26.260.451\n\n\n17\nRaúl Cardozo\n27.660.553\n\n\n18\nRoselyn Lara\n30.138.648\n\n\n19\nSamuel Linares\n29.658.512\n\n\n20\nVictor Delgado\n27.531.901\n\n\n21\nYorman Zabala\n18.440.447",
     "crumbs": [
       "Sobre el Curso",
       "Alumnos Curso"
@@ -739,15 +731,15 @@
     "objectID": "clases/clase_02.html#objetivo",
     "href": "clases/clase_02.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo:",
-    "text": "Objetivo:\nConocer funciones y conjuntos de datos precargados en el lenguaje R.\nEnlace cheat sheet R Base https://raw.githubusercontent.com/rstudio/cheatsheets/main/translations/spanish/base-r_es.pdf"
+    "section": "",
+    "text": "Conocer funciones y conjuntos de datos precargados en el lenguaje R.\nEnlace “cheat sheet” R Base https://raw.githubusercontent.com/rstudio/cheatsheets/main/translations/spanish/base-r_es.pdf"
   },
   {
     "objectID": "clases/clase_02.html#ejercicios",
     "href": "clases/clase_02.html#ejercicios",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejercicios",
-    "text": "Ejercicios\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Ejercicios"
   },
   {
     "objectID": "clases/clase_02.html#ejercicios-1",
@@ -832,5 +824,61 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "",
     "text": "🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_02.html#funciones",
+    "href": "clases/clase_02.html#funciones",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Funciones",
+    "text": "Funciones\nSon llamados a procesos que ejecuta el lenguaje de programación con el que trabajamos.\nPueden retornar un valor, así como una serie de valores, o pueden ser usadas para ejecutar otros procesos, es decir, para llamar a otras funciones.\nLas funciones generalmente reciben una entrada, por ejemplo, de datos que se denominan argumentos."
+  },
+  {
+    "objectID": "clases/clase_02.html#funciones-cont.",
+    "href": "clases/clase_02.html#funciones-cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Funciones Cont.",
+    "text": "Funciones Cont.\nLos argumentos que le damos la función se le pueden suministrar posicionalelmente y no es necesario indicar el nombre del argumento, o pueden estar determinados por el nombre del argumento seguido del operador de igualdad (=), con lo cual estamos pasamos el valor o dato a la función como argumento.\nEs decir, la función sum que ejecuta la adición para un conjunto de números, recibirá de argumentos los valores que queremos sumar.\nLos argumentos los pasamos a la función entre los paréntesis. En el caso que venimos dando de ejemplo, quedará de la siguiente forma.\nLa sintáxis se denomina la forma en que escribimos nuestros códigos, que deben cumplir una serie de reglas, como la de pasar los argumentos entre los símbolos paréntesis."
+  },
+  {
+    "objectID": "clases/clase_02.html#ejercicios-11",
+    "href": "clases/clase_02.html#ejercicios-11",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02.html#lecturas-complementarias",
+    "href": "clases/clase_02.html#lecturas-complementarias",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Lecturas complementarias",
+    "text": "Lecturas complementarias\nhttps://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_04/clase_04.R\nhttps://ucveconomia-r4ds-2024-2.netlify.app/practicas/clase3_apoyo"
+  },
+  {
+    "objectID": "clases/clase_02.html#ejemplos",
+    "href": "clases/clase_02.html#ejemplos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02.html#vectores",
+    "href": "clases/clase_02.html#vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vectores",
+    "text": "Vectores\nEn R, la principal estructura de datos que existe son los vectores. De ellos hablaremos mucho más extensamente a lo largo del curso. Para indicar que estamos trabajando con un vector usamos la función c (). Es importante recordar que los elementos de un vector les corresponde un orden determinado. No es el mismo vector c (3, 5 , 7) que el vector c (7, 5 ,3) ya que el primer elemento y tercer elemento no coinciden en ambos vectores.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02.html#operaciones-con-vectores",
+    "href": "clases/clase_02.html#operaciones-con-vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Operaciones con Vectores",
+    "text": "Operaciones con Vectores\nSobre todo el contenido de un vector se puede realizar una operación, por ejemplo de obtener el promedio, o sumar un valor.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02.html#vectores-1",
+    "href": "clases/clase_02.html#vectores-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vectores",
+    "text": "Vectores\n\n\n\n\n\n\nImportante\n\n\n\nInvestigar con un modelo de lenguaje los tipos de vectores que existen en R y pedirle ejemplos. Intente copiar los ejemplos en el área de abajo y ejecute los códigos para ver los resultados\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]
