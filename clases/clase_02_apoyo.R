@@ -31,7 +31,8 @@ runif(n=18, min= 0, max= 20)
 ?runif
 
 sample(1:20, size= 18, replace = TRUE )
-sample(1:20, size= 18, replace = FALSE)
+sample(1:10, size= 18, replace = FALSE)
+sample(1:10, size= 18, replace = FALSE )
 
 rep(4,times= 10)
 
@@ -85,6 +86,12 @@ sort(mtcars$qsec)
 table(mtcars$cyl,
       mtcars$gear)
 
+min(mtcars$mpg)
+max(mtcars$mpg)
+
+str(mtcars)
+
+summary(mtcars)
 
 paste('la cantidad de cilindros es', mtcars$cyl)
 
