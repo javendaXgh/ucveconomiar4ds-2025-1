@@ -71,8 +71,6 @@ cilindros <- unique(mtcars$cyl)
 cilindros
 
 
-
-
 # seleccionar elementos
 
 length(mtcars$mpg)

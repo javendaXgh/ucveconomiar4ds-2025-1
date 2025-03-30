@@ -1,0 +1,59 @@
+---
+title: "Introducción a R y RStudio"
+output:
+  html_document:
+    css: ../lab.css
+    highlight: pygments
+    theme: cerulean
+    toc: true
+    toc_float: true
+---
+
+```{r global_options, include = FALSE}
+knitr::opts_chunk$set(eval = TRUE, results = FALSE)
+library(tidyverse)
+library(openintro)
+```
+
+## La Interfaz de RStudio
+
+El objetivo de este laboratorio es introducirte a R y RStudio, que utilizarás a lo largo del curso tanto para aprender los conceptos estadísticos discutidos en el curso como para analizar datos reales y llegar a conclusiones informadas. Para aclarar qué es qué: `R` es el nombre del lenguaje de programación en sí mismo y RStudio es una interfaz conveniente para trabajar con `R`.
+
+A medida que avancen los laboratorios, te animamos a que explores más allá de lo que dictan los laboratorios; ¡la disposición a experimentar te convertirá en un programador mucho mejor! Sin embargo, antes de llegar a esa etapa, necesitas desarrollar cierta fluidez básica en `R`. Primero, exploraremos los componentes fundamentales de `R` y RStudio: la interfaz de RStudio, la lectura de datos y los comandos básicos para trabajar con datos en `R`.
+
+Adelante, inicia RStudio. Deberías ver una ventana que se parece a la imagen que se muestra a continuación.
+
+```{r r-interface-2020, echo=FALSE, results="asis"}
+knitr::include_graphics("images/r-interface-2020.png")
+```
+
+El panel de la parte inferior izquierda es donde ocurre la acción. Este panel se llama la *consola*. Cada vez que inicies RStudio, tendrá el mismo texto en la parte superior de la consola que te indica la versión de R que estás ejecutando. Debajo de esa información está el *prompt*, indicado por el símbolo `>`. Como su nombre indica, este prompt es realmente una solicitud: una solicitud de un comando. Inicialmente, interactuar con `R` se trata de escribir comandos e interpretar la salida. Estos comandos y su sintaxis han evolucionado durante décadas (literalmente) y ahora proporcionan lo que muchos usuarios sienten que es una forma bastante natural de acceder a los datos y organizar, describir e invocar cálculos estadísticos.
+
+El panel de la parte superior derecha contiene tu *entorno*, así como un historial de los comandos que has introducido previamente.
+
+El panel de la parte inferior derecha contiene pestañas para examinar los *archivos* en tu carpeta de proyecto, acceder a los archivos de *ayuda* para las funciones de `R`, instalar y administrar los *paquetes* de `R`, e inspeccionar las visualizaciones. De forma predeterminada, todas las visualizaciones de datos que realices aparecerán directamente debajo del código que utilizaste para crearlas. Si prefieres que tus gráficos aparezcan en la pestaña de *gráficos*, deberás cambiar tus opciones globales.
+
+### Paquetes de R
+
+`R` es un lenguaje de programación de código abierto, lo que significa que los usuarios pueden contribuir con paquetes que nos facilitan la vida y podemos usarlos de forma gratuita. Para este laboratorio, y muchos otros en el futuro, usaremos lo siguiente:
+
+-   El paquete "paraguas" **tidyverse** que alberga un conjunto de muchos paquetes diferentes de `R`: para la manipulación de datos y la visualización de datos
+-   El paquete **openintro** `R`: para datos y funciones personalizadas con los recursos de OpenIntro
+
+En la esquina inferior derecha, haz clic en la pestaña *Paquetes*. Escribe el nombre de cada uno de estos paquetes (tidyverse, openintro) en el cuadro de búsqueda para ver si se han instalado. Si estos paquetes no aparecen cuando escribes su nombre, instálalos copiando y pegando o escribiendo las dos líneas de código siguientes en la consola de tu sesión de RStudio. Asegúrate de presionar enter/return después de cada línea de código.
+
+```{r install-packages, message = FALSE, eval = FALSE}
+install.packages("tidyverse")
+install.packages("openintro")
+```
+
+Después de presionar enter/return, comenzará un flujo de texto, comunicando el proceso que `R` está llevando a cabo para instalar el paquete desde la ubicación que seleccionaste cuando instalaste `R`. Si no se te solicitó que seleccionaras un servidor para descargar paquetes cuando instalaste `R`, RStudio podría solicitarte que selecciones un servidor desde el cual descargar; cualquiera de ellos funcionará.
+
+Solo necesitas *instalar* paquetes una vez, pero necesitas *cargarlos* cada vez que reinicies RStudio. Cargamos paquetes con la función `library`. Copia y pega o escribe las dos líneas siguientes en tu consola para cargar los paquetes tidyverse y openintro en tu entorno de trabajo.
+
+```{r load-packages, message = FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+Elegimos usar el paquete tidyverse porque consta de un conjunto de paquetes necesarios para diferentes aspectos del trabajo con datos, desde la carga de datos hasta la manipulación de datos, la visualización de datos y el análisis de datos. Además, estos paquetes comparten filosofías comunes y están diseñados para trabajar juntos. Puedes encontrar más información sobre los paquetes en tidyverse en [tidyverse.org](http://tidyverse.org/).

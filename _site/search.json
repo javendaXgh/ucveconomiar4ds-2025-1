@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 17 mar.\n\n\n\n\n\n\n\n\nmié, 19 mar.\nPresentación Curso\n🖥️ láminas clase 01🛠️ tarea 1\n\n\n2\nlun, 24 mar.\nIntroducción Ciclo de Ciencia de Datos\n🖥️ láminas clase 01\n\n\n\n\nmié, 26 mar.\nTrabajando con R Base\n🖥️ láminas clase 02\n\n\n3\nlun, 31 mar.\n\n\n\n\n\n\n\n\nmié, 2 abr.\n\n\n\n\n\n\n4\nlun, 7 abr.\n\n\n\n\n\n\n\n\nmié, 9 abr.\n\n\n\n\n\n\n5\nlun, 21 abr.\n\n\n\n\n\n\n\n\nmié, 23 abr.\n\n\n\n\n\n\n6\nmar, 29 abr.\n\n\n⏰ Suministro de requerimientos para el Trabajo Ciclo C.D.\n\n\n\n\nmié, 30 abr.\n\n\n\n\n\n\n7\nlun, 5 may.\n\n\n\n\n\n\n\n\nmié, 7 may.\n\n\n\n\n\n\n8\nlun, 12 may.\n\n\n\n\n\n\n\n\nmié, 14 may.\n\n\n⏰ Exámen Parcial mitad semestre\n\n\n9\nlun, 19 may.\n\n\n\n\n\n\n\n\nmié, 21 may.\n\n\n⏰ Suministro de requerimientos del proyecto final\n\n\n10\nlun, 26 may.\n\n\n\n\n\n\n\n\nmié, 28 may.\n\n\n⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos\n\n\n11\nlun, 2 jun.\n\n\n\n\n\n\n\n\nmié, 4 jun.\n\n\n\n\n\n\n12\nlun, 9 jun.\n\n\n\n\n\n\n\n\nmié, 11 jun.\n\n\n\n\n\n\n13\nlun, 16 jun.\n\n\n\n\n\n\n\n\nmié, 18 jun.\n\n\n\n\n\n\n14\nlun, 23 jun.\n\n\n\n\n\n\n\n\nmié, 25 jun.\n\n\n\n\n\n\n15\nlun, 30 jun.\n\n\n\n\n\n\n\n\nmié, 2 jul.\n\n\nEntrega Proyecto Final\n\n\n16\nlun, 7 jul.\n\n\n\n\n\n\n\n\nmié, 9 jul.\n\n\nPresentación Proyecto Final",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 17 mar.\n\n\n\n\n\n\n\n\nmié, 19 mar.\nPresentación Curso\n🖥️ láminas clase 01🛠️ tarea 1\n\n\n2\nlun, 24 mar.\nIntroducción Ciclo de Ciencia de Datos\n🖥️ láminas clase 01\n\n\n\n\nmié, 26 mar.\nTrabajando con R Base\n🖥️ láminas clase 02 🖥️ láminas playground\n\n\n3\nlun, 31 mar.\nTrabajando con R Base/cont.\n🖥️ láminas playground👨🏻‍🏫 tutorial instalación R y RStudio\n\n\n\n\nmié, 2 abr.\n\n\n\n\n\n\n4\nlun, 7 abr.\n\n\n\n\n\n\n\n\nmié, 9 abr.\n\n\n\n\n\n\n5\nlun, 21 abr.\n\n\n\n\n\n\n\n\nmié, 23 abr.\n\n\n\n\n\n\n6\nmar, 29 abr.\n\n\n⏰ Suministro de requerimientos para el Trabajo Ciclo C.D.\n\n\n\n\nmié, 30 abr.\n\n\n\n\n\n\n7\nlun, 5 may.\n\n\n\n\n\n\n\n\nmié, 7 may.\n\n\n\n\n\n\n8\nlun, 12 may.\n\n\n\n\n\n\n\n\nmié, 14 may.\n\n\n⏰ Exámen Parcial mitad semestre\n\n\n9\nlun, 19 may.\n\n\n\n\n\n\n\n\nmié, 21 may.\n\n\n⏰ Suministro de requerimientos del proyecto final\n\n\n10\nlun, 26 may.\n\n\n\n\n\n\n\n\nmié, 28 may.\n\n\n⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos\n\n\n11\nlun, 2 jun.\n\n\n\n\n\n\n\n\nmié, 4 jun.\n\n\n\n\n\n\n12\nlun, 9 jun.\n\n\n\n\n\n\n\n\nmié, 11 jun.\n\n\n\n\n\n\n13\nlun, 16 jun.\n\n\n\n\n\n\n\n\nmié, 18 jun.\n\n\n\n\n\n\n14\nlun, 23 jun.\n\n\n\n\n\n\n\n\nmié, 25 jun.\n\n\n\n\n\n\n15\nlun, 30 jun.\n\n\n\n\n\n\n\n\nmié, 2 jul.\n\n\nEntrega Proyecto Final\n\n\n16\nlun, 7 jul.\n\n\n\n\n\n\n\n\nmié, 9 jul.\n\n\nPresentación Proyecto Final",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -707,7 +707,7 @@
     "href": "clases/clase_02.html",
     "title": "Ciencia de Datos para Economistas",
     "section": "",
-    "text": "Conocer funciones y conjuntos de datos precargados en el lenguaje R.\nEnlace “cheat sheet” R Base https://raw.githubusercontent.com/rstudio/cheatsheets/main/translations/spanish/base-r_es.pdf"
+    "text": "Conocer funciones y conjuntos de datos precargados en el lenguaje R.\n\n\nEnlace “cheat sheet” R Base https://raw.githubusercontent.com/rstudio/cheatsheets/main/translations/spanish/base-r_es.pdf"
   },
   {
     "objectID": "participantes.html",
@@ -978,5 +978,98 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplos Secuencias de Números-cont.:",
     "text": "Ejemplos Secuencias de Números-cont.:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02_playground.html#ejercicios",
+    "href": "clases/clase_02_playground.html#ejercicios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02_playground.html#ejercicios-1",
+    "href": "clases/clase_02_playground.html#ejercicios-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02_playground.html#ejercicios-2",
+    "href": "clases/clase_02_playground.html#ejercicios-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02_playground.html#ejercicios-3",
+    "href": "clases/clase_02_playground.html#ejercicios-3",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02_playground.html#ejercicios-4",
+    "href": "clases/clase_02_playground.html#ejercicios-4",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_02_playground.html#ejercicios-5",
+    "href": "clases/clase_02_playground.html#ejercicios-5",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "tutorial_rstudio.html",
+    "href": "tutorial_rstudio.html",
+    "title": "Introducción a R y RStudio",
+    "section": "",
+    "text": "El objetivo de este laboratorio es introducirte a R y RStudio, que utilizarás a lo largo del curso tanto para aprender los conceptos estadísticos discutidos en el curso como para analizar datos reales y llegar a conclusiones informadas. Para aclarar qué es qué: R es el nombre del lenguaje de programación en sí mismo y RStudio es una interfaz conveniente para trabajar con R.\nA medida que avancen los laboratorios, te animamos a que explores más allá de lo que dictan los laboratorios; ¡la disposición a experimentar te convertirá en un programador mucho mejor! Sin embargo, antes de llegar a esa etapa, necesitas desarrollar cierta fluidez básica en R. Primero, exploraremos los componentes fundamentales de R y RStudio: la interfaz de RStudio, la lectura de datos y los comandos básicos para trabajar con datos en R.\nAdelante, inicia RStudio. Deberías ver una ventana que se parece a la imagen que se muestra a continuación.\n\nEl panel de la parte inferior izquierda es donde ocurre la acción. Este panel se llama la consola. Cada vez que inicies RStudio, tendrá el mismo texto en la parte superior de la consola que te indica la versión de R que estás ejecutando. Debajo de esa información está el prompt, indicado por el símbolo &gt;. Como su nombre indica, este prompt es realmente una solicitud: una solicitud de un comando. Inicialmente, interactuar con R se trata de escribir comandos e interpretar la salida. Estos comandos y su sintaxis han evolucionado durante décadas (literalmente) y ahora proporcionan lo que muchos usuarios sienten que es una forma bastante natural de acceder a los datos y organizar, describir e invocar cálculos estadísticos.\nEl panel de la parte superior derecha contiene tu entorno, así como un historial de los comandos que has introducido previamente.\nEl panel de la parte inferior derecha contiene pestañas para examinar los archivos en tu carpeta de proyecto, acceder a los archivos de ayuda para las funciones de R, instalar y administrar los paquetes de R, e inspeccionar las visualizaciones. De forma predeterminada, todas las visualizaciones de datos que realices aparecerán directamente debajo del código que utilizaste para crearlas. Si prefieres que tus gráficos aparezcan en la pestaña de gráficos, deberás cambiar tus opciones globales.\n\n\nR es un lenguaje de programación de código abierto, lo que significa que los usuarios pueden contribuir con paquetes que nos facilitan la vida y podemos usarlos de forma gratuita. Para este laboratorio, y muchos otros en el futuro, usaremos lo siguiente:\n\nEl paquete “paraguas” tidyverse que alberga un conjunto de muchos paquetes diferentes de R: para la manipulación de datos y la visualización de datos\nEl paquete openintro R: para datos y funciones personalizadas con los recursos de OpenIntro\n\nEn la esquina inferior derecha, haz clic en la pestaña Paquetes. Escribe el nombre de cada uno de estos paquetes (tidyverse, openintro) en el cuadro de búsqueda para ver si se han instalado. Si estos paquetes no aparecen cuando escribes su nombre, instálalos copiando y pegando o escribiendo las dos líneas de código siguientes en la consola de tu sesión de RStudio. Asegúrate de presionar enter/return después de cada línea de código.\n\ninstall.packages(\"tidyverse\")\ninstall.packages(\"openintro\")\n\nDespués de presionar enter/return, comenzará un flujo de texto, comunicando el proceso que R está llevando a cabo para instalar el paquete desde la ubicación que seleccionaste cuando instalaste R. Si no se te solicitó que seleccionaras un servidor para descargar paquetes cuando instalaste R, RStudio podría solicitarte que selecciones un servidor desde el cual descargar; cualquiera de ellos funcionará.\nSolo necesitas instalar paquetes una vez, pero necesitas cargarlos cada vez que reinicies RStudio. Cargamos paquetes con la función library. Copia y pega o escribe las dos líneas siguientes en tu consola para cargar los paquetes tidyverse y openintro en tu entorno de trabajo.\n\nlibrary(tidyverse)\nlibrary(openintro)\n\nElegimos usar el paquete tidyverse porque consta de un conjunto de paquetes necesarios para diferentes aspectos del trabajo con datos, desde la carga de datos hasta la manipulación de datos, la visualización de datos y el análisis de datos. Además, estos paquetes comparten filosofías comunes y están diseñados para trabajar juntos. Puedes encontrar más información sobre los paquetes en tidyverse en tidyverse.org.",
+    "crumbs": [
+      "Tutoriales",
+      "Intro RStudio"
+    ]
+  },
+  {
+    "objectID": "tutorial_rstudio.html#la-interfaz-de-rstudio",
+    "href": "tutorial_rstudio.html#la-interfaz-de-rstudio",
+    "title": "Introducción a R y RStudio",
+    "section": "",
+    "text": "El objetivo de este laboratorio es introducirte a R y RStudio, que utilizarás a lo largo del curso tanto para aprender los conceptos estadísticos discutidos en el curso como para analizar datos reales y llegar a conclusiones informadas. Para aclarar qué es qué: R es el nombre del lenguaje de programación en sí mismo y RStudio es una interfaz conveniente para trabajar con R.\nA medida que avancen los laboratorios, te animamos a que explores más allá de lo que dictan los laboratorios; ¡la disposición a experimentar te convertirá en un programador mucho mejor! Sin embargo, antes de llegar a esa etapa, necesitas desarrollar cierta fluidez básica en R. Primero, exploraremos los componentes fundamentales de R y RStudio: la interfaz de RStudio, la lectura de datos y los comandos básicos para trabajar con datos en R.\nAdelante, inicia RStudio. Deberías ver una ventana que se parece a la imagen que se muestra a continuación.\n\nEl panel de la parte inferior izquierda es donde ocurre la acción. Este panel se llama la consola. Cada vez que inicies RStudio, tendrá el mismo texto en la parte superior de la consola que te indica la versión de R que estás ejecutando. Debajo de esa información está el prompt, indicado por el símbolo &gt;. Como su nombre indica, este prompt es realmente una solicitud: una solicitud de un comando. Inicialmente, interactuar con R se trata de escribir comandos e interpretar la salida. Estos comandos y su sintaxis han evolucionado durante décadas (literalmente) y ahora proporcionan lo que muchos usuarios sienten que es una forma bastante natural de acceder a los datos y organizar, describir e invocar cálculos estadísticos.\nEl panel de la parte superior derecha contiene tu entorno, así como un historial de los comandos que has introducido previamente.\nEl panel de la parte inferior derecha contiene pestañas para examinar los archivos en tu carpeta de proyecto, acceder a los archivos de ayuda para las funciones de R, instalar y administrar los paquetes de R, e inspeccionar las visualizaciones. De forma predeterminada, todas las visualizaciones de datos que realices aparecerán directamente debajo del código que utilizaste para crearlas. Si prefieres que tus gráficos aparezcan en la pestaña de gráficos, deberás cambiar tus opciones globales.\n\n\nR es un lenguaje de programación de código abierto, lo que significa que los usuarios pueden contribuir con paquetes que nos facilitan la vida y podemos usarlos de forma gratuita. Para este laboratorio, y muchos otros en el futuro, usaremos lo siguiente:\n\nEl paquete “paraguas” tidyverse que alberga un conjunto de muchos paquetes diferentes de R: para la manipulación de datos y la visualización de datos\nEl paquete openintro R: para datos y funciones personalizadas con los recursos de OpenIntro\n\nEn la esquina inferior derecha, haz clic en la pestaña Paquetes. Escribe el nombre de cada uno de estos paquetes (tidyverse, openintro) en el cuadro de búsqueda para ver si se han instalado. Si estos paquetes no aparecen cuando escribes su nombre, instálalos copiando y pegando o escribiendo las dos líneas de código siguientes en la consola de tu sesión de RStudio. Asegúrate de presionar enter/return después de cada línea de código.\n\ninstall.packages(\"tidyverse\")\ninstall.packages(\"openintro\")\n\nDespués de presionar enter/return, comenzará un flujo de texto, comunicando el proceso que R está llevando a cabo para instalar el paquete desde la ubicación que seleccionaste cuando instalaste R. Si no se te solicitó que seleccionaras un servidor para descargar paquetes cuando instalaste R, RStudio podría solicitarte que selecciones un servidor desde el cual descargar; cualquiera de ellos funcionará.\nSolo necesitas instalar paquetes una vez, pero necesitas cargarlos cada vez que reinicies RStudio. Cargamos paquetes con la función library. Copia y pega o escribe las dos líneas siguientes en tu consola para cargar los paquetes tidyverse y openintro en tu entorno de trabajo.\n\nlibrary(tidyverse)\nlibrary(openintro)\n\nElegimos usar el paquete tidyverse porque consta de un conjunto de paquetes necesarios para diferentes aspectos del trabajo con datos, desde la carga de datos hasta la manipulación de datos, la visualización de datos y el análisis de datos. Además, estos paquetes comparten filosofías comunes y están diseñados para trabajar juntos. Puedes encontrar más información sobre los paquetes en tidyverse en tidyverse.org.",
+    "crumbs": [
+      "Tutoriales",
+      "Intro RStudio"
+    ]
+  },
+  {
+    "objectID": "clases/clase_02_playground.html",
+    "href": "clases/clase_02_playground.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "tutorial_instal.html",
+    "href": "tutorial_instal.html",
+    "title": "Tutorial Instalación R y RStudio en Windows",
+    "section": "",
+    "text": "Este es un tutorial con los pasos a seguir para instalar el lenguaje  y el software de entorno de desarrollo intregrado que se llama  .\nEs necesario que siga al pie de la letra estos pasos, principalmente para que primero sea instalado el lenguaje R y luego RStudio.",
+    "crumbs": [
+      "Tutoriales",
+      "Instalación R y RStudio"
+    ]
+  },
+  {
+    "objectID": "tutorial_instal.html#section",
+    "href": "tutorial_instal.html#section",
+    "title": "Tutorial Instalación R y RStudio en Windows",
+    "section": "",
+    "text": "Instalación RStudio:\nRStudio es el entorno de desarrollo integrado que se usará para dar soporte a la generación y desarrollo de códigos en R. Estos son los pasos a seguir para instalarlo:\n\nIr a la página https://posit.co/download/rstudio-desktop/ y descargar la opción correspondiente a su sistema operativo. En caso de windows 10 u 11:\n\nHacer click en “Siguiente” al aparecer el asistente de instalación:\n\nDar “Siguiente” en la ruta de instalación predeterminada, la cual generalmente es “Program Files” o “Archivos de Programa”:\n\nUna vez finalizada la instalación aparecerá esta pantalla. Verificar que no indique que se ha generado un error. En caso de aparecer algún mensaje o advertencia de que pudo ocurrir un error al hacer la instalación, es necesario que haga una captura de pantalla y la comparta con el instructor-profesor del curso. En caso de no mostrar error, hacer click en “Terminar” :\n\nPara verificar que se instaló correctamente RStudio vaya a su “Escritorio” o a “Programas”, busque el ícono de RStudio, similar al que se muestra en la siguiente imagen y abra el programa.",
+    "crumbs": [
+      "Tutoriales",
+      "Instalación R y RStudio"
+    ]
   }
 ]

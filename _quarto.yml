@@ -67,6 +67,11 @@ website:
         contents:
       - section: "Tutoriales"
         contents:
+          - href: tutorial_instal.qmd
+            text: Instalación R y RStudio
+          - href: tutorial_rstudio.qmd
+            text: Intro RStudio
+        
       - section: "Videos de Apoyo"
         contents:
 

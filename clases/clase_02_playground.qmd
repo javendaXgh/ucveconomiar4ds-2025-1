@@ -1,0 +1,108 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 2/ R Base/ Playground"
+date: "26/marzo/2025"
+lang: es
+format: revealjs
+incremental: false
+auto-stretch: false
+engine: knitr
+filters:
+  - webr
+---
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+#
+```
+
+## Ejercicios
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+#
+```

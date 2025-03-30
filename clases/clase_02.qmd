@@ -159,7 +159,7 @@ No obstante, esto será revisado en mayor detalle cuando empecemos a trabajar co
 
 -   La ["sintáxis"]{style="color: orange"} se denomina la forma en que escribimos nuestros códigos, que deben cumplir una serie de reglas, como la de pasar los argumentos entre los símbolos paréntesis.
 
--   ["Ejecutar" ]{style="color: orange"}significa que el computador, el código que hemos escrito lo interprete, lo procese y nos de los resultados que queríamos obtener.
+-   ["Ejecutar"]{style="color: orange"}significa que el computador, el código que hemos escrito lo interprete, lo procese y nos de los resultados que queríamos obtener.
 
 -   ["Llamar"]{style="color: orange"}, puede significar ejecutar una función o pedir al computador que nos muestre una variable que creamos, aunque en realidad todavía no hemos hablado de "crear variables" así que esperemos un poco.
 
@@ -226,7 +226,7 @@ mean( c(500:100 ) )
 
 ## Ejercicios {.small}
 
-A continuación hay una serie de ejercicios que puede ir ejecutando para entrenar sus habilidades. Como esta es una presentación que permite ejecutar códigos en su navegador web, para ir adelantando conceptos básicos de programación en `R` , así como para conocer algunas funciones precargadas, una vez que cierre la presentación perderá todo el trabajo hecho. Si lo desea, puede hacer capturas de pantalla de los códigos que vaya ejecutando para luego tenerlos de ayuda al tener instalado ![](images/Rlogo 2.png){style="margin: auto;" width="34"} y ![](images/rstudio_logo.png){style="margin: auto;" width="85"} en su computadora.
+A continuación hay una serie de ejercicios que puede ir ejecutando para entrenar sus habilidades. Como esta es una presentación que permite ejecutar códigos en su navegador web, para ir adelantando conceptos básicos de programación en `R` , así como para conocer algunas funciones precargadas, una vez que cierre la presentación perderá todo el trabajo hecho. Si lo desea, puede hacer capturas de pantalla de los códigos que vaya ejecutando para luego tenerlos de ayuda al tener instalado ![](images/Rlogo%202.png){style="margin: auto;" width="34"} y ![](images/rstudio_logo.png){style="margin: auto;" width="85"} en su computadora.
 
 ## Ejercicios Completar o Corregir
 
