@@ -224,6 +224,29 @@ mean( c(500:100 ) )
 # rep( seq( from=3, to= 9, by=3), each=4 )
 ```
 
+## Función `sample` {.small}
+
+Permite crear una muestra aleatoria o una permutación de un tamaño determinado tomando elementos de un vector determiniado.
+
+```{webr}
+# muestra de 10 elementos sin remplazo de un vector que va 
+# del número 1 al 20
+sample(x =1:20, size= 10, replace= FALSE)
+# el argumento "replace" es de tipo lógico, y en este caso 
+# se asigna como FALSE para que no existan remplazos
+
+# sample (x= 1:20, size= 21, replace= FALSE)
+# este caso debe generar un "Error" ya que la muestra que
+# se quiere generar deberá tener 21 elementos, mientras
+# que el vector de donde se generará la muestra sólo
+# tiene 20 elementos
+
+# sample (x=1:20, size= 30, replace= TRUE)
+# en este caso sí se genera la muestra aleatoria,
+# y existen elementos que aparecen más de una vez
+# al existir remplazo
+```
+
 ## Ejercicios {.small}
 
 A continuación hay una serie de ejercicios que puede ir ejecutando para entrenar sus habilidades. Como esta es una presentación que permite ejecutar códigos en su navegador web, para ir adelantando conceptos básicos de programación en `R` , así como para conocer algunas funciones precargadas, una vez que cierre la presentación perderá todo el trabajo hecho. Si lo desea, puede hacer capturas de pantalla de los códigos que vaya ejecutando para luego tenerlos de ayuda al tener instalado ![](images/Rlogo%202.png){style="margin: auto;" width="34"} y ![](images/rstudio_logo.png){style="margin: auto;" width="85"} en su computadora.

@@ -1071,5 +1071,12 @@
       "Tutoriales",
       "Instalación R y RStudio"
     ]
+  },
+  {
+    "objectID": "clases/clase_02.html#función-sample",
+    "href": "clases/clase_02.html#función-sample",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Función sample",
+    "text": "Función sample\nPermite crear una muestra aleatoria o una permutación de un tamaño determinado tomando elementos de un vector determiniado.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]
