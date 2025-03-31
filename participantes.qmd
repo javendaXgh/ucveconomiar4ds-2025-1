@@ -10,6 +10,7 @@ library(tidyverse)
 library(gt)
 source('materiales_admin/participantes.R')
 
-gt(participantes)
+gt(participantes%>%
+     select(-ci2))
 
 ```
