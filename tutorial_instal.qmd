@@ -2,7 +2,7 @@
 title: "Tutorial Instalación R y RStudio en Windows"
 ---
 
-Este es un tutorial con los pasos a seguir para instalar el lenguaje ![](clases/images/Rlogo 2.png){width="20" height="20"} y el software de entorno de desarrollo intregrado que se llama ![](clases/images/rstudio_logo.png){width="57"} .
+Este es un tutorial con los pasos a seguir para instalar el lenguaje ![](clases/images/Rlogo%202.png){width="20" height="20"} y el software de entorno de desarrollo intregrado que se llama ![](clases/images/rstudio_logo.png){width="57"} .
 
 Es necesario que siga al pie de la letra estos pasos, principalmente para que primero sea instalado el lenguaje R y luego RStudio.
 
@@ -12,39 +12,39 @@ Es necesario que siga al pie de la letra estos pasos, principalmente para que pr
 
 2.  Abrir archivo descargado, que debe tener un nombre similar a "R-4.4.3-win.exe". [Nota]{style="color:red"}: Preste atención a que no seleccione el archivo descargado de RStudio.
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.49.00.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.49.00.png){width="300"}
 
 3.  Seleccionar idioma de instalación "español" y hacer click en "aceptar":
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.49.11.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.49.11.png){width="300"}
 
 4.  Dar click en "Siguiente" referente a aceptar los términos de la licencia de instalación:
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.49.19.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.49.19.png){width="300"}
 
 5.  Dar click en "Siguiente" en la ruta de instalación predeterminada, la cual generalmente es "Program Files" o "Archivos de Programa":
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.49.38.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.49.38.png){width="300"}
 
 6.  Verificar que estén seleccionados los tres componentes mostrados en la imágen y dar click en "Siguiente":
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.49.45.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.49.45.png){width="300"}
 
 7.  Seleccionar "No" (seleccionada por defecto) en opciones de configuración, y hacer click en "Siguiente":
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.50.11.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.50.11.png){width="300"}
 
 8.  En "Seleccione la Carpeta del Menú de Inicio", dejar los valores que muestra por defecto y hacer click en "Siguiente":
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.50.20.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.50.20.png){width="300"}
 
 9.  Esperar a que se instalen los archivos - dependencias:
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.50.53.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.50.53.png){width="300"}
 
 10. Una vez finalizada la instalación aparecerá esta pantalla. Verificar que no indique que se ha generado un error. En caso de aparecer algún mensaje o advertencia de que pudo ocurrir un error al hacer la instalación, es necesario que haga una captura de pantalla y la comparta con el instructor-profesor del curso. En caso de no mostrar error, hacer click en "Finalizar" :
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.51.19.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.51.19.png){width="300"}
 
 ## 
 
@@ -58,16 +58,16 @@ RStudio es el entorno de desarrollo integrado que se usará para dar soporte a l
 
 2.  Hacer click en "Siguiente" al aparecer el asistente de instalación:
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.51.56.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.51.56.png){width="300"}
 
 3.  Dar "Siguiente" en la ruta de instalación predeterminada, la cual generalmente es "Program Files" o "Archivos de Programa":
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.52.03.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.52.03.png){width="300"}
 
 4.  Una vez finalizada la instalación aparecerá esta pantalla. Verificar que no indique que se ha generado un error. En caso de aparecer algún mensaje o advertencia de que pudo ocurrir un error al hacer la instalación, es necesario que haga una captura de pantalla y la comparta con el instructor-profesor del curso. En caso de no mostrar error, hacer click en "Terminar" :
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 11.53.54.png){width="300"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2011.53.54.png){width="300"}
 
 5.  Para verificar que se instaló correctamente RStudio vaya a su "Escritorio" o a "Programas", busque el ícono de RStudio, similar al que se muestra en la siguiente imagen y abra el programa.
 
-    ![](images/tutoriales/instalacionR_RE/Screenshot 2025-03-30 at 12.57.03.png){width="200"}
+    ![](images/tutoriales/instalacionR_RE/Screenshot%202025-03-30%20at%2012.57.03.png){width="200"}

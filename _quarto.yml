@@ -71,6 +71,8 @@ website:
             text: Instalación R y RStudio
           - href: tutorial_rstudio.qmd
             text: Intro RStudio
+          - href: tutorial_rbase.qmd
+            text: Intro Rbase
         
       - section: "Videos de Apoyo"
         contents:

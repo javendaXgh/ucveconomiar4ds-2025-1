@@ -1,72 +1,93 @@
-# Abordar
 
-#
-# http://localhost:90/descarga/
-# funciones precargadas
-sum()
+# verificar en Consola el índice en el inicio de cada fila
+c(20:50)
 
-mean(c(11,12,13,14,15,16))
+# invertir el orden de salida mediante la función rev
+rev(1:10)
 
-mean(11:16)
+# acceder al cuarto elemento del vector generado
+rev(1:10)[4] # acceso a la posición 4
 
-seq(2,16, by=2)
-
-# argumentos
-seq(from = 2, 
-    to = 16,
-    by = 2)
-# posicionales
-seq(5, 8, by=.2)
-
-# nombrados
-seq(to = 8,
-    from= 5,
-    by = .2)
-
-seq(by = .2, to = 8,from= 5)
-
-runif(n=18, min= 0, max= 20)
-# RBase-
-# paquetes
-
-#help
-?runif
-
-sample(1:20, size= 18, replace = TRUE )
-sample(1:10, size= 18, replace = FALSE)
-sample(1:10, size= 18, replace = FALSE )
-
-rep(4,times= 10)
-
-rep(c(1,5,10),times=4)
-
-rep(c(1,5,10),times=4, each=2)
-
-rep(seq(from= 2, to= 8, by=2),3)
-
-rev(c(1:10))
-
-# vectores
-
+# 
 c('a','b')
+
+# aunque definimos un elemento numérico en el vector, R aplica un proceso llamado
+# coherce que hace que todos los elementos que integran el vector se conviertan en tipo
+# character o string
 c('a','b',1)
 
-#tipos
+#Para saber cuál clase tiene un vector aplicamos la función class
 class(c('a','b'))
+class(c('a',1))
+class(c(8,1))
+class(c(1,5))
+# pronto veremos cuáles son las clases de vectores con las que trabajaremos en el curso
 
-paste('estoy en el', 'salon')
+# uso de la función paste para pegar cadenas de texto sin un separador. Los elementos se 
+# pegan en el mismo orden en que se encuentran dentro de los argumentos de la función 
+# paste. En paste0 no hay separador entre las cadenas de texto
 paste0('estoy en el', 'salon')
+
+# en paste nuevamente se van pegando todos los elementos que se le pasan de argumento, pero
+# esta vez van separados por un espacio
+paste('estoy en clase en el', 
+      'laboratorio')
+
+
+paste('estoy en clase en el', 
+      'laboratorio',
+      sep='_')
+# al agregar el argumento sep a la función paste podemos modificar el espacio como 
+# separador por otra cadena de texto que definamos que en este caso es la línea de piso 
+# bajo. Hay argumentos que tienen las funciones por defecto, como es en el caso de paste
+# donde el espacio opera por defecto como separador, pero se puede modificar ese 
+# comportamiento cuando pasamos el argumento y especificamos cuál va a ser el valor que 
+# asumirá. Cuando creémos nuestras propias funciones, hablaremos con mayor detalle sobre
+# esto
+
+
+# Definir variables
+# Mediante el operador <- asignaremos el valor "R4DS" a una variable que se llama materia
+materia <- "R4DS"  #
+
+# cuando ahora invoquemos a la variable materia, lo que aparecerá en la consola será el 
+# valor que le asignamos, que fue "R4DS"
+materia
+
+# para crear variables existen una serie de reglas y buenas prácticas que serán expuestas
+# en una clase dentro de muy corto tiempo
+
+# ahora podemos generar una string más compleja usando la función paste, el argumento sep,
+# e invocando una variable
+
+paste0('estoy dando clases de',
+       materia, 
+       ' el dia' ,
+       Sys.Date())
+
+# si modifico el valor asignado a la variable materia, ahora puedo crear una nueva string 
+materia <- 'Estadística I'
+
+# y visualizar en la consola la nueva frase
+paste('estoy dando clases de',
+       materia, 
+       ' el dia' ,
+       Sys.Date())
 
 # dataset
 mtcars
-mtcars
+View(mtcars)
+?mtcars
 dim(mtcars)
 
+mtcars$mpg
+
 mean(mtcars$mpg)
+
 sum(mtcars$carb)
 
 unique(mtcars$cyl)
-
+mtcars$cyl
 # Crear variables
 cilindros <- unique(mtcars$cyl)
 # Llamar variables
@@ -74,10 +95,10 @@ cilindros
 
 
 # seleccionar elementos
-
 length(mtcars$mpg)
 mtcars$mpg
-mtcars$mpg[4]
+mtcars$mpg[7]
+View(mtcars)
 mtcars[4,1]
 
 sort(mtcars$qsec)
@@ -105,6 +126,7 @@ paste( 'El', rownames(mtcars),
 
 ## 
 plot(cars$speed , cars$dist)
+
 plot(cars$speed , 
      cars$dist,
      col='blue')
@@ -112,6 +134,14 @@ plot(cars$speed ,
 lm(cars$speed ~ cars$dist)
 
 # Ejercicios con base en cheat sheet
+
+runif(n=18, min= 0, max= 20)
+# RBase-
+# paquetes
+
+#help
+?runif
+
 rnorm
 rbinom
 runinf
