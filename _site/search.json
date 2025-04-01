@@ -1090,22 +1090,22 @@
     "objectID": "clases/clase_04.html#ides",
     "href": "clases/clase_04.html#ides",
     "title": "Conociendo el IDE RStudio",
-    "section": "",
-    "text": "consola R, entornos de programación, no todo es visual-acciones, hablar sobre la programación, no son out of the box"
+    "section": "IDE’s",
+    "text": "IDE’s\n\n\nconsola R, entornos de programación, no todo es visual-acciones, hablar sobre la programación, no son out of the box"
   },
   {
     "objectID": "clases/clase_04.html#rstudio",
     "href": "clases/clase_04.html#rstudio",
     "title": "Conociendo el IDE RStudio",
     "section": "RStudio:",
-    "text": "RStudio:\n\n\n\nimagen tomada de presentación de Yanina Bellini Saibene @yabellini para el grupo RLadies"
+    "text": "RStudio:\n\nimagen tomada de presentación de Yanina Bellini Saibene @yabellini para el grupo RLadies"
   },
   {
     "objectID": "clases/clase_04.html#rstudio-1",
     "href": "clases/clase_04.html#rstudio-1",
     "title": "Conociendo el IDE RStudio",
     "section": "RStudio:",
-    "text": "RStudio:\nRStudio es un entorno de desarrollo integrado (IDE) que proporciona una interfaz al agregar muchas funciones y herramientas convenientes.\n\n\n\n\n\n\nsoftware libre, colaboradores, cambio de presentacion"
+    "text": "RStudio:\nRStudio es un entorno de desarrollo integrado (IDE) que proporciona una interfaz al agregar muchas funciones y herramientas convenientes.\n\n\nsoftware libre, colaboradores, cambio de presentacion"
   },
   {
     "objectID": "clases/clase_04.html#ide-rstudio",
@@ -1217,12 +1217,12 @@
     "href": "clases/clase_04.html#playlist-economía-r4ds",
     "title": "Conociendo el IDE RStudio",
     "section": "Playlist Economía R4DS",
-    "text": "Playlist Economía R4DS\nPlaylist videos del curso"
+    "text": "Playlist Economía R4DS\nPlaylist videos del curso\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "tutorial_rbase.html",
     "href": "tutorial_rbase.html",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "",
     "text": "Este material fue compilado y adaptado por José M. Avendaño teniendo parcialmente códigos y conceptos desarrollados por Diego Kozlowski y Juan Barriola para un curso de R.",
     "crumbs": [
@@ -1233,7 +1233,7 @@
   {
     "objectID": "tutorial_rbase.html#r-base",
     "href": "tutorial_rbase.html#r-base",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "R base",
     "text": "R base\nCon R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías.",
     "crumbs": [
@@ -1244,7 +1244,7 @@
   {
     "objectID": "tutorial_rbase.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
     "href": "tutorial_rbase.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Uso de la consola como una calculadora- operaciones aritméticas",
     "text": "Uso de la consola como una calculadora- operaciones aritméticas\n\nEn la consola podemos hacer calculos tal cual si estuviesemos usando una calculadora\n\n\n5*3+6\n\n[1] 21\n\n5*(3+6)\n\n[1] 45\n\n\ntener presente el uso de los paréntesis y el orden en que serán ejecutadas las operaciones matemáticas",
     "crumbs": [
@@ -1255,7 +1255,7 @@
   {
     "objectID": "tutorial_rbase.html#definición-de-objetos",
     "href": "tutorial_rbase.html#definición-de-objetos",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Definición de objetos",
     "text": "Definición de objetos\nLos Objetos/Elementos constituyen la categoría esencial del R. De hecho, todo en R es un objeto, y se almacena con un nombre específico que no debe poseer espacios. Un número, un vector, una función, la progresión de letras del abecedario, una base de datos, un gráfico, constituyen para R objetos de distinto tipo. Los objetos que vamos creando a medida que trabajamos pueden visualizarse en el panel derecho superior de la pantalla (el Environment).\nEl operador &lt;- (Alt + Guión) sirve para definir un objeto. A la izquierda del &lt;- debe ubicarse el nombre que tomará el elemento a crear. Del lado derecho debe ir la definición del mismo.\n\nA &lt;- 1\n\nPor ejemplo, podemos crear el elemento A, cuyo valor será 1. Para esto, debemos correr el código presionando Ctrl + Enter, con el cursor ubicado en cualquier parte de la línea. Al definir un elemento, el mismo queda guardado en el ambiente del programa, y podrá ser utilizado posteriormente para observar su contenido o para realizar una operación con el mismo.\n\nA \n\n[1] 1\n\nA+6\n\n[1] 7\n\n\nAl correr una linea con el nombre del objeto, la consola del programa nos muestra su contenido. Entre corchetes observamos el número de orden del elemento en cuestión. Si corremos una operación, la consola nos muestra el resultado de la misma.\nEl operador = es equivalente a &lt;-, pero en la práctica no se utiliza para la definición de objetos.\n\nB = 2\nB\n\n[1] 2\n\n\n&lt;- es un operador Unidireccional, es decir que:\nA &lt;- B implica que A va tomar como valor el contenido del objeto B, y no al revés.\n\nA &lt;- B\nA      # Ahora A toma el valor de B, y B continúa conservando el mismo valor\n\n[1] 2\n\nB\n\n[1] 2",
     "crumbs": [
@@ -1266,7 +1266,7 @@
   {
     "objectID": "tutorial_rbase.html#variables",
     "href": "tutorial_rbase.html#variables",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Variables",
     "text": "Variables\nPueden contener cualquier estructura de datos como una matriz, un valor numérico, un texto, un vector y otras que se verán más adelante. Son creadas mediante el uso del operador de asignación.",
     "crumbs": [
@@ -1277,7 +1277,7 @@
   {
     "objectID": "tutorial_rbase.html#funciones-precargadas",
     "href": "tutorial_rbase.html#funciones-precargadas",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Funciones Precargadas:",
     "text": "Funciones Precargadas:\nRBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función. En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.\nEjemplos:\n\nFunción sin argumento\n\nSys.Date()\n\n[1] \"2025-04-01\"\n\n\nFunción con un argumento\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nFunción con múltiples argumentos\n\n# asignación variables\nvelocidad &lt;- cars$speed\ndistancia &lt;- cars$dist\n\n# crear un gráfico de tipo scatter plot (diagrama de dispersión )\nplot(velocidad, distancia)",
     "crumbs": [
@@ -1288,7 +1288,7 @@
   {
     "objectID": "tutorial_rbase.html#tipos-de-datos",
     "href": "tutorial_rbase.html#tipos-de-datos",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Tipos de datos",
     "text": "Tipos de datos\nCuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función class()\n```{r data_types, include=TRUE, echo=TRUE\nLas funciones son series de procedimientos estandarizados, que toman como imput determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos. Su lógica de funcionamiento es:\nfuncion(argumento1 = arg1, argumento2 = arg2)\n\nOtros ejemplos de funciones:\n\npaste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos\n\npaste0(): concatena una serie de caracteres sin separar\nsum(): suma de todos los elementos de un vector\n\nmean() promedio aritmético de todos los elementos de un vector\n\n\npaste(\"Pega\", \"estas\", 4, \"palabras\", sep = \" \")\n\n[1] \"Pega estas 4 palabras\"\n\n#Puedo concatenar caracteres almacenados en objetos\nA= 'nombre'\nB= 'apellido'\nC= 'ciudad'\npaste(A, B, C, sep = \"**\")\n\n[1] \"nombre**apellido**ciudad\"\n\n# Paste0 pega los caracteres sin separador\npaste0(A, B, C)\n\n[1] \"nombreapellidociudad\"\n\n1:5\n\n[1] 1 2 3 4 5\n\nsum(1:5)\n\n[1] 15\n\nmean(1:5, na.rm = TRUE)\n\n[1] 3",
     "crumbs": [
@@ -1299,7 +1299,7 @@
   {
     "objectID": "tutorial_rbase.html#vectores",
     "href": "tutorial_rbase.html#vectores",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Vectores",
     "text": "Vectores\nSon colecciones de elementos que tienen que ser exclusivamente del mismo tipo, de la misma clase. Se usa la c () para declarar un vector. Los elementos que conforman el vector van separados por comas. Los vectores pueden, y es lo más común, les asignamos nombre como lo vimos con las variables. Incluso podemos tener vectores con una solo elemento (que de por si son las variables que ya estudiamos).",
     "crumbs": [
@@ -1310,7 +1310,7 @@
   {
     "objectID": "tutorial_rbase.html#tipos-de-vectores",
     "href": "tutorial_rbase.html#tipos-de-vectores",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Tipos de vectores",
     "text": "Tipos de vectores\n\nvectores - numeric\nSi queremos preguntar lo hacemos con la función is.numeric()\n\nx=10\nis.numeric(x)\n\n[1] TRUE\n\n\nEn la lámina anterior vimos que el valor que retornó class(x) fue “numeric”.\n\nNúmericos: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo “float” y “double”.\n\n\nx &lt;- 2\n\nclass(x)\n\n[1] \"numeric\"\n\n\n\n\nvectores - integer\n\nEnteros: hay casos en los que es necesario trabajar con números enteros sin que contenga ningún decimal. Estos números se declaran con el uso de una L posterior al número.\n\n\ny &lt;- 2L\ny\n\n[1] 2\n\nclass(y)\n\n[1] \"integer\"\n\n\nEjemplo de una operación:\n\nx &lt;- 2.7\nclass(x)\n\n[1] \"numeric\"\n\ny &lt;- 3L\nclass(y)\n\n[1] \"integer\"\n\n\n\n\nvectores - lógicos\n\nLógicos: Sirven para representar datos que solo pueden tener uno de estos dos valores\n\nverdadero - TRUE\nfalso - FALSE\n\n\n\n\nOperadores lógicos:\n\n\\(&gt;\\) (mayor a)\n\\(&gt;=\\) (mayor o igual a)\n\\(&lt;\\) (menor a)\n\\(&lt;=\\) (menor o igual a)\n\\(==\\) (igual a)\n\\(!=\\) (distinto a)\n\n\n# Redefinimos los valores A y B\nA &lt;- 10\nB &lt;- 20\n\n# Realizamos comparaciones lógicas\nA &gt;  B\n\n[1] FALSE\n\nA &gt;= B\n\n[1] FALSE\n\nA &lt;  B\n\n[1] TRUE\n\nA &lt;= B\n\n[1] TRUE\n\nA == B\n\n[1] FALSE\n\nA != B\n\n[1] TRUE\n\nC &lt;- A != B\nC\n\n[1] TRUE\n\n\nComo muestra el último ejemplo, el resultado de una operación lógica puede almacenarse como el valor de un objeto.\n\nx &lt;- 2.7\ny &lt;-3L\nz &lt;- x==y\nz\n\n[1] FALSE\n\nclass(z)\n\n[1] \"logical\"\n\n\nacabamos de usar el operador ‘==’ que nos sirve para hacer una comparación de igualdad entre dos objetos. Lo que estamos es preguntando si son iguales el uno al otro y la respuesta que obtenemos es de tipo lógica booleana TRUE o FALSE\n\nTRUE*4\n\n[1] 4\n\nFALSE*2\n\n[1] 0\n\n\nacabamos de ver coerción. Forzar a un cambio de un tipo de dato en otro tipo de dato. Los TRUE pueden ser interpretados mediante la coerción como 1 y los FALSE como 0\n\n# dos es igual a 3?\n2==3\n\n[1] FALSE\n\n# dos es distinto de tres? (tener presente que el ! \n# precediendo al igual quiere decir que es lo inverso \n# al igual, es decir, distinto)\n2!=3\n\n[1] TRUE\n\n#dos es menor que tres?\n2&lt;3\n\n[1] TRUE\n\n\n\n#juan es igual a pedro? (hablamos del texto)\n'juan'=='pedro'\n\n[1] FALSE\n\n# el texto jose es igual a jose?\n'jose'=='jose'\n\n[1] TRUE\n\n#dos es igual a dos?\n2==2\n\n[1] TRUE\n\n\n\n# a es menor que b?\n'a'&lt;'b'\n\n[1] TRUE\n\n# a es mayor que 8?\n'a'&gt;8\n\n[1] TRUE\n\n# a es igual a 1?\n'a'==1\n\n[1] FALSE\n\n\n\n\nvectores - character\n\nDatos de caracteres: se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, númerico, matriz, etc. El valor debe estar declarado entre comillas simples ” o comilla sencilla ’. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas\n\n\nnombre &lt;- 'jose miguel'\nno_es_numero &lt;- '2'\nno_es_numero\n\n[1] \"2\"\n\nclass(no_es_numero)\n\n[1] \"character\"\n\nnchar(x)\n\n[1] 3\n\n\n\nnchar('hola')\n\n[1] 4\n\nnchar(5)\n\n[1] 1\n\nnchar(1532)\n\n[1] 4\n\n\n\n\nvectores - Date\n\nFechas El trabajo con las fechas puede llegar a ser un tanto complejo y será abordado de forma más intensiva adelante. Revisando algunas de las formas de trabajar con fechas tenemos el uso de las funciones Date y POSIXct\n\nLa función Date solo almacena la fecha calendario\nLa función POSIXct puede almacenar en conjunto hora y fecha\n\n\nLas fechas se representan, en cualquiera de los casos como la cantidad de días (date) o segundos (POSIXct) que han transcurrido desde el 1 ero de enero de 1970.\n\nfecha1 &lt;- as.Date('2020-01-31')\nfecha1\n\n[1] \"2020-01-31\"\n\nclass(fecha1)\n\n[1] \"Date\"\n\nas.numeric(fecha1)\n\n[1] 18292\n\n\n\nfecha2 &lt;- as.POSIXct('2020-01-31 11:15')\nfecha2\n\n[1] \"2020-01-31 11:15:00 -04\"\n\nas.numeric(fecha2)\n\n[1] 1580483700\n\nclass(fecha2)\n\n[1] \"POSIXct\" \"POSIXt\"",
     "crumbs": [
@@ -1321,7 +1321,7 @@
   {
     "objectID": "tutorial_rbase.html#vectores-repaso",
     "href": "tutorial_rbase.html#vectores-repaso",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Vectores repaso:",
     "text": "Vectores repaso:\n\nnumeros &lt;- c(1,2,5,7)\nnumeros\n\n[1] 1 2 5 7\n\nclass(numeros)\n\n[1] \"numeric\"\n\ntextos &lt;- c('juan','eliana','maria')\nclass(textos)\n\n[1] \"character\"\n\ntextos\n\n[1] \"juan\"   \"eliana\" \"maria\" \n\nlogicos &lt;- c(TRUE, FALSE, TRUE)\nclass(logicos)\n\n[1] \"logical\"\n\nis.numeric(numeros)\n\n[1] TRUE\n\nis.logical(textos)\n\n[1] FALSE\n\nis.character(textos)\n\n[1] TRUE\n\n\n\nunico &lt;- c('aula')\nunico\n\n[1] \"aula\"\n\nclass(unico)\n\n[1] \"character\"\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n#aplicó la coercion",
     "crumbs": [
@@ -1332,7 +1332,7 @@
   {
     "objectID": "tutorial_rbase.html#estructuras-de-datos-objetos",
     "href": "tutorial_rbase.html#estructuras-de-datos-objetos",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Estructuras de Datos/ Objetos:",
     "text": "Estructuras de Datos/ Objetos:\nTodo lo que existe dentro de R es un objeto: funciones, vectores, etc. En R se puede trabajar con una gran cantidad de objetos distintos tanto en su tipo como tenerlos dentro de una sesión de trabajo.\nEstas son algunos de los objetos que contienen datos con los cuales trabajaremos a lo largo del curso.\n\nValores\nVectores\nListas\nData Frames\nTibbles\n\nNo obstante, existen estructuras más complejas que no son de tipo tabular que no serán abordadas como la raster layers.",
     "crumbs": [
@@ -1343,7 +1343,7 @@
   {
     "objectID": "tutorial_rbase.html#caracteres-especiales",
     "href": "tutorial_rbase.html#caracteres-especiales",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Caracteres especiales",
     "text": "Caracteres especiales\n\nR es sensible a mayúsculas y minúsculas, tanto para los nombres de las variables, como para las funciones y parámetros.\nEl numeral # se utiliza para hacer comentarios. Todo lo que se escribe después del # no es interpretado por R. Se debe utilizar un # por cada línea de código que se desea anular\nLos corchetes [] se utilizan para acceder a un objeto:\n\nen un vector[n° orden]\nen una tabla[fila, columna]\nen una lista[n° elemento]\n\nel signo $ también es un método de acceso. Particularmente, en los dataframes, nos permitira acceder a una determinada columna de una tabla\nLos paréntesis() se utilizan en las funciones para definir los parámetros.\nLas comas , se utilizan para separar los parámetros al interior de una función.",
     "crumbs": [
@@ -1354,7 +1354,7 @@
   {
     "objectID": "tutorial_rbase.html#nombres-variables",
     "href": "tutorial_rbase.html#nombres-variables",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Nombres Variables",
     "text": "Nombres Variables",
     "crumbs": [
@@ -1365,7 +1365,7 @@
   {
     "objectID": "tutorial_rbase.html#ambientes-de-trabajo",
     "href": "tutorial_rbase.html#ambientes-de-trabajo",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Ambientes de trabajo",
     "text": "Ambientes de trabajo\nHay algunas cosas que tenemos que tener en cuenta respecto del orden del ambiente en el que trabajamos:\n\nWorking Directory: Es el directorio de trabajo. Pueden ver el suyo con getwd(), es hacia donde apunta el código, por ejemplo, si quieren leer un archivo, la ruta del archivo tiene que estar explicitada como el recorrido desde el Working Directory.\nEnvironment: Esto engloba tanto la información que tenemos cargada en Data y Values, como las librerías que tenemos cargadas mientras trabajamos.\n\nEs importante que mantengamos bien delimitadas estas cosas entre diferentes trabajos, sino:\n\nEl directorio queda referido a un lugar específico en nuestra computadora.\n\n\nSi se lo compartimos a otro se rompe\nSi cambiamos de computadora se rompe\nSi lo cambiamos de lugar se rompe\nSi primero abrimos otro script se rompe\n\n\nTenemos mezclados resultados de diferentes trabajos:\n\n\nNunca sabemos si esa variable/tabla/lista se creo en ese script y no otro\nPerdemos espacio de la memoria\nNo estamos seguros de que el script cargue todas las librerías que necesita\n\nRstudio tiene una herramienta muy útil de trabajo que son los proyectos. Estos permiten mantener un ambiente de trabajo delimitado por cada uno de nuestros trabajos. Es decir:\n\nEl directorio de trabajo se refiere a donde esta ubicado el archivo .Rproj\nEl Environment es específico de nuestro proyecto.\n\nUn proyecto no es un sólo script, sino toda una carpeta de trabajo.\nPara crearlo, vamos al logo de nuevo projecto (Arriba a la derecha de la panatalla), y elegimos la carpeta de trabajo.",
     "crumbs": [
@@ -1376,7 +1376,7 @@
   {
     "objectID": "tutorial_rbase.html#tipos-de-archivos-de-r",
     "href": "tutorial_rbase.html#tipos-de-archivos-de-r",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Tipos de archivos de R",
     "text": "Tipos de archivos de R\n\nScript: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo\nRmd: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código con resultados (este archivo es un rmarkdown)\nRproject: Es un archivo que define la metadata del proyecto\nRDS y Rdata: Dos formatos de archivos propios de R para guardar datos.\nqmd: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible.",
     "crumbs": [
@@ -1387,7 +1387,7 @@
   {
     "objectID": "tutorial_rbase.html#remover-objetos-del-global-environment",
     "href": "tutorial_rbase.html#remover-objetos-del-global-environment",
-    "title": "Clase 3- Apoyo",
+    "title": "RBase",
     "section": "Remover objetos del Global Environment",
     "text": "Remover objetos del Global Environment\nEn caso de querer remover un objeto (todo lo que existe dentro del programa que estamos ejecutando) del “global environment” podemos usar la función rm() teniendo como argumento el nombre del objeto que queremos remover\nrm(\"nombre\")",
     "crumbs": [
