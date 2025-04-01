@@ -1089,133 +1089,133 @@
   {
     "objectID": "clases/clase_04.html#ides",
     "href": "clases/clase_04.html#ides",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "IDE’s",
     "text": "IDE’s\n\n\nconsola R, entornos de programación, no todo es visual-acciones, hablar sobre la programación, no son out of the box"
   },
   {
     "objectID": "clases/clase_04.html#rstudio",
     "href": "clases/clase_04.html#rstudio",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "RStudio:",
     "text": "RStudio:\n\nimagen tomada de presentación de Yanina Bellini Saibene @yabellini para el grupo RLadies"
   },
   {
     "objectID": "clases/clase_04.html#rstudio-1",
     "href": "clases/clase_04.html#rstudio-1",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "RStudio:",
     "text": "RStudio:\nRStudio es un entorno de desarrollo integrado (IDE) que proporciona una interfaz al agregar muchas funciones y herramientas convenientes.\n\n\nsoftware libre, colaboradores, cambio de presentacion"
   },
   {
     "objectID": "clases/clase_04.html#ide-rstudio",
     "href": "clases/clase_04.html#ide-rstudio",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "IDE RStudio",
     "text": "IDE RStudio\nUno de los entornos más cómodos para utilizar el lenguaje R es el programa R studio.\n\nRstudio es una fundación que produce productos asociados al lenguaje R, como el programa sobre el que corremos los comandos, y extensiones del lenguaje (librerías).\nEl programa es gratuito y se puede bajar de la página oficial"
   },
   {
     "objectID": "clases/clase_04.html#se-puede-ejecutar-desde",
     "href": "clases/clase_04.html#se-puede-ejecutar-desde",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Se puede ejecutar desde:",
     "text": "Se puede ejecutar desde:\n\nNube\nlocal: su propio computador\nLAN: red local"
   },
   {
     "objectID": "clases/clase_04.html#partes---componentes-pestañas",
     "href": "clases/clase_04.html#partes---componentes-pestañas",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Partes - Componentes, pestañas",
     "text": "Partes - Componentes, pestañas\n\n4 paneles y c/u con distintas pestañas y funcionalidades"
   },
   {
     "objectID": "clases/clase_04.html#abrir-archivos",
     "href": "clases/clase_04.html#abrir-archivos",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "abrir archivos",
     "text": "abrir archivos\n\nSon distintos los tipos de archivos que se pueden abrir"
   },
   {
     "objectID": "clases/clase_04.html#panel-editor-de-código",
     "href": "clases/clase_04.html#panel-editor-de-código",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "panel Editor de Código",
     "text": "panel Editor de Código\n\neditor de código. se introducen códigos (scripts)\nSe ejecutan con “run” el el área superior derecha"
   },
   {
     "objectID": "clases/clase_04.html#panel-environment-y-files",
     "href": "clases/clase_04.html#panel-environment-y-files",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "panel Environment y Files",
     "text": "panel Environment y Files"
   },
   {
     "objectID": "clases/clase_04.html#panel-cónsola",
     "href": "clases/clase_04.html#panel-cónsola",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "panel cónsola",
     "text": "panel cónsola\n\nimportante diferenciar: consola estamos dentro de R, en terminal acceso al SO del computador"
   },
   {
     "objectID": "clases/clase_04.html#panel-files",
     "href": "clases/clase_04.html#panel-files",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "panel files",
     "text": "panel files\n\nnavegador de archivos y visor."
   },
   {
     "objectID": "clases/clase_04.html#working-directory",
     "href": "clases/clase_04.html#working-directory",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Working Directory:",
     "text": "Working Directory:\nes donde tenemos la ruta (path) a los archivos con los cuales trabajamos en un determinado proyecto: Absoluta\n\nen panel “files” \nen terminal con el comando pwd \nen la consola con la función getwd()"
   },
   {
     "objectID": "clases/clase_04.html#working-directory-1",
     "href": "clases/clase_04.html#working-directory-1",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Working Directory:",
     "text": "Working Directory:\nrelativa"
   },
   {
     "objectID": "clases/clase_04.html#configurar-working-directory",
     "href": "clases/clase_04.html#configurar-working-directory",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Configurar “working directory”",
     "text": "Configurar “working directory”\ncrear carpeta donde se van a guardar los proyectos, p ejemp, dentro de “Documentos” - paso 1"
   },
   {
     "objectID": "clases/clase_04.html#configurar-working-directory-cont.",
     "href": "clases/clase_04.html#configurar-working-directory-cont.",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Configurar “working directory” (cont.)",
     "text": "Configurar “working directory” (cont.)\npaso 2"
   },
   {
     "objectID": "clases/clase_04.html#proyecto",
     "href": "clases/clase_04.html#proyecto",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Proyecto:",
     "text": "Proyecto:\nconjunto de archivos (“files” ) que conforman un determinado análisis, página web, presentación, libro, etc.\nAl crearse hay algunos archivos que se definen automáticamente como por ejemplo el .Rproj\nCon la función 💡 (función 🤔????) list.files() se pueden listar todos los archivos que se encuentran en el directorio"
   },
   {
     "objectID": "clases/clase_04.html#primera-práctica",
     "href": "clases/clase_04.html#primera-práctica",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Primera Práctica:",
     "text": "Primera Práctica:\nInstalar un paquete de R de manera online"
   },
   {
     "objectID": "clases/clase_04.html#video-creación-proyecto",
     "href": "clases/clase_04.html#video-creación-proyecto",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Video Creación Proyecto",
     "text": "Video Creación Proyecto"
   },
   {
     "objectID": "clases/clase_04.html#playlist-economía-r4ds",
     "href": "clases/clase_04.html#playlist-economía-r4ds",
-    "title": "Conociendo el IDE RStudio",
+    "title": "IDE RStudio",
     "section": "Playlist Economía R4DS",
     "text": "Playlist Economía R4DS\nPlaylist videos del curso\n\n\n\n\n🔗 ucveconomiar4ds"
   },
