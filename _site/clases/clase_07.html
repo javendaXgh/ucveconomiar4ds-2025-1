@@ -11,7 +11,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="MSc. José M. Avendaño">
+  <meta name="author" content="M.Sc. José Miguel Avendaño I.">
+  <meta name="dcterms.date" content="2025-09-05">
   <title>UCV Economía R4DS – Ciencia de Datos para Economistas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,71 +31,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
@@ -398,7 +334,7 @@
     }
   </style>
 <meta property="og:title" content="Ciencia de Datos para Economistas – UCV Economía R4DS">
-<meta property="og:description" content="Clase 06: Nombres Variables">
+<meta property="og:description" content="Clase 7 - Estructuras de Datos">
 <meta property="og:site_name" content="UCV Economía R4DS">
 </head>
 <body class="quarto-light">
@@ -407,12 +343,12 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Ciencia de Datos para Economistas</h1>
-  <p class="subtitle">Clase 06: Nombres Variables</p>
+  <p class="subtitle">Clase 7 - Estructuras de Datos</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-MSc. José M. Avendaño 
+M.Sc. José Miguel Avendaño I. 
 </div>
         <p class="quarto-title-affiliation">
             Universidad Central de Venezuela- Escuela de Economía. 2025-1
@@ -420,159 +356,218 @@ MSc. José M. Avendaño
     </div>
 </div>
 
-  <p class="date">Invalid Date</p>
+  <p class="date">2025-09-05</p>
+</section>
+<section id="científicos-de-datos" class="slide level2">
+<h2>Científicos de Datos 👨‍🔬 👩‍🔬</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://es.wikipedia.org/wiki/Sesgo_del_superviviente"><img data-src="images/clase_5/Survivorship-bias.png" width="600" alt="Sesgo del Superviviente"></a></p>
+<figcaption>Sesgo del Superviviente</figcaption>
+</figure>
+</div>
+</section>
+<section id="correlaciones-espúreas" class="slide level2">
+<h2>Correlaciones Espúreas</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.tylervigen.com/spurious/correlation/24508_popularity-of-the-first-name-daniella_correlates-with_electricity-generation-in-venezuela"><img data-src="images/clase_5/correlaciones.png" alt="Correlaciones Espúreas"></a></p>
+<figcaption>Correlaciones Espúreas</figcaption>
+</figure>
+</div>
 </section>
 <section id="puntos-varios" class="slide level2">
-<h2>Puntos Varios</h2>
+<h2>Puntos Varios:</h2>
 <ul>
-<li class="fragment"><p>Obtener Cheat Sheets</p></li>
-<li class="fragment"><p>Crear y ejecutar qmd’s,</p></li>
-<li class="fragment"><p>Función <code>getwd()</code>,</p></li>
-<li class="fragment"><p>Instalar paquetes: <code>install.packages (</code>nombre_paquete<code>)</code></p></li>
-<li class="fragment"><p>Cargar paquetes: <code>library (nombre_paquete)</code></p></li>
-<li class="fragment"><p>Descargar scripts del github <a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/tree/main">link repo</a></p></li>
+<li></li>
+<li></li>
+</ul>
+<pre><code></code></pre>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="archivos" class="slide level2">
+<h2>Archivos:</h2>
+<ul>
+<li><p>.R: script de R</p></li>
+<li><p>.qmd perteneciente al sistema de publicación quarto</p></li>
+<li><p>.rds : información comprimida de datos</p></li>
+<li><p>RDATA: ///</p></li>
 </ul>
 </section>
-<section id="objetivo" class="slide level2">
-<h2>Objetivo</h2>
-<p>En esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.</p>
-<p>Estas recomendaciones aplican en general para todos los objetos,…..</p>
+<section id="ambiente-de-trabajo" class="slide level2">
+<h2>Ambiente de Trabajo</h2>
+<p><code>Environment</code></p>
+
+<img data-src="images/clase_5/environment.png" class="r-stretch"><aside class="notes">
+<p>archivo Vs environment</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="nombres" class="slide level2">
-<h2>Nombres</h2>
-<p>Los nombres de las variables u objetos&nbsp;<strong>no</strong>&nbsp;deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la “ñ”, no es recomendable.</p>
+<section id="nombres-variables" class="slide level2">
+<h2>Nombres Variables</h2>
+<p>Material complementario disponible en <a href="https://ucveconomiar4ds.netlify.app/clases/clase_05_complemento_variables">variables</a></p>
 </section>
-<section id="buenas-prácticas" class="slide level2">
-<h2>Buenas Prácticas</h2>
-<p>Para nombrar variables es importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos o no descriptivos como:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>pupitre <span class="ot">&lt;-</span> <span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>En lugar de eso, use nombres descriptivos como:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>meta_ventas_enero <span class="ot">&lt;-</span> <span class="dv">10000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="nombres-descriptivos" class="slide level2">
-<h2>Nombres Descriptivos</h2>
-<p>Esto le ayudará a entender el propósito de la variable más adelante en el código, especialmente cuando tiene múltiples variables en su programa.</p>
-</section>
-<section id="declaración-de-variables" class="slide level2">
-<h2>Declaración de variables</h2>
-<p>Después de elegir el nombre de la variable, es necesario usar el&nbsp;<strong>operador de asignación</strong>. En R, esto se hace con&nbsp;<code>&lt;-</code>. También puede usar atajos de teclado como&nbsp;<code>Alt + -</code>&nbsp;en Windows para escribir el operador más rápido.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>variable_texto <span class="ot">&lt;-</span> <span class="st">"contiene un texto"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="declaración-de-variables-cont.-1" class="slide level2">
-<h2>Declaración de variables (cont. 1)</h2>
-<p>Tenga en cuenta que los textos deben ir entre comillas simples (<code>'</code>) o dobles (<code>"</code>).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>variable_texto <span class="ot">&lt;-</span> <span class="st">"contiene un texto"</span> <span class="co"># ✅</span></span>
-<span id="cb4-2"><a></a>variable_texto <span class="ot">&lt;-</span> <span class="st">'contiene un texto'</span> <span class="co"># ✅</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Si el valor que desea asignar es numérico, no use comillas:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>variable_numero <span class="ot">&lt;-</span> <span class="dv">1000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="declaración-de-variables-cont.-2" class="slide level2">
-<h2>Declaración de variables (cont. 2)</h2>
-<p>Existen vectores conformados por números enteros (ocupan menos memoria en espacio de trabajo) y se declaran</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>vector_de_enteros <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>L, <span class="dv">5</span>L, <span class="dv">7</span>L)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Cada número es seguido por la letra L</p>
-</section>
-<section id="declaración-de-variables-cont.-3" class="slide level2">
-<h2>Declaración de variables (cont. 3)</h2>
-<p>Si se va a declarar un vector de datos lógicos tampoco se usan comillas</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>vector_logico_ejemplo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="variables-creadas--environment" class="slide level2">
-<h2>Variables Creadas- Environment</h2>
-<p>Al declarar una variable y ejecutar la línea, R creará una variable en el entorno. Puede ver el nuevo objeto creado en la ventana de “Environment”.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>meta_ventas_enero <span class="ot">&lt;-</span> <span class="dv">1000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="ejemplos-prácticos" class="slide level2">
-<h2>Ejemplos prácticos</h2>
-<p>Ejecute los siguientes ejemplos y asegúrese de que las variables aparezcan en el “Environment”.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>variable_nombre <span class="ot">&lt;-</span> <span class="st">'primera asignacion'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Recuerde siempre seguir las mejores prácticas de nombramiento para facilitar la lectura y el mantenimiento de su código.</p>
-</section>
-<section id="reglas-para-la-creación-de-variables" class="slide level2">
-<h2>Reglas para la creación de variables</h2>
-<h3 id="estilo-y-convención">Estilo y convención</h3>
-<p><strong>Minúsculas:</strong>&nbsp;Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>primera_variable <span class="ot">&lt;-</span> <span class="st">'iniciamos un script'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="reglas-cont." class="slide level2">
-<h2>Reglas (cont.)</h2>
+<section id="vectores" class="slide level2">
+<h2>Vectores</h2>
 <ul>
-<li class="fragment"><strong>Rayita abajo para juntar palabras:</strong>&nbsp;Puede usar el guion bajo&nbsp;<code>_</code>&nbsp;para juntar dos o más palabras en el nombre de una variable:</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>variable_creada <span class="ot">&lt;-</span> <span class="st">'este texto es el contenido de la variable'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="restricciones" class="slide level2">
-<h2>Restricciones</h2>
+<li><p>Se declaran con la función <code>c ()</code> que permite combinar elementos</p></li>
+<li><p>Elementos de la misma <code>mode</code></p>
 <ul>
-<li class="fragment"><strong>No se pueden colocar espacios en los nombres:</strong> El siguiente ejemplo no es válido y dará error:</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>variable con espacio <span class="ot">&lt;-</span> <span class="st">'esta línea no se podrá ejecutar'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<li><p><code>mode (3)</code></p></li>
+<li><p><code>mode ('palabras declaradas')</code></p></li>
+</ul></li>
+<li><p>Elementos ordenados</p>
 <ul>
-<li class="fragment"><strong>No comenzar con números:</strong>&nbsp;Las variables no pueden comenzar con un número. El siguiente ejemplo también genera un error:</li>
+<li><p>Vector <code>c (1,3,4,7)</code></p>
+<p>!= a vector <code>c (1,4,3,7)</code></p></li>
+</ul></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="dv">1</span>variable <span class="ot">&lt;-</span> <span class="st">'tampoco se ejecutará este código'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Al ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola.</p>
 </section>
-<section id="restricciones-cont." class="slide level2">
-<h2>Restricciones (cont.)</h2>
+<section id="tipos-de-vectores" class="slide level2">
+<h2>Tipos de Vectores<img data-src="images/ clase_3/vectores.png" width="646"></h2>
+</section>
+<section id="estructuras-de-datos" class="slide level2 small">
+<h2>Estructuras de Datos</h2>
+<table class="caption-top" style="width:99%;">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 35%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Objeto</th>
+<th style="text-align: center;">R</th>
+<th style="text-align: center;">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img data-src="images/ clase_3/atomo.png" width="80"></td>
+<td style="text-align: center;">vector atómico</td>
+<td style="text-align: center;"><code>c(7)</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img data-src="images/ clase_3/molecula.png" width="80" height="120"> ️</td>
+<td style="text-align: center;">vector</td>
+<td style="text-align: center;"><code>c('a', 'x', 'd')</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img data-src="images/ clase_3/molecula2.png" width="80"></td>
+<td style="text-align: center;">matriz</td>
+<td style="text-align: center;"><p><code>matrix(1:8,</code></p>
+<p><code>nrow=2,</code></p>
+<p><code>ncol=4)</code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="estructuras-de-datos-2" class="slide level2 small">
+<h2>Estructuras de Datos 2</h2>
+<table class="caption-top" style="width:99%;">
+<colgroup>
+<col style="width: 44%">
+<col style="width: 18%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Objeto</th>
+<th style="text-align: center;">R</th>
+<th style="text-align: center;">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img data-src="images/ clase_3/polimero.png" width="140"></td>
+<td style="text-align: center;">lista</td>
+<td style="text-align: center;"><p>ejem_lista&lt;-list(el1=</p>
+<p>c(‘a’,‘x’),</p>
+<p>el2=c(1))</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img data-src="images/ clase_3/virus.png" width="94"></td>
+<td style="text-align: center;">data frame</td>
+<td style="text-align: center;"><code>mtcars</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img data-src="images/ clase_3/proteina.png" width="76"></td>
+<td style="text-align: center;">tibble</td>
+<td style="text-align: center;"><code>as_tibble(mtcars)</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tipos-de-de-objetos-en-r" class="slide level2">
+<h2>Tipos de de Objetos en R</h2>
+<p><code>mode</code> : la forma en la que R almacena un objeto</p>
+<p><code>class</code> : la clase del objeto que estamos trabajando</p>
+</section>
+<section id="variables-objetos" class="slide level2">
+<h2>Variables / Objetos</h2>
 <ul>
-<li class="fragment"><strong>Solo letras o puntos al inicio:</strong>&nbsp;Los nombres de las variables solo pueden empezar con una letra o un punto. Si se utiliza un punto al inicio, no debe ser seguido de un número:</li>
+<li><p>Definición</p></li>
+<li><p>Creación</p></li>
+<li><p>Environment</p></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>variable_tercera <span class="ot">&lt;-</span> <span class="st">'seguimos avanzando'</span></span>
-<span id="cb14-2"><a></a>.variable_tercera <span class="ot">&lt;-</span> <span class="st">'la variable_tercera es distinta a la .variable_tercera, son dos nombres distintos'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<aside class="notes">
+<ul>
+<li>limpiar ambiente de trabajo</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="restricciones-cont.-1" class="slide level2">
-<h2>Restricciones (cont.)</h2>
-<p>El siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>.<span class="dv">5</span>variable <span class="ot">&lt;-</span> <span class="st">'INCORRECTO'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="remover-objetos" class="slide level2">
+<h2>Remover Objetos</h2>
+<ul>
+<li><p><code>rm(nombre_objeto)</code></p></li>
+<li><p><code>rm(list=ls())</code></p></li>
+</ul>
 </section>
-<section id="caracteres-especiales-no-permitidos" class="slide level2">
-<h2>Caracteres Especiales no Permitidos</h2>
-<p>Además del punto&nbsp;<code>.</code>&nbsp;y la rayita abajo&nbsp;<code>_</code>, no se permite el uso de otros caracteres especiales en los nombres de las variables.</p>
-<p>Aquí tienes un listado de los caracteres especiales que no puedes usar:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>listado_caracteres_especiales <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"~"</span>, <span class="st">"`"</span>, <span class="st">"!"</span>, <span class="st">"@"</span>, <span class="st">"#"</span>, <span class="st">"$"</span>, <span class="st">"%"</span>, <span class="st">"^"</span>, <span class="st">"&amp;"</span>, </span>
-<span id="cb16-2"><a></a>                                   <span class="st">"*"</span>, <span class="st">"("</span>, <span class="st">")"</span>, <span class="st">"-"</span>, <span class="st">"_"</span>, <span class="st">"+"</span>, <span class="st">"="</span>, <span class="st">"{"</span>, <span class="st">"}"</span>, </span>
-<span id="cb16-3"><a></a>                                   <span class="st">"["</span>, <span class="st">"]"</span>, <span class="st">"|"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">"</span>, <span class="st">"/"</span>, <span class="st">":"</span>, <span class="st">";"</span>, <span class="st">"</span><span class="sc">\"</span><span class="st">"</span>, </span>
-<span id="cb16-4"><a></a>                                   <span class="st">"'"</span>, <span class="st">"&lt;"</span>, <span class="st">"&gt;"</span>, <span class="st">"."</span>, <span class="st">"?"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="ejemplo-de-caracteres-especiales-no-permitidos" class="slide level2">
-<h2>Ejemplo de Caracteres Especiales no Permitidos</h2>
-<p>El siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>variable.inasig<span class="sc">@</span>nabl_e <span class="ot">&lt;-</span> <span class="st">'INCORRECTO'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="recursos-ayuda-paquetes" class="slide level2">
+<h2>Recursos Ayuda Paquetes:</h2>
+<ul>
+<li><p>Vignettes:</p>
+<ul>
+<li><p>?? nombre paquete</p></li>
+<li><p>Cran</p></li>
+</ul></li>
+<li><p>Cheat Sheets:</p>
+<ul>
+<li><p>Discord, canal “Recursos disponibles”</p>
+<p><a href="../Users/josemiguelavendanoinfante/R/UCV_ECONOMIA_R4DS/r4dsucv2024/clases/images/rstudio-ide.pdf">Cheat Sheet RStudio</a></p></li>
+</ul></li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo_curso.png" class="slide-logo"></p>
@@ -793,44 +788,6 @@ MSc. José M. Avendaño
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

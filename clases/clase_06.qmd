@@ -10,17 +10,29 @@ execute:
   eval: false
 ---
 
+## Puntos Varios
+
+-   Obtener Cheat Sheets
+
+-   Crear y ejecutar qmd's,
+
+-   Función `getwd()`,
+
+-   Instalar paquetes: `install.packages (`nombre_paquete`)`
+
+-   Cargar paquetes: `library (nombre_paquete)`
+
+-   Descargar scripts del github [link repo](https://github.com/javendaXgh/ucveconomiar4ds-2025-1/tree/main)
+
+## Objetivo
+
 En esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.
 
-```{r}
-# Algún día haremos justicia los que tenemos 
-# la ñ en nuestro nombre
-apellido_avendaño <- 'se ejecutará pero no es recomendable'
-```
+Estas recomendaciones aplican en general para todos los objetos,.....
 
 ## Nombres
 
-Los nombres de las variables **no** deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la "ñ", no es recomendable.
+Los nombres de las variables u objetos **no** deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la "ñ", no es recomendable.
 
 ## Buenas Prácticas
 
@@ -35,8 +47,6 @@ En lugar de eso, use nombres descriptivos como:
 
 ```{r}
 meta_ventas_enero <- 10000
-
-
 ```
 
 ## Nombres Descriptivos

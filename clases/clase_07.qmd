@@ -1,0 +1,137 @@
+---
+subtitle: "Clase 7 - Estructuras de Datos"
+date: "09/05/2025"
+format: revealjs
+---
+
+## Científicos de Datos 👨‍🔬 👩‍🔬
+
+[![Sesgo del Superviviente](images/clase_5/Survivorship-bias.png){width="600"}](https://es.wikipedia.org/wiki/Sesgo_del_superviviente)
+
+## Correlaciones Espúreas
+
+[![Correlaciones Espúreas](images/clase_5/correlaciones.png)](https://www.tylervigen.com/spurious/correlation/24508_popularity-of-the-first-name-daniella_correlates-with_electricity-generation-in-venezuela)
+
+## Puntos Varios:
+
+-   
+
+-   
+
+```         
+```
+
+::: notes
+:::
+
+## Archivos:
+
+-   .R: script de R
+
+-   .qmd perteneciente al sistema de publicación quarto
+
+-   .rds : información comprimida de datos
+
+-   RDATA: ///
+
+## Ambiente de Trabajo
+
+`Environment`
+
+![](images/clase_5/environment.png)
+
+::: notes
+archivo Vs environment
+:::
+
+## Nombres Variables
+
+Material complementario disponible en [variables](https://ucveconomiar4ds.netlify.app/clases/clase_05_complemento_variables)
+
+## Vectores
+
+-   Se declaran con la función `c ()` que permite combinar elementos
+
+-   Elementos de la misma `mode`
+
+    -   `mode (3)`
+
+    -   `mode ('palabras declaradas')`
+
+-   Elementos ordenados
+
+    -   Vector `c (1,3,4,7)`
+
+        != a vector `c (1,4,3,7)`
+
+## Tipos de Vectores![](images/%20clase_3/vectores.png){width="646"}
+
+## Estructuras de Datos {.small}
+
++---------------------------------------------------------------+-------------------------------------------------------+--------------------------------------+
+| Objeto                                                        | R                                                     | Ejemplo                              |
++:=============================================================:+:=====================================================:+:====================================:+
+| ![](images/%20clase_3/atomo.png){width="80"}                  | vector atómico                                        | `c(7)`                               |
++---------------------------------------------------------------+-------------------------------------------------------+--------------------------------------+
+| ![](images/%20clase_3/molecula.png){width="80" height="120"} ️ | vector                                                | `c('a', 'x', 'd')`                   |
++---------------------------------------------------------------+-------------------------------------------------------+--------------------------------------+
+| ![](images/%20clase_3/molecula2.png){width="80"}              | matriz                                                | `matrix(1:8,`                        |
+|                                                               |                                                       |                                      |
+|                                                               |                                                       | `nrow=2,`                            |
+|                                                               |                                                       |                                      |
+|                                                               |                                                       | `ncol=4)`                            |
++---------------------------------------------------------------+-------------------------------------------------------+--------------------------------------+
+
+## Estructuras de Datos 2 {.small}
+
++--------------------------------------------------+--------------------+-----------------------------------------+
+| Objeto                                           | R                  | Ejemplo                                 |
++:================================================:+:==================:+:=======================================:+
+| ![](images/%20clase_3/polimero.png){width="140"} | lista              | ejem_lista\<-list(el1=                  |
+|                                                  |                    |                                         |
+|                                                  |                    | c('a','x'),                             |
+|                                                  |                    |                                         |
+|                                                  |                    | el2=c(1))                               |
++--------------------------------------------------+--------------------+-----------------------------------------+
+| ![](images/%20clase_3/virus.png){width="94"}     | data frame         | `mtcars`                                |
++--------------------------------------------------+--------------------+-----------------------------------------+
+| ![](images/%20clase_3/proteina.png){width="76"}  | tibble             | `as_tibble(mtcars)`                     |
++--------------------------------------------------+--------------------+-----------------------------------------+
+
+## Tipos de de Objetos en R
+
+`mode` : la forma en la que R almacena un objeto
+
+`class` : la clase del objeto que estamos trabajando
+
+## Variables / Objetos
+
+-   Definición
+
+-   Creación
+
+-   Environment
+
+::: notes
+-   limpiar ambiente de trabajo
+:::
+
+## Remover Objetos
+
+-   `rm(nombre_objeto)`
+
+-   `rm(list=ls())`
+
+## Recursos Ayuda Paquetes:
+
+-   Vignettes:
+
+    -   ?? nombre paquete
+
+    -   Cran
+
+-   Cheat Sheets:
+
+    -   Discord, canal "Recursos disponibles"
+
+        [Cheat Sheet RStudio](/Users/josemiguelavendanoinfante/R/UCV_ECONOMIA_R4DS/r4dsucv2024/clases/images/rstudio-ide.pdf)

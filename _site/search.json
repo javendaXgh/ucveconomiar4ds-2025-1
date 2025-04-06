@@ -1498,7 +1498,7 @@
     "href": "clases/clase_06.html#nombres",
     "title": "Ciencia de Datos para Economistas",
     "section": "Nombres",
-    "text": "Nombres\nLos nombres de las variables no deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la “ñ”, no es recomendable."
+    "text": "Nombres\nLos nombres de las variables u objetos no deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la “ñ”, no es recomendable."
   },
   {
     "objectID": "clases/clase_06.html#buenas-prácticas",
@@ -1604,5 +1604,117 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplo de Caracteres Especiales no Permitidos",
     "text": "Ejemplo de Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\nvariable.inasig@nabl_e &lt;- 'INCORRECTO'\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_07.html#científicos-de-datos",
+    "href": "clases/clase_07.html#científicos-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Científicos de Datos 👨‍🔬 👩‍🔬",
+    "text": "Científicos de Datos 👨‍🔬 👩‍🔬\n\n\n\nSesgo del Superviviente"
+  },
+  {
+    "objectID": "clases/clase_07.html#correlaciones-espúreas",
+    "href": "clases/clase_07.html#correlaciones-espúreas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Correlaciones Espúreas",
+    "text": "Correlaciones Espúreas\n\n\n\nCorrelaciones Espúreas"
+  },
+  {
+    "objectID": "clases/clase_07.html#puntos-varios",
+    "href": "clases/clase_07.html#puntos-varios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Puntos Varios:",
+    "text": "Puntos Varios:"
+  },
+  {
+    "objectID": "clases/clase_07.html#archivos",
+    "href": "clases/clase_07.html#archivos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Archivos:",
+    "text": "Archivos:\n\n.R: script de R\n.qmd perteneciente al sistema de publicación quarto\n.rds : información comprimida de datos\nRDATA: ///"
+  },
+  {
+    "objectID": "clases/clase_07.html#ambiente-de-trabajo",
+    "href": "clases/clase_07.html#ambiente-de-trabajo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ambiente de Trabajo",
+    "text": "Ambiente de Trabajo\nEnvironment\n\n\narchivo Vs environment"
+  },
+  {
+    "objectID": "clases/clase_07.html#nombres-variables",
+    "href": "clases/clase_07.html#nombres-variables",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Nombres Variables",
+    "text": "Nombres Variables\nMaterial complementario disponible en variables"
+  },
+  {
+    "objectID": "clases/clase_07.html#vectores",
+    "href": "clases/clase_07.html#vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vectores",
+    "text": "Vectores\n\nSe declaran con la función c () que permite combinar elementos\nElementos de la misma mode\n\nmode (3)\nmode ('palabras declaradas')\n\nElementos ordenados\n\nVector c (1,3,4,7)\n!= a vector c (1,4,3,7)"
+  },
+  {
+    "objectID": "clases/clase_07.html#tipos-de-vectores",
+    "href": "clases/clase_07.html#tipos-de-vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tipos de Vectores",
+    "text": "Tipos de Vectores"
+  },
+  {
+    "objectID": "clases/clase_07.html#estructuras-de-datos",
+    "href": "clases/clase_07.html#estructuras-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Estructuras de Datos",
+    "text": "Estructuras de Datos\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nvector atómico\nc(7)\n\n\n ️\nvector\nc('a', 'x', 'd')\n\n\n\nmatriz\nmatrix(1:8,\nnrow=2,\nncol=4)"
+  },
+  {
+    "objectID": "clases/clase_07.html#estructuras-de-datos-2",
+    "href": "clases/clase_07.html#estructuras-de-datos-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Estructuras de Datos 2",
+    "text": "Estructuras de Datos 2\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nlista\nejem_lista&lt;-list(el1=\nc(‘a’,‘x’),\nel2=c(1))\n\n\n\ndata frame\nmtcars\n\n\n\ntibble\nas_tibble(mtcars)"
+  },
+  {
+    "objectID": "clases/clase_07.html#tipos-de-de-objetos-en-r",
+    "href": "clases/clase_07.html#tipos-de-de-objetos-en-r",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tipos de de Objetos en R",
+    "text": "Tipos de de Objetos en R\nmode : la forma en la que R almacena un objeto\nclass : la clase del objeto que estamos trabajando"
+  },
+  {
+    "objectID": "clases/clase_07.html#variables-objetos",
+    "href": "clases/clase_07.html#variables-objetos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Variables / Objetos",
+    "text": "Variables / Objetos\n\nDefinición\nCreación\nEnvironment\n\n\n\nlimpiar ambiente de trabajo"
+  },
+  {
+    "objectID": "clases/clase_07.html#remover-objetos",
+    "href": "clases/clase_07.html#remover-objetos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Remover Objetos",
+    "text": "Remover Objetos\n\nrm(nombre_objeto)\nrm(list=ls())"
+  },
+  {
+    "objectID": "clases/clase_07.html#recursos-ayuda-paquetes",
+    "href": "clases/clase_07.html#recursos-ayuda-paquetes",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Recursos Ayuda Paquetes:",
+    "text": "Recursos Ayuda Paquetes:\n\nVignettes:\n\n?? nombre paquete\nCran\n\nCheat Sheets:\n\nDiscord, canal “Recursos disponibles”\nCheat Sheet RStudio\n\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_06.html#puntos-varios",
+    "href": "clases/clase_06.html#puntos-varios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Puntos Varios",
+    "text": "Puntos Varios\n\nObtener Cheat Sheets\nCrear y ejecutar qmd’s,\nFunción getwd(),\nInstalar paquetes: install.packages (nombre_paquete)\nCargar paquetes: library (nombre_paquete)\nDescargar scripts del github link repo"
+  },
+  {
+    "objectID": "clases/clase_06.html#objetivo",
+    "href": "clases/clase_06.html#objetivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivo",
+    "text": "Objetivo\nEn esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.\nEstas recomendaciones aplican en general para todos los objetos,….."
   }
 ]
