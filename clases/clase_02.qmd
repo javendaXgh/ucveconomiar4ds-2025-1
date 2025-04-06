@@ -1,6 +1,6 @@
 ---
 title: "Ciencia de Datos para Economistas"
-subtitle: "Clase 2/ R Base"
+subtitle: "Clase 2: R Base"
 date: "26/marzo/2025"
 lang: es
 format: revealjs

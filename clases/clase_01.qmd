@@ -1,6 +1,6 @@
 ---
 title: "Ciencia de Datos para Economistas"
-subtitle: "Clase 1- Bienvenida"
+subtitle: "Clase 1: Sobre el Curso"
 date: "17/marzo/2025"
 format: revealjs
 incremental: true

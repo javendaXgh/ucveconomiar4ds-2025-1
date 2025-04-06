@@ -1,5 +1,5 @@
 ---
-subtitle: "Clase 7 - Estructuras de Datos"
+subtitle: "Clase 7: Estructuras de Datos"
 date: "04/09/2025"
 format: revealjs
 ---
