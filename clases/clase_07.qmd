@@ -1,6 +1,6 @@
 ---
 subtitle: "Clase 7 - Estructuras de Datos"
-date: "09/05/2025"
+date: "04/09/2025"
 format: revealjs
 ---
 
