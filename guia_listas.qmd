@@ -1,0 +1,101 @@
+---
+title: "Guía Listas"
+execute:
+  freeze: false
+---
+
+## Introducción a las Listas en R
+
+Las listas son uno de los tipos de datos más versátiles en R. A diferencia de los vectores, que solo pueden contener elementos del mismo tipo, las listas pueden contener elementos de diferentes tipos, incluyendo otros objetos como vectores, matrices, data frames y otras listas. Son muy útiles para organizar y manipular datos heterogéneos.
+
+## Creación de Listas
+
+Puedes crear una lista utilizando la función `list()`.
+
+```{r}
+# Crear una lista con elementos de diferentes tipos
+mi_lista <- list(
+  nombre = "Juan",
+  edad = 30,
+  altura = 1.75,
+  hobbies = c("leer", "correr", "jugar al fútbol")
+)
+
+# Ver la lista
+mi_lista
+```
+
+## Acceso a los Elementos de una Lista
+
+Puedes acceder a los elementos de una lista utilizando corchetes \[\] o el operador \$. Usando Corchetes \[\]
+
+```{r}
+# Acceder al primer elemento (nombre)
+mi_lista[1]
+
+# Acceder al segundo elemento (edad)
+mi_lista[2]
+
+# Acceder al tercer elemento (altura)
+mi_lista[3]
+
+# Acceder al cuarto elemento (hobbies)
+mi_lista[4]
+
+```
+
+## Acceso a Elementos Anidados
+
+Para acceder al `n` elemento, por ejemplo de un vector que se encuentra dentro del primer elemento de la lista se pueden usar dos índices dentro de corchete, uno al lado de otro. Ejemplos
+
+```{r}
+# Acceder al tercer elemento de hobbies, que es el cuarto elemento de la lista
+mi_lista[[4]][3]
+
+# Acceder al primero y segundo elemento de hobbies, que es el cuarto de la lista
+mi_lista[[4]][1:2]
+```
+
+Es necesario notar la diferencia entre el operador `[` y el operador `[[` ya que con un solo corchete no estamos accediendo a los elementos que conforman ese elemento anidado, mientras que con el doble corchete, sí nos ubicamos en la parte interna. Ver la diferencia en el siguiente código:
+
+```{r}
+# accedo superficialmente
+mi_lista[4]
+
+# acceder a todos los elementos de hobbies
+mi_lista[[4]] 
+```
+
+## Usando el Operador `$`
+
+```{r}
+# Acceder al elemento "nombre"
+mi_lista$nombre
+
+# Acceder al elemento "edad"
+mi_lista$edad
+
+# Acceder al elemento "altura"
+mi_lista$altura
+
+# Acceder al elemento "hobbies"
+mi_lista$hobbies
+
+# Acceder al tercer elemento de "hobbies"
+mi_lista$hobbies[3]
+```
+
+## Modificación de los elementos de una lista
+
+Puedes modificar los elementos de una lista de la misma manera que accedes a ellos.
+
+```{r}
+# Cambiar el nombre
+mi_lista$nombre <- "Pedro"
+
+# Añadir un nuevo elemento
+mi_lista$nacionalidad <- "Venezolana"
+
+# Ver la lista modificada
+mi_lista
+```

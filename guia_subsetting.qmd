@@ -1,0 +1,108 @@
+---
+title: "Guía Básica Subsettings"
+---
+
+El subsetting consiste en obtener un subconjunto de elementos de un objeto que exista dentro del environment en R. Es una técnica fundamental que te permite seleccionar partes específicas de un objeto determinado como lo son vectores, matrices, data frames, tibbles por mencionar algunas estructuras de datos.
+
+A continuación hay una serie de ejemplos con distintos objetos.
+
+#### 1. Subsetting en Vectores
+
+Subsetting de elementos de vectores utilizando índices.
+
+```{r}
+# Crear un vector
+mi_vector <- c(10, 20, 30, 40, 50)
+
+# Seleccionar el tercer elemento
+tercer_elemento <- mi_vector[3]
+tercer_elemento  # Salida: 30
+
+# Seleccionar los primeros tres elementos
+primeros_tres <- mi_vector[1:3]
+primeros_tres  # Salida: [1] 10 20 30
+
+# Seleccionar elementos en posiciones impares
+impares <- mi_vector[c(1, 3, 5)]
+impares  # Salida: [1] 10 30 50
+```
+
+#### 2. Subsetting en Matrices
+
+Una matriz es una tabla de datos bidimensional y puedes hacer el subsetting en filas y columnas utilizando índices.
+
+```{r}
+# Crear una matriz
+mi_matriz <- matrix(1:8, nrow = 4, byrow = TRUE)
+mi_matriz
+
+# Seleccionar la segunda fila
+segunda_fila <- mi_matriz[2, ]
+segunda_fila  # Salida: [1] 3 4
+
+# Seleccionar la primera columna
+primera_columna <- mi_matriz[, 1]
+primera_columna  # Salida: [1]  1 3 5 7
+
+# Seleccionar un elemento específico (fila 3, columna 2)
+elemento_especifico <- mi_matriz[3, 2]
+elemento_especifico  # Salida: 6
+```
+
+#### 3. Subsetting en Data Frames
+
+Un data frame es una estructura de datos tabular similar a una hoja de cálculo y puedes hacer subsetting de filas y columnas utilizando nombres o índices.
+
+```{r}
+# Crear un data frame
+mi_data_frame <- data.frame(
+  nombre = c("Juan", "Ana", "Carlos", "Maria"),
+  edad = c(25, 30, 35, 40),
+  ciudad = c("Caracas", "Los Teques", "Maracay", "Mérida")
+)
+mi_data_frame
+
+# Seleccionar la columna 'nombre'
+nombres <- mi_data_frame$nombre
+nombres  # Salida: [1] "Juan"   "Ana"    "Carlos" "Maria"
+
+# Seleccionar filas donde la edad es mayor a 30
+mayores_30 <- mi_data_frame[mi_data_frame$edad > 30, ]
+mayores_30
+
+# Seleccionar columnas 'nombre' y 'ciudad'
+nombre_ciudad <- mi_data_frame[, c("nombre", "ciudad")]
+nombre_ciudad
+```
+
+#### 4. Subsetting en Listas
+
+Una lista es una colección de objetos que pueden ser de diferentes tipos y puedes hacer subsetting de elementos utilizando nombres o índices.
+
+```{r}
+# Crear una lista
+mi_lista <- list(
+  vector = c(1, 2, 3),
+  matriz = matrix(4:9, nrow = 2),
+  data_frame = data.frame(x = c("a", "b"), y = c(10, 20))
+)
+mi_lista
+
+# Seleccionar el segundo elemento de la lista (matriz)
+segundo_elemento <- mi_lista[[2]]
+segundo_elemento
+
+# Seleccionar el tercer elemento de la lista (data frame) y luego la columna 'x'
+tercer_elemento_x <- mi_lista[[3]]$x
+tercer_elemento_x
+```
+
+### Resumen
+
+-   **Vectores**: Utiliza **`[ ]`** con índices para seleccionar elementos.
+
+-   **Matrices**: Utiliza **`[ ]`** con filas y columnas separadas por comas.
+
+-   **Data Frames**: Puedes usar **`$`** para acceder a columnas o **`[ ]`** con nombres de columnas.
+
+-   **Listas**: Utiliza **`[[ ]]`** para seleccionar elementos individuales.

@@ -1,0 +1,72 @@
+---
+title: "Tarea 2"
+date: '2025/04/13'
+---
+
+-   Crear una carpeta en su proyecto en curso de RStudio donde alojará las tareas a realizar a lo largo del curso.
+
+-   Programar los siguientes códigos:
+
+    1.  Acceder, extraer y asignar a una variable la fila de `mtcars` con mayor valor `mpg`. Describir proceso ejecutado mediante comentarios. Apoyarse con un LLM para realizar la actividad. Preferiblemente sólo usar funciones vistas en el curso. Para obtener el valor máximo de un vector se puede usar la función `max`
+
+    2.  Intentar crear cuatro variables con nombres no permitidos.
+
+    3.  Crear vectores de las distintas "clases" o "modes" vistas en el curso, con su correspondiente nombre y al menos tres elementos en cada uno de ellos.
+
+    4.  Crear una lista con al menos cuatro elementos de distintas clases, donde cada uno de estos contenga al menos dos otros elementos.
+
+    5.  Crear una matriz con 16 elementos que presente al menos 3 combinaciones de dimensiones distintas.
+
+    6.  Con listas:
+
+        1.  Crea una lista llamada `persona` que contenga los siguientes elementos:
+
+            1.  Nombre: "Ana"
+
+            2.  Edad: 25
+
+            3.  Altura: 1.68
+
+            4.  Pasatiempos: un vector con "dibujar", "cantar" y "futbol"
+
+        2.  Accede e imprime los siguientes elementos de la lista persona:
+
+            1.  El nombre
+
+            2.  La edad
+
+            3.  Los hobbies
+
+        3.  Modificar Elementos de la lista `persona` para que:
+
+            1.  Cambie el nombre a "Ana María"
+
+            2.  Añada un nuevo elemento llamado "ciudad" con el valor "Valencia"
+
+        4.  Crea una lista anidada llamada `informe_PIB` que contenga los siguientes elementos:
+
+            1.  Título: "Informe PIB Venezuela"
+
+            2.  Autor: su nombre
+
+            3.  Datos: una matriz de 2x3 con valores numéricos, la primera fila son tres años consecutivos, la segunda fila son tres valores simulados con el PIB
+
+            4.  Resumen: un vector con "PIB año 2024", "Inflación" y "PIB per cápita"
+
+        5.  Accede a los siguientes elementos de la lista `informe`:
+
+            1.  El autor
+
+            2.  PIB para segundo año de la serie
+
+            3.  PIB per cápita
+
+    7.  Crear una data frame y asignar a un objeto, a partir de 4 vectores donde cada uno contenga al menos 4 elementos. Los vectores deben ser al menos de dos clases distintas. La función de Rbase que se usa para definir objetos de la clase data frame es `data.frame` . Una vez creada la data frame evaluar y especificar la `mode` y la `class`.
+
+-   Cada uno de los puntos anteriores con cada requerimiento, debe ser señalado en el script mediante un comentario. Tener presente la legibilidad y claridad que debe tener el script para que sea comprensible para quien lo lee.
+
+-   No deben existir líneas sin el formato necesario, bien sea con el formato de comentarios o con el de líneas ejecutables.
+
+-   Los códigos anteriores deben programarse en un script con la extensión `.R`. El nombre del script a remitir será el siguiente `tarea_2_ci.R`. El valor "ci" debe ser el de su cédula de identidad sin puntos u otro signo.
+
+-   La tarea debe ser remitida al correo del curso antes de la medianoche del 27 de abril de 2025.

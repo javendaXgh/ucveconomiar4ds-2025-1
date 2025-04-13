@@ -27,7 +27,7 @@ website:
         href: https://discord.gg/XcEEMXnU
         text: "Discord"
       - icon: github
-        href: https://github.com/orgs/UCVeconomia2024-2/dashboard
+        href: https://github.com/javendaXgh/ucveconomiar4ds-2025-1
         text: "GitHub"
       - icon: cloud
         href: https://posit.cloud/
@@ -63,6 +63,8 @@ website:
         contents: 
           - href: tarea_01.qmd
             text: tarea 1
+          - href: tarea_02.qmd
+            text: tarea 2
       - section: "Talleres"
         contents:
       - section: "Tutoriales"
@@ -73,6 +75,10 @@ website:
             text: Intro RStudio
           - href: tutorial_rbase.qmd
             text: Intro Rbase
+          - href: guia_listas.qmd
+            text: Guía Listas
+          - href: guia_subsetting.qmd
+            text: Guía Básica Subsetting
         
       - section: "Videos de Apoyo"
         contents:

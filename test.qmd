@@ -1,5 +1,5 @@
 ---
-title: "Clase 02 a 05: Complemento"
+title: "Clase 2:5 - Complemento"
 ---
 
 Este material fue compilado y adaptado por José M. Avendaño, teniendo parcialmente códigos y conceptos desarrollados por [Diego Kozlowski y Juan Barriola](https://github.com/DiegoKoz/intro_ds) para un curso de R.
@@ -62,9 +62,7 @@ Pueden contener cualquier estructura de datos como una matriz, un valor numéric
 
 ## Funciones Precargadas:
 
-RBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función.
-
-En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.
+RBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función. En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.
 
 Ejemplos:
 
@@ -94,24 +92,19 @@ Ejemplos:
 
     ```
 
-En general, las funciones indican una serie de pasos y/o procedimientos estandarizados, que toman como entrada un determinado argumentos, el cual puede ser fijado por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos.
+## Tipos de datos
 
-Su lógica de funcionamiento es:\
+Cuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función `class()` y `mode()`
+
+Las funciones son series de procedimientos estandarizados, que toman como input determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos. Su lógica de funcionamiento es:\
 `funcion(argumento1 = arg1, argumento2 = arg2)`
 
 ### Otros ejemplos de funciones:
 
--   `paste()` : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos
-
--   `paste0()`: concatena una serie de caracteres sin separar
-
--   `sum()`: suma de todos los elementos de un vector
-
--   `mean()`: promedio aritmético de todos los elementos de un vector
-
--   `min()` : retorna el elemento con valor mínimo numérico o character que se encuentra dentro de un vector
-
--   `max()` : retorna el elemento con valor máximo numérico o character que se encuentra dentro de un vector
+-   paste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos
+-   paste0(): concatena una serie de caracteres sin separar
+-   sum(): suma de todos los elementos de un vector
+-   mean() promedio aritmético de todos los elementos de un vector
 
 ```{r}
 paste("Pega", "estas", 4, "palabras", sep = " ")
@@ -134,18 +127,12 @@ sum(1:5)
 # vector con distintos elementos incluyendo una NA que es una valor ausente ("not avaible")
 c(1:5,NA, 7:11)
 
-# Intendar obtener valor promedio del vector generado anteriormente
+#valor promedio del vector generado anteriormente
 mean(c(1:5,NA, 7:11))
-# al tener un valor de tipo NA no es posible obtener el promedio.  A continuación se muestra cómo se debe tratar este caso
 
-
-# valor promedio del vector generado anteriormente omitiendo los valores ausentes (NA)
+# valor promedio del vector generado anteriormente omitiendo los valores ausentes
 mean(c(1:5,NA, 7), na.rm = TRUE)
-# se añade el argumento na.rm = TRUE
-
 ```
-
-Usar el operador `?` para comprender el comportamiento del argumento `na.rm` con `?mean`
 
 ## Vectores
 
@@ -162,6 +149,7 @@ x=10
 is.numeric(x)
 
 ```
+
 
 -   **Númericos**: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo "float" y "double".
 
@@ -352,7 +340,8 @@ class(x)
 
 ```
 
-En general, para obtener la clase de un objeto usamos la función `class`, que en este caso retorna "numeric".
+En general, para obtener la clase de un objeto usamos la función `class`, que en este caso retorna  "numeric".
+
 
 ## Vectores repaso:
 
@@ -404,12 +393,6 @@ Estas son algunos de los objetos que contienen datos con los cuales trabajaremos
 -   Tibbles
 
 No obstante, existen estructuras más complejas que no son de tipo tabular que no serán abordadas como la raster layers.
-
-## Tipos de datos
-
-Cuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función `class()` .
-
-Por otra parte, la función `mode()` nos permite determinar como está guardando un determinado objeto en memoria el lenguaje R.
 
 ## Caracteres especiales
 
@@ -463,8 +446,8 @@ Para crearlo, vamos al logo de "nuevo projecto " (Arriba a la derecha de la pant
 ## Tipos de archivos de R
 
 -   **Script**: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo
--   **Rmd**: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código y textos en lenguaje natural.
--   **Rproject**: Es un archivo que define la metadata de un proyecto.
+-   **Rmd**: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código con resultados (este archivo es un rmarkdown)
+-   **Rproject**: Es un archivo que define la metadata del proyecto
 -   **RDS y Rdata**: Dos formatos de archivos propios de R para guardar datos.
 -   **qmd**: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible.
 
