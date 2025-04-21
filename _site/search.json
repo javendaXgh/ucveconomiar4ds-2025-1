@@ -128,7 +128,7 @@
     "href": "curso-equipo.html",
     "title": "Equipo de Profesores",
     "section": "",
-    "text": "Prof. Juan Pablo Goncalves Lanz:\nEconomista, Magíster en Instituciones Financieras, Consultor Independiente y Profesor de la Universidad Central de Venezuela.\n\n\nProf. Jesús Sánchez\n\n\nProf. José Miguel Avendaño I.:\nProfesor Escuela de Economía (U.C.V.), Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciones se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning.\nSu interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones web donde los datos, su manipulación y representación, son los pilares en que sustentan.\n\n\n\nHoras de Consulta\nSitio\n\n\n\n\nPor definir",
+    "text": "Prof. Juan Pablo Goncalves Lanz:\nEconomista, Magíster en Instituciones Financieras, Consultor Independiente y Profesor de la Universidad Central de Venezuela.\n\n\nProf. José Miguel Avendaño I.:\nProfesor Escuela de Economía (U.C.V.), Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciones se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning.\nSu interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones web donde los datos, su manipulación y representación, son los pilares en que sustentan.\n\n\n\nHoras de Consulta\nSitio\n\n\n\n\nPor definir",
     "crumbs": [
       "Sobre el Curso",
       "Equipo de Profesores"
@@ -1028,7 +1028,7 @@
     "section": "",
     "text": "El objetivo de este laboratorio es introducirte a R y RStudio, que utilizarás a lo largo del curso tanto para aprender los conceptos estadísticos discutidos en el curso como para analizar datos reales y llegar a conclusiones informadas. Para aclarar qué es qué: R es el nombre del lenguaje de programación en sí mismo y RStudio es una interfaz conveniente para trabajar con R.\nA medida que avancen los laboratorios, te animamos a que explores más allá de lo que dictan los laboratorios; ¡la disposición a experimentar te convertirá en un programador mucho mejor! Sin embargo, antes de llegar a esa etapa, necesitas desarrollar cierta fluidez básica en R. Primero, exploraremos los componentes fundamentales de R y RStudio: la interfaz de RStudio, la lectura de datos y los comandos básicos para trabajar con datos en R.\nAdelante, inicia RStudio. Deberías ver una ventana que se parece a la imagen que se muestra a continuación.\n\nEl panel de la parte inferior izquierda es donde ocurre la acción. Este panel se llama la consola. Cada vez que inicies RStudio, tendrá el mismo texto en la parte superior de la consola que te indica la versión de R que estás ejecutando. Debajo de esa información está el prompt, indicado por el símbolo &gt;. Como su nombre indica, este prompt es realmente una solicitud: una solicitud de un comando. Inicialmente, interactuar con R se trata de escribir comandos e interpretar la salida. Estos comandos y su sintaxis han evolucionado durante décadas (literalmente) y ahora proporcionan lo que muchos usuarios sienten que es una forma bastante natural de acceder a los datos y organizar, describir e invocar cálculos estadísticos.\nEl panel de la parte superior derecha contiene tu entorno, así como un historial de los comandos que has introducido previamente.\nEl panel de la parte inferior derecha contiene pestañas para examinar los archivos en tu carpeta de proyecto, acceder a los archivos de ayuda para las funciones de R, instalar y administrar los paquetes de R, e inspeccionar las visualizaciones. De forma predeterminada, todas las visualizaciones de datos que realices aparecerán directamente debajo del código que utilizaste para crearlas. Si prefieres que tus gráficos aparezcan en la pestaña de gráficos, deberás cambiar tus opciones globales.\n\n\nR es un lenguaje de programación de código abierto, lo que significa que los usuarios pueden contribuir con paquetes que nos facilitan la vida y podemos usarlos de forma gratuita. Para este laboratorio, y muchos otros en el futuro, usaremos lo siguiente:\n\nEl paquete “paraguas” tidyverse que alberga un conjunto de muchos paquetes diferentes de R: para la manipulación de datos y la visualización de datos\nEl paquete openintro R: para datos y funciones personalizadas con los recursos de OpenIntro\n\nEn la esquina inferior derecha, haz clic en la pestaña Paquetes. Escribe el nombre de cada uno de estos paquetes (tidyverse, openintro) en el cuadro de búsqueda para ver si se han instalado. Si estos paquetes no aparecen cuando escribes su nombre, instálalos copiando y pegando o escribiendo las dos líneas de código siguientes en la consola de tu sesión de RStudio. Asegúrate de presionar enter/return después de cada línea de código.\n\ninstall.packages(\"tidyverse\")\ninstall.packages(\"openintro\")\n\nDespués de presionar enter/return, comenzará un flujo de texto, comunicando el proceso que R está llevando a cabo para instalar el paquete desde la ubicación que seleccionaste cuando instalaste R. Si no se te solicitó que seleccionaras un servidor para descargar paquetes cuando instalaste R, RStudio podría solicitarte que selecciones un servidor desde el cual descargar; cualquiera de ellos funcionará.\nSolo necesitas instalar paquetes una vez, pero necesitas cargarlos cada vez que reinicies RStudio. Cargamos paquetes con la función library. Copia y pega o escribe las dos líneas siguientes en tu consola para cargar los paquetes tidyverse y openintro en tu entorno de trabajo.\n\nlibrary(tidyverse)\nlibrary(openintro)\n\nElegimos usar el paquete tidyverse porque consta de un conjunto de paquetes necesarios para diferentes aspectos del trabajo con datos, desde la carga de datos hasta la manipulación de datos, la visualización de datos y el análisis de datos. Además, estos paquetes comparten filosofías comunes y están diseñados para trabajar juntos. Puedes encontrar más información sobre los paquetes en tidyverse en tidyverse.org.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro RStudio"
     ]
   },
@@ -1039,7 +1039,7 @@
     "section": "",
     "text": "El objetivo de este laboratorio es introducirte a R y RStudio, que utilizarás a lo largo del curso tanto para aprender los conceptos estadísticos discutidos en el curso como para analizar datos reales y llegar a conclusiones informadas. Para aclarar qué es qué: R es el nombre del lenguaje de programación en sí mismo y RStudio es una interfaz conveniente para trabajar con R.\nA medida que avancen los laboratorios, te animamos a que explores más allá de lo que dictan los laboratorios; ¡la disposición a experimentar te convertirá en un programador mucho mejor! Sin embargo, antes de llegar a esa etapa, necesitas desarrollar cierta fluidez básica en R. Primero, exploraremos los componentes fundamentales de R y RStudio: la interfaz de RStudio, la lectura de datos y los comandos básicos para trabajar con datos en R.\nAdelante, inicia RStudio. Deberías ver una ventana que se parece a la imagen que se muestra a continuación.\n\nEl panel de la parte inferior izquierda es donde ocurre la acción. Este panel se llama la consola. Cada vez que inicies RStudio, tendrá el mismo texto en la parte superior de la consola que te indica la versión de R que estás ejecutando. Debajo de esa información está el prompt, indicado por el símbolo &gt;. Como su nombre indica, este prompt es realmente una solicitud: una solicitud de un comando. Inicialmente, interactuar con R se trata de escribir comandos e interpretar la salida. Estos comandos y su sintaxis han evolucionado durante décadas (literalmente) y ahora proporcionan lo que muchos usuarios sienten que es una forma bastante natural de acceder a los datos y organizar, describir e invocar cálculos estadísticos.\nEl panel de la parte superior derecha contiene tu entorno, así como un historial de los comandos que has introducido previamente.\nEl panel de la parte inferior derecha contiene pestañas para examinar los archivos en tu carpeta de proyecto, acceder a los archivos de ayuda para las funciones de R, instalar y administrar los paquetes de R, e inspeccionar las visualizaciones. De forma predeterminada, todas las visualizaciones de datos que realices aparecerán directamente debajo del código que utilizaste para crearlas. Si prefieres que tus gráficos aparezcan en la pestaña de gráficos, deberás cambiar tus opciones globales.\n\n\nR es un lenguaje de programación de código abierto, lo que significa que los usuarios pueden contribuir con paquetes que nos facilitan la vida y podemos usarlos de forma gratuita. Para este laboratorio, y muchos otros en el futuro, usaremos lo siguiente:\n\nEl paquete “paraguas” tidyverse que alberga un conjunto de muchos paquetes diferentes de R: para la manipulación de datos y la visualización de datos\nEl paquete openintro R: para datos y funciones personalizadas con los recursos de OpenIntro\n\nEn la esquina inferior derecha, haz clic en la pestaña Paquetes. Escribe el nombre de cada uno de estos paquetes (tidyverse, openintro) en el cuadro de búsqueda para ver si se han instalado. Si estos paquetes no aparecen cuando escribes su nombre, instálalos copiando y pegando o escribiendo las dos líneas de código siguientes en la consola de tu sesión de RStudio. Asegúrate de presionar enter/return después de cada línea de código.\n\ninstall.packages(\"tidyverse\")\ninstall.packages(\"openintro\")\n\nDespués de presionar enter/return, comenzará un flujo de texto, comunicando el proceso que R está llevando a cabo para instalar el paquete desde la ubicación que seleccionaste cuando instalaste R. Si no se te solicitó que seleccionaras un servidor para descargar paquetes cuando instalaste R, RStudio podría solicitarte que selecciones un servidor desde el cual descargar; cualquiera de ellos funcionará.\nSolo necesitas instalar paquetes una vez, pero necesitas cargarlos cada vez que reinicies RStudio. Cargamos paquetes con la función library. Copia y pega o escribe las dos líneas siguientes en tu consola para cargar los paquetes tidyverse y openintro en tu entorno de trabajo.\n\nlibrary(tidyverse)\nlibrary(openintro)\n\nElegimos usar el paquete tidyverse porque consta de un conjunto de paquetes necesarios para diferentes aspectos del trabajo con datos, desde la carga de datos hasta la manipulación de datos, la visualización de datos y el análisis de datos. Además, estos paquetes comparten filosofías comunes y están diseñados para trabajar juntos. Puedes encontrar más información sobre los paquetes en tidyverse en tidyverse.org.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro RStudio"
     ]
   },
@@ -1057,7 +1057,7 @@
     "section": "",
     "text": "Este es un tutorial con los pasos a seguir para instalar el lenguaje  y el software de entorno de desarrollo integrado que se llama  .\nEs necesario que siga al pie de la letra estos pasos, principalmente para que primero sea instalado el lenguaje R y luego RStudio.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Instalación R y RStudio"
     ]
   },
@@ -1068,7 +1068,7 @@
     "section": "",
     "text": "Instalación RStudio:\nRStudio es el entorno de desarrollo integrado que se usará para dar soporte a la generación y desarrollo de códigos en R. Estos son los pasos a seguir para instalarlo:\n\nIr a la página https://posit.co/download/rstudio-desktop/ y descargar la opción correspondiente a su sistema operativo. En caso de windows 10 u 11:\n\nHacer clic en “Siguiente” al aparecer el asistente de instalación:\n\nDar “Siguiente” en la ruta de instalación predeterminada, la cual generalmente es “Program Files” o “Archivos de Programa”:\n\nUna vez finalizada la instalación aparecerá esta pantalla. Verificar que no indique que se ha generado un error. En caso de aparecer algún mensaje o advertencia de que pudo ocurrir un error al hacer la instalación, es necesario que haga una captura de pantalla y la comparta con el instructor-profesor del curso. En caso de no mostrar error, hacer clic en “Terminar” :\n\nPara verificar que se instaló correctamente RStudio vaya a su “Escritorio” o a “Programas”, busque el icono de RStudio, similar al que se muestra en la siguiente imagen y abra el programa.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Instalación R y RStudio"
     ]
   },
@@ -1226,7 +1226,7 @@
     "section": "",
     "text": "Este material fue compilado y adaptado por José M. Avendaño, teniendo parcialmente códigos y conceptos desarrollados por Diego Kozlowski y Juan Barriola para un curso de R.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1237,7 +1237,7 @@
     "section": "R base",
     "text": "R base\nCon R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1248,7 +1248,7 @@
     "section": "Uso de la consola como una calculadora- operaciones aritméticas",
     "text": "Uso de la consola como una calculadora- operaciones aritméticas\n\nEn la consola podemos hacer cálculos tal cual si estuviésemos usando una calculadora\n\n\n5*3+6\n\n[1] 21\n\n5*(3+6)\n\n[1] 45\n\n\ntener presente el uso de los paréntesis y el orden en que serán ejecutadas las operaciones matemáticas",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1259,7 +1259,7 @@
     "section": "Definición de objetos",
     "text": "Definición de objetos\nLos Objetos/Elementos constituyen la categoría esencial del R. De hecho, todo en R es un objeto, y se almacena con un nombre específico que no debe poseer espacios. Un número, un vector, una función, la progresión de letras del abecedario, una base de datos, un gráfico, constituyen para R objetos de distinto tipo. Los objetos que vamos creando a medida que trabajamos pueden visualizarse en el panel derecho superior de la pantalla (el Environment).\nEl operador &lt;- (Alt + Guión) sirve para definir un objeto. A la izquierda del &lt;- debe ubicarse el nombre que tomará el elemento a crear. Del lado derecho debe ir la definición del mismo.\n\nA &lt;- 1\n\nPor ejemplo, podemos crear el elemento A, cuyo valor será 1. Para esto, debemos correr el código presionando Ctrl + Enter, con el cursor ubicado en cualquier parte de la línea. Al definir un elemento, el mismo queda guardado en el ambiente del programa, y podrá ser utilizado posteriormente para observar su contenido o para realizar una operación con el mismo.\n\nA \n\n[1] 1\n\nA+6\n\n[1] 7\n\n\nAl correr una linea con el nombre del objeto, la consola del programa nos muestra su contenido. Entre corchetes observamos el número de orden del elemento en cuestión. Si corremos una operación, la consola nos muestra el resultado de la misma.\nEl operador = es equivalente a &lt;-, pero en la práctica no se utiliza para la definición de objetos.\n\nB = 2\nB # llamar al valor que contiene la variable\n\n[1] 2\n\n\n&lt;- es un operador Unidireccional, es decir que:\nA &lt;- B implica que A va tomar como valor el contenido del objeto B, y no al revés.\n\nA &lt;- B\nA      # Ahora A toma el valor de B, y B continúa conservando el mismo valor\n\n[1] 2\n\nB\n\n[1] 2",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1270,7 +1270,7 @@
     "section": "Variables",
     "text": "Variables\nPueden contener cualquier estructura de datos como una matriz, un valor numérico, un texto, un vector y otras que se verán más adelante. Son creadas mediante el uso del operador de asignación.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1281,7 +1281,7 @@
     "section": "Funciones Precargadas:",
     "text": "Funciones Precargadas:\nRBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función.\nEn algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.\nEjemplos:\n\nFunción sin argumento\n\nSys.Date() # retorna la fec ha\n\n[1] \"2025-04-21\"\n\n\nFunción con un argumento\n\nhead(mtcars) # retorna las 6 primeras filas de una data frame\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nFunción con múltiples argumentos\n\n# asignación variables\nvelocidad &lt;- cars$speed\ndistancia &lt;- cars$dist\n\n# crear un gráfico de tipo scatter plot (diagrama de dispersión )\nplot(velocidad, distancia)\n\n\n\n\n\n\n\n\n\nEn general, las funciones indican una serie de pasos y/o procedimientos estandarizados, que toman como entrada un determinado argumentos, el cual puede ser fijado por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos.\nSu lógica de funcionamiento es:\nfuncion(argumento1 = arg1, argumento2 = arg2)\n\nOtros ejemplos de funciones:\n\npaste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos\npaste0(): concatena una serie de caracteres sin separar\nsum(): suma de todos los elementos de un vector\nmean(): promedio aritmético de todos los elementos de un vector\nmin() : retorna el elemento con valor mínimo numérico o character que se encuentra dentro de un vector\nmax() : retorna el elemento con valor máximo numérico o character que se encuentra dentro de un vector\n\n\npaste(\"Pega\", \"estas\", 4, \"palabras\", sep = \" \")\n\n[1] \"Pega estas 4 palabras\"\n\n#Puedo concatenar caracteres almacenados en objetos\nA= 'nombre'\nB= 'apellido'\nC= 'ciudad'\npaste(A, B, C, sep = \"**\")\n\n[1] \"nombre**apellido**ciudad\"\n\n# Paste0 pega los caracteres sin separador\npaste0(A, B, C)\n\n[1] \"nombreapellidociudad\"\n\n# imprimir una secuencia de números\n1:5\n\n[1] 1 2 3 4 5\n\n# sumar todos los elementos de una secuencia de números\nsum(1:5)\n\n[1] 15\n\n# vector con distintos elementos incluyendo una NA que es una valor ausente (\"not avaible\")\nc(1:5,NA, 7:11)\n\n [1]  1  2  3  4  5 NA  7  8  9 10 11\n\n# Intendar obtener valor promedio del vector generado anteriormente\nmean(c(1:5,NA, 7:11))\n\n[1] NA\n\n# al tener un valor de tipo NA no es posible obtener el promedio.  A continuación se muestra cómo se debe tratar este caso\n\n\n# valor promedio del vector generado anteriormente omitiendo los valores ausentes (NA)\nmean(c(1:5,NA, 7), na.rm = TRUE)\n\n[1] 3.666667\n\n# se añade el argumento na.rm = TRUE\n\nUsar el operador ? para comprender el comportamiento del argumento na.rm con ?mean",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1292,7 +1292,7 @@
     "section": "Tipos de datos",
     "text": "Tipos de datos\nCuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función class() .\nPor otra parte, la función mode() nos permite determinar como está guardando un determinado objeto en memoria el lenguaje R.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1303,7 +1303,7 @@
     "section": "Vectores",
     "text": "Vectores\nSon colecciones de elementos que tienen que ser exclusivamente del mismo tipo, de la misma clase. Se usa la c () para declarar un vector. Los elementos que conforman el vector van separados por comas. Los vectores pueden, y es lo más común, les asignamos nombre como lo vimos con las variables. Incluso podemos tener vectores con una solo elemento (que de por si son las variables que ya estudiamos).",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1314,7 +1314,7 @@
     "section": "Tipos de vectores",
     "text": "Tipos de vectores\n\nvectores - numeric\nSi queremos determinar si un vector es de clase numéric lo hacemos con la función is.numeric()\n\nx=10\nis.numeric(x)\n\n[1] TRUE\n\n\n\nNuméricos: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo “float” y “double”.\n\n\nx &lt;- 2\n\nclass(x)\n\n[1] \"numeric\"\n\n\n\nis.numeric(x)\n\n[1] TRUE\n\n\n\nis.integer(x)\n\n[1] FALSE\n\n\n\n\nvectores - integer\n\nEnteros: hay casos en los que es necesario trabajar con números enteros sin que contenga ningún decimal. Estos números se declaran con el uso de una L posterior al número.\n\n\ny &lt;- 2L\ny\n\n[1] 2\n\nclass(y)\n\n[1] \"integer\"\n\n\nEjemplo de una operación:\n\nx &lt;- 2.7\nclass(x)\n\n[1] \"numeric\"\n\ny &lt;- 3L\nclass(y)\n\n[1] \"integer\"\n\n\n\n\nvectores - lógicos\n\nLógicos: Sirven para representar datos que solo pueden tener uno de estos dos valores\n\nverdadero - TRUE\nfalso - FALSE\n\n\n\n\nOperadores lógicos:\n\n\\(&gt;\\) (mayor a)\n\\(&gt;=\\) (mayor o igual a)\n\\(&lt;\\) (menor a)\n\\(&lt;=\\) (menor o igual a)\n\\(==\\) (igual a)\n\\(!=\\) (distinto a)\n\n\n# Redefinimos los valores A y B\nA &lt;- 10\nB &lt;- 20\n\n# Realizamos comparaciones lógicas\nA &gt;  B\n\n[1] FALSE\n\nA &gt;= B\n\n[1] FALSE\n\nA &lt;  B\n\n[1] TRUE\n\nA &lt;= B\n\n[1] TRUE\n\nA == B\n\n[1] FALSE\n\nA != B # el operador != significa \"diferente\"\n\n[1] TRUE\n\nC &lt;- A != B\nC\n\n[1] TRUE\n\n\nComo muestra el último ejemplo, el resultado de una operación lógica puede almacenarse como el valor de un objeto.\n\nx &lt;- 2.7\ny &lt;-3L\nz &lt;- x==y\nz\n\n[1] FALSE\n\nclass(z)\n\n[1] \"logical\"\n\n\nacabamos de usar el operador == que nos sirve para hacer una comparación de igualdad entre dos objetos. Lo que estamos es preguntando si son iguales el uno al otro y la respuesta que obtenemos es de tipo lógica booleana TRUE o FALSE\n\nTRUE*4\n\n[1] 4\n\nFALSE*2\n\n[1] 0\n\n\nacabamos de ver coerción. Forzar a un cambio de un tipo de dato en otro tipo de dato. Los TRUE pueden ser interpretados mediante la coerción como 1 y los FALSE como 0.\nSeguimos,\n\n# dos es igual a 3?\n2==3\n\n[1] FALSE\n\n# dos es distinto de tres? (tener presente que el ! \n# precediendo al igual quiere decir que es lo inverso \n# al igual, es decir, distinto)\n2!=3\n\n[1] TRUE\n\n#dos es menor que tres?\n2&lt;3\n\n[1] TRUE\n\n\n\n#juan es igual a pedro? (hablamos del texto)\n'juan'=='pedro'\n\n[1] FALSE\n\n# el texto jose es igual a jose?\n'jose'=='jose'\n\n[1] TRUE\n\n#dos es igual a dos?\n2==2\n\n[1] TRUE\n\n\n\n# a es menor que b?\n'a'&lt;'b'\n\n[1] TRUE\n\n# a es mayor que 8?\n'a'&gt;8\n\n[1] TRUE\n\n# a es igual a 1?\n'a'==1\n\n[1] FALSE\n\n\n\n\nvectores - character\n\nDatos de caracteres: se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, numérico, matriz, etc. El valor debe estar declarado entre comillas simples ” o comillas sencilla ’. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas\n\n\nnombre &lt;- 'jose miguel'\nno_es_numero &lt;- '2'\nno_es_numero\n\n[1] \"2\"\n\nclass(no_es_numero)\n\n[1] \"character\"\n\n\nObtener la cantidad de caracteres que contiene una expresión:\n\nnchar('hola')\n\n[1] 4\n\nnchar(5)\n\n[1] 1\n\nnchar(1532)\n\n[1] 4\n\nnchar(x)\n\n[1] 3\n\n\n\n\nvectores - Date\n\nFechas El trabajo con las fechas puede llegar a ser un tanto complejo y será abordado de forma más intensiva adelante. Revisando algunas de las formas de trabajar con fechas tenemos el uso de las funciones Date y POSIXct\n\nLa función Date solo almacena la fecha calendario\nLa función POSIXct puede almacenar en conjunto hora y fecha\n\n\nLas fechas se representan, en cualquiera de los casos como la cantidad de días (date) o segundos (POSIXct) que han transcurrido desde el 1 ero de enero de 1970.\n\nfecha1 &lt;- as.Date('2020-01-31')\nfecha1\n\n[1] \"2020-01-31\"\n\nclass(fecha1)\n\n[1] \"Date\"\n\nas.numeric(fecha1)\n\n[1] 18292\n\n\n\nfecha2 &lt;- as.POSIXct('2020-01-31 11:15')\nfecha2\n\n[1] \"2020-01-31 11:15:00 -04\"\n\nas.numeric(fecha2)\n\n[1] 1580483700\n\nclass(fecha2)\n\n[1] \"POSIXct\" \"POSIXt\" \n\n\n\nx=10\nclass(x)\n\n[1] \"numeric\"\n\n\nEn general, para obtener la clase de un objeto usamos la función class, que en este caso retorna “numeric”.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1325,7 +1325,7 @@
     "section": "Vectores repaso:",
     "text": "Vectores repaso:\n\nnumeros &lt;- c(1,2,5,7)\nnumeros\n\n[1] 1 2 5 7\n\nclass(numeros)\n\n[1] \"numeric\"\n\ntextos &lt;- c('juan','eliana','maria')\nclass(textos)\n\n[1] \"character\"\n\ntextos\n\n[1] \"juan\"   \"eliana\" \"maria\" \n\nlogicos &lt;- c(TRUE, FALSE, TRUE)\nclass(logicos)\n\n[1] \"logical\"\n\nis.numeric(numeros)\n\n[1] TRUE\n\nis.logical(textos)\n\n[1] FALSE\n\nis.character(textos)\n\n[1] TRUE\n\n\n\nunico &lt;- c('aula')\nunico\n\n[1] \"aula\"\n\nclass(unico)\n\n[1] \"character\"\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n\n\nvector_modificado &lt;- c('texto', 1)\nvector_modificado\n\n[1] \"texto\" \"1\"    \n\nclass(vector_modificado)\n\n[1] \"character\"\n\n#aplicó la coercion, que es cambiar la clase de un objeto, en este caso el 1 de un número a una string",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1336,7 +1336,7 @@
     "section": "Estructuras de Datos/ Objetos:",
     "text": "Estructuras de Datos/ Objetos:\nTodo lo que existe dentro de R es un objeto: funciones, vectores, etc. En R se puede trabajar con una gran cantidad de objetos distintos tanto en su tipo como tenerlos dentro de una sesión de trabajo.\nEstas son algunos de los objetos que contienen datos con los cuales trabajaremos a lo largo del curso.\n\nValores\nVectores\nListas\nData Frames\nTibbles\n\nNo obstante, existen estructuras más complejas que no son de tipo tabular que no serán abordadas como la raster layers.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1347,7 +1347,7 @@
     "section": "Caracteres especiales",
     "text": "Caracteres especiales\n\nR es sensible a mayúsculas y minúsculas, tanto para los nombres de las variables, como para las funciones y parámetros.\nEl numeral # se utiliza para hacer comentarios. Todo lo que se escribe después del # no es interpretado por R. Se debe utilizar un # por cada línea de código que se desea anular\nLos corchetes [] se utilizan para acceder a los elementos que conforman algunos tipos de objetos:\n\nen un vector [n° orden]\nen una data frame [fila, columna]\nen una lista [n° elemento]\n\nel signo $ también es un método de acceso. Particularmente, en los dataframes, nos permitirá acceder a una determinada columna de una tabla\nLos paréntesis() se utilizan en las funciones para definir los parámetros.\nLas comas , se utilizan para separar los parámetros al interior de una función.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1369,7 +1369,7 @@
     "section": "Ambientes de trabajo",
     "text": "Ambientes de trabajo\nHay algunas cosas que tenemos que tener en cuenta respecto del orden del ambiente en el que trabajamos:\n\nWorking Directory: Es el directorio de trabajo. Pueden ver el suyo con getwd(), es hacia donde apunta el código, por ejemplo, si quieren leer un archivo, la ruta del archivo tiene que estar explicitada como el recorrido desde el Working Directory.\nEnvironment: Esto engloba tanto la información que tenemos cargada en Data y Values, como las librerías que tenemos cargadas mientras trabajamos.\n\nEs importante que mantengamos bien delimitadas estas cosas entre diferentes trabajos, sino:\n\nEl directorio queda referido a un lugar específico en nuestra computadora.\n\n\nSi se lo compartimos a otro se rompe\nSi cambiamos de computadora se rompe\nSi lo cambiamos de lugar se rompe\nSi primero abrimos otro script se rompe\n\n\nTenemos mezclados resultados de diferentes trabajos:\n\n\nNunca sabemos si esa variable/tabla/lista se creo en ese script y no otro\nPerdemos espacio de la memoria\nNo estamos seguros de que el script cargue todas las librerías que necesita\n\nRstudio tiene una herramienta muy útil de trabajo que son los proyectos. Estos permiten mantener un ambiente de trabajo delimitado por cada uno de nuestros trabajos. Es decir:\n\nEl directorio de trabajo se refiere a donde esta ubicado el archivo .Rproj\nEl Environment es específico de nuestro proyecto.\n\nUn proyecto no es un sólo script, sino toda una carpeta asociada a una estructura de trabajo donde los distintos scripts, archivos, datos de entrada y-o salida, son organizados de forma lógica\nPara crearlo, vamos al logo de “nuevo proyecto” (Arriba a la derecha de la pantalla), y elegimos la carpeta de trabajo.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1380,7 +1380,7 @@
     "section": "Tipos de archivos de R",
     "text": "Tipos de archivos de R\n\nScript: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo\nRmd: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código y textos en lenguaje natural.\nRproject: Es un archivo que define la metadata de un proyecto.\nRDS y Rdata: Dos formatos de archivos propios de R para guardar datos.\nqmd: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1391,7 +1391,7 @@
     "section": "Remover objetos del Global Environment",
     "text": "Remover objetos del Global Environment\nEn caso de querer remover un objeto (todo lo que existe dentro del programa que estamos ejecutando) del “global environment” podemos usar la función rm() teniendo como argumento el nombre del objeto que queremos remover\nrm(“nombre”)",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Intro Rbase"
     ]
   },
@@ -1836,7 +1836,7 @@
     "section": "",
     "text": "Las listas son uno de los tipos de datos más versátiles en R. A diferencia de los vectores, que solo pueden contener elementos del mismo tipo, las listas pueden contener elementos de diferentes tipos, incluyendo otros objetos como vectores, matrices, data frames y otras listas. Son muy útiles para organizar y manipular datos heterogéneos.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Guía Listas"
     ]
   },
@@ -1847,7 +1847,7 @@
     "section": "",
     "text": "Las listas son uno de los tipos de datos más versátiles en R. A diferencia de los vectores, que solo pueden contener elementos del mismo tipo, las listas pueden contener elementos de diferentes tipos, incluyendo otros objetos como vectores, matrices, data frames y otras listas. Son muy útiles para organizar y manipular datos heterogéneos.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Guía Listas"
     ]
   },
@@ -1858,7 +1858,7 @@
     "section": "Creación de Listas",
     "text": "Creación de Listas\nPuedes crear una lista utilizando la función list().\n\n# Crear una lista con elementos de diferentes tipos\nmi_lista &lt;- list(\n  nombre = \"Juan\",\n  edad = 30,\n  altura = 1.75,\n  hobbies = c(\"leer\", \"correr\", \"jugar al fútbol\")\n)\n\n# Ver la lista\nmi_lista\n\n$nombre\n[1] \"Juan\"\n\n$edad\n[1] 30\n\n$altura\n[1] 1.75\n\n$hobbies\n[1] \"leer\"            \"correr\"          \"jugar al fútbol\"",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Guía Listas"
     ]
   },
@@ -1869,7 +1869,7 @@
     "section": "Acceso a los Elementos de una Lista",
     "text": "Acceso a los Elementos de una Lista\nPuedes acceder a los elementos de una lista utilizando corchetes [] o el operador $. Usando Corchetes []\n\n# Acceder al primer elemento (nombre)\nmi_lista[1]\n\n$nombre\n[1] \"Juan\"\n\n# Acceder al segundo elemento (edad)\nmi_lista[2]\n\n$edad\n[1] 30\n\n# Acceder al tercer elemento (altura)\nmi_lista[3]\n\n$altura\n[1] 1.75\n\n# Acceder al cuarto elemento (hobbies)\nmi_lista[4]\n\n$hobbies\n[1] \"leer\"            \"correr\"          \"jugar al fútbol\"",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Guía Listas"
     ]
   },
@@ -1880,7 +1880,7 @@
     "section": "Acceso a Elementos Anidados",
     "text": "Acceso a Elementos Anidados\nPara acceder al n elemento, por ejemplo de un vector que se encuentra dentro del primer elemento de la lista se pueden usar dos índices dentro de corchete, uno al lado de otro. Ejemplos\n\n# Acceder al tercer elemento de hobbies, que es el cuarto elemento de la lista\nmi_lista[[4]][3]\n\n[1] \"jugar al fútbol\"\n\n# Acceder al primero y segundo elemento de hobbies, que es el cuarto de la lista\nmi_lista[[4]][1:2]\n\n[1] \"leer\"   \"correr\"\n\n\nEs necesario notar la diferencia entre el operador [ y el operador [[ ya que con un solo corchete no estamos accediendo a los elementos que conforman ese elemento anidado, mientras que con el doble corchete, sí nos ubicamos en la parte interna. Ver la diferencia en el siguiente código:\n\n# accedo superficialmente\nmi_lista[4]\n\n$hobbies\n[1] \"leer\"            \"correr\"          \"jugar al fútbol\"\n\n# acceder a todos los elementos de hobbies\nmi_lista[[4]] \n\n[1] \"leer\"            \"correr\"          \"jugar al fútbol\"",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Guía Listas"
     ]
   },
@@ -1891,7 +1891,7 @@
     "section": "Usando el Operador $",
     "text": "Usando el Operador $\n\n# Acceder al elemento \"nombre\"\nmi_lista$nombre\n\n[1] \"Juan\"\n\n# Acceder al elemento \"edad\"\nmi_lista$edad\n\n[1] 30\n\n# Acceder al elemento \"altura\"\nmi_lista$altura\n\n[1] 1.75\n\n# Acceder al elemento \"hobbies\"\nmi_lista$hobbies\n\n[1] \"leer\"            \"correr\"          \"jugar al fútbol\"\n\n# Acceder al tercer elemento de \"hobbies\"\nmi_lista$hobbies[3]\n\n[1] \"jugar al fútbol\"",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Guía Listas"
     ]
   },
@@ -1902,7 +1902,7 @@
     "section": "Modificación de los elementos de una lista",
     "text": "Modificación de los elementos de una lista\nPuedes modificar los elementos de una lista de la misma manera que accedes a ellos.\n\n# Cambiar el nombre\nmi_lista$nombre &lt;- \"Pedro\"\n\n# Añadir un nuevo elemento\nmi_lista$nacionalidad &lt;- \"Venezolana\"\n\n# Ver la lista modificada\nmi_lista\n\n$nombre\n[1] \"Pedro\"\n\n$edad\n[1] 30\n\n$altura\n[1] 1.75\n\n$hobbies\n[1] \"leer\"            \"correr\"          \"jugar al fútbol\"\n\n$nacionalidad\n[1] \"Venezolana\"",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Guía Listas"
     ]
   },
@@ -1924,7 +1924,7 @@
     "section": "",
     "text": "El subsetting consiste en obtener un subconjunto de elementos de un objeto que exista dentro del environment en R. Es una técnica fundamental que te permite seleccionar partes específicas de un objeto determinado como lo son vectores, matrices, data frames, tibbles por mencionar algunas estructuras de datos.\nA continuación hay una serie de ejemplos con distintos objetos.\n\n1. Subsetting en Vectores\nSubsetting de elementos de vectores utilizando índices.\n\n# Crear un vector\nmi_vector &lt;- c(10, 20, 30, 40, 50)\n\n# Seleccionar el tercer elemento\ntercer_elemento &lt;- mi_vector[3]\ntercer_elemento  # Salida: 30\n\n[1] 30\n\n# Seleccionar los primeros tres elementos\nprimeros_tres &lt;- mi_vector[1:3]\nprimeros_tres  # Salida: [1] 10 20 30\n\n[1] 10 20 30\n\n# Seleccionar elementos en posiciones impares\nimpares &lt;- mi_vector[c(1, 3, 5)]\nimpares  # Salida: [1] 10 30 50\n\n[1] 10 30 50\n\n\n\n\n2. Subsetting en Matrices\nUna matriz es una tabla de datos bidimensional y puedes hacer el subsetting en filas y columnas utilizando índices.\n\n# Crear una matriz\nmi_matriz &lt;- matrix(1:8, nrow = 4, byrow = TRUE)\nmi_matriz\n\n     [,1] [,2]\n[1,]    1    2\n[2,]    3    4\n[3,]    5    6\n[4,]    7    8\n\n# Seleccionar la segunda fila\nsegunda_fila &lt;- mi_matriz[2, ]\nsegunda_fila  # Salida: [1] 3 4\n\n[1] 3 4\n\n# Seleccionar la primera columna\nprimera_columna &lt;- mi_matriz[, 1]\nprimera_columna  # Salida: [1]  1 3 5 7\n\n[1] 1 3 5 7\n\n# Seleccionar un elemento específico (fila 3, columna 2)\nelemento_especifico &lt;- mi_matriz[3, 2]\nelemento_especifico  # Salida: 6\n\n[1] 6\n\n\n\n\n3. Subsetting en Data Frames\nUn data frame es una estructura de datos tabular similar a una hoja de cálculo y puedes hacer subsetting de filas y columnas utilizando nombres o índices.\n\n# Crear un data frame\nmi_data_frame &lt;- data.frame(\n  nombre = c(\"Juan\", \"Ana\", \"Carlos\", \"Maria\"),\n  edad = c(25, 30, 35, 40),\n  ciudad = c(\"Caracas\", \"Los Teques\", \"Maracay\", \"Mérida\")\n)\nmi_data_frame\n\n  nombre edad     ciudad\n1   Juan   25    Caracas\n2    Ana   30 Los Teques\n3 Carlos   35    Maracay\n4  Maria   40     Mérida\n\n# Seleccionar la columna 'nombre'\nnombres &lt;- mi_data_frame$nombre\nnombres  # Salida: [1] \"Juan\"   \"Ana\"    \"Carlos\" \"Maria\"\n\n[1] \"Juan\"   \"Ana\"    \"Carlos\" \"Maria\" \n\n# Seleccionar filas donde la edad es mayor a 30\nmayores_30 &lt;- mi_data_frame[mi_data_frame$edad &gt; 30, ]\nmayores_30\n\n  nombre edad  ciudad\n3 Carlos   35 Maracay\n4  Maria   40  Mérida\n\n# Seleccionar columnas 'nombre' y 'ciudad'\nnombre_ciudad &lt;- mi_data_frame[, c(\"nombre\", \"ciudad\")]\nnombre_ciudad\n\n  nombre     ciudad\n1   Juan    Caracas\n2    Ana Los Teques\n3 Carlos    Maracay\n4  Maria     Mérida\n\n\n\n\n4. Subsetting en Listas\nUna lista es una colección de objetos que pueden ser de diferentes tipos y puedes hacer subsetting de elementos utilizando nombres o índices.\n\n# Crear una lista\nmi_lista &lt;- list(\n  vector = c(1, 2, 3),\n  matriz = matrix(4:9, nrow = 2),\n  data_frame = data.frame(x = c(\"a\", \"b\"), y = c(10, 20))\n)\nmi_lista\n\n$vector\n[1] 1 2 3\n\n$matriz\n     [,1] [,2] [,3]\n[1,]    4    6    8\n[2,]    5    7    9\n\n$data_frame\n  x  y\n1 a 10\n2 b 20\n\n# Seleccionar el segundo elemento de la lista (matriz)\nsegundo_elemento &lt;- mi_lista[[2]]\nsegundo_elemento\n\n     [,1] [,2] [,3]\n[1,]    4    6    8\n[2,]    5    7    9\n\n# Seleccionar el tercer elemento de la lista (data frame) y luego la columna 'x'\ntercer_elemento_x &lt;- mi_lista[[3]]$x\ntercer_elemento_x\n\n[1] \"a\" \"b\"\n\n\n\n\nResumen\n\nVectores: Utiliza [ ] con índices para seleccionar elementos.\nMatrices: Utiliza [ ] con filas y columnas separadas por comas.\nData Frames: Puedes usar $ para acceder a columnas o [ ] con nombres de columnas.\nListas: Utiliza [[ ]] para seleccionar elementos individuales.",
     "crumbs": [
-      "Tutoriales",
+      "Tutoriales y Guías",
       "Guía Básica Subsetting"
     ]
   },
@@ -1935,8 +1935,8 @@
     "section": "",
     "text": "Conocer las “paths” o rutas para ubicar directorios o archivos con los cuales se trabajará. Se asume que existe un archivo que se llama “archivo.txt” que está ubicado dentro de la carpeta “Documentos”. La carpeta “Documentos” en Windows se puede llamar “Mis Documentos”.",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -1946,8 +1946,8 @@
     "section": "",
     "text": "Conocer las “paths” o rutas para ubicar directorios o archivos con los cuales se trabajará. Se asume que existe un archivo que se llama “archivo.txt” que está ubicado dentro de la carpeta “Documentos”. La carpeta “Documentos” en Windows se puede llamar “Mis Documentos”.",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -1957,8 +1957,8 @@
     "section": "1. Rutas Absolutas",
     "text": "1. Rutas Absolutas\nUna ruta absoluta es la ruta completa desde la raíz del sistema hasta el archivo o directorio específico.\n\nWindows : Comienza con una letra seguida de dos puntos (por ejemplo, C:) y luego las carpetas separadas por barras invertidas ().\n\n\n# Ejemplo en Windows\npath_absoluto &lt;- \"C:\\\\Users\\\\NombreUsuario\\\\Documentos\\\\archivo.txt\"",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -1968,8 +1968,8 @@
     "section": "1. Rutas Absolutas/cont.",
     "text": "1. Rutas Absolutas/cont.\n\nmacOS/Linux : Comienza desde la raíz del sistema (por ejemplo, /) y luego las carpetas separadas por barras (/).\n\n\n# Ejemplo en macOS/Linux\npath_absoluto &lt;- \"/Users/NombreUsuario/Documentos/archivo.txt\"",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -1979,8 +1979,8 @@
     "section": "2. Rutas Relativas",
     "text": "2. Rutas Relativas\nUna ruta relativa es la ruta desde el directorio de trabajo actual hasta el archivo o directorio específico.\n\nWindows : Las rutas relativas también usan barras invertidas (\\\\).\n\n\n# Ejemplo en Windows\npath_relativo &lt;- \"Documentos\\\\archivo.txt\"\n\n\nmacOS/Linux : Las rutas relativas usan barras (/).\n\n\n# Ejemplo en macOS/Linux\npath_relativo &lt;- \"Documentos/archivo.txt\"",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -1990,8 +1990,8 @@
     "section": "3. Directorio de Trabajo",
     "text": "3. Directorio de Trabajo\nEl directorio de trabajo es el lugar donde R busca archivos por defecto.\nVerificar el Directorio de Trabajo :\n\ngetwd()",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -2001,8 +2001,8 @@
     "section": "3. Directorio de Trabajo/ cont.",
     "text": "3. Directorio de Trabajo/ cont.\n\nCambiar el Directorio de Trabajo :\n\nUsando la interfaz gráfica de RStudio: ⚙️ -Set As Working Directory.... Ver sección inferior derecha:",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -2012,8 +2012,8 @@
     "section": "3. Directorio de Trabajo/ cont.",
     "text": "3. Directorio de Trabajo/ cont.\n\nUsando código para windows:\n\n# Para Windows\nsetwd(\"C:\\\\Users\\\\NombreUsuario\\\\Documentos\")\n\nUsando código para MacOS\n\n# Para macOS/Linux\nsetwd(\"/Users/NombreUsuario/Documentos\")",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -2023,8 +2023,8 @@
     "section": "4. Leer Archivos",
     "text": "4. Leer Archivos\n\nLectura de un archivo en Windows :\n\n# Ruta relativa\ndatos &lt;- read.csv(\"archivo.csv\")  \n\n# Ruta absoluta en Windows\ndatos &lt;- read.csv(\"C:\\\\Users\\\\NombreUsuario\\\\Documentos\\\\archivo.csv\")  \n\nLectura de un archivo en MacOS:\n\n# Ruta relativa\ndatos &lt;- read.csv(\"archivo.csv\")  \n# Ruta absoluta en macOS/Linux\ndatos &lt;- read.csv(\"/Users/NombreUsuario/Documentos/archivo.csv\")",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -2034,8 +2034,8 @@
     "section": "5 Escribir Archivos",
     "text": "5 Escribir Archivos\n\nEscritura de un archivo en Windows:\n\n# Ruta relativa\nwrite.csv(datos, \"nuevo_archivo.csv\")  \n# Ruta absoluta en Windows\nwrite.csv(datos, \"C:\\\\Users\\\\NombreUsuario\\\\Documentos\\\\nuevo_archivo.csv\")  \n\nEscritura de un archivo en MacOS\n\n# Ruta relativa\nwrite.csv(datos, \"nuevo_archivo.csv\")  \n# Ruta absoluta en macOS/Linux\nwrite.csv(datos, \"/Users/NombreUsuario/Documentos/nuevo_archivo.csv\")",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -2045,8 +2045,8 @@
     "section": "6. Consideraciones para Usuarios de Diferentes Sistemas Operativos",
     "text": "6. Consideraciones para Usuarios de Diferentes Sistemas Operativos\n\nFunción file.path : Esta función ayuda a construir rutas que sean compatibles con el sistema operativo que está usando.\n\nruta_archivo &lt;- file.path(\"Directorio1\", \"Subdirectorio2\", \"archivo.txt\")\nruta_archivo",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -2056,8 +2056,8 @@
     "section": "Resumen",
     "text": "Resumen\n\nRutas Absolutas: Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.\nRutas Relativas: Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux.",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
     ]
   },
   {
@@ -2067,8 +2067,61 @@
     "section": "Resumen/cont.",
     "text": "Resumen/cont.\n\nDirectorio de Trabajo: Se puede verificar y cambiar usando getwd() y setwd().\nLeer/Escribir Archivos: Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.",
     "crumbs": [
-      "Tutoriales",
-      "Tutorial Rutas de Trabajo"
+      "Tutoriales y Guías",
+      "Rutas de Trabajo"
+    ]
+  },
+  {
+    "objectID": "notebooks/Tarea_01.html#nombre",
+    "href": "notebooks/Tarea_01.html#nombre",
+    "title": "Indique su nombre y cédula",
+    "section": "Nombre:",
+    "text": "Nombre:"
+  },
+  {
+    "objectID": "notebooks/Tarea_01.html#cédula",
+    "href": "notebooks/Tarea_01.html#cédula",
+    "title": "Indique su nombre y cédula",
+    "section": "Cédula:",
+    "text": "Cédula:"
+  },
+  {
+    "objectID": "notebooks/Tarea_01.html#estadística-i-tarea-01",
+    "href": "notebooks/Tarea_01.html#estadística-i-tarea-01",
+    "title": "Indique su nombre y cédula",
+    "section": "Estadística I, Tarea 01",
+    "text": "Estadística I, Tarea 01\nA continuación hay una serie de ejercicios que debe completar. Algunos de los códigos ya están vaciados para que se facilite realizar estar tarea.\nSe recomienda para cada uno de los conjuntos de datos a trabajar, revise los datos que contienen, así como también usar las funciones de ayuda ? obtener información sobre los mismos y de esta manera lograr facilitar la comprensión sobre los datos a trabajar.\n\nRecomendaciones\nUsar funciones apropiadas para obtener los valores solicitados. Revise los ejercicios de codificación anteriormente presentados en el curso, las láminas, así como el libro Open Intro Stats. \nSi realiza algún cálculo manualmente deberá añadir las celdas de código con tales cálculo, tantas como sea necesario.\nEn cada una de las celdas de código, añada comentarios con el símbolo numeral (#) al inicio de la celda para indicar los procedimientos realizados.\nRecuerde cuidar la redacción y ortografía en la información que presente.\nEn caso de tener alguna duda sobre los procedimientos a seguir, usar el grupo de whatsapp.\nSe recuerda que la terea debe ser realizada de forma individual.\n\n# instalar y cargar paquetes con los que se trabajará. No modificar esta celda\ninstall.packages ('openintro')\ninstall.packages ('gtsummary')\nlibrary ('openintro')\nlibrary ('gtsummary')\nlibrary ('dplyr')"
+  },
+  {
+    "objectID": "notebooks/Tarea_01.html#tratamiento-de-tumores-con-etanol",
+    "href": "notebooks/Tarea_01.html#tratamiento-de-tumores-con-etanol",
+    "title": "Indique su nombre y cédula",
+    "section": "1) Tratamiento de tumores con etanol",
+    "text": "1) Tratamiento de tumores con etanol\n\nNombre del conjunto de datos\nethanol\n\n\nDescripción\nExperimento en el que se probaron 3 tratamientos diferentes de etanol para el tratamiento de tumores de cáncer oral en hámsters.\nLa columna “regress” especifica si el tratamiento tuvo efecto con la categoría “yes” o “no” en caso de no tener algún efecto sobre el tumor.\nLa columna “treatment” indica el tratamiento que recibió el hámster.\n\n\nDetalles\nLos tratamientos de etil_celulosa y etanol_puro consistían en aproximadamente una cuarta parte del volumen de los tumores, mientras que el tratamiento de etanol_puro_16x era 16 veces mayor, es decir, unas 4 veces el tamaño de los tumores.\n\n\nFuente\nMorhard R, et al. 2017. Desarrollo de la ablación mejorada con etanol como alternativa a la cirugía en el tratamiento de tumores sólidos superficiales.\n\n\nAsignación\n\n¿Cómo se presentan los datos? \n¿Cuántas observaciones tiene el conjunto de datos? \n¿Cuántas variables tiene el conjunto de datos y cómo se llaman? \nCrear una tabla de contigencia que represente los totales por tratamiento. Calcular la frecuencia relativa de cada uno de estos experimentos y su éxito (puede usar los códigos revisados o hacerlo manualmente). \nRealice una explicación escrita sobre los resultados obtenidos (tipo de estudio, siginficado de los resultados, generalizable, etc.). Puede llegar a alguna conclusión con los datos presentados? Sea lo más explícito posible.\n\n\nethanol"
+  },
+  {
+    "objectID": "notebooks/Tarea_01.html#indicadores-económicos-y-de-sostenibilidad-para-sudáfrica.",
+    "href": "notebooks/Tarea_01.html#indicadores-económicos-y-de-sostenibilidad-para-sudáfrica.",
+    "title": "Indique su nombre y cédula",
+    "section": "2) Indicadores Económicos y de Sostenibilidad para Sudáfrica.",
+    "text": "2) Indicadores Económicos y de Sostenibilidad para Sudáfrica.\n\nNombre del Conjunto de Datos\nsa_gdp_elec\n\n\nDescripción\nIncluye datos anuales sobre pib, gni, emisiones de co2, costes de puesta en marcha.\n\n\nDetalles\naño: Año de recogida de los datos.\naccess_elec: Acceso a la electricidad en porcentaje de la población.\npuesta en marcha: Coste de los procedimientos de creación de empresas en porcentaje de la GNI.\nco2: Emisión de CO2 en kt (kilotoneladas).\ngdp: PIB per cápita, PPA en dólares internacionales constantes de 2017.\ngni: GNI per cápita, PPA en dólares internacionales constantes de 2017. GNI (gross national income) es la cantidad total de dinero que ganan los ciudadanos y las empresas de un país.\nco2_kg_ppp: kg por PIB en dólares PPA de 2017.\n\n\nFuente\nWorld Bank I\nCarbon Dioxide Information Analysis Center, Environmental Sciences Division\n\n\nAsignación\n\n¿Cuántas observaciones tiene el conjunto de datos?\nIndique el tipo de cada una de ls variables.\nRealice un histograma para la variable co2 e indique cuántas barras recomienda aplicar para visualizar este gráfico.\nExplique si tiene sentido crear un histograma para la variable year\nMuestre dos gráficos de dispersión entre variables que pueden estar asociadas, el tipo de relación que presenten e intente identificar cuáles pueden ser las variables explicativas y de respuesta\n¿Puede indentificar algunas variables que resulten independientes?. Justifique\nIdentifique el tipo de estudio que se revisó en esta sección\n\n\nsa_gdp_elec"
+  },
+  {
+    "objectID": "notebooks/Tarea_01.html#representación-de-histogramas",
+    "href": "notebooks/Tarea_01.html#representación-de-histogramas",
+    "title": "Indique su nombre y cédula",
+    "section": "3) Representación de Histogramas",
+    "text": "3) Representación de Histogramas\nA continuación se presenta el código para generar 3 histogramas donde cada uno corresponde a un conjunto de datos distinto. Para cada uno, realizar las siguientes actividades:\n\nGenerar el gráfico y determinar si variando la cantidad de barras mediante el parametro breaks puede mejorar la representación.\nIdentificar el conjunto de dato usado para generar los gráficos así como el nombre de la variable, especificando lo que representa y el tipo de variable.\nIdentifique la modalidad de la distribución, así como posibles sesgos, según su selección de cantidad de barras\n\n\nhist(london_murders$age, breaks = 15)\n\n\nrespuestas:\nusar tantas celdas de código y texto como sea necesario\n\nhist(LAhomes$sqft)\n\n\n\nrespuestas:\nusar tantas celdas de código y texto como sea necesario\n\nhist(life_exp$income)\n\n\n\nrespuestas:\nusar tantas celdas de código y texto como sea necesario\n\nhist(lego_population$pieces, breaks=5)\n\n\n\nrespuestas:\nusar tantas celdas de código y texto como sea necesario"
+  },
+  {
+    "objectID": "taller_01.html",
+    "href": "taller_01.html",
+    "title": "Taller 1",
+    "section": "",
+    "text": "##########################################################################################\n# \n# Clase 08- script Taller\n# \n##########################################################################################\n\n##########################################################################################\n######## Directorio de Trabajo                                                     #######\n##########################################################################################\n\n# obtener directorio de trabajo\ngetwd()\n\n# asignar el directorio de trabajo a una variable\ndirectorio_cursor &lt;- getwd()\n\n# crear directorio (carpeta)\ndir.create(path = 'talleres')\n\n# cargar paquete para obtener conjunto de datos\nlibrary(gapminder)\n\n# inspeccionar conjunto de datos\ngapminder\n# estructura de datos de tipo tibble (data frame con esteroides)\n\nView(gapminder)\n\n\n# crear un objeto con una copia de los datos contenidos en gapminder\ngapminder_copia &lt;- gapminder\n\n# guardarlo en formato RDS\nsaveRDS(gapminder_copia,\n        paste0(directorio_cursor,'/gap_copia.rds'))\n\n# equivalente a \nsaveRDS(gapminder_copia,\n        'talleres/gap_copia.rds')\n\n# guardar objeto que contiene directorio de trabajo\nsaveRDS(directorio_cursor,\n        'talleres/ruta_originan.rds')\n\n# limpiar todo el ambiente de trabajo para posteriormente hacer algunas verficaciones\n\nrm(list=ls())\n\n\n# leer el archivo RDS guardado en la línea 34 o 38\ngapminder_copia &lt;- readRDS('talleres/gap_copia.RDS')\n\n# verificar estructura de datos y comparar ambos objetos\nView(gapminder)\nView(gapminder_copia)\n\n\ngapminder\ngapminder_copia\n# ambos parecieran coincidir\n\n##########################################################################################\n######## Cambiar Directorio de Trabajo                                             #######\n##########################################################################################\n# cargar la ruta inicial\ndirectorio_cursor &lt;- readRDS('talleres/ruta_originan.rds')\n\n# cambiar directorio de trabajo mediante setwd y uso de la función paste0\nsetwd(paste0(directorio_cursor,'/talleres'))\n\n# verificar la ruta que se conforma mediante paste0\npaste0(directorio_cursor,'/talleres')\n\n# Ahora, la lectura de los datos no necesita especificar que está en la carpeta talleres ya\n# que en la línea 66 cambiamos el directorio de trabajo a la carpeta \"talleres\"\ngapminder_copia &lt;- readRDS('gap_copia.RDS')\n\n##########################################################################################\n######## Guargar datos en formato csv.                                             #######\n##########################################################################################\n\nwrite.csv(gapminder, 'gap2_copia.csv')\n\n# lectura de datos en formato csv (lectura de archivo que se guardó en línea 82)\ngapminder_copia2 &lt;- read.csv('gap2_copia.csv')\n\n# comparar objetos\ngapminder_copia\ngapminder_copia2\n\n# revisar diferencias entre objetos con las siguientes funciones:\n## clase objetos:\nclass(gapminder_copia)\nclass(gapminder_copia2)\n\n## nombres filas\nrow.names(gapminder_copia)\nrow.names(gapminder_copia2)\n\n## nombres columnas\ncolnames(gapminder_copia)\ncolnames(gapminder_copia2)\n\n## dimensiones\ndim(gapminder_copia)\ndim(gapminder_copia2)\n\n## uso de la función str\nstr(gapminder_copia)\nstr(gapminder_copia2)\n\n## uso de la función summary. \n## !importante: prestar atención al retorno de esta función\nsummary(gapminder_copia)\nsummary(gapminder_copia2)\n\n##########################################################################################\n######## Cambiar Directorio de Trabajo                                             #######\n##########################################################################################\n# cargar la ruta inicial\ndirectorio_cursor &lt;- readRDS('ruta_originan.rds')\n\n# volver al directorio de trabajo original del Proyecto\nsetwd(directorio_cursor)\n# nos apoyamos de la variable directorio_cursor",
+    "crumbs": [
+      "Talleres",
+      "Taller 1"
     ]
   }
 ]

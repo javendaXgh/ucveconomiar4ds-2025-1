@@ -1,0 +1,135 @@
+---
+title: "Taller 1"
+execute: 
+  echo: true
+  eval: false
+---
+
+```{r}
+##########################################################################################
+# 
+# Clase 08- script Taller
+# 
+##########################################################################################
+
+##########################################################################################
+######## Directorio de Trabajo                                                     #######
+##########################################################################################
+
+# obtener directorio de trabajo
+getwd()
+
+# asignar el directorio de trabajo a una variable
+directorio_cursor <- getwd()
+
+# crear directorio (carpeta)
+dir.create(path = 'talleres')
+
+# cargar paquete para obtener conjunto de datos
+library(gapminder)
+
+# inspeccionar conjunto de datos
+gapminder
+# estructura de datos de tipo tibble (data frame con esteroides)
+
+View(gapminder)
+
+
+# crear un objeto con una copia de los datos contenidos en gapminder
+gapminder_copia <- gapminder
+
+# guardarlo en formato RDS
+saveRDS(gapminder_copia,
+        paste0(directorio_cursor,'/gap_copia.rds'))
+
+# equivalente a 
+saveRDS(gapminder_copia,
+        'talleres/gap_copia.rds')
+
+# guardar objeto que contiene directorio de trabajo
+saveRDS(directorio_cursor,
+        'talleres/ruta_originan.rds')
+
+# limpiar todo el ambiente de trabajo para posteriormente hacer algunas verficaciones
+
+rm(list=ls())
+
+
+# leer el archivo RDS guardado en la línea 34 o 38
+gapminder_copia <- readRDS('talleres/gap_copia.RDS')
+
+# verificar estructura de datos y comparar ambos objetos
+View(gapminder)
+View(gapminder_copia)
+
+
+gapminder
+gapminder_copia
+# ambos parecieran coincidir
+
+##########################################################################################
+######## Cambiar Directorio de Trabajo                                             #######
+##########################################################################################
+# cargar la ruta inicial
+directorio_cursor <- readRDS('talleres/ruta_originan.rds')
+
+# cambiar directorio de trabajo mediante setwd y uso de la función paste0
+setwd(paste0(directorio_cursor,'/talleres'))
+
+# verificar la ruta que se conforma mediante paste0
+paste0(directorio_cursor,'/talleres')
+
+# Ahora, la lectura de los datos no necesita especificar que está en la carpeta talleres ya
+# que en la línea 66 cambiamos el directorio de trabajo a la carpeta "talleres"
+gapminder_copia <- readRDS('gap_copia.RDS')
+
+##########################################################################################
+######## Guargar datos en formato csv.                                             #######
+##########################################################################################
+
+write.csv(gapminder, 'gap2_copia.csv')
+
+# lectura de datos en formato csv (lectura de archivo que se guardó en línea 82)
+gapminder_copia2 <- read.csv('gap2_copia.csv')
+
+# comparar objetos
+gapminder_copia
+gapminder_copia2
+
+# revisar diferencias entre objetos con las siguientes funciones:
+## clase objetos:
+class(gapminder_copia)
+class(gapminder_copia2)
+
+## nombres filas
+row.names(gapminder_copia)
+row.names(gapminder_copia2)
+
+## nombres columnas
+colnames(gapminder_copia)
+colnames(gapminder_copia2)
+
+## dimensiones
+dim(gapminder_copia)
+dim(gapminder_copia2)
+
+## uso de la función str
+str(gapminder_copia)
+str(gapminder_copia2)
+
+## uso de la función summary. 
+## !importante: prestar atención al retorno de esta función
+summary(gapminder_copia)
+summary(gapminder_copia2)
+
+##########################################################################################
+######## Cambiar Directorio de Trabajo                                             #######
+##########################################################################################
+# cargar la ruta inicial
+directorio_cursor <- readRDS('ruta_originan.rds')
+
+# volver al directorio de trabajo original del Proyecto
+setwd(directorio_cursor)
+# nos apoyamos de la variable directorio_cursor
+
+```

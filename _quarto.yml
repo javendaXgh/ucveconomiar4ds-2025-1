@@ -67,7 +67,9 @@ website:
             text: tarea 2
       - section: "Talleres"
         contents:
-      - section: "Tutoriales"
+          - href: taller_01.qmd
+            text: Taller 1
+      - section: "Tutoriales y Guías"
         contents:
           - href: tutorial_instal.qmd
             text: Instalación R y RStudio
@@ -80,7 +82,7 @@ website:
           - href: guia_subsetting.qmd
             text: Guía Básica Subsetting
           - href: tutorial_paths.qmd
-            text: Tutorial Rutas de Trabajo
+            text: Rutas de Trabajo
         
       - section: "Videos de Apoyo"
         contents:
