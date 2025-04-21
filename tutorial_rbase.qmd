@@ -10,7 +10,7 @@ Con *R base* nos referimos a los comandos básicos que vienen incorporados en el
 
 ## Uso de la consola como una calculadora- operaciones aritméticas
 
--   En la consola podemos hacer calculos tal cual si estuviesemos usando una calculadora
+-   En la consola podemos hacer cálculos tal cual si estuviésemos usando una calculadora
 
 ```{r calculadora, include=TRUE, echo=TRUE}
 5*3+6
@@ -163,7 +163,7 @@ is.numeric(x)
 
 ```
 
--   **Númericos**: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo "float" y "double".
+-   **Numéricos**: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo "float" y "double".
 
 ```{r data_types.cont, include=TRUE, echo=TRUE}
 x <- 2
@@ -296,7 +296,7 @@ Seguimos,
 
 ### vectores - character
 
--   **Datos de caracteres:** se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, númerico, matriz, etc. El valor debe estar declarado entre comillas simples " o comilla sencilla '. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas
+-   **Datos de caracteres:** se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, numérico, matriz, etc. El valor debe estar declarado entre comillas simples " o comillas sencilla '. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas
 
 ```{r caracteres, include=TRUE, echo=TRUE}
 nombre <- 'jose miguel'
@@ -417,17 +417,17 @@ Por otra parte, la función `mode()` nos permite determinar como está guardando
 
 -   El **numeral** `#` se utiliza para hacer comentarios. Todo lo que se escribe después del \# no es interpretado por R. Se debe utilizar un \# por cada línea de código que se desea anular
 
--   Los **corchetes** `[]` se utilizan para acceder a los elementos que confoman algunos tipos de objetos:
+-   Los **corchetes** `[]` se utilizan para acceder a los elementos que conforman algunos tipos de objetos:
 
     -   en un vector \[n° orden\]
     -   en una data frame \[fila, columna\]
     -   en una lista \[n° elemento\]
 
--   el signo **\$** también es un método de acceso. Particularmente, en los dataframes, nos permitira acceder a una determinada columna de una tabla
+-   el signo **\$** también es un método de acceso. Particularmente, en los dataframes, nos permitirá acceder a una determinada columna de una tabla
 
 -   Los **paréntesis**`()` se utilizan en las funciones para definir los parámetros.
 
--   Las **comas** `,` se utilizan para separar los parametros al interior de una función.
+-   Las **comas** `,` se utilizan para separar los parámetros al interior de una función.
 
 ## Ambientes de trabajo
 
@@ -458,7 +458,7 @@ Rstudio tiene una herramienta muy útil de trabajo que son los **proyectos**. Es
 
 Un proyecto no es un sólo script, sino toda una carpeta asociada a una estructura de trabajo donde los distintos scripts, archivos, datos de entrada y-o salida, son organizados de forma lógica
 
-Para crearlo, vamos al logo de "nuevo projecto " (Arriba a la derecha de la pantalla), y elegimos la carpeta de trabajo.
+Para crearlo, vamos al logo de "nuevo proyecto " (Arriba a la derecha de la pantalla), y elegimos la carpeta de trabajo.
 
 ## Tipos de archivos de R
 

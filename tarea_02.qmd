@@ -15,7 +15,7 @@ date: '2025/04/13'
 
     4.  Crear una lista con al menos cuatro elementos de distintas clases, donde cada uno de estos contenga al menos dos otros elementos.
 
-    5.  Crear una matriz con 16 elementos que presente al menos 3 combinaciones de dimensiones distintas.
+    5.  Crear tres matrices con los mismos 16 elementos y que presenten 3 combinaciones de dimensiones distintas.
 
     6.  Con listas:
 
@@ -65,7 +65,7 @@ date: '2025/04/13'
 
 -   Cada uno de los puntos anteriores con cada requerimiento, debe ser señalado en el script mediante un comentario. Tener presente la legibilidad y claridad que debe tener el script para que sea comprensible para quien lo lee.
 
--   No deben existir líneas sin el formato necesario, bien sea con el formato de comentarios o con el de líneas ejecutables.
+-   No deben existir líneas sin el formato necesario, bien sea con el formato de comentarios, con el de líneas ejecutables o que estén en blanco.
 
 -   Los códigos anteriores deben programarse en un script con la extensión `.R`. El nombre del script a remitir será el siguiente `tarea_2_ci.R`. El valor "ci" debe ser el de su cédula de identidad sin puntos u otro signo.
 

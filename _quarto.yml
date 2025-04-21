@@ -79,6 +79,8 @@ website:
             text: Guía Listas
           - href: guia_subsetting.qmd
             text: Guía Básica Subsetting
+          - href: tutorial_paths.qmd
+            text: Tutorial Rutas de Trabajo
         
       - section: "Videos de Apoyo"
         contents:
