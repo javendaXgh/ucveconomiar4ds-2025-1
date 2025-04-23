@@ -2696,7 +2696,7 @@
     "href": "clases/clase_09.html#función-which",
     "title": "Ciencia de Datos para Economistas",
     "section": "Función which",
-    "text": "Función which\nwhich indica el índice de los elementos que cumplen una condición lógica\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nCon el índice obtenemos\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Función which\nwhich indica el índice de los elementos que cumplen una condición lógica\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nCon el índice obtenemos\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nUsando las funciones de forma anidada\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_09.html#usando-el-operador-in",
@@ -3368,6 +3368,6 @@
     "href": "clases/clase_09.html#negación-del-operador-in",
     "title": "Ciencia de Datos para Economistas",
     "section": "Negación del Operador %in%",
-    "text": "Negación del Operador %in%\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Negación del Operador %in%\nprecediendo la expresión que se evalúa, se coloca el operador ! como se muestra a continuación\n!gap_2007$country %in% c('Colombia', 'Venezuela')\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]

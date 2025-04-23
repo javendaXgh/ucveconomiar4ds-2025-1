@@ -328,6 +328,10 @@ gap_2007[gap_2007$country %in% c('Colombia','Venezuela'),]
 
 ## Negación del Operador `%in%`
 
+precediendo la expresión que se evalúa, se coloca el operador `!` como se muestra a continuación
+
+`!gap_2007$country %in% c('Colombia', 'Venezuela')`
+
 ```{webr-r}
 gap_2007[!gap_2007$country %in% c('Colombia','Venezuela'),]
 ```
