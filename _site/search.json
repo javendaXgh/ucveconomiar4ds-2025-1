@@ -2702,8 +2702,8 @@
     "objectID": "clases/clase_09.html#usando-el-operador-in",
     "href": "clases/clase_09.html#usando-el-operador-in",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Usando el operador %in%",
-    "text": "Usando el operador %in%\nCuando se tiene más de un elemento a comparar se usa el operador %in%\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n🔗 ucveconomiar4ds"
+    "section": "Usando el Operador %in%",
+    "text": "Usando el Operador %in%\nCuando se tiene más de un elemento a comparar se usa el operador %in%\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_09.html#inspeccionar-datos-últimas-filas",
@@ -3362,5 +3362,12 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Contenido",
     "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA"
+  },
+  {
+    "objectID": "clases/clase_09.html#negación-del-operador-in",
+    "href": "clases/clase_09.html#negación-del-operador-in",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Negación del Operador %in%",
+    "text": "Negación del Operador %in%\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]

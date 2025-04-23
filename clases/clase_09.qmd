@@ -37,6 +37,7 @@ format:
 ```{r}
 #| echo: false
 gap_2007 <- read.csv('https://raw.githubusercontent.com/javendaXgh/ucveconomiaestadistica1/refs/heads/main/apps/datos/gap_2007.csv')[,-1]
+# aca mquite la primera columna
 ```
 
 ```{webr-r}
@@ -310,10 +311,23 @@ Con el índice obtenemos
 gap_2007[137, ]
 ```
 
-## Usando el operador `%in%`
+Usando las funciones de forma anidada
+
+```{webr-r}
+
+gap_2007[which(gap_2007$country=='Venezuela'), 'pop']
+```
+
+## Usando el Operador `%in%`
 
 Cuando se tiene más de un elemento a comparar se usa el operador `%in%`
 
 ```{webr-r}
 gap_2007[gap_2007$country %in% c('Colombia','Venezuela'),]
+```
+
+## Negación del Operador `%in%`
+
+```{webr-r}
+gap_2007[!gap_2007$country %in% c('Colombia','Venezuela'),]
 ```
