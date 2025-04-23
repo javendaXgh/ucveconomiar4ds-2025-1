@@ -1,6 +1,6 @@
 ---
 title: "Ciencia de Datos para Economistas"
-subtitle: "Clase 8- Inspeccionar Data Frames"
+subtitle: "Clase 9- Importar e Inspeccionar un Conjunto de Datos"
 date: "04/23/2025"
 author: "MSc. José M. Avendaño"
 # output:

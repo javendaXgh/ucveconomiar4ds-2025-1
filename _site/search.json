@@ -2506,8 +2506,8 @@
     "objectID": "clases/clase_09.html#objetivo",
     "href": "clases/clase_09.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Inspeccionar valores, rangos y estructura de una DF\nPresentar operadores lógicos y trabajar con ellos\nAcceder a elementos de vectores y DF’s según condiciones lógicas\n🧐 Hacernos preguntas sobre el conjunto de datos"
+    "section": "Objetivo",
+    "text": "Objetivo\n\nInspeccionar valores, rangos y estructura de una DF\nPresentar operadores lógicos y trabajar con ellos\nAcceder a elementos de vectores y DF’s según condiciones lógicas\n🧐 Hacernos preguntas sobre el conjunto de datos"
   },
   {
     "objectID": "clases/clase_09.html#ciclo",
@@ -2633,7 +2633,7 @@
     "href": "clases/clase_09.html#vector-lógico-con-valores-que-cumplen-una-condición",
     "title": "Ciencia de Datos para Economistas",
     "section": "Vector Lógico con valores que Cumplen una Condición",
-    "text": "Vector Lógico con valores que Cumplen una Condición\nMayor que un valor dado, en este caso 76.41 que representa el Q3\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nNota\n\n\n\nSe seleccionan 15 valores [1:15] para representación en la lámina"
+    "text": "Vector Lógico con valores que Cumplen una Condición\nMayor que un valor dado, en este caso 76.41 que representa el Q3\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nNota\n\n\nSe seleccionan 15 valores [1:15] para representación en la lámina"
   },
   {
     "objectID": "clases/clase_09.html#vector-lógico-con-valores-que-cumplen-una-condición--cont.",
@@ -2682,7 +2682,7 @@
     "href": "clases/clase_09.html#operador-igual-a",
     "title": "Ciencia de Datos para Economistas",
     "section": "Operador == igual a",
-    "text": "Operador == igual a\nOperador == doble igualdad\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nImportante\n\n\n\n== 👀 es distinto a asignación ="
+    "text": "Operador == igual a\nOperador == doble igualdad\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nImportante\n\n\n== 👀 es distinto a asignación ="
   },
   {
     "objectID": "clases/clase_09.html#operador-diferente",
@@ -2703,7 +2703,7 @@
     "href": "clases/clase_09.html#usando-el-operador-in",
     "title": "Ciencia de Datos para Economistas",
     "section": "Usando el operador %in%",
-    "text": "Usando el operador %in%\nCuando se tiene más de un elemento a comparar se usa el operador %in%\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Usando el operador %in%\nCuando se tiene más de un elemento a comparar se usa el operador %in%\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_09.html#inspeccionar-datos-últimas-filas",
