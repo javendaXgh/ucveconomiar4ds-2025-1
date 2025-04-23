@@ -12,6 +12,7 @@ engine: knitr
 format: 
   revealjs:
     incremental: true   
+    preview-links: true
 # execute: 
 #   echo: true
   # eval: false
@@ -174,7 +175,7 @@ table(mtcars$cyl)
 
 ## Playground {.small}
 
-Reforzar con lectura propuesta "[Tabla de Verdad](https://es.wikipedia.org/wiki/Tabla_de_verdad)" (conjunción y disyunción).
+Reforzar con lectura propuesta "[Tabla de Verdad](https://es.wikipedia.org/wiki/Tabla_de_verdad)" ([conjunción](https://es.wikipedia.org/wiki/Tabla_de_verdad#Conjunción) y [disyunción](https://es.wikipedia.org/wiki/Tabla_de_verdad#Disyunción)).
 
 ```{webr-r}
 ##### conjunción (y) /ir descomentando línea a línea
