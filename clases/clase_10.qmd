@@ -145,7 +145,7 @@ Tomado de La Evaluación de Impacto en la Práctica, Banco Mundial [enlace](http
 #| fig-align: center
 #| echo: false
 ggplot(data= gapminder_afeu,
-       mapping =aes(lifeExp, gdpPercap))+
+       mapping =aes(x= gdpPercap,y= lifeExp))+
   geom_point(color =c("#9d0208"))+
   geom_smooth()+
   facet_wrap(~year)
@@ -157,7 +157,7 @@ ggplot(data= gapminder_afeu,
 #| fig-align: center
 #| echo: false
 ggplot(data= gapminder_afeu,
-       mapping =aes(lifeExp, gdpPercap))+
+       mapping =aes(x= gdpPercap, y= lifeExp))+
   geom_point(color =c("#9d0208"))+
   geom_smooth()+
   facet_wrap(~year~continent)
