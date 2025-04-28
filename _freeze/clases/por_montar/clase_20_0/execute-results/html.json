@@ -1,0 +1,15 @@
+{
+  "hash": "7633b5bbc46cb37a1fdad0e4600f92fe",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Ciencia de Datos para Economistas\"\nsubtitle: \"Clase 20: Presentación\"\ndate: \"January 22, 2025\"\nauthor: \"M.Sc. José M. Avendaño\"\noutput:\n  html_document:\n    toc: yes\n    incremental: true\n# filters:\n#   - webr\nengine: knitr\nformat: \n  revealjs:\n    incremental: true\nexecute:\n  echo: true\n  eval: false\n---\n\n\n\n\n\n## Anuncios\n\n-   Tramitar API key [Google AI Studio](https://aistudio.google.com/)\n\n-   Tramitar API key [RapidApi](https://rapidapi.com)\n\n-   Retardos en tareas. Fin del plazo\n\n-   Programación Actividades\n\n-   Clase faltante lunes 20-01.\n\n    -   presencial miércoles 29 en la mañana\n\n    -   remota, fecha por definir semana 27 al 31-01\n\n## Objetivo\n\nConocer los \"principios de gráficos analíticos\" para crear visualizaciones de datos para el análisis exploratorio de los datos (exploratory data analysis - EDA).\n\n***90% del tiempo...***\n\n![](clases/images/cd_ciclo_3.png)\n\n## Contenido\n\n-   Repaso clase IAVD\n\n-   Principios de Gráficos Analíticos\n\n-   Gráficos Exploratorios (GE)\n\n-   Librerías para EDA\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
