@@ -1,44 +1,27 @@
 ---
-title: "Ciencia de Datos para Economistas"
-subtitle: "Clase 20 - Gráficos Exploratorios (GE)"
+subtitle: "Clase 11: Gráficos Exploratorios (GE)"
 date: "2025/04/30"
-author: "M.Sc. José M. Avendaño"
-output:
-  html_document:
-    toc: yes
-    incremental: true
-
-engine: knitr
 format:
   revealjs:
     incremental: true
-execute:
- echo: false
 ---
 
-```{r}
-#| echo: false
-#| warning: false
+```{css, echo = FALSE}
 
-library(tidyverse)
-library(gapminder)
-library(datasets)
-data(cars)
+.reveal pre code {
+  width: 450px;
+}
 
-gapminder_2007 <- gapminder%>%
-  filter(year==2007)
-
-gapminder_anno <- gapminder%>%
-  group_by(year)
-
-gapminder_2007_afeu <- gapminder_2007%>%
-  filter(continent %in% c('Africa','Europe'))%>%
-  mutate(continent= as.character(continent))
-
-
-gapminder_afeu <- gapminder%>%
-  filter(continent %in% c('Africa','Europe'))%>%
-  mutate(continent= as.character(continent))
+/* fuente c'odigos en contenido lamina qwebr*/
+.reveal code {
+  font-size:  16px !important;
+  color: #0096c7 !important;
+  background-color: #ced4da !important;
+}
+.large_code pre code {
+  width: 1000px!important;
+  font-size:  24px !important;
+}
 ```
 
 ```{r}
@@ -47,21 +30,7 @@ gapminder_afeu <- gapminder%>%
 
 library(tidyverse)
 library(gapminder)
-
-gapminder_2007 <- gapminder%>%
-  filter(year==2007)
-
-gapminder_anno <- gapminder%>%
-  group_by(year)
-
-gapminder_2007_afeu <- gapminder_2007%>%
-  filter(continent %in% c('Africa','Europe'))%>%
-  mutate(continent= as.character(continent))
-
-
-gapminder_afeu <- gapminder%>%
-  filter(continent %in% c('Africa','Europe'))%>%
-  mutate(continent= as.character(continent))
+library(datasets)
 ```
 
 ## Gráficos Exploratorios (GE)
@@ -114,59 +83,66 @@ El contenido de las tres anteriores láminas se basa en la presentación "Explor
 
     -   ScatterPlots (bidimensional) - Diagrama de Dispersión
 
-## Conjuntos de Datos a Usar 1
+## Conjuntos de Datos a Usar 1 {.large_code}
 
-### Gapminder {.small}
+#### Gapminder
 
 ```{r}
 #| echo: true
 head(gapminder)
-
-
 ```
 
-## Conjuntos de Datos a Usar 2
+## Conjuntos de Datos a Usar 2 {.large_code}
 
-### Gapminder 2007
+#### Gapminder 2007
 
 ```{r}
 #| echo: true
-#| eval: false
-
+#| eval: true
 
 gapminder_2007 <- gapminder%>%
   filter(year==2007)
-
-
 ```
 
-## Conjuntos de Datos a Usar 3
+```{r}
+head(gapminder_2007)
+```
 
-### Gapminder África y Europa
+## Conjuntos de Datos a Usar 3 {.large_code}
+
+#### Gapminder África y Europa
 
 ```{r}
 #| echo: true
-#| eval: false
+#| eval: true
 
 gapminder_afeu <- gapminder%>%
   filter(continent %in% c('Africa','Europe'))%>%
   mutate(continent= as.character(continent))
 ```
 
-## Conjuntos de Datos a Usar 4
+```{r}
+head(gapminder_afeu)
+```
 
-### Gapminder África y Europa 2007
+## Conjuntos de Datos a Usar 4 {.large_code}
+
+#### Gapminder África y Europa 2007
 
 ```{r}
 #| echo: true
-#| eval: false
+#| eval: true
 
 gapminder_2007_afeu <- gapminder_2007%>%
   filter(continent %in% c('Africa','Europe'))%>%
   mutate(continent= as.character(continent))
 ```
 
-## Tablas Sumario
+```{r}
+head(gapminder_2007_afeu)
+```
+
+## Tablas Sumario {.large_code}
 
 ```{r}
 #| echo: true
@@ -203,19 +179,19 @@ boxplot(lifeExp ~ continent,
         data = gapminder_2007,
         col = "#fb8b24",
         xlab='Continente',
-        ylab='Expectativa de Vida')
+        ylab='Expectativa de Vida por Continente-2007')
 
 ```
 :::
 :::::
 
-## Diagrama de Caja - Concepto
+## Diagrama de Caja - Concepto {.large_code}
 
 ```{r}
 #| fig-align: center
 
 boxplot(lifeExp ~ year, 
-        data = gapminder_anno,
+        data = gapminder,
         col = "#fb8b24",
         xlab='Período',
         ylab='Expectativa de Vida')
@@ -230,10 +206,10 @@ Es un gráfico que resume las características principales de un conjunto de dat
 #| echo: false
 
 boxplot(lifeExp ~ continent, 
-        data = gapminder_anno,
+        data = gapminder,
         col = "#fb8b24",
         xlab='Continente',
-        ylab='Expectativa de Vida')
+        ylab='Expectativa de Vida- Gapminder')
 
 ```
 
@@ -244,6 +220,17 @@ boxplot(lifeExp ~ continent,
 -   Identificar *outliers* (valores atípicos).
 
 -   Analizar la centralización, dispersión y simetría de los datos.
+
+```{r}
+#| fig-align: center
+#| echo: false
+boxplot(gapminder$gdpPercap , 
+        data = gapminder,
+        subset= gapminder$continent=='Africa',
+        col = "#fb8b24",
+        xlab='Africa',
+        ylab='GdpPercap: año 2007')
+```
 
 ## Diagrama de Caja - Casos de Uso - 3
 
@@ -256,7 +243,7 @@ boxplot(lifeExp ~ continent,
             data = gapminder_2007_afeu,
             col = "#fb8b24",
             xlab='Continente',
-            ylab='Expectativa de Vida')
+            ylab='Expectativa de Vida: año 2007 - Africa y Europa')
     ```
 
 ## Histogramas
@@ -265,7 +252,7 @@ boxplot(lifeExp ~ continent,
 ::: {.column width="50%"}
 ```{r}
 #| echo: true
-hist(main = 'Hist. ExpVida',
+hist(main = 'Hist. ExpVida-2007',
      gapminder_2007$lifeExp,
      col = "green",
      xlab='Expectativa de Vida',
@@ -276,13 +263,13 @@ hist(main = 'Hist. ExpVida',
 ::: {.column width="50%"}
 ```{r}
 #| echo: true
-hist(main = 'Hist PIBpercap',
-     gapminder$gdpPercap,
+hist(main = 'Hist PIBpercap 2007',
+     gapminder_2007$gdpPercap,
      col = "orange",
      xlab='PIB per Cápita',
      breaks = 50)
 
-abline(v = median(gapminder$gdpPercap), 
+abline(v = median(gapminder_2007$gdpPercap), 
        col = "red",
        lwd = 2)
 
@@ -291,7 +278,7 @@ abline(v = median(gapminder$gdpPercap),
 :::
 :::::
 
-## Histogramas- Concepto
+## Histogramas- Concepto {.large_code}
 
 Muestra la distribución de frecuencias de un conjunto de datos numéricos. Se divide el rango de datos en intervalos (bins) y se representa la frecuencia de los valores que caen dentro de cada intervalo como barras.
 
@@ -313,7 +300,7 @@ rug(gapminder_2007$lifeExp)
 
 -   Detectar valores atípicos.
 
-## Múltiples Histogramas
+## Múltiples Histogramas {.large_code}
 
 ```{r}
 #| echo: true
@@ -371,7 +358,7 @@ Gráfico que muestra la densidad de probabilidad de un conjunto de datos numéri
 
 -   Identificar picos, modas y áreas con baja densidad.
 
-## Diagrama de Barras (Barplot)
+## Diagrama de Barras (Barplot) {.large_code}
 
 ```{r}
 #| echo: true
@@ -392,35 +379,36 @@ Es un gráfico que utiliza barras para representar la frecuencia o magnitud de v
 
 -   Representar datos nominales o ordinales.
 
-## Diagrama de Dispersión (ScatterPlot)
+## Diagrama de Dispersión (Scatter Plot) {.large_code}
 
 ```{r}
 #| echo: true
-with(gapminder,
-     plot(lifeExp, gdpPercap,
+with(gapminder_2007,
+     plot(gdpPercap,
+          lifeExp, 
           col= "#9d0208"))
 ```
 
-## Diagrama de Dispersión- Concepto
+## Diagrama de Dispersión- Concepto {.large_code}
 
 Gráfico que muestra la relación entre dos variables numéricas. Cada punto en el gráfico representa una observación, con su posición determinada por los valores de las dos variables.
 
 ```{r}
 #| fig-align: center
-with(gapminder,
+with(gapminder_2007,
      plot(gdpPercap,
-           pop,
+           lifeExp,
           col= continent))
 ```
 
-## Diagrama de Dispersión- Casos de uso
+## Diagrama de Dispersión- Casos de uso {.large_code}
 
 ```{r}
 #| fig-align: center
 
-with(gapminder_2007,
-     plot( gdpPercap,
-           pop,
+with(cars,
+     plot( speed,
+           dist,
           col= "#2a9d8f"))
 ```
 
@@ -432,7 +420,7 @@ with(gapminder_2007,
 
 -   Analizar la relación lineal o no lineal entre variables.
 
-## Consideraciones Sobre Sistema Base
+# Consideraciones Sobre Sistema Base
 
 ## Parámetros Comunes Sistema Base
 
@@ -460,11 +448,15 @@ La función par() se utiliza para especificar parámetros gráficos globales que
 
 -   mar: el tamaño del margen
 
-## Ejemplo de Construcción de Gráfico en Base
+## Ejemplo de Construcción de Gráfico en Base {.large_code}
+
+::: panel-tabset
+## código
 
 ```{r}
 #| eval: false
 #| echo: true
+
 with(airquality, 
      plot(Wind,
           Ozone, 
@@ -491,9 +483,11 @@ legend("topright",
        legend = c("Mayo", "Otros Meses"))
 ```
 
-## Resultado Gráfico Base
+## gráfico
 
 ```{r}
+#| eval: true
+#| echo: false
 with(airquality, 
      plot(Wind,
           Ozone, 
@@ -519,21 +513,10 @@ legend("topright",
        legend = c("Mayo", "Otros Meses"))
 ```
 
-## Paquetes EDA
+## 
+:::
 
--   skimr
-
--   DataExplorer
-
--   summarytools
-
--   dataReporter
-
--   visdat
-
-códigos disponibles en [enlace](https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_20/script_clase20.R)
-
-## Resumen EDA
+## Resumen GE:
 
 -   Los gráficos exploratorios son «rápidos y sucios».
 
@@ -542,5 +525,3 @@ códigos disponibles en [enlace](https://github.com/UCVeconomia2024-2/scripts/bl
 -   Explorar preguntas e hipótesis básicas (y quizás descartarlas)
 
 -   Sugieren estrategias de modelización para el «siguiente paso».
-
-Enlace Material de Apoyo [https://ucveconomiar4ds.netlify.app/scripts/](https://ucveconomiar4ds.netlify.app/scripts/c)[04_PlottingBase.pdf](https://ucveconomiar4ds.netlify.app/scripts/04_PlottingBase.pdf)
