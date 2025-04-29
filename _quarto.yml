@@ -65,6 +65,8 @@ website:
             text: tarea 1
           - href: tarea_02.qmd
             text: tarea 2
+          - href: tarea_03.qmd
+            text: tarea 3
       - section: "Talleres"
         contents:
           - href: taller_01.qmd
@@ -89,8 +91,8 @@ website:
 
       - section: "Proyecto"
         contents:
-          # - href: ensayo.qmd
-          #   text: "Ensayo: Propuesta de Proyecto de CD"
+          - href: proyectoccd.qmd
+            text: "Proyecto CCD"
           - href: proyecto.qmd
             text: "Proyecto Final de Curso (P.F.C.)"
           - href: pauta.qmd

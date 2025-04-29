@@ -1,0 +1,68 @@
+---
+title: "Requerimientos de Asignación: Ciclo de Ciencia de Datos"
+date: 2025/04/28
+---
+
+El objetivo de esta asignación es que apliquen los fundamentos del Ciclo de Ciencia de Datos utilizando un conjunto de datos multivariante de su elección. Deberán explorar, procesar y analizar estos datos para generar un reporte reproducible que destaque sus principales características e incluso hallazgos.
+
+### **Fuentes de Datos Sugeridas:**
+
+Para facilitar la búsqueda de datos relevantes, se sugieren las siguientes fuentes:
+
+-   **OpenIntro:** (<https://www.openintro.org/data/>) Este sitio web ofrece una variedad de conjuntos de datos limpios y bien documentados, ideales para la práctica de análisis exploratorio.
+
+-   **Banco Mundial:** (<https://data.worldbank.org/>) El Banco Mundial proporciona una vasta colección de datos socioeconómicos a nivel global, lo que puede ser interesante para explorar relaciones entre diversas variables.
+
+-   Kagel: <https://www.kaggle.com/datasets>
+
+-   **UC Irvine Machine Learning Repository** <https://archive.ics.uci.edu>
+
+-   Awesome Public Datasets: <https://github.com/awesomedata/awesome-public-datasets>
+
+-   Cepal: <https://statistics.cepal.org/portal/cepalstat/index.html?lang=es>
+
+-   FMI: <https://www.imf.org/en/Data>
+
+En caso de no tener claridad sobre cuál conjunto de datos seleccionar, pedir asistencia al profesor a la mayor brevedad posible para no perder mucho tiempo en esta tarea, ya que el tiempo corre y la idea no es detenerse en este paso. En una próxima actividad del curso, se indicará por ejemplo, cómo obtener datos directamente desde el portal del Banco Mundial
+
+### **Requisitos del Conjunto de Datos:**
+
+El conjunto de datos seleccionado debe ser **multivariante**, es decir, debe contener al menos tres variables diferentes para permitir un análisis más rico y la exploración de relaciones entre ellas.
+
+### **Procesamiento y Análisis:**
+
+Con el conjunto de datos elegido, deberán realizar los siguientes pasos:
+
+1.  **Importar Datos:** El proceso de importación debe realizarse utilizando las herramientas adecuadas en su entorno de programación (principalmente R). Se aceptan diversos formatos de archivo (por ejemplo, `.csv`, `.txt`, `.xlsx`). Si encuentran dificultades con formatos no cubiertos en clase, se les brindará la ayuda necesaria para superar estos desafíos técnicos.
+
+2.  **Generación de un Reporte Completamente Reproducible:** El entregable principal será un reporte dinámico creado con **Quarto (`.qmd`)**. Este reporte debe garantizar la **reproducibilidad total**, lo que significa que cualquier persona con el archivo `.qmd` y el conjunto de datos asociado debería poder ejecutar el código y obtener exactamente los mismos resultados y visualizaciones. El reporte deberá incluir:
+
+    -   **Valores Estadísticos y Tablas Resúmenes:** Presentar medidas de tendencia central, dispersión y otras estadísticas descriptivas relevantes para comprender las características principales de las variables en el conjunto de datos. Utilizar tablas para resumir información clave de manera concisa.
+
+    -   **Análisis Exploratorio de los Datos (EDA):** Realizar una exploración visual y estadística inicial para identificar patrones, anomalías, relaciones entre variables y posibles problemas de calidad de los datos. Esto puede incluir gráficos (histogramas, diagramas de dispersión, boxplots, etc.) y otras técnicas de resumen.
+
+    -   **Aplicación de `mutates` (Derivación o Agregación de Datos):** Demostrar la capacidad de crear nuevas variables a partir de las existentes (derivación) o de resumir información a diferentes niveles de granularidad (agregación) utilizando la función `mutate` (o funcionalidades equivalentes en otras librerías).
+
+3.  **Iteración dentro del Ciclo de Ciencia de Datos:** El trabajo realizado debe reflejar una comprensión del Ciclo de Ciencia de Datos. Esto implica mostrar una secuencia lógica de pasos, desde la comprensión del problema y la obtención de datos hasta la exploración, modelado (si aplica, aunque no sea el foco principal de esta asignación), evaluación e interpretación de los resultados.
+
+4.  **Workflow Organizado:** Es fundamental trabajar de manera organizada, utilizando un **directorio o carpeta**dedicada para este proyecto. Dentro de esta carpeta, se espera encontrar subcarpetas claramente identificadas para:
+
+    -   **`datos`:** Almacenar el archivo del conjunto de datos original.
+
+    -   **`scripts`:** Contener los archivos de código (`.R` o dentro del `.qmd`).
+
+    -   **`procesamientos`:** (Opcional, pero recomendado) Para guardar archivos intermedios o resultados de procesamientos específicos.
+
+5.  **Publicación del Reporte en RPubs:** Una vez completado, el reporte `.qmd` deberá ser renderizado y publicado en **RPubs** (<https://rpubs.com/>). Deberán entregar el enlace público a su reporte de RPubs.
+
+### **Entrega Inicial:**
+
+Es necesario que **indiquen si a la fecha límite del lunes 5 de mayo, durante la clase de la mañana**, ya cuentan con al menos una fuente de datos preseleccionada. Esto permitirá tener una visión general del progreso y ofrecer orientación si es necesario.
+
+### Consideraciones:
+
+Para seguir los pasos indicados anteriormente, aún no se han impartido en la materia los contenidos necesarios que permitan cumplir con éxito la actividad propuesta, no obstante, a lo largo del plazo establecido para culminar este trabajo, serán impartidos tales conocimientos. En caso de que el estudiante quiera ir adelantando por su cuenta, los pasos indicados, es necesario que los mismos estén adaptados a los paquetes y métodos que hemos visto en clase, razón por la cual se recomienda ir avanzando poco a poco y de esta manera ir siguiendo un proceso metódico y analítico.
+
+### Fecha Entrega:
+
+Se tiene propuesto en el cronograma general de actividades que este trabajo se culmine para el día 28 de mayo de 2025. Como ya fue indicado, se publicará el reporte en la página RPubs y será remitido el enlace al correo del curso antes de la medianoche de dicho día.
