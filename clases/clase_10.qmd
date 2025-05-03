@@ -1,5 +1,5 @@
 ---
-title: "Principios de Gráficos Analíticos"
+subtitle: "Clase 10: Principios de Gráficos Analíticos"
 author: Roger D. Peng, Associate Professor of Biostatistics
 institute: ''
 date: "2025-04-28"
