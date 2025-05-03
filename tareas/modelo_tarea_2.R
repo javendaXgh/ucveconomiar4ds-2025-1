@@ -17,8 +17,9 @@ logico <- c(FALSE, FALSE, FALSE)
 enteros <- c(1L:3L)
 caracteres <- c('A','B','*')
 
-# 4 lista con al menos cuatro elementos de distintas clases
+mode(logico)
 
+# 4 lista con al menos cuatro elementos de distintas clases
 lista_tarea <- list(elemento1_log= c(TRUE, TRUE, TRUE),
                     elemento2_ent= c(2020L, 2022L, 2025L),
                     elemento3_num= seq(1,5, by=2),
@@ -68,8 +69,8 @@ persona[[1]]
 persona$Nombre==persona[[1]]
 persona$Nombre==persona[1]
 
-names(persona[1])
-names(persona[[1]])
+names(persona[2])
+names(persona[[2]])
 
 persona$Edad
 
@@ -94,6 +95,11 @@ informe_PIB <- list(Titulo= 'Informe_PIB_Venezuela', #remover tilde
                     Resumen= c(pib_2024= 10010,
                                inflacion= 0.97,
                                pib_percap=200))
+
+informe_PIB
+c(pib_2024= 10010,
+  inflacion= 0.97,
+  pib_percap=200)
 
 # 6.5 acceso elementos informe_PIB
 informe_PIB$Autor # acá también puedo hacer comentarios
@@ -120,12 +126,12 @@ class(df_punto_7V2)
 ## Regresión Lineal cars
 plot(data= cars, speed~ dist)
 
-lm(data= cars, speed~dist)
-rl_cars <- lm(data= cars, speed~dist)
 
+rl_cars <- lm(data= cars, speed~dist)
+summary(rl_cars)
 
 str(rl_cars)
 
 rl_cars$coefficients
-
+rl_cars$terms
 

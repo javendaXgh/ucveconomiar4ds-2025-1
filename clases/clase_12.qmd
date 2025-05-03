@@ -1,0 +1,533 @@
+---
+subtitle: "Clase 12: Introducción a la Visualización de Datos (VD)"
+date: "2025/05/02"
+output:
+  html_document:
+    toc: yes
+    incremental: true
+# filters:
+#   - webr
+engine: knitr
+format: 
+  revealjs:
+    incremental: true
+execute:
+  echo: true
+eval: false
+---
+
+## 
+
+::: {style="margin-top: 200px; font-size: 1.2 em; color: #023e8a;"}
+*Una imagen vale más que mil palabras...*
+
+*sólo si sabes como leerla* <br><br>
+:::
+
+::: {style="color: #06d6a0;"}
+How Charts Lie (2019), Alberto Cairo
+:::
+
+# I: Genealogía de la VD
+
+![Geneaología Bíblica de Stephanus Garcia, apróx. Siglo XI. The Book of Trees de Manuel Lima](images/clase19/00Intro/arbol%20genealogico.png)
+
+## y en el inicio
+
+![Mapa del Mundo Babilónico - VII AC](images/clase19/00Intro/Baylonianmaps.JPG)
+
+## Mapa Orbis Terrarum (O-T)
+
+![https://en.wikipedia.org/wiki/T_and_O_map](images/clase19/00Intro/Diagrammatic_T-O_world_map_-_12th_c.jpg){fig-align="center"}
+
+::: notes
+Es de suponer que se consideró tácitamente una proyección conveniente de la porción habitada del mundo conocida en época romana y medieval . La T es el Mediterráneo, que divide los tres continentes, Asia, Europa y África, y la O es el Océano circundante. T-shaped combination of the Mediterranean sea, the river Tanais (Don) and the Nile
+:::
+
+## Mapa **Mahmud al-Kashgari's**
+
+![Aproximadamente siglo XI. Tomado de https://en.wikipedia.org/wiki/Mahmud_al-Kashgari](images/clase19/00Intro/Kashgari_map.jpg){fig-align="center"}
+
+::: notes
+primer [mapa](https://es.wikipedia.org/wiki/Mapa "Mapa") conocido de las áreas habitadas por los [pueblos turcos](https://es.wikipedia.org/wiki/Pueblos_t%C3%BArquicos "Pueblos túrquicos"). E
+
+Se utilizan símbolos:
+
+líneas azules para los ríos,
+
+líneas rojas para las cadenas montañosas
+
+El mundo está rodeado por el océano.
+:::
+
+## El Reloj Cosmográfico
+
+![John Carte, aprox. 1700 en The Book of Trees: Visualizing Branches of Knowledge de Manuel Lima](images/clase19/00Intro/the_cosmographical.png){fig-alt="John Carte 1700" fig-align="center"}
+
+## Problema Representación en Mapas
+
+![](images/clase19/00Intro/deformacion.jpeg){fig-align="center"}
+
+## 🌎 en Distintas Proyecciones
+
+![](images/clase19/00Intro/projections_word.gif){fig-align="center"}
+
+## 🇻🇪 - 🇨🇴 en Distintas Proyecciones
+
+![código disponible en https://github.com/UCVeconomia2024-2/scripts/tree/main/soporte_clases/clase_19/mapa_proyecciones.R](images/clase19/00Intro/projections_ve_col.gif)
+
+## Elementos Mapas
+
+-   Codificaciones / Símbolos
+
+-   Vocabulario
+
+-   Abstracciones
+
+-   Representaciones de:
+
+    -   conocimiento
+
+    -   relaciones
+
+# II: VD - CD y Mapas
+
+![](images/clase19/00Intro/john_snow2.png)
+
+## Herencia de los Mapas
+
+![Mapa realizado por John Snow en 1854. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte](images/clase19/00Intro/john_snow.png)
+
+## Representación de Flujos Comerciales
+
+![1864, Exportaciones de Vino Frances por Charles Joseph Minard, cartógrafo fránces. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte](images/clase19/00Intro/expor_vino_fr_1864.png){fig-align="center"}
+
+## Visualización de Observaciones- Galileo Galilei
+
+![1610, año de las observaciones de G.G. obtenido de <https://www.esa.int/ESA_Multimedia/Images/2005/11/Galileo_s_observations_of_Jupiter_s_moons>](images/clase19/00Intro/Galileo_s_observations_of_Jupiter_s_moons_pillars.jpg){fig-align="center"}
+
+## Detalle Observación Lunas Júpiter
+
+![](images/clase19/00Intro/MotionJupiterMoons.jpg){fig-align="center"}
+
+## Contar Historias: Espacio y Tiempo
+
+![Avance de Campaña del Ejercito Francés al mando de Napoleón Bonaparte por Charles Joseph Minard, 1869. Tomado de The Visual Display of Quantitative Information de Edward Tufte](images/clase19/00Intro/rev_franc.png){fig-align="center"}
+
+## El Eslabón
+
+![The Comertial and Political Atlas de William Payfair, 1786](images/clase19/00Intro/eslabon.png){fig-align="center"}
+
+# III: ¿Qué Queremos Hacer al Visualizar los Datos?
+
+## Encontrar Patrones
+
+Caso Asesinatos cometidos por Harold Shipman
+
+::: {#fig-muertes layout-ncol="2"}
+![](images/clase19/00Intro/muertes_scatter.png){#fig-surus fig-align="center" width="360"}
+
+![](images/clase19/00Intro/muertes_horas.png){#fig-hanno fig-align="center" width="406"}
+
+Tomado de The Art of Statistics de David Spiegelhalter
+:::
+
+::: notes
+1\) diagrama de dispersión que muestra la edad y el año de la muerte de las 215 víctimas confirmadas de Harold Shipman. Se han añadido gráficos de barras se han añadido en los ejes para revelar el patrón de edades y el patrón de años en los que cometió asesinatos.
+
+2\) El tiempo al que murieron los pacientes de Harold Shipman, en comparación con los tiempos en que los pacientes de otros locales médicos generales locales. El patrón no requiere análisis estadístico sofisticado
+:::
+
+## Buscar Indicios de Correlaciones y Posibles Relaciones Causales
+
+![](images/clase19/00Intro/correlation_SEO.png){fig-align="center"}
+
+## Contar Historias- Presentar Resultados de una Investigación
+
+![](images/clase19/00Intro/Graficos_flujo.gif){fig-align="center"}
+
+## Principios de la VD
+
+-   Simplificación de la realidad que se estudia
+
+-   Revelar-explicar y dejar interrogantes
+
+-   Tomar en consideración quiénes serán los "lectores" de la imagen y su alfabetismo en la lectura de gráficos
+
+## Gramática de los Gráficos (GG)
+
+Marco teórico donde se descompone un gráfico en elementos esenciales como los datos, las transformaciones estadísticas, las escalas, las guías (ejes, leyendas) y las capas visuales (geometrías como puntos, líneas o barras).
+
+Más info en <https://vita.had.co.nz/papers/layered-grammar.pdf>
+
+```{r}
+#| eval: false
+#| # library
+library(ggplot2)
+
+data=head(mtcars, 30)
+ 
+ggplot(data, aes(x=wt, y=mpg)) +
+  geom_point() +
+  geom_text(
+    label=rownames(data), 
+    nudge_x = 0.25, nudge_y = 0.25, 
+    check_overlap = T
+  )
+```
+
+::: notes
+-   [Leland Wilkinson](https://link.springer.com/book/10.1007/0-387-28695-0#author-0-0)
+
+<!-- -->
+
+-   Presents a unique foundation for producing almost every quantitative graphic found in scientific journals, newspapers, statistical packages, and data visualization systems
+
+La idea principal es que cualquier gráfico puede ser construido al combinar estos componentes, permitiendo una personalización detallada y consistente en la representación de datos.
+
+ggplot2 en R,
+
+Un aspecto crucial de esta gramática es su enfoque en las
+
+transformaciones y mapeos.
+
+Los datos crudos se transforman en una representación visual a través de
+
+mapeos estéticos (color, tamaño, posición) y
+
+transformaciones estadísticas (como promedios, distribuciones o modelos de ajuste).
+
+Esto permite que los gráficos no solo presenten datos, sino que los expliquen y resalten patrones significativos.
+:::
+
+## Ejemplos de Codificaciones
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase19/00Intro/codificacion.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+-   símbolos
+
+-   fechas
+
+-   proporciones
+:::
+:::::
+
+## 🛑 Marketing
+
+![Presentación del Iphone por Steve Jobs 2008. Tomado de https://www.labo.mathieurella.fr/?p=403](images/clase19/00Intro/jobs.png){fig-align="center"}
+
+## 
+
+![https://elpais.com/tecnologia/2024-11-24/de-bannon-a-musk-la-decada-que-convirtio-la-desinformacion-en-la-nueva-normalidad.html](images/clase19/00Intro/desinformacion.png){fig-align="center"}
+
+::: notes
+La libertad depende de ciudadanos capaces de distinguir distinguir entre lo que es verdad y lo que quieren oír. El autoritarismo llega no porque la gente diga que lo quiere, sino porque pierde la capacidad de distinguir entre hechos y deseos.
+
+TIMOTHY SNYDER, EL CAMINO HACIA LA FALTA DE LIBERTAD (2018)
+:::
+
+# IV: Buenas Prácticas
+
+[![](images/clase19/01buenaspracticas/principios_diseño.png){fig-align="center"}](https://www.youtube.com/watch?v=umDKP7ofHKk)
+
+## Formalidades
+
+::::: columns
+::: {.column width="50%"}
+-   Etiquetas en ejes
+
+-   Valores y unidad de medida
+
+-   Fuente de los datos
+
+-   Título - Subtítulo
+
+-   Grillas (opcional)
+
+-   Rotar valores
+
+-   Cifras equivalentes
+:::
+
+::: {.column width="50%"}
+![](images/clase19/00Intro/ejemploGGplot.png){fig-align="center"}
+:::
+:::::
+
+## Canales de Comunicación Recomendados
+
+![Guía de Munzner para agrupar los canales visuales en magnitud e identidad y clasificarlos por eficacia. Imágen extraída de «Visualization Analysis and Design» de Tamara Munzner](images/clase19/01buenaspracticas/Munzners-guideline-to-group-visual-channels-into-magnitude-and-identity-channels-and.png){fig-align="center"}
+
+## Uso de Colores
+
+::::: columns
+::: {.column width="50%"}
+Complementarios
+
+![https://www.canva.com/colors/color-wheel/](images/clase19/01buenaspracticas/colorwheel.png){fig-align="center" width="283"}
+:::
+
+::: {.column width="50%"}
+Paletas de Colores
+
+![https://coolors.co/palettes/trending](images/clase19/01buenaspracticas/paletacolor.png){fig-align="center"}
+:::
+:::::
+
+# Escalas de Colores:
+
+## Monocromáticas: Discretas o Continuas
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase19/01buenaspracticas/ggplot_intensidad.png){fig-align="center" width="528"}
+:::
+
+::: {.column width="50%"}
+![](images/clase19/01buenaspracticas/ggplot_continua.png){fig-align="center"}
+:::
+:::::
+
+## Cromáticas Discretas (Categóricas)
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase19/01buenaspracticas/ggplot_discreta.png){width="606"}
+:::
+
+::: {.column width="50%"}
+![](images/clase19/01buenaspracticas/rcolorbrewer.png){fig-align="center" width="319"}
+:::
+:::::
+
+## Viridis
+
+![colores diseñados para mejorar la legibilidad de los gráficos para lectores con formas comunes de daltonismo y/o deficiencia de visión cromática](images/clase19/01buenaspracticas/viridis.png){fig-align="center"}
+
+# Escalas de Representación
+
+## Lineal
+
+![](images/clase19/01buenaspracticas/esc_lineal.png){fig-align="center"}
+
+## Exponencial
+
+![](images/clase19/01buenaspracticas/esc_exp_log.png){fig-align="center"}
+
+## Logarítmica
+
+![más información en https://pmc.ncbi.nlm.nih.gov/articles/PMC7200843/](images/clase19/01buenaspracticas/esc_log.png){fig-align="center"}
+
+# Recursos
+
+## Gráficos Interactivos OWD
+
+![en este tipo de gráficos se incorporan métodos alternativos para acceder a los datos. https://ourworldindata.org/poverty](images/clase19/01buenaspracticas/owd.png){fig-align="center"}
+
+## Gráficos Interactivos Patria
+
+![https://covid19.patria.org.ve/estadisticas-venezuela/](images/clase19/02malaspracticas/patria.01.png){fig-align="center"}
+
+## Gráficos Recomendados según caso de uso
+
+![](images/clase19/otros/2tipos/Graficos_tipos2.jpeg){fig-align="center"}
+
+# V: Malas Prácticas
+
+## Representación de Áreas Dispersas
+
+Mapa con resultados elecciones presidenciales EEUU 2016 por County
+
+:::: columns
+<div>
+
+![Tomado de How Charts Lies de Alberto Cairo](images/clase19/01buenaspracticas/interactivos.png){fig-align="center" width="616"}
+
+</div>
+::::
+
+## Representación de Áreas Dispersas 2
+
+Representación 3d interactiva con resultados elecciones presidenciales EEUU 2016 por County
+
+![Disponible en https://carto.maps.arcgis.com/apps/webappviewer3d/index.html?id=02b618528b7b458cb5d05557ebd44](images/clase19/02malaspracticas/trump2.png)
+
+## Representaciones Sin Ejes
+
+\_\_\_\_\_\_
+
+## Doble Eje Y
+
+![](images/clase19/02malaspracticas/cedice.png){fig-align="center"}
+
+<https://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf>
+
+## Forzar Uso de Doble Eje en las Y
+
+::::: columns
+::: {.column width="50%"}
+![extraído de https://ecoanalitica.com/wp-content/uploads/filebase/informes/perspectivas/Persp_4T17.pdf](images/clase19/02malaspracticas/ecoana1_dobleje.png){fig-align="center" width="599"}
+:::
+
+::: {.column width="50%"}
+![http://webdelprofesor.ula.ve/economia/ajhurtado/docencia/seminarioteoriadelaincertidumbre/materialdeapoyo/Ecoan08.pdf](images/clase19/02malaspracticas/ecoana3_eje.png){fig-align="center" width="599"}
+:::
+:::::
+
+## Representaciones 3D con Rotación
+
+\_\_\_\_\_\_
+
+## Desproporciones- Comparaciones no Apropiadas
+
+![https://www.vtv.gob.ve/dia-1125-lucha-covid-14042023/](images/clase19/02malaspracticas/vtv_covid.png){fig-align="center"}
+
+## Truncado de Ejes
+
+![](images/clase19/02malaspracticas/tax_truncado.png){fig-align="right"}
+
+## Aglutinamiento - Falta Diferenciación
+
+::::: columns
+::: {.column width="50%"}
+![https://www.vtv.gob.ve/banco-venezuela-supera-cantidad-transacciones-2020/](images/clase19/02malaspracticas/truncadobdv.png){fig-align="center" width="717"}
+:::
+
+::: {.column width="50%"}
+![Truncating the Y-Axis: Threat or Menace?, Michael Correll, disponible en https://arxiv.org/pdf/1907.02035](images/clase19/02malaspracticas/truncado1.png){fig-align="center"}
+:::
+:::::
+
+## Representaciones "No Honestas"
+
+![Truncating the Y-Axis: Threat or Menace?, Michael Correll, disponible en https://arxiv.org/pdf/1907.02035](images/clase19/02malaspracticas/truncado2.png)
+
+## Fuentes de Datos no Apropiadas
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase19/02malaspracticas/cedice2.png){fig-align="center" width="459"}
+:::
+
+::: {.column width="50%"}
+![](images/clase19/02malaspracticas/cedice_fuente.01.png){fig-align="center" width="407"}
+:::
+:::::
+
+<https://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf>
+
+## Mentir con los gráficos
+
+![más info en https://www.linkedin.com/pulse/when-numbers-mislead-groww-in/](images/clase19/02malaspracticas/apple_acumulado.png){fig-align="center"}
+
+::: notes
+Alrededor de 2014, las ventas de iPad fueron disminuyendo trimestre tras trimestre.
+
+El consejero delegado Tim Cook subió al escenario en una de las presentaciones magistrales de Apple y mostró un gráfico. Ventas acumuladas del iPad.
+
+En el gráfico, mostraba cómo aumentaban las ventas totales de iPad (desde el principio).
+
+Si te fijas bien en el gráfico, hacia el final se volvía más plano. En cualquier caso, todo seguía aumentando. Parecía bastante positivo.
+
+Lo que muchos inversores en acciones de Apple querían ver eran las ventas intertrimestrales. Eso estaba disminuyendo.
+
+¿Están mintiendo? No. La verdad es que no.
+
+Pero están haciendo algo, algo que probablemente no deberían hacer.
+
+Está esa famosa cita: «Hay tres tipos de mentiras: mentiras, malditas mentiras y estadísticas».
+:::
+
+## Gráficos No Apropiados u Óptimos
+
+::::: columns
+::: {.column width="50%"}
+Bolsa Valores Caracas
+
+![https://www.bolsadecaracas.com realizado con librería https://www.amcharts.com/demos/range-chart-with-different-fill-colors/](images/clase19/02malaspracticas/bvc.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+Down Jones
+
+![https://finance.yahoo.com/quote/%5EDJI/](images/clase19/02malaspracticas/%20downjones.png){fig-align="center" width="623"}
+:::
+:::::
+
+# VI: ¿Cuándo se usa la VD en la CD?
+
+## i) Análisis Exploratorio de Datos
+
+[![](images/clase19/04usosEDA/abercrombie.png){fig-align="center"}](https://en.wikipedia.org/wiki/Anscombe%27s_quartet)
+
+## EDA
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase19/04usosEDA/EDA2.png){fig-align="center" width="724"}
+:::
+
+::: {.column width="50%"}
+![](images/clase19/04usosEDA/EDA3.png){fig-align="center" width="587"}
+:::
+:::::
+
+Ejemplos obtenidos de "Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing" por **Justin Matejka et all.**
+
+## II) Comunicar Resultados
+
+# Ejemplos
+
+## Análisis Sonoridad por Género Musical
+
+![](images/clase19/otros/loud_spotify.png){fig-alt="Visualización realizada por Isabela Velasquez para tidytuesday. Código disponible en https://gist.github.com/ivelasq/fa6f30faec19c3adf31d41d77c02ba88" fig-align="center"}
+
+## Presentar Resultados Grafos
+
+![Investigación de El Gato y la Caja sobre el crecimiento de los nuevos medios digitales en Argentina, disponible en https://elgatoylacaja.com/el-dia-que-prendieron-la-luz](images/clase19/otros/elgatoylacaja.png){fig-align="center"}
+
+## Variaciones Mensuales de Valores
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase19/otros/temp_ciud1.jpeg){fig-align="center" width="341"}
+:::
+
+::: {.column width="50%"}
+![](images/clase19/otros/temp_ciud2.jpeg){fig-align="center" width="341"}
+:::
+:::::
+
+## Clusters - Tópicos
+
+![Visualización elaborada por José Avendaño disponible en https://atlas.nomic.ai/data/javenda/saber-ucv/map](images/clase19/saber.png){fig-align="center"}
+
+## Treemaps
+
+![Covid 19 en Venezuela, cifras Patria,org.ve, procesadas por José Avenedaño https://javenda.netlify.app/covid19venezuela](images/clase19/treemap.png){fig-align="center"}
+
+## Distribuciones
+
+![](images/clase19/otros/2tipos/boxplotVsViolin.gif){fig-align="center"}
+
+## Ejemplos de Códigos GGplot2
+
+![https://r-graph-gallery.com](images/clase19/otros/galeria_ggplot.png){fig-align="center" width="581"}
+
+## Recursos Adicionales de Interés
+
+-   Códigos con gráficos para el sistema GGplot [r-graph-gallery](https://r-graph-gallery.com)
+
+-   Visualización Datos Abiertos [https://datos.gob.es](https://datos.gob.es/es/blog/como-elegir-el-grafico-correcto-para-visualizar-datos-abiertos)
+
+-   BBC R cookbook [https://bbc.github.io](https://bbc.github.io/rcookbook/)
+
+-   Visualización de Datos en R4DS [R4DS](https://r4ds.hadley.nz/data-visualize.html)
+
+-   Modern Data Visualization [datavis](https://rkabacoff.github.io/datavis/)
+
+-   Sitio de Edward Tufte <https://www.edwardtufte.com>

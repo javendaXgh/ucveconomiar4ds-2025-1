@@ -168,7 +168,7 @@ ggplot(data= gapminder_afeu,
 -   Principio 4: Integrar múltiples modos de evidencia
     -   Integre completamente palabras, números, imágenes, diagramas
     -   Los gráficos de datos deben hacer uso de muchos modos de presentación de datos
-    -   No permita que la herramienta dirija el análisisx
+    -   No permita que la herramienta dirija el análisis
 
 ------------------------------------------------------------------------
 
