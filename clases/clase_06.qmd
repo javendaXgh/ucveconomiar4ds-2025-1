@@ -1,7 +1,7 @@
 ---
-subtitle: "Clase 06: Nombres Variables"
+subtitle: "Clase 6: Nombres Variables"
 author: "MSc. José M. Avendaño"
-date: "04/07/2025"
+date: "2025/04/07"
 format: 
   revealjs:
     incremental: true   
