@@ -4970,7 +4970,7 @@ G(158);G(131);G(19);
 G(71);G(112);G(153);
 G(116);mg(22,!1),G(23);
 ig[1]=gg('1',6E4);ig[3]=gg('10',1);ig[2]=gg('',50);G(28);
-ng(25,24);G(8);G(88);G(139);G(122);
+G(8);G(88);G(139);G(122);
 G(156);G(135);G(126);G(26);G(68);G(69);
 G(134);G(50);G(49);G(92);
 G(99);
@@ -5031,7 +5031,7 @@ function ii(a){var b=ji;b=b===void 0?ki:b;var c;var d=b;if(a&&a.length){for(var 
 function ki(a){return mi(a.item_id,a.id,a.item_name)}function mi(){for(var a=l(wa.apply(0,arguments)),b=a.next();!b.done;b=a.next()){var c=b.value;if(c!==null&&c!==void 0)return c}}function ni(a){if(a&&a.length){for(var b=[],c=0;c<a.length;++c){var d=a[c];d&&d.estimated_delivery_date?b.push(""+d.estimated_delivery_date):b.push("")}return b.join(",")}}function hi(a,b,c){c===void 0||c===null||c===""&&!qg[b]||(a[b]=c)}function li(a){return typeof a!=="number"&&typeof a!=="string"?"":a.toString()};function qi(a){return ri?A.querySelectorAll(a):null}
 function si(a,b){if(!ri)return null;if(Element.prototype.closest)try{return a.closest(b)}catch(e){return null}var c=Element.prototype.matches||Element.prototype.webkitMatchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector,d=a;if(!A.documentElement.contains(d))return null;do{try{if(c.call(d,b))return d}catch(e){break}d=d.parentElement||d.parentNode}while(d!==null&&d.nodeType===1);return null}var ti=!1;
 if(A.querySelectorAll)try{var ui=A.querySelectorAll(":root");ui&&ui.length==1&&ui[0]==A.documentElement&&(ti=!0)}catch(a){}var ri=ti;function vi(a){switch(a){case 0:break;case 9:return"e4";case 6:return"e5";case 14:return"e6";default:return"e7"}};var wi=/^[0-9A-Fa-f]{64}$/;function yi(a){try{return(new TextEncoder).encode(a)}catch(e){for(var b=[],c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b.push(d):d<2048?b.push(192|d>>6,128|d&63):d<55296||d>=57344?b.push(224|d>>12,128|d>>6&63,128|d&63):(d=65536+((d&1023)<<10|a.charCodeAt(++c)&1023),b.push(240|d>>18,128|d>>12&63,128|d>>6&63,128|d&63))}return new Uint8Array(b)}}
-function zi(a){if(a===""||a==="e0")return Promise.resolve(a);var b;if((b=z.crypto)==null?0:b.subtle){if(wi.test(a))return Promise.resolve(a);try{var c=yi(a);return z.crypto.subtle.digest("SHA-256",c).then(function(d){var e=Array.from(new Uint8Array(d)).map(function(f){return String.fromCharCode(f)}).join("");return z.btoa(e).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}).catch(function(){return"e2"})}catch(d){return Promise.resolve("e2")}}else return Promise.resolve("e1")};var Ai={Yk:'100',Zk:'100',al:'1000',rm:'101509157~103101750~103101752~103116025~103130495~103130497~103200001~103233427~103251618~103251620'},Bi={Rh:Number(Ai.Yk)||0,Ye:Number(Ai.Zk)||0,Om:Number(Ai.al)||0,so:Ai.rm};function O(a){Wa("GTM",a)};
+function zi(a){if(a===""||a==="e0")return Promise.resolve(a);var b;if((b=z.crypto)==null?0:b.subtle){if(wi.test(a))return Promise.resolve(a);try{var c=yi(a);return z.crypto.subtle.digest("SHA-256",c).then(function(d){var e=Array.from(new Uint8Array(d)).map(function(f){return String.fromCharCode(f)}).join("");return z.btoa(e).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}).catch(function(){return"e2"})}catch(d){return Promise.resolve("e2")}}else return Promise.resolve("e1")};var Ai={Yk:'100',Zk:'100',al:'1000',rm:'101509156~103101750~103101752~103116025~103200001~103233424~103251618~103251620'},Bi={Rh:Number(Ai.Yk)||0,Ye:Number(Ai.Zk)||0,Om:Number(Ai.al)||0,so:Ai.rm};function O(a){Wa("GTM",a)};
 var Fi=function(a,b){var c=["tv.1"],d=Ci(a);if(d)return c.push(d),{Pa:!1,Ci:c.join("~"),zf:{}};var e={},f=0;var g=Di(a,function(p,q,r){var t=p.value,u;if(r){var v=q+"__"+f++;u="${userData."+v+"|sha256}";e[v]=t}else u=encodeURIComponent(encodeURIComponent(t));var w;c.push(""+q+((w=p.index)!=null?w:"")+"."+u)}).Pa;var h=c.join("~"),m={userData:e},n=b===2;return b===1||n?{Pa:g,Ci:h,zf:m,Nm:n?"tv.9~${"+(h+
 "|encryptRsa}"):"tv.1~${"+(h+"|encrypt}"),encryptionKeyString:n?'MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAvMBNun6iQWLRC7leE+bbdzvSfi/vuWbUVnHQbRZGCQu9gU8gUhDTQvTCJ6vIl+PvFNutjUQo3svAxeWk9LyQdMWml3w8hLNKy2oaiCBwi5xPmpzrCWeYG4JaGpBom2PAojrRZdzNnrtutX5XvkcQ1ao/Z8CtYrC6cf9bhdVn46zTQaOBS2uokc4ihM9s0p3yESKcdaihK0wlFie0XvNwp/wR4mKlIwWOfDfnz3QUVDJiuFirBjZNoYsa3TmRRaJA3iih9I1fVwh4p7RSXHg6a+8ERQlJxx6HNm+GBh4VhzPwfRXGQX6sCVLVpbF9N/jr3DbE08lghW07/soO4Lq8IOWmaoo0kGvWwebbXSx9UpPCofGxXrbrDbuKaoFrrtnmqBsiaVOHxcg07N23bnxv9NfgjIuUBGaR2vykgWvWqViN3yrfAHmhXurjQtFu/csE8W95D3yP7a9rywXpELv047MSD+YthoXxGQmSOB4A1SG3SmJgbs8Ee8x/JBmBOylTAgMBAAE\x3d':Ei()}:{Pa:g,Ci:h,zf:m}},Hi=function(a){if(!(a!=null&&Object.keys(a).length>0))return!1;var b=Gi(a);return Di(b,function(){}).Pa},Di=function(a,b){b=b===void 0?function(){}:b;for(var c=!1,d=!1,e=l(a),f=e.next();!f.done;f=e.next()){var g=f.value;if(g.value){var h=Ii[g.name];if(h){var m=Ji(g);m&&(c=!0);d=!0;b(g,h,m)}}}return{Pa:d,Zh:c}},Ji=function(a){var b=Ki.indexOf(a.name)!==-1,c=
 /^e\d+$/.test(a.value),d;if(d=b&&!c){var e=a.value;d=!(Li.test(e)||wi.test(e))}return d},Ei=function(){return'{\x22keys\x22:[{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BBsqIrZVRoFQ4w87uY9OBy5NRzGPzZVNGTgp/pCJ06TCm8XBBbPYMKVAFMAYGNCMZ1eKqR4/jDcR+e246TRMXMM\x3d\x22,\x22version\x22:0},\x22id\x22:\x22c510a2d5-23b0-4336-9def-daf0397fab45\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BJSQNGNcaGAYmA68XDtA8v4CAAECgLk1ti4KGgW6tHWUkoHqL3eEi/wsazWFZxKNnjct7H/Cj0m7/xtj7bxQ1V0\x3d\x22,\x22version\x22:0},\x22id\x22:\x2261332559-26fc-4a1d-9ec2-f0b5c8e7b63a\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BKJOyJyxN8W6W69c/Q1p9yr2nl3LLdpDBaeItv4lnsMbnv1F3BFrqIuvFAIsN6uDj6W+h3Lszrinlnzk2WXr4Lo\x3d\x22,\x22version\x22:0},\x22id\x22:\x2232ceea90-c0fa-46b4-b7f4-e15ea6989257\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BMPknFLPJNbKEXauNaZg7g+QdT/7Q4mspwxaT79VXq23cyZXRMfORevTugrbPtC+oot4tEv0LLhO+IcaT0cc5lI\x3d\x22,\x22version\x22:0},\x22id\x22:\x2227b21b32-6b3f-47ba-acd5-4ba778ef47b8\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BG0tYIEke8QTRWNCDeu7CXAbpUte9c6hZijqMs/JCkmpijTr7EcVmkuc+rDsxwGlYRLrgbBGoZUsHQiwREHjwW0\x3d\x22,\x22version\x22:0},\x22id\x22:\x2201a0d93f-a2ed-4c4a-80b4-e7248feea19b\x22}]}'},Oi=function(a){if(z.Promise){var b=void 0;return b}},Si=function(a,b,c){if(z.Promise)try{var d=Gi(a),e=Pi(d).then(Qi);return e}catch(h){}},Ni=function(a,b){var c=void 0;
@@ -5041,7 +5041,7 @@ cb(d(r,t)),w=0;w<v.length;++w)b(v[w],t,u)}function f(r,t,u,v){var w=d(r,t);b(w,t
 n[p];f(q,"first_name",Xi,p);f(q,"last_name",Xi,p);f(q,"street",Yi,p);f(q,"city",Yi,p);f(q,"postal_code",Zi,p);f(q,"region",Yi,p);f(q,"country",Zi,p)}return h},$i=function(a){var b=a?Gi(a):[];return Qi({Od:b})},aj=function(a){return a&&a!=null&&Object.keys(a).length>0&&z.Promise?Gi(a).some(function(b){return b.value&&Ki.indexOf(b.name)!==-1&&!wi.test(b.value)}):!1},Ti=function(a){return a==null?"":ab(a)?nb(String(a)):"e0"},Zi=function(a){return a.replace(bj,"")},Xi=function(a){return Yi(a.replace(/\s/g,
 ""))},Yi=function(a){return nb(a.replace(cj,"").toLowerCase())},Wi=function(a){a=a.replace(/[\s-()/.]/g,"");a.charAt(0)!=="+"&&(a="+"+a);return dj.test(a)?a:"e0"},Vi=function(a){var b=a.toLowerCase().split("@");if(b.length===2){var c=b[0];/^(gmail|googlemail)\./.test(b[1])&&(c=c.replace(/\./g,""));c=c+"@"+b[1];if(ej.test(c))return c}return"e0"},Pi=function(a){if(!a.some(function(c){return c.value&&Ki.indexOf(c.name)!==-1}))return Promise.resolve({Od:a});if(!z.Promise)return Promise.resolve({Od:[]});
 var b;H(60)&&(b=Jc());return Promise.all(a.map(function(c){return c.value&&Ki.indexOf(c.name)!==-1?zi(c.value).then(function(d){c.value=d}):Promise.resolve()})).then(function(){var c={Od:a};if(b!==void 0){var d=Jc();b&&d&&(c.time=Math.round(d)-Math.round(b))}return c}).catch(function(){return{Od:[]}})},cj=/[0-9`~!@#$%^&*()_\-+=:;<>,.?|/\\[\]]/g,ej=/^\S+@\S+\.\S+$/,dj=/^\+\d{10,15}$/,bj=/[.~]/g,Li=/^[0-9A-Za-z_-]{43}$/,fj={},Ii=(fj.email="em",fj.phone_number="pn",fj.first_name="fn",fj.last_name="ln",
-fj.street="sa",fj.city="ct",fj.region="rg",fj.country="co",fj.postal_code="pc",fj.error_code="ec",fj),gj={},Ui=(gj.email="sha256_email_address",gj.phone_number="sha256_phone_number",gj.first_name="sha256_first_name",gj.last_name="sha256_last_name",gj.street="sha256_street",gj);var Ki=Object.freeze(["email","phone_number","first_name","last_name","street"]);var hj={},ij=(hj[N.m.Ja]=1,hj[N.m.Pc]=2,hj[N.m.Yb]=2,hj[N.m.oa]=3,hj[N.m.je]=4,hj[N.m.Gf]=5,hj[N.m.oc]=6,hj[N.m.Ta]=6,hj[N.m.Xa]=6,hj[N.m.Hc]=6,hj[N.m.yb]=6,hj[N.m.ib]=6,hj[N.m.Ya]=7,hj[N.m.Bb]=9,hj[N.m.Hf]=10,hj[N.m.mb]=11,hj),jj={},kj=(jj.unknown=13,jj.standard=14,jj.unique=15,jj.per_session=16,jj.transactions=17,jj.items_sold=18,jj);var lj=[];function mj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(ij)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=ij[f],h=b;h=h===void 0?!1:h;Wa("GTAG_EVENT_FEATURE_CHANNEL",g);h&&(lj[g]=!0)}}};var nj=function(){this.C=new Set},pj=function(a){var b=oj.Ea;a=a===void 0?[]:a;return Array.from(b.C).concat(a)},qj=function(){var a=oj.Ea,b=Bi.so;a.C=new Set;if(b!=="")for(var c=l(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var rj={xh:"54u1"};rj.wh=Number("0")||0;rj.vb="dataLayer";rj.vo="ChAI8P3WwAYQo4+Jiv/j2NZGEiUAJ7+A7Vi6VrGflShJw+RySPhjKvQO7B04mRj+nCq/uhACGYnQGgKrcw\x3d\x3d";var sj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},tj={__paused:1,__tg:1},uj;for(uj in sj)sj.hasOwnProperty(uj)&&(tj[uj]=1);var vj=lb("true"),wj=!1,xj,yj=!1;yj=!0;xj=yj;var zj,Aj=!1;zj=Aj;var Bj,Cj=!1;Bj=Cj;rj.Ff="www.googletagmanager.com";var Dj=""+rj.Ff+(xj?"/gtag/js":"/gtm.js"),Ej=null,Fj=null,Gj={},Hj={};rj.Xk="true";var Ij="";rj.yh=Ij;
+fj.street="sa",fj.city="ct",fj.region="rg",fj.country="co",fj.postal_code="pc",fj.error_code="ec",fj),gj={},Ui=(gj.email="sha256_email_address",gj.phone_number="sha256_phone_number",gj.first_name="sha256_first_name",gj.last_name="sha256_last_name",gj.street="sha256_street",gj);var Ki=Object.freeze(["email","phone_number","first_name","last_name","street"]);var hj={},ij=(hj[N.m.Ja]=1,hj[N.m.Pc]=2,hj[N.m.Yb]=2,hj[N.m.oa]=3,hj[N.m.je]=4,hj[N.m.Gf]=5,hj[N.m.oc]=6,hj[N.m.Ta]=6,hj[N.m.Xa]=6,hj[N.m.Hc]=6,hj[N.m.yb]=6,hj[N.m.ib]=6,hj[N.m.Ya]=7,hj[N.m.Bb]=9,hj[N.m.Hf]=10,hj[N.m.mb]=11,hj),jj={},kj=(jj.unknown=13,jj.standard=14,jj.unique=15,jj.per_session=16,jj.transactions=17,jj.items_sold=18,jj);var lj=[];function mj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(ij)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=ij[f],h=b;h=h===void 0?!1:h;Wa("GTAG_EVENT_FEATURE_CHANNEL",g);h&&(lj[g]=!0)}}};var nj=function(){this.C=new Set},pj=function(a){var b=oj.Ea;a=a===void 0?[]:a;return Array.from(b.C).concat(a)},qj=function(){var a=oj.Ea,b=Bi.so;a.C=new Set;if(b!=="")for(var c=l(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var rj={xh:"54u1"};rj.wh=Number("0")||0;rj.vb="dataLayer";rj.vo="ChAI8P3WwAYQo4+Jiv/j2NZGEiUAJ7+A7d96t7hzPQK/dcf9q3RcL3cnNYs1aTBjQ+NFzR9ew2U/GgICLg\x3d\x3d";var sj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},tj={__paused:1,__tg:1},uj;for(uj in sj)sj.hasOwnProperty(uj)&&(tj[uj]=1);var vj=lb("true"),wj=!1,xj,yj=!1;yj=!0;xj=yj;var zj,Aj=!1;zj=Aj;var Bj,Cj=!1;Bj=Cj;rj.Ff="www.googletagmanager.com";var Dj=""+rj.Ff+(xj?"/gtag/js":"/gtm.js"),Ej=null,Fj=null,Gj={},Hj={};rj.Xk="true";var Ij="";rj.yh=Ij;
 var oj=new function(){this.Ea=new nj;this.C=!1;this.H=0;this.fa=this.ia=this.ab=this.O="";this.R=this.N=!1};function Jj(){var a;a=a===void 0?[]:a;return pj(a).join("~")}function Kj(){var a=oj.O.length;return oj.O[a-1]==="/"?oj.O.substring(0,a-1):oj.O}function Lj(){return oj.C?H(83)?oj.H===0:oj.H!==1:!1}function Mj(a){for(var b={},c=l(a.split("|")),d=c.next();!d.done;d=c.next())b[d.value]=!0;return b};var Nj=new hb,Oj={},Pj={},Sj={name:rj.vb,set:function(a,b){Xc(wb(a,b),Oj);Qj()},get:function(a){return Rj(a,2)},reset:function(){Nj=new hb;Oj={};Qj()}};function Rj(a,b){return b!=2?Nj.get(a):Tj(a)}function Tj(a,b){var c=a.split(".");b=b||[];for(var d=Oj,e=0;e<c.length;e++){if(d===null)return!1;if(d===void 0)break;d=d[c[e]];if(b.indexOf(d)!==-1)return}return d}function Uj(a,b){Pj.hasOwnProperty(a)||(Nj.set(a,b),Xc(wb(a,b),Oj),Qj())}
 function Vj(){for(var a=["gtm.allowlist","gtm.blocklist","gtm.whitelist","gtm.blacklist","tagTypeBlacklist"],b=0;b<a.length;b++){var c=a[b],d=Rj(c,1);if(Array.isArray(d)||Wc(d))d=Xc(d,null);Pj[c]=d}}function Qj(a){ib(Pj,function(b,c){Nj.set(b,c);Xc(wb(b),Oj);Xc(wb(b,c),Oj);a&&delete Pj[b]})}function Wj(a,b){var c,d=(b===void 0?2:b)!==1?Tj(a):Nj.get(a);Uc(d)==="array"||Uc(d)==="object"?c=Xc(d,null):c=d;return c};
 var Xj=function(a,b,c){if(!c)return!1;for(var d=String(c.value),e,f=d.replace(/\["?'?/g,".").replace(/"?'?\]/g,"").split(","),g=0;g<f.length;g++){var h=f[g].trim();if(h&&!ub(h,"#")&&!ub(h,".")){if(ub(h,"dataLayer."))e=Rj(h.substring(10));else{var m=h.split(".");e=z[m.shift()];for(var n=0;n<m.length;n++)e=e&&e[m[n]];H(59)&&e===void 0&&(e=Rj(h))}if(e!==void 0)break}}if(e===void 0&&ri)try{var p=qi(d);if(p&&p.length>0){e=[];for(var q=0;q<p.length&&q<(b==="email"||b==="phone_number"?5:1);q++)e.push(zc(p[q])||
@@ -6107,7 +6107,7 @@ G(158);G(131);G(19);
 G(71);G(112);G(153);
 G(116);mg(22,!1),G(23);
 ig[1]=gg('1',6E4);ig[3]=gg('10',1);ig[2]=gg('',50);G(28);
-G(8);G(88);G(139);G(122);
+ng(25,24);G(8);G(88);G(139);G(122);
 G(156);
 G(157);G(70);G(135);G(126);G(26);G(68);G(69);
 G(134);G(50);G(49);G(92);
@@ -6117,7 +6117,7 @@ G(151);G(98);G(133);G(114);
 G(93);G(30);G(21);
 G(54);G(13);G(149);
 G(150);G(56);G(94);
-G(10);G(14);G(85);G(95);G(96),G(95);G(105);
+G(10);G(14);G(85);G(95);G(105);
 G(75);G(76);
 G(78);G(27);
 G(79);G(87);G(117);
@@ -6169,7 +6169,7 @@ function ii(a){var b=ji;b=b===void 0?ki:b;var c;var d=b;if(a&&a.length){for(var 
 function ki(a){return mi(a.item_id,a.id,a.item_name)}function mi(){for(var a=l(wa.apply(0,arguments)),b=a.next();!b.done;b=a.next()){var c=b.value;if(c!==null&&c!==void 0)return c}}function ni(a){if(a&&a.length){for(var b=[],c=0;c<a.length;++c){var d=a[c];d&&d.estimated_delivery_date?b.push(""+d.estimated_delivery_date):b.push("")}return b.join(",")}}function hi(a,b,c){c===void 0||c===null||c===""&&!qg[b]||(a[b]=c)}function li(a){return typeof a!=="number"&&typeof a!=="string"?"":a.toString()};function qi(a){return ri?A.querySelectorAll(a):null}
 function si(a,b){if(!ri)return null;if(Element.prototype.closest)try{return a.closest(b)}catch(e){return null}var c=Element.prototype.matches||Element.prototype.webkitMatchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector,d=a;if(!A.documentElement.contains(d))return null;do{try{if(c.call(d,b))return d}catch(e){break}d=d.parentElement||d.parentNode}while(d!==null&&d.nodeType===1);return null}var ti=!1;
 if(A.querySelectorAll)try{var ui=A.querySelectorAll(":root");ui&&ui.length==1&&ui[0]==A.documentElement&&(ti=!0)}catch(a){}var ri=ti;function vi(a){switch(a){case 0:break;case 9:return"e4";case 6:return"e5";case 14:return"e6";default:return"e7"}};var wi=/^[0-9A-Fa-f]{64}$/;function yi(a){try{return(new TextEncoder).encode(a)}catch(e){for(var b=[],c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b.push(d):d<2048?b.push(192|d>>6,128|d&63):d<55296||d>=57344?b.push(224|d>>12,128|d>>6&63,128|d&63):(d=65536+((d&1023)<<10|a.charCodeAt(++c)&1023),b.push(240|d>>18,128|d>>12&63,128|d>>6&63,128|d&63))}return new Uint8Array(b)}}
-function zi(a){if(a===""||a==="e0")return Promise.resolve(a);var b;if((b=z.crypto)==null?0:b.subtle){if(wi.test(a))return Promise.resolve(a);try{var c=yi(a);return z.crypto.subtle.digest("SHA-256",c).then(function(d){var e=Array.from(new Uint8Array(d)).map(function(f){return String.fromCharCode(f)}).join("");return z.btoa(e).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}).catch(function(){return"e2"})}catch(d){return Promise.resolve("e2")}}else return Promise.resolve("e1")};var Ai={Yk:'100',Zk:'100',al:'1000',rm:'101509156~103101750~103101752~103116026~103200004~103233424~103251618~103251620'},Bi={Rh:Number(Ai.Yk)||0,Ye:Number(Ai.Zk)||0,Om:Number(Ai.al)||0,so:Ai.rm};function O(a){Wa("GTM",a)};
+function zi(a){if(a===""||a==="e0")return Promise.resolve(a);var b;if((b=z.crypto)==null?0:b.subtle){if(wi.test(a))return Promise.resolve(a);try{var c=yi(a);return z.crypto.subtle.digest("SHA-256",c).then(function(d){var e=Array.from(new Uint8Array(d)).map(function(f){return String.fromCharCode(f)}).join("");return z.btoa(e).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}).catch(function(){return"e2"})}catch(d){return Promise.resolve("e2")}}else return Promise.resolve("e1")};var Ai={Yk:'100',Zk:'100',al:'1000',rm:'101509157~103101747~103101749~103116026~103200004~103233427~103251618~103251620'},Bi={Rh:Number(Ai.Yk)||0,Ye:Number(Ai.Zk)||0,Om:Number(Ai.al)||0,so:Ai.rm};function O(a){Wa("GTM",a)};
 var Fi=function(a,b){var c=["tv.1"],d=Ci(a);if(d)return c.push(d),{Pa:!1,Ci:c.join("~"),zf:{}};var e={},f=0;var g=Di(a,function(p,q,r){var t=p.value,u;if(r){var v=q+"__"+f++;u="${userData."+v+"|sha256}";e[v]=t}else u=encodeURIComponent(encodeURIComponent(t));var w;c.push(""+q+((w=p.index)!=null?w:"")+"."+u)}).Pa;var h=c.join("~"),m={userData:e},n=b===2;return b===1||n?{Pa:g,Ci:h,zf:m,Nm:n?"tv.9~${"+(h+
 "|encryptRsa}"):"tv.1~${"+(h+"|encrypt}"),encryptionKeyString:n?'MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAvMBNun6iQWLRC7leE+bbdzvSfi/vuWbUVnHQbRZGCQu9gU8gUhDTQvTCJ6vIl+PvFNutjUQo3svAxeWk9LyQdMWml3w8hLNKy2oaiCBwi5xPmpzrCWeYG4JaGpBom2PAojrRZdzNnrtutX5XvkcQ1ao/Z8CtYrC6cf9bhdVn46zTQaOBS2uokc4ihM9s0p3yESKcdaihK0wlFie0XvNwp/wR4mKlIwWOfDfnz3QUVDJiuFirBjZNoYsa3TmRRaJA3iih9I1fVwh4p7RSXHg6a+8ERQlJxx6HNm+GBh4VhzPwfRXGQX6sCVLVpbF9N/jr3DbE08lghW07/soO4Lq8IOWmaoo0kGvWwebbXSx9UpPCofGxXrbrDbuKaoFrrtnmqBsiaVOHxcg07N23bnxv9NfgjIuUBGaR2vykgWvWqViN3yrfAHmhXurjQtFu/csE8W95D3yP7a9rywXpELv047MSD+YthoXxGQmSOB4A1SG3SmJgbs8Ee8x/JBmBOylTAgMBAAE\x3d':Ei()}:{Pa:g,Ci:h,zf:m}},Hi=function(a){if(!(a!=null&&Object.keys(a).length>0))return!1;var b=Gi(a);return Di(b,function(){}).Pa},Di=function(a,b){b=b===void 0?function(){}:b;for(var c=!1,d=!1,e=l(a),f=e.next();!f.done;f=e.next()){var g=f.value;if(g.value){var h=Ii[g.name];if(h){var m=Ji(g);m&&(c=!0);d=!0;b(g,h,m)}}}return{Pa:d,Zh:c}},Ji=function(a){var b=Ki.indexOf(a.name)!==-1,c=
 /^e\d+$/.test(a.value),d;if(d=b&&!c){var e=a.value;d=!(Li.test(e)||wi.test(e))}return d},Ei=function(){return'{\x22keys\x22:[{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BBsqIrZVRoFQ4w87uY9OBy5NRzGPzZVNGTgp/pCJ06TCm8XBBbPYMKVAFMAYGNCMZ1eKqR4/jDcR+e246TRMXMM\x3d\x22,\x22version\x22:0},\x22id\x22:\x22c510a2d5-23b0-4336-9def-daf0397fab45\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BJSQNGNcaGAYmA68XDtA8v4CAAECgLk1ti4KGgW6tHWUkoHqL3eEi/wsazWFZxKNnjct7H/Cj0m7/xtj7bxQ1V0\x3d\x22,\x22version\x22:0},\x22id\x22:\x2261332559-26fc-4a1d-9ec2-f0b5c8e7b63a\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BKJOyJyxN8W6W69c/Q1p9yr2nl3LLdpDBaeItv4lnsMbnv1F3BFrqIuvFAIsN6uDj6W+h3Lszrinlnzk2WXr4Lo\x3d\x22,\x22version\x22:0},\x22id\x22:\x2232ceea90-c0fa-46b4-b7f4-e15ea6989257\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BMPknFLPJNbKEXauNaZg7g+QdT/7Q4mspwxaT79VXq23cyZXRMfORevTugrbPtC+oot4tEv0LLhO+IcaT0cc5lI\x3d\x22,\x22version\x22:0},\x22id\x22:\x2227b21b32-6b3f-47ba-acd5-4ba778ef47b8\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BG0tYIEke8QTRWNCDeu7CXAbpUte9c6hZijqMs/JCkmpijTr7EcVmkuc+rDsxwGlYRLrgbBGoZUsHQiwREHjwW0\x3d\x22,\x22version\x22:0},\x22id\x22:\x2201a0d93f-a2ed-4c4a-80b4-e7248feea19b\x22}]}'},Oi=function(a){if(z.Promise){var b=void 0;return b}},Si=function(a,b,c){if(z.Promise)try{var d=Gi(a),e=Pi(d).then(Qi);return e}catch(h){}},Ni=function(a,b){var c=void 0;
@@ -6179,7 +6179,7 @@ cb(d(r,t)),w=0;w<v.length;++w)b(v[w],t,u)}function f(r,t,u,v){var w=d(r,t);b(w,t
 n[p];f(q,"first_name",Xi,p);f(q,"last_name",Xi,p);f(q,"street",Yi,p);f(q,"city",Yi,p);f(q,"postal_code",Zi,p);f(q,"region",Yi,p);f(q,"country",Zi,p)}return h},$i=function(a){var b=a?Gi(a):[];return Qi({Od:b})},aj=function(a){return a&&a!=null&&Object.keys(a).length>0&&z.Promise?Gi(a).some(function(b){return b.value&&Ki.indexOf(b.name)!==-1&&!wi.test(b.value)}):!1},Ti=function(a){return a==null?"":ab(a)?nb(String(a)):"e0"},Zi=function(a){return a.replace(bj,"")},Xi=function(a){return Yi(a.replace(/\s/g,
 ""))},Yi=function(a){return nb(a.replace(cj,"").toLowerCase())},Wi=function(a){a=a.replace(/[\s-()/.]/g,"");a.charAt(0)!=="+"&&(a="+"+a);return dj.test(a)?a:"e0"},Vi=function(a){var b=a.toLowerCase().split("@");if(b.length===2){var c=b[0];/^(gmail|googlemail)\./.test(b[1])&&(c=c.replace(/\./g,""));c=c+"@"+b[1];if(ej.test(c))return c}return"e0"},Pi=function(a){if(!a.some(function(c){return c.value&&Ki.indexOf(c.name)!==-1}))return Promise.resolve({Od:a});if(!z.Promise)return Promise.resolve({Od:[]});
 var b;H(60)&&(b=Jc());return Promise.all(a.map(function(c){return c.value&&Ki.indexOf(c.name)!==-1?zi(c.value).then(function(d){c.value=d}):Promise.resolve()})).then(function(){var c={Od:a};if(b!==void 0){var d=Jc();b&&d&&(c.time=Math.round(d)-Math.round(b))}return c}).catch(function(){return{Od:[]}})},cj=/[0-9`~!@#$%^&*()_\-+=:;<>,.?|/\\[\]]/g,ej=/^\S+@\S+\.\S+$/,dj=/^\+\d{10,15}$/,bj=/[.~]/g,Li=/^[0-9A-Za-z_-]{43}$/,fj={},Ii=(fj.email="em",fj.phone_number="pn",fj.first_name="fn",fj.last_name="ln",
-fj.street="sa",fj.city="ct",fj.region="rg",fj.country="co",fj.postal_code="pc",fj.error_code="ec",fj),gj={},Ui=(gj.email="sha256_email_address",gj.phone_number="sha256_phone_number",gj.first_name="sha256_first_name",gj.last_name="sha256_last_name",gj.street="sha256_street",gj);var Ki=Object.freeze(["email","phone_number","first_name","last_name","street"]);var hj={},ij=(hj[N.m.Ja]=1,hj[N.m.Pc]=2,hj[N.m.Yb]=2,hj[N.m.oa]=3,hj[N.m.je]=4,hj[N.m.Gf]=5,hj[N.m.oc]=6,hj[N.m.Ta]=6,hj[N.m.Xa]=6,hj[N.m.Hc]=6,hj[N.m.yb]=6,hj[N.m.ib]=6,hj[N.m.Ya]=7,hj[N.m.Bb]=9,hj[N.m.Hf]=10,hj[N.m.mb]=11,hj),jj={},kj=(jj.unknown=13,jj.standard=14,jj.unique=15,jj.per_session=16,jj.transactions=17,jj.items_sold=18,jj);var lj=[];function mj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(ij)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=ij[f],h=b;h=h===void 0?!1:h;Wa("GTAG_EVENT_FEATURE_CHANNEL",g);h&&(lj[g]=!0)}}};var nj=function(){this.C=new Set},pj=function(a){var b=oj.Ea;a=a===void 0?[]:a;return Array.from(b.C).concat(a)},qj=function(){var a=oj.Ea,b=Bi.so;a.C=new Set;if(b!=="")for(var c=l(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var rj={xh:"54u1"};rj.wh=Number("0")||0;rj.vb="dataLayer";rj.vo="ChAI8P3WwAYQo4+Jiv/j2NZGEiUAJ7+A7U2hwXZoombK83PC2Gt8nuLmKfWUL5JbYgBpTkcmC4eRGgJYOw\x3d\x3d";var sj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},tj={__paused:1,__tg:1},uj;for(uj in sj)sj.hasOwnProperty(uj)&&(tj[uj]=1);var vj=lb("true"),wj=!1,xj,yj=!1;yj=!0;xj=yj;var zj,Aj=!1;zj=Aj;var Bj,Cj=!1;Bj=Cj;rj.Ff="www.googletagmanager.com";var Dj=""+rj.Ff+(xj?"/gtag/js":"/gtm.js"),Ej=null,Fj=null,Gj={},Hj={};rj.Xk="true";var Ij="";rj.yh=Ij;
+fj.street="sa",fj.city="ct",fj.region="rg",fj.country="co",fj.postal_code="pc",fj.error_code="ec",fj),gj={},Ui=(gj.email="sha256_email_address",gj.phone_number="sha256_phone_number",gj.first_name="sha256_first_name",gj.last_name="sha256_last_name",gj.street="sha256_street",gj);var Ki=Object.freeze(["email","phone_number","first_name","last_name","street"]);var hj={},ij=(hj[N.m.Ja]=1,hj[N.m.Pc]=2,hj[N.m.Yb]=2,hj[N.m.oa]=3,hj[N.m.je]=4,hj[N.m.Gf]=5,hj[N.m.oc]=6,hj[N.m.Ta]=6,hj[N.m.Xa]=6,hj[N.m.Hc]=6,hj[N.m.yb]=6,hj[N.m.ib]=6,hj[N.m.Ya]=7,hj[N.m.Bb]=9,hj[N.m.Hf]=10,hj[N.m.mb]=11,hj),jj={},kj=(jj.unknown=13,jj.standard=14,jj.unique=15,jj.per_session=16,jj.transactions=17,jj.items_sold=18,jj);var lj=[];function mj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(ij)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=ij[f],h=b;h=h===void 0?!1:h;Wa("GTAG_EVENT_FEATURE_CHANNEL",g);h&&(lj[g]=!0)}}};var nj=function(){this.C=new Set},pj=function(a){var b=oj.Ea;a=a===void 0?[]:a;return Array.from(b.C).concat(a)},qj=function(){var a=oj.Ea,b=Bi.so;a.C=new Set;if(b!=="")for(var c=l(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var rj={xh:"54u1"};rj.wh=Number("0")||0;rj.vb="dataLayer";rj.vo="ChAI8P3WwAYQo4+Jiv/j2NZGEiUAJ7+A7d96t7hzPQK/dcf9q3RcL3cnNYs1aTBjQ+NFzR9ew2U/GgICLg\x3d\x3d";var sj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},tj={__paused:1,__tg:1},uj;for(uj in sj)sj.hasOwnProperty(uj)&&(tj[uj]=1);var vj=lb("true"),wj=!1,xj,yj=!1;yj=!0;xj=yj;var zj,Aj=!1;zj=Aj;var Bj,Cj=!1;Bj=Cj;rj.Ff="www.googletagmanager.com";var Dj=""+rj.Ff+(xj?"/gtag/js":"/gtm.js"),Ej=null,Fj=null,Gj={},Hj={};rj.Xk="true";var Ij="";rj.yh=Ij;
 var oj=new function(){this.Ea=new nj;this.C=!1;this.H=0;this.fa=this.ia=this.ab=this.O="";this.R=this.N=!1};function Jj(){var a;a=a===void 0?[]:a;return pj(a).join("~")}function Kj(){var a=oj.O.length;return oj.O[a-1]==="/"?oj.O.substring(0,a-1):oj.O}function Lj(){return oj.C?H(83)?oj.H===0:oj.H!==1:!1}function Mj(a){for(var b={},c=l(a.split("|")),d=c.next();!d.done;d=c.next())b[d.value]=!0;return b};var Nj=new hb,Oj={},Pj={},Sj={name:rj.vb,set:function(a,b){Xc(wb(a,b),Oj);Qj()},get:function(a){return Rj(a,2)},reset:function(){Nj=new hb;Oj={};Qj()}};function Rj(a,b){return b!=2?Nj.get(a):Tj(a)}function Tj(a,b){var c=a.split(".");b=b||[];for(var d=Oj,e=0;e<c.length;e++){if(d===null)return!1;if(d===void 0)break;d=d[c[e]];if(b.indexOf(d)!==-1)return}return d}function Uj(a,b){Pj.hasOwnProperty(a)||(Nj.set(a,b),Xc(wb(a,b),Oj),Qj())}
 function Vj(){for(var a=["gtm.allowlist","gtm.blocklist","gtm.whitelist","gtm.blacklist","tagTypeBlacklist"],b=0;b<a.length;b++){var c=a[b],d=Rj(c,1);if(Array.isArray(d)||Wc(d))d=Xc(d,null);Pj[c]=d}}function Qj(a){ib(Pj,function(b,c){Nj.set(b,c);Xc(wb(b),Oj);Xc(wb(b,c),Oj);a&&delete Pj[b]})}function Wj(a,b){var c,d=(b===void 0?2:b)!==1?Tj(a):Nj.get(a);Uc(d)==="array"||Uc(d)==="object"?c=Xc(d,null):c=d;return c};
 var Xj=function(a,b,c){if(!c)return!1;for(var d=String(c.value),e,f=d.replace(/\["?'?/g,".").replace(/"?'?\]/g,"").split(","),g=0;g<f.length;g++){var h=f[g].trim();if(h&&!ub(h,"#")&&!ub(h,".")){if(ub(h,"dataLayer."))e=Rj(h.substring(10));else{var m=h.split(".");e=z[m.shift()];for(var n=0;n<m.length;n++)e=e&&e[m[n]];H(59)&&e===void 0&&(e=Rj(h))}if(e!==void 0)break}}if(e===void 0&&ri)try{var p=qi(d);if(p&&p.length>0){e=[];for(var q=0;q<p.length&&q<(b==="email"||b==="phone_number"?5:1);q++)e.push(zc(p[q])||
@@ -6752,20 +6752,20 @@ var m=void 0,n=void 0,p=fk(z.location,"query",!1,void 0,"gtm_debug");Xn(p)&&(m=h
 
 <div class="cell">
 <div class="cell-output-display">
-<div id="rfyxmqqzaj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rfyxmqqzaj table {
+<div id="haeehpgopz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#haeehpgopz table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#rfyxmqqzaj thead, #rfyxmqqzaj tbody, #rfyxmqqzaj tfoot, #rfyxmqqzaj tr, #rfyxmqqzaj td, #rfyxmqqzaj th {
+#haeehpgopz thead, #haeehpgopz tbody, #haeehpgopz tfoot, #haeehpgopz tr, #haeehpgopz td, #haeehpgopz th {
 border-style: none;
 }
-#rfyxmqqzaj p {
+#haeehpgopz p {
 margin: 0;
 padding: 0;
 }
-#rfyxmqqzaj .gt_table {
+#haeehpgopz .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -6790,11 +6790,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_caption {
+#haeehpgopz .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#rfyxmqqzaj .gt_title {
+#haeehpgopz .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -6805,7 +6805,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#rfyxmqqzaj .gt_subtitle {
+#haeehpgopz .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -6816,7 +6816,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#rfyxmqqzaj .gt_heading {
+#haeehpgopz .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -6827,12 +6827,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_bottom_border {
+#haeehpgopz .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_col_headings {
+#haeehpgopz .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -6846,7 +6846,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_col_heading {
+#haeehpgopz .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -6865,7 +6865,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#rfyxmqqzaj .gt_column_spanner_outer {
+#haeehpgopz .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -6876,13 +6876,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#rfyxmqqzaj .gt_column_spanner_outer:first-child {
+#haeehpgopz .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#rfyxmqqzaj .gt_column_spanner_outer:last-child {
+#haeehpgopz .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#rfyxmqqzaj .gt_column_spanner {
+#haeehpgopz .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -6893,10 +6893,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#rfyxmqqzaj .gt_spanner_row {
+#haeehpgopz .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#rfyxmqqzaj .gt_group_heading {
+#haeehpgopz .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -6921,7 +6921,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#rfyxmqqzaj .gt_empty_group_heading {
+#haeehpgopz .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -6935,13 +6935,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#rfyxmqqzaj .gt_from_md > :first-child {
+#haeehpgopz .gt_from_md > :first-child {
 margin-top: 0;
 }
-#rfyxmqqzaj .gt_from_md > :last-child {
+#haeehpgopz .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#rfyxmqqzaj .gt_row {
+#haeehpgopz .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -6959,7 +6959,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#rfyxmqqzaj .gt_stub {
+#haeehpgopz .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -6971,7 +6971,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#rfyxmqqzaj .gt_stub_row_group {
+#haeehpgopz .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -6984,13 +6984,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#rfyxmqqzaj .gt_row_group_first td {
+#haeehpgopz .gt_row_group_first td {
 border-top-width: 2px;
 }
-#rfyxmqqzaj .gt_row_group_first th {
+#haeehpgopz .gt_row_group_first th {
 border-top-width: 2px;
 }
-#rfyxmqqzaj .gt_summary_row {
+#haeehpgopz .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -6999,14 +6999,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#rfyxmqqzaj .gt_first_summary_row {
+#haeehpgopz .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_first_summary_row.thick {
+#haeehpgopz .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#rfyxmqqzaj .gt_last_summary_row {
+#haeehpgopz .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -7015,7 +7015,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_grand_summary_row {
+#haeehpgopz .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -7024,7 +7024,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#rfyxmqqzaj .gt_first_grand_summary_row {
+#haeehpgopz .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -7033,7 +7033,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_last_grand_summary_row_top {
+#haeehpgopz .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -7042,10 +7042,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_striped {
+#haeehpgopz .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#rfyxmqqzaj .gt_table_body {
+#haeehpgopz .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -7053,7 +7053,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_footnotes {
+#haeehpgopz .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -7066,7 +7066,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_footnote {
+#haeehpgopz .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -7074,7 +7074,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#rfyxmqqzaj .gt_sourcenotes {
+#haeehpgopz .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -7087,64 +7087,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#rfyxmqqzaj .gt_sourcenote {
+#haeehpgopz .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#rfyxmqqzaj .gt_left {
+#haeehpgopz .gt_left {
 text-align: left;
 }
-#rfyxmqqzaj .gt_center {
+#haeehpgopz .gt_center {
 text-align: center;
 }
-#rfyxmqqzaj .gt_right {
+#haeehpgopz .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#rfyxmqqzaj .gt_font_normal {
+#haeehpgopz .gt_font_normal {
 font-weight: normal;
 }
-#rfyxmqqzaj .gt_font_bold {
+#haeehpgopz .gt_font_bold {
 font-weight: bold;
 }
-#rfyxmqqzaj .gt_font_italic {
+#haeehpgopz .gt_font_italic {
 font-style: italic;
 }
-#rfyxmqqzaj .gt_super {
+#haeehpgopz .gt_super {
 font-size: 65%;
 }
-#rfyxmqqzaj .gt_footnote_marks {
+#haeehpgopz .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#rfyxmqqzaj .gt_asterisk {
+#haeehpgopz .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#rfyxmqqzaj .gt_indent_1 {
+#haeehpgopz .gt_indent_1 {
 text-indent: 5px;
 }
-#rfyxmqqzaj .gt_indent_2 {
+#haeehpgopz .gt_indent_2 {
 text-indent: 10px;
 }
-#rfyxmqqzaj .gt_indent_3 {
+#haeehpgopz .gt_indent_3 {
 text-indent: 15px;
 }
-#rfyxmqqzaj .gt_indent_4 {
+#haeehpgopz .gt_indent_4 {
 text-indent: 20px;
 }
-#rfyxmqqzaj .gt_indent_5 {
+#haeehpgopz .gt_indent_5 {
 text-indent: 25px;
 }
-#rfyxmqqzaj .katex-display {
+#haeehpgopz .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#rfyxmqqzaj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#haeehpgopz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -7202,221 +7202,222 @@ height: 0px !important;
 <td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_04.html">🖥️ láminas clase 04</a><br><a href="./tutorial_rstudio.html">👨🏻‍🏫 tutorial Introducción RStudio</a></td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_center" headers="semana">4</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 7 abr.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Crear Variables</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_06.html">🖥️ láminas clase 06</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana"><br>
+<td class="gt_row gt_center" headers="semana"><br>
 </td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 9 abr.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Estructuras de Datos</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_07.html">🖥️ láminas clase 07</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_07_script.R">👩🏽‍💻 script soporte clase 07</a><br><a href="./tarea_02.html">🛠️ tarea 2</a><br><a href="./guia_listas.html">👨🏻‍🏫 Guía Complemento Clase 07: listas</a><br><a href="./guia_subsetting.html">👨🏻‍🏫 Guía Básica Subsettings</a><br><a href="./tutorial_rbase.html">👨🏻‍🏫 Guía Repaso Rbase</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana">5</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 21 abr.</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">vie, 4 abr.</td>
 <td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Rutas de Trabajo</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_08_script.R">👩🏽‍💻 script soporte clase 08</a><br><br><a href="./tutorial_paths.html">👨🏻‍🏫 Tutorial Rutas de Trabajo</a></td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_05.html">🖥️ láminas clase 05</a><br><a href="https://www.youtube.com/watch?v=HgqY5j5jCxU">🎥 Video Crear Proyecto RStudio</a></td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana"><br>
-</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 23 abr.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Importar e Inspeccionar Conjunto de Datos</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_09.html">🖥️ láminas clase 09</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana">6</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 28 abr.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Reportes QMD/ Principios Gráficos Exploratorios</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_10.html">🖥️ láminas clase 10</a><br><a href="./proyectoccd.html">👩🏽‍🔬📊 Requerimientos para el Trabajo Ciclo C.D.</a><br> <a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_10_script.R">👩🏽‍💻 script soporte clase 10</a><br><a href="./tarea_03.html">🛠️ tarea 3</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana"><br>
-</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 30 abr.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Gráficos Exploratorios en sistema Base</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_11.html">🖥️ láminas clase 11</a></td>
+<td class="gt_row gt_center gt_striped" headers="semana">4</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 7 abr.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Crear Variables</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_06.html">🖥️ láminas clase 06</a></td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="semana"><br>
 </td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">vie, 2 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Principios Visualización de Datos</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_12.html">🖥️ láminas clase 12</a></td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 9 abr.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Estructuras de Datos</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_07.html">🖥️ láminas clase 07</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_07_script.R">👩🏽‍💻 script soporte clase 07</a><br><a href="./tarea_02.html">🛠️ tarea 2</a><br><a href="./guia_listas.html">👨🏻‍🏫 Guía Complemento Clase 07: listas</a><br><a href="./guia_subsetting.html">👨🏻‍🏫 Guía Básica Subsettings</a><br><a href="./tutorial_rbase.html">👨🏻‍🏫 Guía Repaso Rbase</a></td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">7</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 5 may.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 7 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">8</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 12 may.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 14 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">⏰ Exámen Parcial mitad semestre</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">9</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 19 may.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 21 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">⏰ Suministro de requerimientos del proyecto final</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">10</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 26 may.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 28 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">11</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 2 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 4 jun.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">12</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 9 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 11 jun.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">13</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 16 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 18 jun.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">14</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 23 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 25 jun.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">15</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 30 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 2 jul.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Entrega Proyecto Final</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">16</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 7 jul.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 9 jul.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Presentación Proyecto Final</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">0</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">vie, 4 abr.</td>
+<td class="gt_row gt_center gt_striped" headers="semana">5</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 21 abr.</td>
 <td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Rutas de Trabajo</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_05.html">🖥️ láminas clase 05</a><br><a href="https://www.youtube.com/watch?v=HgqY5j5jCxU">🎥 Video Crear Proyecto RStudio</a></td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_08_script.R">👩🏽‍💻 script soporte clase 08</a><br><br><a href="./tutorial_paths.html">👨🏻‍🏫 Tutorial Rutas de Trabajo</a></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana"><br>
+</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 23 abr.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Importar e Inspeccionar Conjunto de Datos</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_09.html">🖥️ láminas clase 09</a></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana">6</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 28 abr.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Reportes QMD/ Principios Gráficos Exploratorios</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_10.html">🖥️ láminas clase 10</a><br><a href="./proyectoccd.html">👩🏽‍🔬📊 Requerimientos para el Trabajo Ciclo C.D.</a><br> <a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_10_script.R">👩🏽‍💻 script soporte clase 10</a><br><a href="./tarea_03.html">🛠️ tarea 3</a></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana"><br>
+</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 30 abr.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Gráficos Exploratorios en sistema Base</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_11.html">🖥️ láminas clase 11</a></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">vie, 2 may.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Principios Visualización de Datos</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_12.html">🖥️ láminas clase 12</a></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">7</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 5 may.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 7 may.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">8</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 12 may.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 14 may.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">⏰ Exámen Parcial mitad semestre</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">9</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 19 may.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 21 may.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">⏰ Suministro de requerimientos del proyecto final</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">10</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 26 may.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 28 may.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">11</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 2 jun.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 4 jun.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">12</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 9 jun.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 11 jun.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">13</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 16 jun.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 18 jun.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">14</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 23 jun.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 25 jun.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">15</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 30 jun.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 2 jul.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Entrega Proyecto Final</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="semana">16</td>
+<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 7 jul.</td>
+<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="semana"><br>
+</td>
+<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 9 jul.</td>
+<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
+</td>
+<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Presentación Proyecto Final</td>
 </tr>
 </tbody>
 </table>
