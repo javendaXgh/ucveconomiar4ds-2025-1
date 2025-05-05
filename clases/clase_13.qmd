@@ -248,8 +248,8 @@ ggplot(data = gapminder_2007)
 #| eval: false
 #| code-line-numbers: "2,3"
 ggplot(data = gapminder_2007,
-       mapping = aes(x = lifeExp, 
-                     y = gdpPercap))
+       mapping = aes(x = gdpPercap, 
+                     y = lifeExp))
 
 
 
@@ -261,8 +261,8 @@ ggplot(data = gapminder_2007,
 #| echo: false
 #| eval: true
 ggplot(data = gapminder_2007,
-       mapping = aes(x = lifeExp, 
-                     y = gdpPercap))
+       mapping = aes(x = gdpPercap, 
+                     y = lifeExp))
 
 ```
 :::
@@ -279,8 +279,8 @@ ggplot(data = gapminder_2007,
 #| eval: false
 #| code-line-numbers: "4"
 ggplot(data = gapminder_2007,
-       mapping = aes(x = lifeExp, 
-                     y = gdpPercap))+
+       mapping = aes(x = gdpPercap, 
+                     y = lifeExp))+
   geom_point(color= "#9d0208")
 
 
@@ -293,8 +293,8 @@ ggplot(data = gapminder_2007,
 #| echo: false
 #| eval: true
 ggplot(data = gapminder_2007,
-       mapping = aes(x = lifeExp, 
-                     y = gdpPercap))+
+       mapping = aes(x = gdpPercap, 
+                     y = lifeExp))+
   geom_point(color= "#9d0208")
 
 ```
@@ -520,8 +520,7 @@ ggplot(data = gapminder_2007,
 ```
 :::
 :::::
-
-## geom_histogram: cdad. barras
+## geom_histogram: cdad. barras distinta
 
 <br>
 
@@ -546,6 +545,37 @@ ggplot(data = gapminder_2007,
 ggplot(data = gapminder_2007,
        aes(gdpPercap)) +
   geom_histogram(bins=20,
+                 fill='#0a9396')
+
+```
+:::
+:::::
+
+## geom_histogram: cdad. barras distinta
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "4"
+ggplot(data = gapminder_2007,
+       aes(gdpPercap)) +
+  geom_histogram(bins=4,
+                 fill='#0a9396')
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+ggplot(data = gapminder_2007,
+       aes(gdpPercap)) +
+  geom_histogram(bins=4,
                  fill='#0a9396')
 
 ```

@@ -1,0 +1,49 @@
+---
+title: "Test Documento Quarto"
+format: html
+editor: visual
+---
+
+## Funcionalidades Quarto
+
+Documento exploratorio de funcionalidades Quarto
+
+## Conjunto de Datos a Trabajar
+
+Datos filtrados para el año 1997 ordenados deforma descendente según variable gdpPercap.
+
+```{r}
+#| warning: false
+#| echo: false
+library(dplyr)
+library(gapminder)
+library(gt)
+library(DT)
+# esto es un chunk de código
+
+gapminder_1977 <- gapminder %>%
+  filter(year==1977)%>%
+  arrange(desc(gdpPercap))
+
+
+```
+
+## Mostrar Primeras Filas
+
+Estas son las primeras filas que mostraremos
+
+```{r}
+#| echo: false
+
+head (gapminder_1977)
+```
+
+## Tabla Interactiva
+
+Esta es un demo del paquete DT
+
+```{r}
+#| echo: false
+
+datatable(gapminder_1977)
+```
