@@ -1,12 +1,6 @@
 ---
 subtitle: "Clase 13: Gráficos con `ggplot2`"
 date: "2025/05/05"
-# output:
-#   html_document:
-#     toc: yes
-#     incremental: true
-# filters:
-#   - webr
 format:
   revealjs:
     incremental: true  
@@ -30,6 +24,10 @@ format:
 .large_code pre code {
   width: 1000px!important;
   font-size:  24px !important;
+}
+
+.small img {
+  max-width: 70% !important;
 }
 ```
 
@@ -1482,7 +1480,7 @@ graf_gap_2007 <- ggplot(data=df_continente_2007,
 graf_gap_2007
 ```
 
-## geom_col: temas (themes)
+## geom_col: temas (themes) {.small}
 
 Los temas son aplicables a cualquier geom ya que cambian aspectos generales del área del gráfico
 

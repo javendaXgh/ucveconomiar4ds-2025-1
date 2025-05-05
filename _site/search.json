@@ -5791,7 +5791,7 @@
     "href": "clases/clase_13.html#inspeccionar-datos-a-trabajar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Inspeccionar Datos a Trabajar",
-    "text": "Inspeccionar Datos a Trabajar\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor     valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n 1 2009-02-09   716128000 Nvidia  low            0.237\n 2 2020-10-26   336896000 Nvidia  adjclose      13.1  \n 3 2007-04-05   109039179 Google  high          11.8  \n 4 2019-01-11    30416000 Google  open          53.2  \n 5 2008-09-18    76944900 Oracle  open          18.4  \n 6 2007-08-28  1179365600 Apple   high           4.73 \n 7 2012-03-09   367836000 Nvidia  low            0.368\n 8 2022-11-28     5112200 Oracle  close         81.4  \n 9 2015-12-08    15219700 Oracle  low           38.3  \n10 2024-06-02 17110588415 Bitcoin low        67316.   \n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
+    "text": "Inspeccionar Datos a Trabajar\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor     valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n 1 2016-01-14   600236000 Nvidia  close          0.717\n 2 2020-08-07   342516000 Nvidia  high          11.5  \n 3 2016-10-18     7121900 Oracle  adjclose      33.7  \n 4 2021-07-20    19084000 Google  adjclose     130.   \n 5 2021-06-05 35959473399 Bitcoin adjclose   35552.   \n 6 2012-05-22    22122800 Oracle  adjclose      21.8  \n 7 2018-11-15    24922800 Oracle  low           49.0  \n 8 2008-09-12   242023777 Google  open          10.7  \n 9 2007-09-18  1064089600 Apple   open           4.97 \n10 2018-08-17   141708000 Apple   high          54.5  \n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
   },
   {
     "objectID": "clases/clase_13.html#geom_line-1-línea-con-color",
@@ -5946,5 +5946,47 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Recursos",
     "text": "Recursos\nhttps://ggplot2-book.org/\nhttps://bbc.github.io/rcookbook/\nhttps://r-charts.com/es/ggplot2/\nhttps://ggplot2.tidyverse.org/\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_13.html#bw",
+    "href": "clases/clase_13.html#bw",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "bw",
+    "text": "bw\n\ngraf_gap_2007+\n  theme_bw()"
+  },
+  {
+    "objectID": "clases/clase_13.html#minimal",
+    "href": "clases/clase_13.html#minimal",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "minimal",
+    "text": "minimal\n\ngraf_gap_2007+\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_13.html#grey",
+    "href": "clases/clase_13.html#grey",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "grey",
+    "text": "grey\n\ngraf_gap_2007+\n  theme_grey()"
+  },
+  {
+    "objectID": "clases/clase_13.html#linedraw",
+    "href": "clases/clase_13.html#linedraw",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "linedraw",
+    "text": "linedraw\n\ngraf_gap_2007+\n  theme_linedraw()"
+  },
+  {
+    "objectID": "clases/clase_13.html#dark",
+    "href": "clases/clase_13.html#dark",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "dark",
+    "text": "dark\n\ngraf_gap_2007+\n  theme_dark()"
+  },
+  {
+    "objectID": "clases/clase_13.html#light",
+    "href": "clases/clase_13.html#light",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "light",
+    "text": "light\n\ngraf_gap_2007+\n  theme_light()"
   }
 ]
