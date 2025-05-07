@@ -88,6 +88,8 @@ website:
         
       - section: "Videos de Apoyo"
         contents:
+          - href: https://www.youtube.com/watch?v=Cda3krVkP1Q
+            text: "video apoyo tarea 3"
 
       - section: "Proyecto"
         contents:
