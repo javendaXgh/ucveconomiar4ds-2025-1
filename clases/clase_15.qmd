@@ -1,0 +1,217 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 15: Trabajando con Data Frames por filas"
+date: "2025/05/12"
+# output:
+#   html_document:
+#     toc: yes
+format: 
+  revealjs:
+    incremental: true   
+---
+
+## Objetivo
+
+Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones.
+
+![](images/im-or-trans.png){width="700"}
+
+```{r}
+#| echo: false
+#| warning: false
+library(gapminder)
+library(tidyverse)
+df_gapminder <- gapminder::gapminder
+continentes <- unique(df_gapminder$continent)
+
+```
+
+## `glimpse`
+
+```{r}
+glimpse(df_gapminder)
+```
+
+# Operaciones en Filas
+
+## `Filter` por dos criterios sobre dos atributos
+
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela' | country =='Colombia')%>%
+  filter(year>=1992)
+```
+
+## `Filter` por dos criterios sobre dos atributos,
+
+Dos atributos a filtrar por cada criterio. En `country` se filtran un país o el otro país. En `year` se tienen que cumplir los dos criterios `&`
+
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela' | country =='Colombia')%>%
+  filter(year>=1977 & year<= 2002)
+
+```
+
+## `Filter` por dos criterios con operadores `&` y `|` (AND y OR)
+
+Se introduce la función `between`
+
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela' | country =='Colombia')%>%
+  filter(between(x= year, 
+                 left= 1977,
+                 right= 2002))
+
+```
+
+## `Filter` usando `str_detect`
+
+Cuando no existe certeza para aplicar el criterio de igualdad, se puede usar la función `str_detect` del paquete `stringr` la cual evalúa coincidencias parciales sobre la presencia de un patrón sobre una determinada `string` (cadena de texto)
+
+```{r}
+df_gapminder%>%
+  filter(str_detect(string= country,
+                    pattern='nistan'))
+```
+
+## Funciones `slice` y sus variantes
+
+Rebana, equivalente a seleccionar filas de la DF basadas en algún criterio.
+
+## `slice_min()`
+
+Valore mínimo según un criterio
+
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  slice_min(gdpPercap)
+```
+
+## `slice_min()` con parámetro `n`
+
+`n` Valores mínimos según un criterio. En este caso `n=5`
+
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  slice_min(gdpPercap, n=5)
+```
+
+## equivalente de `slice_min()` en Rbase
+
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  filter(gdpPercap ==min(gdpPercap))
+```
+
+## `slice_max()`
+
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  slice_max(order_by= gdpPercap)
+
+```
+
+aplica usar el argumento `n` , igual que en `slice_min()`
+
+## equivalente de `slice_max()` en Rbase
+
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  filter(gdpPercap ==max(gdpPercap))
+```
+
+## `slice_head()`
+
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[2])%>%
+  slice_head(n=10)
+```
+
+## equivalente de `slice_head()` en Rbase
+
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[2])%>%
+  .[1:10, ]
+```
+
+## `slice_tail()`
+
+```{r}
+continentes[3]
+df_gapminder%>%
+  filter(continent==continentes[3])%>%
+  slice_tail(n=10)
+```
+
+## equivalente de `slice_tail()` en Rbase
+
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[3])%>%
+  .[(nrow(.)-10):nrow(.), ]
+```
+
+## `slice_sample()`
+
+Una muestra aleatoria de valores filtrando previamente de acuerdo a un criterio
+
+```{r}
+continentes[1]
+df_gapminder%>%
+  filter(continent==continentes[1])%>%
+  slice_sample(n=10)
+
+```
+
+## equivalente de `slice_tail()` en Rbase
+
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[1])%>%
+  .[sample(1:nrow(.),10),]
+```
+
+## Reordenar datos basado en un criterio arrange
+
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[4])%>%
+  arrange(gdpPercap)
+```
+
+ojo con la sobreescritura
+
+## Reordenar en forma descendente `desc()`
+
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[4])%>%
+  arrange(desc(gdpPercap))
+
+```
+
+## Notas finales:
+
+-   Revisar documentación de funciones para comprender los argumentos y su uso
+
+-   Revisar funcionamiento de las equivalencias que se presentaron usando RBase
+
+-   Revisar `vignette`
+
+    ```{r}
+    #| echo: true
+    #| eval: false
+    vignette(package='dplyr')
+    vignette('dplyr',package='dplyr')
+
+
+    ```

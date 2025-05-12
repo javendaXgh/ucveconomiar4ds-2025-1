@@ -22,11 +22,15 @@ df_inter_access <- WDI(indicator = "IT.NET.USER.ZS",
 as_tibble(df_inter_access)  #Este codigo nos permite visualizar los datos
                             # de tibble para una mejor visualizacion. 
 
+# Observación: no es necesario usar ese `as_tibble` ya que su función es cambiar la clase 
+# del objeto de data.frame a tibble
+
 # 2. Tabla resumen: Internet Users----
 
 tabla_resumen <- summary(df_inter_access)
 
 tabla_resumen
+
 
 
 # 3. Filtrar Internet Users para Mercosur---- 
@@ -53,9 +57,16 @@ tabla_resumen_mercosur
 #Ordenar la Data Frame en orden descendente y agrupado por año (Incluyendo
 #los valores no disponible):
 
+### Observación: no estás "agrupando", ya que este término tiene otro concepto del que 
+### hablaremos luego
+
 df_inter_access_mercosur_desc <- df_inter_access_mercosur %>% 
   arrange(desc(year), desc(internet_user))
 
+### Observación: cuando revisas los resultados puedes ver que el criterio de ordenar
+### descendentemente por `internet_user` no funciona del todo ya que se aparecen primero
+### los NA's. ¿Qué se te ocurre que puedas hacer para que esto no pase? Quizás el video
+### que coloqué sobre esta tarea te pueda ayudar
 df_inter_access_mercosur_desc #Este codigo muestra en consola el df
 
 #Ordenar la Data Frame en orden descendente y agrupado por año (sin incluir
@@ -64,6 +75,12 @@ df_inter_access_mercosur_desc #Este codigo muestra en consola el df
 df_inter_access_mercosur_desc_clean <- df_inter_access_mercosur %>% 
  filter(!is.na(internet_user)) %>%  #esta linea de codigo elmina los n/a del df
   arrange(desc(year), desc(internet_user),) 
+
+### 🤡🤡🤡: no aplica la observación que te hice anteriormente. ya te diste cuenta del problema y esa 
+### justamente es la idea. Muy Bien!!! por cierto, dejaste una coma de más en la última línea 
+### en este caso no va a interrumpir la ejecución del código pero hay funciones en que sí
+### te pudiera dar un error
+
 
 
 df_inter_access_mercosur_desc_clean #Este codigo muestra en consola el df
@@ -139,10 +156,10 @@ df_mercosur_incl_VE <- bind_rows(df_inter_access_mercosur_desc_clean,
 
 # Grafico simple:
 
-# ggplot (df_mercosur_incl_VE , aes(x = year, y = internet_user , 
-#        color = country)) + 
-#         geom_line() + 
-#         ggtitle("Personas que utilizan Internet (% de la pob) a lo largo de tiempo") 
+ggplot (df_mercosur_incl_VE , aes(x = year, y = internet_user ,
+       color = country)) +
+        geom_line() +
+        ggtitle("Personas que utilizan Internet (% de la pob) a lo largo de tiempo")
 
 # Grafico mejorado (con ayuda de deepseek):
 
