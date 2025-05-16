@@ -743,18 +743,18 @@ Levels: Africa Americas Asia Europe Oceania</code></pre>
 <span id="cb33-3"><a></a>  <span class="fu">slice_sample</span>(<span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 6
-   country          continent  year lifeExp       pop gdpPercap
-   &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
- 1 India            Asia       1967    47.2 506000000      701.
- 2 Korea, Dem. Rep. Asia       1967    59.9  12617009     2144.
- 3 Korea, Rep.      Asia       1952    47.5  20947571     1031.
- 4 Korea, Dem. Rep. Asia       1962    56.7  10917494     1622.
- 5 Jordan           Asia       1987    65.9   2820042     4449.
- 6 Syria            Asia       2007    74.1  19314747     4185.
- 7 Kuwait           Asia       1967    64.6    575003    80895.
- 8 Oman             Asia       1997    72.5   2283635    19702.
- 9 Korea, Dem. Rep. Asia       1987    70.6  19067554     4106.
-10 Syria            Asia       1967    53.7   5680812     1882.</code></pre>
+   country     continent  year lifeExp       pop gdpPercap
+   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+ 1 Japan       Asia       1997    80.7 125956499    28817.
+ 2 Israel      Asia       1982    74.4   3858421    15367.
+ 3 Japan       Asia       1957    65.5  91563009     4318.
+ 4 Myanmar     Asia       1952    36.3  20092996      331 
+ 5 Taiwan      Asia       1952    58.5   8550362     1207.
+ 6 Thailand    Asia       1957    53.6  25041917      794.
+ 7 Korea, Rep. Asia       1972    62.6  33505000     3031.
+ 8 Bahrain     Asia       1997    73.9    598561    20292.
+ 9 Oman        Asia       1992    71.2   1915208    18617.
+10 Lebanon     Asia       1962    62.1   1886848     5715.</code></pre>
 </div>
 </div>
 </section>
@@ -766,18 +766,18 @@ Levels: Africa Americas Asia Europe Oceania</code></pre>
 <span id="cb35-3"><a></a>  .[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.),<span class="dv">10</span>),]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 6
-   country            continent  year lifeExp      pop gdpPercap
-   &lt;fct&gt;              &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
- 1 Lebanon            Asia       1997    70.3  3430388     8755.
- 2 Vietnam            Asia       2007    74.2 85262356     2442.
- 3 Hong Kong, China   Asia       2007    82.2  6980412    39725.
- 4 Jordan             Asia       1972    56.5  1613551     2111.
- 5 Vietnam            Asia       2002    73.0 80908147     1764.
- 6 Cambodia           Asia       1987    53.9  8371791      684.
- 7 Jordan             Asia       1957    45.7   746559     1886.
- 8 Vietnam            Asia       1967    47.8 39463910      637.
- 9 West Bank and Gaza Asia       2007    73.4  4018332     3025.
-10 Mongolia           Asia       1982    57.5  1756032     2001.</code></pre>
+   country          continent  year lifeExp       pop gdpPercap
+   &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+ 1 Afghanistan      Asia       1977    38.4  14880372      786.
+ 2 Mongolia         Asia       1997    63.6   2494803     1902.
+ 3 India            Asia       1952    37.4 372000000      547.
+ 4 Philippines      Asia       2002    70.3  82995088     2651.
+ 5 Hong Kong, China Asia       1992    77.6   5829696    24758.
+ 6 Philippines      Asia       1952    47.8  22438691     1273.
+ 7 Oman             Asia       1972    52.1    829050    10618.
+ 8 Yemen, Rep.      Asia       1997    58.0  15826497     2117.
+ 9 Afghanistan      Asia       1982    39.9  12881816      978.
+10 Afghanistan      Asia       2002    42.1  25268405      727.</code></pre>
 </div>
 </div>
 </section>

@@ -1,0 +1,193 @@
+---
+title: ''
+format:
+  pdf:
+    documentclass: article 
+    geometry:
+      - margin=.3in 
+    spacing: single 
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+# cargar librerias
+library(readxl)
+library(tidyverse)
+library(gt)
+library(knitr)
+
+# lectura de excel con preguntas
+df_preguntas <- readxl::read_excel('listado_preguntas.xlsx')%>%
+  mutate(Pregunta= paste0(toupper(substr(Pregunta,1,1)),substr(Pregunta,2,nchar(Pregunta))))%>%
+  sample_n(10)%>%
+  mutate(iden=sample(1:10, 10, replace=FALSE))%>%
+  mutate(Pregunta = paste0('Pregunta ',iden,': ',Pregunta))%>%
+  rowwise()%>%
+  mutate(Pregunta= ifelse(tipo== 'multiple',
+                          paste(Pregunta,'(selección múltiple) '),
+                          Pregunta))%>%
+  dplyr::arrange(iden)%>%
+  select(c(1,sample(2:6, 5)))
+  
+
+names(df_preguntas) <- c('Pregunta', 
+                         'Opc 1',
+                         'Opc 2',
+                         'Opc 3',
+                         'Opc 4',
+                         'Opc 5')
+
+
+```
+
+## Examen Ciencia de Datos para Economistas. 14/05/2025. Prof. José M. Avendaño
+
+## Nombre:
+
+## C.I.:
+
+### `r df_preguntas$Pregunta[1]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[1,2:6])
+```
+
+### `r df_preguntas$Pregunta[2]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[2,2:6])
+```
+
+### `r df_preguntas$Pregunta[3]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[3,2:6])
+```
+
+### `r df_preguntas$Pregunta[4]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[4,2:6])
+```
+
+### `r df_preguntas$Pregunta[5]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[5,2:6])
+```
+
+### `r df_preguntas$Pregunta[6]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[6,2:6])
+```
+
+### `r df_preguntas$Pregunta[7]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[7,2:6])
+```
+
+### `r df_preguntas$Pregunta[8]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[8,2:6])
+```
+
+### `r df_preguntas$Pregunta[9]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[9,2:6])
+```
+
+### `r df_preguntas$Pregunta[10]` (1 pto.)
+
+```{r}
+#| echo: false
+
+#gt::gt(df_preguntas[1,2:6])
+kable(df_preguntas[10,2:6])
+```
+
+### Pregunta 12: complete y/o corrija las fallas en el siguiente código: (2 ptos.)
+
+```{r}
+#| eval: false
+
+librayr(gapminder)
+
+# Usar los datos de gapminder y procesarlos con el pipe operator
+datos_procesados <- gapminder %>
+  fiter(continent == "Asia") %>
+  selec(country, year, lifeExp, gdpPercap) %>
+  arraneg(desc(lifeExp)
+
+# Imprimir los primeros resultados
+head(datos_procesados
+
+
+```
+
+### Pregunta 13: El siguiente código, cuántas filas aproximadamente extraerá de la data frame gapminder: (2 ptos.)
+
+```{r}
+#| eval: false
+gapminder%>%
+  filter(continent!= 'Americas')%>%
+  filter(country== 'Venezuela')
+  
+```
+
+Cdad. estimada:\_\_\_\_\_\_
+
+### Pregunta 14: De la siguiente lista, indique el código para extraer el valor indicado (2 ptos.)
+
+```{r}
+#| echo: false
+# Canasta de bienes
+canasta <- list(
+  nombre = "Canasta básica",
+  articulos = list(
+    pan = list(precio = 1.50, unidad = "unidad"),
+    arroz = list(precio = 1.70, unidad = "kg"),
+    huevos = list(precio = 3.50, unidad = "docena")
+  ),
+  costo_total = 7.00
+)
+
+```
+
+`r paste0('para el producto: ',sample(c('pan', 'arroz','huevos'),1),', el ',sample(c('precio','tipo de unidad de medida'),1))`
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### Pregunta 15: del indicador que seleccionó para la tarea 3, que características pudo observar en los datos, que comparaciones pudo hacer entre valores de Mercosur y Venezuela? Qué técnicas adicionales, según lo visto, incluiría en el análisis de los datos (4 ptos.)
