@@ -21,9 +21,8 @@ df_migracion_neta <- WDI(
   extra = FALSE,
   cache = NULL,
   latest = NULL,
-  language = "en"
-  
-)
+  language = "en")
+
 #para visualizar la data descargada, se utilizó la funcion view
 view(df_migracion_neta)
 

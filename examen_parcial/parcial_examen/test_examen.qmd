@@ -2,24 +2,23 @@
 title: ''
 format:
   pdf:
-    documentclass: article 
+    documentclass: article # O alguna otra clase de documento que prefieras
     geometry:
-      - margin=.3in 
-    spacing: single 
+      - margin=.3in # Ajusta este valor para los márgenes (ejemplo: 0.75in)
+    spacing: single # O 'onehalf' para 1.5 o 'double' para doble espacio
 ---
 
 ```{r}
 #| echo: false
 #| warning: false
 
-# cargar librerias
+
 library(readxl)
 library(tidyverse)
 library(gt)
 library(knitr)
 
-# lectura de excel con preguntas
-df_preguntas <- readxl::read_excel('listado_preguntas.xlsx')%>%
+df_preguntas <- readxl::read_excel('preguntas.xlsx')%>%
   mutate(Pregunta= paste0(toupper(substr(Pregunta,1,1)),substr(Pregunta,2,nchar(Pregunta))))%>%
   sample_n(10)%>%
   mutate(iden=sample(1:10, 10, replace=FALSE))%>%
@@ -142,8 +141,9 @@ kable(df_preguntas[10,2:6])
 
 ```{r}
 #| eval: false
-
+# Cargar paquetes
 librayr(gapminder)
+libaryr(dplyr)
 
 # Usar los datos de gapminder y procesarlos con el pipe operator
 datos_procesados <- gapminder %>
@@ -161,8 +161,6 @@ head(datos_procesados
 
 ```{r}
 #| eval: false
-
-
 gapminder%>%
   filter(continent!= 'Americas')%>%
   filter(country== 'Venezuela')
@@ -192,4 +190,4 @@ canasta <- list(
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-### Pregunta 15: del indicador que seleccionó para la tarea 3, que características pudo observar en los datos, que comparaciones pudo hacer entre valores de Mercosur y Venezuela? Qué técnicas adicionales, según lo visto, incluiría en el análisis de los datos (4 ptos.)
+### Pregunta 15: del indicador que seleccionó para la tarea 3, que caracterísrticas pudo observar en los datos, que comparaciones pudo hacer entre valores de Mercosur y Venezuela? Qué técnicas adicionales, según lo visto, incluiría en el análisis de los datos (4 ptos.)

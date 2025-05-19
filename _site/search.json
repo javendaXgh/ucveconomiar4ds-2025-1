@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 19 mar.\nPresentación Curso\n\n\n\n\n2\nlun, 24 mar.\nIntroducción Ciclo de Ciencia de Datos\n🖥️ láminas clase 01\n\n\n\n\nmié, 26 mar.\nTrabajando con R Base\n🖥️ láminas clase 02 🖥️ láminas playground\n\n\n3\nlun, 31 mar.\nTrabajando con R Base/cont.\n🖥️ láminas playground👨🏻‍🏫 tutorial instalación R y RStudio👩🏽‍💻 script soporte clase 03\n\n\n\n\nmié, 2 abr.\nEntorno de Desarrollo RStudio\n🖥️ láminas clase 04👨🏻‍🏫 tutorial Introducción RStudio\n\n\n\n\nvie, 4 abr.\nRutas de Trabajo\n🖥️ láminas clase 05🎥 Video Crear Proyecto RStudio\n\n\n4\nlun, 7 abr.\nCrear Variables\n🖥️ láminas clase 06\n\n\n\n\nmié, 9 abr.\nEstructuras de Datos\n🖥️ láminas clase 07👩🏽‍💻 script soporte clase 07🛠️ tarea 2👨🏻‍🏫 Guía Complemento Clase 07: listas👨🏻‍🏫 Guía Básica Subsettings👨🏻‍🏫 Guía Repaso Rbase\n\n\n5\nlun, 21 abr.\nRutas de Trabajo\n👩🏽‍💻 script soporte clase 08👨🏻‍🏫 Tutorial Rutas de Trabajo\n\n\n\n\nmié, 23 abr.\nImportar e Inspeccionar Conjunto de Datos\n🖥️ láminas clase 09\n\n\n6\nlun, 28 abr.\nReportes QMD/ Principios Gráficos Exploratorios\n🖥️ láminas clase 10👩🏽‍🔬📊 Requerimientos para el Trabajo Ciclo C.D. 👩🏽‍💻 script soporte clase 10🛠️ tarea 3\n\n\n\n\nmié, 30 abr.\nGráficos Exploratorios en sistema Base\n🖥️ láminas clase 11\n\n\n\n\nvie, 2 may.\nPrincipios Visualización de Datos\n🖥️ láminas clase 12\n\n\n7\nlun, 5 may.\nGráficos con ggplot / Parte I\n🖥️ láminas clase 13👩🏽‍💻 qmd soporte reporte clase 13\n\n\n\n\nmié, 7 may.\nGráficos con ggplot / Parte II\n🖥️ láminas clase 14\n\n\n8\nlun, 12 may.\nGráficos con ggplot / Parte II/ Trabajando con Data Frames por filas\n🖥️ láminas clase 15-ggplot🖥️ láminas clase 15: DF’s por filas\n\n\n\n\nmié, 14 may.\n\n\n⏰ Exámen Parcial mitad semestre\n\n\n9\nlun, 19 may.\n\n\n\n\n\n\n\n\nmié, 21 may.\n\n\n⏰ Suministro de requerimientos del proyecto final\n\n\n10\nlun, 26 may.\n\n\n\n\n\n\n\n\nmié, 28 may.\n\n\n⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos\n\n\n11\nlun, 2 jun.\n\n\n\n\n\n\n\n\nmié, 4 jun.\n\n\n\n\n\n\n12\nlun, 9 jun.\n\n\n\n\n\n\n\n\nmié, 11 jun.\n\n\n\n\n\n\n13\nlun, 16 jun.\n\n\n\n\n\n\n\n\nmié, 18 jun.\n\n\n\n\n\n\n14\nlun, 23 jun.\n\n\n\n\n\n\n\n\nmié, 25 jun.\n\n\n\n\n\n\n15\nlun, 30 jun.\n\n\n\n\n\n\n\n\nmié, 2 jul.\n\n\nEntrega Proyecto Final\n\n\n16\nlun, 7 jul.\n\n\n\n\n\n\n\n\nmié, 9 jul.\n\n\nPresentación Proyecto Final",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 19 mar.\nPresentación Curso\n\n\n\n\n2\nlun, 24 mar.\nIntroducción Ciclo de Ciencia de Datos\n🖥️ láminas clase 01\n\n\n\n\nmié, 26 mar.\nTrabajando con R Base\n🖥️ láminas clase 02 🖥️ láminas playground\n\n\n3\nlun, 31 mar.\nTrabajando con R Base/cont.\n🖥️ láminas playground👨🏻‍🏫 tutorial instalación R y RStudio👩🏽‍💻 script soporte clase 03\n\n\n\n\nmié, 2 abr.\nEntorno de Desarrollo RStudio\n🖥️ láminas clase 04👨🏻‍🏫 tutorial Introducción RStudio\n\n\n\n\nvie, 4 abr.\nRutas de Trabajo\n🖥️ láminas clase 05🎥 Video Crear Proyecto RStudio\n\n\n4\nlun, 7 abr.\nCrear Variables\n🖥️ láminas clase 06\n\n\n\n\nmié, 9 abr.\nEstructuras de Datos\n🖥️ láminas clase 07👩🏽‍💻 script soporte clase 07🛠️ tarea 2👨🏻‍🏫 Guía Complemento Clase 07: listas👨🏻‍🏫 Guía Básica Subsettings👨🏻‍🏫 Guía Repaso Rbase\n\n\n5\nlun, 21 abr.\nRutas de Trabajo\n👩🏽‍💻 script soporte clase 08👨🏻‍🏫 Tutorial Rutas de Trabajo\n\n\n\n\nmié, 23 abr.\nImportar e Inspeccionar Conjunto de Datos\n🖥️ láminas clase 09\n\n\n6\nlun, 28 abr.\nReportes QMD/ Principios Gráficos Exploratorios\n🖥️ láminas clase 10👩🏽‍🔬📊 Requerimientos para el Trabajo Ciclo C.D. 👩🏽‍💻 script soporte clase 10🛠️ tarea 3\n\n\n\n\nmié, 30 abr.\nGráficos Exploratorios en sistema Base\n🖥️ láminas clase 11\n\n\n\n\nvie, 2 may.\nPrincipios Visualización de Datos\n🖥️ láminas clase 12\n\n\n7\nlun, 5 may.\nGráficos con ggplot / Parte I\n🖥️ láminas clase 13👩🏽‍💻 qmd soporte reporte clase 13\n\n\n\n\nmié, 7 may.\nGráficos con ggplot / Parte II\n🖥️ láminas clase 14\n\n\n8\nlun, 12 may.\nGráficos con ggplot / Parte II/ Trabajando con Data Frames por filas\n🖥️ láminas clase 15-ggplot🖥️ láminas clase 15: DF’s por filas\n\n\n\n\nmié, 14 may.\n\n\n⏰ Exámen Parcial mitad semestre\n\n\n9\nlun, 19 may.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 16\n\n\n\n\nmié, 21 may.\n\n\n⏰ Suministro de requerimientos del proyecto final\n\n\n10\nlun, 26 may.\n\n\n\n\n\n\n\n\nmié, 28 may.\n\n\n⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos\n\n\n11\nlun, 2 jun.\n\n\n\n\n\n\n\n\nmié, 4 jun.\n\n\n\n\n\n\n12\nlun, 9 jun.\n\n\n\n\n\n\n\n\nmié, 11 jun.\n\n\n\n\n\n\n13\nlun, 16 jun.\n\n\n\n\n\n\n\n\nmié, 18 jun.\n\n\n\n\n\n\n14\nlun, 23 jun.\n\n\n\n\n\n\n\n\nmié, 25 jun.\n\n\n\n\n\n\n15\nlun, 30 jun.\n\n\n\n\n\n\n\n\nmié, 2 jul.\n\n\nEntrega Proyecto Final\n\n\n16\nlun, 7 jul.\n\n\n\n\n\n\n\n\nmié, 9 jul.\n\n\nPresentación Proyecto Final",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -6198,5 +6198,131 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "",
     "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
+  },
+  {
+    "objectID": "clases/clase_16.html#objetivo",
+    "href": "clases/clase_16.html#objetivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
+  },
+  {
+    "objectID": "clases/clase_16.html#operaciones-en-columnas",
+    "href": "clases/clase_16.html#operaciones-en-columnas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Operaciones en Columnas",
+    "text": "Operaciones en Columnas\nA diferencia de las operaciones que revisamos en la Clase 15 donde aplicamos ciertas funciones para actuar sobre las filas, en esta oportunidad vamos a actuar sobre las columnas con una serie de funciones."
+  },
+  {
+    "objectID": "clases/clase_16.html#selección-de-columnas",
+    "href": "clases/clase_16.html#selección-de-columnas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Selección de Columnas",
+    "text": "Selección de Columnas\nSe revisarán distintos métodos para seleccionar o deseleccionar columas de una data frame."
+  },
+  {
+    "objectID": "clases/clase_16.html#select",
+    "href": "clases/clase_16.html#select",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "select",
+    "text": "select\n\nSelección por nombre de las columnas:\n\ndf_gapminder%&gt;%\n  select(country, year, lifeExp)%&gt;%\n  slice(1)\n\n# A tibble: 1 × 3\n  country      year lifeExp\n  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;\n1 Afghanistan  1952    28.8\n\n\nSelección por índice de la columna\n\ndf_gapminder%&gt;%\n  select(1, 3, 4)%&gt;%\n  slice(1)\n\n# A tibble: 1 × 3\n  country      year lifeExp\n  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;\n1 Afghanistan  1952    28.8"
+  },
+  {
+    "objectID": "clases/clase_16.html#select-",
+    "href": "clases/clase_16.html#select-",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "select(-)",
+    "text": "select(-)\nUso de operador sustracción para no selección\n\nPor nombre\n\ndf_gapminder%&gt;%\n  select(-continent, -gdpPercap, -continent, -pop )%&gt;%\n  slice(1)\n\n# A tibble: 1 × 3\n  country      year lifeExp\n  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;\n1 Afghanistan  1952    28.8\n\n\nPor índice\n\ndf_gapminder%&gt;%\n  select(-c(2,5,6))%&gt;%\n  slice(1)\n\n# A tibble: 1 × 3\n  country      year lifeExp\n  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;\n1 Afghanistan  1952    28.8"
+  },
+  {
+    "objectID": "clases/clase_16.html#select-1",
+    "href": "clases/clase_16.html#select-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "select(!)",
+    "text": "select(!)\nDeseleccionar usando el operador de negación !\n\nPor nombre\n\ndf_gapminder%&gt;%\n  select(!c(continent, gdpPercap, pop))%&gt;%\n  slice(1)\n\n# A tibble: 1 × 3\n  country      year lifeExp\n  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;\n1 Afghanistan  1952    28.8\n\n\nPor índice\n\ndf_gapminder%&gt;%\n  select(!c(2,5,6))%&gt;%\n  slice(1)\n\n# A tibble: 1 × 3\n  country      year lifeExp\n  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;\n1 Afghanistan  1952    28.8"
+  },
+  {
+    "objectID": "clases/clase_16.html#rename",
+    "href": "clases/clase_16.html#rename",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "rename",
+    "text": "rename\nCambiar el nombre de una columna. Primero se coloca el nombre nuevo y luego el operador de igualdad y posteriormente el nombre que tiene actualmente la columna\n\ndf_gapminder%&gt;%\n  rename(anno=year, pais= country)%&gt;%\n  select(anno, pais)\n\n# A tibble: 1,704 × 2\n    anno pais       \n   &lt;int&gt; &lt;fct&gt;      \n 1  1952 Afghanistan\n 2  1957 Afghanistan\n 3  1962 Afghanistan\n 4  1967 Afghanistan\n 5  1972 Afghanistan\n 6  1977 Afghanistan\n 7  1982 Afghanistan\n 8  1987 Afghanistan\n 9  1992 Afghanistan\n10  1997 Afghanistan\n# ℹ 1,694 more rows"
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate",
+    "href": "clases/clase_16.html#mutate",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate",
+    "text": "mutate\nCrear una nueva columna en una DF, en este caso una columna que calcula el PIB\n\ndf_gapminder_pib &lt;- df_gapminder%&gt;%\n  mutate(pib= gdpPercap* pop)%&gt;%\n  select(country, year, pib)\n\nhead(df_gapminder_pib, 3)\n\n# A tibble: 3 × 3\n  country      year         pib\n  &lt;fct&gt;       &lt;int&gt;       &lt;dbl&gt;\n1 Afghanistan  1952 6567086330.\n2 Afghanistan  1957 7585448670.\n3 Afghanistan  1962 8758855797."
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-ifelse",
+    "href": "clases/clase_16.html#mutate-ifelse",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate /ifelse",
+    "text": "mutate /ifelse\n\n\n\n\n\n\nTip\n\n\nLa función ifelse funciona vectorizadamente, es decir, se aplica sobre cada valor de una determinada fila de la data frame y su objetivo es evaluar si una determinada condición que es establecida se cumple o no, para un determinado valor.\n\n\n\nLa condición evaluada solo puede arrojar un valor verdadero (TRUE) o uno falso (FALSE). Si arroja un verdadero ocurrirá un suceso A y en caso de no cumplirse ocurrirá un suceso B."
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-ifelse--cont.",
+    "href": "clases/clase_16.html#mutate-ifelse--cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate /ifelse -cont.",
+    "text": "mutate /ifelse -cont.\nLa sintáxis es\nifelse(condición a evaluar, ocurre A, ocurre b) ,\npor ejemplo:\na &lt;- 4\nb &lt;- 7\nifelse (a&gt;b, \"es mayor\", \"es menor\")\ndando de resultado la ejecución anterior “es menor” ya que al evaluar si 4 es mayor que 7, el resultado es FALSE y por lo tanto se irá al suceso B que es arrojar el valor “es menor”."
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-ifelse--ejemplo--planteamiento-problema",
+    "href": "clases/clase_16.html#mutate-ifelse--ejemplo--planteamiento-problema",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate /ifelse- ejemplo- Planteamiento Problema",
+    "text": "mutate /ifelse- ejemplo- Planteamiento Problema\nVamos a estudiar cuáles países tienen un PIB por encima del promedio de los PIB´s para el año 2007. A los países que estén por encima les vamos a asignar una categoría que se llamará pib_up_mean y a los que estén por debajo otra que se llame pib_down_mean.\nPrimero creamos la DF con los valores que vamos a evaluar"
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-ifelse--ejemplo--crear-df",
+    "href": "clases/clase_16.html#mutate-ifelse--ejemplo--crear-df",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate /ifelse- ejemplo- crear DF",
+    "text": "mutate /ifelse- ejemplo- crear DF\n\ndf_pib_2007 &lt;- df_gapminder %&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib= gdpPercap* pop)%&gt;%\n  select(country, pib)\n\nhead(df_pib_2007, 2)\n\n# A tibble: 2 × 2\n  country              pib\n  &lt;fct&gt;              &lt;dbl&gt;\n1 Afghanistan 31079291949.\n2 Albania     21376411360."
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-ifelse---ejemplo---pasos-intermedios",
+    "href": "clases/clase_16.html#mutate-ifelse---ejemplo---pasos-intermedios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate / ifelse - ejemplo - pasos intermedios",
+    "text": "mutate / ifelse - ejemplo - pasos intermedios\nEn caso de que los PIBs se presenten con notación exponencial o científica se hace el siguiente setting\n\noptions(scipen=999)\n\nIgualmente vamos a evaluar cuál es el promedio del PIB y lo asignamos a la variable pib_promedio\n\npib_promedio =mean(df_pib_2007$pib)\npib_promedio\n\n[1] 409220666999"
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-ifelse---ejemplo--aplicar",
+    "href": "clases/clase_16.html#mutate-ifelse---ejemplo--aplicar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate / ifelse - ejemplo- Aplicar",
+    "text": "mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country                          pib tipo_pib     \n  &lt;fct&gt;                          &lt;dbl&gt; &lt;chr&gt;        \n1 Bosnia and Herzegovina  33897026518. pib_down_mean\n2 Belgium                350141166520. pib_down_mean\n3 Argentina              515033625357. pib_up_mean  \n4 Israel                 164029908950. pib_down_mean"
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-doble-ifelse---problema",
+    "href": "clases/clase_16.html#mutate-doble-ifelse---problema",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate / doble ifelse - problema",
+    "text": "mutate / doble ifelse - problema\nAhora vamos a asignar tres categorías según el tamaño del PIB.\n\n\n\nCondición\nCategoría a asignar\n\n\n\n\npib mayor a tercer cuantil\n‘super_pib’\n\n\npib entre 1 er cuantil y 3 er cuantil\n‘medio_pib’\n\n\npib por debajo de 1 er cuantil\n‘bajo_pib’"
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-doble-ifelse---pasos-intermedios",
+    "href": "clases/clase_16.html#mutate-doble-ifelse---pasos-intermedios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate / doble ifelse - pasos intermedios",
+    "text": "mutate / doble ifelse - pasos intermedios\nObtener cuantiles.\n\ncuantiles_pib &lt;- quantile(df_pib_2007$pib)\n\ncuantiles_pib\n\n            0%            25%            50%            75%           100% \n     319014077    17438491194    57869055458   275959963297 12934458535085 \n\n#fijar variables\n\nprimer_cuantil &lt;- cuantiles_pib[2]\ntercer_cuantil &lt;- cuantiles_pib[4]"
+  },
+  {
+    "objectID": "clases/clase_16.html#mutate-doble-ifelse---ejemplo-2--aplicar",
+    "href": "clases/clase_16.html#mutate-doble-ifelse---ejemplo-2--aplicar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "mutate / doble ifelse - ejemplo 2- Aplicar",
+    "text": "mutate / doble ifelse - ejemplo 2- Aplicar\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  arrange(desc(pib))%&gt;%\n  mutate(tipo_pib2 =ifelse(pib&lt;= primer_cuantil, # condición\n                          \"bajo_pib\",# caso T ➡️ ocurre a\n                          ifelse(pib&gt;= tercer_cuantil, # caso F ➡️ ocurre b =&gt; 2da eval\n                                 'super_pib', # caso T ➡️ ocurre b-1 y ocurre a-2\n                                 'medio_pib') # caso faFlso ➡️ ocurre b-1 y ocurre b-2\n                          )\n         )"
+  },
+  {
+    "objectID": "clases/clase_16.html#resultado",
+    "href": "clases/clase_16.html#resultado",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Resultado",
+    "text": "Resultado\n\nhead(df_pib_2007,3)\n\n# A tibble: 3 × 4\n  country           pib tipo_pib    tipo_pib2\n  &lt;fct&gt;           &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;    \n1 United States 1.29e13 pib_up_mean super_pib\n2 China         6.54e12 pib_up_mean super_pib\n3 Japan         4.04e12 pib_up_mean super_pib\n\ntail(df_pib_2007,3)\n\n# A tibble: 3 × 4\n  country                      pib tipo_pib      tipo_pib2\n  &lt;fct&gt;                      &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Guinea-Bissau         852652874. pib_down_mean bajo_pib \n2 Comoros               701111696. pib_down_mean bajo_pib \n3 Sao Tome and Principe 319014077. pib_down_mean bajo_pib \n\n\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]
