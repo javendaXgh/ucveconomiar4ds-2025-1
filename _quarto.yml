@@ -2,8 +2,6 @@ project:
   type: website
   resources:
     - scripts/
-  render:
-    - "!materiales_admin/"
 
 website:
   page-navigation: false
@@ -69,6 +67,8 @@ website:
             text: tarea 2
           - href: tarea_03.qmd
             text: tarea 3
+          - href: tarea_04.qmd
+            text: tarea 4
       - section: "Talleres"
         contents:
           - href: taller_01.qmd

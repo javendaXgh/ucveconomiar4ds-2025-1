@@ -1,0 +1,53 @@
+---
+title: "tarea_04.qmd"
+---
+
+-   Crea un Quarto Document (qmd) y realizar los siguientes procesamientos:
+
+    1.  **Descarga de Datos:** Mediante el paquete <https://tidy-intelligence.github.io/r-owidapi/>, con su función `owid_get` , descargar los datos del Índice de Desarrollo Humano 'human-development-index' para Argentina, Colombia, España y Venezuela (ARG, COL,ESP, VEN), asignar a una data frame y remover columna referente al id del país. Revisar brevemente documentación del paquete en la página ya que es un recurso de utilidad en cuanto a fuente de datos de fácil acceso para su futuro ejercicio profesional como economista.
+
+    2.  Mediante la función `mutate` crear una variable categórica para que cuando una observación de `hdi__sex_total` esté por encima del promedio de la misma variable, asigné un valor que indique "alto_indice" o caso contrario "bajo_indice". Esto es sólo a fines prácticos ya que carece de algún tipo de metodología. Referencia en <https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_16#/mutate-ifelse--cont.>
+
+    3.  Realizar los siguientes gráficos con el paquete ggplot, usando las funciones que se indican (no hace falta asignar a un objeto los gráficos generados):
+
+        1.  `geom_bar` para totales de observaciones por país. Usar este color para el relleno `#d00000` . Referencia en <https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_13#/geom_bar--relleno>
+
+        2.  `geom_boxplot` para la variable `hdi__sex_total` desagregada por país. Ver referencia en <https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_13#/geom_boxplot-por-variable-categóricarellenoborde>
+
+        3.  `geom_histogram`: para la variable `hdi__sex_total` crear un histograma con 8 bins. En este caso sólo hacer un mapeo estético (aes) con la variable indicada. Referencia <https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_13#/geom_histogram>
+
+        4.  Al gráfico generado anteriormente, en un nuevo gráfico añadir la siguiente línea de código precedida por el símbolo `+` , `facet_wrap(~entity_name)` . Evalué la utilidad de añadir esta funcionalidad.
+
+        5.  `geom_density` : para la variable `hdi__sex_total` desagregada por país. Referencia en <https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_13#/geom_density-alpha-local>
+
+        6.  `geom_line` : con mapeo estético para la variable `hdi__sex_total` en el eje de las y en el eje de las x la variable `year` , desagregada por país, donde el color de línea se corresponda al país `geom_line(aes(color = entity_name))` . Adicionalmente, añadir algún tema preconfigurado. Referencia en <https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_13#/geom_col-temas-themes>
+
+            Ninguno de los gráficos anteriores es necesario que le modifique la leyenda, el tema (excepto el de geom_line) u otro parámetro, no obstante, si los quiere modificar o complementar, mediante la búsqueda de ayuda e información complementaria en tutoriales, láminas del curso o con un LLM, lo podrá hacer, siempre que cite la fuente. Recuerde que este tipo de detalles son los que enriquecen su trabajo como profesional del área.
+
+    4.  **Título de Cada sección:** en el reporte qmd, previo a cada gráfico, debe contener un h2 (header) que indique algún nombre referencial a la sección y gráfico que se mostrará. Ojo: no es la leyenda del gráfico.
+
+    5.  **Descripción de los hallazgos en los gráficos:** muy brevemente coloque alguna descripción sobre los datos y hallazgos que se aprecian en cada gráfico, seguido a la sección en que aparece cada uno de ellos.
+
+    6.  **Tabla en GT:** usando el paquete GT crear una tabla que muestre para cada país el máximo índice de desarrollo humano, junto con el año en que se alcanzó el máximo. Ayuda: usar la función slice_max con los argumentos `by=entity_name,hdi__sex_total` . En la tabla a generar, colocar título de la tabla y leyenda, en este caso con los parámetros y funciones complementarias que acompañan a `gt()`. Referencia en <https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_15#/slice_max> y <https://gt.rstudio.com> . Obviar el "order_by" que se muestra en la lámina de `slice_max` .
+
+<!-- -->
+
+-   **Entregable:** 
+
+    -   Quarto Document (.qmd): los códigos anteriores y los textos deben generarse en un Quarto Document con la extensión `.qmd`.
+
+    -   Usar chunks de códigos: para cada uno de los requerimientos. Recordar usar configuración de parámetros lógicos del chunk como `silent`, `echo`, `eval` que permitan generar un reporte donde no se vea ningún código ni mensaje de advertencia o error.
+
+    -   Los chunks de códigos pueden tener comentarios breves sobre los pasos ejecutados, solo a forma referencial y no de tutorial. Recuerde que estos comentarios no aparecerán al hacer el render del documento.
+
+    -   Nombre del archivo a remitir: `tarea_4_ci.qmd`. El valor "ci" debe ser el de su cédula de identidad sin puntos u otro signo.
+
+-   **Ayuda**: Recuerde solicitar ayuda en caso de ser necesario. Si es una duda general, puede hacerlo en disccord o si es particular la duda, por mensaje directo en dicho servidor.
+
+-   **Recomendación:** primero crear los códigos en un script de R y una vez que verifique que funcionan y "corren" correctamente, es que los deberá integrar en el reporte qmd. No hacerlo de esta forma, en etapas iniciales de programación, puede llevar a que pierda mucho tiempo.
+
+-   **Probar Render del Documento:** Igualmente, una vez que tenga todo el documento, no olvide hacer el render para que verifique que la salida de su documento se corresponde con el ejercicio propuesto.
+
+-   La tarea debe ser remitida al correo del curso antes de la medianoche del 8 de mayo de 2025.
+
+    Este documento luego lo podrá publicar en la página de RPubs, mediante unos sencillos pasos y así irá conformando un portafolio con sus investigaciones que muestre la calidad de su trabajo.

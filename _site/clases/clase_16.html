@@ -647,12 +647,12 @@ M.Sc. José Miguel Avendaño I.
 <span id="cb22-7"><a></a>  <span class="fu">sample_n</span>(<span class="dv">4</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
-  country                          pib tipo_pib     
-  &lt;fct&gt;                          &lt;dbl&gt; &lt;chr&gt;        
-1 Bosnia and Herzegovina  33897026518. pib_down_mean
-2 Belgium                350141166520. pib_down_mean
-3 Argentina              515033625357. pib_up_mean  
-4 Israel                 164029908950. pib_down_mean</code></pre>
+  country               pib tipo_pib     
+  &lt;fct&gt;               &lt;dbl&gt; &lt;chr&gt;        
+1 Congo, Rep.  13805935493. pib_down_mean
+2 Austria     296229400691. pib_down_mean
+3 Cuba        102160374747. pib_down_mean
+4 Bolivia      34854649034. pib_down_mean</code></pre>
 </div>
 </div>
 </section>
@@ -686,17 +686,17 @@ M.Sc. José Miguel Avendaño I.
 <h2><code>mutate</code> / doble <code>ifelse</code> - pasos intermedios</h2>
 <p>Obtener cuantiles.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>cuantiles_pib <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df_pib_2007<span class="sc">$</span>pib)</span>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>cuartiles_pib <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df_pib_2007<span class="sc">$</span>pib)</span>
 <span id="cb24-2"><a></a></span>
-<span id="cb24-3"><a></a>cuantiles_pib</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-3"><a></a>cuartiles_pib</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            0%            25%            50%            75%           100% 
      319014077    17438491194    57869055458   275959963297 12934458535085 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co">#fijar variables</span></span>
 <span id="cb26-2"><a></a></span>
-<span id="cb26-3"><a></a>primer_cuantil <span class="ot">&lt;-</span> cuantiles_pib[<span class="dv">2</span>]</span>
-<span id="cb26-4"><a></a>tercer_cuantil <span class="ot">&lt;-</span> cuantiles_pib[<span class="dv">4</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-3"><a></a>primer_cuartil <span class="ot">&lt;-</span> cuartiles_pib[<span class="dv">2</span>]</span>
+<span id="cb26-4"><a></a>tercer_cuartil <span class="ot">&lt;-</span> cuartiles_pib[<span class="dv">4</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="mutate-doble-ifelse---ejemplo-2--aplicar" class="slide level2 xsmall2">
@@ -704,9 +704,9 @@ M.Sc. José Miguel Avendaño I.
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>df_pib_2007 <span class="ot">&lt;-</span> df_pib_2007<span class="sc">%&gt;%</span></span>
 <span id="cb27-2"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pib))<span class="sc">%&gt;%</span></span>
-<span id="cb27-3"><a></a>  <span class="fu">mutate</span>(<span class="at">tipo_pib2 =</span><span class="fu">ifelse</span>(pib<span class="sc">&lt;=</span> primer_cuantil, <span class="co"># condición</span></span>
+<span id="cb27-3"><a></a>  <span class="fu">mutate</span>(<span class="at">tipo_pib2 =</span><span class="fu">ifelse</span>(pib<span class="sc">&lt;=</span> primer_cuartil, <span class="co"># condición</span></span>
 <span id="cb27-4"><a></a>                          <span class="st">"bajo_pib"</span>,<span class="co"># caso T ➡️ ocurre a</span></span>
-<span id="cb27-5"><a></a>                          <span class="fu">ifelse</span>(pib<span class="sc">&gt;=</span> tercer_cuantil, <span class="co"># caso F ➡️ ocurre b =&gt; 2da eval</span></span>
+<span id="cb27-5"><a></a>                          <span class="fu">ifelse</span>(pib<span class="sc">&gt;=</span> tercer_cuartil, <span class="co"># caso F ➡️ ocurre b =&gt; 2da eval</span></span>
 <span id="cb27-6"><a></a>                                 <span class="st">'super_pib'</span>, <span class="co"># caso T ➡️ ocurre b-1 y ocurre a-2</span></span>
 <span id="cb27-7"><a></a>                                 <span class="st">'medio_pib'</span>) <span class="co"># caso faFlso ➡️ ocurre b-1 y ocurre b-2</span></span>
 <span id="cb27-8"><a></a>                          )</span>
