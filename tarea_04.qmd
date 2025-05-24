@@ -1,5 +1,5 @@
 ---
-title: "tarea_04.qmd"
+title: "tarea 04"
 ---
 
 -   Crea un Quarto Document (qmd) y realizar los siguientes procesamientos:
@@ -48,6 +48,6 @@ title: "tarea_04.qmd"
 
 -   **Probar Render del Documento:** Igualmente, una vez que tenga todo el documento, no olvide hacer el render para que verifique que la salida de su documento se corresponde con el ejercicio propuesto.
 
--   La tarea debe ser remitida al correo del curso antes de la medianoche del 8 de mayo de 2025.
+-   La tarea debe ser remitida al correo del curso antes de la medianoche del 8 de junio de 2025.
 
     Este documento luego lo podrá publicar en la página de RPubs, mediante unos sencillos pasos y así irá conformando un portafolio con sus investigaciones que muestre la calidad de su trabajo.
