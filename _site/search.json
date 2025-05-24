@@ -6324,5 +6324,47 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Resultado",
     "text": "Resultado\n\nhead(df_pib_2007,3)\n\n# A tibble: 3 × 4\n  country           pib tipo_pib    tipo_pib2\n  &lt;fct&gt;           &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;    \n1 United States 1.29e13 pib_up_mean super_pib\n2 China         6.54e12 pib_up_mean super_pib\n3 Japan         4.04e12 pib_up_mean super_pib\n\ntail(df_pib_2007,3)\n\n# A tibble: 3 × 4\n  country                      pib tipo_pib      tipo_pib2\n  &lt;fct&gt;                      &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Guinea-Bissau         852652874. pib_down_mean bajo_pib \n2 Comoros               701111696. pib_down_mean bajo_pib \n3 Sao Tome and Principe 319014077. pib_down_mean bajo_pib \n\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "materiales_admin/regresion_lineal.html",
+    "href": "materiales_admin/regresion_lineal.html",
+    "title": "Predicción de Valores con Regresión Lineal en R",
+    "section": "",
+    "text": "library(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union"
+  },
+  {
+    "objectID": "materiales_admin/regresion_lineal.html#carga-de-datos",
+    "href": "materiales_admin/regresion_lineal.html#carga-de-datos",
+    "title": "Predicción de Valores con Regresión Lineal en R",
+    "section": "Carga de Datos",
+    "text": "Carga de Datos\nPara este ejemplo, vamos a asumir que tienes un archivo CSV llamado datos.csv con las variables que deseas analizar. Cargar los datos en R, a efectos del ejemplo usaré el dataset cars:\n\n# datos &lt;- read.csv(\"datos.csv\")\ndatos &lt;- cars%&gt;%\n  rename(variable_predictora= speed,\n         variable_objetivo = dist)\n\nAsegúrate de que tu archivo datos.csv contenga al menos una variable predictora y una variable objetivo."
+  },
+  {
+    "objectID": "materiales_admin/regresion_lineal.html#exploración-de-datos",
+    "href": "materiales_admin/regresion_lineal.html#exploración-de-datos",
+    "title": "Predicción de Valores con Regresión Lineal en R",
+    "section": "3. Exploración de Datos",
+    "text": "3. Exploración de Datos\nEs importante explorar tus datos antes de construir el modelo. Puedes ver las primeras filas, un resumen estadístico y la estructura de los datos con los siguientes comandos:\n\nhead(datos)\n\n  variable_predictora variable_objetivo\n1                   4                 2\n2                   4                10\n3                   7                 4\n4                   7                22\n5                   8                16\n6                   9                10\n\nsummary(datos)\n\n variable_predictora variable_objetivo\n Min.   : 4.0        Min.   :  2.00   \n 1st Qu.:12.0        1st Qu.: 26.00   \n Median :15.0        Median : 36.00   \n Mean   :15.4        Mean   : 42.98   \n 3rd Qu.:19.0        3rd Qu.: 56.00   \n Max.   :25.0        Max.   :120.00   \n\nstr(datos)\n\n'data.frame':   50 obs. of  2 variables:\n $ variable_predictora: num  4 4 7 7 8 9 10 10 10 11 ...\n $ variable_objetivo  : num  2 10 4 22 16 10 18 26 34 17 ...\n\n\nTambién es útil visualizar la relación entre la variable predictora y la variable objetivo mediante un diagrama de dispersión:\n\nplot(datos$variable_predictora, datos$variable_objetivo,\n     xlab = \"Variable Predictora\", ylab = \"Variable Objetivo\",\n     main = \"Relación entre Variables\")\n\n\n\n\nDiagrama de dispersión entre la variable predictora y la variable objetivo."
+  },
+  {
+    "objectID": "materiales_admin/regresion_lineal.html#creación-del-modelo-de-regresión-lineal",
+    "href": "materiales_admin/regresion_lineal.html#creación-del-modelo-de-regresión-lineal",
+    "title": "Predicción de Valores con Regresión Lineal en R",
+    "section": "4. Creación del Modelo de Regresión Lineal",
+    "text": "4. Creación del Modelo de Regresión Lineal\nPara construir el modelo de regresión lineal, utilizaremos la función lm(). Especifica la fórmula donde la variable objetivo es explicada por la variable predictora:\n\nmodelo &lt;- lm(variable_objetivo ~ variable_predictora, data = datos)\n\nPuedes obtener un resumen del modelo, que incluye los coeficientes, el R-cuadrado y otras estadísticas importantes:\n\nsummary(modelo)\n\n\nCall:\nlm(formula = variable_objetivo ~ variable_predictora, data = datos)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-29.069  -9.525  -2.272   9.215  43.201 \n\nCoefficients:\n                    Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)         -17.5791     6.7584  -2.601   0.0123 *  \nvariable_predictora   3.9324     0.4155   9.464 1.49e-12 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.38 on 48 degrees of freedom\nMultiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 \nF-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12"
+  },
+  {
+    "objectID": "materiales_admin/regresion_lineal.html#realización-de-predicciones",
+    "href": "materiales_admin/regresion_lineal.html#realización-de-predicciones",
+    "title": "Predicción de Valores con Regresión Lineal en R",
+    "section": "5. Realización de Predicciones",
+    "text": "5. Realización de Predicciones\nUna vez que tienes el modelo entrenado, puedes usarlo para predecir nuevos valores. Para esto, necesitas un nuevo conjunto de datos con los valores de la variable predictora para los cuales quieres hacer la predicción.\nSupongamos que tienes un nuevo data frame llamado nuevos_datos con una columna llamada variable_predictora:\n\nnuevos_datos &lt;- data.frame(variable_predictora = c(25, 180, 47))\n\nReemplaza valor1, valor2, valor3 con los valores para los que deseas predecir, que en este caso son tres velocidades\nAhora, utiliza la función predict() para obtener las predicciones:\n\npredicciones &lt;- predict(modelo,  nuevos_datos)\npredicciones\n\n        1         2         3 \n 80.73112 690.25448 167.24412"
+  },
+  {
+    "objectID": "materiales_admin/regresion_lineal.html#evaluación-del-modelo-opcional",
+    "href": "materiales_admin/regresion_lineal.html#evaluación-del-modelo-opcional",
+    "title": "Predicción de Valores con Regresión Lineal en R",
+    "section": "6. Evaluación del Modelo (Opcional)",
+    "text": "6. Evaluación del Modelo (Opcional)\nSi tienes datos reales para comparar con tus predicciones, puedes evaluar el rendimiento del modelo utilizando métricas como el Error Cuadrático Medio (MSE) o el Error Absoluto Medio (MAE).\n\n# Ejemplo asumiendo que tienes una columna 'variable_objetivo_real' en nuevos_datos\nerror &lt;- nuevos_datos$variable_objetivo_real - predicciones\nmse &lt;- mean(error^2)\nmae &lt;- mean(abs(error))\ncat(\"Error Cuadrático Medio (MSE):\", mse, \"\\n\")\ncat(\"Error Absoluto Medio (MAE):\", mae, \"\\n\")\n\nEste tutorial fue elaborado con asistencia de Google Gemini"
   }
 ]

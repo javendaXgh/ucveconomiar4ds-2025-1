@@ -204,26 +204,26 @@ Ahora vamos a asignar tres categorías según el tamaño del PIB.
 Obtener cuantiles.
 
 ```{r}
-cuantiles_pib <- quantile(df_pib_2007$pib)
+cuartiles_pib <- quantile(df_pib_2007$pib)
 
-cuantiles_pib
+cuartiles_pib
 
 #fijar variables
 
-primer_cuantil <- cuantiles_pib[2]
-tercer_cuantil <- cuantiles_pib[4]
+primer_cuartil <- cuartiles_pib[2]
+tercer_cuartil <- cuartiles_pib[4]
 
 
 ```
 
-## `mutate` / doble `ifelse`  - ejemplo 2- Aplicar {.xsmall2}
+## `mutate` / doble `ifelse` - ejemplo 2- Aplicar {.xsmall2}
 
 ```{r}
 df_pib_2007 <- df_pib_2007%>%
   arrange(desc(pib))%>%
-  mutate(tipo_pib2 =ifelse(pib<= primer_cuantil, # condición
+  mutate(tipo_pib2 =ifelse(pib<= primer_cuartil, # condición
                           "bajo_pib",# caso T ➡️ ocurre a
-                          ifelse(pib>= tercer_cuantil, # caso F ➡️ ocurre b => 2da eval
+                          ifelse(pib>= tercer_cuartil, # caso F ➡️ ocurre b => 2da eval
                                  'super_pib', # caso T ➡️ ocurre b-1 y ocurre a-2
                                  'medio_pib') # caso faFlso ➡️ ocurre b-1 y ocurre b-2
                           )

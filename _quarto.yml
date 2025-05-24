@@ -2,6 +2,8 @@ project:
   type: website
   resources:
     - scripts/
+  render:
+    - "!materiales_admin/"
 
 website:
   page-navigation: false
