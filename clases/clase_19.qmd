@@ -1,0 +1,31 @@
+---
+title: "Clase 19: Selección, Agrupar y Crear Sumarios"
+---
+
+## Objetivo
+
+Realizar agrupaciones de datos contenidos en una DF según uno o más criterios. Posterior a tener los datos agrupados obtendremos valores que totalizan valores por los grupos creados.
+
+![](images/im-or-trans.png)
+
+## Agrupar
+
+La mayoría de las operaciones de datos se realizan en grupos definidos por variables. `group_by()` toma un tbl existente y lo convierte en un tbl agrupado donde las operaciones se realizan «por grupo». `ungroup()` elimina la agrupación.
+
+## Agrupar por un Atributo
+
+los datos se pueden agrupar según un criterio, por ejemplo, según el año o según el continente o alguna variable categórica que contenga el conjunto de datos
+
+## Agrupar por más de un Atributo
+
+También se pueden agrupar por diversos criterios, los cuales serán aplicados jerarquicamente según el orden de aparición de los criterios pudiendo llevar a resultados distintos.
+
+## Reframe
+
+Crea una nueva df aplicando funciones a las columnas de una df existente. También se usa `summarise`, pero es recomendable usar esta función que es más reciente
+
+Existe pérdida de estructura de datos original así que es recomendable no reasignar la variable
+
+Se puede hacer en algunos casos el `ungroup` para desagrupar
+
+Los factores son útiles porque permiten a las funciones estadísticas tratar estos tipos de datos de manera más eficiente.

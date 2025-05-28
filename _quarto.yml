@@ -87,7 +87,10 @@ website:
             text: Guía Básica Subsetting
           - href: tutorial_paths.qmd
             text: Rutas de Trabajo
-        
+          - href: tutorial_groupby.qmd
+            text: Introducción a group_by.Parte I
+          # - href: tutorial_reframe.qmd
+          #   text: Introducción a group_by.Parte II
       - section: "Videos de Apoyo"
         contents:
           - href: https://www.youtube.com/watch?v=Cda3krVkP1Q
