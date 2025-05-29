@@ -154,7 +154,9 @@ df_toy_correct
 ```{r}
 #| echo: true
 #| eval: false
-#
+library(readxl)
+library(tidyverse)
+
 download.file('https://www.bcv.org.ve/sites/default/files/precios_consumidor/4_5_7_0.xls','taller_datosBCV/INPC.xls')
 
 INPC <- read_excel('taller_datosBCV/INPC.xls')%>%
