@@ -6534,5 +6534,187 @@
     "title": "Clase 19: Selección, Agrupar y Crear Sumarios",
     "section": "Reframe",
     "text": "Reframe\nCrea una nueva df aplicando funciones a las columnas de una df existente. También se usa summarise, pero es recomendable usar esta función que es más reciente\nExiste pérdida de estructura de datos original así que es recomendable no reasignar la variable\nSe puede hacer en algunos casos el ungroup para desagrupar\nLos factores son útiles porque permiten a las funciones estadísticas tratar estos tipos de datos de manera más eficiente.\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#mostrar-los-datos",
+    "href": "taller_datosBCV/taller_slides.html#mostrar-los-datos",
+    "title": "INPC",
+    "section": "Mostrar los Datos",
+    "text": "Mostrar los Datos"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#descarga-opciones",
+    "href": "taller_datosBCV/taller_slides.html#descarga-opciones",
+    "title": "PROCESAR  INPC 😱",
+    "section": "Descarga Opciones",
+    "text": "Descarga Opciones\n\n\nManualmente\n\n\n\n\n\n\nDentro de Ambiente R\n\ndownload.file( 'https://www.bcv.org.ve/sites/default/files/precios_consumidor/4_5_7_0.xls', 'taller_datosBCV/INPC.xls')"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#patrones-a-trabajar",
+    "href": "taller_datosBCV/taller_slides.html#patrones-a-trabajar",
+    "title": "Procesar datos del INPC 😱",
+    "section": "Patrones a trabajar",
+    "text": "Patrones a trabajar"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#cheat-sheet-stringr",
+    "href": "taller_datosBCV/taller_slides.html#cheat-sheet-stringr",
+    "title": "Procesar datos del INPC 😱",
+    "section": "Cheat Sheet stringr",
+    "text": "Cheat Sheet stringr"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#consulta-llm--google-ai-studio",
+    "href": "taller_datosBCV/taller_slides.html#consulta-llm--google-ai-studio",
+    "title": "Procesar datos INPC 😱",
+    "section": "Consulta LLM- Google AI Studio",
+    "text": "Consulta LLM- Google AI Studio\n\npágina web de insumo\nexpresión regular"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#consulta-llm-2",
+    "href": "taller_datosBCV/taller_slides.html#consulta-llm-2",
+    "title": "Procesar datos INPC 😱",
+    "section": "Consulta LLM 2",
+    "text": "Consulta LLM 2\ntoy example"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#rowwise",
+    "href": "taller_datosBCV/taller_slides.html#rowwise",
+    "title": "Procesar datos INPC 😱",
+    "section": "Rowwise",
+    "text": "Rowwise\n#"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#mostrar-los-datos-background-colorfb8500opacity-0.5",
+    "href": "taller_datosBCV/taller_slides.html#mostrar-los-datos-background-colorfb8500opacity-0.5",
+    "title": "INPC",
+    "section": "Mostrar los Datos {background-color=“#fb8500”;opacity: 0.5;}",
+    "text": "Mostrar los Datos {background-color=“#fb8500”;opacity: 0.5;}"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#mostrar-los-datos-background-colorfb8500opacity0.5",
+    "href": "taller_datosBCV/taller_slides.html#mostrar-los-datos-background-colorfb8500opacity0.5",
+    "title": "INPC",
+    "section": "Mostrar los Datos {background-color=“#fb8500”;opacity=0.5;}",
+    "text": "Mostrar los Datos {background-color=“#fb8500”;opacity=0.5;}"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#mostrar-los-datos-background-colorfb8500",
+    "href": "taller_datosBCV/taller_slides.html#mostrar-los-datos-background-colorfb8500",
+    "title": "INPC",
+    "section": "Mostrar los Datos {background-color=“#fb8500”}",
+    "text": "Mostrar los Datos {background-color=“#fb8500”}"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#fuente-de-los-datos",
+    "href": "taller_datosBCV/taller_slides.html#fuente-de-los-datos",
+    "title": "PROCESAR  INPC 😱",
+    "section": "Fuente de los Datos",
+    "text": "Fuente de los Datos"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#descarga-e-importar",
+    "href": "taller_datosBCV/taller_slides.html#descarga-e-importar",
+    "title": "Procesar datos del INPC 😱",
+    "section": "Descarga e Importar",
+    "text": "Descarga e Importar"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#importar",
+    "href": "taller_datosBCV/taller_slides.html#importar",
+    "title": "Procesar datos del INPC 😱",
+    "section": "Importar",
+    "text": "Importar\n\nProblema\nOpciones"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#cómo-importarlo",
+    "href": "taller_datosBCV/taller_slides.html#cómo-importarlo",
+    "title": "Procesar datos INPC 😱",
+    "section": "¿Cómo Importarlo? 🤔",
+    "text": "¿Cómo Importarlo? 🤔\n\nProblema a EnfrentarOpciones\n\n\n\n\n\n\n\n\n\n\ndelimitar rango, definir clases de valores columnas\nimportar todo y limpiar a gusto"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#primera-iteración-textos-y-números",
+    "href": "taller_datosBCV/taller_slides.html#primera-iteración-textos-y-números",
+    "title": "Procesar datos INPC 😱",
+    "section": "Primera Iteración: Textos y Números",
+    "text": "Primera Iteración: Textos y Números\n\n&!·$%&(Mayusas.numeric\n\n\n\nstringr cheat sheet"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#segunda-iteración-aislar-el-año-del-mes",
+    "href": "taller_datosBCV/taller_slides.html#segunda-iteración-aislar-el-año-del-mes",
+    "title": "Procesar datos INPC 😱",
+    "section": "Segunda Iteración: aislar el año del mes",
+    "text": "Segunda Iteración: aislar el año del mes\nnúmero y string en columna\nEstrategia: Usar Patrón\n¿Patrón? aparición de número en primera posición de la string en la columna\n`inicio & número"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#tercera-iteración-rellenar-los-na",
+    "href": "taller_datosBCV/taller_slides.html#tercera-iteración-rellenar-los-na",
+    "title": "Procesar datos INPC 😱",
+    "section": "Tercera Iteración: rellenar los NA",
+    "text": "Tercera Iteración: rellenar los NA\ncrear “toy examples” para la consulta\n\n\n\ndf_toy_bad &lt;- data.frame(a=c(2024, NA, NA, 2023, NA, NA, 2022),\n                     b= c(1:7))\ndf_toy_bad\n\n     a b\n1 2024 1\n2   NA 2\n3   NA 3\n4 2023 4\n5   NA 5\n6   NA 6\n7 2022 7\n\n\n\n\ndf_toy_correct &lt;- data.frame(a=c(2024, 2024, 2024, 2023, 2023, 2023, 2022),\n                         b= c(1:7))\ndf_toy_bad\n\n     a b\n1 2024 1\n2   NA 2\n3   NA 3\n4 2023 4\n5   NA 5\n6   NA 6\n7 2022 7"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#cómo-importarlo-en-r",
+    "href": "taller_datosBCV/taller_slides.html#cómo-importarlo-en-r",
+    "title": "PROCESAR  INPC 😱",
+    "section": "¿Cómo Importarlo en R? 🤔",
+    "text": "¿Cómo Importarlo en R? 🤔\n\nProblema a EnfrentarOpciones\n\n\n\n\n\n\n\n\n\n\ndelimitar rango, definir clases de valores columnas\nimportar todo y limpiar a gusto✅✅✅✅✅✅"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#era-iteración-textos-y-números",
+    "href": "taller_datosBCV/taller_slides.html#era-iteración-textos-y-números",
+    "title": "PROCESAR  INPC 😱",
+    "section": "1 era Iteración: Textos y Números",
+    "text": "1 era Iteración: Textos y Números\n\n&!·$%&(Mayusas.numeric\n\n\n\n\n\n\n\nstringr cheat sheet"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#da-iteración-aislar-año-del-mes",
+    "href": "taller_datosBCV/taller_slides.html#da-iteración-aislar-año-del-mes",
+    "title": "PROCESAR  INPC 😱",
+    "section": "2da Iteración: aislar año del mes",
+    "text": "2da Iteración: aislar año del mes\n\nnúmero y string en columna\nEstrategia: Usar Patrón\n\n¿Patrón? aparición de número en primera posición de la string en la columna\ninicio: ^\nnúmero: [:digit:]"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#era-iteración-rellenar-los-na",
+    "href": "taller_datosBCV/taller_slides.html#era-iteración-rellenar-los-na",
+    "title": "PROCESAR  INPC 😱",
+    "section": "3era iteración: rellenar los NA",
+    "text": "3era iteración: rellenar los NA\ncrear “toy examples” para insumo en consulta a LLM\n\n\n\ndf_toy_bad &lt;- data.frame(a=c(2024, NA, NA, 2023, NA, NA, 2022),\n                     b= c(1:7))\ndf_toy_bad\n\n     a b\n1 2024 1\n2   NA 2\n3   NA 3\n4 2023 4\n5   NA 5\n6   NA 6\n7 2022 7\n\n\n\n\ndf_toy_correct &lt;- data.frame(a=c(2024, 2024, 2024, 2023, 2023, 2023, 2022),\n                         b= c(1:7))\ndf_toy_correct\n\n     a b\n1 2024 1\n2 2024 2\n3 2024 3\n4 2023 4\n5 2023 5\n6 2023 6\n7 2022 7"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#consulta-llm-víagoogle-ai-studio",
+    "href": "taller_datosBCV/taller_slides.html#consulta-llm-víagoogle-ai-studio",
+    "title": "PROCESAR  INPC 😱",
+    "section": "Consulta LLM víaGoogle AI Studio",
+    "text": "Consulta LLM víaGoogle AI Studio\nhttps://aistudio.google.com/prompts/new_chat\nprompt (contexto ➕ lo que quiero ➕ ejemplo):\n\nContexto: Estoy programando en R usando dplyr y\nLo que quiero: necesito rellenar los valores de una data frame en una columna que son NA con el valor que le precede en la columna.\nEjemplo: Acá coloco como lo tengo y como quiero que quede df_toy_bad &lt;- data.frame(a=c(2024, NA, NA, 2023, NA, NA, 2022), b= c(1:7))y df_toy_correct &lt;- data.frame(a=c(2024, 2024, 2024, 2023, 2023, 2023, 2022), b= c(1:7))\npágina web de insumo: https://dplyr.tidyverse.org"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#ta-5ta-6ta-iteración-data-cleansing",
+    "href": "taller_datosBCV/taller_slides.html#ta-5ta-6ta-iteración-data-cleansing",
+    "title": "PROCESAR  INPC 😱",
+    "section": "4ta, 5ta, 6ta iteración: data cleansing",
+    "text": "4ta, 5ta, 6ta iteración: data cleansing\n\nDatosPasos\n\n\n\n\n\n\nfilter: filtrar NA’s\nmatch meses letras a número mes\nlead: cálculo manual del índice valor fila siguiente entre valor fila actual\nas_date : string a formato fecha"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#resultado-final",
+    "href": "taller_datosBCV/taller_slides.html#resultado-final",
+    "title": "PROCESAR  INPC 😱",
+    "section": "Resultado Final",
+    "text": "Resultado Final"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#código",
+    "href": "taller_datosBCV/taller_slides.html#código",
+    "title": "PROCESAR  INPC 😱",
+    "section": "Código",
+    "text": "Código\n\nI Descarga, ImportarII Transformar\n\n\n\n#\ndownload.file('https://www.bcv.org.ve/sites/default/files/precios_consumidor/4_5_7_0.xls','taller_datosBCV/INPC.xls')\n\nINPC &lt;- read_excel('taller_datosBCV/INPC.xls')%&gt;%\n  slice(-1:-6)\n\n# Nombres a columnas\nnames(INPC) &lt;- c('fecha','indice','var')\n\nmeses_es &lt;- c(\"enero\", \"febrero\", \"marzo\", \n              \"abril\", \"mayo\", \"junio\",\n              \"julio\", \"agosto\", \"septiembre\", \n              \"octubre\", \"noviembre\", \"diciembre\")\n\n\n\n\nINPC%&gt;%\n  mutate(fecha= str_remove_all(fecha,'[:punct:]'),\n         fecha= str_to_lower(fecha),\n         indice= as.numeric(indice),\n         var= as.numeric(var))%&gt;%\n  mutate(year_extract= ifelse(str_detect(fecha,'^[:digit:]'),fecha,NA ))%&gt;%\n  mutate(year_extract= as.numeric(year_extract))%&gt;%\n  fill(year_extract, .direction = \"down\")%&gt;%\n  filter(!is.na(indice))%&gt;%\n  mutate(num_mes= match(fecha, meses_es),\n         var2= (indice/lead(indice)-1)*100,\n         fecha_nva=paste0(year_extract,'-',num_mes,'-01'),\n         fecha_nva=as_date(fecha_nva))%&gt;%\n  select( fecha_nva, indice, var2, var)"
+  },
+  {
+    "objectID": "taller_datosBCV/taller_slides.html#apoyo-prompt",
+    "href": "taller_datosBCV/taller_slides.html#apoyo-prompt",
+    "title": "PROCESAR  INPC 😱",
+    "section": "Apoyo Prompt",
+    "text": "Apoyo Prompt\n\n\n\n\n\n\nTip\n\n\nEstoy programando en R usando dplyr y necesito rellenar los valores de una data frame en una columna que son NA con el valor que le precede en la columna. Acá coloco como lo tengo y como quiero que quede\n`df_toy_bad &lt;- data.frame(a=c(2024, NA, NA, 2023, NA, NA, 2022),\nb= c(1:7))\ndf_toy_correct &lt;- data.frame(a=c(2024, 2024, 2024, 2023, 2023, 2023, 2022),\nb= c(1:7))`\n\n\n\nusar ` al inicio y final de los códigos para indicarle al llm que es código lo que se está referenciando dentro del prompt"
   }
 ]
