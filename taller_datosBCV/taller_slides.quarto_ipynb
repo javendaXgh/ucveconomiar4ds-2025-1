@@ -1,0 +1,60 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"INPC\"\n",
+        "format: revealjs\n",
+        "title-slide-attributes:\n",
+        "  data-background-image: tallerBCV.png\n",
+        "  data-background-size: contain\n",
+        "  data-background-opacity: \"0.5\"\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## Mostrar los Datos\n",
+        "\n",
+        "\n",
+        "```{html}\n",
+        "<iframe width=\"780\" height=\"500\" src=\"hhttps://www.bcv.org.ve/estadisticas/consumidor\" title=\"BCV IPC\"></iframe>\n",
+        "\n",
+        "```\n",
+        "\n",
+        "\n",
+        "```         \n",
+        "```\n",
+        "\n",
+        "## Descarga Opciones\n",
+        "\n",
+        "## Patrones a trabajar\n",
+        "\n",
+        "## Cheat Sheet stringr\n",
+        "\n",
+        "## Consulta LLM- Google AI Studio\n",
+        "\n",
+        "1.  página web de insumo\n",
+        "2.  expresión regular\n",
+        "\n",
+        "## Consulta LLM 2\n",
+        "\n",
+        "toy example\n",
+        "\n",
+        "## Rowwise\n",
+        "\n",
+        "\\#"
+      ],
+      "id": "ac6f5171"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

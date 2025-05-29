@@ -1,0 +1,13 @@
+.reveal .slides section:first-of-type h1 {
+  color: #1DFF00;
+  text-align: center !important;
+  vertical-align: top !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.top-title {
+  text-align: center !important;
+  vertical-align: top !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}

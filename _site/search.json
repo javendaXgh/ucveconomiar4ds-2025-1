@@ -6155,14 +6155,14 @@
     "href": "clases/clase_15.html#slice_sample",
     "title": "Ciencia de Datos para Economistas",
     "section": "slice_sample()",
-    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] Asia\nLevels: Africa Americas Asia Europe Oceania\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country     continent  year lifeExp       pop gdpPercap\n   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;\n 1 Japan       Asia       1997    80.7 125956499    28817.\n 2 Israel      Asia       1982    74.4   3858421    15367.\n 3 Japan       Asia       1957    65.5  91563009     4318.\n 4 Myanmar     Asia       1952    36.3  20092996      331 \n 5 Taiwan      Asia       1952    58.5   8550362     1207.\n 6 Thailand    Asia       1957    53.6  25041917      794.\n 7 Korea, Rep. Asia       1972    62.6  33505000     3031.\n 8 Bahrain     Asia       1997    73.9    598561    20292.\n 9 Oman        Asia       1992    71.2   1915208    18617.\n10 Lebanon     Asia       1962    62.1   1886848     5715."
+    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] Asia\nLevels: Africa Americas Asia Europe Oceania\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Sri Lanka   Asia       1992    70.4 17587060     2154.\n 2 Korea, Rep. Asia       1962    55.3 26420307     1536.\n 3 Sri Lanka   Asia       1987    69.0 16495304     1877.\n 4 Jordan      Asia       2007    72.5  6053193     4519.\n 5 Bangladesh  Asia       1977    46.9 80428306      660.\n 6 Lebanon     Asia       1982    67.0  3086876     7641.\n 7 Cambodia    Asia       2007    59.7 14131858     1714.\n 8 Singapore   Asia       2002    78.8  4197776    36023.\n 9 Bahrain     Asia       1987    70.8   454612    18524.\n10 Thailand    Asia       1977    62.5 44148285     1961."
   },
   {
     "objectID": "clases/clase_15.html#equivalente-de-slice_tail-en-rbase-1",
     "href": "clases/clase_15.html#equivalente-de-slice_tail-en-rbase-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "equivalente de slice_tail() en Rbase",
-    "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp       pop gdpPercap\n   &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;\n 1 Afghanistan      Asia       1977    38.4  14880372      786.\n 2 Mongolia         Asia       1997    63.6   2494803     1902.\n 3 India            Asia       1952    37.4 372000000      547.\n 4 Philippines      Asia       2002    70.3  82995088     2651.\n 5 Hong Kong, China Asia       1992    77.6   5829696    24758.\n 6 Philippines      Asia       1952    47.8  22438691     1273.\n 7 Oman             Asia       1972    52.1    829050    10618.\n 8 Yemen, Rep.      Asia       1997    58.0  15826497     2117.\n 9 Afghanistan      Asia       1982    39.9  12881816      978.\n10 Afghanistan      Asia       2002    42.1  25268405      727."
+    "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp        pop gdpPercap\n   &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;      &lt;int&gt;     &lt;dbl&gt;\n 1 Nepal            Asia       1962    39.4   10332057      652.\n 2 Mongolia         Asia       1967    51.3    1149500     1226.\n 3 Hong Kong, China Asia       1957    64.8    2736300     3629.\n 4 Myanmar          Asia       1962    45.1   23634436      388 \n 5 Saudi Arabia     Asia       1992    68.8   16945857    24842.\n 6 Pakistan         Asia       1952    43.4   41346560      685.\n 7 India            Asia       2002    62.9 1034172547     1747.\n 8 Jordan           Asia       1977    61.1    1937652     2852.\n 9 Malaysia         Asia       1982    68     14441916     4920.\n10 Pakistan         Asia       1982    56.2   91462088     1443."
   },
   {
     "objectID": "clases/clase_15.html#reordenar-datos-basado-en-un-criterio-arrange",
@@ -6203,8 +6203,8 @@
     "objectID": "clases/clase_16.html#objetivo",
     "href": "clases/clase_16.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
   },
   {
     "objectID": "clases/clase_16.html#operaciones-en-columnas",
@@ -6260,7 +6260,7 @@
     "href": "clases/clase_16.html#mutate-ifelse",
     "title": "Ciencia de Datos para Economistas",
     "section": "mutate /ifelse",
-    "text": "mutate /ifelse\n\n\n\n\n\n\nTip\n\n\n\nLa función ifelse funciona vectorizadamente, es decir, se aplica sobre cada valor de una determinada fila de la data frame y su objetivo es evaluar si una determinada condición que es establecida se cumple o no, para un determinado valor.\n\n\nLa condición evaluada solo puede arrojar un valor verdadero (TRUE) o uno falso (FALSE). Si arroja un verdadero ocurrirá un suceso A y en caso de no cumplirse ocurrirá un suceso B."
+    "text": "mutate /ifelse\n\n\n\n\n\n\nTip\n\n\nLa función ifelse funciona vectorizadamente, es decir, se aplica sobre cada valor de una determinada fila de la data frame y su objetivo es evaluar si una determinada condición que es establecida se cumple o no, para un determinado valor.\n\n\n\nLa condición evaluada solo puede arrojar un valor verdadero (TRUE) o uno falso (FALSE). Si arroja un verdadero ocurrirá un suceso A y en caso de no cumplirse ocurrirá un suceso B."
   },
   {
     "objectID": "clases/clase_16.html#mutate-ifelse--cont.",
@@ -6295,7 +6295,7 @@
     "href": "clases/clase_16.html#mutate-ifelse---ejemplo--aplicar",
     "title": "Ciencia de Datos para Economistas",
     "section": "mutate / ifelse - ejemplo- Aplicar",
-    "text": "mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country               pib tipo_pib     \n  &lt;fct&gt;               &lt;dbl&gt; &lt;chr&gt;        \n1 Congo, Rep.  13805935493. pib_down_mean\n2 Austria     296229400691. pib_down_mean\n3 Cuba        102160374747. pib_down_mean\n4 Bolivia      34854649034. pib_down_mean"
+    "text": "mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country            pib tipo_pib     \n  &lt;fct&gt;            &lt;dbl&gt; &lt;chr&gt;        \n1 Benin     11643151768. pib_down_mean\n2 Croatia   65688728878. pib_down_mean\n3 Pakistan 441110354736. pib_up_mean  \n4 Romania  240770207963. pib_down_mean"
   },
   {
     "objectID": "clases/clase_16.html#mutate-doble-ifelse---problema",
@@ -6323,7 +6323,7 @@
     "href": "clases/clase_16.html#resultado",
     "title": "Ciencia de Datos para Economistas",
     "section": "Resultado",
-    "text": "Resultado\n\nhead(df_pib_2007,3)\n\n# A tibble: 3 × 4\n  country           pib tipo_pib    tipo_pib2\n  &lt;fct&gt;           &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;    \n1 United States 1.29e13 pib_up_mean super_pib\n2 China         6.54e12 pib_up_mean super_pib\n3 Japan         4.04e12 pib_up_mean super_pib\n\ntail(df_pib_2007,3)\n\n# A tibble: 3 × 4\n  country                      pib tipo_pib      tipo_pib2\n  &lt;fct&gt;                      &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Guinea-Bissau         852652874. pib_down_mean bajo_pib \n2 Comoros               701111696. pib_down_mean bajo_pib \n3 Sao Tome and Principe 319014077. pib_down_mean bajo_pib"
+    "text": "Resultado\n\nhead(df_pib_2007,3)\n\n# A tibble: 3 × 4\n  country           pib tipo_pib    tipo_pib2\n  &lt;fct&gt;           &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;    \n1 United States 1.29e13 pib_up_mean super_pib\n2 China         6.54e12 pib_up_mean super_pib\n3 Japan         4.04e12 pib_up_mean super_pib\n\ntail(df_pib_2007,3)\n\n# A tibble: 3 × 4\n  country                      pib tipo_pib      tipo_pib2\n  &lt;fct&gt;                      &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Guinea-Bissau         852652874. pib_down_mean bajo_pib \n2 Comoros               701111696. pib_down_mean bajo_pib \n3 Sao Tome and Principe 319014077. pib_down_mean bajo_pib \n\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "materiales_admin/regresion_lineal.html",
