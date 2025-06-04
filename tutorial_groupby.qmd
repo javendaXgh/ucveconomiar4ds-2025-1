@@ -1,6 +1,5 @@
 ---
-title: "Clase 12- Agrupamientos, Reframes"
-date: "Noviembre 25, 2024"
+title: "Tutorial Agrupamientos, Reframes. Parte I"
 output:
   html_document:
     toc: yes

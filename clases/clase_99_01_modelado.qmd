@@ -1,0 +1,12 @@
+---
+title: "Untitled"
+format: revealjs
+---
+
+Todo el contenido de esta presentación está basado en el capítulo "Modelar" de R para Ciencia de Datos de Hadley Wickham.
+
+## Objetivo
+
+Adquirir nociones básicas sobre modelado y cómo aplicarlos en R
+
+![](images/cd_ciclo_4.png){width="600"}
