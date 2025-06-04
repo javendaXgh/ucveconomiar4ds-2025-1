@@ -6,12 +6,12 @@ library(tidyverse)
 # download.file('https://www.bcv.org.ve/sites/default/files/EstadisticasGeneral/2_1_2b25_smc.xls','taller_datosBCV/2025_Tr2.xls')
 
 
-download.file('https://www.bcv.org.ve/sites/default/files/precios_consumidor/4_5_7_0.xls','taller_datosBCV/INPC.xls')
+download.file('https://www.bcv.org.ve/sites/default/files/precios_consumidor/4_5_7_0.xls','INPC.xls')
 
 
 
 View(tdc)
-INPC <- read_excel('taller_datosBCV/INPC.xls')%>%
+INPC <- read_excel('INPC.xls')%>%
   slice(-1:-6)
 
 View(INPC)
