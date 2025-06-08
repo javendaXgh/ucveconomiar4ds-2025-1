@@ -1,0 +1,748 @@
+---
+title: "ANÁLISIS OFENSIVO DE LA TEMPORADA 2024 EN LA LIGA AMERICA DE LAS GRANDES LIGAS DE BEISBOL"
+author: "Diego Perez"
+format:
+    html:
+      embed-resources: TRUE
+editor: visual
+---
+
+## INTRODUCCIÓN
+
+El beisbol de la *Major League Baseball* (MLB) es catalogado como el de más alto nivel y el de mayor competitividad a nivel mundial. La liga americana esta compuesta por quince equipos entre los cuales se encuentra el maximo ganador de la liga: los New York Yankees.
+
+En el presente proyecto analizaremos los equipos de la liga americana y su rendimiento ofensivo en el año 2024 para determinar:
+
+##### 1. ¿Qué equipo fue la mejor ofensiva del año 2024 en la MLB?
+
+##### 2. ¿Qué equipo fue la peor ofensiva del año 2024 en la MLB?
+
+## DEFINICIÓN DE NUESTRAS VARIABLES
+
+### AB (Turnos al Bate)
+
+Un turno al bate (AB) es una aparición oficial al plato de un jugador. Se utiliza como denominador para calcular el promedio de bateo y el porcentaje de slugging.
+
+### Hits (H)
+
+Un hit ocurre cuando un bateador golpea la pelota en territorio válido y llega a una base de forma segura, sin el beneficio de un error de un fildeador o de una jugada de selección.
+
+### HR (Cuadrangular)
+
+Un cuadrangular es un hit en el que el bateador golpea una pelota válida de tal manera que puede recorrer todas las bases y anotar una carrera sin ser puesto out y sin la ayuda de un error. Lo más común es que la pelota sea golpeada fuera del campo de juego en territorio válido (por encima de la cerca del jardín).
+
+### AVG (Promedio de Bateo)
+
+El promedio de bateo es una de las estadísticas más antiguas y fundamentales utilizadas para medir el éxito de un bateador. Representa la proporción de los turnos al bate de un jugador que resultan en un hit.
+
+### SLG (Porcentaje de Slugging)
+
+El porcentaje de slugging mide el poder de un bateador calculando el número total de bases que un jugador registra por turno al bate. A diferencia del promedio de bateo, le da más peso a los extrabases.
+
+### OBP (Porcentaje de Embasado)
+
+El porcentaje de embasado mide la frecuencia con la que un bateador llega a base por aparición al plato, independientemente de cómo llegó allí (excluyendo errores). Incluye hits, bases por bolas y veces que fue golpeado por un lanzamiento.
+
+## VALORES ESTADÍSTICOS Y ANÁLISIS EXPLORATORIO
+
+A continuación, se presentan tablas resumenes, graficas y valores estadísticos que configuran a los mejores y peores equipos ofensivos de la liga americana en el mejor beisbol del mundo en el año 2024.
+
+## TABLA INTERACTIVA
+
+Aquí podrás visualizar los datos ofensivos más destacados de tú equipo favorito
+
+```{r}
+#| warning: false
+#| echo: false
+
+#Cargamos nuestra data y los paquetes que usaremos a lo largo del quarto
+
+library(readxl)
+Data_CD_Quarto <- read_excel("Data_CD_Quarto.xlsx")
+#View(Data_CD_Quarto)# no
+library(tidyverse)
+library(dplyr)
+library(DT)
+library(gt)
+library (plotly)
+
+datatable(Data_CD_Quarto)
+```
+
+## TURNOS AL BATE (AB)
+
+##### Resumen estadísticas descriptivas (AB)
+
+```{r}
+#| warning: false
+#| echo: false
+
+summary(Data_CD_Quarto$AB)
+```
+
+Los valores máximos (5.577) y valores mínimos (5.310) son el indicador de los extremos de nuestra variable.
+
+El primer quartil nos indica que el 25% de los equipos se encuentran por debajo de los 5.386 turnos al bate. Mientras qué, el tercer quartil nos indica que el 75% de los equipos se encuentran por debajo de los 5.481 turnos.
+
+Encontramos una media y mediana muy similares, lo que nos hace referirnos a que los datos de los **Turnos al Bate** estan distribuidos de manera uniforme o simétrica alrededor del centro tal como se mostrará en la figura a continuación:
+
+##### Distribución de Frecuencia (AB)
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto,
+       aes(AB, 
+           color= TEAM)) +
+  geom_histogram(bins = 30) + theme_bw()
+```
+
+##### Análisis comparativo estadístico (AB)
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data=Data_CD_Quarto,
+       aes(x= AB,
+           y= TEAM))+
+ geom_col(fill= "red", width = 0.45)+
+  geom_text(aes(label = AB),  size = 2.5)+ labs(title = "Turnos al bate", subtitle = "Liga Americana - 2024")+ theme_bw()
+```
+
+##### ¿Qué equipo consumió más turnos al bate?
+
+```{r}
+#| warning: false
+#| echo: false
+
+Max_AB_Team <- Data_CD_Quarto %>%
+  filter(AB == max(AB)) %>%
+  pull(TEAM)
+
+Max_AB_Team
+```
+
+##### ¿Cuántos consumieron?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor máximo es de:
+
+```{r}
+#| warning: false
+#| echo: false
+
+
+Df_Boston <- Data_CD_Quarto %>%
+  filter(AB == max(AB))
+head(Df_Boston$AB)
+```
+
+##### ¿Qué equipo consumió menos turnos al bate?
+
+```{r}
+#| warning: false
+#| echo: false
+
+Min_AB_Team <- Data_CD_Quarto %>%
+  filter(AB == min(AB)) %>%
+  pull(TEAM)
+
+Min_AB_Team
+```
+
+##### ¿Cuántos consumieron?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor mínimo es de:
+
+```{r}
+#| warning: false
+#| echo: false
+
+
+Df_cleveland <- Data_CD_Quarto %>%
+  filter(AB == min(AB))
+head(Df_cleveland$AB)
+```
+
+## HITS (H)
+
+##### Resumen estadísticas descriptivas (H)
+
+```{r}
+#| warning: false 
+#| echo: false
+
+summary(Data_CD_Quarto$H)
+```
+
+Los valores máximos (1.448) y valores mínimos (1.187) son el indicador de los extremos de nuestra variable Hit.
+
+25% de los equipos se encuentran por debajo de los 1.252 hits y el 75% por debajo de 1.352
+
+Encontramos una media y mediana casi idénticas, lo que nos hace referirnos a que los datos de los **Hits** estan distribuidos de manera uniforme o simétrica alrededor del centro tal como se mostrará en la figura a continuación:
+
+##### Distribución de Frecuencia (H)
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+ggplot(data = Data_CD_Quarto, aes(H,             color= TEAM)) + geom_histogram(bins = 30) + theme_bw()
+```
+
+##### Análisis comparativo estadístico (H)
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+ggplot(data=Data_CD_Quarto, aes(x= H, y= TEAM))+  geom_col(fill= "green", width = 0.45)+   geom_text(aes(label = H),  size = 2.5)+ labs(title = "Hits", subtitle = "Liga Americana - 2024")+ theme_bw()
+```
+
+##### ¿Qué equipo conectó más hits?
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+Max_H_Team <- Data_CD_Quarto %>%   
+  filter(H == max(H)) %>%   
+  pull(TEAM)  
+
+Max_H_Team
+```
+
+##### ¿Cuántos conectaron?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor máximo es de:
+
+```{r}
+#| warning: false 
+#| echo: false   
+
+Df_Houston <- Data_CD_Quarto %>%   
+  filter(H == max(H)) 
+head(Df_Houston$H)
+```
+
+##### ¿Qué equipo conectó menos hits?
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Min_H_Team <- Data_CD_Quarto %>%  
+  filter(H == min(H)) %>%   
+  pull(TEAM)  
+
+Min_H_Team
+```
+
+##### ¿Cuántos conectaron?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor mínimo es de:
+
+```{r}
+#| warning: false 
+#| echo: false   
+
+Df_Whitesox <- Data_CD_Quarto %>%   
+  filter(H == min(H)) 
+head(Df_Whitesox$H)
+```
+
+## CUADRANGULARES (HR)
+
+##### Resumen estadísticas descriptivas (HR)
+
+```{r}
+#| warning: false
+#| echo: false
+
+summary(Data_CD_Quarto$HR)
+```
+
+Los valores máximos (237) y valores mínimos (133) son el indicador de los extremos de nuestra variable Cuadrangulares.
+
+25% de los equipos se encuentran por debajo de los 163.5 cuadrangulares y el 75% por debajo de 192.
+
+Encontramos una media y mediana casi idénticas, lo que nos hace referirnos a que los datos de los **Cuadrangulares** estan distribuidos de manera uniforme o simétrica alrededor del centro tal como se mostrará en la figura a continuación:
+
+##### Distribución de Frecuencia (HR)
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto,
+       aes(HR, 
+           color= TEAM)) +
+  geom_histogram(bins = 30) + theme_bw()
+```
+
+##### Análisis comparativo estadístico (HR)
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+ggplot(data=Data_CD_Quarto, aes(x= HR, y= TEAM))+  geom_col(fill= "gray", width = 0.45)+   geom_text(aes(label = HR),  size = 2.5)+ labs(title = "Cuadrangulares", subtitle = "Liga Americana - 2024")+ theme_bw()
+```
+
+##### ¿Qué equipo conectó más cuadrangulares?
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Max_HR_Team <- Data_CD_Quarto %>%  
+  filter(HR == max(HR))%>%   
+  pull(TEAM)  
+
+Max_HR_Team
+```
+
+##### ¿Cuántos conectaron?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor máximo es de:
+
+```{r}
+#| warning: false 
+#| echo: false   
+
+Df_Yankees <- Data_CD_Quarto %>%   
+  filter(HR == max(HR)) 
+head(Df_Yankees$HR)
+```
+
+##### ¿Qué equipo conectó menos cuadrangulares?
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+Min_HR_Team <- Data_CD_Quarto %>%  
+  filter(HR == min(HR)) %>%   
+  pull(TEAM)  
+
+Min_HR_Team
+```
+
+##### ¿Cuántos conectaron?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor mínimo es de:
+
+```{r}
+#| warning: false
+#| echo: false
+
+Df_ChicagoSox <- Data_CD_Quarto %>%   
+  filter(HR == min(HR)) 
+head(Df_ChicagoSox$HR)
+```
+
+## PROMEDIO AL BATE (AVG)
+
+```{r}
+#| warning: false
+#| echo: false
+
+summary(Data_CD_Quarto$AVG)
+```
+
+Los valores máximos (.262) y valores mínimos (.221) son el indicador de los extremos de nuestra variable promedio al bate.
+
+25% de los equipos se encuentran por debajo de los 231.5 de average y el 75% por debajo de 248.
+
+Encontramos una media y mediana casi idénticas, lo que nos hace referirnos a que los datos de los **Promedios al Bate** estan distribuidos de manera uniforme o simétrica alrededor del centro tal como se mostrará en la figura a continuación:
+
+##### Distribución de Frecuencia (AVG)
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto,
+       aes(AVG, 
+           color= TEAM)) +
+  geom_histogram(bins = 30) + theme_bw()
+```
+
+##### Análisis comparativo estadístico (AVG)
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+ggplot(data=Data_CD_Quarto, aes(x= AVG, y= TEAM))+  geom_col(fill= "blue", width = 0.45)+   geom_text(aes(label = AVG),  size = 2.5)+ labs(title = "Promedio al Bate", subtitle = "Liga Americana - 2024")+ theme_bw()
+```
+
+##### ¿Qué equipo promedió más average?
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Max_AVG_Team <- Data_CD_Quarto %>%  
+  filter(AVG == max(AVG)) %>%   
+  pull(TEAM)  
+
+Max_AVG_Team
+```
+
+##### ¿Cuánto promedió?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor máximo es de:
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Df_Astros <- Data_CD_Quarto %>%   
+  filter(AVG == max(AVG)) 
+head(Df_Astros$AVG)
+```
+
+##### ¿Qué equipo promedió menos average?
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Min_AVG_Team <- Data_CD_Quarto %>%  
+  filter(AVG == min(AVG)) %>%   
+  pull(TEAM)  
+
+Min_AVG_Team
+```
+
+##### ¿Cuánto promedió?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor mínimo es de:
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Df_WSox <- Data_CD_Quarto %>%   
+  filter(AVG == min(AVG)) 
+head(Df_WSox$AVG)
+```
+
+## PORCENTAJE DE EMBASADO (OBP)
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+summary(Data_CD_Quarto$OBP)
+```
+
+Los valores máximos (333) y valores mínimos (278) son el indicador de los extremos de nuestra variable promedio al bate.
+
+25% de los equipos se encuentran por debajo de los 301.5 de average y el 75% por debajo de 315.
+
+Encontramos una media y mediana casi idénticas, lo que nos hace referirnos a que los datos de los **Porcentajes de Embasados** estan distribuidos de manera uniforme o simétrica alrededor del centro tal como se mostrará en la figura a continuación:
+
+##### Distribución de Frecuencia (OBP)
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto,
+       aes(OBP, 
+           color= TEAM)) +
+  geom_histogram(bins = 30) + theme_bw()
+```
+
+##### Análisis comparativo estadístico (OBP)
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+ggplot(data=Data_CD_Quarto, aes(x= OBP, y= TEAM))+  geom_col(fill= "yellow", width = 0.45)+   geom_text(aes(label = OBP),  size = 2.5)+ labs(title = "Porcentaje de Embasado", subtitle = "Liga Americana - 2024")+ theme_bw()
+```
+
+##### ¿Qué equipo promedió más porcentaje de embasado?
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Max_OBP_Team <- Data_CD_Quarto %>%  
+  filter(OBP == max(OBP)) %>%   
+  pull(TEAM)  
+
+Max_OBP_Team
+```
+
+##### ¿Cuánto promedió?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor máximo es de:
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Df_NYY <- Data_CD_Quarto %>%   
+  filter(OBP == max(OBP)) 
+head(Df_NYY$OBP)
+```
+
+##### ¿Qué equipo promedió menos porcentaje de embasado?
+
+```{r}
+#| warning: false  
+#| echo: false  
+
+Min_OBP_Team <- Data_CD_Quarto %>%  
+  filter(OBP == min(OBP)) %>%   
+  pull(TEAM) 
+
+Min_OBP_Team
+```
+
+##### ¿Cuánto promedió?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor mínimo es de:
+
+```{r}
+#| warning: false
+#| echo: false
+
+Df_CHWSox <- Data_CD_Quarto %>%   
+  filter(OBP == min(OBP)) 
+head(Df_CHWSox$OBP)
+```
+
+#### Slugging (SLG)
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+summary(Data_CD_Quarto$SLG)
+```
+
+Los valores máximos (435) y valores mínimos (340) son el indicador de los extremos de nuestra variable promedio al bate.
+
+25% de los equipos se encuentran por debajo de los 378 de average y el 75% por debajo de 414.5.
+
+Encontramos una media y mediana casi idénticas, lo que nos hace referirnos a que los datos del **Slugging** estan distribuidos de manera uniforme o simétrica alrededor del centro tal como se mostrará en la figura a continuación:
+
+##### Distribución de Frecuencia (SLG)
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto,
+       aes(SLG, 
+           color= TEAM)) +
+  geom_histogram(bins = 30) + theme_bw()
+```
+
+##### Análisis comparativo estadístico (SLG)
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+ggplot(data=Data_CD_Quarto, aes(x= SLG, y= TEAM))+  geom_col(fill= "lightblue", width = 0.45)+   geom_text(aes(label = SLG),  size = 2.5)+ labs(title = "Slugging", subtitle = "Liga Americana - 2024")+ theme_bw()
+```
+
+##### ¿Qué equipo promedió más Slugging?
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+Max_SLG_Team <- Data_CD_Quarto %>%  
+  filter(SLG == max(SLG)) %>%   
+  pull(TEAM)
+
+Max_SLG_Team
+```
+
+##### ¿Cuánto promedió?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor máximo es de:
+
+```{r}
+#| warning: false
+#| echo: false
+
+Df_Baltimore <- Data_CD_Quarto %>%   
+  filter(SLG == max(SLG)) 
+head(Df_Baltimore$SLG)
+```
+
+##### ¿Qué equipo promedió menos Slugging?
+
+```{r}
+#| warning: false 
+#| echo: false  
+
+Min_SLG_Team <- Data_CD_Quarto %>%  
+  filter(SLG == min(SLG)) %>%   
+  pull(TEAM)
+
+Min_SLG_Team
+```
+
+##### ¿Cuánto promedió?
+
+Tal como nos indica nuestro resumen inicial de las estadísticas descriptivas, el valor mínimo es de:
+
+```{r}
+#| warning: false
+#| echo: false
+
+Df_soxCHW <- Data_CD_Quarto %>%   
+  filter(SLG == min(SLG)) 
+head(Df_soxCHW$SLG)
+```
+
+## ¿QUÉ TAN CIERTO ES QUE EL EQUIPO QUE CONECTE MAYOR NÚMERO DE CUADRANGULARES TENDRÁ UN MAYOR PROMEDIO AL BATE?
+
+Para ello, analicemos un gráfico de dispersión entre los cuadrangulares (HR) y el promedio al bate (AVG).
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto) +
+  geom_point(mapping = aes(x = HR, 
+                           y = AVG,
+                           color= TEAM, size = AVG, alpha = .8))+ geom_smooth(mapping = aes(x = HR, y = AVG),
+              method = "lm",
+              se = FALSE,
+              color = "red")+ theme_light()+
+  theme(legend.position = "bottom", legend.text = element_text(size = 3.5),legend.title = element_text(size = 3))
+```
+
+El gráfico nos muestra una relación positiva aunque moderada por las distancias reflejada de los puntos hacia la linea de tendencia, a medida que el número de cuadrangulares aumenta, incrementa el AVG. Sin embargo, observamos un valor (New York Yankees) que rompe esta relación debido a que es el que mayor cuadrangulares posee pero no es el que mayor promedio al bate (AVG) posee.
+
+Por otra parte, Chicago White Sox es el equipo menos cuadrangulares conectó y coincide en que es el que menos AVG posee. Por lo que la relación AVG-HR es positiva pero no es del todo concluyente para responder a nuestras interrogantes porque el número de cuadrangulares no define directamente el promedio al bate.
+
+## Y... ¿LA RELACIÓN HITS - AVG SI DEFINE EL PROMEDIO AL BATE?
+
+Para ello, analicemos un gráfico de dispersión entre los hits (H) y el promedio al bate (AVG).
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto) +
+  geom_point(mapping = aes(x = H, 
+                           y = AVG,
+                           color= TEAM, size = AVG, alpha = .8))+geom_smooth(mapping = aes(x = H, y = AVG),
+              method = "lm",
+              se = FALSE,
+              color = "red")+ theme_light()+
+  theme(legend.position = "bottom", legend.text = element_text(size = 3.5),legend.title = element_text(size = 3))
+```
+
+El gráfico nos muestra una relación positiva y fuerte por el comportamiento lineal reflejado por los puntos y la linea de tendencia, a medida que el número de hits aumenta, incrementa el AVG. Observamos que la relacion se evidencia con los Astros de Houston que es el equipo que más hits conectó y, a su vez, el que posee mayor promedio ofensivo.
+
+Por otra parte, Chicago White Sox es el equipo menos hits conectó y coincide en que es el que menos AVG posee. Por lo que la relación AVG-H es positiva, directa y el número de hits si define el mayor promedio al bate de cada equipo.
+
+## SIN EMBARGO, EXISTE UNA VARIABLE DENOMINADA "OPS" QUE PROFUNDIZA NUESTRO ANÁLISIS OFENSIVO
+
+El OPS permite evaluar la capacidad ofensiva colectiva de cada franquicia en la MLB. Los equipos con los mejores OPS incluyen valores que rondan los **.750**, lo que indica una ofensiva fuerte y productiva.
+
+Se obtiene sumando el porcentaje de embasado (**OBP**) y el porcentaje de slugging (**SLG**).
+
+#### Nueva tabla interactiva con OPS añadida
+
+```{r}
+#| warning: false
+#| echo: false
+
+Data_CD_Quarto_OPS <- Data_CD_Quarto %>%
+  mutate(OPS = OBP + SLG)
+
+datatable(Data_CD_Quarto_OPS)
+```
+
+```{r}
+#| warning: false
+#| echo: false
+
+summary(Data_CD_Quarto_OPS$OPS)
+```
+
+## ¿QUÉ EQUIPOS POSEEN UN OPS SUPERIOR A .750?
+
+```{r}
+#| warning: false
+#| echo: false
+
+data_CD_quarto_Ifelse <- Data_CD_Quarto_OPS%>%
+  mutate(Rendimiento_OPS = ifelse(OPS >= 750, "Por_encima", "Por_debajo"))
+
+data_CD_quarto_Ifelse
+
+```
+
+El resultado según nuestra condición es que tan solo dos equipos muestran un OPS superior a .750, lo que sería un indicador de una ofensiva sólida que combina elementros de producción, capacidad de llegar a base y fuerza. Los equipos son New York Yankees y Orioles de Baltimore.
+
+El restante de 13 equipos se encuentra por debajo de un OPS de .750, el más bajo de todos es Chicago White Sox con un OPS de .618 que se encuentra incluso por debajo de la media de todos los equipos.
+
+## RELACIÓN OPS - H
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto_OPS) +
+  geom_point(mapping = aes(x = H, 
+                           y = OPS,
+                           color= TEAM, size = OPS, alpha = .8))+
+  geom_smooth(mapping = aes(x = H, y = OPS),
+              method = "lm",
+              se = FALSE,
+              color = "red")+ theme_light()+
+  theme(legend.position = "bottom", legend.text = element_text(size = 3.5),legend.title = element_text(size = 3))
+```
+
+El gráfico nos muestra una relación positiva y moderada, a medida que el el numero de hits aumenta, incrementa el OPS. Sin embargo, observamos un valor (New York Yankees) que rompe esta relación debido a que es el que mayor OPS posee pero no es el que mayor número de hits conecta.
+
+Por otra parte, Chicago White Sox es el equipo menos hits conectó y coincide en que es el que menos OPS posee. Por lo que la relación OPS-H es positiva pero no es del todo concluyente para responder a nuestras interrogantes.
+
+## RELACIÓN OPS - HR
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = Data_CD_Quarto_OPS) +
+  geom_point(mapping = aes(x = HR, 
+                           y = OPS,
+                           color= TEAM, size = OPS, alpha = .8))+geom_smooth(mapping = aes(x = HR, y = OPS),
+              method = "lm",
+              se = FALSE,
+              color = "red")+ theme_light()+
+  theme(legend.position = "bottom", legend.text = element_text(size = 3.5),legend.title = element_text(size = 3))
+```
+
+El gráfico nos muestra una relación positiva y moderada con un carácter más lineal que el anterior, a medida que el el numero de cuadrangulares aumenta, incrementa el OPS. Esto, se evidencia en el valor más grande de cuadrangulares que lo posee New York Yankees y que, evidentemente, posee el valor mayor de OPS.
+
+En el mismo sentido, Chicago White Sox es el equipo menos cuadrangulares conectó y, efectivamente, es el que menos OPS posee. Por lo que la relación OPS-HR es directa.
+
+## RESULTADOS Y CONCLUSIONES
+
+##### 1. ¿Qué equipo fue la mejor ofensiva del año 2024 en la MLB?
+
+La respuesta a esta interrogante debe partir por dos variables principales AVG y OPS. La primera nos refleja el equipo que mejor promedio ofensivo obtuvo en la temporada 2024, en este caso, y basado en la relación lineal directa AVG-H, **Astros de Houston** fue el equipo que mejor ofensivo en cuánto a hits y average resultó de la campaña de la MLB 2024 en la Liga Americana.
+
+Por otra parte, en términos de producción, capacidad de llegar a base y poder en sus batazos, los **New York Yankees** dominaron el circuito en términos de HR y OPS en la campaña de la MLB 2024 en la Liga Americana.
+
+Finalmente, hemos seleccionado a estos dos equipos como las mejores ofensivas de la última temporada de las grandes ligas en el análisis realizado a la liga americana.
+
+##### 2. ¿Qué equipo fue la peor ofensiva del año 2024 en la MLB?
+
+La respuesta puede resultar evidente luego de nuestro análisis ejercido a través de la exploración de nuestros datos previamente realizado. **Chicago White Sox** fue el peor equipo ofensivo de la liga americana en el año 2024 en hits, cuadrangulares, porcentaje de embasado, slugging y OPS.

@@ -1,0 +1,266 @@
+---
+title: "Análisis de Fuga de Clientes Telco"
+author: "Carlos Morillo"
+format:
+  html:
+    theme: united
+    toc: true
+    toc-depth: 2
+editor: visual
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# **Ciclo de Ciencia de Datos**
+
+## Introducción
+
+En este reporte se analiza el dataset **“Telco Customer Churn”** proveniente de Kaggle. Este dataset es uno de los conjuntos de datos más utilizados en el ámbito de la ciencia de datos aplicada al sector de telecomunicaciones. Este dataset recopila información detallada sobre los clientes, incluyendo variables demográficas, características del servicio (como la duración del contrato, el uso de servicios adicionales y los cargos mensuales) y el historial de abandono (churn). Su objetivo principal es identificar patrones y factores que contribuyen a la pérdida de clientes, permitiendo a las empresas desarrollar estrategias de retención más efectivas. Dado que la adquisición de nuevos clientes suele ser más costosa que mantener a los existentes, el análisis de este conjunto de datos se ha convertido en una herramienta indispensable para predecir el churn y mejorar la competitividad en un mercado altamente dinámico.
+
+**Objetivo del Proyecto:**
+
+Elegí este conjunto de datos por su relevancia práctica en la toma de decisiones estratégicas, dado que retener a los clientes resulta más rentable que adquirir nuevos. El objetivo principal es identificar y analizar cómo influyen variables como el nivel de cargos mensuales (*MonthlyCharges*) en la probabilidad de churn, en comparación con otras variables del servicio. En este contexto, la pregunta de investigación que guiará el análisis es: **"¿De qué manera y en qué medida afecta el nivel de cargos mensuales a la probabilidad de churn, en comparación con otras variables del servicio?"** Al final, se discutirán los hallazgos basados en los análisis descriptivos y se brindarán insights para la toma de decisiones de retención.
+
+Fuente de los datos: <https://www.kaggle.com/datasets/blastchar/telco-customer-churn?resource=download&select=WA_Fn-UseC_-Telco-Customer-Churn.csv>
+
+------------------------------------------------------------------------
+
+## 1. Importación y Exploración de Datos
+
+En este bloque se cargan las librerías necesarias, se importa el dataset y se realiza una primera exploración de la estructura y contenido.
+
+```{r}
+# Cargar las librerías
+library(tidyverse)   # Incluye readr, dplyr, ggplot2, etc.
+library(DT)          # Para tablas interactivas
+library(gt)          # Para tablas con formato
+
+# Importar el dataset 
+telco <- read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+
+
+# En lugar de mostrar la salida en crudo,con summary por ejemplo, presentamos las primeras 50 filas en una tabla interactiva:
+DT::datatable(
+  telco %>% slice(1:50),
+  options = list(pageLength = 10),
+  caption = "Primeras 50 filas del dataset"
+)
+
+
+```
+
+*Comentario:* El dataset incluye variables como `customerID`, `gender`, `SeniorCitizen`, `Partner`, `Dependents`, `tenure`, `MonthlyCharges`, `TotalCharges` y `Churn`, entre otras. Para esta tabla interactiva solo se usaron los primeros 50 valores, ya que la data es extensa.
+
+------------------------------------------------------------------------
+
+## 2. Resumen Estadístico Agrupado por Churn
+
+Usamos **dplyr** para agrupar los datos por la variable `Churn` y calcular algunas medidas descriptivas clave. Utilizaremos **DT** y **gt** para presentar los resultados.
+
+### Tabla interactiva
+
+```{r}
+
+# Resumen estadístico agrupado por Churn, incluyendo media, desviación estándar y mediana
+resumen_churn <- telco %>%
+  group_by(Churn) %>%
+  summarise(
+    Total_Clientes     = n(),
+    Promedio_Tenure    = round(mean(tenure, na.rm = TRUE), 2),
+    SD_Tenure          = round(sd(tenure, na.rm = TRUE), 2),
+    Mediana_Tenure     = round(median(tenure, na.rm = TRUE), 2),
+    Promedio_Mensual   = round(mean(MonthlyCharges, na.rm = TRUE), 2),
+    SD_Mensual         = round(sd(MonthlyCharges, na.rm = TRUE), 2),
+    Mediana_Mensual    = round(median(MonthlyCharges, na.rm = TRUE), 2),
+    Promedio_Total     = round(mean(TotalCharges, na.rm = TRUE), 2),
+    SD_Total           = round(sd(TotalCharges, na.rm = TRUE), 2),
+    Mediana_Total      = round(median(TotalCharges, na.rm = TRUE), 2)
+  )
+
+
+# Mostrar el resumen con DT (tabla interactiva)
+DT::datatable(
+  resumen_churn,
+  options = list(pageLength = 5, autoWidth = TRUE),
+  caption = "Resumen Estadístico por Churn"
+)
+
+```
+
+------------------------------------------------------------------------
+
+### Tabla Formateada
+
+```{r}
+# Presentar el mismo resumen con gt (tabla formateada)
+gt_resumen <- resumen_churn %>%
+  gt() %>%
+  tab_header(title = "Resumen Estadístico por Churn") %>%
+  fmt_number(
+    columns = vars(Promedio_Tenure, SD_Tenure, Mediana_Tenure,
+                   Promedio_Mensual, SD_Mensual, Mediana_Mensual,
+                   Promedio_Total, SD_Total, Mediana_Total),
+    decimals = 2
+  )
+gt_resumen
+
+
+```
+
+*Comentario:* Calcular la desviación estándar (sd) junto con medias y otros estadísticos permite conocer la dispersión de las variables, lo que es fundamental para interpretar la variabilidad en el comportamiento de los clientes.
+
+------------------------------------------------------------------------
+
+## 3. Análisis Exploratorio de Datos (EDA)
+
+Realizamos algunas visualizaciones para explorar la distribución de las variables y observar diferencias entre los grupos.
+
+### **a) Gráfica de Dispersión: Relación entre *Tenure* y *Monthly Charges***
+
+```{r}
+ggplot(telco, aes(x = tenure, y = MonthlyCharges, color = Churn)) +
+  geom_point(alpha = 0.6) +
+  labs(
+    title = "Relación entre Tenure y Monthly Charges", 
+    x = "Tenure (meses)", 
+    y = "Monthly Charges"
+  )
+
+```
+
+*Análisis:* Esta gráfica muestra que los clientes con un tenure corto tienen mayor probabilidad de abandonar el servicio (Churn = "Yes"). La densidad de puntos en el lado izquierdo indica que, durante los primeros meses, los clientes están evaluando el servicio, lo que los hace más propensos a desistir si la experiencia no cumple sus expectativas. Por otro lado, los clientes con mayor tenure suelen ser aquellos que ya han establecido una relación más consolidada y tienden a valorar positivamente el servicio.
+
+### **b) Boxplot: Distribución de *TotalCharges* según el Estado de Churn**
+
+```{r}
+ggplot(telco, aes(x = Churn, y = TotalCharges, fill = Churn)) +
+  geom_boxplot() +
+  labs(
+    title = "Total Charges por Estado de Churn", 
+    x = "Churn", 
+    y = "Total Charges"
+  )
+
+```
+
+*Análisis:* El boxplot permite comparar la distribución de los cargos totales entre clientes que han abandonado y los que han permanecido. Es común observar que los clientes que permanecen tienen mayores valores acumulados de TotalCharges, lo cual se asocia a un mayor tiempo de fidelidad y, por ende, a una mayor inversión en el servicio. En contraste, los clientes que abandonaron muestran valores más bajos, lo que refuerza la idea de que los primeros meses son críticos en la relación cliente-servicio.
+
+### **c) Histograma: Distribución de *MonthlyCharges***
+
+```{r}
+ggplot(telco, aes(x = MonthlyCharges)) + 
+  geom_histogram(bins = 30, fill = "darkblue", color = "white", alpha = 0.75) +
+  labs(
+    title = "Distribución de Monthly Charges", 
+    x = "Monthly Charges", 
+    y = "Frecuencia"
+  )
+
+```
+
+*Análisis:* El histograma muestra cómo se distribuyen los cargos mensuales entre todos los clientes. Se pueden identificar los rangos donde se concentra la mayor cantidad de clientes. Si existen picos o colas largas, éstos pueden indicar segmentos de clientes que pagan montos inusualmente altos o bajos. Estas observaciones son esenciales para ajustar estrategias de precios y ofertas promocionales según el perfil de gasto de los clientes.
+
+------------------------------------------------------------------------
+
+## 4. Transformación de Datos con `mutate`
+
+Se crea la variable **TarifaAlta** para clasificar a los clientes según si sus cargos mensuales ( MonthlyCharges) están por encima o por debajo de la mediana.
+
+```{r}
+telco <- telco %>%
+  mutate(TarifaAlta = ifelse(MonthlyCharges > median(MonthlyCharges, na.rm = TRUE), "Alta", "Baja"))
+
+# Generar una tabla de frecuencia para analizar TarifaAlta en relación a Churn
+tabla_tarifa <- telco %>%
+  group_by(TarifaAlta, Churn) %>%
+  summarise(Total = n(), .groups = 'drop')
+
+
+```
+
+La creación de la variable `TarifaAlta` permite segmentar a los clientes en función de su gasto mensual. Esto ayuda a identificar si los clientes que pagan montos más altos tienen una mayor o menor tendencia a abandonar el servicio, lo que puede orientar estrategias de fidelización o promociones específicas.
+
+Además, se amplía el análisis de **TarifaAlta** con los siguientes gráficos:
+
+### **a. Distribución de MonthlyCharges con la Mediana:**
+
+Se muestra un histograma de *MonthlyCharges* con una línea vertical que indica la mediana. Esto permite observar claramente la separación entre los clientes con cargos por encima y por debajo de la mediana.
+
+```{r}
+# Calcular la mediana de MonthlyCharges
+mediana <- median(telco$MonthlyCharges, na.rm = TRUE)
+
+# Gráfico de distribución de MonthlyCharges con línea vertical en la mediana
+ggplot(telco, aes(x = MonthlyCharges)) + 
+  geom_histogram(bins = 30, fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_vline(xintercept = mediana, linetype = "dashed", color = "red", size = 1) +
+  labs(
+    title = "Distribución de MonthlyCharges con la Mediana",
+    x = "Monthly Charges",
+    y = "Frecuencia"
+  )
+
+
+```
+
+### **b. Gráfico de Barras de TarifaAlta según Churn:**
+
+Se crea una gráfica de barras que compara la cantidad de clientes en las categorías "Alta" y "Baja" de *TarifaAlta*, diferenciando entre los que han abandonado el servicio (*Churn = Yes*) y los que han permanecido (*Churn = No*).
+
+```{r}
+ggplot(telco, aes(x = TarifaAlta, fill = Churn)) +
+  geom_bar(position = "dodge") +
+  labs(
+    title = "Frecuencia de clientes según TarifaAlta y Churn",
+    x = "Categoría Tarifa (Baja/Alta)",
+    y = "Número de Clientes"
+  )
+
+```
+
+### **c. Tabla Interactiva de TarifaAlta:**
+
+Finalmente, se presenta la tabla interactiva generada para la frecuencia de clientes por categoria de *TarifaAlta* y *Churn*.
+
+```{r}
+DT::datatable(
+  tabla_tarifa,
+  options = list(dom = 't'),
+  caption = "Frecuencia de TarifaAlta por Churn"
+)
+
+```
+
+*Análisis:*
+
+-   El histograma con la línea de la mediana permite visualizar claramente el umbral que separa a los clientes con cargos altos de los de cargos bajos.
+
+-   El gráfico de barras evidencia posibles diferencias en la proporción de abandono entre los clientes con tarifas por encima y por debajo de la mediana.
+
+-   En conjunto, estos análisis sugieren que la clasificación en función de *TarifaAlta* podría ser un buen indicador para diseñar estrategias de retención diferenciadas.
+
+------------------------------------------------------------------------
+
+## 5. Conclusiones y Discusión
+
+### **Conclusiones Específicas:**
+
+-   La **gráfica de dispersión** de *Tenure* versus *MonthlyCharges* evidencia que los clientes en sus primeros meses (tenure corto) son significativamente más propensos a abandonar el servicio, lo que sugiere la necesidad de intervenir tempranamente en la relación cliente-servicio.
+
+-   El **boxplot** de *TotalCharges* muestra que los clientes que permanecen generan mayor acumulado en cargos totales, lo que indica una mayor fidelidad y una relación más sólida con el servicio.
+
+-   El **histograma** de *MonthlyCharges* revela que la mayoría de los clientes se encuentran en un rango medio, pero una barra altamente concentrada en el extremo inferior indica que existe un segmento amplio con planes económicos; este segmento podría necesitar estrategias de retención y soporte diferenciado.
+
+### **Conclusiones Generales:**
+
+-   El análisis sugiere que el nivel de cargos mensuales es un factor relevante en la decisión de churn, aunque su impacto debe evaluarse conjuntamente con variables como *tenure* y *TotalCharges*.
+-   La segmentación basada en la variable **TarifaAlta** permite identificar diferencias en el comportamiento de churn, lo que abre la posibilidad de desarrollar estrategias de retención diferenciadas según el nivel de gasto.
+-   Estos hallazgos iniciales proporcionan una base sólida para futuros análisis multivariados que permitan cuantificar el impacto exacto de cada variable en la probabilidad de churn.
+
+------------------------------------------------------------------------
+
+## 6. Agradecimientos y Notas Metodológicas
+
+En esta sección, reconozco que tuve ayuda de la IA Copilot para construir este reporte. La mayoría de las funciones y paquetes utilizados (como los de **tidyverse**, **dplyr**, **ggplot2**, **DT** y **gt**) fueron los vistos en clase. Solo se incorporaron algunas funciones adicionales, como `round()`, por recomendación de la IA para mejorar la presentación y legibilidad de los resultados.

@@ -1,0 +1,315 @@
+---
+title: "Análisis de Tasas de Asesinatos en Áreas Metropolitanas de EE. UU"
+author: "Roselyn"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+## Introducción
+
+Este reporte es un análisis estadístico y exploratorio sobre el conjunto de datos ***"Murders"***, disponible en el paquete *openintro*. Esta base de datos contiene información de 20 áreas metropolitanas en Estados Unidos, incluyendo su población, porcentaje de pobreza, porcentaje de desempleo y tasas de asesinatos anuales por millón de personas. El objetivo es analizar, explorar e interpretar las características de estas variables y la relación entre ellas.
+
+## 1. Importación de datos
+
+Los datos a explorar pueden ser obtenidos o importados de dos maneras:
+
+1.  Se ingresa a la página web de Openintro (<https://www.openintro.org/data/index.php?data=murders>) y se descarga el paquete de datos en un archivo de R.
+2.  Se importa los datos a través de paquete de *openintro.*
+
+```{r}
+#| echo: false
+#| warning: false
+
+#Cargamos las librerías necesarías para el análisis.
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(openintro)
+library(gt)
+library(DT)
+```
+
+```{r}
+
+data("murders")
+
+datos_asesinatos_US <- murders
+
+#Renombramos la varible "annual_murders_per_mil"
+
+datos_asesinatos_US <- datos_asesinatos_US %>%
+  rename(tasa_asesinatos = `annual_murders_per_mil`)
+```
+
+```         
+```
+
+### 1.1. Mostramos las primeras filas
+
+```{r}
+#| echo: false
+
+datos_asesinatos_US%>%
+  sample_n(10)
+
+
+```
+
+### 1.2. Tabla Interactiva
+
+```{r}
+#| echo: false
+
+datatable(datos_asesinatos_US)
+```
+
+## 2. Valores Estadísticos y Tablas Resúmenes
+
+```{r}
+#| echo: false
+
+# Resumen estadístico:
+
+summary(datos_asesinatos_US)
+
+```
+
+Si hacemos análisis de estos resultados, podemos observar como se revela una alta variabilidad en el tamaño de la ***población,*** se evidencia una considerable disparidad en el tamaño de las unidades de análisis, con valores que oscilan entre un mínimo de 587,000 y un máximo de 7,895,000. Se evidencia como la ***población*** de estas 20 áreas metropolitanas muestran un sesgo a la derecha, dado que la media es notablemente superior a la mediana.
+
+Por otro lado, ***la tasa de asesinatos***, revela una tendencia a tener valores extremos superiores en ambas variables. Al igual que la ***población*** la media es ligeramente superior a la mediana, lo que sugiere un ligero sesgo a la derecha, aunque menos pronunciado que la ***población***.
+
+En contraste, **los porcentajes de pobreza y desempleo** muestran una distribución más compacta y simétrica.
+
+Ahora bien, esto nos deja ciertas interrogantes que deseamos análizar mas adelante. Por ejemplo:
+
+1.  ¿Cuál es la distribución de las tasas de homicidios por millón de personas?
+2.  ¿Existe una relación entre el porcentaje de la población en pobreza y la tasa de homicidios?
+3.  ¿Una tasa de desempleo más alta tiende a estar asociada con una tasa de homicidios más alta?
+4.  ¿Existe una relación entre el porcentaje de la población en pobreza y la tasa de desempleo
+
+## 3. Análisis Exploratorio de Datos (EDA) y Respuestas a Preguntas:
+
+### 3.1. ¿Cuál es la distribución de las tasas de homicidios por millón de personas?
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+# Histograma de la tasa de asesinatos
+# Se uso de guía las laminas de "Gráficos con ggplot"
+#Se uso la "binwidth" sugerida por Gemini para agrupar.
+
+datos_asesinatos_US %>%
+  ggplot(aes(x = tasa_asesinatos)) +
+  geom_histogram(binwidth = 5, fill = "pink", color = "black") +
+  labs(title = "Distribución de la Tasa de Asesinatos", x = "Asesinatos por Millón", y = "Frecuencia") +
+  theme_minimal()
+```
+
+El gráfico nos dice que la tasa de asesinatos tiende a concentrarse alrededor de los 15 a 25 asesinatos por millón. Hay algunos lugares con tasas más bajas y otros con tasas más altas, pero son menos comunes.
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+# Boxplot de la tasa de asesinatos para identificar atípicos
+
+datos_asesinatos_US %>%
+  ggplot(aes(y = tasa_asesinatos)) +
+  geom_boxplot(fill = "blue", color = "pink") +
+  labs(title = "Distribución de la Tasa de Asesinatos (Boxplot)", y = "Asesinatos por Millón") +
+  theme_minimal()
+```
+
+La mayoría de las tasas de asesinatos se agrupan en un rango definido, con la mitad de los datos concentrados en la caja azul y la mediana indicando el valor central alrededor de los 20 asesinatos por millón. La falta de puntos atípicos sugiere que, dentro de este conjunto de datos, las tasas de asesinatos no tienen valores extremadamente dispersos fuera de este rango central.
+
+### 3.2. ¿Existe una relación entre el porcentaje de la población en pobreza y la tasa de homicidios?
+
+```{r}
+#| echo: false
+#| warning: false
+## Las lineas de tendencia fueron sugeridas por Gemini para mejorar el grafico.
+# Diagrama de dispersión: Pobreza vs. Tasa de Asesinatos
+datos_asesinatos_US %>%
+  ggplot(aes(x = perc_pov, y = tasa_asesinatos)) +
+  geom_point(alpha = 0.5, color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Pobreza vs. Tasa de Asesinatos", x = "Porcentaje en Pobreza", y = "Asesinatos por Millón") +
+  theme_minimal()
+```
+
+La línea roja con pendiente ascendente nos indica una tendencia lineal positiva.
+
+Esto nos revela que, a medida que el porcentaje de la población en pobreza aumenta, la tasa de homicidios tiende a aumentar también. En otras palabras, las áreas con mayores niveles de pobreza en este conjunto de datos suelen tener, en promedio, tasas de homicidios más altas. Aunque no todos los puntos caen exactamente sobre la línea hay una tendencia general.
+
+El coeficiente de correlación nos arroja un resultado de 0.84 entre el porcentaje de pobreza y la tasa de asesinatos indica una relación positiva muy fuerte y substancial.
+
+```{r}
+#| echo: false
+
+# Coeficiente de correlación (Sugerido por Gemini AI)
+
+cor_pov_homicidios <- cor(datos_asesinatos_US$perc_pov, datos_asesinatos_US$tasa_asesinatos)
+cat("Coeficiente de correlación entre pobreza y tasa de asesinatos: ", round(cor_pov_homicidios, 2), "\n")
+
+```
+
+### 3.3. ¿Una tasa de desempleo más alta tiende a estar asociada con una tasa de homicidios más alta?
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+# Diagrama de dispersión: Desempleo vs. Tasa de Asesinatos
+datos_asesinatos_US %>%
+  ggplot(aes(x = perc_unemp, y = tasa_asesinatos)) +
+  geom_point(alpha = 0.5, color = "darkgreen") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Desempleo vs. Tasa de Asesinatos", x = "Porcentaje de Desempleo", y = "Asesinatos por Millón") +
+  theme_minimal()
+```
+
+El grafico evidencia como una tasa de desempleo más alta tiende a estar asociada con una tasa de homicidios más alta. La tendencia general de que un mayor desempleo se asocia con una mayor tasa de homicidios.
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+# Coeficiente de correlación (Sugerido por Gemini AI)
+cor_unemp_homicidios <- cor(datos_asesinatos_US$perc_unemp, datos_asesinatos_US$tasa_asesinatos)
+cat("Coeficiente de correlación entre desempleo y tasa de asesinatos: ", round(cor_unemp_homicidios, 2), "\n")
+
+```
+
+### 3.4 ¿Existe una relación entre el porcentaje de la población en pobreza y la tasa de desempleo?
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Diagrama de dispersión de Pobreza vs. Desempleo.
+
+datos_asesinatos_US %>%
+  ggplot(aes(x = perc_pov, y = perc_unemp)) +
+  geom_point(alpha = 0.5, color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Pobreza vs. Desempleo", x = "Porcentaje en Pobreza", y = "Porcentaje de Desempleo") +
+  theme_minimal()
+```
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+# Coeficiente de correlación (Sugerido por Gemini AI)
+
+cor_pov_unemp <- cor(datos_asesinatos_US$perc_pov, datos_asesinatos_US$perc_unemp)
+cat("Coeficiente de correlación entre pobreza y desempleo: ", round(cor_pov_unemp, 2), "\n")
+```
+
+El grafico evidencia como una tasa de desempleo más alta tiende a estar asociada con una tasa de pobreza más alta. Existe una tendencia general de que un mayor desempleo se asocia con una mayor tasa de pobreza. El coeficiente de correlación nos arroja un resultado de 0.82 entre el porcentaje de desempleo y tasa de pobreza indica una relación positiva muy fuerte y substancial.
+
+## 4. Aplicación de `mutates` (Derivación o Agregación de Datos)
+
+Para efectos del análisis crearemos una nueva columna para observar los asesinatos en terminos absolutos, basándonos en la tasa de asesinatos por millón y la población.
+
+### 4.1 Asesinatos absolutos.
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+df_asesinatos_absolutos <- datos_asesinatos_US %>%
+  mutate(asesinatos_absolutos = (tasa_asesinatos / 1000000)
+         * population) %>%
+  select(population,
+         tasa_asesinatos,
+         asesinatos_absolutos)
+
+head(df_asesinatos_absolutos, 10)
+```
+
+Esta nueva columna de asesinatos_absolutos nos indica el número estimado de asesinatos ocurridos en un año para cada área metropolitana, basándose en la tasa de asesinatos por millón de personas y la población total de esa área.
+
+Por ejemplo en la primera fila podemos observar como se estima que hubo aproximadamente 6 o 7 asesinatos en esa área metropolitana durante un año.
+
+```{r}
+#| echo: false
+#| warning: false
+
+summary(df_asesinatos_absolutos)
+```
+
+La nueva variable muestra que el número real de asesinatos por unidad de análisis desde un mínimo de 3.67 hasta un máximo de 114.48. La mediana de 22.130 y la media de 28.404 indican un sesgo positivo.
+
+### 4.2 Tasas altas y bajas de asesinato
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Calculamos el promedio de la tasa de asesinatos
+
+asesinatos_promedio <- mean(datos_asesinatos_US$tasa_asesinatos)
+asesinatos_promedio
+
+```
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+datos_asesinatos_categorizados <- datos_asesinatos_US %>%
+  mutate(nivel_tasa_asesinatos = ifelse(tasa_asesinatos >= asesinatos_promedio, "tasa_alta_asesinatos", "tasa_baja_asesinatos"))
+
+datatable(datos_asesinatos_categorizados)
+```
+
+Algo que es interesante de estos resultados es como observa que la mayoría de las unidades clasificadas con "tasa alta de asesinatos" tienden a presentar porcentajes de desempleo relativamente elevados. Por el contrario, las unidades con "tasa baja de asesinatos" generalmente muestran porcentajes de desempleo más bajos. Esta tendencia nos sugiere que los lugares con un mayor índice de desempleo pueden coincidir con aquellos que experimentan un mayor número de homicidios.4.3. Categorias según la población.
+
+Ahora vamos a asignar tres categorías según el tamaño de la población:
+
+Población mayor a 3er cuartil –\> "poblacion_grande"
+
+población menor 1er y 3er cuartil -\> "población_mediana"
+
+población menor por debajo del 1er cuartil -\> "población_pequeña"
+
+```{r}
+#| echo: false
+
+cuartiles_poblacion <- quantile(datos_asesinatos_US$population)
+cuartiles_poblacion
+
+# Fijar variables
+primer_cuartil_pop <- cuartiles_poblacion[2]
+tercer_cuartil_pop <- cuartiles_poblacion[4]
+```
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+datos_asesinatos_categorizados <- datos_asesinatos_categorizados %>%
+  arrange(desc(population)) %>%
+  mutate(tamano_ciudad = ifelse(population <= primer_cuartil_pop, "poblacion_pequena", ifelse(population >= tercer_cuartil_pop, 'poblacion_grande', 'poblacion_mediana')))
+
+datatable(datos_asesinatos_categorizados)
+```
+
+Se observa que tanto las ciudades clasificadas como poblacion_grande como las poblacion_mediana y poblacion_pequena pueden presentar tasa_alta_asesinatos o tasa_baja_asesinatos, lo que reafirma que el tamaño de la población no es el único factor determinante. Por otro lado, como se demostró en el analisis 4.2, dentro de las unidades con tasa_alta_asesinatos, se mantiene la tendencia con mayores porcentajes de pobreza y desempleo. 
+
+## 5. Limitaciones Respecto a la base de datos:
+
+Una limitación clave de esta base de datos es la ausencia de variables como el año o la ciudad específica. Esta omisión restringe la capacidad de realizar análisis temporales o geográficos, lo que limitaría una comprensión más profunda de la dinámica de las tasas de homicidio a lo largo de los años o en ubicaciones del área metropolitana de Estados Unidos.

@@ -1,0 +1,186 @@
+---
+title: "Ciclo de datos: Analisis de la balanza comercial de Colombia 2004-2023"
+execute:
+  echo: false #Esto le pedi ayuda a la IA para que no se mostrara los codigos de los chunk en todo el QMD#
+---
+
+### Objetivo de este análisis
+
+Este análisis examina la evolución de la balanza comercial de Colombia entre 2004 y 2023, utilizando datos de exportaciones, importaciones y PIB expresados tanto en términos relativos (% del PIB) como absolutos (millones de USD). La balanza comercial es un indicador clave para entender la dinámica económica de un país, ya que refleja la diferencia entre exportaciones e importaciones. Este informe presenta tablas, estadísticas descriptivas y visualizaciones para identificar tendencias, fluctuaciones y patrones en el comercio exterior de Colombia durante el período estudiado.
+
+### Indicadores usados:
+
+-   **NE.EXP.GNFS.ZS**: **Exportaciones de bienes y servicios (% del PIB) - Colombia**
+
+-   **NE.IMP.GNFS.ZS:** **Importaciones de bienes y servicios (% del PIB) - Colombia**
+
+-   **NE.GDP.MKTP.CD: PIB (US\$ a precios actuales) - Colombia**
+
+### Tabla de valores, valor de exportaciones y importaciones expresado en (% del PIB)
+
+```{r}
+
+#para realizar estos codigos se hizo uso del material impartido por el profesor José Avendaño y tambien con ayuda de la inteligencia artificial Grow (esta señalado donde se uso)
+
+library(DT) #llamo al paquete DT
+
+load("C:/Users/Arnaldo Di Remigio/OneDrive/Desktop/balanza_comercial_colombia/data/data_colombia.RData") #cargo la data, colocar la ruta de la carpeta de la data aca
+
+datatable(datos_colombia) #muestro la data en una tabla dinamica
+
+```
+
+### Tabla 2: Exportaciones, Importaciones en Millones de USD, Balanza Neta y PIB en US/\$ a precios actuales
+
+```{r}
+# Creo un nuevo data.frame llamado datos_colombia_absolutos para almacenar los valores en dolares USD
+datos_colombia_absolutos <- data.frame(
+  Año = datos_colombia$Año,
+  
+  #tanto el porcentaje exportaciones e importaciones se divide entre 100 para        obtener el porcentaje en decimal, se multiplica por el PIB (en USD) y se divide    entre 1,000,000 para obtener millones de USD, esto se guarda en la columna         exportaciones y importaciones respectivamente
+  Exportaciones = datos_colombia$Exportaciones_x100/100*datos_colombia$PIB/1000000,
+  Importaciones = datos_colombia$Importaciones_x100/100*datos_colombia$PIB/1000000,
+  
+  #se calcula la balanza neta, restando las formulas que hicimos en el paso       anterior, y lo guardamos en la columna Balanza_neta
+  Balanza_neta = (datos_colombia$Exportaciones_x100/100*datos_colombia$PIB/1000000)-(datos_colombia$Importaciones_x100/100*datos_colombia$PIB/1000000),
+  
+  #llevamos el PIB a millones para poder ver los numeros con mayor facilidad
+  PIB = datos_colombia$PIB/1000000
+)
+
+datatable(datos_colombia_absolutos) #muestro todas las columnas antes guardadas en una tabla dinamica
+
+```
+
+### Estadisticas Resumen
+
+```{r}
+# Obtengo las estadisticas resumen de cada columna con la funcion summary y las asigno a una variable
+resumen_exportaciones <- summary(datos_colombia_absolutos$Exportaciones)
+
+resumen_importaciones <- summary(datos_colombia_absolutos$Importaciones)
+
+resumen_balanza <- summary(datos_colombia_absolutos$Balanza_neta)
+
+resumen_pib <- summary(datos_colombia_absolutos$PIB)
+
+# Aca hago lo mismo que en el paso anterior solo que uso la funcion sd para calcula la desviacion estandar
+desviacion_exportaciones <- sd(datos_colombia_absolutos$Exportaciones)
+
+desviacion_importaciones <- sd(datos_colombia_absolutos$Importaciones)
+
+desviacion_balanza <- sd(datos_colombia_absolutos$Balanza_neta)
+
+desviacion_pib <- sd(datos_colombia_absolutos$PIB)
+
+# Creo un nuevo data frame para crear una tabla donde mostrar ordenadamente todas las estadisticas, la estructura del dataframe la hice yo, sin embargo me apoye con IA para saber cuales eran los nombres de los campos que devuelve la funcion summary
+resumen_tabla <- data.frame(
+  Indicador = c("Exportaciones", "Importaciones", "Balanza Comercial", "PIB"),
+  
+  Minimo = c(resumen_exportaciones["Min."], resumen_importaciones["Min."], resumen_balanza["Min."], resumen_pib["Min."]),
+  
+  Q1 = c(resumen_exportaciones["1st Qu."], resumen_importaciones["1st Qu."], resumen_balanza["1st Qu."], resumen_pib["1st Qu."]),
+  
+  Mediana = c(resumen_exportaciones["Median"], resumen_importaciones["Median"], resumen_balanza["Median"], resumen_pib["Median"]),
+  
+  Media = c(resumen_exportaciones["Mean"], resumen_importaciones["Mean"], resumen_balanza["Mean"], resumen_pib["Mean"]),
+  
+  Q3 = c(resumen_exportaciones["3rd Qu."], resumen_importaciones["3rd Qu."], resumen_balanza["3rd Qu."], resumen_pib["3rd Qu."]),
+  
+  Maximo = c(resumen_exportaciones["Max."], resumen_importaciones["Max."], resumen_balanza["Max."], resumen_pib["Max."]),
+  
+  Desv_Estandar = c(desviacion_exportaciones, desviacion_importaciones, desviacion_balanza, desviacion_pib)
+)
+
+# muestro el data frame ordenado en una tabla dinamica del paquete DT
+datatable(resumen_tabla)
+```
+
+### Grafico 1: Evolución de Exportaciones, Importaciones (2004-2023), en millones de USD
+
+```{r}
+# Cargo el paquete ggplot2 para crear gráficos
+library(ggplot2)
+
+# Creo el gráfico usando el dataframe datos_colombia_absolutos, defino el eje x como los años
+ggplot(datos_colombia_absolutos, aes(x = Año)) +
+
+  #defino el eje y para las exportaciones y le asigno un color a la linea
+  geom_line(aes(y = Exportaciones, color = "Exportaciones")) +
+  
+  #defino el eje X para las importaciones y le asigno un color a la linea
+  geom_line(aes(y = Importaciones, color = "Importaciones")) +
+  
+  # Configurar el eje x para mostrar los años de 2 en 2
+  scale_x_continuous(breaks = seq(min(datos_colombia_absolutos$Año), max(datos_colombia_absolutos$Año), by = 2)) +
+  # Configurar el eje y para mostrar los valores en millones de USD y en intervalos de 10000
+  scale_y_continuous(
+    breaks = seq(0, max(datos_colombia_absolutos$Importaciones), by = 10000)
+  )
+
+```
+
+Entre 2004 y 2023 las exportaciones e importaciones de Colombia crecen de 20,000 y 25,000 millones de USD a 60,000 y 70,000 millones en 2012, caen a 35,000 y 45,000 millones en 2016 por la baja del petróleo, y se recuperan hasta 50,000 y 90,000 millones en 2022, con una leve baja en 2023, reflejando un déficit comercial persistente (hasta 40,000 millones de USD en 2022), volatilidad en exportaciones por la dependencia de commodities o materias primas, caídas en 2008-2009 (crisis global), 2014-2016 (caida de los precios del petróleo) y 2020 (pandemia)
+
+### Grafico 2: Comportamiento Balanza Comercial
+
+```{r}
+# Creo un gráfico con ggplot usando datos_colombia_absolutos
+
+#define el eje x como los años y el eje y como la balanza comercial neta
+ggplot(datos_colombia_absolutos, aes(x = Año, y = Balanza_neta)) +
+  
+  # Uso barras para representar la Balanza_neta e indico que las alturas de las barras son identicas a su valor numerico
+  geom_bar(stat = "identity") +
+  
+  # coloco una línea de tendencia lineal
+  geom_smooth(method = "lm") +
+  
+  # Creo el eje x para mostrar los años de 2 en 2 y genero una secuencia desde el año mínimo al máximo
+  scale_x_continuous(breaks = seq(min(datos_colombia_absolutos$Año), max(datos_colombia_absolutos$Año), by = 2)) +
+  
+  # Creo el eje y para mostrar los valores de la Balanza_neta en millones de USD y defino incrementos de 2000 desde un minimo de -30000 hasta el máximo de Balanza_neta
+  scale_y_continuous(
+    breaks = seq(-30000, max(datos_colombia_absolutos$Balanza_neta), by = 2000)
+  )
+```
+
+El gráfico muestra una balanza comercial con tendencia negativa para Colombia desde 2004 hasta 2023, con un déficit que se agrava progresivamente a lo largo de los años. La línea azul indica una clara tendencia descendente, sugiriendo que las importaciones de Colombia han superado cada vez más a sus exportaciones durante este período llevando a déficits comerciales crecientes
+
+### Grafico 3: Relación entre Importaciones y Exportaciones
+
+```{r}
+
+# Creo un grafico usando datos_colombia_absolutos y defino el eje x como Exportaciones y el eje y como Importaciones
+ggplot(datos_colombia_absolutos, aes(x = Exportaciones, y = Importaciones)) +
+  # Defino el grafico como uno de puntos de dispersion
+  geom_point() +
+  # creo una línea de tendencia lineal y lo defino como un modelo lineal
+  geom_smooth(method = "lm")
+
+
+```
+
+A medida que las exportaciones de Colombia aumentan, sus importaciones tienden a aumentar de manera proporcional. Esto sugiere que el crecimiento de la actividad exportadora colombiana puede estar ligado a una mayor demanda de bienes intermedios importados necesarios para la producción, tambien que un aumento en los ingresos que generan las exportaciones genera una mayor capacidad de compra de bienes y servicios importados.
+
+### Tabla con Balanza Neta en %PIB y Razon Importaciones/exportaciones
+
+```{r}
+suppressPackageStartupMessages(library(dplyr)) #este codigo me lo dio la IA para quitar unas advertencias que me daba la paqueteria dplyr
+library(dplyr) #cargo el paquete
+
+# Creo un nuevo data frame llamado datos_colombia_derivado a partir de datos_colombia_absolutos
+datos_colombia_derivado <- datos_colombia_absolutos %>%
+  
+  # Uso mutate para añadir nuevas columnas con las variables derivadas
+  mutate(
+    #Calculo la balanza neta como porcentaje del PIB
+    Balanza_neta_PIBx100 = (Balanza_neta / PIB) * 100,
+    # Calculo la razón Importaciones/Exportaciones
+    Razon_Imp_Exp = Importaciones / Exportaciones
+  )
+
+datatable(datos_colombia_derivado) #muestro el nuevo dataframe en una tabla dinamica
+
+
+```

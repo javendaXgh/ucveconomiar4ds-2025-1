@@ -1,0 +1,253 @@
+---
+title: "La Historia Demográfica de Islandia: De la Crisis a la Resiliencia (2000-2024)"
+author: "Alfredo Tiapa"
+date: "`r Sys.Date()`"
+format: html
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Resumen Ejecutivo
+
+Islandia ha experimentado una transformación demográfica notable en las
+últimas dos décadas, marcada por la crisis financiera de 2008, el boom
+turístico posterior, y la llegada de trabajadores internacionales. La
+población creció un 40% entre 2000-2024, mientras que la esperanza de
+vida aumentó 3.2 años, reflejando tanto la inmigración como las mejoras
+en calidad de vida.
+
+------------------------------------------------------------------------
+
+# Objetivos
+
+-   Analizar cómo eventos históricos específicos (crisis 2008, boom
+    turístico, COVID-19) impactaron la demografía islandesa
+-   Identificar el papel de la inmigración en el crecimiento poblacional
+    reciente
+-   Examinar la relación entre desarrollo económico y esperanza de vida
+-   Contextualizar las tendencias dentro de la realidad socioeconómica
+    del país
+
+------------------------------------------------------------------------
+
+# Contexto Histórico y Descripción de los Datos
+
+Los datos analizados (2000-2024) cubren un período transformador para
+Islandia, incluyendo:
+
+-   **2000-2007**: Expansión económica pre-crisis
+-   **2008-2010**: Crisis financiera (colapso bancario)
+-   **2011-2019**: Recuperación y boom turístico
+-   **2020-2024**: Era COVID y nueva normalidad
+
+**Variables analizadas:** - **Población Total**: Crecimiento del 40%
+(281,205 → 393,349 habitantes) - **Crecimiento Poblacional**: Promedio
+1.4% anual con alta volatilidad - **Esperanza de Vida**: Incremento
+sostenido (79.9 → 83.1 años)
+
+------------------------------------------------------------------------
+
+# Estadísticas Descriptivas: Más Allá de los Números
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+source('scripts/main.r', chdir = TRUE)
+knitr::kable(tabla_resumen, caption = "Estadísticas descriptivas con contexto histórico")
+```
+
+**Interpretación contextualizada:**
+
+La **alta variabilidad en el crecimiento poblacional** (DE: 1.08%)
+refleja los shocks externos que ha enfrentado Islandia. El crecimiento
+negativo mínimo (-0.14% en 2010) coincide con el éxodo post-crisis,
+mientras que el máximo (2.93% en 2023) marca el pico de la inmigración
+laboral durante el boom turístico.
+
+La **esperanza de vida** muestra estabilidad excepcional (DE: 0.94
+años), con una variación mínima de solo 3.5 años en todo el período
+(79.7-83.2 años), evidenciando un sistema de salud resiliente que
+mantuvo mejoras constantes incluso durante la crisis financiera de 2008.
+
+------------------------------------------------------------------------
+
+# Análisis Exploratorio: Los Datos Cuentan una Historia
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+print(hist_poblacion)
+```
+
+**La Transformación Demográfica:** Este histograma revela la aceleración
+del crecimiento poblacional post-2010. La distribución sesgada hacia
+valores altos indica que Islandia experimentó su mayor expansión
+demográfica en la historia reciente, impulsada principalmente por
+inmigración laboral del Este de Europa y refugiados.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+print(hist_crecimiento)
+```
+
+**La Volatilidad del Crecimiento:** Los valores atípicos negativos
+(2009-2010) representan emigración durante la crisis financiera. Los
+valores extremos positivos (2018, 2023) coinciden con recuperación
+económica e inmigración post-COVID, no con el boom turístico previo.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+print(line_esperanza)
+```
+
+**Resiliencia en Salud:** La tendencia ascendente continua hasta 2021
+demuestra resiliencia del sistema de salud. La caída significativa en
+2022 (1.1 años menos) refleja el impacto directo de COVID-19, mientras
+que la recuperación parcial en 2023 (+0.5 años) sugiere adaptación en
+curso, aunque aún no alcanza niveles pre-pandemia." La recuperación no
+es completa: 82.6 vs 83.2 años pre-COVID.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+print(scatter_poblacion_vida)
+```
+
+**Desarrollo y Longevidad:** La correlación positiva fuerte indica que
+el crecimiento poblacional (impulsado por inmigración joven y educada)
+ha coincidido con mejoras en esperanza de vida, sugiriendo efectos
+positivos de la diversidad demográfica en el sistema de salud.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+print(scatter_crecimiento_vida)
+```
+
+**Inmigración y Salud Pública:** Los años de alto crecimiento
+poblacional no muestran deterioro en esperanza de vida, indicando que el
+sistema de salud islandés ha integrado exitosamente a los nuevos
+residentes sin comprometer la calidad de atención.
+
+------------------------------------------------------------------------
+
+# Variables Derivadas
+
+```{r echo=FALSE}
+data_all_mostrar <- data_all %>%
+  rename(
+    !!row_name_pt := population_total,
+    !!row_name_gpt := population_growth_percent,
+    !!row_name_le := life_expectancy,
+  )
+
+knitr::kable(head(data_all_mostrar, 5), caption = "Tabla de datos original primeras 5 filas del dataset")
+
+```
+
+```{r}
+# Crear variables que revelen patrones históricos
+data_all <- data_all %>%
+  mutate(
+    # Población en miles para mejor visualización
+    population_miles = population_total / 1000,
+    
+    # Crecimiento acumulado desde 2000 (año base)
+    crecimiento_acumulado = (population_total / first(population_total[year >= 2000]) - 1) * 100,
+    
+    # Períodos históricos relevantes
+    periodo_historico = case_when(
+      year <= 2007 ~ "Pre-Crisis",
+      year >= 2008 & year <= 2010 ~ "Crisis Financiera", 
+      year >= 2011 & year <= 2019 ~ "Recuperación-Boom",
+      year >= 2020 ~ "Era COVID"
+    ),
+    
+    # Categorización del crecimiento
+    tipo_crecimiento = case_when(
+      population_growth_percent < 0 ~ "Decrecimiento",
+      population_growth_percent < 1 ~ "Crecimiento Bajo",
+      population_growth_percent < 2 ~ "Crecimiento Moderado", 
+      TRUE ~ "Crecimiento Alto"
+    ),
+    
+    # Incremento esperanza de vida vs año base
+    ganancia_esperanza = life_expectancy - first(life_expectancy[year >= 2000])
+  )
+```
+
+```{r echo=FALSE}
+# Mostrar análisis por períodos
+analisis_periodos <- data_all %>%
+  filter(year >= 2000) %>%
+  group_by(periodo_historico) %>%
+  summarise(
+    `Años` = paste(min(year), max(year), sep="-"),
+    `Crecimiento Promedio (%)` = round(mean(population_growth_percent, na.rm=TRUE), 2),
+    `Esperanza Vida Promedio` = round(mean(life_expectancy, na.rm=TRUE), 1),
+    `Población Final (miles)` = round(last(population_miles), 0),
+    .groups = 'drop'
+  )
+
+knitr::kable(analisis_periodos, caption = "Análisis por períodos históricos de Islandia")
+```
+
+**Hallazgos clave por período:**
+
+-   **Pre-Crisis (2000-2007)**: Crecimiento estable del 1.1% anual, base
+    sólida para la expansión futura
+-   **Crisis Financiera (2008-2010)**: Desplome al 0.7% promedio, con
+    emigración neta en 2010
+-   **Recuperación-Boom (2011-2019)**: Explosión demográfica (1.7%
+    anual) impulsada por turismo e industria
+-   **Era COVID (2020-2024)**: Moderación al 1.4%, pero crecimiento
+    sostenido pese a pandemia
+
+------------------------------------------------------------------------
+
+# Conclusiones y Perspectivas
+
+## Lecciones de Resiliencia Demográfica
+
+1.  **La Crisis Como Catalizador**: La emigración post-2008 fue
+    temporal; el retorno posterior trajo experiencia internacional que
+    benefició la economía.
+
+2.  **Inmigración Inteligente**: Islandia atrajo trabajadores
+    cualificados que contribuyeron tanto al crecimiento económico como a
+    la diversidad cultural sin deteriorar indicadores sociales.
+
+3.  **Sistema de Salud Robusto**: El crecimiento continuo de la
+    esperanza de vida, incluso durante crisis, evidencia instituciones
+    sólidas.
+
+4.  **Adaptabilidad Institucional**: La capacidad de integrar 112,000
+    nuevos residentes (40% de crecimiento) manteniendo cohesión social
+    es excepcional.
+
+## Desafíos Futuros
+
+-   **Presión Habitacional**: El crecimiento acelerado requiere
+    planificación urbana sostenible
+-   **Integración Cultural**: Mantener identidad islandesa mientras se
+    abraza la diversidad
+-   **Sostenibilidad Ambiental**: Equilibrar crecimiento poblacional con
+    conservación natural
+-   **Envejecimiento Selectivo**: Gestionar el envejecimiento de la
+    población nativa vs. inmigración joven
+
+La historia demográfica de Islandia 2000-2024 es un caso de estudio en
+resiliencia: cómo una nación pequeña puede crecer, adaptarse y prosperar
+enfrentando shocks globales mediante políticas inteligentes y cohesión
+social.
+
+## Referencias
+
+-   https://en.wikipedia.org/wiki/2008–2011_Icelandic_financial_crisis
+-   https://cepr.org/voxeu/columns/first-casualty-crisis-iceland-0
+-   https://harris.uchicago.edu/news-events/events/2008-icelandic-financial-crisis-arni-mathiesen
+-   https://sevenpillarsinstitute.org/case-study-icelands-banking-crisis/
+-   https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/icelands-economic-recovery/
+-   https://www.imf.org/en/Countries/ISL/iceland-lending-case-study
+-   https://www.mdpi.com/2076-3298/7/8/59
+-   https://icelandmonitor.mbl.is/news/politics_and_society/2019/04/12/immigrants_role_in_tourism_boom/
+-   https://rethinkq.adp.com/money-matters-iceland/
+-   https://en.m.wikipedia.org/wiki/Economy_of_Iceland
+-   https://skift.com/2019/09/11/the-rise-and-fall-of-icelands-tourism-miracle/
+-   https://www.pbs.org/newshour/show/tourism-iceland-booming-may-not-good-news
+-   https://www.migrationpolicy.org/article/once-homogenous-tiny-iceland-opens-its-doors-immigrants
+-   https://icelandmonitor.mbl.is/news/nature_and_travel/2019/06/07/iceland_s_tourism_explosion_explained_video/
+-   https://en.wikipedia.org/wiki/Tourism_in_Iceland
+-   https://www.brookings.edu/articles/the-rise-the-fall-and-the-resurrection-of-iceland/
+-   https://www.icelandreview.com/travel/the-icelandic-financial-crisis/

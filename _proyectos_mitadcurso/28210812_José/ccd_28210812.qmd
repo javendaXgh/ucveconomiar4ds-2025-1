@@ -1,0 +1,199 @@
+---
+title: "Ciclo de Ciencia de Datos"
+subtitle: "CPU's lanzados en el periodo 2010 - 2020"
+author: "Jose Suarez"
+format: html
+editor: visual
+theme: flatly
+---
+
+## CPU's lanzados en el periodo 2010 - 2020
+
+Una ***Unidad Central de Procesamiento*** (CPU por sus siglas en inglés), es el cerebro de cualquier computadora. Se encarga de procesar instrucciones y realizar calculos que permiten el funcionamiento de programas y aplicaciones.
+
+Algunos de los fabricantes más recomocidos de CPU's son Intel y AMD, los cuales veremos en nuestro ciclo de ciencia de datos.
+
+**Conjunto de datos utilizado:** [*https://www.openintro.org/data/index.php?data=cpu*](https://www.openintro.org/data/index.php?data=cpu)
+
+## Carga de datos
+
+Primero llamaremos a la libreria `tidyverse`, que se compone de `ggplot` y `dplyr` , y aparte `DT` para una correcta gestion de datos.
+
+```{r}
+#| echo: false
+#| warning: false
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(DT)
+
+ccd_cpu <- read.csv('cpu.csv')
+ccd_cpu <- ccd_cpu %>%
+  arrange(released) #ordenar por la fecha
+```
+
+## Resumen Estadistico
+
+Iniciamos con un resumen estadístico de todo nuestro conjunto de datos. Nos damos cuenta que mantiene una amplitud de 875 observaciones en el periodo de 2010 - 2020
+
+```{r}
+#| echo: false
+summary(ccd_cpu)
+table(ccd_cpu$company)
+
+```
+
+Inicialmente, queremos ver las primeras filas de nuestro csv para ver que nos encontramos, por lo que:
+
+```{r}
+#| echo: false
+head(ccd_cpu, 1)
+```
+
+## Renombramiento de Variables
+
+Capaz para una mejor visualización necesitemos modificar los nombres de nuestras variables, evitando complicaciones en la lectura para aquellos que se les dificulte el inglés.
+
+```{r}
+#| echo: false
+ccd_cpu <- ccd_cpu %>%  #Renombramiento de Variables
+  rename(
+    Compañia = company,
+    nombre = name,
+    codename = codename, #puede mantenerse asi
+    nucleos = cores,
+    hilos = threads,
+    frecuencia_base = base_clock,
+    frecuencia_maxima = boost_clock,
+    fecha_publicacion = released
+  )
+```
+
+```{r}
+#| echo: false
+ccd_cpu$fecha_publicacion <- as.Date(ccd_cpu$fecha_publicacion) #cambiar el formato de las fechas a solo año
+ccd_cpu$fecha_publicacion <- format(ccd_cpu$fecha_publicacion, '%Y') #cambiar el formato de las fechas a solo año, realizado de la mano de Copilot
+
+```
+
+Para que nuestro conjunto de datos tenga sentido, lo mejor seria ordenar por fecha, desde la mas antigua a la mas reciente con la funcion `arrange`
+
+Ademas, se presenta un DataTable, extrayendo la funcion desde el ***LLM Copilot***
+
+```{r}
+#| echo: false
+df_cpus <- ccd_cpu %>%
+  arrange(fecha_publicacion)
+datatable(df_cpus, options = list( #creamos datatable para mejor visualizacion
+  pageLength = 20, autoWidth = TRUE
+))
+```
+
+## Cantidad de Procesadores de las Marcas a Evaluar
+
+Mediante un gráfico de barras podemos visualizar cuantos procesadores ha lanzado cada marca.
+
+```{r}
+#| echo: false
+table(ccd_cpu$Compañia)
+ggplot(ccd_cpu,
+       aes(x = Compañia, fill = Compañia))+
+  geom_bar() +
+  scale_y_continuous(name = NULL,
+                     breaks = seq(0,875, by=100))+
+  
+  labs(title = 'Cdad. de Procesadores por Marca (2010-2020)',
+       x = 'Marca', y = 'Cdad. de Procesadores')+
+  theme_bw()
+```
+
+Intel por poco duplica la cantidad de AMD, lo que puede significar que:
+
+-   Se adaptan rápidamente a nuevas tecnologías y demandas;
+
+-   Aplican una estrategia para ofrecer opciones a diferentes segmentos (gamers, servidores, computacion en general...);
+
+-   Desean mantenerse relevantes frente a su competencia directa.
+
+## Cantidad de Procesadores Lanzados por Año
+
+```{r}
+#| echo: false
+#| warning: false
+ccd_cpu %>%
+  count(fecha_publicacion)%>%
+  ggplot(aes(x=fecha_publicacion, y = n))+ 
+  geom_col(fill = 'skyblue')+
+  scale_y_continuous(limits = c(0,200),
+                     breaks = seq(0,200, by = 50))+
+  
+  labs(title = 'Cantidad de Procesadores (2010-2020)', x = 'Ano', y = 'Cantidades')+
+  theme_bw()
+```
+
+Nos parece un poco extraño el hecho de que en 6 años se tengan las mismas cantidades de procesadores lanzados (101). Esto puede suceder porque es posible que en ciertos años se tengan cantidades similares de CPUs.
+
+## Distribución de Frecuencias Base de los Procesadores
+
+```{r}
+#| echo: false
+#| warning: false
+ggplot(ccd_cpu, aes (x=Compañia, y = frecuencia_base, fill = Compañia))+
+  geom_boxplot()+
+  labs(title = 'Distribucion de frecuencia Base', x = 'Marca', y = 'Frecuencia Base')+
+  theme_bw()
+```
+
+Los rectángulos representan la distribución de frecuencia base de los procesadores.
+
+El centro de la caja muestra la mediana: el valor medio de la frecuencia base de cada marca. Los bigotes son relativamente grandes, lo que significa que hay mucha variabilidad en las frecuencias base.
+
+Por otro lado, los datos de Intel son mucho más dispersos que los de AMD.
+
+## Distribución de Frecuencias Máximas de los Procesadores
+
+```{r}
+#| echo: false
+#| warning: false
+ggplot(ccd_cpu, aes (x=Compañia, y = frecuencia_maxima, fill = Compañia))+
+  geom_boxplot()+
+  labs(title = 'Distribucion de frecuencia Maxima', x = 'Marca', y = 'Frecuencia Maxima')+
+  theme_bw()
+
+#este grafico me lanza un error y me dice que ha removido 318 filas, pero no identifico el porqué. Precisamente por eso coloco como ´false´ la advertencia. 
+```
+
+En este gráfico, vemos que tenemos puntos fuera de los bigotes (valores atípicos), los cuales identifican frecuencias máximas más bajas que el resto.
+
+Nuevamente, AMD tiene datos menos dispersos que Intel, por lo que las frecuencias están más cerca unas de otras.
+
+# ¿El Procesador más Potente de Intel? ¿En que se Diferencia a su Primer lanzamiento? 
+
+## Procesadores Intel Core i7: Potencia Desde su Primer Lanzamiento
+
+Es una línea de procesadores de alto rendimiento diseñada para usuarios que buscan potencia en gaming, productividad y multitarea avanzada. Desde su lanzamiento, ha evolucionado significativamente en eficiencia, velocidad y arquitectura.
+
+```{r}
+#| echo: false
+primer_procesador <- ccd_cpu%>%
+  filter(str_detect(nombre, 'i7'))%>% #busqueda del primer procesador en el conjunto de datos
+  arrange(fecha_publicacion)%>%
+  slice(1)
+
+ultimo_procesador <- ccd_cpu%>%
+  filter(str_detect(nombre, 'i7'))%>% #busqueda del ultimo procesador en el conjunto de datos
+  arrange(desc(fecha_publicacion))%>%
+  slice(1)
+comparacion<- bind_rows(primer_procesador, ultimo_procesador) #union de ambos
+datatable(comparacion)
+```
+
+-   El procesador i7-10700F tiene más núcleos e hilos, lo que mejora el rendimiento en multitarea.
+
+-   Tine una mejor frecuencia turbo (4,7GHz vs. 3.6GHz).
+
+-   Mantiene un proceso de fabricación más antiguo, por lo que es menos eficiente.
+
+Con proceso de fabricación nos referimos a la tecnología utilizada para construir transistores dentro del chip. 14nm\>45nm: implica mas eficiencia y menor consumo de energía.
+
+Me disculpo por la tardanza, la verdad es un trabajo que no se desarrolló como esperaba.

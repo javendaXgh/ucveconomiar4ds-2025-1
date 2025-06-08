@@ -1,0 +1,336 @@
+---
+title: "Análisis del Maratón de Nueva York"
+author: "Leonardo Crespo Saldivia"
+date: "2025-31-05"
+format: html
+editor: visual
+output: 
+  html_document:
+    theme: flatly
+---
+
+## Introducción
+
+En esta evaluación, aplicando los contenidos impartidos durante las últimas semanas del curso, realizaremos una exploración y análisis del conjunto de datos del Maratón de Nueva York, proporcionado por OpenIntro.
+
+Analizaremos las variables de edad, tiempo de llegada en minutos, tiempo de llegada en minutos, país y el nombre, para poder identificar claramente a los corredores más destacados.
+
+## 1. Importamos los datos
+
+Para importar los datos, utilizaremos la información disponible en OpenIntro suministrada por el profesor. El conjunto de datos **nyc_marathon,** disponible en OpenIntro.
+
+```{r}
+#| echo: false
+#| warning: false
+
+#Paquetes necesarios
+
+library(openintro)  # Para bajar la info
+library(dplyr)      # Manipular datos
+library(tidyr)      #Manipular datos
+library(ggplot2)    #  Crear gráficos
+library(gt)         #  Crear tablas cheveres
+library(DT)         # tablas interactivas
+
+#Cargamos el conjunto de datos:
+
+data("nyc_marathon")
+
+#renombramos la variable
+
+datos_maraton_ny <- nyc_marathon
+
+
+```
+
+El conjunto de datos se puede importar de manera manual, aunque para efectos prácticos lo haremos de manera automatizada utilizando el paquete de OpenIntro presente en R. Para hacerlo, debemos cargar el paquete `Library(OpenIntro)` .
+
+## 1.1 Carga del conjunto de datos y visualización de tabla
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+#Una vez importada la data, queremos observar la tabla y analizar su estructura.
+
+datos_maraton_ny%>%
+  sample_n(12)
+
+
+
+```
+
+### 1.2 Creamos una tabla interactiva para realizar los primeros análisis
+
+```{r}
+#| echo: false
+#| warning: false
+
+datos_maraton_ny <- datos_maraton_ny %>%
+  mutate(time_hrs = round(time_hrs, 2))
+
+datatable(datos_maraton_ny)
+```
+
+Respecto a los primeros análisis, viendo a profundidad, encontramos que de toda la data, existen tres años donde no hay variables, puesto que en 1970 no participaron mujeres y en el año 2012, no se celebró el maratón.
+
+## 2. Valores Estadísticos y Tablas Resúmenes
+
+La manera más eficiente para comprender un conjunto de datos, en este caso el de Maratón de Nueva York, es calculando las medidas de tendencia central y dispersión entre las variables. En este caso, la variable será (`time_hrs`).
+
+Se realizó un análisis de las variables categóricas como el país y la categoría (femenina y masculina).
+
+```{r}
+#| echo: false
+
+summary(datos_maraton_ny)
+
+```
+
+En primer lugar, el tiempo promedio de finalización de los corredores del maratón que triunfan es aproximadamente de **2.34 horas**. Este valor indica el rendimiento general esperado de los corredores que ganan esta competencia. Respecto a la mediana, se encuentra cerca de la media, lo que nos sugiere una distribución simétrica del tiempo de finalización de la carrera.
+
+En cuanto a la desviación estándar, es bastante baja y gira en torno a **0.1 horas**. Esto quiere decir que todos los tiempos de los ganadores de la competencia varían poco con respecto a la media.
+
+Respecto a los valores mínimos y máximos, se encuentran entre **2.1 y 2.7 horas**, respectivamente. La diferencia de 0.6 entre valores, diferencia a los corredores profesionales más destacados, influenciados por tecnología, condiciones climatológicas y otras variables referentes a este tipo de competencias como el descanso, factores psicológicos e inclusive, lesiones musculares.
+
+#### 2.1 Distribución de los ganadores por categoría
+
+Con respecto a los ganadores, se pueden mencionar dos grandes rasgos distintos. El número de corredores en la categoría hombres y mujeres.
+
+Esta diferencia durante las últimas décadas, se ha disminuído tras la eliminación de barreras de sexo y posteriormente, patrocinio de marcas hacia mujeres corredoras, factores que en el largo plazo, contribuyen a una disminución de los tiempos mínimos y máximos entre las categorias hombres y mujeres.
+
+Por otra parte, los tiempos promedio si presentan una gran diferencia. Esto se debe a que, en deportes de resistencia, los participantes hombres suelen registrar tiempos menores a los de las mujeres, particularidad que también se ha ido reduciendo con el paso del tiempo.
+
+```{r}
+#| echo: false
+
+#Para lograr identificar las tablas respecto a la distribucion de ganadores por categoría, creamos dos tablas. Una para hombres, otra para mujeres.
+
+hombres <- datos_maraton_ny %>% filter(division == "Men")
+mujeres <- datos_maraton_ny %>% filter(division == "Women")
+
+# Crear tabla interactiva para la categoría masculina
+tabla_num_masculino <- hombres %>%
+  summarise(
+    Tiempo_minimo = min(time_hrs, na.rm = TRUE),
+    Tiempo_maximo = max(time_hrs, na.rm = TRUE)
+  )
+
+# Mostrar la tabla interactiva para la categoría masculina
+datatable(tabla_num_masculino, 
+          options = list(pageLength = 5, scrollX = TRUE)) 
+
+# Crear tabla interactiva para la categoría femenina
+tabla_num_femenino <- mujeres %>%
+  summarise(
+    Tiempo_minimo = min(time_hrs, na.rm = TRUE),
+    Tiempo_maximo = max(time_hrs, na.rm = TRUE)
+  )
+
+# Mostrar la tabla interactiva para la categoría femenina
+datatable(tabla_num_femenino, 
+          options = list(pageLength = 5, scrollX = TRUE))
+
+```
+
+### 2.2. Tabla Resumen de Ganadores por País
+
+Si queremos observar la categoría país más de cerca, veremos que países del continente africano han aumentado su cantidad de corredores ganadores. Esto corresponde a una generación completa de atletas de Kenia y Etiopía que desde hace al menos una década, dominan las competencias a nivel internacional, no solamente el Maraton de Nueva York.
+
+Igualmente, destacan países como Noruega, gracias a sus métodos de entrenamiento y condiciones climatológicas favorecedoras a la hora de realizar entrenamientos.
+
+```{r}
+#| echo: false
+#| warning: false
+
+#creamos una tabla para filtrar los ganadores por pais
+#filtramos los países faltantes en la columna country.
+
+datos_maraton_ny <- datos_maraton_ny %>%
+  filter(country != "" & !is.na(country))  # NOTA: el operador debe ser !is.na() para filtrar NO NA
+
+# Agrupar por país, contar ganadores y ordenar
+ganadores_por_pais <- datos_maraton_ny %>%
+  group_by(country) %>%
+  summarise(N_ganadores = n(), .groups = "drop") %>%
+  arrange(desc(N_ganadores)) %>%
+  mutate(N_ganadores = round(N_ganadores, 2))  # Redondear aunque es entero, por si acaso
+
+# Mostrar tabla interactiva
+datatable(ganadores_por_pais, 
+          options = list(pageLength = 12, dom = 'Bfrtip', 
+                         buttons = c('copy', 'csv', 'excel'), scrollX = TRUE))
+
+```
+
+## 3. Análisis Exploratorio de los Datos (EDA)
+
+Ahora realizaremos un análisis visual utilizando gráficos para explorar la relación entre las variables. Por ejemplo, podemos graficar la evolución de los tiempos de los ganadores a lo largo de los años y observar cómo ha cambiado el rendimiento de los corredores.
+
+### Gráfico 1: ¿Que distribución siguen los tiempos finales en el Maratón de Nueva York?
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Histograma de los tiempos de finalización en horas 
+
+ggplot(datos_maraton_ny, aes(x = time_hrs)) +
+  geom_histogram(bins = 30, fill = "steelblue", color = "black", alpha = 0.7) +
+  labs(
+    title = "Distribución de tiempos de finalización",
+    x = "Tiempo de Finalización (horas)",
+    y = "Frecuencia"
+  ) +
+  theme_minimal()
+```
+
+El histograma muestra una distribución **ligeramente sesgada hacia la derecha**, lo que indica que la mayoría de los ganadores terminan con tiempos concentrados en un rango bajo (más rápido), pero hay una cola hacia tiempos más lentos.
+
+Esto es típico en competencias de élite donde la mayoría de los corredores tiene rendimientos similares, pero algunos años o casos especiales presentan tiempos más altos. También, otra explicación es que, los tiempos que se acercan hacia la derecha corresponden a las primeras ediciones celebradas de la competencia.
+
+Este cesgo indica unos pocos tiempos ganadores notablemente más lentos. Estos podrían representar años con condiciones adversas o circunstancias especiales, como mal tiempo o rutas más difíciles. No se aprecian tiempos extremadamente rápidos fuera de la concentración principal, lo que sugiere que no hay valores atípicos hacia la izquierda.
+
+### **Gráfico 2: Evolución de los tiempos de los ganadores a lo largo de los años**
+
+Este gráfico permite observar una clara **mejora histórica en los tiempos de los ganadores del Maratón de Nueva York**, tanto para hombres como para mujeres, con una brecha persistente pero relativamente constante entre las categorías. La reducción de la dispersión en las últimas décadas indica una élite cada vez más homogénea en cuanto a rendimiento. Las variaciones en la curva suavizada aportan contexto sobre la influencia de factores externos en diferentes épocas, el más destacado es la tecnología. Puesto que durante los últimos 10 años, los tiempos, particularmente en la categoría de hombres, se han reducido casi año tras año.
+
+```{r}
+#| echo: false
+#| warning: false 
+
+
+ggplot(datos_maraton_ny, aes(x = year, y = time_hrs, color = division)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "loess", se = FALSE, linewidth = 1.3) +
+  scale_x_continuous(
+    breaks = seq(min(datos_maraton_ny$year), max(nyc_marathon$year), by = 5), # Mostrar ticks cada 5 años
+    limits = c(min(datos_maraton_ny$year) - 1, max(nyc_marathon$year) + 1)
+  ) +
+  scale_y_continuous(
+    limits = c(2.0, 2.8),  # Ajusta según rango observado para destacar cambios
+    breaks = seq(2.0, 2.8, by = 0.1)
+  ) +
+  labs(
+    title = "Tendencia en los tiempos de ganadores",
+    x = "Año",
+    y = "Tiempo de Finalización (horas)",
+    color = "Categoría"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),        # Opcional: quitar cuadrícula menor para limpieza
+    axis.text.x = element_text(angle = 45, hjust = 1)  # Mejor lectura de años
+  )
+
+#Para la personalización, se consultó el contenido sugerido por el profesor y se utilizó ChatGPT para entender correctamente las especificaciones y los ajustes de los gráficos
+
+
+```
+
+### **Gráfico 3: Comparación de los tiempos entre hombres y mujeres**
+
+```{r}
+#| echo: false
+#| warning: false
+#| 
+
+# Gráfico de dispersión comparando los tiempos entre hombres y mujeres
+ggplot(datos_maraton_ny, aes(x = division, y = time_hrs, color = division)) +
+  geom_boxplot() +
+  labs(title = "Comparación de los Tiempos entre categorias",
+       x = "Categoría",
+       y = "Tiempo de Finalización (horas)") +
+  theme_minimal()
+```
+
+El gráfico de cajas evidencia que los ganadores masculinos tienden a tener tiempos más rápidos y consistentes que las ganadoras femeninas en el Maratón de Nueva York. La diferencia en medianas y dispersión es esperada y refleja diferencias fisiológicas naturales y la dinámica competitiva entre categorías. Este tipo de visualización es útil para resumir y comparar distribuciones completas de datos y destacar diferencias centrales y de variabilidad entre grupos.
+
+## Aplicamos `mutates` (Derivación o agregación de datos)
+
+A manera de práctica, crearemos una variable y además modificaremos la información previamente mostrada para poder analizar cómo ha mejorado el atletismo en los últimos años,
+
+### Análisis y resumen del gráfico de mejoras porcentuales (1990–2023) — Categoría masculina
+
+El análisis de las mejoras porcentuales positivas desde 1990 hasta 2023 revela un progreso consistente y variable en los tiempos ganadores masculinos del Maratón de Nueva York. Estas tendencias reflejan la evolución y la dinámica del deporte, donde pequeñas mejoras anuales suman para alcanzar niveles de rendimiento cada vez más altos. Este enfoque permite destacar los años clave de progreso y aporta una perspectiva clara sobre cómo ha avanzado la élite del maratón en las últimas tres décadas.
+
+```{r}
+#| echo: false
+#| warning: false
+
+datos_masculinos <- datos_maraton_ny %>%
+  filter(
+    division == "Men",
+    year >= 1990 & year <= 2023
+  ) %>%
+  arrange(year) %>%
+  mutate(
+    pct_mejora = (lag(time_hrs) - time_hrs) / lag(time_hrs) * 100
+  ) %>%
+  filter(!is.na(pct_mejora) & pct_mejora > 0)  # Solo años con mejora positiva
+
+# Gráfico de barras de mejora porcentual positiva
+ggplot(datos_masculinos, aes(x = factor(year), y = pct_mejora)) +
+  geom_col(fill = "steelblue") +
+  geom_text(aes(label = paste0(round(pct_mejora, 2), "%")), vjust = -0.5, size = 2.5) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+  labs(
+    title = "Mejora porcentual de los ganadores masculinos periodo (1990-2023)",
+    x = "Año",
+    y = "Mejora porcentual (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text = element_text(size = 8),
+    axis.title = element_text(size = 12)
+  )
+```
+
+### Diferencia porcentual entre las categorías en el periodo 1990-2023
+
+El gráfico muestra una brecha estable y pequeña en los tiempos ganadores masculinos y femeninos del Maratón de Nueva York durante más de 30 años. La constancia de esta diferencia porcentual indica que, pese a la mejora continua en ambos sexos, la proporción relativa entre sus rendimientos se mantiene constante, reflejando tanto diferencias fisiológicas como una evolución paralela en el atletismo élite.
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+# Preparar los datos
+resumen_anual <- datos_maraton_ny %>%
+  filter(year >= 1990 & year <= 2023, !is.na(division), !is.na(time_hrs), !(year %in% c(2012, 2020))) %>%
+  group_by(year, division) %>%
+  summarise(promedio_tiempo = mean(time_hrs, na.rm = TRUE), .groups = "drop") %>%
+  pivot_wider(names_from = division, values_from = promedio_tiempo) %>%
+  rename(
+    Año = year,
+    Femenino = Women,
+    Masculino = Men
+  ) %>%
+  mutate(
+    Diferencia_pct = round(((Masculino - Femenino) / Femenino) * 100, 2)
+  ) %>%
+  arrange(Año)
+
+# Gráfico simple con línea y puntos rojos, sin suavizado
+ggplot(resumen_anual, aes(x = Año, y = Diferencia_pct)) +
+  geom_line(color = "steelblue", size = 1) +
+  geom_point(color = "steelblue", size = 2) +
+  labs(
+    title = "Diferencia porcentual entre categorías 1990-2023",
+    x = "Año",
+    y = "Diferencia porcentual (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text = element_text(size = 8),
+    axis.title = element_text(size = 10),
+    plot.title = element_text(size = 12, face = "bold")
+  )
+```
+
+En el gráfico anterior podemos observar que pese al avance de la categoría femenina con mayor número de participantes anualmente e inclusive mejoras tecnológicas, características biológicas y fisiológicas continuan influyendo en la brecha temporal entre categorias.

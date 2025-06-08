@@ -1,0 +1,178 @@
+---
+title: "Love, Data & Taylor Swift Story: Un Análisis Cuantitativo de su Evolución Musical en Spotify"
+author: "Jonathan E Pérez V"
+format: html
+editor: visual
+---
+
+## Introducción
+
+Taylor Swift está en la cima del mundo, mujeres y hombres se vuelven locos por asistir a sus conciertos. No es solo una artista, es un éxito en ventas y un fenómeno cultural cuya música ha evolucionado desde el country adolescente hasta el pop introspectivo, pasando por el indie folk y la reinvención de sus primeros hits. Pero más allá de las melodías pegajosa y las letras emotivas, ¿qué dicen los datos sobre su trayectoria?
+
+En este reporte, vamos a explorar y analizar la música de TS utilizando el conjunto de datos "Taylor Swift Spotify Dataset" que contiene datos de la API de Spotify sobre Taylor Swift.
+
+\- nota: este conjunto de datos fue analizado en Mayo de 2025, momento en el cual el ultimo album de TS disponible en Spotify es: "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY"
+
+## Agradecimientos
+
+## Taylor Swift Spotify Dataset: Variables.
+
+Las variables de este conjunto de datos son :
+
+1.  **name:** el nombre de la canción
+
+2.  **album:** el nombre del álbum
+
+3.  **release_date**: el día, mes y año en que se lanzó el álbum
+
+4.  **track number:** el orden en que aparece la canción en el álbum.
+
+5.  **acousticness**: una medida de confianza de 0,0 a 1,0 de si la pista es acústica. 1,0 representa una alta confianza de que la pista es acústica.
+
+6.  **danceability:** La bailabilidad describe la idoneidad de una pista para bailar según una combinación de elementos musicales, como el tempo, la estabilidad rítmica, la intensidad del compás y la regularidad general. Un valor de 0.0 es el menos bailable y 1.0 el más bailable.
+
+7.  **energy:** La energía es una medida de 0.0 a 1.0 que representa una medida perceptual de intensidad y actividad. Normalmente, las pistas energéticas se perciben rápidas, fuertes y ruidosas. Por ejemplo, el death metal tiene mucha energía, mientras que un preludio de Bach tiene una puntuación baja en la escala. Las características perceptuales que contribuyen a este atributo incluyen el rango dinámico, la sonoridad percibida, el timbre, la velocidad de inicio y la entropía general.
+
+8.  **instrumentalness:** Predice si una pista no contiene voces. Los sonidos "ooh" y "aah" se consideran instrumentales en este contexto. Las pistas de rap o de palabra hablada son claramente vocales. Cuanto más cercano esté el valor de instrumentalidad a 1.0, mayor será la probabilidad de que la pista no contenga voces. Los valores superiores a 0.5 representan pistas instrumentales, pero la confianza aumenta a medida que el valor se acerca a 1.0.
+
+9.  **liveness**: Detecta la presencia de público en la grabación. Un valor de Liveness alto representa una mayor probabilidad de que la pista se haya interpretado en vivo. Un valor superior a 0.8 indica una alta probabilidad de que la pista sea en vivo.
+
+10. **loudness:** Volumen general de una pista en decibelios (dB). Los valores de volumen se promedian a lo largo de toda la pista y son útiles para comparar el volumen relativo de las pistas. El volumen es la calidad del sonido, el principal correlato psicológico de la fuerza física (amplitud). Los valores suelen oscilar entre -60 y 0 dB.
+
+11. **speechiness**: detecta la presencia de palabras habladas en una pista. Cuanto más se parezca exclusivamente a un diálogo la grabación (p. ej., un programa de entrevistas, un audiolibro, poesía), más cercano a 1.0 será el valor del atributo. Los valores superiores a 0.66 describen pistas que probablemente estén compuestas completamente de palabras habladas. Los valores entre 0.33 y 0.66 describen pistas que pueden contener tanto música como diálogo, ya sea en secciones o en capas, incluyendo casos como el rap. Los valores inferiores a 0.33 probablemente representan música y otras pistas sin diálogo.
+
+12. **tempo:** El tempo general estimado de una pista en pulsaciones por minuto (PPM). En terminología musical, el tempo es la velocidad o el ritmo de una pieza y se deriva directamente de la duración media de las pulsaciones.
+
+13. **valence:** Una medida de 0.0 a 1.0 que describe la positividad musical que transmite una pista. Las pistas con una valencia alta suenan más positivas (p. ej., alegres, alegres, eufóricas), mientras que las pistas con una valencia baja suenan más negativas (p. ej., tristes, deprimidas, enfadadas).
+
+14. **popularity:** la popularidad de la canción de 0 a 100
+
+**duration_ms**: la duración de la pista en milisegundos.
+
+## 1. Importar e Inspeccionar el Conjunto de Datos.
+
+El Conjunto de Datos con el que trabajaremos podemos conseguirlo en Kaggle a traves del siguiente link: https://www.kaggle.com/datasets/jarredpriester/taylor-swift-spotify-dataset/data
+
+Existe la posibilidad de descargar el CD por medio de la API de Kaggle o descargando el fichero zip. Para efectos practicos de este reporte utilizaremos la opcion del zip.
+
+### 1.1. Importar Conjunto de datos a Trabajar
+
+```{r}
+#| warning: false
+#| echo: false
+library(tidyverse)
+library(gt)
+library(DT)
+# esto es un chunk de código
+```
+
+Utilizando la siguiente linea de codigo podemos importar a nuestro Environment el Conjunto de Datos en formato csv que descargamos de Kaggle con anterioridad.
+
+```{r}
+#| warning: false
+taylor_spotify_data <- read_csv("taylor_swift_spotify.csv")
+```
+
+### 1.2. Inspeccionar el Conjunto de Datos.
+
+#### **Estas son las primeras 5 filas de nuestro conjunto de datos:**
+
+```{r}
+#| echo: false
+taylor_spotify_data %>%
+  slice_head(n=5) %>%
+  gt()
+
+```
+
+#### Esta es la estructura de nuestro Conjunto de datos:
+
+```{r}
+#| echo: false
+glimpse(taylor_spotify_data)
+```
+
+## 2. Limpieza y Transformación de Datos.
+
+En el apartado 1 tuvimos un primera aproximación al CD con el que vamos a trabajar, vimos una pequeña tabla que representaba las primeras 5 filas de conjunto asi como la estructura de dicho CD.
+
+Considero necesario para seguir con este reporte dar formato a nuestros datos para que sean mas intuitivos y facil de usar.
+
+En este caso primero eliminaremos las columnas que son innecesarias para nuestro analisis, por otro lado, agregaremos dos nuevas columnas que nos permitan visualizar el año de lanzamiento de una cancion y la duración de las canciones por minuto.
+
+```{r}
+#| warning: false
+taylor_spotify_data_clean <- taylor_spotify_data %>%
+  mutate(                                  
+    duration_min = duration_ms / 60000, 
+    release_year = as.POSIXlt(release_date)$year + 1900
+  ) %>%
+  select(-duration_ms, -...1, -id, -uri, -release_date)
+```
+
+#### Estas son las primeras 5 filas de nuestro CD una vez aplicados los cambios:
+
+```{r}
+#| echo: false
+taylor_spotify_data_clean %>%
+  slice_head(n=5) %>%
+  gt()
+
+```
+
+### 2.1. Derivación o Agregación de Datos.
+
+Taylor Swift es conocida por sus multiples regrabaciones de sus albumes, las famosas "Taylor's version" o alguna que otra edición "Deluxe". Partiendo de nuestra data: "taylor_spotify_data_clean" podemos representar en un nuevo conjunto de datos la discografia de la cantante.
+
+#### 2.1.1. Discografia de Taylor Swift
+
+En la siguiente tabla interactiva podemos visualizar toda la discografia de TS disponible en spotify hasta mayo de 2025:
+
+```{r}
+#| echo: false
+#| warning: false
+discografia_ts <- taylor_spotify_data_clean%>%
+  count(album, release_year, name = "canciones_por_album") %>% 
+  arrange(desc(release_year))
+```
+
+```{r}
+#| echo: false
+datatable(discografia_ts)
+ 
+```
+
+#### 2.1.2 Agregar una nueva columna al Conjunto de Datos.
+
+Como ya mencionamos al principio del apartado 2.1, TS posee una discografia amplia compuesta principalmente por regrabaciones de sus hits, para efectos de la visualizacion de los datos considero oportuno crear una nueva columna con el nombre del album indistintamente de la version con el objetivo de saber facilmente de que album estamos hablando.
+
+```{r}
+#| warning: false
+#| echo: false
+taylor_spotify_data_clean <- taylor_spotify_data_clean %>%
+  mutate(consolidated = case_when(
+  str_detect(album, "THE TORTURED POETS DEPARTMENT") ~ "THE TORTURED POETS DEPARTMENT",
+  str_detect(album, "Speak Now") ~ "Speak Now",
+  str_detect(album, "Midnights") ~ "Midnights", 
+  str_detect(album, "Red") ~ "Red",
+  str_detect(album, "Fearless") ~ "Fearless",
+  str_detect(album, "evermore") ~ "evermore",
+  str_detect(album, "folklore") ~ "folklore",
+  str_detect(album, "Lover") ~ "Lover",
+  str_detect(album, "reputation") ~ "reputation", 
+  str_detect(album, "1989") ~ "1989",
+  str_detect(album, "Taylor Swift") ~ "Taylor Swift",
+  TRUE ~ 'Others'
+))
+
+```
+
+```{r}
+#| echo: false
+taylor_spotify_data_clean %>%
+  slice_head(n=5) %>%
+  gt()
+
+```
+
+#### 2.1.3.

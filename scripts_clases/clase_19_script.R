@@ -27,6 +27,8 @@ paises[10:12]
 df_gapminder%>%
   filter( country %in% paises[10:12])
 
+
+# remover factores
 df_gapminder%>%
   mutate(country= as.character(country))%>%
   group_by(country)%>%
@@ -34,43 +36,48 @@ df_gapminder%>%
   pull(country)
 
 
-# indices
+# obtener índices de filas por países según la lista generada
 df_gapminder%>%
   group_by(country)%>%
   group_rows()
 
+# índices de un determinado país
 paises[137]
 
+# índices de las filas de un determinado país
 df_gapminder%>%
   group_by(country)%>%
   group_rows()%>%
   .[[137]]
 
-
+# acceso a una fila por índice
 df_gapminder%>%
   slice(1633)
 
 ## reframe vs summarise
+### versión reframe
 df_gapminder%>%
   group_by(country)%>%
   reframe(valor=max(gdpPercap))
 
+# versión summarise ya descontinuada
 df_gapminder%>%
   group_by(country)%>%
   summarise(valor=max(gdpPercap))
 
 
+# df con máximos según un criterio, máximo gdpPercap
 df_gapminder%>%
   group_by(country)%>%
   filter(gdpPercap==max(gdpPercap))
 
-
+# anterior con selección columnas
 df_gapminder%>%
   group_by(country)%>%
   filter(gdpPercap==max(gdpPercap))%>%
   select(country, year, gdpPercap)
 
-
+# anterior reordenada por criterio descente gdpPercap
 df_gapminder %>% 
   group_by(country) %>% 
   reframe(max_gdp = max(gdpPercap)) %>% 
@@ -78,30 +85,14 @@ df_gapminder %>%
   print(n=45) 
 
 
-# sin year de maximo
-df_gapminder%>%
-  group_by(country)%>%
-  filter(gdpPercap==max(gdpPercap))%>%
-  select(country, year, gdpPercap)%>%
-  arrange(desc(gdpPercap))
-
-# con year
+# con year correspondiente al máximo
 df_gapminder%>%
   group_by(country)%>%
   filter(gdpPercap==max(gdpPercap))%>%
   select(country, gdpPercap, year)%>%
   arrange(desc(gdpPercap))
 
-# verificar
-df_gapminder %>% 
-  group_by(country) %>% 
-  reframe(max_gdp = max(gdpPercap), 
-          year,
-          gdpPercap) %>% 
-  arrange(desc(max_gdp))%>%
-  print(n=36) 
-
-# se crea un nuevo valor
+# se crea un nueva variable gdPercap promedio por país
 df_gapminder%>%
   group_by(country)%>%
   reframe(gdpPromedio=mean(gdpPercap))%>%

@@ -1,0 +1,147 @@
+---
+title: "Deficit fiscal en Estados Unidos"
+author: "Gustavo Moreno"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+Para esta investigacion se extrajo un conjunto de datos sobre el balance fiscal de Estados Unidos para el periodo 2015-2024 con frecuencia trimestral, aplicando un analisis exploratorio de los datos y evaluar hechos relevantes de los datos.
+
+## Importacion del conjunto de datos
+
+Para realizar esto se extrajeron los datos de la Reserva Federal de San Luis sobre: gastos e ingresos del gobierno federal al igual que el PIB nominal.
+
+<https://fred.stlouisfed.org/series/FGEXPND>
+
+<https://fred.stlouisfed.org/series/FGRECPT>
+
+<https://fred.stlouisfed.org/series/W006RC1Q027SBEA>
+
+<https://fred.stlouisfed.org/series/GDP>
+
+```{r}
+#| warning: false
+#| echo: false
+library(dplyr)
+library(ggplot2)
+library(readxl)
+balance_fiscal <- read_excel("C:/Users/Gus/OneDrive/Documentos/balance_fiscal.xlsx")
+```
+
+## Calculo del deficit fiscal
+
+Se calculo el deficit fiscal eestadounidense con la data obtenida restando ingresos y gastos del gobierno federal para luego dividirla entre el PIB nominal para saber el deficit como porcentaje del PIB.
+
+```{r}
+#| echo: false
+ balance_fiscal_deficit <- balance_fiscal %>%
+   rename(fecha=...1) %>%
+   #determino el deficit y su proporcion respectoo al PIB
+   mutate(deficit=ingreso_gobierno_federal-gasto_gobierno_federal) %>%
+   mutate(deficit_pib=deficit/pib_nominal) %>%
+   select(fecha, gasto_gobierno_federal, ingreso_gobierno_federal, pib_nominal, deficit, deficit_pib)
+ head(balance_fiscal_deficit)
+```
+
+## Tablas resumen de las variables
+
+### Tabla resumen de los ingresos
+
+```{r}
+#| echo: false
+#Determino la tabla resumen de los ingresos del gobierno federal
+summary(balance_fiscal_deficit$ingreso_gobierno_federal)
+
+```
+
+### Tabla resumen de los gastos
+
+```{r}
+#| echo: false
+#Determino la tabla resumen de los gastos del gobierno federal
+summary(balance_fiscal_deficit$gasto_gobierno_federal)
+```
+
+### Tabla resumen del deficit
+
+```{r}
+#| echo: false
+#Determino la tabla resumen del deficit del gobierno federal
+summary(balance_fiscal_deficit$deficit)
+```
+
+### Tabla resumen del PIB
+
+```{r}
+#| echo: false
+#Determino la tabla resumen del deficit como porcentaje del PIB del gobierno federal
+summary(balance_fiscal_deficit$pib_nominal)
+```
+
+### Tabla resumen del deficit como porcentaje del PIB
+
+```{r}
+#| echo: false
+#Determino la tabla resumen del deficit como porcentaje del PIB del gobierno federal
+summary(balance_fiscal_deficit$deficit_pib)
+```
+
+## Analisis exploratorio
+
+Hago un grafico de boxplot para evaluar valores extremos y si hay valores atipicos a lo largo de la serie. Ademas, se utilizo un histograma para evaluar donde se concentra la mayor parte de los datos
+
+Evaluo donde se concentran los datos de deficit fiscal como porcentaje del PIB.
+
+```{r}
+#| echo: false
+#Hago un grafico de boxplot para evaluar  valores extremos y si hay valores atipicos al igual que ver en un histograma donde se concentran los datos
+ggplot(data = balance_fiscal_deficit,
+       aes(y=deficit_pib)) +
+  geom_boxplot(fill= "#00446a")
+#creo el histograma
+ggplot(data = balance_fiscal_deficit,
+       aes(x= deficit_pib)) +
+  geom_histogram(fill='red')
+```
+
+Se obervan alrededor de 6 valores atipicos en la serie. Se puede decir que en Estados Unidos para el periodo estudiado el deficit, mayormente, ha representado entre 10% y 15% del PIB. Los periodos donde el deficit represento una mayor porcion de la economia fue entre el segundo trimestre de 2020 y el tercer trimestre de 2021.
+
+```{r}
+#| echo: false
+#Determino el momento en que Estados Unidos tuvo deficit altos
+deficit_alto <- balance_fiscal_deficit %>%
+  filter(deficit_pib < -0.15)
+deficit_alto$fecha
+```
+
+#### Evaluando relacion entre las variables estudiadas con el deficit como porcentaje del PIB
+
+```{r}
+#| echo: false
+#Hago un grafico de dispersion para evaluar relaciones en el tiempo del deficit como porcentaje del PIB y las otras variables
+#grafico de dispersion para pib y deficit como porcentaje de PIB
+ggplot(data = balance_fiscal_deficit,
+       aes(x=pib_nominal,
+           y=deficit_pib)) +
+  geom_point(color= "#00446a")
+##grafico de dispersion para ingresos y deficit como porcentaje de PIB
+ggplot(data = balance_fiscal_deficit,
+       aes(x=ingreso_gobierno_federal,
+           y=deficit_pib)) +
+  geom_point(color= "#00446a")
+#grafico de dispersion para gastos y deficit como porcentaje de PIB
+ggplot(data = balance_fiscal_deficit,
+       aes(x=gasto_gobierno_federal,
+           y=deficit_pib)) +
+  geom_point(color= "#00446a")
+#grafico de dispersion para deficit y deficit como porcentaje de PIB
+ggplot(data = balance_fiscal_deficit,
+       aes(x=deficit,
+           y=deficit_pib)) +
+  geom_point(color= "#00446a")
+
+```
+
+Se puede destacar que una relacion inversa, aunque no alta, del deficit con el PIB nominal y los ingresos del gobierno federal; al tiempo que el deficit, el gasto del gobierno federal tienen una relacion directa con el deficit como porcentaje del PIB.

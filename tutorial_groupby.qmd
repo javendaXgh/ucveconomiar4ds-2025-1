@@ -96,8 +96,7 @@ df_gapminder_csv%>%
 
 df_gapminder_csv%>%
   group_by(country)%>%
-  reframe(poblacion_promedio= mean(pop))#%>%
-  # filter(country=='Venezuela')
+  reframe(poblacion_promedio= mean(pop))
 
 ```
 
@@ -110,8 +109,8 @@ df_gapminder_csv%>%
             gdpPercap_sum= sum(gdpPercap),
             gdp_prom= mean(gdpPercap),
             gdp_max= max(gdpPercap),
-            gdp_min= min(gdpPercap))#%>%
-  # filter(country=='Venezuela')
+            gdp_min= min(gdpPercap))
+
 ```
 
 ## 7- Encadenamiento para clasificar por continente a los países según su PIB
@@ -211,7 +210,10 @@ df_gap_clasi_pibcontinent_ame <- df_gap_clasi_pibcontinent%>%
 ggplot(data=df_gap_clasi_pibcontinent_ame)+
   geom_col(mapping = aes(x=country, 
                          y= pib_mm,
-                         fill = pib_clasificacion))
+                         fill = pib_clasificacion))+
+  theme(axis.text.x = element_text(angle = 45, 
+                                   vjust = 0.5, 
+                                   hjust=1))
 ```
 
 ## 8. Salidas distintas en group_by según más de un criterio

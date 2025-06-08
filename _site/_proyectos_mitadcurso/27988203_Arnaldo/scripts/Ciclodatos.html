@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Ciclo de datos: Analisis de la balanza comercial de Colombia 2004-2023</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Ciclodatos_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Ciclodatos_files/libs/quarto-html/quarto.js"></script>
+<script src="Ciclodatos_files/libs/quarto-html/popper.min.js"></script>
+<script src="Ciclodatos_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Ciclodatos_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Ciclodatos_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Ciclodatos_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Ciclodatos_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Ciclodatos_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Ciclodatos_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="Ciclodatos_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="Ciclodatos_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="Ciclodatos_files/libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="Ciclodatos_files/libs/datatables-binding-0.33/datatables.js"></script>
+
+<script src="Ciclodatos_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="Ciclodatos_files/libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="Ciclodatos_files/libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="Ciclodatos_files/libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<link href="Ciclodatos_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="Ciclodatos_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ciclo de datos: Analisis de la balanza comercial de Colombia 2004-2023</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivo-de-este-análisis" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-de-este-análisis">Objetivo de este análisis</h3>
+<p>Este análisis examina la evolución de la balanza comercial de Colombia entre 2004 y 2023, utilizando datos de exportaciones, importaciones y PIB expresados tanto en términos relativos (% del PIB) como absolutos (millones de USD). La balanza comercial es un indicador clave para entender la dinámica económica de un país, ya que refleja la diferencia entre exportaciones e importaciones. Este informe presenta tablas, estadísticas descriptivas y visualizaciones para identificar tendencias, fluctuaciones y patrones en el comercio exterior de Colombia durante el período estudiado.</p>
+</section>
+<section id="indicadores-usados" class="level3">
+<h3 class="anchored" data-anchor-id="indicadores-usados">Indicadores usados:</h3>
+<ul>
+<li><p><strong>NE.EXP.GNFS.ZS</strong>: <strong>Exportaciones de bienes y servicios (% del PIB) - Colombia</strong></p></li>
+<li><p><strong>NE.IMP.GNFS.ZS:</strong> <strong>Importaciones de bienes y servicios (% del PIB) - Colombia</strong></p></li>
+<li><p><strong>NE.GDP.MKTP.CD: PIB (US$ a precios actuales) - Colombia</strong></p></li>
+</ul>
+</section>
+<section id="tabla-de-valores-valor-de-exportaciones-y-importaciones-expresado-en-del-pib" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-de-valores-valor-de-exportaciones-y-importaciones-expresado-en-del-pib">Tabla de valores, valor de exportaciones y importaciones expresado en (% del PIB)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-d3fc59ab8ae6b2ee9620" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d3fc59ab8ae6b2ee9620">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],[2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023],[16.7707514248023,16.9710437391629,17.7285877506525,16.4331421263646,18.1095951350739,16.4244956875755,16.3408447597691,19.2765050733171,18.8112052836654,18.0864397214368,16.6347491096509,15.6502115094968,14.7171392781975,15.1452897484005,15.8997196775431,15.8680386541241,13.5222755593302,16.1970059548864,20.2324003888988,17.8372967672269],[19.0926755089972,20.4516537557921,21.9127682099768,20.6657549719257,21.0580542813616,18.731632819883,17.923758408999,20.1939184812196,20.0239457350035,19.9002090764088,20.8527165314594,22.7105526089485,21.4855137060045,20.1376251940583,20.6350331193542,21.6904953267149,20.5332954086799,23.8621404387264,27.8415774759813,22.6565033851461],[117092416666.245,145600529605.803,161792958904.864,206229540926.312,242504150472.931,232468663109.595,286498534094.963,334966134804.887,370691143018.039,382093697077.685,381240864422.407,293492370193.166,282720100286.228,311866875156.879,334198218098.276,323031701192.84,270348342541.465,318524633225.395,345329875078.512,363493841244.303]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Año<\/th>\n      <th>Exportaciones_x100<\/th>\n      <th>Importaciones_x100<\/th>\n      <th>PIB<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Año","targets":1},{"name":"Exportaciones_x100","targets":2},{"name":"Importaciones_x100","targets":3},{"name":"PIB","targets":4}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="tabla-2-exportaciones-importaciones-en-millones-de-usd-balanza-neta-y-pib-en-us-a-precios-actuales" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-2-exportaciones-importaciones-en-millones-de-usd-balanza-neta-y-pib-en-us-a-precios-actuales">Tabla 2: Exportaciones, Importaciones en Millones de USD, Balanza Neta y PIB en US/$ a precios actuales</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-4a16c08d330133817543" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4a16c08d330133817543">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],[2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023],[19637.27813638973,24709.92956385366,28683.60669382596,33889.9935669701,43916.5198363982,38181.80554739985,46816.28069547206,64569.76396955824,69731.47188148902,69107.14620136483,63418.46130013174,45932.17669946582,41608.31092658382,47233.14187179178,53136.57984496999,51258.79521035452,36557.24784853881,51591.4538112973,69868.52298836861,64837.47519333893],[22356.07515972911,29777.7161815784,35453.31606488587,42618.89160755888,51066.65564114462,43545.17639498014,51351.3050965048,67642.78820219103,74226.99332239635,76037.44458623942,79499.07676008999,66653.73913596886,60743.86589662719,62802.58242351402,68961.91298887084,70067.1760510406,55511.42380650885,76006.79531218193,96145.28471769336,82354.9944463131],[-2718.797023339383,-5067.786617724738,-6769.709371059911,-8728.898040588778,-7150.135804746424,-5363.370847580285,-4535.024401032744,-3073.024232632793,-4495.521440907323,-6930.298384874593,-16080.61545995824,-20721.56243650304,-19135.55497004337,-15569.44055172223,-15825.33314390085,-18808.38084068608,-18954.17595797004,-24415.34150088463,-26276.76172932475,-17517.51925297417],[117092.416666245,145600.529605803,161792.958904864,206229.540926312,242504.150472931,232468.663109595,286498.534094963,334966.134804887,370691.143018039,382093.697077685,381240.864422407,293492.370193166,282720.100286228,311866.875156879,334198.218098276,323031.70119284,270348.342541465,318524.633225395,345329.875078512,363493.841244303]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Año<\/th>\n      <th>Exportaciones<\/th>\n      <th>Importaciones<\/th>\n      <th>Balanza_neta<\/th>\n      <th>PIB<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Año","targets":1},{"name":"Exportaciones","targets":2},{"name":"Importaciones","targets":3},{"name":"Balanza_neta","targets":4},{"name":"PIB","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="estadisticas-resumen" class="level3">
+<h3 class="anchored" data-anchor-id="estadisticas-resumen">Estadisticas Resumen</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-660060afd625eba867df" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-660060afd625eba867df">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4"],["Exportaciones","Importaciones","Balanza Comercial","PIB"],[19637.27813638973,22356.07515972911,-26276.76172932475,117092.416666245],[37775.66612268459,49186.2858296035,-18844.82962000707,239995.278632097],[47024.71128363192,64728.16077974144,-12149.16929615551,302679.6226750225],[48234.29808937815,60641.16068980087,-12406.86260042272,285209.2295060398],[63706.28696748836,74671.94381984274,-5289.474790116398,337557.0698732933],[69868.52298836861,96145.28471769336,-2718.797023339383,382093.697077685],[15305.32431016079,19011.64119763375,7636.736126423761,78777.29622923212]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Indicador<\/th>\n      <th>Minimo<\/th>\n      <th>Q1<\/th>\n      <th>Mediana<\/th>\n      <th>Media<\/th>\n      <th>Q3<\/th>\n      <th>Maximo<\/th>\n      <th>Desv_Estandar<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7,8]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Indicador","targets":1},{"name":"Minimo","targets":2},{"name":"Q1","targets":3},{"name":"Mediana","targets":4},{"name":"Media","targets":5},{"name":"Q3","targets":6},{"name":"Maximo","targets":7},{"name":"Desv_Estandar","targets":8}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="grafico-1-evolución-de-exportaciones-importaciones-2004-2023-en-millones-de-usd" class="level3">
+<h3 class="anchored" data-anchor-id="grafico-1-evolución-de-exportaciones-importaciones-2004-2023-en-millones-de-usd">Grafico 1: Evolución de Exportaciones, Importaciones (2004-2023), en millones de USD</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Ciclodatos_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Entre 2004 y 2023 las exportaciones e importaciones de Colombia crecen de 20,000 y 25,000 millones de USD a 60,000 y 70,000 millones en 2012, caen a 35,000 y 45,000 millones en 2016 por la baja del petróleo, y se recuperan hasta 50,000 y 90,000 millones en 2022, con una leve baja en 2023, reflejando un déficit comercial persistente (hasta 40,000 millones de USD en 2022), volatilidad en exportaciones por la dependencia de commodities o materias primas, caídas en 2008-2009 (crisis global), 2014-2016 (caida de los precios del petróleo) y 2020 (pandemia)</p>
+</section>
+<section id="grafico-2-comportamiento-balanza-comercial" class="level3">
+<h3 class="anchored" data-anchor-id="grafico-2-comportamiento-balanza-comercial">Grafico 2: Comportamiento Balanza Comercial</h3>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Ciclodatos_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>El gráfico muestra una balanza comercial con tendencia negativa para Colombia desde 2004 hasta 2023, con un déficit que se agrava progresivamente a lo largo de los años. La línea azul indica una clara tendencia descendente, sugiriendo que las importaciones de Colombia han superado cada vez más a sus exportaciones durante este período llevando a déficits comerciales crecientes</p>
+</section>
+<section id="grafico-3-relación-entre-importaciones-y-exportaciones" class="level3">
+<h3 class="anchored" data-anchor-id="grafico-3-relación-entre-importaciones-y-exportaciones">Grafico 3: Relación entre Importaciones y Exportaciones</h3>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Ciclodatos_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A medida que las exportaciones de Colombia aumentan, sus importaciones tienden a aumentar de manera proporcional. Esto sugiere que el crecimiento de la actividad exportadora colombiana puede estar ligado a una mayor demanda de bienes intermedios importados necesarios para la producción, tambien que un aumento en los ingresos que generan las exportaciones genera una mayor capacidad de compra de bienes y servicios importados.</p>
+</section>
+<section id="tabla-con-balanza-neta-en-pib-y-razon-importacionesexportaciones" class="level3">
+<h3 class="anchored" data-anchor-id="tabla-con-balanza-neta-en-pib-y-razon-importacionesexportaciones">Tabla con Balanza Neta en %PIB y Razon Importaciones/exportaciones</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-6dbc81673e0a6f00f789" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6dbc81673e0a6f00f789">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],[2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023],[19637.27813638973,24709.92956385366,28683.60669382596,33889.9935669701,43916.5198363982,38181.80554739985,46816.28069547206,64569.76396955824,69731.47188148902,69107.14620136483,63418.46130013174,45932.17669946582,41608.31092658382,47233.14187179178,53136.57984496999,51258.79521035452,36557.24784853881,51591.4538112973,69868.52298836861,64837.47519333893],[22356.07515972911,29777.7161815784,35453.31606488587,42618.89160755888,51066.65564114462,43545.17639498014,51351.3050965048,67642.78820219103,74226.99332239635,76037.44458623942,79499.07676008999,66653.73913596886,60743.86589662719,62802.58242351402,68961.91298887084,70067.1760510406,55511.42380650885,76006.79531218193,96145.28471769336,82354.9944463131],[-2718.797023339383,-5067.786617724738,-6769.709371059911,-8728.898040588778,-7150.135804746424,-5363.370847580285,-4535.024401032744,-3073.024232632793,-4495.521440907323,-6930.298384874593,-16080.61545995824,-20721.56243650304,-19135.55497004337,-15569.44055172223,-15825.33314390085,-18808.38084068608,-18954.17595797004,-24415.34150088463,-26276.76172932475,-17517.51925297417],[117092.416666245,145600.529605803,161792.958904864,206229.540926312,242504.150472931,232468.663109595,286498.534094963,334966.134804887,370691.143018039,382093.697077685,381240.864422407,293492.370193166,282720.100286228,311866.875156879,334198.218098276,323031.70119284,270348.342541465,318524.633225395,345329.875078512,363493.841244303],[-2.321924084194897,-3.480610016629196,-4.184180459324298,-4.232612845561104,-2.948459146287701,-2.307137132307497,-1.582913649229899,-0.9174134079024991,-1.212740451338099,-1.813769354972,-4.217967421808502,-7.060341099451703,-6.768374427807003,-4.992335445657801,-4.735313441811102,-5.822456672590799,-7.011019849349702,-7.665134483839998,-7.609177087082497,-4.819206617919203],[1.13845080792033,1.205091099293866,1.236013184928974,1.257565644659672,1.162811985817245,1.140469282965733,1.096868532349503,1.047592310141967,1.064469045606087,1.100283382628492,1.25356363321172,1.451133909287256,1.459897422988577,1.3296295764949,1.297823706193971,1.366929826647324,1.518479291343252,1.47324391342386,1.376088696389062,1.270175838907031]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Año<\/th>\n      <th>Exportaciones<\/th>\n      <th>Importaciones<\/th>\n      <th>Balanza_neta<\/th>\n      <th>PIB<\/th>\n      <th>Balanza_neta_PIBx100<\/th>\n      <th>Razon_Imp_Exp<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Año","targets":1},{"name":"Exportaciones","targets":2},{"name":"Importaciones","targets":3},{"name":"Balanza_neta","targets":4},{"name":"PIB","targets":5},{"name":"Balanza_neta_PIBx100","targets":6},{"name":"Razon_Imp_Exp","targets":7}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

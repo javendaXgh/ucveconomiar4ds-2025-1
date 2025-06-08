@@ -1,0 +1,125 @@
+---
+title: "ProyectoCCD_27660553"
+format: html
+editor: visual
+---
+
+## Analisis CPU
+
+Para este analisis descargue data de openintro , especificamente la data cpu para analizar las estadisticas del componente de las computadoras y las mejores opciones del mercado. ([link de consulta de la data](https://www.openintro.org/data/index.php?data=cpu))
+
+## Descarga y Visualizacion de la Data
+
+#### Paso 1: Cargar las librerias
+
+```{r}
+#| warning: false
+library(DT)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+```
+
+#### Paso 2: Pasar data a R studios
+
+Una vez en el link se procede a descargar la data en formato .csv, con el archivo ya descargado procedemos a abrir la data en R studios.
+
+```{r}
+data_bruta <- read.csv("cpu.csv") #Paso de la data del .csv a R
+
+```
+
+Una vez cargada la data en el programa gracias a la funcion read.csv, procedemos a la visualizacion de los datos.
+
+```{r}
+#| echo: false 
+datatable(data_bruta)
+
+
+```
+
+En la tabla podemos observar, que la data esta compuesta de 12 variables tanto categoricas como numericas con 875 observaciones como refleja la parte inferior izquierda de la tabla.
+
+Las variables contenidas en la data son:
+
+```{r}
+#| echo: false
+
+colnames(data_bruta)
+
+```
+
+#### Paso 4: Realizar estadistica descriptiva
+
+```{r}
+summary(data_bruta)
+```
+
+Con esta funcion podemos observar que la data contiene 503 valores N/A contenidas en las variables boost_clock (318) y l3_cache (185), Ademas en las demas variables podemos intuir que su distribucion con una forma leptocurtica por los datos presentados en la tabla creado por la funcion summary. Ahora pasaremos a corroborar la hipotesis antes planteada evaluando las graficas de cada uno de las variables numericas que no poseen valores N/A a traves de histogramas.
+
+```{r}
+#| echo: False
+
+hist(data_bruta$cores)
+hist(data_bruta$threads)
+hist(data_bruta$base_clock)
+hist(data_bruta$process)
+hist(data_bruta$tdp)
+
+```
+
+En los graficos podemos observar varias cosas en primer lugar la mayoria de las variables a excepcion base_clock no poseen una distribucion normal lo cual implica que esta data no seria de gran utilidad para un analisis proyectivo o econometrico ya que el principio de normalidad en la mayoria de los casos no se cumplen volviendo poco creible o poco fiable cualquier proyeccion realizada con esta data al menos que pase por una fase exhaustiva de procesamiento ya sea mediante test, modificacion o agregacion de nuevas observaciones.
+
+## Lista de las mejores opciones para el cliente
+
+Para poder identificar las mejores opciones de cpu en este stock tomaremos aquellos computadores que tanto en las variables Cores, process, tdp, boost_clock como base_clock esten por encima del promedio del propio stock. Tomo estas variables como referencia por estar asociadas a la capacidad de procesamiento y memoria del dispositivo caracteristicas fundamentales para cualquier comprador de CPUs.
+
+#### Paso 1: Crear los promedios de las variables seleccionadas
+
+Para esto almacenaremos cada promedio en una variable de la siguiente forma:
+
+```{r}
+prom_cores <- mean(data_bruta$cores)
+prom_process <- mean(data_bruta$process)
+prom_tdp <- mean(data_bruta$tdp)
+prom_boost_clock <- mean(data_bruta$boost_clock, na.rm= T)
+prom_base_clock <- mean(data_bruta$base_clock)
+```
+
+#### Paso 2: Crear una nueva variable en la data
+
+Una vez calculados los promedios procederemos a crear una nueva variable categorica llamada "ranking" que identifica las computadoras que estan encima del promedio de todos los promedios de cada variable a lo lo identificaremos como "top" y al resto de computadoras que no cumpla con los criterios "normal".
+
+```{r}
+data_ranking <- data_bruta %>%
+  mutate(ranking = ifelse(cores > prom_cores & process > prom_process & tdp > prom_tdp & boost_clock > prom_boost_clock & base_clock > prom_base_clock , "top", "normal"))
+
+datatable(data_ranking)
+```
+
+#### Paso 3: Seleccion de las mejores opciones
+
+Creada la nueva variablea extreremos del data frame los valores que nos interesan en este caso todos los dispositivos CPU cuyo valor en ranking sea igual a top.
+
+```{r}
+cpu_top <- data_ranking %>%
+  filter(ranking== "top")
+```
+
+Visualicemos los CPUs en la siguiente tabla:
+
+```{r}
+#| echo: false
+datatable(cpu_top)
+```
+
+Estos son los 14 modelos Top que tenemos en stock para los clientes:
+
+```{r}
+#| echo: false
+paste(cpu_top$company, cpu_top$name, sep=" ")
+```
+
+## Conclusion
+
+Como podemos ver la marca AMD posee todas las computadores que se encuentran por encima del promedio en cuando a las variables asociadas al procesamiento y memoria, siendo las mejores opciones a ofrecer a los clientes del stock contenido en el data frame de data_bruta.

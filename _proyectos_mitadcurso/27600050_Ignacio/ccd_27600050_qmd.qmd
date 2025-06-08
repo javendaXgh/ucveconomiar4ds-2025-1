@@ -1,0 +1,343 @@
+---
+title: "Rendimiento del Partido del Presidente de Turno y Tasa de Desempleo en Estados Unidos de America (1899-2019)"
+author: "27600050"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+## Rendimiento del Partido del Presidente de Turno y Tasa de Desempleo en Estados Unidos de America (1899-2019)
+
+En este análisis de datos se realizara un estudio del rendimiento o desempeño del partido del presidente de turno durante su mandato, para buscar posibles relaciones con la tasa de desempleo estadounidense y determinar si la presencia de un presidente democrata o republicano y escaños en la cámara de representantes favorece o no al empleo.
+
+## 1. Cargar librerias e importación de datos
+
+Para la realización de la presente análisis de datos se utilizaron las librerias tidyverse, ggplot2, openintro, DT, gt, dplyr y lmtest.
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(tidyverse)
+library(ggplot2)
+library(lmtest)
+library(openintro)
+library(DT)
+library(gt)
+library(dplyr)
+```
+
+1.1 Importar datos
+
+Se utiliza la librería openintro, y el codigo data() para descargar los datos 'midterms_house', de Openintro: <https://www.openintro.org/data/index.php?data=midterms_house> , y renombrar variables del conjunto de datos al español.
+
+```{r}
+#| echo: false
+
+data('midterms_house')
+
+desempleo <- midterms_house
+#renombramos variables al español
+desempleo <- desempleo %>%
+  rename(año = year)
+
+desempleo <- desempleo %>%
+  rename(presidente = potus)
+
+desempleo <- desempleo %>%
+  rename(partido = party)
+
+desempleo <- desempleo %>%
+  rename(tasa_de_desempleo = unemp)
+
+desempleo <- desempleo %>%
+  rename(camara_de_representantes = house_change)
+
+```
+
+## **2. Valores Estadísticos y Tablas Resúmenes:**
+
+**2.1 TABLA INTERACTIVA**
+
+```{r}
+#| echo: false
+
+datatable(desempleo)
+
+```
+
+**2. TABLAS ESTADÍSTICAS**
+
+Los Republicanos han sido los que han ocupado la presidencia durante mayor número de periodos, con 17 veces, mientras que los demócratas, 14.
+
+**Mandatos: Demócratas vs Republicanos:**
+
+```{r}
+#| echo: false
+table(desempleo$partido)
+```
+
+Las tasa de desempleo minima fue de 3.29%, en el 1907 con el Republicano Theodore Rooselvelt en la presidencia, a su vez el máximo se ubicó en 1935, con un valor de 21.3%, bajo la presidencia del demócrata Franklin Delano Roosevelt, en el período de la Gran Recesión. La tasa promedio de desempleo en Estados Unidos, para el período de 1899 al 2019, fue de 6.731%, y la mediana de 5.6%.
+
+**Valores estadisticos de la tasa de desempleo**
+
+```{r}
+#| echo: false
+summary(desempleo$tasa_de_desempleo)
+
+```
+
+**Número de mandatos por presidente**
+
+Los presidentes que han ejercido durante mas de un mandato son los siguientes: Franklin Delano Roosevelt, con tres mandatos, y con dos: Barack Obama, Calvin Coolidge, Dwight Eisenhower, Lyndon Baines Johnson, Ronald Reagan, Woodrow Wilson, Theodore Roosevelt, Harry Truman, George Bush y Bill Clinton.
+
+**Mandatos por presidente:**
+
+```{r}
+#| echo: false
+
+summary(desempleo$presidente)
+```
+
+### **3. Análisis Exploratorio de los Datos (EDA)**
+
+**HISTOGRAMA**
+
+Las tasas de desempleo en Estados Unidos han tenido una mayor frecuencia en los valores cercanos al 5%
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+ggplot(data = desempleo,
+       aes(x = tasa_de_desempleo)) +
+       geom_histogram(binwidth = 1, fill = "blue", color = "black") +
+       labs(title = "Distribución de la tasa de desempleo", x = "tasa de desempleo", y = "Frecuencia") +
+  theme_dark()
+```
+
+**BOXPLOT**
+
+Entre 1899 - 2019, solo han habido tres periodos con valores por encima del 10% de tasa de desempleo, para los años 1935, 1939, presidente Franklin Delano Roosevelt (Demócrata), y 1899 con William McKinley (Republicano).
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+ggplot(data = desempleo,
+       aes(y = tasa_de_desempleo)) +
+       geom_boxplot(fill = "orange", color = "black") +
+        labs(title = "Valores Atipicos", y = "Tasa de desempleo") +
+  
+theme_grey()
+
+```
+
+**DIAGRAMA DE DISPERSIÓN:**
+
+Desempleo durante mandato de presidente republicano y puestos ganados o perdidos por la cámara de representantes del partido republicano, en el mandato.
+
+```{r}
+#| echo: false
+#| warning: false
+# Diagrama de dispersión: Desempleo durante mandato de presidente republicano y puestos ganados o perdidos por la camara de representantes del partido republicano,en el mandato.
+desempleo_republicano <- desempleo %>%
+  filter(partido == "Republican")
+
+ggplot(data = desempleo_republicano,
+      aes(x = tasa_de_desempleo, y = camara_de_representantes, color = año)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Tasa de desempleo republicano", x = "Tasa de desempleo", y = "camara de representantes republicanos") +
+  theme_dark()
+
+```
+
+A medida que la tasa de desempleo aumenta, los republicanos tienden a perder mas puestos en la cámara de representantes, bajo la presidencia de un presidente republicano.
+
+```{r}
+#| echo: false
+#| warning: false
+
+desempleo_democrata <- desempleo %>%
+  filter(partido == "Democrat")
+
+# Diagrama de dispersión: Desempleo durante mandato de presidente democrata y puestos ganados o perdidos por la camara de representantes del partido democrata,en el mandato
+ggplot(data = desempleo_democrata,
+      aes(x = tasa_de_desempleo, y = camara_de_representantes, color = año)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Tasa de desempleo democrata", x = "Tasa de desempleo", y = "Camara de representantes democratas") +
+  theme_dark()
+```
+
+A medida que la tasa de desempleo aumenta, los demócratas tienden a aumentar mas puestos en la cámara de representantes, bajo la presidencia de un presidente demócrata.
+
+**COMPARACIÓN DE TASA DE DESEMPLEOS:**
+
+**Promedio de la tasa de desempleo bajo el mandato de presidentes democratas:**
+
+```{r}
+#| echo: false
+
+promedio_desempleo_democrata <- mean(desempleo_democrata$tasa_de_desempleo)
+
+promedio_desempleo_democrata
+
+```
+
+**Promedio de la tasa de desempleo bajo el mandato de presidentes republicanos:**
+
+```{r}
+#| echo: false
+
+
+promedio_desempleo_republicano <- mean(desempleo_republicano$tasa_de_desempleo)
+
+promedio_desempleo_republicano
+```
+
+*El nivel de empleo estadounidense, en promedio, ha sido mejor bajo la presidencia de republicanos, con una tasa de desempleo promedio de 6,12%, en contraste al 7,46% de los democratas.*
+
+**TASA DE DESEMPLEO, Demócratas vs Republicanos**
+
+```{r}
+#| echo: false
+#| warning: false
+ggplot(data = desempleo,
+       mapping = aes(x = partido, y = tasa_de_desempleo))+
+       geom_point(color= "orange")+
+       labs(title = "Tasa de desempleo, Democratas vs Republicanos", x = "Partido", y = "Tasa de desempleo")+
+theme_dark()
+```
+
+**Evolución de la tasa de desempleo, EEUU 1899-2019**
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = desempleo,
+       mapping = aes(x = año, y = tasa_de_desempleo))+
+       geom_line(color= "orange")+
+       labs(title = "Evolucion de la tasa de desempleo, EEUU 1899-2019", x = "Año", y = "Tasa de desempleo")+
+       
+theme_dark()
+```
+
+Los períodos donde la tasa de desempleo ha tenido valores por encima de la media, estan ubicados en fechas donde hubo un deterioro de la economía estadounidense:
+
+1899: Depresión de finales del siglo XIX, iniciada en 1893.
+
+1930 - 1939: La gran depresión global de la década de los 30, originada por la caída de los mercados financieros en Estados Unidos
+
+1975 -1983: Crisis del petróleo por conflictos en Medio Oriente, originando período de estanflación
+
+2008: Crisis hipotecaria que inició en Estados Unidos y tuvo impacto a nivel global.
+
+**REGRESIONES LINEALES Y PRUEBAS DE CAUSALIDAD DE GRANGER:**
+
+**Regresión lineal: Tasa de desempleo (variable dependiente), cambios en la cámara de representantes (independiente)**
+
+```{r}
+#| echo: false
+#| warning: false
+
+#Regresiones Lineales
+regresion_tasa_de_desempelo <- lm(tasa_de_desempleo ~ camara_de_representantes, data = desempleo)
+
+regresion_tasa_de_desempelo
+
+```
+
+La regresión lineal muestra con un coeficiente de 0.0094, que ante una unidad de incremento en la cámara de representantes, tanto de Republicanos como Democrata, tiene un impacto positivo mínimo en la tasa de desempleo de EEUU.
+
+**Regresión lineal: Cambios en la cámara de representantes (dependiente), tasa de desempleo (variable independiente):**
+
+```{r}
+#| echo: false
+#| warning: false
+
+regresion_camara_de_representantes <- lm(camara_de_representantes ~ tasa_de_desempleo, data = desempleo)
+
+regresion_camara_de_representantes
+```
+
+En el caso de la variable que mide los cambios en la cámara de represantes "camara_de_representantes", puesta como variable independiente, si se encuentra una relación con un impacto positivo mayor, de 0.051, ocasionado por cambios unitarios en la tasa de desempleo.
+
+Mostrando que ante aumentos unitarios en la tasa de desempleo de EEUU, la cámara de representantes del presidente de turno aumenta en 0.051.
+
+**PRUEBAS DE CAUSALIDAD DE GRANGER**
+
+Para determinar si el cambio de una variable origina o provoca un cambio en la otra, y si las variables son buenas predictoras entres sí, se utilizo el código para realizar la prueba de causalidad de Granger, del paquete "lmtest", <https://www.statology.org/granger-causality-test-in-r/> .
+
+**Prueba: ¿Tasa de desempleo genera cambios en la cámara de representantes?**
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+#Test de Causalidad de Granger
+
+causalidad_desempleo_representantes <- grangertest(desempleo$tasa_de_desempleo, desempleo$camara_de_representantes, order=2)
+
+
+causalidad_desempleo_representantes
+
+```
+
+*Con un pvalue \> 0.05 , de 0.50, la tasa de desempleo no genera cambios en la camara de representantes, lo contrario al resultado de la regresion lineal anterior.*
+
+**Prueba: ¿Cambios en la cámara de representantes genera variaciones en la tasa de desempleo?**
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+#Test de Causalidad de Granger
+
+causalidad_representantes_desempleo <- grangertest(desempleo$camara_de_representantes, desempleo$tasa_de_desempleo, order=2)
+
+causalidad_representantes_desempleo
+
+```
+
+*Con un pvalue \> 0.05 , de 0.63, cambios en la cámara de representantes no generan variaciones en la tasa de desempleo, en contraposición al resultado de la regresion lineal. Tanto la tasa de desempleo y cambios en la cámara de representantes, no son buenas predictoras de cambios sobre ellas, el cambio previo de una no afecta a la otra.*
+
+Con estos resultados se puede llegar a la conclusión parcial de que cambios en los escaños de la cámara de representantes del partido del presidente de turno en los Estados Unidos de America, no generan cambios y relaciones causales significativas con la tasa de desempleo.
+
+#### 4. Aplicación de mutates (Derivación o Agregación de Datos)
+
+**Mutates**
+
+Creación de una nueva variable, para medir el cambio en la cámara de representantes en el partido del presidente de turno, ante cambios en la tasa de desempleo de EEUU
+
+```{r}
+#| echo: false
+
+df_desempleo <- desempleo %>%
+  mutate(cambios_por_tasa_desempleo = camara_de_representantes/tasa_de_desempleo)%>%
+  select(año, cambios_por_tasa_desempleo, presidente, partido)
+  
+
+datatable(df_desempleo)
+```
+
+Como se puede apreciar en la Tabla de Datos, los cinco presidentes que perdieron más representantes de su partido durante su mandato ante cambios en la tasa de desempleo, han sido Truman, Howard, Rudolph Ford, Donald Trump y Baines Johnson. Por otro lado, los únicos tres presidentes en donde creció la camara de representantes de su partido, fueron George Bush, Bill Clinton y Franklin Delano Rooselvelt
+
+##### **Referencias:**
+
+<https://ggplot2.tidyverse.org/reference/geom_smooth.html>
+
+<https://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization>
+
+<https://eh.net/encyclopedia/the-depression-of-1893/>
+
+<https://www.datacamp.com/tutorial/linear-regression-R>
+
+<https://eh.net/encyclopedia/the-depression-of-1893/>
