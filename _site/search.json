@@ -6862,5 +6862,138 @@
     "title": "Untitled",
     "section": "Objetivo",
     "text": "Objetivo\nAdquirir nociones básicas sobre modelado y cómo aplicarlos en R"
+  },
+  {
+    "objectID": "clases/clase_99_01.html#paradigma-econometría-vs.-aprendizaje-estadístico",
+    "href": "clases/clase_99_01.html#paradigma-econometría-vs.-aprendizaje-estadístico",
+    "title": "Aprendizaje Estadístico",
+    "section": "Paradigma Econometría vs. Aprendizaje Estadístico",
+    "text": "Paradigma Econometría vs. Aprendizaje Estadístico\n\nEconometría:\n\nEnfocada en inferencia causal y teoría económica.\nModelos guiados por la teoría.\nÉnfasis en la interpretabilidad de los coeficientes.\n\nAprendizaje Estadístico:\n\nEnfocado en predicción y descubrimiento de patrones.\nModelos impulsados por los datos.\nFlexibilidad en la forma funcional del modelo."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#aprendizaje-estadístico-y-su-relación-con-machine-learning",
+    "href": "clases/clase_99_01.html#aprendizaje-estadístico-y-su-relación-con-machine-learning",
+    "title": "Aprendizaje Estadístico",
+    "section": "Aprendizaje Estadístico y su Relación con Machine Learning",
+    "text": "Aprendizaje Estadístico y su Relación con Machine Learning\n\nAprendizaje Estadístico:\n\nFundamentación teórica y estadística detrás de los algoritmos.\nÉnfasis en la incertidumbre y la inferencia.\n\nMachine Learning:\n\nAplicación práctica de algoritmos y técnicas computacionales.\nÉnfasis en la optimización y el rendimiento predictivo.\nAmbos campos se solapan significativamente, compartiendo muchas herramientas y objetivos."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#qué-es-un-modelo",
+    "href": "clases/clase_99_01.html#qué-es-un-modelo",
+    "title": "Aprendizaje Estadístico",
+    "section": "¿Qué es un Modelo?",
+    "text": "¿Qué es un Modelo?\n\nRepresentación simplificada de la realidad.\nHerramienta para entender relaciones o hacer predicciones.\nPuede ser una función matemática o un algoritmo."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#conseguir-los-parámetros-de-una-función",
+    "href": "clases/clase_99_01.html#conseguir-los-parámetros-de-una-función",
+    "title": "Aprendizaje Estadístico",
+    "section": "Conseguir los Parámetros de una Función",
+    "text": "Conseguir los Parámetros de una Función\n\nAjustar el modelo a los datos observados.\nOptimización de una función objetivo.\nEjemplos: Mínimos cuadrados, descenso del gradiente."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#hipótesis-aceptar-hipótesis-o-rechazo",
+    "href": "clases/clase_99_01.html#hipótesis-aceptar-hipótesis-o-rechazo",
+    "title": "Aprendizaje Estadístico",
+    "section": "Hipótesis, Aceptar Hipótesis o Rechazo",
+    "text": "Hipótesis, Aceptar Hipótesis o Rechazo\n\nHipótesis: Afirmación sobre la relación entre variables.\nAceptar/Rechazar: Decisión basada en la evidencia de los datos.\nRelacionado con la significancia estadística.\nVerificar sobre los datos disponibles ¿Cómo?"
+  },
+  {
+    "objectID": "clases/clase_99_01.html#tipos-de-machine-learning",
+    "href": "clases/clase_99_01.html#tipos-de-machine-learning",
+    "title": "Aprendizaje Estadístico",
+    "section": "Tipos de Machine Learning",
+    "text": "Tipos de Machine Learning\n\nPredictivo:\n\nModelos para hacer pronósticos futuros.\nEjemplo: Predecir precios de casas.\n\nData Discovery:\n\nEncontrar patrones ocultos en los datos.\nEjemplo: Segmentación de clientes."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#supervised-learning",
+    "href": "clases/clase_99_01.html#supervised-learning",
+    "title": "Aprendizaje Estadístico",
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\n\nRequiere datos con etiquetas (variables de salida conocidas).\nEl modelo aprende de pares de entrada-salida.\nEjemplo abstracto: Predecir si un correo electrónico es spam o no (entrada: contenido del correo, salida: spam/no spam)."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#unsupervised-learning",
+    "href": "clases/clase_99_01.html#unsupervised-learning",
+    "title": "Aprendizaje Estadístico",
+    "section": "Unsupervised Learning",
+    "text": "Unsupervised Learning\n\nNo requiere datos con etiquetas.\nEl modelo busca estructuras y patrones inherentes en los datos.\nEjemplos:\n\nReglas de Asociación: Si un cliente compra X, es probable que compre Y (ej: “los que compran pañales también compran cerveza”).\nClusters: Agrupar datos similares (ej: segmentar clientes por comportamiento de compra)."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#self-supervised-learning",
+    "href": "clases/clase_99_01.html#self-supervised-learning",
+    "title": "Aprendizaje Estadístico",
+    "section": "Self-Supervised Learning",
+    "text": "Self-Supervised Learning\n\nGenera automáticamente etiquetas a partir de los datos de entrada.\nSe basa en una tarea “pretext” para aprender representaciones.\nEjemplo descriptivo: Predecir una palabra enmascarada en una oración (el modelo aprende el contexto y las relaciones de las palabras sin etiquetas externas)."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#reinforcement-learning",
+    "href": "clases/clase_99_01.html#reinforcement-learning",
+    "title": "Aprendizaje Estadístico",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nUn agente aprende a tomar decisiones interactuando con un entorno.\nRecibe recompensas o penalizaciones por sus acciones.\nEjemplo descriptivo: Un robot aprende a navegar por un laberinto, recibiendo una recompensa al llegar a la salida y penalizaciones al chocar con una pared."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#en-supervised-learning",
+    "href": "clases/clase_99_01.html#en-supervised-learning",
+    "title": "Aprendizaje Estadístico",
+    "section": "En Supervised Learning",
+    "text": "En Supervised Learning\n\nProblemas de Regresión:\n\nPredecir una variable de salida continua.\nEjemplo: Predicción del precio de acciones.\n\nProblemas de Regresión Logística (Clasificación):\n\nPredecir una variable de salida categórica.\nEjemplo: Clasificar un tumor como benigno o maligno."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#espacios-de-búsqueda-multidimensional",
+    "href": "clases/clase_99_01.html#espacios-de-búsqueda-multidimensional",
+    "title": "Aprendizaje Estadístico",
+    "section": "Espacios de Búsqueda Multidimensional",
+    "text": "Espacios de Búsqueda Multidimensional\n\nEl conjunto de posibles soluciones o modelos.\nExplorar este espacio para encontrar el mejor modelo.\nAlgoritmos de optimización para navegar el espacio."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#métodos-en-machine-learning",
+    "href": "clases/clase_99_01.html#métodos-en-machine-learning",
+    "title": "Aprendizaje Estadístico",
+    "section": "Métodos en Machine Learning",
+    "text": "Métodos en Machine Learning\n\nSplit de los Datos:\n\nDividir el conjunto de datos en entrenamiento, validación y prueba.\nEvaluar el rendimiento del modelo en datos no vistos.\n\nBootstrap:\n\nTécnica de remuestreo con reemplazo para estimar la distribución de un estadístico.\nÚtil para estimar la variabilidad de un modelo."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#problema-overfitting",
+    "href": "clases/clase_99_01.html#problema-overfitting",
+    "title": "Aprendizaje Estadístico",
+    "section": "Problema Overfitting",
+    "text": "Problema Overfitting\n\nEl modelo aprende demasiado bien los datos de entrenamiento.\nRendimiento pobre en datos nuevos o no vistos.\nCaptura el ruido en lugar de la señal subyacente."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#problema-de-predecir-en-datos-no-vistos",
+    "href": "clases/clase_99_01.html#problema-de-predecir-en-datos-no-vistos",
+    "title": "Aprendizaje Estadístico",
+    "section": "Problema de Predecir en Datos No Vistos",
+    "text": "Problema de Predecir en Datos No Vistos\n\nEl verdadero desafío del aprendizaje automático.\nLa capacidad de generalización del modelo.\nSuperar el overfitting es clave."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#modelos-black-box-vs.-regresión-lineal-explicabilidad",
+    "href": "clases/clase_99_01.html#modelos-black-box-vs.-regresión-lineal-explicabilidad",
+    "title": "Aprendizaje Estadístico",
+    "section": "Modelos Black Box vs. Regresión Lineal, Explicabilidad",
+    "text": "Modelos Black Box vs. Regresión Lineal, Explicabilidad\n\nModelos Black Box:\n\nAlta capacidad predictiva.\nDifíciles de interpretar (ej: redes neuronales profundas).\n\nRegresión Lineal:\n\nMayor explicabilidad.\nSe puede entender cómo las variables de entrada afectan la salida.\n\nLa elección depende del objetivo: ¿predicción o interpretabilidad?\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_99_01.html#aprendizaje-estadístico-y-su-relación-con-m.l.",
+    "href": "clases/clase_99_01.html#aprendizaje-estadístico-y-su-relación-con-m.l.",
+    "title": "Aprendizaje Estadístico",
+    "section": "Aprendizaje Estadístico y su Relación con M.L.",
+    "text": "Aprendizaje Estadístico y su Relación con M.L.\n\nAprendizaje Estadístico:\n\nFundamentación teórica y estadística detrás de los algoritmos.\nÉnfasis en la incertidumbre y la inferencia.\n\nMachine Learning:\n\nAplicación práctica de algoritmos y técnicas computacionales.\nÉnfasis en la optimización y el rendimiento predictivo.\nAmbos campos se solapan significativamente, compartiendo muchas herramientas y objetivos."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#bias-variance-trade-off",
+    "href": "clases/clase_99_01.html#bias-variance-trade-off",
+    "title": "Aprendizaje Estadístico",
+    "section": "Bias-Variance Trade-off",
+    "text": "Bias-Variance Trade-off\n\nBias (sesgo):\n\nError por simplificar demasiado el modelo.\nEl modelo no captura la complejidad de los datos.\n\nVariance (varianza):\n\nError por ser demasiado sensible a las fluctuaciones en los datos de entrenamiento.\nEl modelo se ajusta demasiado al ruido.\n\nEncontrar un equilibrio entre ambos para un buen rendimiento."
+  },
+  {
+    "objectID": "clases/clase_99_01.html#separar-señal-del-ruido",
+    "href": "clases/clase_99_01.html#separar-señal-del-ruido",
+    "title": "Aprendizaje Estadístico",
+    "section": "Separar Señal del Ruido",
+    "text": "Separar Señal del Ruido\n\nSeñal: Los patrones reales y subyacentes en los datos.\nRuido: Variaciones aleatorias o irrelevantes.\nEl objetivo del aprendizaje estadístico es identificar la señal."
   }
 ]

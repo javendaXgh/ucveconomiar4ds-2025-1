@@ -14,6 +14,7 @@
 library(pdfetch)
 library(tidyverse)
 library(xts)
+library(apexcharter)
 ##########################################################################################
 ######## Primera Parte: comprender los formatos de datos wide(ancho) y long(largo) #######
 ##########################################################################################
@@ -28,7 +29,6 @@ datos_ancho <- tribble(
 
 
 datos_ancho
-
 
 # Crear un tibble largo (long)
 datos_largo <- tribble(
@@ -173,7 +173,6 @@ valor_apple <- valor_apple%>%
 View(head(valorpple))
 
 df_valor_apple <- valor_apple%>%
-  # mutate(variacion_precio=AAPL.close/lag(AAPL.close))%>%
   select(fecha, AAPL.close,AAPL.volume )%>%
   mutate(mes= month(fecha),
          year= year(fecha),
@@ -183,6 +182,7 @@ df_valor_apple <- valor_apple%>%
 
 
 # write_csv(df_valor_apple,'data/df_valor_apple.csv')
+
 ggplot(df_valor_apple, 
        aes(x=dia,
            y=AAPL.close,
@@ -197,7 +197,7 @@ names(valor_apple) <- c('open','high','low',
                         'accion','codigo','fecha')
 
 
-View(head(df_valor_apple))
+# View(head(df_valor_apple))
 
 funcion_procesar_accion <- function(codigop, 
                                     accionp){
@@ -213,17 +213,14 @@ funcion_procesar_accion <- function(codigop,
   df_datos <- datos_descarga%>%
     as_tibble()%>%
     mutate(accion= accionp,
-           codigo= codigop)%>%
+           codigo= codigop,
+           fecha_posixct=as.POSIXct(datos_descarga))%>%
     bind_cols( fecha= index(datos_descarga))
   
-  # fecha= index(datos_descarga)
-  # print(fecha)
-  
-  # print(head(datos_descarga))
   
   names(df_datos) <- c('open','high','low',
                        'close','adjclose', 'volume',
-                       'accion','codigo','fecha')
+                       'accion','codigo','fecha_posixct','fecha')
   
   df_datos
 }
@@ -256,7 +253,7 @@ dim(valores_acciones)
 View(head(valores_acciones))
 
 valores_acciones_pivotlon <- valores_acciones%>%
-  select(9,1:7)%>%
+  select(10,1:7)%>%
   pivot_longer(cols = c('open','high','low',
                         'close','adjclose'),
                names_to = "tipo_valor",
@@ -266,4 +263,60 @@ valores_acciones_pivotlon <- valores_acciones%>%
 dim(valores_acciones_pivotlon)
 View(head(valores_acciones_pivotlon))
 
+ggplot(data= filter(valores_acciones_pivotlon, 
+                    fecha>='2025-01-01' & accion %in% c('Apple')),
+       aes(x=fecha, 
+           y= valor,
+           color= tipo_valor,
+           group =tipo_valor))+
+  geom_line()
+
+ggplot(data= filter(valores_acciones_pivotlon, 
+                    fecha>='2025-05-01' & 
+                      accion %in% c('Apple','Google')),
+       aes(x=fecha, 
+           y= valor,
+           color= tipo_valor,
+           group =interaction(accion,tipo_valor)))+
+  geom_line()
+
+ggplot(data= filter(valores_acciones_pivotlon, 
+                    fecha>='2025-05-01' & 
+                      accion %in% c('Apple','Google')&
+                      tipo_valor=='high'),
+       aes(x=fecha, 
+           y= valor,
+           color= accion,
+           group = accion))+
+  geom_line()
+
+
+#
 # saveRDS(valores_acciones,'dvalores_acciones.rds')
+
+apex(
+  data=filter(valores_acciones, fecha>"2025-01-01"& accion=='Bitcoin'), 
+  aes(x = fecha_posixct, 
+      open = open, 
+      close = close, 
+      low = low, 
+      high = high),
+  type = "candlestick")%>%
+  ax_yaxis(decimalsInFloat = 0,
+           title = list(text = "Precio en USD"),
+           labels = list(formatter = format_num("~s", locale = "es-ES")))
+
+
+#?format_num  formatos en ejes
+
+apex(
+  data=filter(valores_acciones, fecha>"2025-01-01"& accion=='Bitcoin'), 
+  aes(x = fecha_posixct, 
+      open = open, 
+      close = close, 
+      low = low, 
+      high = high),
+  type = "candlestick")%>%
+  ax_yaxis(decimalsInFloat = 0,
+           title = list(text = "Precio en USD"),
+           labels = list(formatter = format_num("$,.2f")))

@@ -35,8 +35,8 @@ df_inpc <- INPC%>%
          fecha= str_to_lower(fecha),
          indice= as.numeric(indice),
          var= as.numeric(var))%>%
-  mutate(year_extract= as.numeric(year_extract))%>%
   mutate(year_extract= ifelse(str_detect(fecha,'^[:digit:]'),fecha,NA ))%>%
+  mutate(year_extract= as.numeric(year_extract))%>%
   fill(year_extract, .direction = "down")%>%
   filter(!is.na(indice))%>%
   mutate(num_mes= match(fecha, meses_es),
