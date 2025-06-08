@@ -170,7 +170,6 @@ valor_apple <- valor_apple%>%
          codigo= 'AAPL')%>%
   bind_cols( fecha= index(valor_apple))
 
-View(head(valorpple))
 
 df_valor_apple <- valor_apple%>%
   select(fecha, AAPL.close,AAPL.volume )%>%
@@ -239,7 +238,6 @@ valor_nvidia <- funcion_procesar_accion('NVDA','NVIDIA')
 valor_google <- funcion_procesar_accion('GOOG','Google')
 
 valor_oracle <- funcion_procesar_accion('ORCL','Oracle')
-
 
 
 # unificar en una data frame valores de las acciones descargados
@@ -319,4 +317,5 @@ apex(
   type = "candlestick")%>%
   ax_yaxis(decimalsInFloat = 0,
            title = list(text = "Precio en USD"),
-           labels = list(formatter = format_num("$,.2f")))
+           labels = list(formatter = format_num("$,.2f")))%>%
+  ax_chart(defaultLocale = "es")
