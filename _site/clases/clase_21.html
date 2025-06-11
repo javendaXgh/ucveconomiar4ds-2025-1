@@ -495,22 +495,22 @@ M.Sc. José Miguel Avendaño I.
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>matriz_datos <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>), <span class="at">nrow =</span> <span class="dv">5</span>)</span>
 <span id="cb7-2"><a></a>matriz_datos</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            [,1]        [,2]       [,3]          [,4]
-[1,] -0.83703850 -0.02655036  1.0411566  0.0004817966
-[2,]  0.05296519 -1.18447654  1.9369027  0.1180779831
-[3,]  1.02325929  1.36335197 -1.4906748 -0.2765651818
-[4,] -0.56650584 -0.41748774  0.1152445  1.0402619764
-[5,] -1.29043394 -0.71835059 -0.7365925  1.3152255053</code></pre>
+<pre><code>           [,1]       [,2]       [,3]       [,4]
+[1,]  0.7113621 -1.9875997  0.7524188  1.8168731
+[2,] -0.1038563 -0.7299441 -0.3657943 -0.7157712
+[3,] -0.7923952 -1.0844691 -1.5047687 -1.0342211
+[4,] -1.3154452  1.0418756  0.2179083 -0.5829542
+[5,]  0.2612512 -0.3579480  0.8372795 -0.8841516</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Mediana por columnas</span></span>
 <span id="cb9-2"><a></a><span class="fu">apply</span>(matriz_datos, <span class="dv">2</span>, median)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.5665058 -0.4174877  0.1152445  0.1180780</code></pre>
+<pre><code>[1] -0.1038563 -0.7299441  0.2179083 -0.7157712</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># Desviación estándar por columnas</span></span>
 <span id="cb11-2"><a></a><span class="fu">apply</span>(matriz_datos, <span class="dv">2</span>, sd)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8962730 0.9694434 1.3659755 0.6958104</code></pre>
+<pre><code>[1] 0.8118336 1.1100208 0.9633271 1.1845256</code></pre>
 </div>
 </div>
 </section>

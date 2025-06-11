@@ -3752,8 +3752,8 @@
     "objectID": "clases/clase_10.html#nota",
     "href": "clases/clase_10.html#nota",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Esta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
+    "section": "Nota",
+    "text": "Nota\nEsta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
   },
   {
     "objectID": "clases/clase_10.html#principios-de-gráficos-analíticos--1",
@@ -3809,7 +3809,7 @@
     "href": "clases/clase_10.html#estimación-impacto-2",
     "title": "Ciencia de Datos para Economistas",
     "section": "Estimación Impacto 2",
-    "text": "Estimación Impacto 2\n\n\n\n\n\nTomado de La Evaluación de Impacto en la Práctica, Banco Mundial enlace"
+    "text": "Estimación Impacto 2\n\nTomado de La Evaluación de Impacto en la Práctica, Banco Mundial enlace"
   },
   {
     "objectID": "clases/clase_10.html#principios-de-gráficos-analíticos--3",
@@ -3872,7 +3872,7 @@
     "href": "clases/clase_10.html#referencias",
     "title": "Ciencia de Datos para Economistas",
     "section": "Referencias",
-    "text": "Referencias\nEdward Tufte (2006). Beautiful Evidence, Graphics Press LLC. www.edwardtufte.com"
+    "text": "Referencias\nEdward Tufte (2006). Beautiful Evidence, Graphics Press LLC. www.edwardtufte.com\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_11.html",
@@ -6042,8 +6042,8 @@
     "objectID": "clases/clase_15.html#objetivo",
     "href": "clases/clase_15.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
   },
   {
     "objectID": "clases/clase_15.html#glimpse",
@@ -6155,14 +6155,14 @@
     "href": "clases/clase_15.html#slice_sample",
     "title": "Ciencia de Datos para Economistas",
     "section": "slice_sample()",
-    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] Asia\nLevels: Africa Americas Asia Europe Oceania\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp       pop gdpPercap\n   &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;\n 1 Nepal            Asia       1997    59.4  23001113     1011.\n 2 Pakistan         Asia       1957    45.6  46679944      747.\n 3 Jordan           Asia       1987    65.9   2820042     4449.\n 4 Bangladesh       Asia       1987    52.8 103764241      752.\n 5 Korea, Dem. Rep. Asia       1957    54.1   9411381     1571.\n 6 Nepal            Asia       1992    55.7  20326209      898.\n 7 Afghanistan      Asia       1962    32.0  10267083      853.\n 8 Korea, Rep.      Asia       1987    69.8  41622000     8533.\n 9 Sri Lanka        Asia       1967    64.3  11737396     1136.\n10 Hong Kong, China Asia       1952    61.0   2125900     3054."
+    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] Asia\nLevels: Africa Americas Asia Europe Oceania\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp      pop gdpPercap\n   &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Singapore        Asia       1952    60.4  1127000     2315.\n 2 Taiwan           Asia       1987    73.4 19757799    11055.\n 3 Jordan           Asia       1997    69.8  4526235     3645.\n 4 Sri Lanka        Asia       1967    64.3 11737396     1136.\n 5 Singapore        Asia       1977    70.8  2325300    11210.\n 6 Hong Kong, China Asia       1997    80    6495918    28378.\n 7 Thailand         Asia       2002    68.6 62806748     5913.\n 8 Saudi Arabia     Asia       1992    68.8 16945857    24842.\n 9 Bahrain          Asia       1972    63.3   230800    18269.\n10 Iraq             Asia       1952    45.3  5441766     4130."
   },
   {
     "objectID": "clases/clase_15.html#equivalente-de-slice_tail-en-rbase-1",
     "href": "clases/clase_15.html#equivalente-de-slice_tail-en-rbase-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "equivalente de slice_tail() en Rbase",
-    "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp        pop gdpPercap\n   &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;      &lt;int&gt;     &lt;dbl&gt;\n 1 Iran             Asia       1967    52.5   26538000     5907.\n 2 Hong Kong, China Asia       1982    75.4    5264500    14561.\n 3 Syria            Asia       1967    53.7    5680812     1882.\n 4 Malaysia         Asia       1962    55.7    8906385     2037.\n 5 Mongolia         Asia       1967    51.3    1149500     1226.\n 6 Singapore        Asia       1952    60.4    1127000     2315.\n 7 India            Asia       2007    64.7 1110396331     2452.\n 8 Bangladesh       Asia       1957    39.3   51365468      662.\n 9 Iraq             Asia       1992    59.5   17861905     3746.\n10 Hong Kong, China Asia       1962    67.6    3305200     4693."
+    "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country      continent  year lifeExp      pop gdpPercap\n   &lt;fct&gt;        &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Oman         Asia       1967    47.0   714775     4721.\n 2 Saudi Arabia Asia       1982    63.0 11254672    33693.\n 3 Nepal        Asia       2002    61.3 25873917     1057.\n 4 Singapore    Asia       1952    60.4  1127000     2315.\n 5 Myanmar      Asia       1982    58.1 34680442      424 \n 6 Vietnam      Asia       1962    45.4 33796140      772.\n 7 Jordan       Asia       1967    51.6  1255058     2742.\n 8 Afghanistan  Asia       1952    28.8  8425333      779.\n 9 Thailand     Asia       2002    68.6 62806748     5913.\n10 Mongolia     Asia       1992    61.3  2312802     1785."
   },
   {
     "objectID": "clases/clase_15.html#reordenar-datos-basado-en-un-criterio-arrange",
@@ -6183,7 +6183,7 @@
     "href": "clases/clase_15.html#notas-finales",
     "title": "Ciencia de Datos para Economistas",
     "section": "Notas finales:",
-    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase\nRevisar vignette\n\nvignette(package='dplyr')\nvignette('dplyr',package='dplyr')"
+    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase\nRevisar vignette\n\nvignette(package='dplyr')\nvignette('dplyr',package='dplyr')\n\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "materiales_admin/test_examen.html",
@@ -7087,7 +7087,7 @@
     "href": "clases/clase_21.html#ejemplo-apply-mediana-y-desviación-estándar",
     "title": "Clase 21: Familia de Funciones Apply",
     "section": "Ejemplo apply(): Mediana y Desviación Estándar",
-    "text": "Ejemplo apply(): Mediana y Desviación Estándar\nCálculo de la mediana y la desviación estándar por columnas.\n\nmatriz_datos &lt;- matrix(rnorm(20), nrow = 5)\nmatriz_datos\n\n            [,1]        [,2]       [,3]          [,4]\n[1,] -0.83703850 -0.02655036  1.0411566  0.0004817966\n[2,]  0.05296519 -1.18447654  1.9369027  0.1180779831\n[3,]  1.02325929  1.36335197 -1.4906748 -0.2765651818\n[4,] -0.56650584 -0.41748774  0.1152445  1.0402619764\n[5,] -1.29043394 -0.71835059 -0.7365925  1.3152255053\n\n# Mediana por columnas\napply(matriz_datos, 2, median)\n\n[1] -0.5665058 -0.4174877  0.1152445  0.1180780\n\n# Desviación estándar por columnas\napply(matriz_datos, 2, sd)\n\n[1] 0.8962730 0.9694434 1.3659755 0.6958104"
+    "text": "Ejemplo apply(): Mediana y Desviación Estándar\nCálculo de la mediana y la desviación estándar por columnas.\n\nmatriz_datos &lt;- matrix(rnorm(20), nrow = 5)\nmatriz_datos\n\n           [,1]       [,2]       [,3]       [,4]\n[1,]  0.7113621 -1.9875997  0.7524188  1.8168731\n[2,] -0.1038563 -0.7299441 -0.3657943 -0.7157712\n[3,] -0.7923952 -1.0844691 -1.5047687 -1.0342211\n[4,] -1.3154452  1.0418756  0.2179083 -0.5829542\n[5,]  0.2612512 -0.3579480  0.8372795 -0.8841516\n\n# Mediana por columnas\napply(matriz_datos, 2, median)\n\n[1] -0.1038563 -0.7299441  0.2179083 -0.7157712\n\n# Desviación estándar por columnas\napply(matriz_datos, 2, sd)\n\n[1] 0.8118336 1.1100208 0.9633271 1.1845256"
   },
   {
     "objectID": "clases/clase_21.html#lapply-aplicación-a-listas",

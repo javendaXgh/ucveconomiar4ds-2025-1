@@ -167,7 +167,7 @@ En este gráfico, vemos que tenemos puntos fuera de los bigotes (valores atípic
 
 Nuevamente, AMD tiene datos menos dispersos que Intel, por lo que las frecuencias están más cerca unas de otras.
 
-# ¿El Procesador más Potente de Intel? ¿En que se Diferencia a su Primer lanzamiento? 
+# ¿El Procesador más Potente de Intel? ¿En que se Diferencia a su Primer lanzamiento?
 
 ## Procesadores Intel Core i7: Potencia Desde su Primer Lanzamiento
 

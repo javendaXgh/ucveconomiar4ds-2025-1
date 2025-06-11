@@ -24,7 +24,7 @@ Este análisis examina la evolución de la balanza comercial de Colombia entre 2
 
 library(DT) #llamo al paquete DT
 
-load("C:/Users/Arnaldo Di Remigio/OneDrive/Desktop/balanza_comercial_colombia/data/data_colombia.RData") #cargo la data, colocar la ruta de la carpeta de la data aca
+load("data_colombia.RData") #cargo la data, colocar la ruta de la carpeta de la data aca
 
 datatable(datos_colombia) #muestro la data en una tabla dinamica
 
