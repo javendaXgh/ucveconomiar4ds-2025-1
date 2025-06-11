@@ -181,8 +181,8 @@ df_valor_apple <- valor_apple%>%
 
 
 # write_csv(df_valor_apple,'data/df_valor_apple.csv')
-
-ggplot(df_valor_apple, 
+library(plotly)
+gr_apple <- ggplot(df_valor_apple, 
        aes(x=dia,
            y=AAPL.close,
            # group = year,
@@ -190,13 +190,14 @@ ggplot(df_valor_apple,
   geom_line()+
   geom_smooth()
 
-
+gr_apple%>%
+  ggplotly()
 names(valor_apple) <- c('open','high','low',
                         'close','adjclose', 'volume',
                         'accion','codigo','fecha')
 
 
-# View(head(df_valor_apple))
+View(head(df_valor_apple))
 
 funcion_procesar_accion <- function(codigop, 
                                     accionp){
@@ -262,7 +263,8 @@ dim(valores_acciones_pivotlon)
 View(head(valores_acciones_pivotlon))
 
 ggplot(data= filter(valores_acciones_pivotlon, 
-                    fecha>='2025-01-01' & accion %in% c('Apple')),
+                    fecha>='2025-01-01' &
+                      accion %in% c('NVIDIA')),
        aes(x=fecha, 
            y= valor,
            color= tipo_valor,
@@ -293,7 +295,8 @@ ggplot(data= filter(valores_acciones_pivotlon,
 # saveRDS(valores_acciones,'dvalores_acciones.rds')
 
 apex(
-  data=filter(valores_acciones, fecha>"2025-01-01"& accion=='Bitcoin'), 
+  data=filter(valores_acciones,
+              fecha>"2025-01-01"& accion=='Bitcoin'), 
   aes(x = fecha_posixct, 
       open = open, 
       close = close, 

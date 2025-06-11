@@ -1,0 +1,145 @@
+---
+title: "Aprendizaje Estadístico"
+format: revealjs
+---
+
+## Paradigma Econometría vs. Aprendizaje Estadístico
+
+```{r}
+
+```
+
+-   **Econometría:**
+    -   Enfocada en inferencia causal y teoría económica.
+    -   Modelos guiados por la teoría.
+    -   Énfasis en la interpretabilidad de los coeficientes.
+-   **Aprendizaje Estadístico:**
+    -   Enfocado en predicción y descubrimiento de patrones.
+    -   Modelos impulsados por los datos.
+    -   Flexibilidad en la forma funcional del modelo.
+
+## Aprendizaje Estadístico y su Relación con M.L.
+
+-   **Aprendizaje Estadístico:**
+    -   Fundamentación teórica y estadística detrás de los algoritmos.
+    -   Énfasis en la incertidumbre y la inferencia.
+-   **Machine Learning:**
+    -   Aplicación práctica de algoritmos y técnicas computacionales.
+    -   Énfasis en la optimización y el rendimiento predictivo.
+    -   Ambos campos se solapan significativamente, compartiendo muchas herramientas y objetivos.
+
+## ¿Qué es un Modelo?
+
+-   Representación simplificada de la realidad.
+-   Herramienta para entender relaciones o hacer predicciones.
+-   Puede ser una función matemática o un algoritmo.
+
+## Conseguir los Parámetros de una Función
+
+-   Ajustar el modelo a los datos observados.
+-   Optimización de una función objetivo.
+-   Ejemplos: Mínimos cuadrados, descenso del gradiente.
+
+## Hipótesis, Aceptar Hipótesis o Rechazo
+
+-   **Hipótesis:** Afirmación sobre la relación entre variables.
+-   **Aceptar/Rechazar:** Decisión basada en la evidencia de los datos.
+-   Relacionado con la significancia estadística.
+-   Verificar sobre los datos disponibles ¿Cómo?
+
+## Tipos de Machine Learning
+
+-   **Predictivo:**
+    -   Modelos para hacer pronósticos futuros.
+    -   Ejemplo: Predecir precios de casas.
+-   **Data Discovery:**
+    -   Encontrar patrones ocultos en los datos.
+    -   Ejemplo: Segmentación de clientes.
+
+## Supervised Learning
+
+-   Requiere datos con etiquetas (variables de salida conocidas).
+-   El modelo aprende de pares de entrada-salida.
+-   **Ejemplo abstracto:** Predecir si un correo electrónico es spam o no (entrada: contenido del correo, salida: spam/no spam).
+
+## Unsupervised Learning
+
+-   No requiere datos con etiquetas.
+-   El modelo busca estructuras y patrones inherentes en los datos.
+-   **Ejemplos:**
+    -   **Reglas de Asociación:** Si un cliente compra X, es probable que compre Y (ej: "los que compran pañales también compran cerveza").
+    -   **Clusters:** Agrupar datos similares (ej: segmentar clientes por comportamiento de compra).
+
+## Self-Supervised Learning
+
+-   Genera automáticamente etiquetas a partir de los datos de entrada.
+-   Se basa en una tarea "pretext" para aprender representaciones.
+-   **Ejemplo descriptivo:** Predecir una palabra enmascarada en una oración (el modelo aprende el contexto y las relaciones de las palabras sin etiquetas externas).
+
+## Reinforcement Learning
+
+-   Un agente aprende a tomar decisiones interactuando con un entorno.
+-   Recibe recompensas o penalizaciones por sus acciones.
+-   **Ejemplo descriptivo:** Un robot aprende a navegar por un laberinto, recibiendo una recompensa al llegar a la salida y penalizaciones al chocar con una pared.
+
+## En Supervised Learning
+
+-   **Problemas de Regresión:**
+    -   Predecir una variable de salida continua.
+    -   Ejemplo: Predicción del precio de acciones.
+-   **Problemas de Regresión Logística (Clasificación):**
+    -   Predecir una variable de salida categórica.
+    -   Ejemplo: Clasificar un tumor como benigno o maligno.
+
+## Espacios de Búsqueda Multidimensional
+
+-   El conjunto de posibles soluciones o modelos.
+-   Explorar este espacio para encontrar el mejor modelo.
+-   Algoritmos de optimización para navegar el espacio.
+
+## Métodos en Machine Learning
+
+-   **Split de los Datos:**
+    -   Dividir el conjunto de datos en entrenamiento, validación y prueba.
+    -   Evaluar el rendimiento del modelo en datos no vistos.
+-   **Bootstrap:**
+    -   Técnica de remuestreo con reemplazo para estimar la distribución de un estadístico.
+    -   Útil para estimar la variabilidad de un modelo.
+
+## Problema Overfitting
+
+-   El modelo aprende demasiado bien los datos de entrenamiento.
+-   Rendimiento pobre en datos nuevos o no vistos.
+-   Captura el ruido en lugar de la señal subyacente.
+
+## Problema de Predecir en Datos No Vistos
+
+-   El verdadero desafío del aprendizaje automático.
+-   La capacidad de generalización del modelo.
+-   Superar el overfitting es clave.
+
+## Bias-Variance Trade-off
+
+-   **Bias (sesgo):**
+    -   Error por simplificar demasiado el modelo.
+    -   El modelo no captura la complejidad de los datos.
+-   **Variance (varianza):**
+    -   Error por ser demasiado sensible a las fluctuaciones en los datos de entrenamiento.
+    -   El modelo se ajusta demasiado al ruido.
+-   Encontrar un equilibrio entre ambos para un buen rendimiento.
+
+## Separar Señal del Ruido
+
+-   **Señal:** Los patrones reales y subyacentes en los datos.
+-   **Ruido:** Variaciones aleatorias o irrelevantes.
+-   El objetivo del aprendizaje estadístico es identificar la señal.
+
+## Modelos Black Box vs. Regresión Lineal, Explicabilidad
+
+-   **Modelos Black Box:**
+    -   Alta capacidad predictiva.
+    -   Difíciles de interpretar (ej: redes neuronales profundas).
+-   **Regresión Lineal:**
+    -   Mayor explicabilidad.
+    -   Se puede entender cómo las variables de entrada afectan la salida.
+-   La elección depende del objetivo: ¿predicción o interpretabilidad?

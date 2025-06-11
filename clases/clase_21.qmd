@@ -1,0 +1,269 @@
+---
+title: "Clase 21: Familia de Funciones Apply"
+format: revealjs
+---
+
+```{r}
+#| warning: false
+#| echo: false
+library(tidyverse)
+```
+
+## Funciones `apply` en R
+
+La familia de funciones `apply` en R son herramientas para la manipulación eficiente de datos, permitiendo aplicar una función a las dimensiones de una matriz o un arreglo, a los elementos de una lista, o a los subconjuntos de un `tibble`.
+
+## Vectorización
+
+La **vectorización** es un concepto en R que se refiere a la capacidad de las operaciones para trabajar directamente con vectores (o matrices/arreglos) completos, en lugar de elemento por elemento. Esto contrasta con los bucles explícitos, donde cada elemento se procesa de forma individual.
+
+Su uso es fundamental en ciencia de datos para evitar bucles explícitos, lo que resulta en código más conciso, legible y, a menudo, más eficiente.
+
+## Usar funciones `apply`
+
+-   **Vectorización:** Aprovechan las operaciones vectorizadas de R, que son generalmente más rápidas que los bucles `for` explícitos en R para tareas repetitivas.
+
+-   **Eficiencia:** Reducen la cantidad de código necesaria para realizar operaciones comunes.
+
+-   **Legibilidad:** El código es más fácil de entender una vez que se familiariza con el paradigma `apply`.
+
+-   **Funcionalidad:** Proporcionan una forma flexible de aplicar funciones personalizadas o predefinidas a diversas estructuras de datos.
+
+## Familia `apply` en R {.small}
+
+Cada función está diseñada para un tipo específico de estructura de datos o tarea:
+
+-   `apply()`: Para matrices y arreglos ✅
+
+-   `lapply()`: Para listas y vectores, devolviendo una lista ✅
+
+-   `sapply()`: Para listas y vectores, intentando simplificar el resultado ✅
+
+-   `vapply()`: Para listas y vectores, con tipo de salida preespecificado ❌
+
+-   `mapply()`: Versión multivariable de `sapply` ✅
+
+-   `tapply()`: Para aplicar una función a subconjuntos de un vector ❌
+
+## `apply()`: Aplicación a Matrices y Arreglos {.small}
+
+La función `apply()` es utilizada para aplicar una función a los márgenes de una matriz o un arreglo (filas o columnas).
+
+Sintaxis: `apply(X, MARGIN, FUN, ...)`
+
+-   `X`: Un arreglo o matriz.
+
+-   `MARGIN`: Un vector indicando qué márgenes aplicar la función.
+
+    -   `1`: Filas.
+
+    -   `2`: Columnas.
+
+-   `FUN`: La función a aplicar.
+
+-   `...`: Argumentos adicionales para `FUN`.
+
+## Ejemplo `apply()`: Suma de Filas y Columnas {.small}
+
+Creación de una matriz y cálculo de la suma por filas y columnas.
+
+```{r}
+matriz_ejemplo <- matrix(1:9, nrow = 3, byrow = TRUE)
+matriz_ejemplo
+
+# Suma por filas
+apply(matriz_ejemplo, 1, sum)
+
+# Suma por columnas
+apply(matriz_ejemplo, 2, sum)
+
+```
+
+## Ejemplo `apply()`: Mediana y Desviación Estándar {.small}
+
+Cálculo de la mediana y la desviación estándar por columnas.
+
+```{r}
+matriz_datos <- matrix(rnorm(20), nrow = 5)
+matriz_datos
+
+# Mediana por columnas
+apply(matriz_datos, 2, median)
+
+
+# Desviación estándar por columnas
+apply(matriz_datos, 2, sd)
+```
+
+## `lapply()`: Aplicación a Listas
+
+La función `lapply()` aplica una función a cada elemento de una lista o un vector, y siempre devuelve una **lista**.
+
+Sintaxis: `lapply(X, FUN, ...)`
+
+-   `X`: Una lista o un vector.
+
+-   `FUN`: La función a aplicar.
+
+-   `...`: Argumentos adicionales para `FUN`.
+
+## Ejemplo `lapply()`: Transformación de Elementos
+
+Aplicar la función `toupper` a cada cadena de caracteres en una lista.
+
+```{r}
+lista_cadenas <- list("manzana", "platano", "cereza")
+lapply(lista_cadenas, toupper)
+
+
+```
+
+## Ejemplo `lapply()`: Acceso a elementos de una lista anidada por índice
+
+```{r}
+lista_anidada <- list(
+  sublista1 = list("a", "b", "c"),
+  sublista2 = list(10, 20, 30),
+  sublista3 = list(TRUE, FALSE, TRUE)
+)
+# acceder al segundo elemento de cada elemento de la lista
+lapply(lista_anidada, `[[`,2)
+```
+
+## `sapply()`: Simplificando `lapply()` {.small}
+
+La función `sapply()` es una envoltura de `lapply()`. Intenta simplificar el resultado de `lapply()` a un vector o una matriz si es posible. Si no puede simplificar, devuelve una lista. Igualmente, se puede aplicar sobre la estructura de un vector
+
+Sintaxis: `sapply(X, FUN, ..., simplify = TRUE, USE.NAMES = TRUE)`
+
+-   `X`: Una lista o un vector.
+
+-   `FUN`: La función a aplicar.
+
+-   `...`: Argumentos adicionales para `FUN`.
+
+-   `simplify`: Un valor lógico o una cadena. Si es `TRUE`, intenta simplificar.
+
+-   `USE.NAMES`: Un valor lógico. Si es `TRUE`, usa los nombres del vector o lista de entrada.
+
+## Ejemplo `sapply()`: Simplificación de Resultados {.small}
+
+Comparación del comportamiento de `lapply()` y `sapply()` con los mismos datos.
+
+```{r}
+lista_numeros <- list(a = 1:3, b = 4:6)
+lista_numeros
+# Resultado con lapply (lista)
+lapply(lista_numeros, sum)
+
+
+```
+
+## Ejemplo `sapply()`: Simplificación de Resultados- cont. {.small}
+
+```{r}
+lista_numeros
+# Resultado con sapply (vector)
+sapply(lista_numeros, sum)
+
+# caso anterior extracción elementos de la lista
+sapply(lista_anidada, `[[`,2)
+```
+
+## `mapply()`: Aplicación Multivariable
+
+La función `mapply()` es una versión multivariable de `sapply()`. Permite aplicar una función a elementos correspondientes de múltiples vectores o listas.
+
+Sintaxis: `mapply(FUN, ..., MoreArgs = NULL, SIMPLIFY = TRUE, USE.NAMES = TRUE)`
+
+-   `FUN`: La función a aplicar.
+
+-   `...`: Los vectores o listas a los que se aplicará la función.
+
+-   `MoreArgs`: Una lista de argumentos adicionales que no varían.
+
+-   `SIMPLIFY`: Similar a `sapply()`.
+
+## Ejemplo `mapply()`: Operaciones con Múltiples Vectores {.small}
+
+Sumar elementos de dos vectores de forma paralela.
+
+```{r}
+vector1 <- c(1, 2, 3)
+vector2 <- c(10, 20, 30)
+
+# Sumar elementos correspondientes
+mapply(sum, vector1, vector2)
+
+```
+
+## Ejemplo `mapply()`: Operaciones con Múltiples Vectores-2 {.small}
+
+```{r}
+# Crear cadenas combinadas
+frutas <- c("manzana", "platano", "uva")
+colores <- c("roja", "amarillo", "morada")
+
+mapply(paste, frutas, colores, sep = " ",USE.NAMES = FALSE)
+
+```
+
+## `tapply()`: Aplicación por Grupos
+
+La función `tapply()` aplica una función a subconjuntos de un vector, donde los subconjuntos están definidos por uno o más factores. Es particularmente útil para análisis por grupos.
+
+Sintaxis: `tapply(X, INDEX, FUN = NULL, ..., simplify = TRUE)`
+
+-   `X`: El vector al que se aplicará la función.
+
+-   `INDEX`: Una lista de factores (o un solo factor) para agrupar los datos.
+
+-   `FUN`: La función a aplicar.
+
+-   `...`: Argumentos adicionales para `FUN`.
+
+## Ejemplo `tapply()`: Media por Grupos {.small}
+
+Cálculo de la media de salarios por departamento.
+
+```{r}
+salarios <- c(50000, 60000, 75000, 55000, 80000)
+departamentos <- factor(c("ventas", "marketing", "ventas", "marketing", "rrhh"))
+
+# Media de salarios por departamento
+tapply(salarios, departamentos, mean)
+```
+
+## Elegir la función `apply` adecuada
+
+La elección de la función `apply` depende de la estructura de tus datos y del tipo de operación que necesitas realizar:
+
+-   **Matrices/Arreglos:** `apply()`
+
+-   **Listas/Vectores (resultado lista):** `lapply()`
+
+-   **Listas/Vectores (resultado simplificado):** `sapply()`
+
+-   **Listas/Vectores (resultado con tipo predefinido):** `vapply()`
+
+-   **Múltiples vectores/listas (paralelo):** `mapply()`
+
+-   **Vector por grupos:** `tapply()`
+
+## Consideraciones de Rendimiento
+
+Si bien las funciones `apply` son generalmente más eficientes que los bucles `for` en R para operaciones básicas, para conjuntos de datos muy grandes o operaciones complejas, la vectorización pura de R o el uso de paquetes optimizados como `dplyr` o `data.table` pueden ofrecer un mejor rendimiento.
+
+## Alternativas Modernas: `purrr` y `dplyr`
+
+Para operaciones de mapeo y manipulación de datos más complejas, especialmente en el ecosistema `tidyverse`, los paquetes `purrr` (para operaciones de mapeo) y `dplyr` (para manipulación de `tibble`s y agrupaciones) ofrecen sintaxis más consistentes y legibles.
+
+-   `map()` de `purrr` es el equivalente a `lapply()`.
+
+-   `map_df()` de `purrr` es similar a `sapply()` devolviendo un `tibble`.
+
+-   `group_by()` y `summarize()` de `dplyr` son alternativas a `tapply()`.
+
+## Ejemplo con `dplyr`: Agregación por Grupos
+
+Uso de `dplyr` para una agregación similar a `tapply()` o `by()`.
