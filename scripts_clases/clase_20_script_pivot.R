@@ -309,7 +309,7 @@ apex(
 
 
 #?format_num  formatos en ejes
-
+library(apexcharter)
 apex(
   data=filter(valores_acciones, fecha>"2025-01-01"& accion=='Bitcoin'), 
   aes(x = fecha_posixct, 

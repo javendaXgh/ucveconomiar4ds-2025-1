@@ -28,7 +28,8 @@ df_rl_gapminder <- df_gapminder_csv%>%
   arrange(desc(r_sq))
 
 ggplot(data=df_rl_gapminder, 
-       aes( y= r_sq,x=continent))+
+       aes( y= r_sq,
+            x=continent))+
   geom_boxplot(fill='orange')
 
 ### ejercicio preliminar
