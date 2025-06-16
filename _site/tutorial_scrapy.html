@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Actividades – UCV Economía R4DS</title>
+<title>Tutorial Scrapy en R con rvest – UCV Economía R4DS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,6 +18,40 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -5065,7 +5099,7 @@ g(sj));e(m,"country",g(tj));for(var n=hb(a.address||{}),p=0;p<n.length;p++){var 
 "")},rj=function(a){return sj(a.replace(/\s/g,""))},sj=function(a){return sb(a.replace(xj,"").toLowerCase())},qj=function(a){a=a.replace(/[\s-()/.]/g,"");a.charAt(0)!=="+"&&(a="+"+a);return yj.test(a)?a:"e0"},pj=function(a){var b=a.toLowerCase().split("@");if(b.length===2){var c=b[0];/^(gmail|googlemail)\./.test(b[1])&&(c=c.replace(/\./g,""));c=c+"@"+b[1];if(zj.test(c))return c}return"e0"},lj=function(a){var b=Pc();try{a.forEach(function(e){if(e.value&&aj(e.name)){var f;var g=e.value,h=l;if(g===""||
 g==="e0"||Di.test(g))f=g;else try{var m=new Bi;m.update(Ei(g));f=Gi(m.digest(),h)}catch(n){f="e2"}e.value=f}});var c={Tc:a};if(b!==void 0){var d=Pc();b&&d&&(c.time=Math.round(d)-Math.round(b))}return c}catch(e){return{Tc:[]}}},gj=function(a,b){if(!a.some(function(d){return d.value&&aj(d.name)}))return Promise.resolve({Tc:a});if(!l.Promise)return Promise.resolve({Tc:[]});var c=b?Pc():void 0;return Promise.all(a.map(function(d){return d.value&&aj(d.name)?Fi(d.value).then(function(e){d.value=e}):Promise.resolve()})).then(function(){var d=
 {Tc:a};if(c!==void 0){var e=Pc();c&&e!==void 0&&(d.time=Math.round(e)-Math.round(c))}return d}).catch(function(){return{Tc:[]}})},xj=/[0-9`~!@#$%^&*()_\-+=:;<>,.?|/\\[\]]/g,zj=/^\S+@\S+\.\S+$/,yj=/^\+\d{10,15}$/,wj=/[.~]/g,bj=/^[0-9A-Za-z_-]{43}$/,Aj={},Zi=(Aj.email="em",Aj.phone_number="pn",Aj.first_name="fn",Aj.last_name="ln",Aj.street="sa",Aj.city="ct",Aj.region="rg",Aj.country="co",Aj.postal_code="pc",Aj.error_code="ec",Aj),Bj={},oj=(Bj.email="sha256_email_address",Bj.phone_number="sha256_phone_number",
-Bj.first_name="sha256_first_name",Bj.last_name="sha256_last_name",Bj.street="sha256_street",Bj);var cj=Object.freeze(["email","phone_number","first_name","last_name","street"]);var Cj={},Dj=(Cj[K.m.pb]=1,Cj[K.m.ld]=2,Cj[K.m.uc]=2,Cj[K.m.za]=3,Cj[K.m.Te]=4,Cj[K.m.Bg]=5,Cj[K.m.Hc]=6,Cj[K.m.kb]=6,Cj[K.m.qb]=6,Cj[K.m.dd]=6,Cj[K.m.Pb]=6,Cj[K.m.xb]=6,Cj[K.m.rb]=7,Cj[K.m.Sb]=9,Cj[K.m.Cg]=10,Cj[K.m.Lb]=11,Cj),Ej={},Fj=(Ej.unknown=13,Ej.standard=14,Ej.unique=15,Ej.per_session=16,Ej.transactions=17,Ej.items_sold=18,Ej);var $a=[];function Gj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=k(Object.keys(Dj)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Dj[f],h=b;h=h===void 0?!1:h;Ya("GTAG_EVENT_FEATURE_CHANNEL",g);h&&($a[g]=!0)}}};var Hj=function(){this.D=new Set;this.J=new Set},Jj=function(a){var b=Ij.ia;a=a===void 0?[]:a;var c=[].concat(ua(b.D)).concat([].concat(ua(b.J))).concat(a);c.sort(function(d,e){return d-e});return c},Kj=function(){var a=[].concat(ua(Ij.ia.D));a.sort(function(b,c){return b-c});return a},Lj=function(){var a=Ij.ia,b=Ri.Fq;a.D=new Set;if(b!=="")for(var c=k(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.D.add(e)}};var Mj={},Nj=Li(14,"56b1"),Oj=Ni(15,Number("0")),Pj=Li(19,"dataLayer");Li(20,"");Li(16,"ChEI8N65wgYQporytrzE0a3YARIlABifjpXSUASJurNb6IjduKiLbsSjLgSxTjXN2kceRSbiPbdGmxoCBD0\x3d");var Qj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Rj={__paused:1,__tg:1},Sj;for(Sj in Qj)Qj.hasOwnProperty(Sj)&&(Rj[Sj]=1);var Tj=Ki(11,qb("true")),Uj=!1,Vj,Wj=!1;Wj=!0;
+Bj.first_name="sha256_first_name",Bj.last_name="sha256_last_name",Bj.street="sha256_street",Bj);var cj=Object.freeze(["email","phone_number","first_name","last_name","street"]);var Cj={},Dj=(Cj[K.m.pb]=1,Cj[K.m.ld]=2,Cj[K.m.uc]=2,Cj[K.m.za]=3,Cj[K.m.Te]=4,Cj[K.m.Bg]=5,Cj[K.m.Hc]=6,Cj[K.m.kb]=6,Cj[K.m.qb]=6,Cj[K.m.dd]=6,Cj[K.m.Pb]=6,Cj[K.m.xb]=6,Cj[K.m.rb]=7,Cj[K.m.Sb]=9,Cj[K.m.Cg]=10,Cj[K.m.Lb]=11,Cj),Ej={},Fj=(Ej.unknown=13,Ej.standard=14,Ej.unique=15,Ej.per_session=16,Ej.transactions=17,Ej.items_sold=18,Ej);var $a=[];function Gj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=k(Object.keys(Dj)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Dj[f],h=b;h=h===void 0?!1:h;Ya("GTAG_EVENT_FEATURE_CHANNEL",g);h&&($a[g]=!0)}}};var Hj=function(){this.D=new Set;this.J=new Set},Jj=function(a){var b=Ij.ia;a=a===void 0?[]:a;var c=[].concat(ua(b.D)).concat([].concat(ua(b.J))).concat(a);c.sort(function(d,e){return d-e});return c},Kj=function(){var a=[].concat(ua(Ij.ia.D));a.sort(function(b,c){return b-c});return a},Lj=function(){var a=Ij.ia,b=Ri.Fq;a.D=new Set;if(b!=="")for(var c=k(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.D.add(e)}};var Mj={},Nj=Li(14,"56b1"),Oj=Ni(15,Number("0")),Pj=Li(19,"dataLayer");Li(20,"");Li(16,"ChEI8N65wgYQporytrzE0a3YARIlABifjpXcHJpRrceWjKqp+mwuhaJ7xTwC14I+suLS9R+ClKNZhBoC/O8\x3d");var Qj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Rj={__paused:1,__tg:1},Sj;for(Sj in Qj)Qj.hasOwnProperty(Sj)&&(Rj[Sj]=1);var Tj=Ki(11,qb("true")),Uj=!1,Vj,Wj=!1;Wj=!0;
 Vj=Wj;var Xj,Yj=!1;Xj=Yj;Mj.Ag=Li(3,"www.googletagmanager.com");var Zj=""+Mj.Ag+(Vj?"/gtag/js":"/gtm.js"),ak=null,bk=null,ck={},dk={};Mj.Wm=Ki(2,qb(""));var ek="";Mj.Oi=ek;
 var Ij=new function(){this.ia=new Hj;this.D=this.O=!1;this.J=0;this.Ca=this.ab=this.Gb=this.T="";this.la=this.R=!1};function fk(){var a;a=a===void 0?[]:a;return Jj(a).join("~")}function gk(){var a=Ij.T.length;return Ij.T[a-1]==="/"?Ij.T.substring(0,a-1):Ij.T}function hk(){return Ij.D?E(84)?Ij.J===0:Ij.J!==1:!1}function ik(a){for(var b={},c=k(a.split("|")),d=c.next();!d.done;d=c.next())b[d.value]=!0;return b};var jk=new mb,kk={},lk={},ok={name:Pj,set:function(a,b){cd(Bb(a,b),kk);mk()},get:function(a){return nk(a,2)},reset:function(){jk=new mb;kk={};mk()}};function nk(a,b){return b!=2?jk.get(a):pk(a)}function pk(a,b){var c=a.split(".");b=b||[];for(var d=kk,e=0;e<c.length;e++){if(d===null)return!1;if(d===void 0)break;d=d[c[e]];if(b.indexOf(d)!==-1)return}return d}function qk(a,b){lk.hasOwnProperty(a)||(jk.set(a,b),cd(Bb(a,b),kk),mk())}
 function rk(){for(var a=["gtm.allowlist","gtm.blocklist","gtm.whitelist","gtm.blacklist","tagTypeBlacklist"],b=0;b<a.length;b++){var c=a[b],d=nk(c,1);if(Array.isArray(d)||bd(d))d=cd(d,null);lk[c]=d}}function mk(a){nb(lk,function(b,c){jk.set(b,c);cd(Bb(b),kk);cd(Bb(b,c),kk);a&&delete lk[b]})}function sk(a,b){var c,d=(b===void 0?2:b)!==1?pk(a):jk.get(a);$c(d)==="array"||$c(d)==="object"?c=cd(d,null):c=d;return c};
@@ -5637,7 +5671,8 @@ gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="Actividades – UCV Economía R4DS">
+<meta property="og:title" content="Tutorial Scrapy en R con rvest – UCV Economía R4DS">
+<meta property="og:description" content="Ciencia de Datos Basada en Programación en R para Economistas. Edición 2025-1">
 <meta property="og:site_name" content="UCV Economía R4DS">
 </head>
 
@@ -5650,7 +5685,7 @@ gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sobre el Curso</a></li><li class="breadcrumb-item"><a href="./index.html">Actividades</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Tutorial Scrapy en R con <code>rvest</code></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -5684,16 +5719,16 @@ gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Sobre el Curso</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Actividades</span></a>
   </div>
 </li>
@@ -5909,8 +5944,24 @@ gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#scrapy-en-r-con-rvest" id="toc-scrapy-en-r-con-rvest" class="nav-link active" data-scroll-target="#scrapy-en-r-con-rvest">Scrapy en R con <code>rvest</code></a></li>
+  <li><a href="#anatomía-de-una-página-web-html-básico" id="toc-anatomía-de-una-página-web-html-básico" class="nav-link" data-scroll-target="#anatomía-de-una-página-web-html-básico">Anatomía de una Página Web (HTML Básico)</a></li>
+  <li><a href="#etiquetas-tags" id="toc-etiquetas-tags" class="nav-link" data-scroll-target="#etiquetas-tags">1. Etiquetas (Tags)</a></li>
+  <li><a href="#extrayendo-etiquetas-con-rvest" id="toc-extrayendo-etiquetas-con-rvest" class="nav-link" data-scroll-target="#extrayendo-etiquetas-con-rvest">Extrayendo Etiquetas con <code>rvest</code></a></li>
+  <li><a href="#nodos-elementos" id="toc-nodos-elementos" class="nav-link" data-scroll-target="#nodos-elementos">2. Nodos (Elementos)</a></li>
+  <li><a href="#extrayendo-nodos-con-rvest" id="toc-extrayendo-nodos-con-rvest" class="nav-link" data-scroll-target="#extrayendo-nodos-con-rvest">Extrayendo Nodos con <code>rvest</code></a></li>
+  <li><a href="#clases-classes" id="toc-clases-classes" class="nav-link" data-scroll-target="#clases-classes">3. Clases (Classes)</a></li>
+  <li><a href="#extrayendo-nodos-por-clase-con-rvest" id="toc-extrayendo-nodos-por-clase-con-rvest" class="nav-link" data-scroll-target="#extrayendo-nodos-por-clase-con-rvest">Extrayendo Nodos por Clase con <code>rvest</code></a></li>
+  <li><a href="#atributos-attributes" id="toc-atributos-attributes" class="nav-link" data-scroll-target="#atributos-attributes">4. Atributos (Attributes)</a></li>
+  <li><a href="#extrayendo-atributos-con-rvest" id="toc-extrayendo-atributos-con-rvest" class="nav-link" data-scroll-target="#extrayendo-atributos-con-rvest">Extrayendo Atributos con <code>rvest</code></a></li>
+  <li><a href="#selectores-básicos-en-rvest-css-selectors" id="toc-selectores-básicos-en-rvest-css-selectors" class="nav-link" data-scroll-target="#selectores-básicos-en-rvest-css-selectors">Selectores Básicos en <code>rvest</code> (CSS Selectors)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -6271,7 +6322,7 @@ var wi=[1116352408,1899447441,3049323471,3921009573,961987163,1508970993,2453635
 4094571909,275423344,430227734,506948616,659060556,883997877,958139571,1322822218,1537002063,1747873779,1955562222,2024104815,2227730452,2361852424,2428436474,2756734187,3204031479,3329325298],vi;function Bi(){ui.call(this,8,Ci)}Aa(Bi,ui);var Ci=[1779033703,3144134277,1013904242,2773480762,1359893119,2600822924,528734635,1541459225];var Di=/^[0-9A-Fa-f]{64}$/;function Ei(a){try{return(new TextEncoder).encode(a)}catch(e){for(var b=[],c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b.push(d):d<2048?b.push(192|d>>6,128|d&63):d<55296||d>=57344?b.push(224|d>>12,128|d>>6&63,128|d&63):(d=65536+((d&1023)<<10|a.charCodeAt(++c)&1023),b.push(240|d>>18,128|d>>12&63,128|d>>6&63,128|d&63))}return new Uint8Array(b)}}
 function Fi(a){if(a===""||a==="e0")return Promise.resolve(a);var b;if((b=l.crypto)==null?0:b.subtle){if(Di.test(a))return Promise.resolve(a);try{var c=Ei(a);return l.crypto.subtle.digest("SHA-256",c).then(function(d){return Gi(d,l)}).catch(function(){return"e2"})}catch(d){return Promise.resolve("e2")}}else return Promise.resolve("e1")}
 function Gi(a,b){var c=Array.from(new Uint8Array(a)).map(function(d){return String.fromCharCode(d)}).join("");return b.btoa(c).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")};var Hi=[],Ii;function Ji(a){Ii?Ii(a):Hi.push(a)}function Ki(a,b){if(!E(190))return b;var c,d=!1;d=d===void 0?!1:d;var e,f;c=((e=data)==null?0:(f=e.blob)==null?0:f.hasOwnProperty(a))?!!data.blob[a]:d;return c!==b?(Ji(a),b):c}function Li(a,b){if(!E(190))return b;var c=Mi(a,"");return c!==b?(Ji(a),b):c}function Mi(a,b){b=b===void 0?"":b;var c,d;return((c=data)==null?0:(d=c.blob)==null?0:d.hasOwnProperty(a))?String(data.blob[a]):b}
-function Ni(a,b){if(!E(190))return b;var c,d,e;c=((d=data)==null?0:(e=d.blob)==null?0:e.hasOwnProperty(a))?Number(data.blob[a]):0;return c===b||isNaN(c)&&isNaN(b)?c:(Ji(a),b)}function Oi(){Ii=Pi;for(var a=k(Hi),b=a.next();!b.done;b=a.next())Ii(b.value);Hi.length=0};var Qi={fn:'100',gn:'10',hn:'1000',fo:'US-CO',ho:'US-CO',Bo:Li(44,'101509157~103116026~103200004~103233427~103351869~103351871~104617979~104617981~104661466~104661468~104718208~104736445~104736447')},Ri={Xo:Number(Qi.fn)||0,Yo:Number(Qi.gn)||0,ap:Number(Qi.hn)||0,vp:Qi.fo.split("~"),wp:Qi.ho.split("~"),Fq:Qi.Bo};Object.assign({},Ri);function N(a){Ya("GTM",a)};
+function Ni(a,b){if(!E(190))return b;var c,d,e;c=((d=data)==null?0:(e=d.blob)==null?0:e.hasOwnProperty(a))?Number(data.blob[a]):0;return c===b||isNaN(c)&&isNaN(b)?c:(Ji(a),b)}function Oi(){Ii=Pi;for(var a=k(Hi),b=a.next();!b.done;b=a.next())Ii(b.value);Hi.length=0};var Qi={fn:'100',gn:'10',hn:'1000',fo:'US-CO',ho:'US-CO',Bo:Li(44,'101509157~103116026~103200004~103233427~103351869~103351871~104617979~104617981~104661466~104661468~104684204~104684207~104718208~104736445~104736447')},Ri={Xo:Number(Qi.fn)||0,Yo:Number(Qi.gn)||0,ap:Number(Qi.hn)||0,vp:Qi.fo.split("~"),wp:Qi.ho.split("~"),Fq:Qi.Bo};Object.assign({},Ri);function N(a){Ya("GTM",a)};
 var Wi=function(a,b){var c=["tv.1"],d=Si(a);if(d)return c.push(d),{fb:!1,Pj:c.join("~"),pg:{}};var e={},f=0;var g=Ti(a,function(p,q,r){var t=p.value,u;if(r){var v=q+"__"+f++;u="${userData."+v+"|sha256}";e[v]=t}else u=encodeURIComponent(encodeURIComponent(t));var w;c.push(""+q+((w=p.index)!=null?w:"")+"."+u)}).fb;var h=c.join("~"),m={userData:e},n=b===3;return b===2||n?{fb:g,Pj:h,pg:m,Zo:n?"tv.9~${"+(h+
 "|encryptRsa}"):"tv.1~${"+(h+"|encrypt}"),encryptionKeyString:n?Ui():Vi()}:{fb:g,Pj:h,pg:m}},Yi=function(a){if(!(a!=null&&Object.keys(a).length>0))return!1;var b=Xi(a);return Ti(b,function(){}).fb},Ti=function(a,b){b=b===void 0?function(){}:b;for(var c=!1,d=!1,e=k(a),f=e.next();!f.done;f=e.next()){var g=f.value;if(g.value){var h=Zi[g.name];if(h){var m=$i(g);m&&(c=!0);d=!0;b(g,h,m)}}}return{fb:d,pj:c}},$i=function(a){var b=aj(a.name),c=/^e\d+$/.test(a.value),d;if(d=b&&!c){var e=a.value;d=!(bj.test(e)||
 Di.test(e))}return d},aj=function(a){return cj.indexOf(a)!==-1},Vi=function(){return'{\x22keys\x22:[{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BG904dy9WmhVIIN2dcA0nntGq1UgZbXnZdLdnazmhgnynSb4scGZ7898AB4JTEXhKpZyt/bI4c6pv3QFJCN8jcc\x3d\x22,\x22version\x22:0},\x22id\x22:\x22ab6723b9-2511-4f81-9cbd-e0d149a278cf\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BLpjiodJVqbXHjCX08Lld8KPCcDftXT1PLNwYFUZ4lewt6oPzk+zFS+SpTiA5B2AVGOEwVdDQjlCYjTdZbjyC8I\x3d\x22,\x22version\x22:0},\x22id\x22:\x22a3673cdc-b970-4045-a499-51d8c4352595\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BPMyGNvjmGlpCP2STM1WnoBMxEofvl4D/0l1ue1ScTFUEMAHqLbVq+4pAyr7nbTE7dXqK/3mnLAseTs8HwmR/LY\x3d\x22,\x22version\x22:0},\x22id\x22:\x228a8cc618-03a2-4904-889f-e39aef13e0b1\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BNORn+FghIYcBSP8FBXiQP9YIqpHq19J+Ww2IutW21aKRqE9/NO/EzSP6w7wzBvfPLWqHoe5MaG7WF5AmcP2tLs\x3d\x22,\x22version\x22:0},\x22id\x22:\x226d842905-6792-4050-9c1d-6b8b58dae2db\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BCbwodqwmiKhapTrvDCT/5oMNvQVr+cSmWFdVdydYAcUYqXw85kcCKqybq8MuinPMHgeHdVdwVKdc2w7boKPY0E\x3d\x22,\x22version\x22:0},\x22id\x22:\x225500c479-6e55-424a-b045-7a6d3f36b679\x22}]}'},fj=function(a){if(l.Promise){var b=void 0;return b}},kj=function(a,b,c,d,e){if(l.Promise)try{var f=Xi(a),g=gj(f,e).then(hj);return g}catch(p){}},mj=function(a){try{return hj(lj(Xi(a)))}catch(b){}},ej=function(a,b){var c=void 0;return c},hj=function(a){var b=a.Tc,c=a.time,d=["tv.1"],e=Si(b);if(e)return d.push(e),{Ab:encodeURIComponent(d.join("~")),pj:!1,fb:!1,time:c,oj:!0};var f=b.filter(function(n){return!$i(n)}),g=Ti(f,function(n,p){var q=n.value,r=n.index;r!==void 0&&(p+=r);d.push(p+"."+q)}),h=g.pj,m=g.fb;return{Ab:encodeURIComponent(d.join("~")),pj:h,fb:m,time:c,oj:!1}},Si=function(a){if(a.length===1&&a[0].name==="error_code")return Zi.error_code+
@@ -6281,7 +6332,7 @@ g(sj));e(m,"country",g(tj));for(var n=hb(a.address||{}),p=0;p<n.length;p++){var 
 "")},rj=function(a){return sj(a.replace(/\s/g,""))},sj=function(a){return sb(a.replace(xj,"").toLowerCase())},qj=function(a){a=a.replace(/[\s-()/.]/g,"");a.charAt(0)!=="+"&&(a="+"+a);return yj.test(a)?a:"e0"},pj=function(a){var b=a.toLowerCase().split("@");if(b.length===2){var c=b[0];/^(gmail|googlemail)\./.test(b[1])&&(c=c.replace(/\./g,""));c=c+"@"+b[1];if(zj.test(c))return c}return"e0"},lj=function(a){var b=Pc();try{a.forEach(function(e){if(e.value&&aj(e.name)){var f;var g=e.value,h=l;if(g===""||
 g==="e0"||Di.test(g))f=g;else try{var m=new Bi;m.update(Ei(g));f=Gi(m.digest(),h)}catch(n){f="e2"}e.value=f}});var c={Tc:a};if(b!==void 0){var d=Pc();b&&d&&(c.time=Math.round(d)-Math.round(b))}return c}catch(e){return{Tc:[]}}},gj=function(a,b){if(!a.some(function(d){return d.value&&aj(d.name)}))return Promise.resolve({Tc:a});if(!l.Promise)return Promise.resolve({Tc:[]});var c=b?Pc():void 0;return Promise.all(a.map(function(d){return d.value&&aj(d.name)?Fi(d.value).then(function(e){d.value=e}):Promise.resolve()})).then(function(){var d=
 {Tc:a};if(c!==void 0){var e=Pc();c&&e!==void 0&&(d.time=Math.round(e)-Math.round(c))}return d}).catch(function(){return{Tc:[]}})},xj=/[0-9`~!@#$%^&*()_\-+=:;<>,.?|/\\[\]]/g,zj=/^\S+@\S+\.\S+$/,yj=/^\+\d{10,15}$/,wj=/[.~]/g,bj=/^[0-9A-Za-z_-]{43}$/,Aj={},Zi=(Aj.email="em",Aj.phone_number="pn",Aj.first_name="fn",Aj.last_name="ln",Aj.street="sa",Aj.city="ct",Aj.region="rg",Aj.country="co",Aj.postal_code="pc",Aj.error_code="ec",Aj),Bj={},oj=(Bj.email="sha256_email_address",Bj.phone_number="sha256_phone_number",
-Bj.first_name="sha256_first_name",Bj.last_name="sha256_last_name",Bj.street="sha256_street",Bj);var cj=Object.freeze(["email","phone_number","first_name","last_name","street"]);var Cj={},Dj=(Cj[K.m.pb]=1,Cj[K.m.ld]=2,Cj[K.m.uc]=2,Cj[K.m.za]=3,Cj[K.m.Te]=4,Cj[K.m.Bg]=5,Cj[K.m.Hc]=6,Cj[K.m.kb]=6,Cj[K.m.qb]=6,Cj[K.m.dd]=6,Cj[K.m.Pb]=6,Cj[K.m.xb]=6,Cj[K.m.rb]=7,Cj[K.m.Sb]=9,Cj[K.m.Cg]=10,Cj[K.m.Lb]=11,Cj),Ej={},Fj=(Ej.unknown=13,Ej.standard=14,Ej.unique=15,Ej.per_session=16,Ej.transactions=17,Ej.items_sold=18,Ej);var $a=[];function Gj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=k(Object.keys(Dj)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Dj[f],h=b;h=h===void 0?!1:h;Ya("GTAG_EVENT_FEATURE_CHANNEL",g);h&&($a[g]=!0)}}};var Hj=function(){this.D=new Set;this.J=new Set},Jj=function(a){var b=Ij.ia;a=a===void 0?[]:a;var c=[].concat(ua(b.D)).concat([].concat(ua(b.J))).concat(a);c.sort(function(d,e){return d-e});return c},Kj=function(){var a=[].concat(ua(Ij.ia.D));a.sort(function(b,c){return b-c});return a},Lj=function(){var a=Ij.ia,b=Ri.Fq;a.D=new Set;if(b!=="")for(var c=k(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.D.add(e)}};var Mj={},Nj=Li(14,"56b1"),Oj=Ni(15,Number("0")),Pj=Li(19,"dataLayer");Li(20,"");Li(16,"ChEI8N65wgYQporytrzE0a3YARIlABifjpVV21OW0CvT6hzt0XZZ/hpvRUqDkZ8+cfSZzz9L8d3BHxoCuzI\x3d");var Qj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Rj={__paused:1,__tg:1},Sj;for(Sj in Qj)Qj.hasOwnProperty(Sj)&&(Rj[Sj]=1);var Tj=Ki(11,qb("true")),Uj=!1,Vj,Wj=!1;Wj=!0;
+Bj.first_name="sha256_first_name",Bj.last_name="sha256_last_name",Bj.street="sha256_street",Bj);var cj=Object.freeze(["email","phone_number","first_name","last_name","street"]);var Cj={},Dj=(Cj[K.m.pb]=1,Cj[K.m.ld]=2,Cj[K.m.uc]=2,Cj[K.m.za]=3,Cj[K.m.Te]=4,Cj[K.m.Bg]=5,Cj[K.m.Hc]=6,Cj[K.m.kb]=6,Cj[K.m.qb]=6,Cj[K.m.dd]=6,Cj[K.m.Pb]=6,Cj[K.m.xb]=6,Cj[K.m.rb]=7,Cj[K.m.Sb]=9,Cj[K.m.Cg]=10,Cj[K.m.Lb]=11,Cj),Ej={},Fj=(Ej.unknown=13,Ej.standard=14,Ej.unique=15,Ej.per_session=16,Ej.transactions=17,Ej.items_sold=18,Ej);var $a=[];function Gj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=k(Object.keys(Dj)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Dj[f],h=b;h=h===void 0?!1:h;Ya("GTAG_EVENT_FEATURE_CHANNEL",g);h&&($a[g]=!0)}}};var Hj=function(){this.D=new Set;this.J=new Set},Jj=function(a){var b=Ij.ia;a=a===void 0?[]:a;var c=[].concat(ua(b.D)).concat([].concat(ua(b.J))).concat(a);c.sort(function(d,e){return d-e});return c},Kj=function(){var a=[].concat(ua(Ij.ia.D));a.sort(function(b,c){return b-c});return a},Lj=function(){var a=Ij.ia,b=Ri.Fq;a.D=new Set;if(b!=="")for(var c=k(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.D.add(e)}};var Mj={},Nj=Li(14,"56b1"),Oj=Ni(15,Number("1")),Pj=Li(19,"dataLayer");Li(20,"");Li(16,"ChEI8N65wgYQporytrzE0a3YARIlABifjpXcHJpRrceWjKqp+mwuhaJ7xTwC14I+suLS9R+ClKNZhBoC/O8\x3d");var Qj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Rj={__paused:1,__tg:1},Sj;for(Sj in Qj)Qj.hasOwnProperty(Sj)&&(Rj[Sj]=1);var Tj=Ki(11,qb("true")),Uj=!1,Vj,Wj=!1;Wj=!0;
 Vj=Wj;var Xj,Yj=!1;Xj=Yj;Mj.Ag=Li(3,"www.googletagmanager.com");var Zj=""+Mj.Ag+(Vj?"/gtag/js":"/gtm.js"),ak=null,bk=null,ck={},dk={};Mj.Wm=Ki(2,qb(""));var ek="";Mj.Oi=ek;
 var Ij=new function(){this.ia=new Hj;this.D=this.O=!1;this.J=0;this.Ca=this.ab=this.Gb=this.T="";this.la=this.R=!1};function fk(){var a;a=a===void 0?[]:a;return Jj(a).join("~")}function gk(){var a=Ij.T.length;return Ij.T[a-1]==="/"?Ij.T.substring(0,a-1):Ij.T}function hk(){return Ij.D?E(84)?Ij.J===0:Ij.J!==1:!1}function ik(a){for(var b={},c=k(a.split("|")),d=c.next();!d.done;d=c.next())b[d.value]=!0;return b};var jk=new mb,kk={},lk={},ok={name:Pj,set:function(a,b){cd(Bb(a,b),kk);mk()},get:function(a){return nk(a,2)},reset:function(){jk=new mb;kk={};mk()}};function nk(a,b){return b!=2?jk.get(a):pk(a)}function pk(a,b){var c=a.split(".");b=b||[];for(var d=kk,e=0;e<c.length;e++){if(d===null)return!1;if(d===void 0)break;d=d[c[e]];if(b.indexOf(d)!==-1)return}return d}function qk(a,b){lk.hasOwnProperty(a)||(jk.set(a,b),cd(Bb(a,b),kk),mk())}
 function rk(){for(var a=["gtm.allowlist","gtm.blocklist","gtm.whitelist","gtm.blacklist","tagTypeBlacklist"],b=0;b<a.length;b++){var c=a[b],d=nk(c,1);if(Array.isArray(d)||bd(d))d=cd(d,null);lk[c]=d}}function mk(a){nb(lk,function(b,c){jk.set(b,c);cd(Bb(b),kk);cd(Bb(b,c),kk);a&&delete lk[b]})}function sk(a,b){var c,d=(b===void 0?2:b)!==1?pk(a):jk.get(a);$c(d)==="array"||$c(d)==="object"?c=cd(d,null):c=d;return c};
@@ -6851,9 +6902,9 @@ h[h.jk]="COOKIE";h[h.ol]="EXTENSION_PARAM";var m=void 0,n=void 0,p=Ik(l.location
   gtag('config', 'G-5BVQ49LXJG');
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sobre el Curso</a></li><li class="breadcrumb-item"><a href="./index.html">Actividades</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Actividades</h1>
+<h1 class="title">Tutorial Scrapy en R con <code>rvest</code></h1>
 </div>
 
 
@@ -6870,646 +6921,346 @@ h[h.jk]="COOKIE";h[h.ol]="EXTENSION_PARAM";var m=void 0,n=void 0,p=Ik(l.location
 </header>
 
 
+<hr>
+<section id="scrapy-en-r-con-rvest" class="level3">
+<h3 class="anchored" data-anchor-id="scrapy-en-r-con-rvest">Scrapy en R con <code>rvest</code></h3>
+<ul>
+<li><p><strong>Scraping Web:</strong> Es el proceso de extraer datos de páginas web.</p></li>
+<li><p><strong><code>rvest</code>:</strong> Un paquete de R diseñado para hacer web scraping de manera sencilla e intuitiva.</p></li>
+<li><p><strong>¿Por qué es útil?</strong></p>
+<ul>
+<li><p>Recopilar grandes volúmenes de datos de la web.</p></li>
+<li><p>Automatizar la obtención de información.</p></li>
+<li><p>Análisis de datos a partir de fuentes web.</p></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="anatomía-de-una-página-web-html-básico" class="level3">
+<h3 class="anchored" data-anchor-id="anatomía-de-una-página-web-html-básico">Anatomía de una Página Web (HTML Básico)</h3>
+<p>Las páginas web están construidas con <strong>HTML (HyperText Markup Language)</strong>. HTML utiliza una estructura de árbol con <strong>elementos</strong> o <strong>nodos</strong>.</p>
+<p>Consideremos un ejemplo de HTML :</p>
+<p>HTML</p>
 <div class="cell">
-<div class="cell-output-display">
-<div id="gisqkhaeiz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gisqkhaeiz table {
-font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-#gisqkhaeiz thead, #gisqkhaeiz tbody, #gisqkhaeiz tfoot, #gisqkhaeiz tr, #gisqkhaeiz td, #gisqkhaeiz th {
-border-style: none;
-}
-#gisqkhaeiz p {
-margin: 0;
-padding: 0;
-}
-#gisqkhaeiz .gt_table {
-display: table;
-border-collapse: collapse;
-line-height: normal;
-margin-left: auto;
-margin-right: auto;
-color: #333333;
-font-size: 13px;
-font-weight: normal;
-font-style: normal;
-background-color: #FFFFFF;
-width: auto;
-border-top-style: solid;
-border-top-width: 2px;
-border-top-color: #A8A8A8;
-border-right-style: none;
-border-right-width: 2px;
-border-right-color: #D3D3D3;
-border-bottom-style: solid;
-border-bottom-width: 2px;
-border-bottom-color: #A8A8A8;
-border-left-style: none;
-border-left-width: 2px;
-border-left-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_caption {
-padding-top: 4px;
-padding-bottom: 4px;
-}
-#gisqkhaeiz .gt_title {
-color: #333333;
-font-size: 125%;
-font-weight: initial;
-padding-top: 4px;
-padding-bottom: 4px;
-padding-left: 5px;
-padding-right: 5px;
-border-bottom-color: #FFFFFF;
-border-bottom-width: 0;
-}
-#gisqkhaeiz .gt_subtitle {
-color: #333333;
-font-size: 85%;
-font-weight: initial;
-padding-top: 3px;
-padding-bottom: 5px;
-padding-left: 5px;
-padding-right: 5px;
-border-top-color: #FFFFFF;
-border-top-width: 0;
-}
-#gisqkhaeiz .gt_heading {
-background-color: #FFFFFF;
-text-align: center;
-border-bottom-color: #FFFFFF;
-border-left-style: none;
-border-left-width: 1px;
-border-left-color: #D3D3D3;
-border-right-style: none;
-border-right-width: 1px;
-border-right-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_bottom_border {
-border-bottom-style: solid;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_col_headings {
-border-top-style: solid;
-border-top-width: 2px;
-border-top-color: #D3D3D3;
-border-bottom-style: solid;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-border-left-style: none;
-border-left-width: 1px;
-border-left-color: #D3D3D3;
-border-right-style: none;
-border-right-width: 1px;
-border-right-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_col_heading {
-color: #333333;
-background-color: #FFFFFF;
-font-size: 100%;
-font-weight: normal;
-text-transform: inherit;
-border-left-style: none;
-border-left-width: 1px;
-border-left-color: #D3D3D3;
-border-right-style: none;
-border-right-width: 1px;
-border-right-color: #D3D3D3;
-vertical-align: bottom;
-padding-top: 5px;
-padding-bottom: 6px;
-padding-left: 5px;
-padding-right: 5px;
-overflow-x: hidden;
-}
-#gisqkhaeiz .gt_column_spanner_outer {
-color: #333333;
-background-color: #FFFFFF;
-font-size: 100%;
-font-weight: normal;
-text-transform: inherit;
-padding-top: 0;
-padding-bottom: 0;
-padding-left: 4px;
-padding-right: 4px;
-}
-#gisqkhaeiz .gt_column_spanner_outer:first-child {
-padding-left: 0;
-}
-#gisqkhaeiz .gt_column_spanner_outer:last-child {
-padding-right: 0;
-}
-#gisqkhaeiz .gt_column_spanner {
-border-bottom-style: solid;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-vertical-align: bottom;
-padding-top: 5px;
-padding-bottom: 5px;
-overflow-x: hidden;
-display: inline-block;
-width: 100%;
-}
-#gisqkhaeiz .gt_spanner_row {
-border-bottom-style: hidden;
-}
-#gisqkhaeiz .gt_group_heading {
-padding-top: 8px;
-padding-bottom: 8px;
-padding-left: 5px;
-padding-right: 5px;
-color: #333333;
-background-color: #FFFFFF;
-font-size: 100%;
-font-weight: initial;
-text-transform: inherit;
-border-top-style: solid;
-border-top-width: 2px;
-border-top-color: #D3D3D3;
-border-bottom-style: solid;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-border-left-style: none;
-border-left-width: 1px;
-border-left-color: #D3D3D3;
-border-right-style: none;
-border-right-width: 1px;
-border-right-color: #D3D3D3;
-vertical-align: middle;
-text-align: left;
-}
-#gisqkhaeiz .gt_empty_group_heading {
-padding: 0.5px;
-color: #333333;
-background-color: #FFFFFF;
-font-size: 100%;
-font-weight: initial;
-border-top-style: solid;
-border-top-width: 2px;
-border-top-color: #D3D3D3;
-border-bottom-style: solid;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-vertical-align: middle;
-}
-#gisqkhaeiz .gt_from_md > :first-child {
-margin-top: 0;
-}
-#gisqkhaeiz .gt_from_md > :last-child {
-margin-bottom: 0;
-}
-#gisqkhaeiz .gt_row {
-padding-top: 8px;
-padding-bottom: 8px;
-padding-left: 5px;
-padding-right: 5px;
-margin: 10px;
-border-top-style: solid;
-border-top-width: 1px;
-border-top-color: #D3D3D3;
-border-left-style: none;
-border-left-width: 1px;
-border-left-color: #D3D3D3;
-border-right-style: none;
-border-right-width: 1px;
-border-right-color: #D3D3D3;
-vertical-align: middle;
-overflow-x: hidden;
-}
-#gisqkhaeiz .gt_stub {
-color: #333333;
-background-color: #FFFFFF;
-font-size: 100%;
-font-weight: initial;
-text-transform: inherit;
-border-right-style: solid;
-border-right-width: 2px;
-border-right-color: #D3D3D3;
-padding-left: 5px;
-padding-right: 5px;
-}
-#gisqkhaeiz .gt_stub_row_group {
-color: #333333;
-background-color: #FFFFFF;
-font-size: 100%;
-font-weight: initial;
-text-transform: inherit;
-border-right-style: solid;
-border-right-width: 2px;
-border-right-color: #D3D3D3;
-padding-left: 5px;
-padding-right: 5px;
-vertical-align: top;
-}
-#gisqkhaeiz .gt_row_group_first td {
-border-top-width: 2px;
-}
-#gisqkhaeiz .gt_row_group_first th {
-border-top-width: 2px;
-}
-#gisqkhaeiz .gt_summary_row {
-color: #333333;
-background-color: #FFFFFF;
-text-transform: inherit;
-padding-top: 8px;
-padding-bottom: 8px;
-padding-left: 5px;
-padding-right: 5px;
-}
-#gisqkhaeiz .gt_first_summary_row {
-border-top-style: solid;
-border-top-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_first_summary_row.thick {
-border-top-width: 2px;
-}
-#gisqkhaeiz .gt_last_summary_row {
-padding-top: 8px;
-padding-bottom: 8px;
-padding-left: 5px;
-padding-right: 5px;
-border-bottom-style: solid;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_grand_summary_row {
-color: #333333;
-background-color: #FFFFFF;
-text-transform: inherit;
-padding-top: 8px;
-padding-bottom: 8px;
-padding-left: 5px;
-padding-right: 5px;
-}
-#gisqkhaeiz .gt_first_grand_summary_row {
-padding-top: 8px;
-padding-bottom: 8px;
-padding-left: 5px;
-padding-right: 5px;
-border-top-style: double;
-border-top-width: 6px;
-border-top-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_last_grand_summary_row_top {
-padding-top: 8px;
-padding-bottom: 8px;
-padding-left: 5px;
-padding-right: 5px;
-border-bottom-style: double;
-border-bottom-width: 6px;
-border-bottom-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_striped {
-background-color: rgba(128, 128, 128, 0.05);
-}
-#gisqkhaeiz .gt_table_body {
-border-top-style: solid;
-border-top-width: 2px;
-border-top-color: #D3D3D3;
-border-bottom-style: solid;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_footnotes {
-color: #333333;
-background-color: #FFFFFF;
-border-bottom-style: none;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-border-left-style: none;
-border-left-width: 2px;
-border-left-color: #D3D3D3;
-border-right-style: none;
-border-right-width: 2px;
-border-right-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_footnote {
-margin: 0px;
-font-size: 90%;
-padding-top: 4px;
-padding-bottom: 4px;
-padding-left: 5px;
-padding-right: 5px;
-}
-#gisqkhaeiz .gt_sourcenotes {
-color: #333333;
-background-color: #FFFFFF;
-border-bottom-style: none;
-border-bottom-width: 2px;
-border-bottom-color: #D3D3D3;
-border-left-style: none;
-border-left-width: 2px;
-border-left-color: #D3D3D3;
-border-right-style: none;
-border-right-width: 2px;
-border-right-color: #D3D3D3;
-}
-#gisqkhaeiz .gt_sourcenote {
-font-size: 90%;
-padding-top: 4px;
-padding-bottom: 4px;
-padding-left: 5px;
-padding-right: 5px;
-}
-#gisqkhaeiz .gt_left {
-text-align: left;
-}
-#gisqkhaeiz .gt_center {
-text-align: center;
-}
-#gisqkhaeiz .gt_right {
-text-align: right;
-font-variant-numeric: tabular-nums;
-}
-#gisqkhaeiz .gt_font_normal {
-font-weight: normal;
-}
-#gisqkhaeiz .gt_font_bold {
-font-weight: bold;
-}
-#gisqkhaeiz .gt_font_italic {
-font-style: italic;
-}
-#gisqkhaeiz .gt_super {
-font-size: 65%;
-}
-#gisqkhaeiz .gt_footnote_marks {
-font-size: 75%;
-vertical-align: 0.4em;
-position: initial;
-}
-#gisqkhaeiz .gt_asterisk {
-font-size: 100%;
-vertical-align: 0;
-}
-#gisqkhaeiz .gt_indent_1 {
-text-indent: 5px;
-}
-#gisqkhaeiz .gt_indent_2 {
-text-indent: 10px;
-}
-#gisqkhaeiz .gt_indent_3 {
-text-indent: 15px;
-}
-#gisqkhaeiz .gt_indent_4 {
-text-indent: 20px;
-}
-#gisqkhaeiz .gt_indent_5 {
-text-indent: 25px;
-}
-#gisqkhaeiz .katex-display {
-display: inline-flex !important;
-margin-bottom: 0.75em !important;
-}
-#gisqkhaeiz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-height: 0px !important;
-}
-</style>
-
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<thead>
-<tr class="header gt_col_headings">
-<th id="semana" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>SEMANA</strong></th>
-<th id="fecha" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"><strong>FECHA</strong></th>
-<th id="tema" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>TEMA</strong></th>
-<th id="materiales" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>MATERIALES</strong></th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Mi Primera Página<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;titulo-principal&quot;</span><span class="dt">&gt;</span>¡Hola, Mundo!<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;parrafo-intro&quot;</span><span class="dt">&gt;</span>Este es un párrafo de introducción.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://www.ejemplo.com&quot;</span><span class="ot"> target</span><span class="op">=</span><span class="st">&quot;_blank&quot;</span><span class="dt">&gt;</span>Visita Ejemplo<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;caja-informacion&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">span</span><span class="dt">&gt;</span>Información Importante<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;images/img_scrapy.png&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Demo Imagen&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="etiquetas-tags" class="level3">
+<h3 class="anchored" data-anchor-id="etiquetas-tags">1. Etiquetas (Tags)</h3>
+<ul>
+<li><p>Las <strong>etiquetas</strong> son los nombres de los elementos HTML, encerrados entre <code>&lt;</code> y <code>&gt;</code>.</p></li>
+<li><p>Indican el tipo de contenido o la función de una parte de la página.</p></li>
+<li><p>Siempre vienen en pares de apertura y cierre (ej. <code>&lt;h1&gt;</code> y <code>&lt;/h1&gt;</code>), aunque hay excepciones (ej. <code>&lt;img&gt;</code>).</p></li>
+</ul>
+<p><strong>Ejemplos de etiquetas en nuestro HTML de ejemplo:</strong></p>
+<ul>
+<li><p><code>&lt;html&gt;</code>: Raíz del documento.</p></li>
+<li><p><code>&lt;head&gt;</code>: Contiene metadatos (título, enlaces a CSS, etc.).</p></li>
+<li><p><code>&lt;body&gt;</code>: Contenido visible de la página.</p></li>
+<li><p><code>&lt;h1&gt;</code>: Encabezado de nivel 1.</p></li>
+<li><p><code>&lt;p&gt;</code>: Párrafo.</p></li>
+<li><p><code>&lt;a&gt;</code>: Enlace (anchor).</p></li>
+<li><p><code>&lt;div&gt;</code>: Contenedor genérico.</p></li>
+<li><p><code>&lt;span&gt;</code>: Contenedor en línea.</p></li>
+<li><p><code>&lt;img&gt;</code>: Imagen.</p></li>
+</ul>
+<hr>
+</section>
+<section id="extrayendo-etiquetas-con-rvest" class="level3">
+<h3 class="anchored" data-anchor-id="extrayendo-etiquetas-con-rvest">Extrayendo Etiquetas con <code>rvest</code></h3>
+<p>Primero, necesitamos cargar el HTML en R. Usaremos una forma sencilla de crear un documento HTML en memoria para el ejemplo. En un caso real, leerías una URL mediante la función <code>read_html</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xml2) <span class="co"># rvest depende de xml2 para manipular el DOM</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># HTML de ejemplo como un string</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>html_ejemplo <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;!DOCTYPE html&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;html&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;head&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;title&gt;Mi Primera Página&lt;/title&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/head&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;body&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;h1 class=&quot;titulo-principal&quot;&gt;¡Hola, Mundo!&lt;/h1&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;p id=&quot;parrafo-intro&quot;&gt;Este es un párrafo de introducción.&lt;/p&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;a href=&quot;https://www.ejemplo.com&quot; target=&quot;_blank&quot;&gt;Visita Ejemplo&lt;/a&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div class=&quot;caja-informacion&quot;&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;span&gt;Información Importante&lt;/span&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;img src=&quot;imagen.png&quot; alt=&quot;Descripción de imagen&quot;&gt;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/body&gt;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/html&gt;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Leer el HTML</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>pagina_web <span class="ot">&lt;-</span> <span class="fu">read_html</span>(html_ejemplo)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraer el texto del primer h1</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>h1_texto <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;h1&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>h1_texto</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;¡Hola, Mundo!&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraer el texto del primer p</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>p_texto <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;p&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>p_texto</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;Este es un párrafo de introducción.&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraer todos los elementos &#39;a&#39; y sus textos</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>todos_enlaces_textos <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>todos_enlaces_textos</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;Visita Ejemplo&quot;</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="nodos-elementos" class="level3">
+<h3 class="anchored" data-anchor-id="nodos-elementos">2. Nodos (Elementos)</h3>
+<ul>
+<li><p>Un <strong>nodo</strong> o <strong>elemento</strong> es una instancia de una etiqueta, incluyendo su contenido y cualquier atributo.</p></li>
+<li><p>Representan las unidades fundamentales de la estructura de un documento HTML.</p></li>
+<li><p>Son los bloques de construcción del “árbol” DOM (Document Object Model).</p></li>
+</ul>
+<p><strong>Ejemplos de nodos en nuestro HTML de ejemplo:</strong></p>
+<ul>
+<li><p>Todo el bloque <code>&lt;h1&gt;¡Hola, Mundo!&lt;/h1&gt;</code> es un nodo.</p></li>
+<li><p>Todo el bloque <code>&lt;p id=&quot;parrafo-intro&quot;&gt;Este es un párrafo de introducción.&lt;/p&gt;</code> es otro nodo.</p></li>
+<li><p>El texto <code>&quot;¡Hola, Mundo!&quot;</code> dentro de <code>&lt;h1&gt;</code> es un <strong>nodo de texto</strong>, que es un tipo de nodo hijo.</p></li>
+</ul>
+<hr>
+</section>
+<section id="extrayendo-nodos-con-rvest" class="level3">
+<h3 class="anchored" data-anchor-id="extrayendo-nodos-con-rvest">Extrayendo Nodos con <code>rvest</code></h3>
+<p><code>rvest</code> nos permite seleccionar nodos específicos o colecciones de nodos.</p>
+<ul>
+<li><p><code>html_element()</code>: Selecciona el <em>primer</em> nodo que coincide con el selector.</p></li>
+<li><p><code>html_elements()</code>: Selecciona <em>todos</em> los nodos que coinciden con el selector.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar el primer elemento &lt;h1&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>primer_h1_nodo <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;h1&quot;</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>primer_h1_nodo <span class="co"># Esto mostrará el nodo completo</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{html_node}
+&lt;h1 class=&quot;titulo-principal&quot;&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar todos los elementos &lt;span&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>todos_span_nodos <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;span&quot;</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>todos_span_nodos <span class="co"># Esto mostrará una lista de nodos</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (1)}
+[1] &lt;span&gt;Información Importante&lt;/span&gt;</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="clases-classes" class="level3">
+<h3 class="anchored" data-anchor-id="clases-classes">3. Clases (Classes)</h3>
+<ul>
+<li><p>Las <strong>clases</strong> son atributos (<code>class=&quot;nombre-de-clase&quot;</code>) que se usan para categorizar y agrupar elementos HTML.</p></li>
+<li><p>Permiten aplicar estilos CSS o seleccionar elementos con JavaScript/Rvest que comparten una característica.</p></li>
+<li><p>Un elemento puede tener múltiples clases, separadas por espacios (ej. <code>class=&quot;clase1 clase2&quot;</code>).</p></li>
+</ul>
+<p><strong>Ejemplos de clases en nuestro HTML de ejemplo:</strong></p>
+<ul>
+<li><p><code>class=&quot;titulo-principal&quot;</code> en <code>&lt;h1&gt;</code></p></li>
+<li><p><code>class=&quot;caja-informacion&quot;</code> en <code>&lt;div&gt;</code></p></li>
+</ul>
+<hr>
+</section>
+<section id="extrayendo-nodos-por-clase-con-rvest" class="level3">
+<h3 class="anchored" data-anchor-id="extrayendo-nodos-por-clase-con-rvest">Extrayendo Nodos por Clase con <code>rvest</code></h3>
+<p>Para seleccionar elementos por clase, usamos la sintaxis de selector CSS <code>.</code> seguido del nombre de la clase.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar el elemento con la clase &quot;titulo-principal&quot;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>elemento_por_clase <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;.titulo-principal&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>elemento_por_clase</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;¡Hola, Mundo!&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar el elemento con la clase &quot;caja-informacion&quot;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>caja_informacion_nodo <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;.caja-informacion&quot;</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>caja_informacion_nodo</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{html_node}
+&lt;div class=&quot;caja-informacion&quot;&gt;
+[1] &lt;span&gt;Información Importante&lt;/span&gt;
+[2] &lt;img src=&quot;imagen.png&quot; alt=&quot;Descripción de imagen&quot;&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dentro de &quot;caja-informacion&quot;, seleccionar el &lt;span&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>span_dentro_caja <span class="ot">&lt;-</span> caja_informacion_nodo <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;span&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>()</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>span_dentro_caja</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;Información Importante&quot;</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="atributos-attributes" class="level3">
+<h3 class="anchored" data-anchor-id="atributos-attributes">4. Atributos (Attributes)</h3>
+<ul>
+<li><p>Los <strong>atributos</strong> son propiedades adicionales que se añaden a las etiquetas HTML para proporcionar más información sobre el elemento.</p></li>
+<li><p>Se colocan dentro de la etiqueta de apertura y tienen la forma <code>nombre=&quot;valor&quot;</code>.</p></li>
+</ul>
+<p><strong>Ejemplos de atributos en nuestro HTML de ejemplo:</strong></p>
+<ul>
+<li><p><code>id=&quot;parrafo-intro&quot;</code> en <code>&lt;p&gt;</code>: Un identificador único.</p></li>
+<li><p><code>href=&quot;https://www.ejemplo.com&quot;</code> en <code>&lt;a&gt;</code>: La URL de destino del enlace.</p></li>
+<li><p><code>target=&quot;_blank&quot;</code> en <code>&lt;a&gt;</code>: Indica que el enlace se abre en una nueva pestaña.</p></li>
+<li><p><code>src=&quot;imagen.png&quot;</code> en <code>&lt;img&gt;</code>: La ruta de la imagen.</p></li>
+<li><p><code>alt=&quot;Descripción de imagen&quot;</code> en <code>&lt;img&gt;</code>: Texto alternativo para la imagen.</p></li>
+</ul>
+<hr>
+</section>
+<section id="extrayendo-atributos-con-rvest" class="level3">
+<h3 class="anchored" data-anchor-id="extrayendo-atributos-con-rvest">Extrayendo Atributos con <code>rvest</code></h3>
+<p>Usamos <code>html_attr()</code> para extraer el valor de un atributo específico de un nodo. Si queremos todos los atributos, usamos <code>html_attrs()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar el enlace y extraer el atributo &#39;href&#39;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>enlace_href <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>enlace_href</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;https://www.ejemplo.com&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar el enlace y extraer el atributo &#39;target&#39;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>enlace_target <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;target&quot;</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>enlace_target</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;_blank&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar el párrafo por su ID y obtener el atributo &#39;id&#39;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Para seleccionar por ID, usamos la sintaxis CSS `#`</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>parrafo_id <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;#parrafo-intro&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;id&quot;</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>parrafo_id</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;parrafo-intro&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccionar la imagen y obtener su &#39;src&#39; y &#39;alt&#39;</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>imagen_src <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;img&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;src&quot;</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>imagen_alt <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;img&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;alt&quot;</span>)</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;SRC de la imagen:&quot;</span>, imagen_src)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;SRC de la imagen: imagen.png&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;ALT de la imagen:&quot;</span>, imagen_alt)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;ALT de la imagen: Descripción de imagen&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtener todos los atributos de un elemento (por ejemplo, el enlace)</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>todos_atributos_enlace <span class="ot">&lt;-</span> pagina_web <span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attrs</span>()</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>todos_atributos_enlace</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                     href                    target 
+&quot;https://www.ejemplo.com&quot;                  &quot;_blank&quot; </code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="selectores-básicos-en-rvest-css-selectors" class="level3">
+<h3 class="anchored" data-anchor-id="selectores-básicos-en-rvest-css-selectors">Selectores Básicos en <code>rvest</code> (CSS Selectors)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
 <tr class="odd">
-<td class="gt_row gt_center" headers="semana">1</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 19 mar.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Presentación Curso</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
+<td><strong>Elemento a Seleccionar</strong></td>
+<td><strong>Sintaxis rvest (html_element/html_elements)</strong></td>
+<td><strong>Ejemplo</strong></td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">2</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 24 mar.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Introducción Ciclo de Ciencia de Datos</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_01.html">🖥️ láminas clase 01</a></td>
+<td>Por Etiqueta</td>
+<td><code>&quot;etiqueta&quot;</code></td>
+<td><code>html_elements(&quot;p&quot;)</code></td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 26 mar.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Trabajando con R Base</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_02.html">🖥️ láminas clase 02</a><br> <a href="./clases/clase_02_playground.html">🖥️ láminas playground</a></td>
+<td>Por Clase</td>
+<td><code>&quot;.nombre-clase&quot;</code></td>
+<td><code>html_element(&quot;.titulo-principal&quot;)</code></td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">3</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 31 mar.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Trabajando con R Base/cont.</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_02_playground.html">🖥️ láminas playground</a><br><a href="./tutorial_instal.html">👨🏻‍🏫 tutorial instalación R y RStudio</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_03_script.R">👩🏽‍💻 script soporte clase 03</a></td>
+<td>Por ID</td>
+<td><code>&quot;#id-unico&quot;</code></td>
+<td><code>html_element(&quot;#parrafo-intro&quot;)</code></td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 2 abr.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Entorno de Desarrollo RStudio</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_04.html">🖥️ láminas clase 04</a><br><a href="./tutorial_rstudio.html">👨🏻‍🏫 tutorial Introducción RStudio</a></td>
+<td>Combinación</td>
+<td><code>&quot;etiqueta.clase&quot;</code> o <code>&quot;etiqueta#id&quot;</code></td>
+<td><code>html_element(&quot;p#parrafo-intro&quot;)</code></td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana"><br>
-</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">vie, 4 abr.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Rutas de Trabajo</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_05.html">🖥️ láminas clase 05</a><br><a href="https://www.youtube.com/watch?v=HgqY5j5jCxU">🎥 Video Crear Proyecto RStudio</a></td>
+<td>Hijos Directos</td>
+<td><code>&quot;padre &gt; hijo&quot;</code></td>
+<td><code>html_elements(&quot;div &gt; span&quot;)</code></td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_center" headers="semana">4</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 7 abr.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Crear Variables</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_06.html">🖥️ láminas clase 06</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana"><br>
-</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 9 abr.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Estructuras de Datos</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_07.html">🖥️ láminas clase 07</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_07_script.R">👩🏽‍💻 script soporte clase 07</a><br><a href="./tarea_02.html">🛠️ tarea 2</a><br><a href="./guia_listas.html">👨🏻‍🏫 Guía Complemento Clase 07: listas</a><br><a href="./guia_subsetting.html">👨🏻‍🏫 Guía Básica Subsettings</a><br><a href="./tutorial_rbase.html">👨🏻‍🏫 Guía Repaso Rbase</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana">5</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 21 abr.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Rutas de Trabajo</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_08_script.R">👩🏽‍💻 script soporte clase 08</a><br><br><a href="./tutorial_paths.html">👨🏻‍🏫 Tutorial Rutas de Trabajo</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana"><br>
-</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 23 abr.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Importar e Inspeccionar Conjunto de Datos</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_09.html">🖥️ láminas clase 09</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana">6</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 28 abr.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Reportes QMD/ Principios Gráficos Exploratorios</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_10.html">🖥️ láminas clase 10</a><br><a href="./proyectoccd.html">👩🏽‍🔬📊 Requerimientos para el Trabajo Ciclo C.D.</a><br> <a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_10_script.R">👩🏽‍💻 script soporte clase 10</a><br><a href="./tarea_03.html">🛠️ tarea 3</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana"><br>
-</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 30 abr.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Gráficos Exploratorios en sistema Base</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_11.html">🖥️ láminas clase 11</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">vie, 2 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Principios Visualización de Datos</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_12.html">🖥️ láminas clase 12</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">7</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 5 may.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Gráficos con ggplot / Parte I</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_13.html">🖥️ láminas clase 13</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_13_documento_quarto.qmd">👩🏽‍💻 qmd soporte reporte clase 13</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 7 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Gráficos con ggplot / Parte II</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="clases/clase_13#/geom_boxplot-composición-puntos-orden">🖥️ láminas clase 14</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">8</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 12 may.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Gráficos con ggplot / Parte II/ Trabajando con Data Frames por filas</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_13#/geom_col-asignar-a-una-variable">🖥️ láminas clase 15-ggplot</a><br><a href="clases/clase_15.html">🖥️ láminas clase 15: DF’s por filas</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 14 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">⏰ Exámen Parcial mitad semestre</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">9</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 19 may.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Trabajando con Data Frames por columnas</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_16.html">🖥️ láminas clase 16</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 21 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Trabajando con Data Frames por columnas: mutates; Crear funciones</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_16#/mutate">🖥️ láminas clase 17</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_17_script.R">👩🏽‍💻 script soporte clase 17</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">10</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 26 may.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Crear funciones 2da parte</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_18_script.R">👩🏽‍💻 script soporte clase 18</a></td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 28 may.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Agrupando datos y creando resúmenes</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_19">🖥️ láminas clase 19</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_19_script.R">👩🏽‍💻 script soporte clase 19</a><br>⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos <br>⏰ Suministro de requerimientos del proyecto final</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">11</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 2 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Agrupando datos y creando resúmenes. cont.</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_19">🖥️ láminas clase 19</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_19_script.R">👩🏽‍💻 script soporte clase 19</a><br>⏰ Entrega Trabajo Ciclo C.D. sobre un conjunto de datos <br>⏰ Suministro de requerimientos del proyecto final</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 4 jun.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Funciones Pivote</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./tutorial_pivotes">🖥️ soporte clase 20</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_20_script_pivot.R">👩🏽‍💻 script soporte clase 20</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">12</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 9 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Funciones Pivote, Descarga Valores Bursátiles</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">los mismos clase anterior</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 11 jun.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Familia de Funciones Apply</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><a href="./clases/clase_21.html">🖥️ láminas clase 21</a><br><a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_21_script.R">👩🏽‍💻 script soporte clase 21</a></td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">13</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 16 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Scrapy</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 18 jun.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Dashboard</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">14</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 23 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Conectando a API´s</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 25 jun.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Modelos de lenguaje</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">15</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 30 jun.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Elementos programación: ciclos, condicionales, factores, reciclaje</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 2 jul.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Joins, Fechas</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Entrega Proyecto Final</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="semana">16</td>
-<td class="gt_row gt_right gt_striped" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">lun, 7 jul.</td>
-<td class="gt_row gt_left gt_striped" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Análisis exploratorio</td>
-<td class="gt_row gt_left gt_striped" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="semana"><br>
-</td>
-<td class="gt_row gt_right" headers="fecha" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">mié, 9 jul.</td>
-<td class="gt_row gt_left" headers="tema" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Presentación Proyecto Final</td>
-<td class="gt_row gt_left" headers="materiales" style="border-right-width: 1px; border-right-style: solid; border-right-color: #D3D3D3">Presentación Proyecto Final</td>
+<td>Descendientes</td>
+<td><code>&quot;padre hijo&quot;</code></td>
+<td><code>html_elements(&quot;body a&quot;)</code></td>
 </tr>
 </tbody>
 </table>
 
-</div>
-</div>
-</div>
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

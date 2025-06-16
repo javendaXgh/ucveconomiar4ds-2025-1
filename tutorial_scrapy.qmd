@@ -1,0 +1,305 @@
+---
+title: "Tutorial Scrapy en R con `rvest`"
+output:
+  html_document:
+    toc: yes
+---
+
+------------------------------------------------------------------------
+
+### Scrapy en R con `rvest`
+
+-   **Scraping Web:** Es el proceso de extraer datos de páginas web.
+
+-   **`rvest`:** Un paquete de R diseñado para hacer web scraping de manera sencilla e intuitiva.
+
+-   **¿Por qué es útil?**
+
+    -   Recopilar grandes volúmenes de datos de la web.
+
+    -   Automatizar la obtención de información.
+
+    -   Análisis de datos a partir de fuentes web.
+
+------------------------------------------------------------------------
+
+### Anatomía de una Página Web (HTML Básico)
+
+Las páginas web están construidas con **HTML (HyperText Markup Language)**. HTML utiliza una estructura de árbol con **elementos** o **nodos**.
+
+Consideremos un ejemplo de HTML :
+
+HTML
+
+```{html}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Primera Página</title>
+</head>
+<body>
+    <h1 class="titulo-principal">¡Hola, Mundo!</h1>
+    <p id="parrafo-intro">Este es un párrafo de introducción.</p>
+    <a href="https://www.ejemplo.com" target="_blank">Visita Ejemplo</a>
+    <div class="caja-informacion">
+        <span>Información Importante</span>
+        <img src="images/img_scrapy.png" alt="Demo Imagen">
+    </div>
+</body>
+</html>
+
+```
+
+------------------------------------------------------------------------
+
+### 1. Etiquetas (Tags)
+
+-   Las **etiquetas** son los nombres de los elementos HTML, encerrados entre `<` y `>`.
+
+-   Indican el tipo de contenido o la función de una parte de la página.
+
+-   Siempre vienen en pares de apertura y cierre (ej. `<h1>` y `</h1>`), aunque hay excepciones (ej. `<img>`).
+
+**Ejemplos de etiquetas en nuestro HTML de ejemplo:**
+
+-   `<html>`: Raíz del documento.
+
+-   `<head>`: Contiene metadatos (título, enlaces a CSS, etc.).
+
+-   `<body>`: Contenido visible de la página.
+
+-   `<h1>`: Encabezado de nivel 1.
+
+-   `<p>`: Párrafo.
+
+-   `<a>`: Enlace (anchor).
+
+-   `<div>`: Contenedor genérico.
+
+-   `<span>`: Contenedor en línea.
+
+-   `<img>`: Imagen.
+
+------------------------------------------------------------------------
+
+### Extrayendo Etiquetas con `rvest`
+
+Primero, necesitamos cargar el HTML en R. Usaremos una forma sencilla de crear un documento HTML en memoria para el ejemplo. En un caso real, leerías una URL mediante la función `read_html`.
+
+```{r}
+library(rvest)
+library(xml2) # rvest depende de xml2 para manipular el DOM
+
+# HTML de ejemplo como un string
+html_ejemplo <- '
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Primera Página</title>
+</head>
+<body>
+    <h1 class="titulo-principal">¡Hola, Mundo!</h1>
+    <p id="parrafo-intro">Este es un párrafo de introducción.</p>
+    <a href="https://www.ejemplo.com" target="_blank">Visita Ejemplo</a>
+    <div class="caja-informacion">
+        <span>Información Importante</span>
+        <img src="imagen.png" alt="Descripción de imagen">
+    </div>
+</body>
+</html>
+'
+
+# Leer el HTML
+pagina_web <- read_html(html_ejemplo)
+
+# Extraer el texto del primer h1
+h1_texto <- pagina_web %>%
+  html_element("h1") %>%
+  html_text()
+
+h1_texto
+
+# Extraer el texto del primer p
+p_texto <- pagina_web %>%
+  html_element("p") %>%
+  html_text()
+
+p_texto
+
+# Extraer todos los elementos 'a' y sus textos
+todos_enlaces_textos <- pagina_web %>%
+  html_elements("a") %>%
+  html_text()
+
+todos_enlaces_textos
+```
+
+------------------------------------------------------------------------
+
+### 2. Nodos (Elementos)
+
+-   Un **nodo** o **elemento** es una instancia de una etiqueta, incluyendo su contenido y cualquier atributo.
+
+-   Representan las unidades fundamentales de la estructura de un documento HTML.
+
+-   Son los bloques de construcción del "árbol" DOM (Document Object Model).
+
+**Ejemplos de nodos en nuestro HTML de ejemplo:**
+
+-   Todo el bloque `<h1>¡Hola, Mundo!</h1>` es un nodo.
+
+-   Todo el bloque `<p id="parrafo-intro">Este es un párrafo de introducción.</p>` es otro nodo.
+
+-   El texto `"¡Hola, Mundo!"` dentro de `<h1>` es un **nodo de texto**, que es un tipo de nodo hijo.
+
+------------------------------------------------------------------------
+
+### Extrayendo Nodos con `rvest`
+
+`rvest` nos permite seleccionar nodos específicos o colecciones de nodos.
+
+-   `html_element()`: Selecciona el *primer* nodo que coincide con el selector.
+
+-   `html_elements()`: Selecciona *todos* los nodos que coinciden con el selector.
+
+```{r}
+# Seleccionar el primer elemento <h1>
+primer_h1_nodo <- pagina_web %>%
+  html_element("h1")
+
+primer_h1_nodo # Esto mostrará el nodo completo
+
+# Seleccionar todos los elementos <span>
+todos_span_nodos <- pagina_web %>%
+  html_elements("span")
+
+todos_span_nodos # Esto mostrará una lista de nodos
+```
+
+------------------------------------------------------------------------
+
+### 3. Clases (Classes)
+
+-   Las **clases** son atributos (`class="nombre-de-clase"`) que se usan para categorizar y agrupar elementos HTML.
+
+-   Permiten aplicar estilos CSS o seleccionar elementos con JavaScript/Rvest que comparten una característica.
+
+-   Un elemento puede tener múltiples clases, separadas por espacios (ej. `class="clase1 clase2"`).
+
+**Ejemplos de clases en nuestro HTML de ejemplo:**
+
+-   `class="titulo-principal"` en `<h1>`
+
+-   `class="caja-informacion"` en `<div>`
+
+------------------------------------------------------------------------
+
+### Extrayendo Nodos por Clase con `rvest`
+
+Para seleccionar elementos por clase, usamos la sintaxis de selector CSS `.` seguido del nombre de la clase.
+
+```{r}
+# Seleccionar el elemento con la clase "titulo-principal"
+elemento_por_clase <- pagina_web %>%
+  html_element(".titulo-principal") %>%
+  html_text()
+
+elemento_por_clase
+
+# Seleccionar el elemento con la clase "caja-informacion"
+caja_informacion_nodo <- pagina_web %>%
+  html_element(".caja-informacion")
+
+caja_informacion_nodo
+
+# Dentro de "caja-informacion", seleccionar el <span>
+span_dentro_caja <- caja_informacion_nodo %>%
+  html_element("span") %>%
+  html_text()
+
+span_dentro_caja
+```
+
+------------------------------------------------------------------------
+
+### 4. Atributos (Attributes)
+
+-   Los **atributos** son propiedades adicionales que se añaden a las etiquetas HTML para proporcionar más información sobre el elemento.
+
+-   Se colocan dentro de la etiqueta de apertura y tienen la forma `nombre="valor"`.
+
+**Ejemplos de atributos en nuestro HTML de ejemplo:**
+
+-   `id="parrafo-intro"` en `<p>`: Un identificador único.
+
+-   `href="https://www.ejemplo.com"` en `<a>`: La URL de destino del enlace.
+
+-   `target="_blank"` en `<a>`: Indica que el enlace se abre en una nueva pestaña.
+
+-   `src="imagen.png"` en `<img>`: La ruta de la imagen.
+
+-   `alt="Descripción de imagen"` en `<img>`: Texto alternativo para la imagen.
+
+------------------------------------------------------------------------
+
+### Extrayendo Atributos con `rvest`
+
+Usamos `html_attr()` para extraer el valor de un atributo específico de un nodo. Si queremos todos los atributos, usamos `html_attrs()`.
+
+```{r}
+
+# Seleccionar el enlace y extraer el atributo 'href'
+enlace_href <- pagina_web %>%
+  html_element("a") %>%
+  html_attr("href")
+
+enlace_href
+
+# Seleccionar el enlace y extraer el atributo 'target'
+enlace_target <- pagina_web %>%
+  html_element("a") %>%
+  html_attr("target")
+
+enlace_target
+
+# Seleccionar el párrafo por su ID y obtener el atributo 'id'
+# Para seleccionar por ID, usamos la sintaxis CSS `#`
+parrafo_id <- pagina_web %>%
+  html_element("#parrafo-intro") %>%
+  html_attr("id")
+
+parrafo_id
+
+# Seleccionar la imagen y obtener su 'src' y 'alt'
+imagen_src <- pagina_web %>%
+  html_element("img") %>%
+  html_attr("src")
+
+imagen_alt <- pagina_web %>%
+  html_element("img") %>%
+  html_attr("alt")
+
+paste("SRC de la imagen:", imagen_src)
+paste("ALT de la imagen:", imagen_alt)
+
+# Obtener todos los atributos de un elemento (por ejemplo, el enlace)
+todos_atributos_enlace <- pagina_web %>%
+  html_element("a") %>%
+  html_attrs()
+
+todos_atributos_enlace
+```
+
+------------------------------------------------------------------------
+
+### Selectores Básicos en `rvest` (CSS Selectors)
+
+|  |  |  |
+|------------------------|------------------------|------------------------|
+| **Elemento a Seleccionar** | **Sintaxis rvest (html_element/html_elements)** | **Ejemplo** |
+| Por Etiqueta | `"etiqueta"` | `html_elements("p")` |
+| Por Clase | `".nombre-clase"` | `html_element(".titulo-principal")` |
+| Por ID | `"#id-unico"` | `html_element("#parrafo-intro")` |
+| Combinación | `"etiqueta.clase"` o `"etiqueta#id"` | `html_element("p#parrafo-intro")` |
+| Hijos Directos | `"padre > hijo"` | `html_elements("div > span")` |
+| Descendientes | `"padre hijo"` | `html_elements("body a")` |
