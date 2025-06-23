@@ -318,6 +318,7 @@ gapminder |>
 -   Python:
     -   Dashboard: <https://mine.quarto.pub/dashing-through-snow-py>
     -   Código: <https://github.com/mine-cetinkaya-rundel/dashing-through-snow/blob/main/snowdash-py.qmd>
+
 ## Cards Compatibles
 <https://www.htmlwidgets.org/showcase_leaflet.html>
 

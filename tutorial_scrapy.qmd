@@ -295,7 +295,7 @@ todos_atributos_enlace
 ### Selectores Básicos en `rvest` (CSS Selectors)
 
 |  |  |  |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Elemento a Seleccionar** | **Sintaxis rvest (html_element/html_elements)** | **Ejemplo** |
 | Por Etiqueta | `"etiqueta"` | `html_elements("p")` |
 | Por Clase | `".nombre-clase"` | `html_element(".titulo-principal")` |
