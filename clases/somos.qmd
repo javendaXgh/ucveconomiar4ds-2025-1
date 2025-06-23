@@ -1,0 +1,18 @@
+---
+title: "El Conocimiento en Resguardo"
+format: revealjs
+---
+
+::::: columns
+::: {.column width="50%"}
+Prof. Daniel Cadenas
+
+![](images/dc.jpg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+Adm. Gerardo Cacique
+
+![](images/gerardocasique.png){fig-align="center" width="400"}
+:::
+:::::
