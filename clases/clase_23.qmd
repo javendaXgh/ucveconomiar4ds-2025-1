@@ -1,6 +1,7 @@
 ---
 title: "Clase 23: Quarto Dashboards"
 format: revealjs
+bibliography: references.bib
 ---
 
 ## Créditos de la Presentación
@@ -50,7 +51,7 @@ format: dashboard
 
 ## Barra de navegación y páginas
 
-![](images/clase23/navigation-toolbar.png) 
+![](images/clase23/navigation-toolbar.png)
 
 ::: {style="margin-top: 0.7em;"}
 ``` markdown
@@ -88,7 +89,7 @@ format: dashboard
 ```{{r}}
 ```
 
-## Columna
+## Column
 
 ```{{r}}
 ```
@@ -100,11 +101,8 @@ format: dashboard
 
 ::: {.column .fragment}
 ![](images/clase23/chart-input-sidebar.png)
-
 :::
 :::::
-
-
 
 ## Barras laterales: Global
 
@@ -120,12 +118,12 @@ format: dashboard
 
 Contenido de la barra lateral (ej. entradas)
 
-# Gráfico
+# Plot
 
 ```{{r}}
 ```
 
-# Datos
+# Data
 
 ```{{r}}
 ```
@@ -134,7 +132,6 @@ Contenido de la barra lateral (ej. entradas)
 
 ::: {.column .fragment}
 ![](images/clase23/global-sidebar.png){width="80%"}
-
 :::
 :::::
 
@@ -148,12 +145,12 @@ title: "Focal (Superior)"
 format: dashboard
 ---
 
-## Fila {height=70%}
+## Row {height=70%}
 
 ```{{r}}
 ```
 
-## Fila {height=30%}
+## Row {height=30%}
 
 ```{{r}}
 ```
@@ -165,7 +162,6 @@ format: dashboard
 
 ::: {.column .fragment}
 ![](images/clase23/chart-focal-top.png){width="90%"}
-
 :::
 :::::
 
@@ -183,12 +179,12 @@ format:
     orientation: columns
 ---
 
-## Columna {width=60%}
+## Column {width=60%}
 
 ```{{r}}
 ```
 
-## Columna {width=40%}
+## Column {width=40%}
 
 ```{{r}}
 ```
@@ -215,12 +211,12 @@ title: "Pingüinos de Palmer"
 format: dashboard
 ---
 
-## Fila
+## Row
 
 ```{{r}}
 ```
 
-## Fila {.tabset}
+## Row {.tabset}
 
 ```{{r}}
 #| title: Gráfico 2
@@ -268,7 +264,7 @@ Cada fragmento de código crea una tarjeta, no es necesario que tenga un título
 ::::: columns
 ::: {.column .fragment .smaller}
 ```` r
-```{{r}}
+```{r}
 library(gapminder)
 library(tidyverse)
 library(gt)
@@ -320,6 +316,7 @@ gapminder |>
     -   Código: <https://github.com/mine-cetinkaya-rundel/dashing-through-snow/blob/main/snowdash-py.qmd>
 
 ## Cards Compatibles
+
 <https://www.htmlwidgets.org/showcase_leaflet.html>
 
 ```{=html}
@@ -341,6 +338,3 @@ gapminder |>
 ```{=html}
 <iframe width="1000" height="400" src="https://quarto.org/docs/dashboards" frameborder="1" style="background:white;"></iframe>
 ```
-
-
-

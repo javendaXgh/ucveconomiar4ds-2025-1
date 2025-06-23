@@ -516,7 +516,7 @@ M.Sc. José Miguel Avendaño I.
 <span id="cb3-10"><a></a><span class="in">```{r}</span></span>
 <span id="cb3-11"><a></a><span class="in">```</span></span>
 <span id="cb3-12"><a></a></span>
-<span id="cb3-13"><a></a><span class="fu">## Columna</span></span>
+<span id="cb3-13"><a></a><span class="fu">## Column</span></span>
 <span id="cb3-14"><a></a></span>
 <span id="cb3-15"><a></a><span class="in">```{r}</span></span>
 <span id="cb3-16"><a></a><span class="in">```</span></span>
@@ -540,12 +540,12 @@ M.Sc. José Miguel Avendaño I.
 <span id="cb4-7"><a></a></span>
 <span id="cb4-8"><a></a>Contenido de la barra lateral (ej. entradas)</span>
 <span id="cb4-9"><a></a></span>
-<span id="cb4-10"><a></a><span class="fu"># Gráfico</span></span>
+<span id="cb4-10"><a></a><span class="fu"># Plot</span></span>
 <span id="cb4-11"><a></a></span>
 <span id="cb4-12"><a></a><span class="in">```{r}</span></span>
 <span id="cb4-13"><a></a><span class="in">```</span></span>
 <span id="cb4-14"><a></a></span>
-<span id="cb4-15"><a></a><span class="fu"># Datos</span></span>
+<span id="cb4-15"><a></a><span class="fu"># Data</span></span>
 <span id="cb4-16"><a></a></span>
 <span id="cb4-17"><a></a><span class="in">```{r}</span></span>
 <span id="cb4-18"><a></a><span class="in">```</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -562,12 +562,12 @@ M.Sc. José Miguel Avendaño I.
 <span id="cb5-3"><a></a><span class="an">format:</span><span class="co"> dashboard</span></span>
 <span id="cb5-4"><a></a><span class="co">---</span></span>
 <span id="cb5-5"><a></a></span>
-<span id="cb5-6"><a></a><span class="fu">## Fila {height=70%}</span></span>
+<span id="cb5-6"><a></a><span class="fu">## Row {height=70%}</span></span>
 <span id="cb5-7"><a></a></span>
 <span id="cb5-8"><a></a><span class="in">```{r}</span></span>
 <span id="cb5-9"><a></a><span class="in">```</span></span>
 <span id="cb5-10"><a></a></span>
-<span id="cb5-11"><a></a><span class="fu">## Fila {height=30%}</span></span>
+<span id="cb5-11"><a></a><span class="fu">## Row {height=30%}</span></span>
 <span id="cb5-12"><a></a></span>
 <span id="cb5-13"><a></a><span class="in">```{r}</span></span>
 <span id="cb5-14"><a></a><span class="in">```</span></span>
@@ -592,12 +592,12 @@ M.Sc. José Miguel Avendaño I.
 <span id="cb6-5"><a></a><span class="co">    orientation: columns</span></span>
 <span id="cb6-6"><a></a><span class="co">---</span></span>
 <span id="cb6-7"><a></a></span>
-<span id="cb6-8"><a></a><span class="fu">## Columna {width=60%}</span></span>
+<span id="cb6-8"><a></a><span class="fu">## Column {width=60%}</span></span>
 <span id="cb6-9"><a></a></span>
 <span id="cb6-10"><a></a><span class="in">```{r}</span></span>
 <span id="cb6-11"><a></a><span class="in">```</span></span>
 <span id="cb6-12"><a></a></span>
-<span id="cb6-13"><a></a><span class="fu">## Columna {width=40%}</span></span>
+<span id="cb6-13"><a></a><span class="fu">## Column {width=40%}</span></span>
 <span id="cb6-14"><a></a></span>
 <span id="cb6-15"><a></a><span class="in">```{r}</span></span>
 <span id="cb6-16"><a></a><span class="in">```</span></span>
@@ -620,12 +620,12 @@ M.Sc. José Miguel Avendaño I.
 <span id="cb7-3"><a></a><span class="an">format:</span><span class="co"> dashboard</span></span>
 <span id="cb7-4"><a></a><span class="co">---</span></span>
 <span id="cb7-5"><a></a></span>
-<span id="cb7-6"><a></a><span class="fu">## Fila</span></span>
+<span id="cb7-6"><a></a><span class="fu">## Row</span></span>
 <span id="cb7-7"><a></a></span>
 <span id="cb7-8"><a></a><span class="in">```{r}</span></span>
 <span id="cb7-9"><a></a><span class="in">```</span></span>
 <span id="cb7-10"><a></a></span>
-<span id="cb7-11"><a></a><span class="fu">## Fila {.tabset}</span></span>
+<span id="cb7-11"><a></a><span class="fu">## Row {.tabset}</span></span>
 <span id="cb7-12"><a></a></span>
 <span id="cb7-13"><a></a><span class="in">```{r}</span></span>
 <span id="cb7-14"><a></a><span class="in">#| title: Gráfico 2</span></span>
@@ -662,16 +662,564 @@ M.Sc. José Miguel Avendaño I.
 <p>Cada fragmento de código crea una tarjeta, no es necesario que tenga un título</p>
 <div class="columns">
 <div class="column fragment smaller">
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="st">```</span><span class="at">{r}</span></span>
-<span id="cb9-2"><a></a><span class="at">library(gapminder)</span></span>
-<span id="cb9-3"><a></a><span class="at">library(tidyverse)</span></span>
-<span id="cb9-4"><a></a><span class="at">library(gt)</span></span>
-<span id="cb9-5"><a></a><span class="at">gapminder |&gt;</span></span>
-<span id="cb9-6"><a></a><span class="at">  group_by(continent, year) |&gt;</span></span>
-<span id="cb9-7"><a></a><span class="at">  summarize(mean_lifeExp = round(mean(lifeExp), 1)) |&gt;</span></span>
-<span id="cb9-8"><a></a><span class="at">  pivot_wider(names_from = continent, values_from = mean_lifeExp) |&gt;</span></span>
-<span id="cb9-9"><a></a><span class="at">  gt()</span></span>
-<span id="cb9-10"><a></a><span class="st">```</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="sc">:::</span> {.cell}</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a><span class="st">```</span><span class="at">{.r .cell-code}</span></span>
+<span id="cb9-4"><a></a><span class="at">library(gapminder)</span></span>
+<span id="cb9-5"><a></a><span class="at">library(tidyverse)</span></span>
+<span id="cb9-6"><a></a><span class="at">library(gt)</span></span>
+<span id="cb9-7"><a></a><span class="at">gapminder |&gt;</span></span>
+<span id="cb9-8"><a></a><span class="at">  group_by(continent, year) |&gt;</span></span>
+<span id="cb9-9"><a></a><span class="at">  summarize(mean_lifeExp = round(mean(lifeExp), 1)) |&gt;</span></span>
+<span id="cb9-10"><a></a><span class="at">  pivot_wider(names_from = continent, values_from = mean_lifeExp) |&gt;</span></span>
+<span id="cb9-11"><a></a><span class="at">  gt()</span></span>
+<span id="cb9-12"><a></a><span class="st">```</span></span>
+<span id="cb9-13"><a></a></span>
+<span id="cb9-14"><a></a><span class="sc">:::</span> {.cell<span class="sc">-</span>output<span class="sc">-</span>display}</span>
+<span id="cb9-15"><a></a></span>
+<span id="cb9-16"><a></a><span class="st">```</span><span class="at">{=html}</span></span>
+<span id="cb9-17"><a></a><span class="at">&lt;div id="auexozzpni" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;"&gt;</span></span>
+<span id="cb9-18"><a></a><span class="at">&lt;style&gt;#auexozzpni table {</span></span>
+<span id="cb9-19"><a></a><span class="at">  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';</span></span>
+<span id="cb9-20"><a></a><span class="at">  -webkit-font-smoothing: antialiased;</span></span>
+<span id="cb9-21"><a></a><span class="at">  -moz-osx-font-smoothing: grayscale;</span></span>
+<span id="cb9-22"><a></a><span class="at">}</span></span>
+<span id="cb9-23"><a></a></span>
+<span id="cb9-24"><a></a><span class="at">#auexozzpni thead, #auexozzpni tbody, #auexozzpni tfoot, #auexozzpni tr, #auexozzpni td, #auexozzpni th {</span></span>
+<span id="cb9-25"><a></a><span class="at">  border-style: none;</span></span>
+<span id="cb9-26"><a></a><span class="at">}</span></span>
+<span id="cb9-27"><a></a></span>
+<span id="cb9-28"><a></a><span class="at">#auexozzpni p {</span></span>
+<span id="cb9-29"><a></a><span class="at">  margin: 0;</span></span>
+<span id="cb9-30"><a></a><span class="at">  padding: 0;</span></span>
+<span id="cb9-31"><a></a><span class="at">}</span></span>
+<span id="cb9-32"><a></a></span>
+<span id="cb9-33"><a></a><span class="at">#auexozzpni .gt_table {</span></span>
+<span id="cb9-34"><a></a><span class="at">  display: table;</span></span>
+<span id="cb9-35"><a></a><span class="at">  border-collapse: collapse;</span></span>
+<span id="cb9-36"><a></a><span class="at">  line-height: normal;</span></span>
+<span id="cb9-37"><a></a><span class="at">  margin-left: auto;</span></span>
+<span id="cb9-38"><a></a><span class="at">  margin-right: auto;</span></span>
+<span id="cb9-39"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-40"><a></a><span class="at">  font-size: 16px;</span></span>
+<span id="cb9-41"><a></a><span class="at">  font-weight: normal;</span></span>
+<span id="cb9-42"><a></a><span class="at">  font-style: normal;</span></span>
+<span id="cb9-43"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-44"><a></a><span class="at">  width: auto;</span></span>
+<span id="cb9-45"><a></a><span class="at">  border-top-style: solid;</span></span>
+<span id="cb9-46"><a></a><span class="at">  border-top-width: 2px;</span></span>
+<span id="cb9-47"><a></a><span class="at">  border-top-color: #A8A8A8;</span></span>
+<span id="cb9-48"><a></a><span class="at">  border-right-style: none;</span></span>
+<span id="cb9-49"><a></a><span class="at">  border-right-width: 2px;</span></span>
+<span id="cb9-50"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-51"><a></a><span class="at">  border-bottom-style: solid;</span></span>
+<span id="cb9-52"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-53"><a></a><span class="at">  border-bottom-color: #A8A8A8;</span></span>
+<span id="cb9-54"><a></a><span class="at">  border-left-style: none;</span></span>
+<span id="cb9-55"><a></a><span class="at">  border-left-width: 2px;</span></span>
+<span id="cb9-56"><a></a><span class="at">  border-left-color: #D3D3D3;</span></span>
+<span id="cb9-57"><a></a><span class="at">}</span></span>
+<span id="cb9-58"><a></a></span>
+<span id="cb9-59"><a></a><span class="at">#auexozzpni .gt_caption {</span></span>
+<span id="cb9-60"><a></a><span class="at">  padding-top: 4px;</span></span>
+<span id="cb9-61"><a></a><span class="at">  padding-bottom: 4px;</span></span>
+<span id="cb9-62"><a></a><span class="at">}</span></span>
+<span id="cb9-63"><a></a></span>
+<span id="cb9-64"><a></a><span class="at">#auexozzpni .gt_title {</span></span>
+<span id="cb9-65"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-66"><a></a><span class="at">  font-size: 125%;</span></span>
+<span id="cb9-67"><a></a><span class="at">  font-weight: initial;</span></span>
+<span id="cb9-68"><a></a><span class="at">  padding-top: 4px;</span></span>
+<span id="cb9-69"><a></a><span class="at">  padding-bottom: 4px;</span></span>
+<span id="cb9-70"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-71"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-72"><a></a><span class="at">  border-bottom-color: #FFFFFF;</span></span>
+<span id="cb9-73"><a></a><span class="at">  border-bottom-width: 0;</span></span>
+<span id="cb9-74"><a></a><span class="at">}</span></span>
+<span id="cb9-75"><a></a></span>
+<span id="cb9-76"><a></a><span class="at">#auexozzpni .gt_subtitle {</span></span>
+<span id="cb9-77"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-78"><a></a><span class="at">  font-size: 85%;</span></span>
+<span id="cb9-79"><a></a><span class="at">  font-weight: initial;</span></span>
+<span id="cb9-80"><a></a><span class="at">  padding-top: 3px;</span></span>
+<span id="cb9-81"><a></a><span class="at">  padding-bottom: 5px;</span></span>
+<span id="cb9-82"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-83"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-84"><a></a><span class="at">  border-top-color: #FFFFFF;</span></span>
+<span id="cb9-85"><a></a><span class="at">  border-top-width: 0;</span></span>
+<span id="cb9-86"><a></a><span class="at">}</span></span>
+<span id="cb9-87"><a></a></span>
+<span id="cb9-88"><a></a><span class="at">#auexozzpni .gt_heading {</span></span>
+<span id="cb9-89"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-90"><a></a><span class="at">  text-align: center;</span></span>
+<span id="cb9-91"><a></a><span class="at">  border-bottom-color: #FFFFFF;</span></span>
+<span id="cb9-92"><a></a><span class="at">  border-left-style: none;</span></span>
+<span id="cb9-93"><a></a><span class="at">  border-left-width: 1px;</span></span>
+<span id="cb9-94"><a></a><span class="at">  border-left-color: #D3D3D3;</span></span>
+<span id="cb9-95"><a></a><span class="at">  border-right-style: none;</span></span>
+<span id="cb9-96"><a></a><span class="at">  border-right-width: 1px;</span></span>
+<span id="cb9-97"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-98"><a></a><span class="at">}</span></span>
+<span id="cb9-99"><a></a></span>
+<span id="cb9-100"><a></a><span class="at">#auexozzpni .gt_bottom_border {</span></span>
+<span id="cb9-101"><a></a><span class="at">  border-bottom-style: solid;</span></span>
+<span id="cb9-102"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-103"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-104"><a></a><span class="at">}</span></span>
+<span id="cb9-105"><a></a></span>
+<span id="cb9-106"><a></a><span class="at">#auexozzpni .gt_col_headings {</span></span>
+<span id="cb9-107"><a></a><span class="at">  border-top-style: solid;</span></span>
+<span id="cb9-108"><a></a><span class="at">  border-top-width: 2px;</span></span>
+<span id="cb9-109"><a></a><span class="at">  border-top-color: #D3D3D3;</span></span>
+<span id="cb9-110"><a></a><span class="at">  border-bottom-style: solid;</span></span>
+<span id="cb9-111"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-112"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-113"><a></a><span class="at">  border-left-style: none;</span></span>
+<span id="cb9-114"><a></a><span class="at">  border-left-width: 1px;</span></span>
+<span id="cb9-115"><a></a><span class="at">  border-left-color: #D3D3D3;</span></span>
+<span id="cb9-116"><a></a><span class="at">  border-right-style: none;</span></span>
+<span id="cb9-117"><a></a><span class="at">  border-right-width: 1px;</span></span>
+<span id="cb9-118"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-119"><a></a><span class="at">}</span></span>
+<span id="cb9-120"><a></a></span>
+<span id="cb9-121"><a></a><span class="at">#auexozzpni .gt_col_heading {</span></span>
+<span id="cb9-122"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-123"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-124"><a></a><span class="at">  font-size: 100%;</span></span>
+<span id="cb9-125"><a></a><span class="at">  font-weight: normal;</span></span>
+<span id="cb9-126"><a></a><span class="at">  text-transform: inherit;</span></span>
+<span id="cb9-127"><a></a><span class="at">  border-left-style: none;</span></span>
+<span id="cb9-128"><a></a><span class="at">  border-left-width: 1px;</span></span>
+<span id="cb9-129"><a></a><span class="at">  border-left-color: #D3D3D3;</span></span>
+<span id="cb9-130"><a></a><span class="at">  border-right-style: none;</span></span>
+<span id="cb9-131"><a></a><span class="at">  border-right-width: 1px;</span></span>
+<span id="cb9-132"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-133"><a></a><span class="at">  vertical-align: bottom;</span></span>
+<span id="cb9-134"><a></a><span class="at">  padding-top: 5px;</span></span>
+<span id="cb9-135"><a></a><span class="at">  padding-bottom: 6px;</span></span>
+<span id="cb9-136"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-137"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-138"><a></a><span class="at">  overflow-x: hidden;</span></span>
+<span id="cb9-139"><a></a><span class="at">}</span></span>
+<span id="cb9-140"><a></a></span>
+<span id="cb9-141"><a></a><span class="at">#auexozzpni .gt_column_spanner_outer {</span></span>
+<span id="cb9-142"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-143"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-144"><a></a><span class="at">  font-size: 100%;</span></span>
+<span id="cb9-145"><a></a><span class="at">  font-weight: normal;</span></span>
+<span id="cb9-146"><a></a><span class="at">  text-transform: inherit;</span></span>
+<span id="cb9-147"><a></a><span class="at">  padding-top: 0;</span></span>
+<span id="cb9-148"><a></a><span class="at">  padding-bottom: 0;</span></span>
+<span id="cb9-149"><a></a><span class="at">  padding-left: 4px;</span></span>
+<span id="cb9-150"><a></a><span class="at">  padding-right: 4px;</span></span>
+<span id="cb9-151"><a></a><span class="at">}</span></span>
+<span id="cb9-152"><a></a></span>
+<span id="cb9-153"><a></a><span class="at">#auexozzpni .gt_column_spanner_outer:first-child {</span></span>
+<span id="cb9-154"><a></a><span class="at">  padding-left: 0;</span></span>
+<span id="cb9-155"><a></a><span class="at">}</span></span>
+<span id="cb9-156"><a></a></span>
+<span id="cb9-157"><a></a><span class="at">#auexozzpni .gt_column_spanner_outer:last-child {</span></span>
+<span id="cb9-158"><a></a><span class="at">  padding-right: 0;</span></span>
+<span id="cb9-159"><a></a><span class="at">}</span></span>
+<span id="cb9-160"><a></a></span>
+<span id="cb9-161"><a></a><span class="at">#auexozzpni .gt_column_spanner {</span></span>
+<span id="cb9-162"><a></a><span class="at">  border-bottom-style: solid;</span></span>
+<span id="cb9-163"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-164"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-165"><a></a><span class="at">  vertical-align: bottom;</span></span>
+<span id="cb9-166"><a></a><span class="at">  padding-top: 5px;</span></span>
+<span id="cb9-167"><a></a><span class="at">  padding-bottom: 5px;</span></span>
+<span id="cb9-168"><a></a><span class="at">  overflow-x: hidden;</span></span>
+<span id="cb9-169"><a></a><span class="at">  display: inline-block;</span></span>
+<span id="cb9-170"><a></a><span class="at">  width: 100%;</span></span>
+<span id="cb9-171"><a></a><span class="at">}</span></span>
+<span id="cb9-172"><a></a></span>
+<span id="cb9-173"><a></a><span class="at">#auexozzpni .gt_spanner_row {</span></span>
+<span id="cb9-174"><a></a><span class="at">  border-bottom-style: hidden;</span></span>
+<span id="cb9-175"><a></a><span class="at">}</span></span>
+<span id="cb9-176"><a></a></span>
+<span id="cb9-177"><a></a><span class="at">#auexozzpni .gt_group_heading {</span></span>
+<span id="cb9-178"><a></a><span class="at">  padding-top: 8px;</span></span>
+<span id="cb9-179"><a></a><span class="at">  padding-bottom: 8px;</span></span>
+<span id="cb9-180"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-181"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-182"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-183"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-184"><a></a><span class="at">  font-size: 100%;</span></span>
+<span id="cb9-185"><a></a><span class="at">  font-weight: initial;</span></span>
+<span id="cb9-186"><a></a><span class="at">  text-transform: inherit;</span></span>
+<span id="cb9-187"><a></a><span class="at">  border-top-style: solid;</span></span>
+<span id="cb9-188"><a></a><span class="at">  border-top-width: 2px;</span></span>
+<span id="cb9-189"><a></a><span class="at">  border-top-color: #D3D3D3;</span></span>
+<span id="cb9-190"><a></a><span class="at">  border-bottom-style: solid;</span></span>
+<span id="cb9-191"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-192"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-193"><a></a><span class="at">  border-left-style: none;</span></span>
+<span id="cb9-194"><a></a><span class="at">  border-left-width: 1px;</span></span>
+<span id="cb9-195"><a></a><span class="at">  border-left-color: #D3D3D3;</span></span>
+<span id="cb9-196"><a></a><span class="at">  border-right-style: none;</span></span>
+<span id="cb9-197"><a></a><span class="at">  border-right-width: 1px;</span></span>
+<span id="cb9-198"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-199"><a></a><span class="at">  vertical-align: middle;</span></span>
+<span id="cb9-200"><a></a><span class="at">  text-align: left;</span></span>
+<span id="cb9-201"><a></a><span class="at">}</span></span>
+<span id="cb9-202"><a></a></span>
+<span id="cb9-203"><a></a><span class="at">#auexozzpni .gt_empty_group_heading {</span></span>
+<span id="cb9-204"><a></a><span class="at">  padding: 0.5px;</span></span>
+<span id="cb9-205"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-206"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-207"><a></a><span class="at">  font-size: 100%;</span></span>
+<span id="cb9-208"><a></a><span class="at">  font-weight: initial;</span></span>
+<span id="cb9-209"><a></a><span class="at">  border-top-style: solid;</span></span>
+<span id="cb9-210"><a></a><span class="at">  border-top-width: 2px;</span></span>
+<span id="cb9-211"><a></a><span class="at">  border-top-color: #D3D3D3;</span></span>
+<span id="cb9-212"><a></a><span class="at">  border-bottom-style: solid;</span></span>
+<span id="cb9-213"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-214"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-215"><a></a><span class="at">  vertical-align: middle;</span></span>
+<span id="cb9-216"><a></a><span class="at">}</span></span>
+<span id="cb9-217"><a></a></span>
+<span id="cb9-218"><a></a><span class="at">#auexozzpni .gt_from_md &gt; :first-child {</span></span>
+<span id="cb9-219"><a></a><span class="at">  margin-top: 0;</span></span>
+<span id="cb9-220"><a></a><span class="at">}</span></span>
+<span id="cb9-221"><a></a></span>
+<span id="cb9-222"><a></a><span class="at">#auexozzpni .gt_from_md &gt; :last-child {</span></span>
+<span id="cb9-223"><a></a><span class="at">  margin-bottom: 0;</span></span>
+<span id="cb9-224"><a></a><span class="at">}</span></span>
+<span id="cb9-225"><a></a></span>
+<span id="cb9-226"><a></a><span class="at">#auexozzpni .gt_row {</span></span>
+<span id="cb9-227"><a></a><span class="at">  padding-top: 8px;</span></span>
+<span id="cb9-228"><a></a><span class="at">  padding-bottom: 8px;</span></span>
+<span id="cb9-229"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-230"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-231"><a></a><span class="at">  margin: 10px;</span></span>
+<span id="cb9-232"><a></a><span class="at">  border-top-style: solid;</span></span>
+<span id="cb9-233"><a></a><span class="at">  border-top-width: 1px;</span></span>
+<span id="cb9-234"><a></a><span class="at">  border-top-color: #D3D3D3;</span></span>
+<span id="cb9-235"><a></a><span class="at">  border-left-style: none;</span></span>
+<span id="cb9-236"><a></a><span class="at">  border-left-width: 1px;</span></span>
+<span id="cb9-237"><a></a><span class="at">  border-left-color: #D3D3D3;</span></span>
+<span id="cb9-238"><a></a><span class="at">  border-right-style: none;</span></span>
+<span id="cb9-239"><a></a><span class="at">  border-right-width: 1px;</span></span>
+<span id="cb9-240"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-241"><a></a><span class="at">  vertical-align: middle;</span></span>
+<span id="cb9-242"><a></a><span class="at">  overflow-x: hidden;</span></span>
+<span id="cb9-243"><a></a><span class="at">}</span></span>
+<span id="cb9-244"><a></a></span>
+<span id="cb9-245"><a></a><span class="at">#auexozzpni .gt_stub {</span></span>
+<span id="cb9-246"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-247"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-248"><a></a><span class="at">  font-size: 100%;</span></span>
+<span id="cb9-249"><a></a><span class="at">  font-weight: initial;</span></span>
+<span id="cb9-250"><a></a><span class="at">  text-transform: inherit;</span></span>
+<span id="cb9-251"><a></a><span class="at">  border-right-style: solid;</span></span>
+<span id="cb9-252"><a></a><span class="at">  border-right-width: 2px;</span></span>
+<span id="cb9-253"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-254"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-255"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-256"><a></a><span class="at">}</span></span>
+<span id="cb9-257"><a></a></span>
+<span id="cb9-258"><a></a><span class="at">#auexozzpni .gt_stub_row_group {</span></span>
+<span id="cb9-259"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-260"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-261"><a></a><span class="at">  font-size: 100%;</span></span>
+<span id="cb9-262"><a></a><span class="at">  font-weight: initial;</span></span>
+<span id="cb9-263"><a></a><span class="at">  text-transform: inherit;</span></span>
+<span id="cb9-264"><a></a><span class="at">  border-right-style: solid;</span></span>
+<span id="cb9-265"><a></a><span class="at">  border-right-width: 2px;</span></span>
+<span id="cb9-266"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-267"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-268"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-269"><a></a><span class="at">  vertical-align: top;</span></span>
+<span id="cb9-270"><a></a><span class="at">}</span></span>
+<span id="cb9-271"><a></a></span>
+<span id="cb9-272"><a></a><span class="at">#auexozzpni .gt_row_group_first td {</span></span>
+<span id="cb9-273"><a></a><span class="at">  border-top-width: 2px;</span></span>
+<span id="cb9-274"><a></a><span class="at">}</span></span>
+<span id="cb9-275"><a></a></span>
+<span id="cb9-276"><a></a><span class="at">#auexozzpni .gt_row_group_first th {</span></span>
+<span id="cb9-277"><a></a><span class="at">  border-top-width: 2px;</span></span>
+<span id="cb9-278"><a></a><span class="at">}</span></span>
+<span id="cb9-279"><a></a></span>
+<span id="cb9-280"><a></a><span class="at">#auexozzpni .gt_summary_row {</span></span>
+<span id="cb9-281"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-282"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-283"><a></a><span class="at">  text-transform: inherit;</span></span>
+<span id="cb9-284"><a></a><span class="at">  padding-top: 8px;</span></span>
+<span id="cb9-285"><a></a><span class="at">  padding-bottom: 8px;</span></span>
+<span id="cb9-286"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-287"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-288"><a></a><span class="at">}</span></span>
+<span id="cb9-289"><a></a></span>
+<span id="cb9-290"><a></a><span class="at">#auexozzpni .gt_first_summary_row {</span></span>
+<span id="cb9-291"><a></a><span class="at">  border-top-style: solid;</span></span>
+<span id="cb9-292"><a></a><span class="at">  border-top-color: #D3D3D3;</span></span>
+<span id="cb9-293"><a></a><span class="at">}</span></span>
+<span id="cb9-294"><a></a></span>
+<span id="cb9-295"><a></a><span class="at">#auexozzpni .gt_first_summary_row.thick {</span></span>
+<span id="cb9-296"><a></a><span class="at">  border-top-width: 2px;</span></span>
+<span id="cb9-297"><a></a><span class="at">}</span></span>
+<span id="cb9-298"><a></a></span>
+<span id="cb9-299"><a></a><span class="at">#auexozzpni .gt_last_summary_row {</span></span>
+<span id="cb9-300"><a></a><span class="at">  padding-top: 8px;</span></span>
+<span id="cb9-301"><a></a><span class="at">  padding-bottom: 8px;</span></span>
+<span id="cb9-302"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-303"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-304"><a></a><span class="at">  border-bottom-style: solid;</span></span>
+<span id="cb9-305"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-306"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-307"><a></a><span class="at">}</span></span>
+<span id="cb9-308"><a></a></span>
+<span id="cb9-309"><a></a><span class="at">#auexozzpni .gt_grand_summary_row {</span></span>
+<span id="cb9-310"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-311"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-312"><a></a><span class="at">  text-transform: inherit;</span></span>
+<span id="cb9-313"><a></a><span class="at">  padding-top: 8px;</span></span>
+<span id="cb9-314"><a></a><span class="at">  padding-bottom: 8px;</span></span>
+<span id="cb9-315"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-316"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-317"><a></a><span class="at">}</span></span>
+<span id="cb9-318"><a></a></span>
+<span id="cb9-319"><a></a><span class="at">#auexozzpni .gt_first_grand_summary_row {</span></span>
+<span id="cb9-320"><a></a><span class="at">  padding-top: 8px;</span></span>
+<span id="cb9-321"><a></a><span class="at">  padding-bottom: 8px;</span></span>
+<span id="cb9-322"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-323"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-324"><a></a><span class="at">  border-top-style: double;</span></span>
+<span id="cb9-325"><a></a><span class="at">  border-top-width: 6px;</span></span>
+<span id="cb9-326"><a></a><span class="at">  border-top-color: #D3D3D3;</span></span>
+<span id="cb9-327"><a></a><span class="at">}</span></span>
+<span id="cb9-328"><a></a></span>
+<span id="cb9-329"><a></a><span class="at">#auexozzpni .gt_last_grand_summary_row_top {</span></span>
+<span id="cb9-330"><a></a><span class="at">  padding-top: 8px;</span></span>
+<span id="cb9-331"><a></a><span class="at">  padding-bottom: 8px;</span></span>
+<span id="cb9-332"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-333"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-334"><a></a><span class="at">  border-bottom-style: double;</span></span>
+<span id="cb9-335"><a></a><span class="at">  border-bottom-width: 6px;</span></span>
+<span id="cb9-336"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-337"><a></a><span class="at">}</span></span>
+<span id="cb9-338"><a></a></span>
+<span id="cb9-339"><a></a><span class="at">#auexozzpni .gt_striped {</span></span>
+<span id="cb9-340"><a></a><span class="at">  background-color: rgba(128, 128, 128, 0.05);</span></span>
+<span id="cb9-341"><a></a><span class="at">}</span></span>
+<span id="cb9-342"><a></a></span>
+<span id="cb9-343"><a></a><span class="at">#auexozzpni .gt_table_body {</span></span>
+<span id="cb9-344"><a></a><span class="at">  border-top-style: solid;</span></span>
+<span id="cb9-345"><a></a><span class="at">  border-top-width: 2px;</span></span>
+<span id="cb9-346"><a></a><span class="at">  border-top-color: #D3D3D3;</span></span>
+<span id="cb9-347"><a></a><span class="at">  border-bottom-style: solid;</span></span>
+<span id="cb9-348"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-349"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-350"><a></a><span class="at">}</span></span>
+<span id="cb9-351"><a></a></span>
+<span id="cb9-352"><a></a><span class="at">#auexozzpni .gt_footnotes {</span></span>
+<span id="cb9-353"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-354"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-355"><a></a><span class="at">  border-bottom-style: none;</span></span>
+<span id="cb9-356"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-357"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-358"><a></a><span class="at">  border-left-style: none;</span></span>
+<span id="cb9-359"><a></a><span class="at">  border-left-width: 2px;</span></span>
+<span id="cb9-360"><a></a><span class="at">  border-left-color: #D3D3D3;</span></span>
+<span id="cb9-361"><a></a><span class="at">  border-right-style: none;</span></span>
+<span id="cb9-362"><a></a><span class="at">  border-right-width: 2px;</span></span>
+<span id="cb9-363"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-364"><a></a><span class="at">}</span></span>
+<span id="cb9-365"><a></a></span>
+<span id="cb9-366"><a></a><span class="at">#auexozzpni .gt_footnote {</span></span>
+<span id="cb9-367"><a></a><span class="at">  margin: 0px;</span></span>
+<span id="cb9-368"><a></a><span class="at">  font-size: 90%;</span></span>
+<span id="cb9-369"><a></a><span class="at">  padding-top: 4px;</span></span>
+<span id="cb9-370"><a></a><span class="at">  padding-bottom: 4px;</span></span>
+<span id="cb9-371"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-372"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-373"><a></a><span class="at">}</span></span>
+<span id="cb9-374"><a></a></span>
+<span id="cb9-375"><a></a><span class="at">#auexozzpni .gt_sourcenotes {</span></span>
+<span id="cb9-376"><a></a><span class="at">  color: #333333;</span></span>
+<span id="cb9-377"><a></a><span class="at">  background-color: #FFFFFF;</span></span>
+<span id="cb9-378"><a></a><span class="at">  border-bottom-style: none;</span></span>
+<span id="cb9-379"><a></a><span class="at">  border-bottom-width: 2px;</span></span>
+<span id="cb9-380"><a></a><span class="at">  border-bottom-color: #D3D3D3;</span></span>
+<span id="cb9-381"><a></a><span class="at">  border-left-style: none;</span></span>
+<span id="cb9-382"><a></a><span class="at">  border-left-width: 2px;</span></span>
+<span id="cb9-383"><a></a><span class="at">  border-left-color: #D3D3D3;</span></span>
+<span id="cb9-384"><a></a><span class="at">  border-right-style: none;</span></span>
+<span id="cb9-385"><a></a><span class="at">  border-right-width: 2px;</span></span>
+<span id="cb9-386"><a></a><span class="at">  border-right-color: #D3D3D3;</span></span>
+<span id="cb9-387"><a></a><span class="at">}</span></span>
+<span id="cb9-388"><a></a></span>
+<span id="cb9-389"><a></a><span class="at">#auexozzpni .gt_sourcenote {</span></span>
+<span id="cb9-390"><a></a><span class="at">  font-size: 90%;</span></span>
+<span id="cb9-391"><a></a><span class="at">  padding-top: 4px;</span></span>
+<span id="cb9-392"><a></a><span class="at">  padding-bottom: 4px;</span></span>
+<span id="cb9-393"><a></a><span class="at">  padding-left: 5px;</span></span>
+<span id="cb9-394"><a></a><span class="at">  padding-right: 5px;</span></span>
+<span id="cb9-395"><a></a><span class="at">}</span></span>
+<span id="cb9-396"><a></a></span>
+<span id="cb9-397"><a></a><span class="at">#auexozzpni .gt_left {</span></span>
+<span id="cb9-398"><a></a><span class="at">  text-align: left;</span></span>
+<span id="cb9-399"><a></a><span class="at">}</span></span>
+<span id="cb9-400"><a></a></span>
+<span id="cb9-401"><a></a><span class="at">#auexozzpni .gt_center {</span></span>
+<span id="cb9-402"><a></a><span class="at">  text-align: center;</span></span>
+<span id="cb9-403"><a></a><span class="at">}</span></span>
+<span id="cb9-404"><a></a></span>
+<span id="cb9-405"><a></a><span class="at">#auexozzpni .gt_right {</span></span>
+<span id="cb9-406"><a></a><span class="at">  text-align: right;</span></span>
+<span id="cb9-407"><a></a><span class="at">  font-variant-numeric: tabular-nums;</span></span>
+<span id="cb9-408"><a></a><span class="at">}</span></span>
+<span id="cb9-409"><a></a></span>
+<span id="cb9-410"><a></a><span class="at">#auexozzpni .gt_font_normal {</span></span>
+<span id="cb9-411"><a></a><span class="at">  font-weight: normal;</span></span>
+<span id="cb9-412"><a></a><span class="at">}</span></span>
+<span id="cb9-413"><a></a></span>
+<span id="cb9-414"><a></a><span class="at">#auexozzpni .gt_font_bold {</span></span>
+<span id="cb9-415"><a></a><span class="at">  font-weight: bold;</span></span>
+<span id="cb9-416"><a></a><span class="at">}</span></span>
+<span id="cb9-417"><a></a></span>
+<span id="cb9-418"><a></a><span class="at">#auexozzpni .gt_font_italic {</span></span>
+<span id="cb9-419"><a></a><span class="at">  font-style: italic;</span></span>
+<span id="cb9-420"><a></a><span class="at">}</span></span>
+<span id="cb9-421"><a></a></span>
+<span id="cb9-422"><a></a><span class="at">#auexozzpni .gt_super {</span></span>
+<span id="cb9-423"><a></a><span class="at">  font-size: 65%;</span></span>
+<span id="cb9-424"><a></a><span class="at">}</span></span>
+<span id="cb9-425"><a></a></span>
+<span id="cb9-426"><a></a><span class="at">#auexozzpni .gt_footnote_marks {</span></span>
+<span id="cb9-427"><a></a><span class="at">  font-size: 75%;</span></span>
+<span id="cb9-428"><a></a><span class="at">  vertical-align: 0.4em;</span></span>
+<span id="cb9-429"><a></a><span class="at">  position: initial;</span></span>
+<span id="cb9-430"><a></a><span class="at">}</span></span>
+<span id="cb9-431"><a></a></span>
+<span id="cb9-432"><a></a><span class="at">#auexozzpni .gt_asterisk {</span></span>
+<span id="cb9-433"><a></a><span class="at">  font-size: 100%;</span></span>
+<span id="cb9-434"><a></a><span class="at">  vertical-align: 0;</span></span>
+<span id="cb9-435"><a></a><span class="at">}</span></span>
+<span id="cb9-436"><a></a></span>
+<span id="cb9-437"><a></a><span class="at">#auexozzpni .gt_indent_1 {</span></span>
+<span id="cb9-438"><a></a><span class="at">  text-indent: 5px;</span></span>
+<span id="cb9-439"><a></a><span class="at">}</span></span>
+<span id="cb9-440"><a></a></span>
+<span id="cb9-441"><a></a><span class="at">#auexozzpni .gt_indent_2 {</span></span>
+<span id="cb9-442"><a></a><span class="at">  text-indent: 10px;</span></span>
+<span id="cb9-443"><a></a><span class="at">}</span></span>
+<span id="cb9-444"><a></a></span>
+<span id="cb9-445"><a></a><span class="at">#auexozzpni .gt_indent_3 {</span></span>
+<span id="cb9-446"><a></a><span class="at">  text-indent: 15px;</span></span>
+<span id="cb9-447"><a></a><span class="at">}</span></span>
+<span id="cb9-448"><a></a></span>
+<span id="cb9-449"><a></a><span class="at">#auexozzpni .gt_indent_4 {</span></span>
+<span id="cb9-450"><a></a><span class="at">  text-indent: 20px;</span></span>
+<span id="cb9-451"><a></a><span class="at">}</span></span>
+<span id="cb9-452"><a></a></span>
+<span id="cb9-453"><a></a><span class="at">#auexozzpni .gt_indent_5 {</span></span>
+<span id="cb9-454"><a></a><span class="at">  text-indent: 25px;</span></span>
+<span id="cb9-455"><a></a><span class="at">}</span></span>
+<span id="cb9-456"><a></a></span>
+<span id="cb9-457"><a></a><span class="at">#auexozzpni .katex-display {</span></span>
+<span id="cb9-458"><a></a><span class="at">  display: inline-flex !important;</span></span>
+<span id="cb9-459"><a></a><span class="at">  margin-bottom: 0.75em !important;</span></span>
+<span id="cb9-460"><a></a><span class="at">}</span></span>
+<span id="cb9-461"><a></a></span>
+<span id="cb9-462"><a></a><span class="at">#auexozzpni div.Reactable &gt; div.rt-table &gt; div.rt-thead &gt; div.rt-tr.rt-tr-group-header &gt; div.rt-th-group:after {</span></span>
+<span id="cb9-463"><a></a><span class="at">  height: 0px !important;</span></span>
+<span id="cb9-464"><a></a><span class="at">}</span></span>
+<span id="cb9-465"><a></a><span class="at">&lt;/style&gt;</span></span>
+<span id="cb9-466"><a></a><span class="at">&lt;table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"&gt;</span></span>
+<span id="cb9-467"><a></a><span class="at">  &lt;thead&gt;</span></span>
+<span id="cb9-468"><a></a><span class="at">    &lt;tr class="gt_col_headings"&gt;</span></span>
+<span id="cb9-469"><a></a><span class="at">      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="year"&gt;year&lt;/th&gt;</span></span>
+<span id="cb9-470"><a></a><span class="at">      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Africa"&gt;Africa&lt;/th&gt;</span></span>
+<span id="cb9-471"><a></a><span class="at">      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Americas"&gt;Americas&lt;/th&gt;</span></span>
+<span id="cb9-472"><a></a><span class="at">      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Asia"&gt;Asia&lt;/th&gt;</span></span>
+<span id="cb9-473"><a></a><span class="at">      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Europe"&gt;Europe&lt;/th&gt;</span></span>
+<span id="cb9-474"><a></a><span class="at">      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Oceania"&gt;Oceania&lt;/th&gt;</span></span>
+<span id="cb9-475"><a></a><span class="at">    &lt;/tr&gt;</span></span>
+<span id="cb9-476"><a></a><span class="at">  &lt;/thead&gt;</span></span>
+<span id="cb9-477"><a></a><span class="at">  &lt;tbody class="gt_table_body"&gt;</span></span>
+<span id="cb9-478"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1952&lt;/td&gt;</span></span>
+<span id="cb9-479"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;39.1&lt;/td&gt;</span></span>
+<span id="cb9-480"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;53.3&lt;/td&gt;</span></span>
+<span id="cb9-481"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;46.3&lt;/td&gt;</span></span>
+<span id="cb9-482"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;64.4&lt;/td&gt;</span></span>
+<span id="cb9-483"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;69.3&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-484"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1957&lt;/td&gt;</span></span>
+<span id="cb9-485"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;41.3&lt;/td&gt;</span></span>
+<span id="cb9-486"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;56.0&lt;/td&gt;</span></span>
+<span id="cb9-487"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;49.3&lt;/td&gt;</span></span>
+<span id="cb9-488"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;66.7&lt;/td&gt;</span></span>
+<span id="cb9-489"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;70.3&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-490"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1962&lt;/td&gt;</span></span>
+<span id="cb9-491"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;43.3&lt;/td&gt;</span></span>
+<span id="cb9-492"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;58.4&lt;/td&gt;</span></span>
+<span id="cb9-493"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;51.6&lt;/td&gt;</span></span>
+<span id="cb9-494"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;68.5&lt;/td&gt;</span></span>
+<span id="cb9-495"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;71.1&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-496"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1967&lt;/td&gt;</span></span>
+<span id="cb9-497"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;45.3&lt;/td&gt;</span></span>
+<span id="cb9-498"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;60.4&lt;/td&gt;</span></span>
+<span id="cb9-499"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;54.7&lt;/td&gt;</span></span>
+<span id="cb9-500"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;69.7&lt;/td&gt;</span></span>
+<span id="cb9-501"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;71.3&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-502"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1972&lt;/td&gt;</span></span>
+<span id="cb9-503"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;47.5&lt;/td&gt;</span></span>
+<span id="cb9-504"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;62.4&lt;/td&gt;</span></span>
+<span id="cb9-505"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;57.3&lt;/td&gt;</span></span>
+<span id="cb9-506"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;70.8&lt;/td&gt;</span></span>
+<span id="cb9-507"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;71.9&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-508"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1977&lt;/td&gt;</span></span>
+<span id="cb9-509"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;49.6&lt;/td&gt;</span></span>
+<span id="cb9-510"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;64.4&lt;/td&gt;</span></span>
+<span id="cb9-511"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;59.6&lt;/td&gt;</span></span>
+<span id="cb9-512"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;71.9&lt;/td&gt;</span></span>
+<span id="cb9-513"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;72.9&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-514"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1982&lt;/td&gt;</span></span>
+<span id="cb9-515"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;51.6&lt;/td&gt;</span></span>
+<span id="cb9-516"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;66.2&lt;/td&gt;</span></span>
+<span id="cb9-517"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;62.6&lt;/td&gt;</span></span>
+<span id="cb9-518"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;72.8&lt;/td&gt;</span></span>
+<span id="cb9-519"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;74.3&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-520"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1987&lt;/td&gt;</span></span>
+<span id="cb9-521"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;53.3&lt;/td&gt;</span></span>
+<span id="cb9-522"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;68.1&lt;/td&gt;</span></span>
+<span id="cb9-523"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;64.9&lt;/td&gt;</span></span>
+<span id="cb9-524"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;73.6&lt;/td&gt;</span></span>
+<span id="cb9-525"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;75.3&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-526"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1992&lt;/td&gt;</span></span>
+<span id="cb9-527"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;53.6&lt;/td&gt;</span></span>
+<span id="cb9-528"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;69.6&lt;/td&gt;</span></span>
+<span id="cb9-529"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;66.5&lt;/td&gt;</span></span>
+<span id="cb9-530"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;74.4&lt;/td&gt;</span></span>
+<span id="cb9-531"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;76.9&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-532"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;1997&lt;/td&gt;</span></span>
+<span id="cb9-533"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;53.6&lt;/td&gt;</span></span>
+<span id="cb9-534"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;71.2&lt;/td&gt;</span></span>
+<span id="cb9-535"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;68.0&lt;/td&gt;</span></span>
+<span id="cb9-536"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;75.5&lt;/td&gt;</span></span>
+<span id="cb9-537"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;78.2&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-538"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;2002&lt;/td&gt;</span></span>
+<span id="cb9-539"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;53.3&lt;/td&gt;</span></span>
+<span id="cb9-540"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;72.4&lt;/td&gt;</span></span>
+<span id="cb9-541"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;69.2&lt;/td&gt;</span></span>
+<span id="cb9-542"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;76.7&lt;/td&gt;</span></span>
+<span id="cb9-543"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;79.7&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-544"><a></a><span class="at">    &lt;tr&gt;&lt;td headers="year" class="gt_row gt_right"&gt;2007&lt;/td&gt;</span></span>
+<span id="cb9-545"><a></a><span class="at">&lt;td headers="Africa" class="gt_row gt_right"&gt;54.8&lt;/td&gt;</span></span>
+<span id="cb9-546"><a></a><span class="at">&lt;td headers="Americas" class="gt_row gt_right"&gt;73.6&lt;/td&gt;</span></span>
+<span id="cb9-547"><a></a><span class="at">&lt;td headers="Asia" class="gt_row gt_right"&gt;70.7&lt;/td&gt;</span></span>
+<span id="cb9-548"><a></a><span class="at">&lt;td headers="Europe" class="gt_row gt_right"&gt;77.6&lt;/td&gt;</span></span>
+<span id="cb9-549"><a></a><span class="at">&lt;td headers="Oceania" class="gt_row gt_right"&gt;80.7&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb9-550"><a></a><span class="at">  &lt;/tbody&gt;</span></span>
+<span id="cb9-551"><a></a><span class="at">  </span></span>
+<span id="cb9-552"><a></a><span class="at">  </span></span>
+<span id="cb9-553"><a></a><span class="at">&lt;/table&gt;</span></span>
+<span id="cb9-554"><a></a><span class="at">&lt;/div&gt;</span></span>
+<span id="cb9-555"><a></a><span class="st">```</span></span>
+<span id="cb9-556"><a></a></span>
+<span id="cb9-557"><a></a><span class="sc">:::</span></span>
+<span id="cb9-558"><a></a><span class="er">:::</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <p><img data-src="images/clase23/kable-gapminder.png" style="width:85.0%"></p>
 </div></div>
@@ -947,6 +1495,44 @@ M.Sc. José Miguel Avendaño I.
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
