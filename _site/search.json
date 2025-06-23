@@ -7493,7 +7493,7 @@
     "href": "clases/clase_23.html#aprende-más",
     "title": "Clase 23: Quarto Dashboards",
     "section": "Aprende más",
-    "text": "Aprende más\nhttps://quarto.org/docs/dashboards"
+    "text": "Aprende más\nhttps://quarto.org/docs/dashboards\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_23.html#componentes-del-dashboard",
@@ -7514,14 +7514,14 @@
     "href": "clases/clase_23.html#dashboard-de-quarto-pero-con-python",
     "title": "Clase 23: Quarto Dashboards",
     "section": "Dashboard de Quarto, ¡pero con Python!",
-    "text": "Dashboard de Quarto, ¡pero con Python!\nhttps://github.com/mine-cetinkaya-rundel/dashing-through-snow\n\nR:\n\nDashboard: https://mine.quarto.pub/dashing-through-snow-r\nCódigo: https://github.com/mine-cetinkaya-rundel/dashing-through-snow/blob/main/snowdash-r.qmd\n\nPython:\n\nDashboard: https://mine.quarto.pub/dashing-through-snow-py\nCódigo: https://github.com/mine-cetinkaya-rundel/dashing-through-snow/blob/main/snowdash-py.qmd ## Cards Compatibles https://www.htmlwidgets.org/showcase_leaflet.html"
+    "text": "Dashboard de Quarto, ¡pero con Python!\nhttps://github.com/mine-cetinkaya-rundel/dashing-through-snow\n\nR:\n\nDashboard: https://mine.quarto.pub/dashing-through-snow-r\nCódigo: https://github.com/mine-cetinkaya-rundel/dashing-through-snow/blob/main/snowdash-r.qmd\n\nPython:\n\nDashboard: https://mine.quarto.pub/dashing-through-snow-py\nCódigo: https://github.com/mine-cetinkaya-rundel/dashing-through-snow/blob/main/snowdash-py.qmd"
   },
   {
     "objectID": "clases/clase_23.html#créditos-de-la-presentación",
     "href": "clases/clase_23.html#créditos-de-la-presentación",
     "title": "Clase 23: Quarto Dashboards",
-    "section": "",
-    "text": "Importante\n\n\n\nEsta presentación fue desarrollada por la Dra. Mine Çetinkaya-Rundel en la Duke University para el curso STA 313 del período Primavera-2024 Spring 2024, al cual puede acceder en el enlace https://vizdata.org"
+    "section": "Créditos de la Presentación",
+    "text": "Créditos de la Presentación\n\n\n\n\n\n\nImportante\n\n\nEsta presentación fue desarrollada por la Dra. Mine Çetinkaya-Rundel en la Duke University para el curso STA 313 del período Primavera-2024, al cual puede acceder en el enlace https://vizdata.org"
   },
   {
     "objectID": "clases/clase_23.html#conjunto-de-pestañas-tabsets",
@@ -7557,5 +7557,12 @@
     "title": "Clase 23: Quarto Dashboards",
     "section": "",
     "text": "Importante\n\n\n\nEsta presentación fue desarrollada por la Dra. Mine Çetinkaya-Rundel en la Duke University para el curso STA 313 del período Primavera-2024 Spring 2024, al cual puede acceder en el enlace https://vizdata.org"
+  },
+  {
+    "objectID": "clases/clase_23.html#cards-compatibles",
+    "href": "clases/clase_23.html#cards-compatibles",
+    "title": "Clase 23: Quarto Dashboards",
+    "section": "Cards Compatibles",
+    "text": "Cards Compatibles\nhttps://www.htmlwidgets.org/showcase_leaflet.html"
   }
 ]

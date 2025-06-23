@@ -6,7 +6,7 @@ format: revealjs
 ## Créditos de la Presentación
 
 ::: callout-important
-Esta presentación fue desarrollada por la Dra. Mine Çetinkaya-Rundel en la Duke University para el curso STA 313 del período Primavera-2024 Spring 2024, al cual puede acceder en el enlace <https://vizdata.org>
+Esta presentación fue desarrollada por la Dra. Mine Çetinkaya-Rundel en la Duke University para el curso STA 313 del período Primavera-2024, al cual puede acceder en el enlace <https://vizdata.org>
 :::
 
 # Quarto Dashboards
