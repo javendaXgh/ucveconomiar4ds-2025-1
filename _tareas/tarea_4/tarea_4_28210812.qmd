@@ -1,0 +1,156 @@
+---
+title: "tarea_4_28210812"
+author: "Jose Suarez"
+format: html
+editor: visual
+theme: sandstone
+---
+
+# Índice de Desarrollo Humano (ARG, COL, ESP, VEN)
+
+# Cuadro base del conjunto de datos
+
+Tenemos 4 variables iniciales, donde 2 son categóricas. El ID de cada país lo queremos eliminar por lo que el cuadro nos queda de la siguiente manera:
+
+```{r}
+#| echo: false
+#| warning: false
+library(owidapi) #cargamos librerias
+library(dplyr) #cargamos libreria
+library(tidyverse)
+library(gt)
+hdi_paises <- owid_get('human-development-index', #extraemos el conjunto de datos
+         entities = c('ARG','COL','ESP','VEN'))
+
+hdi_paises <- hdi_paises %>% 
+  select(-entity_id) #retiramos entity_id de nuestro DF
+hdi_paises
+
+```
+
+## Generación de una nueva variable categórica
+
+Para fines metodológicos, creamos esta nueva variable de manera que practiquemos el manejo de `ifelse`
+
+```{r}
+#| echo: false
+#Creacion de la variable categorica
+hdi_promedio = mean(hdi_paises$hdi__sex_total)
+hdi_promedio
+
+hdi_paises <- hdi_paises %>%
+  mutate(Clasificacion_promedio = ifelse(hdi__sex_total >=hdi_promedio,
+                                         'hdi_up_mean', #caso verdadero -> ocurre a
+                                         'hdi_down_mean')) #caso falso -> ocurre b
+hdi_paises
+```
+
+## Gráfico de Barras
+
+```{r}
+#| echo: false
+ggplot( data = hdi_paises,
+        aes(x=entity_name))+
+  geom_bar(fill = '#d00000')+
+  
+  labs(title = 'Cdad. de Obervaciones por Pais', x = 'Paises', y = 'Cantidad')+
+  theme_minimal()
+```
+
+## Diagrama de Caja
+
+```{r}
+#| echo: false
+ggplot(data = hdi_paises,
+       mapping = aes(x = entity_name,
+                     y = hdi__sex_total))+
+  geom_boxplot(fill = '#d00000',
+               color = 'black')+
+  
+  labs(title = 'Distribución del Indice de Desarrollo Humano', x = 'Paises', y = 'Total_HDI')
+```
+
+Gráfico util para comparar los niveles de desarrollo humano entre países. Venezuela representa un nivel de desarrollo humano inferior en comparación a los demas. Argentina presenta el caso contrario.
+
+## Histograma
+
+```{r}
+#| echo: false
+ggplot(data = hdi_paises,
+       aes(hdi__sex_total))+
+  geom_histogram(bins = 8,
+                 fill='#d00000')+
+  
+  labs(title = 'Distribucion del HDI',
+       x = 'HDI_total', y = 'Cantidad')
+```
+
+La cantidad de observaciones varía en cada intervalo, pero mantiene un pico entre 0.7 y 0.8, por lo que los paises analizados en ese periodo temporal tienen un "Human Development Index" en ese nivel.
+
+## Gráfico de Densidad
+
+```{r}
+#| echo: false
+#| warning: false
+ggplot(data = hdi_paises,
+       aes(x = hdi__sex_total,
+           color=entity_name))+
+  geom_density(aes(fill = entity_name),
+               alpha = 0.5)+
+
+labs(x = 'HDI_total', y = 'Densidad')
+```
+
+Queremos analizar como varía la distribución de la variable HDI entre diferentes países. Colombia y Argentina presentan unas curvas mas anchas por lo que hay mayor variabilidad en los datos.
+
+Venezuela y Argentina tienen picos, por lo que hay mas valores concentrados en ese rango de 0.7 (VEN) y 0.8-0.9 (ARG)
+
+## Gráfico de Lineas
+
+```{r}
+#|echo: false
+#|warning: false
+
+ggplot(data = hdi_paises,
+       aes(x = year,
+           y = hdi__sex_total,
+           group = entity_name))+
+  geom_line(aes(color = entity_name))+
+
+labs (title = 'HDI de Paises por Ano',
+      x = 'Paises',
+      y = 'HDI_Total')+
+theme_minimal()
+```
+
+Queremos ver la evolución del HDI a lo largo del tiempo, tratando de analizar las tendencias de cada país.
+
+España lidera en este gráfico a lo largo de los años. Por otro lado, Venezuela tiene un descenso pronunciado desde 2014 aproximadamente, por la entrante crisis económica, política y social (inflación, escasez de productos, protestas, ola de migración...)
+
+## Tabla en GT
+
+```{r}
+#| echo: false
+valores_maximos <- hdi_paises %>%
+  group_by(entity_name) %>%
+  slice_max(hdi__sex_total, n=1)%>%
+  select(entity_name, year, hdi__sex_total)
+  
+  #aca si aplicaba filter me daba error, aunque llamara a los 4 paises
+  #tuve que usar Copilot y me arrojó una solucion con group_by, esa si me funcionó
+```
+
+```{r}
+#| echo: false
+
+valores_maximos %>%
+  gt()%>%
+  tab_header(
+    title = 'Maximo Indice de Desarrollo Humano de Paises',
+    subtitle = 'Año en el que se alcanzó el mayor HDI'
+  ) %>%
+  
+  fmt_date(columns = year)%>%
+  fmt_number(columns = hdi__sex_total)%>%
+  fmt_auto(columns = entity_name)
+```

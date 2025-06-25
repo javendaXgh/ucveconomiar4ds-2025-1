@@ -1,0 +1,204 @@
+---
+title: "Tarea_04"
+author: "Diego Pérez"
+format: html
+editor: visual
+---
+
+## 1. DESCARGA Y TRANSFORMACIÓN DE NUESTRA DATA
+
+#### Datos para ARG, COL, ESP y VEN
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+library(dplyr)
+library(owidapi)
+library(tidyverse)
+library(dplyr)
+library(DT)
+library(gt)
+library (plotly)
+library(ggplot2)
+
+# Descarga de datos del Índice de Desarrollo Humano para los países especificados
+hdi_data <- owid_get("human-development-index", entities= c("ARG", "COL", "ESP", "VEN"))
+
+head(hdi_data)
+```
+
+#### Remover columna id de los paises
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+#Remover id por paises 
+hdi_data_sin_id <- hdi_data %>%
+  select(-entity_id)
+
+# Muestra las primeras filas del dataframe limpio
+head(hdi_data_sin_id)
+
+```
+
+## 2. CREACIÓN VARIABLE CATEGÓRICA
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+# Calculamos el promedio
+mean_hdi_sex_total <- mean(hdi_data_sin_id$hdi__sex_total)
+
+# Crea la variable categórica 'hdi_categorica'
+hdi_data_categorica <- hdi_data_sin_id %>%
+  mutate(hdi_categorica = ifelse(hdi__sex_total > mean_hdi_sex_total, "alto_indice", "bajo_indice"))
+
+datatable(hdi_data_categorica)
+```
+
+## 3. GRÁFICOS EXPLORATORIOS
+
+## 3.1 Barras
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+bar_hdi <- ggplot(data= hdi_data_sin_id, aes(x = entity_name)) +
+  geom_bar(fill = "#d00000") +
+  labs(title = "Total de Observaciones por País",
+       x = "País",
+       y = "Número de Observaciones")
+
+ggplotly(bar_hdi)
+
+#Como se nos enseñó en clases, podemos darle interactividad a los graficos a través de ggplotly esto le otorga mayor dinamismo y una presentacion de mayor nivel.
+
+#labs lo aprendi a usar trabajando en el CD mitad de curso, guiandome por las laminas de clases y con apoyo organizacional u ordenamiento de la IA.
+```
+
+**Descripción:** El número de observaciones para cada país es de 34 en relación al HDI.
+
+## 3.2 Boxplot
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+boxplot_hdi <- ggplot(data= hdi_data_sin_id, mapping= aes(x = entity_name, y = hdi__sex_total)) +
+  geom_boxplot(aes(fill = entity_name), color = "black") + # utilice entity_name para el relleno y asi diferenciar por paises y black para aplicar borde negro
+  labs(title = "Distribución del IDH por Sexo Total por País",
+       x = "País",
+       y = "Índice de Desarrollo Humano")
+
+ggplotly(boxplot_hdi)
+```
+
+**Descripción:** Este boxplot del IDH revela que **España es el país con el mejor desempeño**, mostrando consistentemente el Índice de Desarrollo Humano más alto y con la menor variabilidad, además de una distribución simétrica. En contraste, Venezuela presenta el IDH mediano más bajo, junto con Colombia, y ambos exhiben una mayor dispersión en sus datos. Argentina se posiciona en un nivel intermedio de IDH, con mayor variabilidad que España pero una distribución también simétrica. De manera general, ninguna de las naciones analizadas muestra valores atípicos evidentes en su distribución del IDH.
+
+## 3.3 Histograma
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+histrograma_hdi <- ggplot(hdi_data_sin_id, aes(x = hdi__sex_total)) +
+  geom_histogram(bins = 8, fill = "#d00000", color = "white") + # El Color de relleno es d00000 y el White aplica borde blanco para las barras
+  labs(title = "Histograma del Índice de Desarrollo Humano",
+       x = "Índice de Desarrollo Humano",
+       y = "Frecuencia")
+
+ggplotly(histrograma_hdi)
+```
+
+**Descripción:** El histograma nos dice que, al combinar los datos de todos los países, la mayoría de las observaciones del IDH se agrupan alrededor del 0.76-0.79. Si bien hay una dispersión notable de valores, la distribución tiende a tener una cola ligeramente más larga hacia los valores de IDH más altos, indicando una mayor variabilidad en ese extremo.
+
+## 3.4 Aplicar facet_wrap(\~entity_name) al histograma
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+histrograma_hdi_2 <- ggplot(hdi_data_sin_id, aes(x = hdi__sex_total)) +
+  geom_histogram(bins = 8, fill = "#d00000", color = "white") + facet_wrap(~entity_name) #añadimos la función indicada
+  labs(title = "Histograma del Índice de Desarrollo Humano",
+       x = "Índice de Desarrollo Humano",
+       y = "Frecuencia")
+
+ggplotly(histrograma_hdi_2)
+```
+
+`facet_wrap` es de gran utilidad para **comparar distribuciones** entre países. Crea un histograma individual para cada nación, lo que me permite ver al instante las diferencias en la distribución del IDH y detectar patrones únicos en Argentina, Colombia, España y Venezuela.
+
+## 3.5 Density
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+Density_hdi <- ggplot(hdi_data_sin_id, aes(x = hdi__sex_total, color= entity_name)) +
+  geom_density(aes(fill= entity_name), alpha = 0.5) + # alpha controla la transparencia, lo añadimos para mejorar el análisis y porque lo aprendimos en clase
+  labs(title = "Estimación de Densidad del IDH por Sexo Total por País",
+       x = "Índice de Desarrollo Humano",
+       y = "Densidad")
+
+ggplotly(Density_hdi)
+```
+
+**Descripción:**
+
+-   **España (Turquesa)** muestra la distribución más alta y concentrada, con su pico principal alrededor de 0.88-0.90. Esto indica que España tiene consistentemente los valores de IDH más elevados y con menor variabilidad entre los países estudiados.
+-   **Argentina (Rosa claro)** tiene su pico alrededor de 0.82-0.83, situándose claramente como el segundo país con mayor IDH. Su curva es más ancha que la de España, lo que sugiere más variabilidad en su IDH.
+-   **Colombia (Verde)** presenta su pico más bajo alrededor de 0.67-0.69, lo que indica que sus valores de IDH son los más bajos del grupo y también muestra una considerable variabilidad.
+-   **Venezuela (Morado claro)** exhibe una distribución notablemente más compleja, con un pico principal alrededor de 0.71-0.72. El IDH de Venezuela no se distribuye de manera unimodal simple, lo que podría indicar cambios significativos en el tiempo o la presencia de diferentes agrupaciones de datos.
+
+Por útlimo, y no menos importante, existe un claro solapamiento entre las distribuciones de Colombia y Venezuela en el rango de IDH más bajo.
+
+## 3.6 Lineas
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+line_hdi <- ggplot(hdi_data_sin_id, aes(x = year, y = hdi__sex_total, color = entity_name)) + geom_line() +
+  labs(title = "Tendencia del Índice de Desarrollo Humano (HDI) por País",
+       x = "Año",
+       y = "Índice de Desarrollo Humano",
+       color = "País") +
+  theme_minimal()
+
+ggplotly(line_hdi)
+```
+
+**Descripción:** Este gráfico muestra que España lidera consistentemente, exhibiendo el IDH más alto y un crecimiento sostenido, aunque con ligeras fluctuaciones recientes. Argentina le sigue, manteniendo el segundo IDH más elevado con una trayectoria de crecimiento también positiva.
+
+En contraste, mientras Colombia ha logrado un progreso significativo y sostenido desde un punto de partida más bajo, superando incluso a Venezuela en la última década, este último país (Venezuela) experimenta un marcado y continuo retroceso en su IDH a partir de 2015. Esto posiciona a Venezuela como el país con el peor desempeño y un severo deterioro en su desarrollo humano.
+
+## 4. TABLA EN "gt"
+
+```{r}
+#| warning: false
+#| echo: false
+#| eval: true
+
+hdi_data_sin_id %>%
+  slice_max(by= entity_name, hdi__sex_total)%>%
+  gt()%>%
+  tab_header(title = "Índice de Desarrollo Humano", subtitle = "Máximo por país")%>%
+  cols_label(entity_name= "Pais", year= "Año", hdi__sex_total= "IDH_max")
+  
+
+
+```

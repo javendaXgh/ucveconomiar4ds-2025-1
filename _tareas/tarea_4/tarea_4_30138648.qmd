@@ -1,0 +1,267 @@
+---
+title: "Análisis del índice de desarrollo humano"
+author: "Lara Roselyn"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+## 1. Descarga de Datos
+
+Mediante el paquete https://tidy-intelligence.github.io/r-owidapi/ con la función "owidapi", se descargan los datos del Indice de Desarrollo Humano para Argentina. Colombia, España y Venezuela.
+
+```{r}
+#| echo: false
+#| warning: false
+
+#Cargamos las librerías
+
+library(dplyr)
+library(ggplot2)
+library(gt)
+library(DT)
+```
+
+### 1.1. Descargamos los datos
+
+Descargamos datos del índice de Desarrollo Humano 'human-development-index' para los paìses "AR", 'COL', 'ESP', 'VEN'.
+
+```{r}
+
+library(owidapi)
+
+owid_get('human-development-index') #Visualizamos los datos del paquete
+
+```
+
+### 1.2. Datos del IDH los países seleccionados
+
+```{r}
+
+indice_desarrollo_hum <- owid_get('human-development-index',
+  entities = c('ARG', 'COL', 'ESP', 'VEN'))
+  
+datatable(indice_desarrollo_hum)
+
+```
+
+### 1.3. Removemos la columna "entity_id"
+
+```{r}
+
+#Removemos la columna que hace referencia al id del país.
+
+indice_desarrollo_hum <- indice_desarrollo_hum %>%
+  select(-entity_id)
+
+datatable(indice_desarrollo_hum)
+
+```
+
+## 2. Creación de Variable Categórica de IDH
+
+Mediante la función `mutate`, creamos una variable categórica para evaluar cuáles son los valores por encima del promedio del IDH para los países seleccionados."
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Calcular el promedio de la variable hdi__sex_total
+promedio_idh <- mean(indice_desarrollo_hum$hdi__sex_total)
+
+# Crear la variable categórica 'nivel_indice'
+indice_desarrollo_hum <- indice_desarrollo_hum %>%
+  mutate(
+    nivel_indice = ifelse(
+      hdi__sex_total > promedio_idh,
+      "alto_indice",
+      "bajo_indice" ))
+
+datatable(indice_desarrollo_hum)
+
+```
+
+El análisis del Índice de Desarrollo Humano (IDH) para Argentina, Colombia, España y Venezuela, en relación con el promedio de este conjunto de naciones, revela patrones de desarrollo diversos y significativos a lo largo del tiempo.
+
+Argentina ha demostrado una trayectoria de desarrollo sólida. A partir de 1999, sus índices de IDH se han mantenido consistentemente por encima del promedio del grupo, lo que sugiere un avance sostenido en sus indicadores de bienestar y calidad de vida.
+
+Por su parte, Colombia exhibe una notable mejora en años recientes. Específicamente en 2019, 2022 y 2023, su IDH superó el promedio del conjunto de países. Esta tendencia indica un progreso significativo y una mejoría en las condiciones de desarrollo humano del país en el periodo más reciente.
+
+En el caso de España, se observa un rendimiento generalmente elevado. Aunque sus índices más bajos dentro del periodo analizado se registraron en 1990 y 1991, su IDH ha sido consistentemente alto en los demás años. De hecho, España destaca como el país con el IDH más elevado de todo el conjunto analizado, lo que subraya su avanzado nivel de desarrollo humano.
+
+Por último, Venezuela, el último país de nuestro análisis, presenta una situación menos favorable y preocupante. Su IDH se ha mantenado por debajo del promedio del grupo en todos los años observados, posicionándose como el país con el índice más bajo dentro de este conjunto de naciones. Este patrón constante sugiere desafíos persistentes en sus dimensiones de desarrollo humano.
+
+## 3. Gráficos con ggplot2:
+
+### 3.1. Geom_bar: Total de Observaciones por país.
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Gráfico de barras para totales de observaciones por país
+ggplot(indice_desarrollo_hum, aes(x = entity_name)) +
+  geom_bar(fill = "#d00000") +
+  labs(
+    title = "Total de Observaciones por País",
+    x = "País",
+    y = "Número de Observaciones"
+  )
+
+```
+
+Lo más llamativo y relevante de este gráfico es la idéntica altura de todas las barras. Esto indica que el número de observaciones es prácticamente el mismo para Argentina, Colombia, España y Venezuela (34 observaciones). Lo que nos sugiere que, en el contexto de lo que se está midiendo, la cantidad de datos o eventos registrados es consistente para estas cuatro naciones.
+
+### 3.2. Geom_boxplot: Boxplot del IDH por país:
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Boxplot para la variable hdi__sex_total desagregada por país
+ggplot(indice_desarrollo_hum,
+       mapping = 
+         aes(x = entity_name,
+             y = hdi__sex_total)) +
+             geom_boxplot(aes(fill = entity_name), color = "black") + # Borde negro para los boxplots
+  labs(
+    title = "Distribución del IDH por País",
+    x = "País",
+    y = "Índice de Desarrollo Humano (Total Sexo)")
+
+```
+
+**España (Turquesa):** El IDH más alto y consistente. España tiene la mediana de IDH más alta, superando a los otros tres países. La línea central de su caja está alrededor de 0.86-0.87. Además, los bigotes y la caja de España están completamente por encima de los otros países, lo que confirma que sus valores de IDH son los más elevados del grupo.
+
+**Argentina (Rojo) y Colombia (Verde):** Segundo IDH más alto, pero con mayor dispersión. La mediana de Argentina, ubicándose en el segundo lugar después de España. Sus bigotes también cubren un rango más amplio. La caja de Colombia es la más alta y sus bigotes son los más extendidos hacia abajo, lo que indica la mayor variabilidad o dispersión en sus valores de IDH dentro de este grupo. Esto podría significar mayores fluctuaciones históricas en su IDH o una mayor diversidad en las observaciones utilizadas.
+
+**Venezuela (Púrpura):** La caja es de tamaño similar o ligeramente más grande que la de Colombia, indicando una variabilidad moderada. Muestra la mayor dispersión en los valores de IDH, lo que indica una mayor desigualdad dentro del país.
+
+### 3.3. Geom_histogram: Histograma de IDH
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Histograma de la variable hdi__sex_total con 8 bins
+ggplot(indice_desarrollo_hum, aes(x = hdi__sex_total)) +
+  geom_histogram(bins = 8, fill = "pink", color = "black") +
+  labs(
+    title = "Histograma del Índice de Desarrollo Humano (Total Sexo)",
+    x = "Índice de Desarrollo Humano (Total Sexo)",
+    y = "Frecuencia"
+  )
+
+```
+
+El gráfico sugiere que la mayoría de los valores del IDH en este conjunto de datos se agrupan en un rango medio a medio-alto, con una distribución que tiende a ser en alrededor de 0.7-0.8 y se extiende de forma más dispersa hacia los valores más bajos y más altos.
+
+### 3.4. Geom_histogram: Histograma del IDH por país
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Histograma con facet_wrap por país
+ggplot(indice_desarrollo_hum, aes(x = hdi__sex_total)) +
+  geom_histogram(bins = 8, fill = "pink", color = "black") +
+  facet_wrap(~entity_name) + # Añadir facet_wrap
+  labs(
+    title = "Histograma del Índice de Desarrollo Humano por País",
+    x = "Índice de Desarrollo Humano (Total Sexo)",
+    y = "Frecuencia"
+  )
+```
+
+**Argentina**: La distribución de Argentina está claramente sesgada hacia la derecha (o sesgo negativo)
+
+**Colombia:** La distribución de Colombia parece más simétrica o ligeramente sesgada a la izquierda (o sesgo positivo), con un pico alrededor de 0.75-0.78
+
+**España:** La distribución de España está fuertemente sesgada hacia la izquierda (o sesgo positivo).
+
+**Venezuela:** La distribución de Venezuela es más bimodal o tiene dos picos prominentes: uno alrededor de 0.70-0.75 y otro ligeramente más alto alrededor de 0.75-0.78. También parece ligeramente sesgada a la izquierda.
+
+### 3.5. Geom_density Evolución Temporal del IDH por país
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Gráfico de densidad para hdi__sex_total desagregada por país
+ggplot(indice_desarrollo_hum, 
+       aes(x = hdi__sex_total,
+           fill = entity_name,
+           alpha = 0.5)) +
+  geom_density() +
+  labs(
+    title = "Estimación de Densidad del IDH por País",
+    x = "Índice de Desarrollo Humano (Total Sexo)",
+    y = "Densidad"
+  )
+```
+
+1.  **España:** Su distribución es bastante compacta y se sitúa claramente por encima de los demás países, confirmando su alto nivel de desarrollo.
+
+<!-- -->
+
+2.  **Argetina:** La forma de la curva sugiere una concentración sólida en la parte superior de su rango.
+3.  **Colombia:** Se solapa significativamente con la parte inferior de la distribución de Venezuela.
+4.  **Venezuela**: Muestra claramente **dos picos distintos**: uno alrededor de 0.70 y otro más pequeño alrededor de 0.76-0.78.
+
+### 3.6. Geom_line: Evolución del IDH por país.
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Gráfico de líneas para hdi__sex_total vs year, desagregado por país con color de línea
+ggplot(indice_desarrollo_hum,
+       aes(x = year,
+           y = hdi__sex_total,
+           color = entity_name)) +
+  geom_line () + labs(
+    title = "Evolución del Índice de Desarrollo Humano por País",
+    x = "Año",
+    y = "Índice de Desarrollo Humano (Total Sexo)"
+  ) +
+  theme_minimal() 
+```
+
+El gráfico de líneas revela una trayectoria de crecimiento sostenido y alto para España. Colombia, en contraste, exhibe una progresión constante y un ascenso continuo en su IDH a lo largo de todo el período, logrando superar a Venezuela alrededor de 2015 y terminando el gráfico con una clara tendencia ascendente, lo que sugiere un camino de desarrollo positivo y progresivo. Venezuela, cuya curva de IDH, después de un crecimiento inicial prometedor hasta aproximadamente 2014-2015, experimenta una caída abrupta y prolongada.
+
+## 4. Tabla en GT
+
+```{r}
+#| echo: false
+#| warning: false
+
+idh_max <- indice_desarrollo_hum%>%
+  slice_max(by = entity_name, hdi__sex_total)
+```
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+tabla_idh_max <- gt(idh_max) %>%
+  cols_label(entity_name = "País", hdi__sex_total = "IDH", year = "Año", nivel_indice = "Nivel de índice") %>%
+  tab_header(title = "Valores maximos del IDH por país") %>% 
+  opt_stylize(style = 5,
+              color = "pink") %>% 
+  cols_align(align = 'center')
+
+
+tabla_idh_max
+```
+
+Se observa como, mientras que España, Argentina y Colombia han logrado mantener o mejorar sus niveles de desarrollo humano a lo largo del tiempo, Venezuela ha experimentado una regresión crítica que la ha llevado a los niveles más bajos de este grupo, con serias implicaciones para el bienestar de su población.
+
+## 5. Conclusiones.
+
+El análisis del Índice de Desarrollo Humano, usando la función de "owidapi" para Argentina, Colombia, España y Venezuela, basado en datos uniformes a lo largo del tiempo, revela trayectorias de desarrollo marcadamente diferentes.
+
+España consistentemente lidera en IDH, mostrando una distribución de rango más alto y un crecimiento sostenido que la llevó a su pico de 0.918 en 2023. Argentina sigue un patrón similar de alto desarrollo, aunque con mayor dispersión en sus valores, alcanzando un máximo de 0.865 en 2023. Colombia, por su parte, ha exhibido un progreso constante y ascendente, logrando superar a Venezuela en los últimos años y llegando a su máximo de 0.788 en 2023.
+
+En marcado contraste, Venezuela, tras un crecimiento inicial hasta 2013 (cuando alcanzó su máximo de 0.773), sufrió una caída drástica y prolongada en su IDH, reflejada en una distribución bimodal y terminando el período como el país con el IDH más bajo

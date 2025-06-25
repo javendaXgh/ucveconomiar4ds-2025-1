@@ -1,0 +1,142 @@
+---
+title: "Desarrollo Humano Argentina, Colombia, España y Venezuela (1990-2023)"
+author: "Arnaldo Di Remigio"
+format: html
+execute:
+  echo: false       
+  warning: false    
+  message: false    
+---
+
+```{r}
+
+# Cargo los paquetes necesarios
+library(owidapi)
+library(dplyr)
+library(ggplot2)
+library(gt)
+library(DT)
+```
+
+## Tabla: Índice de Desarrollo Humano para Argentina, Colombia, España y Venezuela
+
+```{r}
+#descargo la data de desarrollo humano con la funcion owid_get y la asigno a una variable
+desarrollo_humano <- owid_get(
+  "human-development-index",
+  entities = c("ARG", "COL","ESP", "VEN"))
+
+#elimina la columna id del dataframe
+desarrollo_humano$entity_id = NULL
+
+```
+
+```{r}
+# Creo una nueva columna que clasifica según el promedio
+desarrollo_humano <- desarrollo_humano %>%
+  mutate(
+    clasificacion_indice = ifelse(
+      hdi__sex_total > mean(hdi__sex_total),
+      "alto_indice",
+      "bajo_indice"
+    )
+  )
+
+#muestro la data
+datatable(desarrollo_humano)
+```
+
+## Distribución de observaciones por país
+
+Todos los paises tienen la misma cantidad de observaciones en el estudio, 34 para ser exactos.
+
+```{r}
+
+# Creo un gráfico de barras para visualizar la frecuencia de los paises
+
+ggplot(data = desarrollo_humano,
+       aes(x=entity_name)) +
+  geom_bar(fill= "#d00000")
+```
+
+## Variabilidad del Índice de Desarrollo Humano (IDH) por país
+
+España alcanza los valores más altos (0.8-0.9), mientras que Colombia y Venezuela presentan una distribución similar en el rango 0.7-0.8, y Argentina se sitúa entre 0.75 y 0.85
+
+```{r}
+
+# Creo un gráfico boxplot para mostrar la distribución del IDH por pais
+ggplot(data = desarrollo_humano,
+       mapping = aes(x= entity_name, 
+                     y= hdi__sex_total)) +
+  geom_boxplot(fill= "#fb8b24",
+               color='#00a6fb')
+```
+
+## Distribución del IDH total
+
+La mayoría de los valores del Índice de Desarrollo Humano (IDH) se concentran alrededor de 0.75, con una frecuencia superior a 30, indicando que este rango es el más común entre los datos analizados
+
+```{r}
+# Creo un histograma para mostrar la distribución general del IDH
+
+ggplot(data = desarrollo_humano) +
+  geom_histogram(aes(x= hdi__sex_total), bins = 8)
+```
+
+## Distribución del IDH por país
+
+España tiene la mayor concentración en valores altos (\~0.9), Argentina en \~0.85, y Colombia y Venezuela en rangos más bajos (\~0.75-0.8), reflejando diferencias en desarrollo humano
+
+```{r}
+# Creo un histograma del IDH, separado por cada pais
+
+ggplot(data = desarrollo_humano) +
+  geom_histogram(aes(x= hdi__sex_total), bins = 8) + facet_wrap(~entity_name)
+```
+
+## Densidad del IDH por país 
+
+España tiene los valores más altos de Índice de Desarrollo Humano (IDH) (\~0.9), Argentina se agrupa en \~0.85, mientras que Colombia y Venezuela tienen mayor concentración en rangos más bajos (\~0.75-0.8)
+
+```{r}
+# Creo un gráfico de densidad para mostrar la distribución del IDH por pais
+
+ggplot(data=desarrollo_humano,
+       aes(x=hdi__sex_total,
+           color=entity_name))+
+  geom_density()
+```
+
+## Evolución del IDH a lo largo del tiempo por país
+
+España tiene el IDH más alto y estable, Argentina sigue con una tendencia de crecimiento, mientras que Colombia y Venezuela tienen fluctuaciones, con Venezuela mostrando una caída reciente
+
+```{r}
+# Creo un gráfico de líneas para mostrar la evolución del IDH a lo largo del tiempo
+
+ggplot(desarrollo_humano, aes(x = year, y = hdi__sex_total, color = entity_name)) +
+  geom_line() + theme_light()
+```
+
+## Maximos de IDH por país
+
+```{r}
+
+#Calculo y muestro el valor máximo del IDH para cada país
+
+tabla_max_hdi <- desarrollo_humano %>%
+  group_by(entity_name) %>%
+  slice_max(hdi__sex_total) %>%
+  select(País = entity_name, Año = year, Max_HDI = hdi__sex_total)
+
+#creacion de tabla con el paquete Gt
+tabla_max_hdi %>%
+  gt() %>%
+  tab_header(
+    title = md("Máximo Índice de Desarrollo Humano (IDH) por País")
+  ) %>%
+  tab_source_note(
+    source_note = md("Fuente: Datos de Desarrollo Humano (owidapi)")
+  )
+```

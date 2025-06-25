@@ -1,7 +1,6 @@
 ---
 title: "Clase 23: Quarto Dashboards"
 format: revealjs
-bibliography: references.bib
 ---
 
 ## Créditos de la Presentación

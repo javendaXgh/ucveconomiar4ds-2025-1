@@ -1,0 +1,305 @@
+---
+title: "Tarea 04: Paquete owidapi y visualización del Índice de Desarrollo Humano"
+execute: 
+  echo: true
+format: html
+editor: visual
+---
+
+El objetivo de la presente actividad consiste en desarrollar, de una manera bastante simplificada y concisa, el proceso del ciclo de ciencia de datos, el cual ha sido la orientación principal de los métodos, herramientas y técnicas aprendidas en la trayectoria emprendida de la mano con las asignaciones anteriores. Para ello, se utilizará la información disponible de la base de datos "Our World in DATA" (OWID).
+
+Esta base de datos, de acuerdo a la documentación asociada, brinda acceso público a un gran número de datos orientados a problemas de envergadura global, ya sea pobreza, desigualdad, variables de desarrollo económico, entre otros. En orden de utilizar estos datos para los procesos planificados en esta actividad se recurre al paquete "owidapi", que con el uso de su función `owid_get()` servirá de herramienta para construir un dataframe base conformado por observaciones de la siguiente variable:
+
+-   **Índice de Desarrollo Humano:** Importado con el uso del código o identificación `"human-development-index"`, se creará un dataframe que contenga las observaciones de esta variable para los países de Argentina, Colombia, España y Venezuela, cuyos códigos o siglas de identificación corresponden a `"ARG", "COL", "ESP", "VEN"`.
+
+Puesto que la base de datos de OWID comprende una disponibilidad de datos desde el año 1990 al año 2023, no se realizará una selección específica del periodo a importar, sino que se trabajará con este periodo original para el dataframe deseado.
+
+Dicho lo anterior, a continuación, luego de desarrollar el código correspondiente, se procede a presentar una muestra de la estructura del dataframe creado para abordar los distintos procesamientos que se plantean.
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+library(owidapi)
+library(dplyr)
+library(ggplot2)
+
+datos_IDH <- owid_get(
+  "human-development-index", 
+  entities = c("ARG", "COL", "ESP", "VEN")
+)
+
+datos_IDH <- datos_IDH %>%
+  select(-2)
+
+muestra_datos_IDH <- datos_IDH %>%
+  filter(year == 1990)
+  
+library(gt)
+
+tabla_muestra_IDH <- gt(muestra_datos_IDH) %>%
+  tab_header(title = "Índice de Desarrollo Humano") %>%
+  cols_align(align = "center") %>%
+  opt_stylize(style = 2, 
+              color = "green")
+
+tabla_muestra_IDH
+```
+
+Como puede observarse, la base de datos a utilizar se compone inicialmente de tres variables o columnas, las cuales son "entity_name" (contiene al país correspondiente a esa observación), "year" (contiene el año correspondiente a esa observación), y "hdi\_\_sex_total" (contiene el valor de la variable estudiada correspondiente a un año y país en concreto). Originalmente, también se presentaba una columna que mostraba el ID del país, pero como ya se cuenta con una columna que expone esa información de forma más sencilla, se decidió eliminar esa columna.
+
+Entonces, la importación resultó en un dataframe de 136 observaciones que contiene los valores del Índice de Desarrollo Humano experimentados por Argentina, Colombia, España y Venezuela para el periodo 1990 - 2023.
+
+## Creación de variable categórica
+
+Cumpliendo con la primera de las instrucciones para la presente actividad, posterior a la importación de los datos y correspondiente a una forma de transformación de los datos en cuestión, se crea una columna que clasifique al IDH ya sea como un índice de nivel elevado o bajo en referencia a un criterio completamente arbitrario, mismo que consiste en el promedio del IDH de todos los valores presentes entre los países estudiados dentro del periodo comprendido.
+
+Al igual que en el apartado de creación del dataframe original, se presenta una muestra de la estructura resultante al adicionar una columna con las características recién descritas. Esta muestra se limita a mostrar las observaciones dentro del intervalo de 1996 - 2000 para cada país.
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+promedio_IDH <- mean(
+  datos_IDH$hdi__sex_total
+)
+
+datos_IDH_ampliada <- datos_IDH %>%
+  mutate(
+    nivel_IDH = ifelse(
+      datos_IDH$hdi__sex_total >= promedio_IDH, 
+      "Alto", 
+      "Bajo"
+    )
+  )
+
+muestra_ampliada <- datos_IDH_ampliada %>%
+  filter(year >= 1996 & year <= 2000)
+
+tabla_muestra_ampliada <- gt(muestra_ampliada) %>%
+  tab_header(title = "Índice de Desarrollo Humano") %>%
+  cols_align(align = "center") %>%
+  opt_stylize(style = 2, 
+              color = "green")
+
+tabla_muestra_ampliada
+```
+
+Ahora bien, la siguiente parte consiste en exponer una serie de gráficos exploratorios que brinden información útil y clara para describir las características de estos países en materia de desarrollo humano y su posición de ventaja o desventaja entre ellos.
+
+## Observaciones de IDH por cada país (1990 - 2023) - Gráfico de barras vertical
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+ggplot(
+  datos_IDH_ampliada, 
+  aes(
+    x = entity_name,
+  )
+) +
+  geom_bar(
+    fill = "#d00000"
+  )
+
+```
+
+En este gráfico se puede observar el número de observaciones disponibles para cada país en la base de datos construida, donde debido a la ausencia de valores "NA" o ausentes y la consideración de un periodo de estudio homogéneo entre países (1990 - 2023), se tiene como resultado el mismo número de 34 observaciones para los países en cuestión. Esto permitirá que la transformación de datos y la creación de diferentes gráficos provean información más precisa y válida para todo el periodo de tiempo.
+
+Rehaciendo el gráfico a una versión de preferencia, a continuación se vuelve a presentar el gráfico recién descrito con los colores diferenciados por país y que servirán como identificación para los gráficos posteriores del presente estudio.
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+ggplot(
+  datos_IDH_ampliada, 
+  aes(
+    x = entity_name, 
+    fill = entity_name
+  )
+) +
+  geom_bar()
+
+```
+
+## Distribución del Índice de Desarrollo Humano por país (1990 - 2023) - Gráfico de cajas
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+ggplot(
+  datos_IDH_ampliada, 
+  aes(
+    x = entity_name, 
+    y = hdi__sex_total, 
+    fill = entity_name
+  )
+) +
+  geom_boxplot()
+```
+
+En el presente gráfico se puede observar, en primer lugar, como España es el país con un IDH de mayor nivel de manera general a lo largo del periodo estudiado, contando con una mediana que supera el 0.85 y un valor mínimo a nivel histórico que compite con lo valores maximos de IDH experimentados por Venezuela y Colombia, los cuales representan al grupo de países del estudio con un menor nivel general de IDH. En segundo lugar, en cuanto a estos dos últimos, Venezuela posee una caja compacta, lo que indica una menor dispersión de los IDH que experimenta, al contrario de Colombia, cuya caja es más amplia e implica un mayor grado de dispersión en la región de valores reducidos de IDH.
+
+Por último, Argentina se ubica como el segundo país del grupo con mejores niveles de IDH, teniendo una caja con un grado de dispersión similar al de España.
+
+## Distribución de frecuencia del Índice de Desarrollo Humano (1990 - 2023) - Histograma general
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+ggplot(
+  datos_IDH_ampliada, 
+  aes(
+    x = hdi__sex_total
+  )
+) +
+  geom_histogram(bins = 8)
+```
+
+En el presente gráfico se observa la presencia de dos picos en términos de frecuencia de los grupos de datos de IDH especificados, los cuales corresponden a 8 clases. Sugiriendo una distribución bimodal, se muestra como la mayoría de observaciones se ubican en un rango aproximado de IDH que comprende de 0,74 a 0,78, siendo este un nivel medio - bajo al contrastarse con el límite inferior y superior de los datos recolectados.
+
+Sin embargo, existe un segundo grupo con una frecuencia no lejana a la clase anterior y que responde a valores de niveles altos de IDH, hablando así de un rango aproximado de 0.83 a 0.87.
+
+## Distribución de frecuencia del Índice de Desarrollo Humano por país (1990 - 2023) - Histograma por país
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+ggplot(
+  datos_IDH_ampliada, 
+  aes(
+    x = hdi__sex_total, 
+    fill = entity_name
+  )
+) +
+  geom_histogram(bins = 8) +
+  facet_wrap(~entity_name)
+```
+
+Ahora bien, realizando una descomposición del histograma presentado en relación a los países del estudio, se logra explicar la distribución bimodal observada en el gráfico anterior. Es decir, se observa como la distribución de los datos de IDH de Argentina y España apoyan a la formación del pico de la región de valores elevados de la distribución general, especialmente la concentración de valores, con un rango similar al pico general en cuestión, en Argentina.
+
+Por otro lado, las distribuciones de valores de IDH experimentadas por Venezuela y Colombia explican la formación del pico más alto de la distribución general, representando estos dos países la mayoría de los valores de la región de valores medio - bajos de la variable estudiada.
+
+## Comparación de las distribuciones de densidad del Índice de Desarrollo Humano entre países (1990 - 2023) - Gráfico de densidad
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+ggplot(
+  datos_IDH_ampliada, 
+  aes(x = hdi__sex_total, 
+      color = entity_name)
+) +
+  geom_density(
+    aes(fill = entity_name), 
+    alpha = 0.3
+  )
+```
+
+El presente gráfico logra presentar de manera mucho más evidente y agradable la participación de los países y sus niveles particulares de IDH a lo largo del periodo comprendido en la formación de la distribución bimodal de los datos recolectados, esto, al tratarse desde su naturaleza de variable continua.
+
+Para este punto, una cualidad que presenta la base de datos utilizada para la actividad que se puede evidenciar es que se está trabajando con dos grupos de países con los cuales se toma de una muestra de ambas realidades en términos del desarrollo, es decir, un grupo de países de alto desarrollo humano (Argentina y España), y un grupo de países de bajo desarrollo humano (Colombia y Venezuela).
+
+Esta observación es posible de contrastar superficialmente por medio de la siguiente tabla
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+niveles_IDH_ARG <- datos_IDH_ampliada %>%
+  filter(entity_name == "Argentina") %>%
+  count(nivel_IDH)
+
+niveles_IDH_ESP <- datos_IDH_ampliada %>%
+  filter(entity_name == "Spain") %>%
+  count(nivel_IDH)
+
+niveles_IDH_COL <- datos_IDH_ampliada %>%
+  filter(entity_name == "Colombia") %>%
+  count(nivel_IDH)
+
+niveles_IDH_VEN <- datos_IDH_ampliada %>%
+  filter(entity_name == "Venezuela") %>%
+  count(nivel_IDH)
+
+niveles_IDH_all <- data.frame(
+  niveles_IDH_ARG, 
+  niveles_IDH_ESP, 
+  niveles_IDH_COL, 
+  niveles_IDH_VEN
+)
+
+niveles_IDH_all <- niveles_IDH_all %>%
+  select(1, 2, 4, 6, 8)
+
+tabla_niveles_IDH <- gt(niveles_IDH_all) %>%
+  cols_label(nivel_IDH = "Nivel de IDH", 
+             n = "Argentina", 
+             n.1 = "España", 
+             n.2 = "Colombia", 
+             n.3 = "Venezuela") %>%
+  cols_align(align = "center") %>%
+  tab_header(title = "Niveles de IDH por país (1990 - 2023)") %>%
+  opt_stylize(style = 2, color = "blue")
+
+tabla_niveles_IDH
+```
+
+Recurriendo a la variable categorica creada en los inicios del presente estudio, si se realiza un conteo sencillo se expresa como las observaciones de Argentina y España concentran la enorme mayoría de participación en la categoría "Alto", mientras que países como Venezuela y Colombia contienen su mayor participación en la categoría contraria.
+
+El resultado de Venezuela expresa que el total de sus observaciones se clasifican como un nivel de IDH bajo, incluyendo su valor máximo.
+
+## Evolución del Índice de Desarrollo Humano por país (1990 - 2023) - Gráfico de línea
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+ggplot(
+  datos_IDH_ampliada,
+  aes(
+    x = year, 
+    y = hdi__sex_total
+  )
+) +
+  geom_line(aes(color = entity_name)) +
+  theme_grey()
+
+```
+
+Como gráfico final de la serie que se ha estado mostrando y desarrollando, el presente gráfico de líneas demuestra el comportamiento que han tenido los niveles de IDH de cada país a lo largo del periodo 1990 - 2023. En base a esto, se puede apreciar cómo, a pesar de que hay un grupo de países de nivel alto de desarrollo humano y otro con un nivel bajo, todos ellos siguen una tendencia de mejora con un ritmo de crecimiento moderado. Es decir, indiscriminadamente del nivel de IDH, para el año 2023 cada país ha alcanzado valores de IDH que demuestran un avance en comparación de su punto de partida de 1990.
+
+Venezuela es el único que presenta una discrepancia en esta tendencia, cuyo punto más alto corresponde al año 2013, para luego experimentar una caída pronunciada de su nivel de desarrollo humano. Este recupera su ritmo de crecimiento moderado entre 2020 y 2021.
+
+## Mayores valores históricos del IDH para los países estudiados
+
+Finalmente, en orden de presentar una especie de ranking histórico de esta variable, se presenta la siguiente tabla que muestra los valores máximos de IDH alcanzados por cada país durante el periodo comprendido.
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+
+maximo_IDH <- datos_IDH_ampliada %>%
+  slice_max(by = entity_name, hdi__sex_total) %>%
+  arrange(desc(hdi__sex_total))
+
+tabla_maximo_IDH <- gt(maximo_IDH) %>%
+  cols_label(entity_name = "País", 
+             year = "Periodo", 
+             hdi__sex_total = "IDH", 
+             nivel_IDH = "Nível de índice") %>%
+  tab_header(title = 
+               "Mayores valores históricos del IDH (1990 - 2023)") %>%
+  cols_align(align = "center") %>%
+  opt_stylize(style = 2, 
+              color = "blue")
+
+tabla_maximo_IDH
+
+```

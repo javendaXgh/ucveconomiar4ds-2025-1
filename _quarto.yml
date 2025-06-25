@@ -93,6 +93,8 @@ website:
             text: group_by.Parte II
           - href: tutorial_pivotes.qmd
             text: pivot_wider y pivot_longer
+          - href: tutorial_na.qmd
+            text: Factores, Coerce, Recycle, NA's, tidyr
 
       - section: "Videos de Apoyo"
         contents:

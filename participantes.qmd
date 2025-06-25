@@ -8,7 +8,7 @@ title: "Listado Participantes"
 #| warning: false
 library(tidyverse)
 library(gt)
-source('materiales_admin/participantes.R')
+source('_materiales_admin/participantes.R')
 
 gt(participantes%>%
      select(-ci2))

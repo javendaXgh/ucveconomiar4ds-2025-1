@@ -5,8 +5,7 @@ author: "MSc. José M. Avendaño"
 # output:
 #   html_document:
 #     toc: yes
-format: 
-  revealjs
+format: revealjs
 execute:
   echo: true
   eval: false

@@ -1,0 +1,198 @@
+---
+title: "Análisis del Índice de Desarrollo Humano"
+subtitle: "Comparativo Argentina, Colombia, España y Venezuela"
+author: "Alfredo Tiapa"
+date: "`r Sys.Date()`"
+format: html
+---
+
+```{r setup, include=FALSE}
+
+# Configuración global de chunks
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE
+)
+
+# Carga de librerías necesarias
+library(owidapi)
+library(ggplot2)
+library(dplyr)
+library(gt)
+library(colorspace)
+```
+
+```{r data-download}
+
+## Descarga de datos del Índice de Desarrollo Humano
+# Países objetivo: Argentina, Colombia, España, Venezuela
+paises_objetivo <- c("ARG", "COL", "ESP", "VEN")
+
+# Extraer datos del paquete owidapi
+hdi_data <- owid_get(chart = "human-development-index", 
+                     entities = paises_objetivo)
+
+# Eliminación de columna de ID del país
+hdi_data <- hdi_data %>% 
+  select(-entity_id)
+```
+
+```{r variable-categorica}
+
+# Creación de variable categórica basada en promedio de IDH
+promedio_hdi <- mean(hdi_data$hdi__sex_total, na.rm = TRUE)
+
+hdi_data <- hdi_data %>%
+  mutate(
+    categoria_hdi = ifelse(hdi__sex_total > promedio_hdi, 
+                          "alto_indice", 
+                          "bajo_indice")
+  )
+```
+
+## Distribución de Observaciones por País
+
+```{r grafico-barras}
+
+# Gráfico de barras para totales por país con color por entidad
+ggplot(hdi_data, aes(x = entity_name, fill = entity_name)) +
+    geom_bar(aes(fill = entity_name, color = after_scale(darken(fill, 0.3)))) +
+    labs(
+        title = "Total de Observaciones por País",
+        x = "País",
+        y = "Número de Observaciones"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "none")
+```
+
+**Hallazgos**: La distribución de observaciones es equilibrada entre los cuatro países analizados, lo que garantiza comparabilidad en el análisis temporal. Cada país presenta el mismo número de registros históricos.
+
+## Distribución del IDH por País
+
+```{r grafico-boxplot}
+
+# Boxplot del IDH desagregado por país
+ggplot(hdi_data, aes(x = entity_name, y = hdi__sex_total, fill = entity_name)) +
+geom_boxplot(aes(fill = entity_name, color = after_scale(darken(fill, 0.3)))) +
+    labs(
+        title = "Distribución del Índice de Desarrollo Humano por País",
+        x = "País",
+        y = "IDH"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "none")
+```
+
+**Hallazgos**: España presenta la mediana más alta de IDH, seguida por Argentina. Se observa una clara jerarquización entre países desarrollados (España) y en desarrollo.
+
+## Distribución General del IDH
+
+```{r grafico-histograma}
+
+# Histograma general del IDH con 8 bins
+ggplot(hdi_data, aes(x = hdi__sex_total)) +
+  geom_histogram(bins = 8, fill = "#BDECB6", color = "#9BCAB6" ) +
+  labs(
+    title = "Distribución General del Índice de Desarrollo Humano",
+    x = "IDH",
+    y = "Frecuencia"
+  ) +
+  theme_minimal()
+```
+
+**Hallazgos**: La distribución general muestra una tendencia bimodal, reflejando la diferenciación entre países con alto desarrollo (España) y aquellos con desarrollo medio-alto (Argentina, Colombia, Venezuela).
+
+## Distribución del IDH por País
+
+```{r grafico-histograma-facet}
+
+# Histograma con facet_wrap por país
+ggplot(hdi_data, aes(x = hdi__sex_total, fill = entity_name)) +
+  geom_histogram(bins = 8, aes(fill = entity_name, color = after_scale(darken(fill, 0.3)))) +
+  facet_wrap(~entity_name) +
+  labs(
+    title = "Distribución del IDH por País",
+    x = "IDH",
+    y = "Frecuencia"
+  ) +
+  theme_minimal() + 
+  theme(legend.position = "none")
+```
+
+**Hallazgos**: La separación por país revela patrones específicos. España presenta una concentración de valores altos (0.85-0.95), mientras que los países latinoamericanos exhiben distribuciones más amplias, lo que indica mayor variabilidad temporal en su desarrollo. Venezuela destaca por mostrar la mayor variabilidad histórica, sugiriendo fluctuaciones significativas en su índice de desarrollo humano.
+
+## Densidad del IDH por País
+
+```{r grafico-density}
+
+# Gráfico de densidad desagregado por país
+ggplot(hdi_data, aes(x = hdi__sex_total, fill = entity_name)) +
+  geom_density(alpha = 0.7) +
+  labs(
+    title = "Densidad del Índice de Desarrollo Humano por País",
+    x = "IDH",
+    y = "Densidad",
+    fill = "País"
+  ) +
+  theme_minimal()
+```
+
+**Hallazgos**: Las curvas de densidad confirman la diferenciación entre países. España presenta una distribución unimodal concentrada en valores altos, mientras que Venezuela muestra una distribución más dispersa, evidenciando períodos de deterioro en su IDH.
+
+## Evolución Temporal del IDH
+
+```{r grafico-lineas}
+
+# Gráfico de líneas con evolución temporal
+ggplot(hdi_data, aes(x = year, y = hdi__sex_total)) +
+  geom_line(aes(color = entity_name), size = 1.2) +
+  labs(
+    title = "Evolución Temporal del Índice de Desarrollo Humano",
+    x = "Año",
+    y = "IDH",
+    color = "País"
+  ) +
+  theme_classic() +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5)
+  )
+```
+
+**Hallazgos**: La evolución temporal revela trayectorias diferenciadas. España mantiene una tendencia ascendente sostenida, Argentina y Colombia muestran crecimiento moderado, mientras que Venezuela presenta estancamiento e incluso retroceso en años recientes, evidenciando su crisis socioeconómica.
+
+## Máximos Valores de IDH por País
+
+```{r tabla-gt}
+
+# Tabla con máximos valores de IDH por país
+tabla_maximos <- hdi_data %>%
+  slice_max(by = entity_name, hdi__sex_total) %>%
+  select(entity_name, year, hdi__sex_total) %>%
+  arrange(desc(hdi__sex_total))
+
+# Creación de tabla GT
+tabla_maximos %>%
+  gt() %>%
+  tab_header(
+    title = "Máximo Índice de Desarrollo Humano por País",
+    subtitle = "Valores históricos más altos registrados"
+  ) %>%
+  cols_label(
+    entity_name = "País",
+    year = "Año",
+    hdi__sex_total = "IDH Máximo"
+  ) %>%
+  fmt_number(
+    columns = hdi__sex_total,
+    decimals = 3
+  ) %>%
+  tab_source_note(
+    source_note = "Fuente: Our World in Data - Índice de Desarrollo Humano"
+  )
+```
+
+**Hallazgos**: España alcanzó su máximo IDH más recientemente (datos actualizados), manteniendo su posición como país de muy alto desarrollo. Los países latinoamericanos muestran máximos en diferentes períodos, con Argentina liderando entre estos, seguida por Colombia y Venezuela.

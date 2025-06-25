@@ -1,0 +1,191 @@
+---
+title: "tarea_4_27600050"
+author: '27600050'
+format: html
+editor: visual
+---
+
+# **1.Importación de librerias**
+
+Para la realización de la presente tarea se utilizaron las librerias tidyverse, ggplot2, openintro, DT, gt, dplyr y owidapi.
+
+```{r}
+#| echo: false
+#| warning: false
+library(owidapi) #para descargar los datos de Owidapi
+library(tidyverse)
+library(ggplot2)
+library(DT)
+library(gt)
+library(dplyr)
+```
+
+#### **1.1 Descarga de datos y eliminación de columna "entity_id"**
+
+Con la librería library(owidapi), se descargan los datos del Índice de Desarrollo Humano, filtrando los paises de interes en el presente análisis, Argentina, Colombia, España y Venezuela. Por otra parte, se elimina la columna "**entity_id** "del dataframe.
+
+```{r}
+#| echo: false
+#| warning: false
+
+indice_dh <- owid_get('human-development-index', entities = c("ARG", "COL", "ESP", "VEN")) %>%
+  select(-entity_id)
+
+datatable(indice_dh)
+```
+
+# **2. Variable categórica**
+
+Se crea la variable categórica condicion_dh, o condición del Índice de desarrollo humano, para categorizar a los paises por índice de desarrollo humano alto o bajo, basado en los valores por encima y debajo de la media, respectivamente.
+
+```{r}
+#| echo: false
+#| warning: false
+
+promedio_indice_dh <- mean(indice_dh$hdi__sex_total) 
+
+promedio_indice_dh
+
+#Mutate
+
+indice_dh <- indice_dh %>%
+  mutate(condicion_dh = ifelse(hdi__sex_total>promedio_indice_dh,
+         "alto_indice","bajo_indice"))
+
+datatable(indice_dh)
+
+```
+
+La media del grupo de países es 0.776, Argentina y España pasaron a tener un índice alto en los años 90, mientras que Colombia lo logró a partir de finales de la década del 2010. Venezuela, por otra parte ha tenido un índice bajo en todos los años del periodo de estudio, dada la media del período de estudio.
+
+# 3. Gráficos:
+
+#### **3.1 Barras**
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = indice_dh ,
+       aes(x= entity_name)) +
+  geom_bar(fill= "#d00000")+
+  labs(title = "Observaciones por pais", x = "país", y = "observaciones")
+```
+
+Todos los paises poseen el mismo número de observaciones
+
+#### **3.2 Boxplots**
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = indice_dh,
+       mapping = aes(x= entity_name, 
+                     y= hdi__sex_total)) +
+  geom_boxplot(fill= "red",
+               color='black')+
+  labs(title = "Indice de desarrollo humano", x = "País", y = "Indice de desarrollo humano")
+```
+
+España y Argentina poseen valores de mediana por encima de 0.8, y en la mayoría de períodos superiores a la media del grupo, 0.77, confirmando que tienen valores altos en la mayoría de años en el Índice de Desarrollo Humano.
+
+Mientras que Venezuela y Colombia tienen medianas inferiores a la mediana, dónde Colombia solo ha tenido pocos valores por encima de la media del grupo.
+
+#### **3.3 Histograma**
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = indice_dh,
+       mapping = aes(x= hdi__sex_total)) +
+  geom_histogram(fill= "red",
+               color='black', bins = 8)+
+  labs(title = "Indice de desarrollo humano", y = "Frecuencia", x = "Indice de desarrollo humano")
+```
+
+Los valores del Índice de Desarrollo Humano, entre 0.7 y 0.85 son los que mas se repiten
+
+#### **3.4 Histograma desagregado por país**
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = indice_dh,
+       mapping = aes(x= hdi__sex_total)) +
+       geom_histogram(fill= "red",
+               color='black', bins = 8)+
+  labs(title = "Indice de desarrollo humano", y = "Frecuencia", x = "Indice de desarrollo humano")+
+  facet_wrap(~entity_name)
+```
+
+España y Argentina son los paises que han tenido en la mayoría de períodos una frecuencia de Índice de Desarrollo Humano, alto. A su vez, Venezuela, siempre se ha mantenido en el rango de 0.65 a 0.773, bajo nivel de desarrollo humano, dada la media del grupo, de 0.777. Mientras que Colombia, en pocos periodos ha tenido pocos valores por encima de la media de 0.776.
+
+#### **3.5 Densidad**
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = indice_dh, 
+       mapping = aes(x = hdi__sex_total,
+           fill = entity_name, alpha = 0.5)) +
+  geom_density() +
+  labs(title = "Densidad del indice de desarrollo humano", y = "Densidad", x = "Indice de desarrollo humano")
+
+
+```
+
+Venezuela y Colombia tienen menores niveles de Desarrollo Humano, y picos en las curvas mas pronunciados. Mientras que Argentina y España, poseen picos mas atenuados y un mayor Índice de Desarrollo Humano.
+
+#### **3.6 Gráfico de líneas (Evolución Histórica)**
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = indice_dh,
+       mapping = aes(x = year, y = hdi__sex_total))+
+       geom_line(aes(color = entity_name))+
+       labs(title = "Evolucion del Indice de Desarrollo Humano", x = "Año", y = "Indice de Desarrollo Humano")
+```
+
+Mientras que Argentina, Colombia y España han mantenido una tendencia creciente en su Índice de desarrollo humano, Venezuela tuvo un gran revés en el desarrollo, con una tendencia negativa durante la mayor parte de la útlima década, pero que en los últimos años se ha ido revirtiendo. En el caso Venezolano en parte puede estar explicado por el gran deterioro socioeconómico de la última década.
+
+#### 4. TABLA GT
+
+Los valores máximos obtenidos en Índice de Desarrollo Humano por Venezuela, Argentina, Colombia y España, son los siguientes:
+
+```{r}
+#| echo: false
+#| warning: false
+
+maximo_indice_dh <- indice_dh %>%
+  slice_max(by = entity_name, hdi__sex_total)
+
+tabla_maximo_indice_dh <- gt(maximo_indice_dh) %>%
+  tab_header(title = "Máximos del Indice de Desarrollo Humano")%>%
+  cols_label(year = "Año", entity_name = "País", hdi__sex_total = "Indice", condicion_dh = "Condición" )%>%
+  cols_align(align = "center")  
+
+tabla_maximo_indice_dh
+  
+```
+
+# Conclusiones:
+
+A lo largo del período de estudio la tendencia de crecimiento o mejora del Índice de Desarrollo Humano, fue positiva para Colombia, Argentina y España, mientras que para el caso de Venezuela, fue negativa, dado a múltiples factores ocasionados por la crisis socioeconómica a la que se ha enfrentado el país en la última década.
+
+## **5. Referencias:**
+
+<https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_13#/geom_line-tipo-de-l%C3%ADnea-por-variable-categ%C3%B3rica-color-l%C3%ADnea>
+
+<https://ucveconomia-r4ds-2025-1.netlify.app/clases/clase_15#/slice_max>
+
+##### <https://www.r-bloggers.com/2024/02/introduction-to-clinical-tables-with-the-gt-package/>
+
+<https://gt.rstudio.com/>
+
+<https://tidy-intelligence.github.io/r-owidapi/>

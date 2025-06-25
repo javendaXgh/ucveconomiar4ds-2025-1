@@ -1,0 +1,147 @@
+---
+title: "Tarea_4_27660553"
+format: html
+editor: visual
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(owidapi)
+library(dplyr)
+library(gt)
+library(tidyverse)
+library(DT)
+library(ggplot2)
+```
+
+## Descarga de Datos
+
+```{r}
+#| echo: false
+
+df_index_human <- owid_get('human-development-index', entities = c('ARG', 'COL','ESP', 'VEN'))
+
+datatable(df_index_human)
+```
+
+## Manipulación del Data Frame
+
+Eliminamos la columna `entity_id`:
+
+```{r}
+#| echo: false
+
+df_sin_id <- df_index_human %>%
+  select(-entity_id)
+
+datatable(df_sin_id)
+```
+
+Creación de una variable categórica para que cuando una observación de `hdi__sex_total` esté por encima del promedio de la misma variable, asigné un valor que indique “alto_indice” o caso contrario “bajo_indice”.
+
+```{r}
+#| echo: false
+
+df_final <- df_sin_id %>%
+  mutate( tipo_index = ifelse(hdi__sex_total> mean(hdi__sex_total), 'alto_indice', 'bajo_indice'))
+
+datatable(df_final)
+```
+
+## Gráfico de Barras
+
+```{r}
+#| echo: false
+ggplot(data = df_final,
+       aes(x= entity_name)) +
+  geom_bar(fill= "#d00000")
+```
+
+En este gráfico podemos observar que existe el mismo número de observaciones para cada país
+
+## Gráfico de Bigotes
+
+```{r}
+#| echo: false
+
+ggplot(data = df_final,
+       mapping = aes(x= entity_name, 
+                     y= hdi__sex_total)) +
+  geom_boxplot(fill= "#fb8b24",
+               color='#00a6fb')
+```
+
+En este gráfico, muestra como las observaciones del Índice de Desarrollo Humano (IDH) estan distribuidas en cada pais, donde podemos observar que IDH de España y Argentina esta por encima de los IDH de Colombia y Venezuela. Además podemos ver que la mediana de IDH en Argentina es aproximadamente 0.83, la de Colombia es aproximandamente 0.72, la de España es aproximadamente 0.875 y la de Venezuela es aproximadamente 0.71
+
+## Histograma
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+ggplot(data = df_final) +
+  geom_histogram(aes(x= hdi__sex_total))
+```
+
+En este histograma, se puede observar que los datos no poseen una distribucion Normal (campana de gauss). Además se puede observar que el mayor numero de observaciones del IDH de los 4 paises seleccionados se encotraron en aproximadamente 0.77 con un total de 1 observaciones aproximadamenre, siendo el segundo pico de observacion los IDH de 0.86 y 0.78 aproximadamente con un total de 10 observaciones por cada valor.
+
+## Histograma por País
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+ggplot(data = df_final) +
+  geom_histogram(aes(x= hdi__sex_total)) + facet_wrap(~entity_name)
+```
+
+Al añadir `+` `facet_wrap(~entity_name)` en la función nos permite ver el historgrama de cada país siendo esto de mucha utilidad porque podemos visualizar el comportamiento y la forma de distribución de los datos de cada país.
+
+Aquí podemos observar que tanto España, Argentina y Colombia tienen distribuciones de cola izquierda y que en el caso de Venezuela vemos una distribución mas irregular pero con una forma leptocurtica. Tambien podemos ver los datos de IDH con mayores observaciones por país, en Argentina es aproximadamente 0.86, en Colombia es aproximandamente 0.77, en España es aproximadamente 0.87 / 0.91 y en Venezuela es aproximadamente 0.7
+
+## Gráfico de Densidad
+
+```{r}
+#| echo: false
+
+ggplot(data= df_final,
+       aes(x=hdi__sex_total,
+           color= entity_name))+
+  geom_density(aes(fill=entity_name),
+               alpha = 0.5)
+```
+
+Con este gráfico podemos observar que la distribución de los datos de cada país expresados de forma continua nos arroja que todas a excepción de España poseen una distribución irregular con 2 picos.
+
+## Gráfico de Lineas
+
+```{r}
+#| echo: false
+
+
+ggplot(data= df_final, mapping = 
+       aes(x= year , y = hdi__sex_total ,
+           color = entity_name)) +
+  geom_line() + theme_dark()
+```
+
+Con este grafico de lineas podemos visualizar la evolución del IDH a lo largo del tiempo en cada uno de los paises seleccionados, donde en el caso de España, Argentina y Colombia podemos ver una tendencia hacia el crecimiento de esta variable donde para los años cercanos al 2020 experimento una disminución significativa que puede ser explicada por el Covid 19.
+
+En el caso puntual de Venezuela podemos visualizar que la caída del IDH ocurre a partir de aproximadamente 2015 y empieza a recomponerse a partir de 2022 este comportamiento se ve explicado por la gran crisis economica, social y política que vive venezuela desde esos años, marcadas por la hiperinflación, la perdida de aproximadamente el 70% del PIB y el colapso de los servicios públicos básicos.
+
+## Tabla GT
+
+```{r}
+#| echo: false
+
+df_sin_id %>% 
+  slice_max(by=entity_name,hdi__sex_total) %>%
+  gt() %>%
+  tab_header( title = 'Índice de Desarrollo Humano (IDH)') %>%
+  cols_label( entity_name = 'País', year ='Año', hdi__sex_total = 'IDH')
+
+```

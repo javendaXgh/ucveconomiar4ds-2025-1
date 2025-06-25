@@ -1,0 +1,287 @@
+---
+title: "Índice de Desarrollo Humano"
+author: "Halena Ruiz"
+format: html
+editor: visual
+---
+
+```{r setup, include = FALSE}
+#| label: setup
+#| include: false
+#| message: false
+#| warning: false
+#| echo: false
+
+# Cargamos las librerías y la paleta de colores a usar en los gráficos
+library(owidapi)
+library(dplyr)
+library(ggplot2)
+library(janitor)
+library(gt)
+```
+
+# Introducción
+
+Este documento presenta un análisis exploratorio del **Índice de Desarrollo Humano (IDH)** para los países de Argentina, Colombia, España y Venezuela, utilizando datos de *Our World in Data*.
+
+# Descarga y Preparación de Datos
+
+En esta sección, descargamos los datos del IDH, realizamos una limpieza y una modificación inicial.
+
+```{r}
+#| label: data-preparation
+#| code-fold: true
+#| output: false 
+
+# Extraemos los datos seleccionando los países de interés y limpiamos el nombre de las columnas
+df_indice_desarrollo_humano <- owid_get('human-development-index', entities = c("ARG", "COL", "ESP", "VEN")) %>%
+  select(-entity_id) %>% 
+  janitor::clean_names() 
+
+# Definimos la variable "promedio"
+promedio_hdi <- mean(df_indice_desarrollo_humano$hdi_sex_total)
+
+# Ahora modificamos la data frame agregándole una columna nueva con etiquetas de "alto_indice" y "bajo_indice", clasificado según su valor frente al "promedio"
+df_indice_desarrollo_humano <- df_indice_desarrollo_humano %>%
+  mutate(
+    indice_hdi = ifelse(df_indice_desarrollo_humano$hdi_sex_total > promedio_hdi, "alto_indice", "bajo_indice")
+  )
+```
+
+# Análisis Gráfico del IDH
+
+A continuación, exploramos los datos a través de una serie de visualizaciones creadas con `ggplot2`.
+
+```{r}
+#| label: colors
+#| echo: false
+#| output: false 
+# Creamos la paleta de colores a utilizar
+paleta_verano <- c("#d00000", "#f4631e", "#ff9f00", "#309898")
+```
+
+## 1. Número de Observaciones por País
+
+Este gráfico de barras muestra el número total de observaciones (registros de años) disponibles para cada país en el dataset.
+
+```{r}
+#| label: plot-1
+#| echo: false
+
+# Agrupamos por país 
+observaciones_por_pais <- df_indice_desarrollo_humano %>%
+  group_by(entity_name) %>%
+  reframe(
+    total_observaciones = n()
+  ) %>%
+  ungroup() 
+
+# Gráfico de Barras
+ggplot(data = observaciones_por_pais,
+       aes(x = entity_name,
+           y = total_observaciones)) +
+  geom_bar(stat = "identity", fill= "#d00000") + 
+  labs(
+    x = "País",
+    y = "Número de Observaciones") 
+```
+
+Como observamos en este gráfico, los cuatro países poseen el mismo número de observaciones (34).
+
+## 2. Boxplots del IDH por País
+
+Los boxplots nos permiten visualizar la distribución y dispersión del IDH para cada país, mostrando la mediana, los cuartiles y posibles valores atípicos.
+
+```{r}
+#| label: plot-2
+#| echo: false
+
+ggplot(data = df_indice_desarrollo_humano,
+       mapping = aes(x = entity_name, 
+                     y = hdi_sex_total)) +
+  geom_boxplot(fill = paleta_verano) + 
+  labs(
+    x = "País",
+    y = "Índice de Desarrollo Humano")
+```
+
+Cada caja representa el rango intercuartil, la línea central es la mediana, y los "bigotes" (líneas que se extienden desde la caja) indican la variabilidad de los datos.
+
+-   La caja de **Argentina** muestra el segundo IDH promedio más alto, su mediana está por encima de 0.8 y presenta una distribución relativamente compacta, aunque ligeramente más dispersa que España.
+
+-   La caja de **Colombia** tiene el IDH más bajo de los cuatro países, con una distribución que se concentra en valores más bajos del índice, alrededor de 0.7. También parece tener una dispersión similar o ligeramente menor que Venezuela.
+
+-   La caja de **España** se sitúa en los valores más altos del índice, porque presenta el IDH más alto y la menor dispersión en sus valores, lo que sugiere una mayor consistencia en el desarrollo humano dentro de su población o a lo largo de los datos representados.
+
+-   Finalmente, la caja de **Venezuela** presenta un IDH similar al de Colombia, sus valores se concentran alrededor de 0.7; pero con una mayor dispersión en sus valores, lo que indica una mayor variabilidad en el desarrollo humano.
+
+## 3. Histograma General del IDH
+
+Este histograma muestra la distribución general de la frecuencia absoluta del IDH en todo el dataset.
+
+```{r}
+#| label: plot-3
+#| echo: false
+
+ggplot(data = df_indice_desarrollo_humano) +
+  geom_histogram(aes(x = hdi_sex_total),
+                 bins = 8) + 
+  labs(
+    x = "Índice de Desarrollo Humano",
+    y = "Frecuencia Absoluta")
+```
+
+La mayor concentración de datos (la barra más alta) se encuentra en el rango del IDH entre aproximadamente 0.75 y 0.80. Esto sugiere que la mayoría de los valores de IDH en esta muestra caen dentro de este rango. Hay una cantidad considerable de datos en el rango de 0.70 a 0.75, también en el rango de 0.80 a 0.85, y un poco menos en el rango de 0.85 a 0.90. Hay menos datos en los extremos, es decir, en los rangos más bajos (alrededor de 0.60-0.65 y 0.65-0.70) y en los rangos más altos (0.90-0.95).
+
+La distribución parece tener una forma multimodal o quizás bimodal (con dos picos menos definidos), aunque el pico principal está claramente en el rango de 0.75-0.80. No es una distribución perfectamente simétrica; parece tener una ligera inclinación hacia la derecha (sesgo negativo), lo que significa que hay una "cola" más larga hacia los valores más bajos.
+
+## 4. Histogramas del IDH por País (Individuales)
+
+Este panel de histogramas desglosa la distribución del IDH para cada país de manera individual, mostrando la frecuencia absoluta de los valores en diferentes rangos.
+
+```{r}
+#| label: plot-4
+#| echo: false
+
+ggplot(data = df_indice_desarrollo_humano) +
+  geom_histogram(aes(x = hdi_sex_total),
+                 bins = 8) + 
+  labs(
+    x = "Índice de Desarrollo Humano",
+    y = "Frecuencia Absoluta") + 
+  facet_wrap(~entity_name)
+```
+
+-   **Argentina:** La mayoría de sus valores de IDH se concentran entre 0.80 y 0.85, con una barra alta en ese rango. Hay algunos valores por debajo y por encima, pero la concentración es clara.
+
+<!-- -->
+
+-   **Colombia:** Muestra una distribución más dispersa, con concentraciones en los rangos de 0.70-0.75 y 0.75-0.80. No hay un solo pico tan dominante como en Argentina o España.
+
+<!-- -->
+
+-   **España:** Predominan los valores de IDH entre 0.85 y 0.90, con una alta frecuencia en ese rango. Esto confirma su consistencia en el alto desarrollo humano.
+
+<!-- -->
+
+-   **Venezuela:** Claramente se observan dos grupos de valores. Un grupo está en el rango de 0.70-0.75, y otro grupo más pequeño se encuentra en 0.65-0.70. Esto refuerza la idea de la bimodalidad observada en el gráfico de densidad, indicando una división entre períodos de mayor y menor IDH.
+
+## 5. Densidades del IDH por País
+
+Este gráfico muestra las distribuciones de densidad del IDH para cada país, permitiendo comparar las formas de sus distribuciones de manera más suave.
+
+```{r}
+#| label: plot-5
+#| echo: false
+
+ggplot(data = df_indice_desarrollo_humano,
+       aes(x = hdi_sex_total, 
+           fill = entity_name,
+           color = entity_name)) +
+  geom_density(alpha = 0.5) +
+  labs(
+    x = "Índice de Desarrollo Humano",
+    y = "Densidad") +
+  scale_color_manual(values = paleta_verano,
+                     name = "País") +
+  scale_fill_manual(values = paleta_verano,
+                    name = "País")
+```
+
+-   **Argentina:** Su distribución está concentrada en un rango también alto, aunque ligeramente inferior a España (alrededor de 0.82 a 0.87), con un pico bien definido.
+
+<!-- -->
+
+-   **España:** Su densidad se concentra en los valores más altos del IDH (alrededor de 0.85 a 0.90), con un pico claro. Esto indica que la mayoría de sus valores de IDH son consistentemente altos.
+
+-   **Colombia:** Su distribución es más amplia y se centra en valores intermedios (alrededor de 0.75 a 0.80), con un pico notable.
+
+<!-- -->
+
+-   **Venezuela:** Es el caso más complejo y revelador aquí. Su distribución es claramente bimodal (tiene dos picos): un pico se encuentra en valores más altos, alrededor de 0.75-0.78, que probablemente representa los años de mayor desarrollo antes de la caída. Otro pico significativo se encuentra en valores mucho más bajos, alrededor de 0.68-0.70, lo que refleja la concentración de datos de los años de declive. La presencia de estos dos picos separados subraya la bifurcación en su trayectoria de desarrollo humano.
+
+## 6. Tendencia del IDH a lo Largo del Tiempo
+
+Este gráfico de líneas muestra la evolución del IDH para cada país a lo largo de los años.
+
+```{r}
+#| label: plot-6
+#| echo: false
+
+ggplot(data = df_indice_desarrollo_humano,
+       mapping = aes(x = year,
+                     y = hdi_sex_total,
+                     color = entity_name)) +
+  geom_line() +
+  scale_color_manual(values = paleta_verano,
+                     name = "País") + 
+  labs(
+    x = "Año",
+    y = "Índice de Desarrollo Humano")
+```
+
+**Tendencia General:** Todos los países muestran una tendencia general al alza en su IDH desde 1990 hasta al menos la década de 2010, lo que indica un progreso en desarrollo humano. Y todos presentan una pequeña baja por 2020, lo cual puede ser debido a la pandemia.
+
+-   **Argentina:** Mantiene el segundo IDH más alto de los cuatro países durante la mayor parte del período. Experimenta un crecimiento constante, aunque con una ligera meseta o desaceleración en los últimos años (alrededor de 2015-2020), y luego parece retomar un ligero ascenso.
+
+-   **Colombia:** Muestra un crecimiento constante en su IDH, ligeramente por debajo de Venezuela históricamente (hasta el decrecimiento en Venezuela) y acercándose a Argentina en los años más recientes.
+
+-   **España:** Consistentemente tiene el IDH más alto a lo largo de todo el período, superando el 0.9 en los últimos años. Su crecimiento es constante y sostenido.
+
+-   **Venezuela:** Tuvo un crecimiento positivo del IDH hasta aproximadamente 2015-2016, incluso superando a Colombia en algunos períodos de la década de 2000. Sin embargo, a partir de 2015-2016, experimenta una caída drástica y sostenida en su IDH, siendo el único país con un declive tan pronunciado en los últimos años. Esto refleja una regresión significativa en su desarrollo humano. En los últimos puntos, su IDH parece estabilizarse o tener un leve repunte, pero aún muy por debajo de su pico.
+
+# Tabla Resumen: Máximo IDH por País
+
+Esta tabla resume el valor máximo del Índice de Desarrollo Humano alcanzado por cada país y el año en que se logró.
+
+```{r}
+#| label: gt-table
+#| echo: false
+
+# Definimos la data frame con los valores máximos
+df_max_hdi <- df_indice_desarrollo_humano %>%
+  group_by(entity_name) %>%
+  slice_max(n = 1, order_by = hdi_sex_total, with_ties = FALSE) %>% 
+  select(entity_name, year, hdi_sex_total) %>%
+  ungroup() 
+
+# Armamos la tabla con la información de los valores máximos
+tabla_max_hdi <- df_max_hdi %>%
+  gt() %>%
+  tab_header(
+    title = md("**Máximo Índice de Desarrollo Humano (IDH) por País**"),
+    subtitle = "Valores máximos alcanzados por cada entidad y el año correspondiente."
+  ) %>%
+  cols_label(
+    entity_name = "País",
+    year = "Año del Máximo IDH",
+    hdi_sex_total = "Máximo IDH"
+  ) %>%
+  fmt_number(
+    columns = hdi_sex_total,
+    decimals = 3 
+  ) %>%
+  cols_align(
+    align = "left",
+    columns = entity_name
+  ) %>%
+  cols_align(
+    align = "center",
+    columns = c(year, hdi_sex_total)
+  )
+
+# La llamamos
+tabla_max_hdi
+```
+
+# Conclusión
+
+Mientras que España y Argentina demuestran estabilidad y alto desarrollo, y Colombia un progreso continuo, Venezuela se distingue por una dramática regresión en el IDH en la última década.
+
+En definitiva, los gráficos pintan un cuadro de éxito y progreso para España, Argentina y Colombia, pero revelan una ***crisis humanitaria*** y ***de desarrollo sin precedentes*** ***en Venezuela***, donde el retroceso es tan significativo que ha creado una bifurcación histórica en los valores de su Índice de Desarrollo Humano.
+
+------------------------------------------------------------------------
+
+*La personalización de los gráficos fue realizada con la ayuda del LLM “Gemini” en base al trabajo de mitad de curso.*
+
+*La elaboración de la última tabla y de los análisis también contó con la asistencia del LLM “Gemini”.*

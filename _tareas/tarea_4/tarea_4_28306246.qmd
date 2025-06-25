@@ -1,0 +1,142 @@
+---
+title: "tarea_4_28306246"
+author: "Gustavo Moreno"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+## Indice de Desarrollo Humano (IDH)
+
+De acuerdo con el Programa de las Naciones Unidas para el Desarrollo(PNUD) el indice de desarrollo humano es una medida resumida del logro promedio en materia de desarrollo que cubre dimensiones de nivel de vida, esperanza de vida y educacion.
+
+## Importacion de datos
+
+Se importo la serie de indice de desarrollo humano para Argentina, Colombia, España y Venezuela con el conjunto de datos disponible en Our World in Data.
+
+```{r}
+#| warning: false
+#| echo: false
+#Cargo paquetes a utilizar
+library("owidapi")
+library("gt")
+library("dplyr")
+library("ggplot2")
+library("gt")
+```
+
+```{r}
+#| echo: false
+hdi <- owid_get("human-development-index", entities= c('ARG', 'COL', 'ESP', 'VEN'))
+hdi_hispano <- hdi %>%
+  select(-entity_id)
+```
+
+## IDH en 2023
+
+Se utilizo el IDH promedio para 2023 de la muestra de paises seleccionados como metrica, con los ultimos datos disponibles, los paises con un IDH alto y bajo.
+
+```{r}
+#| echo: false
+hdi_hispano_2023 <- hdi_hispano %>%
+  filter(year==2023 )
+
+ hdi_promedio <- mean(hdi_hispano_2023$hdi__sex_total)
+hdi_hispano_2023 <- hdi_hispano_2023 %>%
+  mutate(tipo_hdi = ifelse(hdi_hispano_2023$hdi__sex_total > hdi_promedio,
+                           "hdi_alto",
+                           "hdi_bajo"))
+gt(hdi_hispano_2023)
+```
+
+## Grafico de barras
+
+```{r}
+#| echo: false
+ggplot(data=hdi_hispano,
+       aes(entity_name)) +
+  geom_bar(fill="#d00000") +
+  labs(x="Paises",
+       y="observaciones")
+```
+
+Los paises seleccionados tienen la misma cantidad de observaciones.
+
+## Boxplot
+
+```{r}
+#| echo: false
+ggplot(data = hdi_hispano,
+       mapping = aes(x=entity_name, 
+                     y= hdi__sex_total)) +
+  geom_boxplot(fill= "#fb8b24",
+               color='#00a6fb') +
+  labs(x="Paises",
+       y="IDH")
+```
+
+Se observa que Espa mientras que Venezuela concentra la mayor cantidad de su IDH por debajo de los demas aunque con un nivel similar al colombiano.
+
+## Histograma
+
+```{r}
+#| echo: false
+ggplot(data = hdi_hispano) +
+  geom_histogram(aes(x= hdi__sex_total), bins = 8) +
+  labs(x="HDI")
+```
+
+## Histograma por paises
+
+```{r}
+#| echo: false
+ggplot(data = hdi_hispano) +
+  geom_histogram(aes(x= hdi__sex_total), bins = 8) +
+  labs(x="IDH")+
+facet_wrap(~entity_name)
+```
+
+En el caso argentino se destaca que la mayor parte de sus observaciones del IDH estan por encima de 0,8, contrario al caso venezolano y colombiano.
+
+## Grafico de densidad
+
+```{r}
+#| echo: false
+ggplot(data = hdi_hispano,
+       aes(x = hdi__sex_total,
+           color= entity_name)) +
+  geom_density(aes(fill = entity_name))+
+  labs(x="IDH")
+```
+
+Argentina se ha mantenido mayormente en un mismo nivel de IDH en torno a 0,85.
+
+## Grafico de lineas
+
+```{r}
+#| echo: false
+ggplot(data = hdi_hispano,
+       aes(x= year,
+           y= hdi__sex_total)) +
+  geom_line(aes(color= entity_name))+
+  labs(x="Años",
+       y="HDI",
+       color= "Pais")+
+  theme_light()
+```
+
+Los paises seleccionados muestran una tendencia positiva a lo largo de la serie con España superando a todos los paises en todo el periodo. Sin embargo, Venezuela ha reducido su IDH desde 2013.
+
+## Tabla GT
+
+```{r}
+#| echo: false
+hdi_hispano %>%
+  slice_max(by=entity_name, hdi__sex_total) %>%
+  gt() %>%
+  tab_header(title = "Indice de Desarrollo Humano") %>%
+  cols_label(entity_name="Pais",
+             year="Año",
+             hdi__sex_total="IDH") #se consulto perplexity para usar cols_label
+```
