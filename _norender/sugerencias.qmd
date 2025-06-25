@@ -1,0 +1,139 @@
+---
+title: "sugerencias"
+author: "José M. Avendaño"
+lang: es
+format: 
+  html:
+    page-layout: full
+    toc: true
+    theme: cosmo
+execute:
+  echo: false
+  eval: true
+  warning: false
+---
+
+Próximamente expondremos distintos trabajos
+
+```{r}
+#| echo: false
+#| 
+df_mtcars <- readRDS("datos/mtcars_objetoguardado.rds")
+head(df_mtcars)
+
+# crear variables para referenciar valores dentro del texto
+# variables
+promedio <- round(mean(mtcars$mpg),2)
+#round(promedio,2 )
+```
+
+![](images/ee.png){fig-align="center" width="200"}
+
+## Llamar Variables
+
+El valor promedio de la variable **mpg** es `r promedio` tal como se ve.
+
+```{r}
+library(tidyverse)
+
+```
+
+```{r}
+suma_disp <- sum(mtcars$disp)
+# formato de salida de números
+suma_disp1 <- format(suma_disp, big.mark=".",decimal.mark=',')
+
+
+# notacion científica
+suma_disp2 <- format(suma_disp, scientific = TRUE)
+
+```
+
+La sumatoria de la variable desplazamiento es `r suma_disp1`
+
+La sumatoria de la variable desplazamiento en not. cient. `r suma_disp2`
+
+## mostrar gráficos
+
+```{r}
+# mapeo estético usar el nombre del argumento y funciones con multiples argumentos
+library(ggplot2)
+ggplot(data=mtcars, aes(x=mpg,
+                        y=disp))+
+  geom_point(aes(color=factor(cyl)))
+```
+
+```{r}
+# etiquetas en los ejes
+ggplot(data=mtcars, aes(x=mpg,
+                        y=disp))+
+  geom_point(aes(color=factor(cyl)))+
+  labs(title = 'MTCARS',
+       subtitle = 'mpg ~ disp')+
+  xlab('Miles/(US) gallon')+
+  ylab('Displacement')
+```
+
+```{r}
+# cdad de bins en los hist
+ggplot(data=mtcars, aes(x=mpg))+
+  geom_histogram()
+
+# cdad de bins en los hist
+ggplot(data=mtcars, aes(x=mpg))+
+  geom_histogram(bins=6)
+
+```
+
+```{r}
+# uso del cat no recomendado, mejor crear variables 
+cat(mtcars$cyl[1:4])
+```
+
+## Uso de datatables
+
+```{r}
+library(DT)
+# formatos en columnas, por ejemplo de tipo porcentaje
+
+datatable(mtcars[,10:11])%>%
+  formatPercentage("gear", 1)
+```
+
+```{r}
+datatable(mtcars,
+          options = list(language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+                         pageLength = 7,
+                         initComplete = JS(
+                           "function(settings, json) {",
+                           "$(this.api().table().header()).css({'background-color': '#2d6a4f','color': '#fff'});",
+                           "}")
+                         ))
+```
+
+```{r}
+datatable(mtcars,
+          selection = 'single',
+          options = list(rownames= FALSE,
+                         dom = 't',
+                         lengthChange = FALSE,
+                         ordering = FALSE,
+                         paging = FALSE,
+                         language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+                         autoWidth = FALSE,
+                         initComplete = JS(
+                           "function(settings, json) {",
+                           "$(this.api().table().header()).css({'background-color': '#bb9457','color': '#a8dadc'});",
+                           "}")))
+```
+
+```{r}
+# cuando usar dt o gt
+tabla_ingt <- mtcars%>%
+  group_by(cyl)%>%
+  reframe(`mpg mean`= mean(mpg), `sum disp ` =sum(disp), `cdad observaciones` =n())
+
+datatable(tabla_ingt)
+
+gt::gt(tabla_ingt)
+```

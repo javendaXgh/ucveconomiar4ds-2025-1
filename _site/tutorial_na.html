@@ -5020,7 +5020,7 @@ B(87);B(92);B(117);B(159);
 B(132);B(20);B(72);
 B(113);B(154);B(116);
 ug(23,!1),B(24);Ia[1]=rg('1',6E4);Ia[3]=rg('10',1);Ia[2]=rg('',50);
-B(29);vg(26,25);B(37);
+B(29);vg(26,25);
 B(9);B(91);B(123);
 B(157);B(158);B(71);
 B(136);B(127);
@@ -5090,7 +5090,7 @@ var xi=[1116352408,1899447441,3049323471,3921009573,961987163,1508970993,2453635
 4094571909,275423344,430227734,506948616,659060556,883997877,958139571,1322822218,1537002063,1747873779,1955562222,2024104815,2227730452,2361852424,2428436474,2756734187,3204031479,3329325298],wi;function Ci(){vi.call(this,8,Di)}za(Ci,vi);var Di=[1779033703,3144134277,1013904242,2773480762,1359893119,2600822924,528734635,1541459225];var Ei=/^[0-9A-Fa-f]{64}$/;function Fi(a){try{return(new TextEncoder).encode(a)}catch(e){for(var b=[],c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b.push(d):d<2048?b.push(192|d>>6,128|d&63):d<55296||d>=57344?b.push(224|d>>12,128|d>>6&63,128|d&63):(d=65536+((d&1023)<<10|a.charCodeAt(++c)&1023),b.push(240|d>>18,128|d>>12&63,128|d>>6&63,128|d&63))}return new Uint8Array(b)}}
 function Gi(a){if(a===""||a==="e0")return Promise.resolve(a);var b;if((b=x.crypto)==null?0:b.subtle){if(Ei.test(a))return Promise.resolve(a);try{var c=Fi(a);return x.crypto.subtle.digest("SHA-256",c).then(function(d){return Hi(d,x)}).catch(function(){return"e2"})}catch(d){return Promise.resolve("e2")}}else return Promise.resolve("e1")}
 function Hi(a,b){var c=Array.from(new Uint8Array(a)).map(function(d){return String.fromCharCode(d)}).join("");return b.btoa(c).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")};var Ii=[],Ji;function Ki(a){Ji?Ji(a):Ii.push(a)}function Li(a,b){if(!E(190))return b;var c,d=!1;d=d===void 0?!1:d;var e,f;c=((e=data)==null?0:(f=e.blob)==null?0:f.hasOwnProperty(a))?!!data.blob[a]:d;return c!==b?(Ki(a),b):c}function Mi(a,b){if(!E(190))return b;var c=Ni(a,"");return c!==b?(Ki(a),b):c}function Ni(a,b){b=b===void 0?"":b;var c,d;return((c=data)==null?0:(d=c.blob)==null?0:d.hasOwnProperty(a))?String(data.blob[a]):b}
-function Oi(a,b){if(!E(190))return b;var c,d,e;c=((d=data)==null?0:(e=d.blob)==null?0:e.hasOwnProperty(a))?Number(data.blob[a]):0;return c===b||isNaN(c)&&isNaN(b)?c:(Ki(a),b)}function Pi(){Ji=Qi;for(var a=l(Ii),b=a.next();!b.done;b=a.next())Ji(b.value);Ii.length=0};var Ri={fn:'512',gn:'100',hn:'1000',fo:'US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD',ho:'US-CO',Co:Mi(44,'101509157~103116026~103200004~103233427~103351869~103351871~104684208~104684211~104718208~104784387~104784389')},Si={bp:Number(Ri.fn)||0,cp:Number(Ri.gn)||0,fp:Number(Ri.hn)||0,yp:Ri.fo.split("~"),zp:Ri.ho.split("~"),Iq:Ri.Co};Object.assign({},Si);function M(a){cb("GTM",a)};
+function Oi(a,b){if(!E(190))return b;var c,d,e;c=((d=data)==null?0:(e=d.blob)==null?0:e.hasOwnProperty(a))?Number(data.blob[a]):0;return c===b||isNaN(c)&&isNaN(b)?c:(Ki(a),b)}function Pi(){Ji=Qi;for(var a=l(Ii),b=a.next();!b.done;b=a.next())Ji(b.value);Ii.length=0};var Ri={fn:'512',gn:'100',hn:'1000',fo:'US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD',ho:'US-CO',Co:Mi(44,'101509157~103116026~103200004~103233427~103351869~103351871~104684204~104684207~104718208~104784387~104784389')},Si={bp:Number(Ri.fn)||0,cp:Number(Ri.gn)||0,fp:Number(Ri.hn)||0,yp:Ri.fo.split("~"),zp:Ri.ho.split("~"),Iq:Ri.Co};Object.assign({},Si);function M(a){cb("GTM",a)};
 var Xi=function(a,b){var c=["tv.1"],d=Ti(a);if(d)return c.push(d),{Za:!1,Mj:c.join("~"),rg:{}};var e={},f=0;var g=Ui(a,function(p,q,r){var t=p.value,v;if(r){var u=q+"__"+f++;v="${userData."+u+"|sha256}";e[u]=t}else v=encodeURIComponent(encodeURIComponent(t));var w;c.push(""+q+((w=p.index)!=null?w:"")+"."+v)}).Za;var h=c.join("~"),m={userData:e},n=b===3;return b===2||n?{Za:g,Mj:h,rg:m,ep:n?"tv.9~${"+(h+
 "|encryptRsa}"):"tv.1~${"+(h+"|encrypt}"),encryptionKeyString:n?Vi():Wi()}:{Za:g,Mj:h,rg:m}},Zi=function(a){if(!(a!=null&&Object.keys(a).length>0))return!1;var b=Yi(a);return Ui(b,function(){}).Za},Ui=function(a,b){b=b===void 0?function(){}:b;for(var c=!1,d=!1,e=l(a),f=e.next();!f.done;f=e.next()){var g=f.value;if(g.value){var h=$i[g.name];if(h){var m=aj(g);m&&(c=!0);d=!0;b(g,h,m)}}}return{Za:d,nj:c}},aj=function(a){var b=bj(a.name),c=/^e\d+$/.test(a.value),d;if(d=b&&!c){var e=a.value;d=!(cj.test(e)||
 Ei.test(e))}return d},bj=function(a){return dj.indexOf(a)!==-1},Wi=function(){return'{\x22keys\x22:[{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BJ0686crxkhRYqHcjPcs+0zbP7ZrLucklHSKQDkejy+sKob3LsWIItwIyEY+V39+mlb8q0McwZPiy2MjJPKGT4w\x3d\x22,\x22version\x22:0},\x22id\x22:\x22fc39b854-b64f-480f-b7f6-ae52bd23904e\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BIK43ywR8nPW9GYlhwAN+JiMr1nUTo8TTXgNOj/BUj7ZGw6a+QXk34qxlRtT/uz5yJ5209xHggwz87mMmI9e2d4\x3d\x22,\x22version\x22:0},\x22id\x22:\x22c8beed94-c56b-4e9f-82e8-7f73a0d4f6d4\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BCzjkxL7AE/kmMREC7rrUqaVKuBsnuk2NYoccMv3BqQvPpuGkBwkIQoG1ne42kCOuVErdQG4znJ2Je3UFlIHIdc\x3d\x22,\x22version\x22:0},\x22id\x22:\x22bfd3b223-8119-4c0a-be7e-ec992422e5d9\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BHtoNgH3Oz+HxlaAn0N+qa85czXAd/4ZHS6HCmWf+e3Kfs6ctpr6nTE9eWwaVZCV2usvpL39h8I4YoIlpUG2ddw\x3d\x22,\x22version\x22:0},\x22id\x22:\x2273e45744-000e-4813-99f8-966b3ff25d63\x22},{\x22hpkePublicKey\x22:{\x22params\x22:{\x22aead\x22:\x22AES_128_GCM\x22,\x22kdf\x22:\x22HKDF_SHA256\x22,\x22kem\x22:\x22DHKEM_P256_HKDF_SHA256\x22},\x22publicKey\x22:\x22BEiSHc2K6zESor33xCgNW/nIPyiF6pN2WuKr+AFtJIXHq1CVlwSTjIhLNw2UGjIBYVYvJb3Epptp5Z/uTfO+1BY\x3d\x22,\x22version\x22:0},\x22id\x22:\x222cf61e48-f66c-4312-8985-700c37d0569c\x22}]}'},gj=function(a){if(x.Promise){var b=void 0;return b}},lj=function(a,b,c,d,e){if(x.Promise)try{var f=Yi(a),g=hj(f,e).then(ij);return g}catch(p){}},nj=function(a){try{return ij(mj(Yi(a)))}catch(b){}},fj=function(a,b){var c=void 0;return c},ij=function(a){var b=a.Vc,c=a.time,d=["tv.1"],e=Ti(b);if(e)return d.push(e),{Lb:encodeURIComponent(d.join("~")),nj:!1,Za:!1,time:c,mj:!0};var f=b.filter(function(n){return!aj(n)}),g=Ui(f,function(n,p){var q=n.value,r=n.index;r!==void 0&&(p+=r);d.push(p+"."+q)}),h=g.nj,m=g.Za;return{Lb:encodeURIComponent(d.join("~")),nj:h,Za:m,time:c,mj:!1}},Ti=function(a){if(a.length===1&&a[0].name==="error_code")return $i.error_code+
@@ -5101,7 +5101,7 @@ g(tj));e(m,"country",g(uj));for(var n=mb(a.address||{}),p=0;p<n.length;p++){var 
 g==="e0"||Ei.test(g))f=g;else try{var m=new Ci;m.update(Fi(g));f=Hi(m.digest(),h)}catch(n){f="e2"}e.value=f}});var c={Vc:a};if(b!==void 0){var d=Vc();b&&d&&(c.time=Math.round(d)-Math.round(b))}return c}catch(e){return{Vc:[]}}},hj=function(a,b){if(!a.some(function(d){return d.value&&bj(d.name)}))return Promise.resolve({Vc:a});if(!x.Promise)return Promise.resolve({Vc:[]});var c=b?Vc():void 0;return Promise.all(a.map(function(d){return d.value&&bj(d.name)?Gi(d.value).then(function(e){d.value=e}):Promise.resolve()})).then(function(){var d=
 {Vc:a};if(c!==void 0){var e=Vc();c&&e!==void 0&&(d.time=Math.round(e)-Math.round(c))}return d}).catch(function(){return{Vc:[]}})},yj=/[0-9`~!@#$%^&*()_\-+=:;<>,.?|/\\[\]]/g,Aj=/^\S+@\S+\.\S+$/,zj=/^\+\d{10,15}$/,xj=/[.~]/g,cj=/^[0-9A-Za-z_-]{43}$/,Bj={},$i=(Bj.email="em",Bj.phone_number="pn",Bj.first_name="fn",Bj.last_name="ln",Bj.street="sa",Bj.city="ct",Bj.region="rg",Bj.country="co",Bj.postal_code="pc",Bj.error_code="ec",Bj),Cj={},pj=(Cj.email="sha256_email_address",Cj.phone_number="sha256_phone_number",
 Cj.first_name="sha256_first_name",Cj.last_name="sha256_last_name",Cj.street="sha256_street",Cj);var dj=Object.freeze(["email","phone_number","first_name","last_name","street"]);
-var Dj={},Ej=(Dj[J.m.nb]=1,Dj[J.m.od]=2,Dj[J.m.xc]=2,Dj[J.m.za]=3,Dj[J.m.Ze]=4,Dj[J.m.Bg]=5,Dj[J.m.Jc]=6,Dj[J.m.eb]=6,Dj[J.m.ob]=6,Dj[J.m.gd]=6,Dj[J.m.Tb]=6,Dj[J.m.yb]=6,Dj[J.m.pb]=7,Dj[J.m.Wb]=9,Dj[J.m.Cg]=10,Dj[J.m.Pb]=11,Dj),Fj={},Gj=(Fj.unknown=13,Fj.standard=14,Fj.unique=15,Fj.per_session=16,Fj.transactions=17,Fj.items_sold=18,Fj);var eb=[];function Hj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(Ej)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Ej[f],h=b;h=h===void 0?!1:h;cb("GTAG_EVENT_FEATURE_CHANNEL",g);h&&(eb[g]=!0)}}};var Ij=function(){this.C=new Set;this.H=new Set},Kj=function(a){var b=Jj.R;a=a===void 0?[]:a;var c=[].concat(ta(b.C)).concat([].concat(ta(b.H))).concat(a);c.sort(function(d,e){return d-e});return c},Lj=function(){var a=[].concat(ta(Jj.R.C));a.sort(function(b,c){return b-c});return a},Mj=function(){var a=Jj.R,b=Si.Iq;a.C=new Set;if(b!=="")for(var c=l(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var Nj={},Oj=Mi(14,"56n1"),Pj=Oi(15,Number("0")),Qj=Mi(19,"dataLayer");Mi(20,"");Mi(16,"ChAI8JnpwgYQpq64pbjFlNF/EiUAw/qHO93GPATg1YjI9W5sd5j0OnFpSvogQj18xw/LuODX1lq+GgJU9w\x3d\x3d");var Rj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Sj={__paused:1,__tg:1},Tj;for(Tj in Rj)Rj.hasOwnProperty(Tj)&&(Sj[Tj]=1);var Uj=Li(11,ub("true")),Vj=!1,Wj,Xj=!1;Xj=!0;
+var Dj={},Ej=(Dj[J.m.nb]=1,Dj[J.m.od]=2,Dj[J.m.xc]=2,Dj[J.m.za]=3,Dj[J.m.Ze]=4,Dj[J.m.Bg]=5,Dj[J.m.Jc]=6,Dj[J.m.eb]=6,Dj[J.m.ob]=6,Dj[J.m.gd]=6,Dj[J.m.Tb]=6,Dj[J.m.yb]=6,Dj[J.m.pb]=7,Dj[J.m.Wb]=9,Dj[J.m.Cg]=10,Dj[J.m.Pb]=11,Dj),Fj={},Gj=(Fj.unknown=13,Fj.standard=14,Fj.unique=15,Fj.per_session=16,Fj.transactions=17,Fj.items_sold=18,Fj);var eb=[];function Hj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(Ej)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Ej[f],h=b;h=h===void 0?!1:h;cb("GTAG_EVENT_FEATURE_CHANNEL",g);h&&(eb[g]=!0)}}};var Ij=function(){this.C=new Set;this.H=new Set},Kj=function(a){var b=Jj.R;a=a===void 0?[]:a;var c=[].concat(ta(b.C)).concat([].concat(ta(b.H))).concat(a);c.sort(function(d,e){return d-e});return c},Lj=function(){var a=[].concat(ta(Jj.R.C));a.sort(function(b,c){return b-c});return a},Mj=function(){var a=Jj.R,b=Si.Iq;a.C=new Set;if(b!=="")for(var c=l(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var Nj={},Oj=Mi(14,"56n1"),Pj=Oi(15,Number("0")),Qj=Mi(19,"dataLayer");Mi(20,"");Mi(16,"ChAI8JnpwgYQpq64pbjFlNF/EiUAw/qHO/ODNgvPEw/TzPmuT/PJ/dC9gWlRMJa3T73mDpkEXueiGgLEPA\x3d\x3d");var Rj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Sj={__paused:1,__tg:1},Tj;for(Tj in Rj)Rj.hasOwnProperty(Tj)&&(Sj[Tj]=1);var Uj=Li(11,ub("true")),Vj=!1,Wj,Xj=!1;Xj=!0;
 Wj=Xj;var Yj,Zj=!1;Yj=Zj;Nj.Ag=Mi(3,"www.googletagmanager.com");var ak=""+Nj.Ag+(Wj?"/gtag/js":"/gtm.js"),bk=null,ck=null,dk={},ek={};Nj.Wm=Li(2,ub(""));var fk="";Nj.Oi=fk;
 var Jj=new function(){this.R=new Ij;this.C=this.N=!1;this.H=0;this.Ba=this.Xa=this.Fb=this.P="";this.ba=this.ka=!1};function gk(){var a;a=a===void 0?[]:a;return Kj(a).join("~")}function hk(){var a=Jj.P.length;return Jj.P[a-1]==="/"?Jj.P.substring(0,a-1):Jj.P}function ik(){return Jj.C?E(84)?Jj.H===0:Jj.H!==1:!1}function jk(a){for(var b={},c=l(a.split("|")),d=c.next();!d.done;d=c.next())b[d.value]=!0;return b};var kk=new qb,lk={},mk={},pk={name:Qj,set:function(a,b){id(Fb(a,b),lk);nk()},get:function(a){return ok(a,2)},reset:function(){kk=new qb;lk={};nk()}};function ok(a,b){return b!=2?kk.get(a):qk(a)}function qk(a,b){var c=a.split(".");b=b||[];for(var d=lk,e=0;e<c.length;e++){if(d===null)return!1;if(d===void 0)break;d=d[c[e]];if(b.indexOf(d)!==-1)return}return d}function rk(a,b){mk.hasOwnProperty(a)||(kk.set(a,b),id(Fb(a,b),lk),nk())}
 function sk(){for(var a=["gtm.allowlist","gtm.blocklist","gtm.whitelist","gtm.blacklist","tagTypeBlacklist"],b=0;b<a.length;b++){var c=a[b],d=ok(c,1);if(Array.isArray(d)||hd(d))d=id(d,null);mk[c]=d}}function nk(a){rb(mk,function(b,c){kk.set(b,c);id(Fb(b),lk);id(Fb(b,c),lk);a&&delete mk[b]})}function tk(a,b){var c,d=(b===void 0?2:b)!==1?qk(a):kk.get(a);fd(d)==="array"||fd(d)==="object"?c=id(d,null):c=d;return c};
@@ -6100,7 +6100,7 @@ var data = {
 
 
 }
-,"blob":{"1":"2","10":"G-5BVQ49LXJG|GT-5R4GMQL9","11":true,"14":"56n1","15":"0","16":"ChAI8JnpwgYQpq64pbjFlNF/EiUAw/qHO93GPATg1YjI9W5sd5j0OnFpSvogQj18xw/LuODX1lq+GgJU9w==","17":"","19":"dataLayer","20":"","21":"www.googletagmanager.com","22":"eyIwIjoiVkUiLCIxIjoiVkUtTSIsIjIiOmZhbHNlLCIzIjoiZ29vZ2xlLmNvLnZlIiwiNCI6IiIsIjUiOnRydWUsIjYiOmZhbHNlLCI3IjoiYWRfc3RvcmFnZXxhbmFseXRpY3Nfc3RvcmFnZXxhZF91c2VyX2RhdGF8YWRfcGVyc29uYWxpemF0aW9uIn0","23":"google.tagmanager.debugui2.queue","24":"tagassistant.google.com","27":0.005,"3":"www.googletagmanager.com","30":"VE","31":"VE-M","32":true,"34":"G-5BVQ49LXJG","35":"G","36":"https://adservice.google.com/pagead/regclk","37":"__TAGGY_INSTALLED","38":"cct.google","39":"googTaggyReferrer","40":"https://cct.google/taggy/agent.js","41":"google.tagmanager.ta.prodqueue","42":0.01,"43":"{\"keys\":[{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BJ0686crxkhRYqHcjPcs+0zbP7ZrLucklHSKQDkejy+sKob3LsWIItwIyEY+V39+mlb8q0McwZPiy2MjJPKGT4w=\",\"version\":0},\"id\":\"fc39b854-b64f-480f-b7f6-ae52bd23904e\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BIK43ywR8nPW9GYlhwAN+JiMr1nUTo8TTXgNOj/BUj7ZGw6a+QXk34qxlRtT/uz5yJ5209xHggwz87mMmI9e2d4=\",\"version\":0},\"id\":\"c8beed94-c56b-4e9f-82e8-7f73a0d4f6d4\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BCzjkxL7AE/kmMREC7rrUqaVKuBsnuk2NYoccMv3BqQvPpuGkBwkIQoG1ne42kCOuVErdQG4znJ2Je3UFlIHIdc=\",\"version\":0},\"id\":\"bfd3b223-8119-4c0a-be7e-ec992422e5d9\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BHtoNgH3Oz+HxlaAn0N+qa85czXAd/4ZHS6HCmWf+e3Kfs6ctpr6nTE9eWwaVZCV2usvpL39h8I4YoIlpUG2ddw=\",\"version\":0},\"id\":\"73e45744-000e-4813-99f8-966b3ff25d63\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BEiSHc2K6zESor33xCgNW/nIPyiF6pN2WuKr+AFtJIXHq1CVlwSTjIhLNw2UGjIBYVYvJb3Epptp5Z/uTfO+1BY=\",\"version\":0},\"id\":\"2cf61e48-f66c-4312-8985-700c37d0569c\"}]}","44":"101509157~103116026~103200004~103233427~103351869~103351871~104684204~104684207~104718208~104784387~104784389","5":"G-5BVQ49LXJG","6":"200669522","8":"res_ts:1749763596625508,srv_cl:771878423,ds:live,cv:2","9":"G-5BVQ49LXJG"}
+,"blob":{"1":"2"}
 ,"permissions":{
 "__c":{}
 ,
@@ -6385,7 +6385,7 @@ g(tj));e(m,"country",g(uj));for(var n=mb(a.address||{}),p=0;p<n.length;p++){var 
 g==="e0"||Ei.test(g))f=g;else try{var m=new Ci;m.update(Fi(g));f=Hi(m.digest(),h)}catch(n){f="e2"}e.value=f}});var c={Vc:a};if(b!==void 0){var d=Vc();b&&d&&(c.time=Math.round(d)-Math.round(b))}return c}catch(e){return{Vc:[]}}},hj=function(a,b){if(!a.some(function(d){return d.value&&bj(d.name)}))return Promise.resolve({Vc:a});if(!x.Promise)return Promise.resolve({Vc:[]});var c=b?Vc():void 0;return Promise.all(a.map(function(d){return d.value&&bj(d.name)?Gi(d.value).then(function(e){d.value=e}):Promise.resolve()})).then(function(){var d=
 {Vc:a};if(c!==void 0){var e=Vc();c&&e!==void 0&&(d.time=Math.round(e)-Math.round(c))}return d}).catch(function(){return{Vc:[]}})},yj=/[0-9`~!@#$%^&*()_\-+=:;<>,.?|/\\[\]]/g,Aj=/^\S+@\S+\.\S+$/,zj=/^\+\d{10,15}$/,xj=/[.~]/g,cj=/^[0-9A-Za-z_-]{43}$/,Bj={},$i=(Bj.email="em",Bj.phone_number="pn",Bj.first_name="fn",Bj.last_name="ln",Bj.street="sa",Bj.city="ct",Bj.region="rg",Bj.country="co",Bj.postal_code="pc",Bj.error_code="ec",Bj),Cj={},pj=(Cj.email="sha256_email_address",Cj.phone_number="sha256_phone_number",
 Cj.first_name="sha256_first_name",Cj.last_name="sha256_last_name",Cj.street="sha256_street",Cj);var dj=Object.freeze(["email","phone_number","first_name","last_name","street"]);
-var Dj={},Ej=(Dj[J.m.nb]=1,Dj[J.m.od]=2,Dj[J.m.xc]=2,Dj[J.m.za]=3,Dj[J.m.Ze]=4,Dj[J.m.Bg]=5,Dj[J.m.Jc]=6,Dj[J.m.eb]=6,Dj[J.m.ob]=6,Dj[J.m.gd]=6,Dj[J.m.Tb]=6,Dj[J.m.yb]=6,Dj[J.m.pb]=7,Dj[J.m.Wb]=9,Dj[J.m.Cg]=10,Dj[J.m.Pb]=11,Dj),Fj={},Gj=(Fj.unknown=13,Fj.standard=14,Fj.unique=15,Fj.per_session=16,Fj.transactions=17,Fj.items_sold=18,Fj);var eb=[];function Hj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(Ej)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Ej[f],h=b;h=h===void 0?!1:h;cb("GTAG_EVENT_FEATURE_CHANNEL",g);h&&(eb[g]=!0)}}};var Ij=function(){this.C=new Set;this.H=new Set},Kj=function(a){var b=Jj.R;a=a===void 0?[]:a;var c=[].concat(ta(b.C)).concat([].concat(ta(b.H))).concat(a);c.sort(function(d,e){return d-e});return c},Lj=function(){var a=[].concat(ta(Jj.R.C));a.sort(function(b,c){return b-c});return a},Mj=function(){var a=Jj.R,b=Si.Iq;a.C=new Set;if(b!=="")for(var c=l(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var Nj={},Oj=Mi(14,"56n1"),Pj=Oi(15,Number("0")),Qj=Mi(19,"dataLayer");Mi(20,"");Mi(16,"ChAI8JnpwgYQpq64pbjFlNF/EiUAw/qHO93GPATg1YjI9W5sd5j0OnFpSvogQj18xw/LuODX1lq+GgJU9w\x3d\x3d");var Rj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Sj={__paused:1,__tg:1},Tj;for(Tj in Rj)Rj.hasOwnProperty(Tj)&&(Sj[Tj]=1);var Uj=Li(11,ub("true")),Vj=!1,Wj,Xj=!1;Xj=!0;
+var Dj={},Ej=(Dj[J.m.nb]=1,Dj[J.m.od]=2,Dj[J.m.xc]=2,Dj[J.m.za]=3,Dj[J.m.Ze]=4,Dj[J.m.Bg]=5,Dj[J.m.Jc]=6,Dj[J.m.eb]=6,Dj[J.m.ob]=6,Dj[J.m.gd]=6,Dj[J.m.Tb]=6,Dj[J.m.yb]=6,Dj[J.m.pb]=7,Dj[J.m.Wb]=9,Dj[J.m.Cg]=10,Dj[J.m.Pb]=11,Dj),Fj={},Gj=(Fj.unknown=13,Fj.standard=14,Fj.unique=15,Fj.per_session=16,Fj.transactions=17,Fj.items_sold=18,Fj);var eb=[];function Hj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(Ej)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Ej[f],h=b;h=h===void 0?!1:h;cb("GTAG_EVENT_FEATURE_CHANNEL",g);h&&(eb[g]=!0)}}};var Ij=function(){this.C=new Set;this.H=new Set},Kj=function(a){var b=Jj.R;a=a===void 0?[]:a;var c=[].concat(ta(b.C)).concat([].concat(ta(b.H))).concat(a);c.sort(function(d,e){return d-e});return c},Lj=function(){var a=[].concat(ta(Jj.R.C));a.sort(function(b,c){return b-c});return a},Mj=function(){var a=Jj.R,b=Si.Iq;a.C=new Set;if(b!=="")for(var c=l(b.split("~")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var Nj={},Oj=Mi(14,"56n1"),Pj=Oi(15,Number("0")),Qj=Mi(19,"dataLayer");Mi(20,"");Mi(16,"ChAI8JnpwgYQpq64pbjFlNF/EiUAw/qHO/ODNgvPEw/TzPmuT/PJ/dC9gWlRMJa3T73mDpkEXueiGgLEPA\x3d\x3d");var Rj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Sj={__paused:1,__tg:1},Tj;for(Tj in Rj)Rj.hasOwnProperty(Tj)&&(Sj[Tj]=1);var Uj=Li(11,ub("true")),Vj=!1,Wj,Xj=!1;Xj=!0;
 Wj=Xj;var Yj,Zj=!1;Yj=Zj;Nj.Ag=Mi(3,"www.googletagmanager.com");var ak=""+Nj.Ag+(Wj?"/gtag/js":"/gtm.js"),bk=null,ck=null,dk={},ek={};Nj.Wm=Li(2,ub(""));var fk="";Nj.Oi=fk;
 var Jj=new function(){this.R=new Ij;this.C=this.N=!1;this.H=0;this.Ba=this.Xa=this.Fb=this.P="";this.ba=this.ka=!1};function gk(){var a;a=a===void 0?[]:a;return Kj(a).join("~")}function hk(){var a=Jj.P.length;return Jj.P[a-1]==="/"?Jj.P.substring(0,a-1):Jj.P}function ik(){return Jj.C?E(84)?Jj.H===0:Jj.H!==1:!1}function jk(a){for(var b={},c=l(a.split("|")),d=c.next();!d.done;d=c.next())b[d.value]=!0;return b};var kk=new qb,lk={},mk={},pk={name:Qj,set:function(a,b){id(Fb(a,b),lk);nk()},get:function(a){return ok(a,2)},reset:function(){kk=new qb;lk={};nk()}};function ok(a,b){return b!=2?kk.get(a):qk(a)}function qk(a,b){var c=a.split(".");b=b||[];for(var d=lk,e=0;e<c.length;e++){if(d===null)return!1;if(d===void 0)break;d=d[c[e]];if(b.indexOf(d)!==-1)return}return d}function rk(a,b){mk.hasOwnProperty(a)||(kk.set(a,b),id(Fb(a,b),lk),nk())}
 function sk(){for(var a=["gtm.allowlist","gtm.blocklist","gtm.whitelist","gtm.blacklist","tagTypeBlacklist"],b=0;b<a.length;b++){var c=a[b],d=ok(c,1);if(Array.isArray(d)||hd(d))d=id(d,null);mk[c]=d}}function nk(a){rb(mk,function(b,c){kk.set(b,c);id(Fb(b),lk);id(Fb(b,c),lk);a&&delete mk[b]})}function tk(a,b){var c,d=(b===void 0?2:b)!==1?qk(a):kk.get(a);fd(d)==="array"||fd(d)==="object"?c=id(d,null):c=d;return c};
@@ -7006,38 +7006,38 @@ h[h.hk]="COOKIE";h[h.ml]="EXTENSION_PARAM";var m=void 0,n=void 0,p=Ik(x.location
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n=</span><span class="dv">30</span>) <span class="co"># presencia de valores duplicados</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 330 × 6
-   country   continent  year lifeExp      pop gdpPercap
-   &lt;chr&gt;     &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
- 1 Argentina Americas   1952    62.5 17876956     5911.
- 2 Argentina Americas   1957    64.4 19610538     6857.
- 3 Argentina Americas   1962    65.1 21283783     7133.
- 4 Argentina Americas   1967    65.6 22934225     8053.
- 5 Argentina Americas   1967    65.6 22934225     8053.
- 6 Argentina Americas   1972    67.1 24779799     9443.
- 7 Argentina Americas   1977    68.5 26983828    10079.
- 8 Argentina Americas   1982    69.9 29341374     8998.
- 9 Argentina Americas   1987    70.8 31620918     9140.
-10 Argentina Americas   1992    71.9 33958947     9308.
-11 Argentina Americas   1997    73.3 36203463    10967.
-12 Argentina Americas   2002    74.3 38331121     8798.
-13 Argentina Americas   2002    74.3 38331121     8798.
-14 Argentina Americas   2007    75.3 40301927    12779.
-15 Bolivia   Americas   1952    40.4  2883315     2677.
-16 Bolivia   Americas   1957    41.9  3211738     2128.
-17 Bolivia   Americas   1962    43.4  3593918     2181.
-18 Bolivia   Americas   1967    45.0  4040665     2587.
-19 Bolivia   Americas   1972    46.7  4565872     2980.
-20 Bolivia   Americas   1977    50.0  5079716     3548.
-21 Bolivia   Americas   1982    53.9  5642224     3157.
-22 Bolivia   Americas   1987    57.3  6156369     2754.
-23 Bolivia   Americas   1992    60.0  6893451     2962.
-24 Bolivia   Americas   1997    62.0  7693188     3326.
-25 Bolivia   Americas   2002    63.9  8445134     3413.
-26 Bolivia   Americas   2007    65.6  9119152     3822.
-27 Brazil    Americas   1952    50.9 56602560     2109.
-28 Brazil    Americas   1957    53.3 65551171     2487.
-29 Brazil    Americas   1962    55.7 76039390     3337.
-30 Brazil    Americas   1967    57.6 88049823     3430.
+   country   continent  year lifeExp       pop gdpPercap
+   &lt;chr&gt;     &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+ 1 Argentina Americas   1952    62.5  17876956     5911.
+ 2 Argentina Americas   1957    64.4  19610538     6857.
+ 3 Argentina Americas   1962    65.1  21283783     7133.
+ 4 Argentina Americas   1967    65.6  22934225     8053.
+ 5 Argentina Americas   1972    67.1  24779799     9443.
+ 6 Argentina Americas   1977    68.5  26983828    10079.
+ 7 Argentina Americas   1982    69.9  29341374     8998.
+ 8 Argentina Americas   1987    70.8  31620918     9140.
+ 9 Argentina Americas   1992    71.9  33958947     9308.
+10 Argentina Americas   1997    73.3  36203463    10967.
+11 Argentina Americas   2002    74.3  38331121     8798.
+12 Argentina Americas   2007    75.3  40301927    12779.
+13 Bolivia   Americas   1952    40.4   2883315     2677.
+14 Bolivia   Americas   1957    41.9   3211738     2128.
+15 Bolivia   Americas   1962    43.4   3593918     2181.
+16 Bolivia   Americas   1967    45.0   4040665     2587.
+17 Bolivia   Americas   1972    46.7   4565872     2980.
+18 Bolivia   Americas   1977    50.0   5079716     3548.
+19 Bolivia   Americas   1982    53.9   5642224     3157.
+20 Bolivia   Americas   1987    57.3   6156369     2754.
+21 Bolivia   Americas   1992    60.0   6893451     2962.
+22 Bolivia   Americas   1997    62.0   7693188     3326.
+23 Bolivia   Americas   2002    63.9   8445134     3413.
+24 Bolivia   Americas   2007    65.6   9119152     3822.
+25 Brazil    Americas   1952    50.9  56602560     2109.
+26 Brazil    Americas   1957    53.3  65551171     2487.
+27 Brazil    Americas   1957    53.3  65551171     2487.
+28 Brazil    Americas   1962    55.7  76039390     3337.
+29 Brazil    Americas   1967    57.6  88049823     3430.
+30 Brazil    Americas   1972    59.5 100840058     4986.
 # ℹ 300 more rows</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df_paises_america)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -7298,7 +7298,7 @@ h[h.hk]="COOKIE";h[h.ml]="EXTENSION_PARAM";var m=void 0,n=void 0,p=Ik(x.location
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">11</span>)</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>vector_factores</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 1  4  4  3  5  8  10 7  5  9  6  7  7  7  10 8  5  5  4  7 
+<pre><code> [1] 1  10 2  2  1  2  5  4  5  6  9  9  4  6  6  5  9  8  6  8 
 Levels: 1 2 3 4 5 6 7 8 9 10 11</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(vector_factores)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -7313,7 +7313,7 @@ Levels: 1 2 3 4 5 6 7 8 9 10 11</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">levels</span>(vector_factores))[vector_factores]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  1  4  4  3  5  8 10  7  5  9  6  7  7  7 10  8  5  5  4  7</code></pre>
+<pre><code> [1]  1 10  2  2  1  2  5  4  5  6  9  9  4  6  6  5  9  8  6  8</code></pre>
 </div>
 </div>
 </section>
@@ -7324,7 +7324,7 @@ Levels: 1 2 3 4 5 6 7 8 9 10 11</code></pre>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(varhandle)</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">unfactor</span>(vector_factores)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  1  4  4  3  5  8 10  7  5  9  6  7  7  7 10  8  5  5  4  7</code></pre>
+<pre><code> [1]  1 10  2  2  1  2  5  4  5  6  9  9  4  6  6  5  9  8  6  8</code></pre>
 </div>
 </div>
 </section>
@@ -7336,10 +7336,10 @@ Levels: 1 2 3 4 5 6 7 8 9 10 11</code></pre>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>vector_fact_categorias <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">sample</span>(categorias, <span class="dv">30</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>vector_fact_categorias</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] bajo     muy bajo muy alto muy bajo muy bajo medio    alto     muy alto
- [9] muy bajo muy alto muy alto bajo     muy bajo muy bajo medio    alto    
-[17] muy alto muy bajo muy alto muy bajo medio    muy bajo bajo     alto    
-[25] alto     muy alto alto     muy alto bajo     medio   
+<pre><code> [1] bajo     alto     muy alto bajo     muy bajo muy alto alto     medio   
+ [9] bajo     medio    muy alto alto     muy alto bajo     alto     medio   
+[17] medio    muy bajo medio    medio    bajo     alto     bajo     muy alto
+[25] alto     muy alto muy bajo alto     alto     muy alto
 Levels: alto bajo medio muy alto muy bajo</code></pre>
 </div>
 </div>
@@ -7347,22 +7347,22 @@ Levels: alto bajo medio muy alto muy bajo</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(<span class="fu">levels</span>(vector_fact_categorias))[vector_fact_categorias]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] &quot;bajo&quot;     &quot;muy bajo&quot; &quot;muy alto&quot; &quot;muy bajo&quot; &quot;muy bajo&quot; &quot;medio&quot;   
- [7] &quot;alto&quot;     &quot;muy alto&quot; &quot;muy bajo&quot; &quot;muy alto&quot; &quot;muy alto&quot; &quot;bajo&quot;    
-[13] &quot;muy bajo&quot; &quot;muy bajo&quot; &quot;medio&quot;    &quot;alto&quot;     &quot;muy alto&quot; &quot;muy bajo&quot;
-[19] &quot;muy alto&quot; &quot;muy bajo&quot; &quot;medio&quot;    &quot;muy bajo&quot; &quot;bajo&quot;     &quot;alto&quot;    
-[25] &quot;alto&quot;     &quot;muy alto&quot; &quot;alto&quot;     &quot;muy alto&quot; &quot;bajo&quot;     &quot;medio&quot;   </code></pre>
+<pre><code> [1] &quot;bajo&quot;     &quot;alto&quot;     &quot;muy alto&quot; &quot;bajo&quot;     &quot;muy bajo&quot; &quot;muy alto&quot;
+ [7] &quot;alto&quot;     &quot;medio&quot;    &quot;bajo&quot;     &quot;medio&quot;    &quot;muy alto&quot; &quot;alto&quot;    
+[13] &quot;muy alto&quot; &quot;bajo&quot;     &quot;alto&quot;     &quot;medio&quot;    &quot;medio&quot;    &quot;muy bajo&quot;
+[19] &quot;medio&quot;    &quot;medio&quot;    &quot;bajo&quot;     &quot;alto&quot;     &quot;bajo&quot;     &quot;muy alto&quot;
+[25] &quot;alto&quot;     &quot;muy alto&quot; &quot;muy bajo&quot; &quot;alto&quot;     &quot;alto&quot;     &quot;muy alto&quot;</code></pre>
 </div>
 </div>
 <p>Remover factores mediante paquete varhandle</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unfactor</span>(vector_fact_categorias)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] &quot;bajo&quot;     &quot;muy bajo&quot; &quot;muy alto&quot; &quot;muy bajo&quot; &quot;muy bajo&quot; &quot;medio&quot;   
- [7] &quot;alto&quot;     &quot;muy alto&quot; &quot;muy bajo&quot; &quot;muy alto&quot; &quot;muy alto&quot; &quot;bajo&quot;    
-[13] &quot;muy bajo&quot; &quot;muy bajo&quot; &quot;medio&quot;    &quot;alto&quot;     &quot;muy alto&quot; &quot;muy bajo&quot;
-[19] &quot;muy alto&quot; &quot;muy bajo&quot; &quot;medio&quot;    &quot;muy bajo&quot; &quot;bajo&quot;     &quot;alto&quot;    
-[25] &quot;alto&quot;     &quot;muy alto&quot; &quot;alto&quot;     &quot;muy alto&quot; &quot;bajo&quot;     &quot;medio&quot;   </code></pre>
+<pre><code> [1] &quot;bajo&quot;     &quot;alto&quot;     &quot;muy alto&quot; &quot;bajo&quot;     &quot;muy bajo&quot; &quot;muy alto&quot;
+ [7] &quot;alto&quot;     &quot;medio&quot;    &quot;bajo&quot;     &quot;medio&quot;    &quot;muy alto&quot; &quot;alto&quot;    
+[13] &quot;muy alto&quot; &quot;bajo&quot;     &quot;alto&quot;     &quot;medio&quot;    &quot;medio&quot;    &quot;muy bajo&quot;
+[19] &quot;medio&quot;    &quot;medio&quot;    &quot;bajo&quot;     &quot;alto&quot;     &quot;bajo&quot;     &quot;muy alto&quot;
+[25] &quot;alto&quot;     &quot;muy alto&quot; &quot;muy bajo&quot; &quot;alto&quot;     &quot;alto&quot;     &quot;muy alto&quot;</code></pre>
 </div>
 </div>
 <p>Remover factores de paises_america2</p>
@@ -7974,16 +7974,16 @@ longer object length is not a multiple of shorter object length</code></pre>
 <pre><code># A tibble: 10 × 4
    fecha      precio_x precio_y precio_z
    &lt;date&gt;        &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
- 1 2024-01-01    1.34    0.446    -5.67 
- 2 2024-01-02   -0.219  -1.28     -1.12 
- 3 2024-01-03   -1.22    0.262     2.77 
- 4 2024-01-04    0.912  -0.826    -5.40 
- 5 2024-01-05    0.944   2.53     -1.07 
- 6 2024-01-06   -1.41   -1.68     -1.67 
- 7 2024-01-07   -0.730   2.43     -0.966
- 8 2024-01-08   -0.510   1.78      0.698
- 9 2024-01-09   -0.519   1.96     -7.56 
-10 2024-01-10   -1.35   -0.0257    5.65 </code></pre>
+ 1 2024-01-01  -0.857     0.563    2.50 
+ 2 2024-01-02  -0.738     0.849    7.15 
+ 3 2024-01-03  -0.842     0.644    1.67 
+ 4 2024-01-04  -0.597     3.61    -2.03 
+ 5 2024-01-05  -0.131     0.862   -4.10 
+ 6 2024-01-06   0.607     0.178    0.352
+ 7 2024-01-07  -1.60      0.422    0.982
+ 8 2024-01-08   0.0494    1.90     2.08 
+ 9 2024-01-09   0.898     2.80     5.03 
+10 2024-01-10   0.319     2.43    -1.37 </code></pre>
 </div>
 </div>
 <p>Anteriormente en <code>tidyr</code> la función usada para convertir los datos a formanto longer era <code>gather</code></p>
@@ -7997,16 +7997,16 @@ longer object length is not a multiple of shorter object length</code></pre>
 <pre><code># A tibble: 30 × 3
    fecha      accion_nombe precio_accion
    &lt;date&gt;     &lt;chr&gt;                &lt;dbl&gt;
- 1 2024-01-01 precio_x             1.34 
- 2 2024-01-02 precio_x            -0.219
- 3 2024-01-03 precio_x            -1.22 
- 4 2024-01-04 precio_x             0.912
- 5 2024-01-05 precio_x             0.944
- 6 2024-01-06 precio_x            -1.41 
- 7 2024-01-07 precio_x            -0.730
- 8 2024-01-08 precio_x            -0.510
- 9 2024-01-09 precio_x            -0.519
-10 2024-01-10 precio_x            -1.35 
+ 1 2024-01-01 precio_x           -0.857 
+ 2 2024-01-02 precio_x           -0.738 
+ 3 2024-01-03 precio_x           -0.842 
+ 4 2024-01-04 precio_x           -0.597 
+ 5 2024-01-05 precio_x           -0.131 
+ 6 2024-01-06 precio_x            0.607 
+ 7 2024-01-07 precio_x           -1.60  
+ 8 2024-01-08 precio_x            0.0494
+ 9 2024-01-09 precio_x            0.898 
+10 2024-01-10 precio_x            0.319 
 # ℹ 20 more rows</code></pre>
 </div>
 </div>
@@ -8022,29 +8022,29 @@ longer object length is not a multiple of shorter object length</code></pre>
 <pre><code># A tibble: 30 × 3
    fecha      accion_nombre precio_accion
    &lt;date&gt;     &lt;chr&gt;                 &lt;dbl&gt;
- 1 2024-01-01 precio_x              1.34 
- 2 2024-01-01 precio_y              0.446
- 3 2024-01-01 precio_z             -5.67 
- 4 2024-01-02 precio_x             -0.219
- 5 2024-01-02 precio_y             -1.28 
- 6 2024-01-02 precio_z             -1.12 
- 7 2024-01-03 precio_x             -1.22 
- 8 2024-01-03 precio_y              0.262
- 9 2024-01-03 precio_z              2.77 
-10 2024-01-04 precio_x              0.912
-11 2024-01-04 precio_y             -0.826
-12 2024-01-04 precio_z             -5.40 
-13 2024-01-05 precio_x              0.944
-14 2024-01-05 precio_y              2.53 
-15 2024-01-05 precio_z             -1.07 
-16 2024-01-06 precio_x             -1.41 
-17 2024-01-06 precio_y             -1.68 
-18 2024-01-06 precio_z             -1.67 
-19 2024-01-07 precio_x             -0.730
-20 2024-01-07 precio_y              2.43 
-21 2024-01-07 precio_z             -0.966
-22 2024-01-08 precio_x             -0.510
-23 2024-01-08 precio_y              1.78 
+ 1 2024-01-01 precio_x            -0.857 
+ 2 2024-01-01 precio_y             0.563 
+ 3 2024-01-01 precio_z             2.50  
+ 4 2024-01-02 precio_x            -0.738 
+ 5 2024-01-02 precio_y             0.849 
+ 6 2024-01-02 precio_z             7.15  
+ 7 2024-01-03 precio_x            -0.842 
+ 8 2024-01-03 precio_y             0.644 
+ 9 2024-01-03 precio_z             1.67  
+10 2024-01-04 precio_x            -0.597 
+11 2024-01-04 precio_y             3.61  
+12 2024-01-04 precio_z            -2.03  
+13 2024-01-05 precio_x            -0.131 
+14 2024-01-05 precio_y             0.862 
+15 2024-01-05 precio_z            -4.10  
+16 2024-01-06 precio_x             0.607 
+17 2024-01-06 precio_y             0.178 
+18 2024-01-06 precio_z             0.352 
+19 2024-01-07 precio_x            -1.60  
+20 2024-01-07 precio_y             0.422 
+21 2024-01-07 precio_z             0.982 
+22 2024-01-08 precio_x             0.0494
+23 2024-01-08 precio_y             1.90  
 # ℹ 7 more rows</code></pre>
 </div>
 </div>
