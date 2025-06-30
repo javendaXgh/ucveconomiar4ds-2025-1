@@ -1,0 +1,79 @@
+---
+title: "Demo Gráficos Sincronizados"
+---
+
+## Descarga y Procesamiento de Datos
+
+```{r}
+#| warning: false
+
+library(pdfetch)
+library(tidyverse)
+library(xts)
+library(apexcharter)
+
+
+funcion_procesar_accion <- function(codigop, 
+                                    accionp){
+  # argumentos:
+  # codigop: codigo de la accion
+  # accionp: nombre de la accion
+  # ejemplo: funcion_procesar_accion('AAPL','Apple')
+  # Descarga los datos de la accion segun el codigo
+  # Retorna un data frame con los datos de la accion
+  
+  datos_descarga <- pdfetch_YAHOO(codigop)
+  
+  df_datos <- datos_descarga%>%
+    as_tibble()%>%
+    mutate(accion= accionp,
+           codigo= codigop,
+           fecha_posixct=as.POSIXct(datos_descarga))%>%
+    bind_cols( fecha= index(datos_descarga))
+  
+  
+  names(df_datos) <- c('open','high','low',
+                       'close','adjclose', 'volume',
+                       'accion','codigo','fecha_posixct','fecha')
+  
+  df_datos
+}
+
+
+# descarga valores 
+
+valor_apple <- funcion_procesar_accion('AAPL','Apple')
+
+valor_google <- funcion_procesar_accion('GOOG','Google')
+
+
+```
+
+## Códigos Gráficos
+
+```{r}
+
+
+gr1 <- apex(data = valor_apple, 
+     mapping = aes(x = fecha, 
+                   y= high),
+     type = "line",
+     serie_name = 'precio',
+     synchronize = "valores_acciones")|>
+  ax_colors(c( "#ff595e"))
+
+gr2 <- apex(data = valor_google, 
+     mapping = aes(x = fecha, 
+                   y= high),
+     type = "line",
+     serie_name = 'precio',
+     synchronize = "valores_acciones") |>
+  ax_colors( '#1982c4')
+```
+
+```{r}
+#| echo: false
+gr1
+
+gr2
+```
