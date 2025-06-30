@@ -58,7 +58,7 @@ Es un estilo adoptado para diseñar servicios web, el cual se sustenta en el pro
 
 ![](images/clase22_2.png)
 
-## Métodos {.xsmall}
+## Métodos {.small}
 
 -   **GET** :
 
@@ -95,7 +95,9 @@ Es un estilo adoptado para diseñar servicios web, el cual se sustenta en el pro
 
 ## JSON
 
-**JSON (JavaScript Object Notation)** es un formato ligero de intercambio de datos que es fácil para humanos leer y escribir, y fácil para las computadoras de generar y analizar. Los datos generalmente están en estructuras anidadas
+**JSON (JavaScript Object Notation)** es un formato ligero de intercambio de datos que es fácil para humanos leer y escribir, y fácil para las computadoras de generar y analizar. Los datos generalmente están en estructuras anidadas.
+
+Script con ejemplos [script clase 25](https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_25_script.R)
 
 ## JSON 1: datos tabulares {.small}
 
@@ -237,7 +239,7 @@ substr(dato_texto_ucab, 100, 300)
 
 ## Caso 1: definir prompt consulta
 
-Eres un experto en análisis de noticias económicas. Vas a extraer en formato json las ideas principales expuestas en el texto {idea_principal_nombre: descripcion} del texto delimitado por triple asterisco. Texto: \*\*\* ....... \*\*\*. Recuerda solo extraer el valor y no añadir información adicional.
+Eres un experto en análisis de noticias económicas. Vas a extraer en formato json las ideas principales expuestas en el texto {idea_principal_nombre: descripcion} del texto delimitado por triple asterisco. Texto: \*\*\* ....... \*\*\*. Recuerda solo extraer lo solicitado y no añadir información adicional.
 
 ```{r}
 #| echo: true
@@ -356,5 +358,4 @@ datos_cepal <- request("https://api-cepalstat.cepal.org/cepalstat/api/v1/themati
   req_headers("Accept" = "application/json")|>
   req_perform()|>
   resp_body_json()
-
 ```

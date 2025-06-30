@@ -452,7 +452,7 @@ MSc. José M. Avendaño
 <h2>Esquema Solicitudes</h2>
 
 <img data-src="images/clase22_2.png" class="r-stretch"></section>
-<section id="métodos" class="slide level2 xsmall">
+<section id="métodos" class="slide level2 small">
 <h2>Métodos</h2>
 <ul>
 <li class="fragment"><p><strong>GET</strong> :</p>
@@ -498,7 +498,8 @@ MSc. José M. Avendaño
 </section>
 <section id="json" class="slide level2">
 <h2>JSON</h2>
-<p><strong>JSON (JavaScript Object Notation)</strong> es un formato ligero de intercambio de datos que es fácil para humanos leer y escribir, y fácil para las computadoras de generar y analizar. Los datos generalmente están en estructuras anidadas</p>
+<p><strong>JSON (JavaScript Object Notation)</strong> es un formato ligero de intercambio de datos que es fácil para humanos leer y escribir, y fácil para las computadoras de generar y analizar. Los datos generalmente están en estructuras anidadas.</p>
+<p>Script con ejemplos <a href="https://github.com/javendaXgh/ucveconomiar4ds-2025-1/blob/main/scripts_clases/clase_25_script.R">script clase 25</a></p>
 </section>
 <section id="json-1-datos-tabulares" class="slide level2 small">
 <h2>JSON 1: datos tabulares</h2>
@@ -667,7 +668,7 @@ $libro$reseña$comentario
 </section>
 <section id="caso-1-definir-prompt-consulta" class="slide level2">
 <h2>Caso 1: definir prompt consulta</h2>
-<p>Eres un experto en análisis de noticias económicas. Vas a extraer en formato json las ideas principales expuestas en el texto {idea_principal_nombre: descripcion} del texto delimitado por triple asterisco. Texto: *** ……. ***. Recuerda solo extraer el valor y no añadir información adicional.</p>
+<p>Eres un experto en análisis de noticias económicas. Vas a extraer en formato json las ideas principales expuestas en el texto {idea_principal_nombre: descripcion} del texto delimitado por triple asterisco. Texto: *** ……. ***. Recuerda solo extraer lo solicitado y no añadir información adicional.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># definir el prompt</span></span>
 <span id="cb9-2"><a></a>prompt <span class="ot">&lt;-</span> <span class="st">'Eres un experto en análisis de noticias económicas. Vas a extraer en formato json las ideas principales expuestas en el texto {"idea_principal_nombre": "texto del nombre de la idea", "descripcion": "texto descriptivo de la idea desarrollada"} del texto delimitado por triple asterisco. Texto: ***'</span></span>
