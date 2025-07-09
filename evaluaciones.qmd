@@ -1,0 +1,14 @@
+---
+title: "Evaluaciones"
+---
+
+```{r}
+#| echo: false
+#| warning: false
+library(tidyverse)
+library(gt)
+library(readxl)
+gt(readxl::read_excel('_materiales_admin/seguimiento.xlsx',sheet = 'acumulado')%>%
+     mutate(total=round(total,0)))
+
+```
